@@ -1,0 +1,85 @@
+﻿\\172.16.191.252  _              
+あア@vsphere.local あか
+ôéà你おけカßü대한㐀㐁䶵@vsphere.local
+दुनियाभर
+@WSX3edc
+
+ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝŸ¿
+àáâãåäçèéêëìíîïñòóõôöùúûüýÿ¿
+あいアイㅏㅔЧШшй你好中国
+
+iSCSI partition name
+ôéà你おけカßü대한1
+ôéà你おけカßü대한㐀㐁䶵3
+Windows Sysprep4
+iSCSI name
+iqn.1998-01.com.vmware:localhost-ôéà你おけカßü대한 -> iqn.1998-01.com.vmware:localhost-name
+iqn.1998-01.com.vmware:localhost-ôéà你おけカßü대한㐀㐁䶵-> iqn.1998-01.com.vmware:localhost-name
+iqn.1998-01.com.vmware:localhost-ôéà你おけカßü대한㐀㐁䶵𠀀𠀁𪛖 -> iqn.1998-01.com.vmware:localhost-name
+iSCSI alias 
+别名ôéà你おけカßü대한1
+别名ôéà你おけカßü대한㐀㐁䶵2
+别名ôéà你おけカßü대한㐀㐁䶵𠀀𠀁𪛖3
+Network Label
+网络标签ôéà你おけカßü대한1
+管理网络ôéà你おけカßü대한㐀㐁䶵2
+管理网络ôéà你おけカßü대한㐀㐁䶵𠀀𠀁𪛖3
+Datastore name
+数据仓储ôéà你おけカßü대한1
+艾斯卡斯1ôéàおけカßü대한㐀㐁䶵2
+艾斯卡斯1ôéàおけカßü대한㐀㐁䶵𠀀𠀁𪛖3
+VM name
+虚拟机ôéàおけカßü대한1
+虚拟机ôéàおけカßü대한㐀㐁䶵2
+虚拟机ôéàおけカßü대한㐀㐁䶵𠀀𠀁𪛖3
+Resource Pool name
+资源池ôéàおけカßü대한1
+资源池ôéàおけカßü대한㐀㐁䶵2
+资源池ôéàおけカßü대한㐀㐁䶵𠀀𠀁𪛖3
+vApp
+虚拟应用程序ôéàおけカßü대한1
+虚拟应用程序ôéàおけカßü대한㐀㐁䶵2
+虚拟应用程序ôéàおけカßü대한㐀㐁䶵𠀀𠀁𪛖3
+Other Places:
+测试字符串ôéàおけカßü대한1
+测试字符串ôéàおけカßü대한㐀㐁䶵2
+测试字符串ôéàおけカßü대한㐀㐁䶵𠀀𠀁𪛖3
+注：
+㐀㐁䶵： 四字节区扩充A的6530汉字 中的第一，二和最后一个
+㐀: Unicode编码: 3400 GB18030编码: 8139EE39
+㐁: Unicode编码: 3401 GB18030编码: 8139EF30
+䶵: Unicode编码: 4DB5 GB18030编码: 82358738
+𠀀𠀁𪛖: 四字节区扩充B的42711汉字 中的第一，二和最后一个
+𠀀: Unicode编码: 20000 UTF-16编码: D840DC00 GB18030编码: 95328236
+𠀁: Unicode编码: 20001 UTF-16编码: D840DC01 GB18030编码: 95328237
+𪛖: Unicode编码: 2A6D6 UTF-16编码: D869DED6 GB18030编码: 9835F336
+
+
+User:
+赵ôéà君君ôéà
+
+Password:
+ca$hc0wA别名ôéà
+
+User  ôéàおけカ
+Password ca$hc0wAàお
+
+User おけカ
+ Password ca$hc0wAàお
+
+FR:
+
+Username: âçeêëoôœûA
+Password: ca$hc0wAâç
+
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+
+
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测
+
+
+测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符串测试字符
+
