@@ -83,9 +83,8 @@ var securityAndUsersPage = {
       },
 
       getuserLinkByName: function (username) {
-         return element(by.cssContainingText(username));    //modify
+         return element(by.xpath('//td[contains(text(), "' + username + '")]'));
       },
-
       removeuserButton: function() {
          return element(by.id('removeUser'));
       }

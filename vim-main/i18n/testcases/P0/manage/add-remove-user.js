@@ -56,7 +56,7 @@ describe('Add Remove User', function () {
 
     it('Add Remove User', function () {
         var adduserwizard = SecurityAndUsersPage.adduserButton.adduserwizard;
-        var username = 'administrator';
+        var username = "xiaoyao";
         var description = browser.params.i18n.string;
         var password = 'ca$hc0wA';
         var confirmPassword ='ca$hc0wA';
@@ -95,16 +95,16 @@ describe('Add Remove User', function () {
         }).then(function(){
             // var vmGrid = VMPage.vmGrid;
             return esxuiUtil.checkForRecentTask('Create User', 'root', browser.params.taskMsg.task.state.success, 3);   //modify
-        // }).then(function () {
-        //     return racetrack.log("Remove user");
-        // }).then(function () {
-        //     return securityAndUsersUtil.removeuser(SecurityAndUsersPage, username);
-        // }).then(function () {
-        //     return browser.sleep(Timeout.WAIT_FOR_USER_REMOVE);
-        // }).then(function () {
-        //     return racetrack.log("Verify that user is removed successfully.");
-        // }).then(function(){
-        //     return esxuiUtil.checkForRecentTask('Remove User', 'root', browser.params.taskMsg.task.state.success, 3);
+        }).then(function () {
+            return racetrack.log("Remove user");
+        }).then(function () {
+            return securityAndUsersUtil.removeuser(SecurityAndUsersPage, username);
+        }).then(function () {
+            return browser.sleep(Timeout.WAIT_FOR_USER_REMOVE);
+        }).then(function () {
+            return racetrack.log("Verify that user is removed successfully.");
+        }).then(function(){
+            return esxuiUtil.checkForRecentTask('Remove User', 'root', browser.params.taskMsg.task.state.success, 3);
         })
 
     });
