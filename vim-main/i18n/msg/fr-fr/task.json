@@ -1,0 +1,55 @@
+{
+   "task": {
+      "task": "Tâche",
+      "entity": "Cible",
+      "queued": "En attente",
+      "started": "Démarré",
+      "completed": "Terminé",
+      "initiator": "Initiateur",
+      "result": "Résultat",
+      "state": {
+         "running": "Exécution en cours...",
+         "success": "Terminé",
+         "successful": "Terminé",
+         "error": "Échec"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "Actualiser",
+            "tooltip": "Actualiser le tableau des tâches"
+         },
+         "actions": {
+            "label": "Actions",
+            "tooltip": "Actions pour l'objet associé à la tâche sélectionnée"
+         }
+      },
+      "pseudo": {
+         "vmrc": {
+            "download": {
+               "label": "Télécharger VMRC",
+               "summary": "Télécharger le programme d'installation de VMware Remote Console"
+            }
+         },
+         "certificate": {
+            "upload": {
+               "label": "Remplacer le certificat de l'hôte",
+               "summary": "Remplacer le certificat SSL de l'hôte"
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "Télécharger le fichier dans la banque de données",
+               "summary": "Télécharger un fichier dans une banque de données",
+               "cancelled": "Téléchargement du fichier annulé"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "Télécharger un disque",
+               "summary": "Télécharger un disque pour une machine virtuelle",
+               "cancelled": "Téléchargement du disque annulé"
+            }
+         }
+      }
+   }
+}

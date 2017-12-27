@@ -1,0 +1,48 @@
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+table {
+  border-collapse:collapse;
+  border-spacing: 2px;
+  border-color: gray;
+}
+th, td {
+  padding: 5px;
+}
+th{
+  font-size: 16px;			
+}
+td{
+  font-size: 14px;
+}
+.error{
+  display: block;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0; 
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+.hide:focus ~ .error {
+  opacity: 0;
+  font-size: 0;
+  height: 0;
+}
+.show{
+	
+	color:#0000CC;
+}
+.hide{
+	
+	color:#0000CC;
+}
+.show:focus ~ .error {
+  opacity: 1;
+  font-size: 100%;
+  height: auto;
+}
+.indent{
+  margin-left: 0.5cm;
+  margin-top: 0.5cm;
+}

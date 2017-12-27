@@ -1,0 +1,56 @@
+{
+   "task": {
+      "task": "작업",
+      "entity": "대상",
+      "queued": "대기열에 포함됨",
+      "started": "시작됨",
+      "completed": "완료됨",
+      "initiator": "이니시에이터",
+      "result": "결과",
+      "state": {
+         "running": "실행 중...",
+//         "success": "성공적으로 완료",
+         "success": "완료됨",  //add
+         "successful": "완료됨",
+         "error": "실패"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "새로 고침",
+            "tooltip": "작업 테이블을 새로 고칩니다."
+         },
+         "actions": {
+            "label": "작업",
+            "tooltip": "선택한 작업과 관련된 개체의 작업입니다."
+         }
+      },
+      "pseudo": {
+         "vmrc": {
+            "download": {
+               "label": "VMRC 다운로드",
+               "summary": "VMware Remote Console 설치 관리자 다운로드"
+            }
+         },
+         "certificate": {
+            "upload": {
+               "label": "호스트 인증서 교체",
+               "summary": "호스트의 SSL 인증서를 교체합니다."
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "데이터스토어에 파일 업로드",
+               "summary": "데이터스토어에 파일을 업로드합니다.",
+               "cancelled": "파일 업로드 취소됨"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "디스크 업로드",
+               "summary": "가상 시스템의 디스크를 업로드합니다.",
+               "cancelled": "디스크 업로드 취소됨"
+            }
+         }
+      }
+   }
+}

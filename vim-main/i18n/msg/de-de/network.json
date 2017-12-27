@@ -1,0 +1,1361 @@
+{
+   "network": {
+      "title": "{{hostname}} – Netzwerk",
+      "context": {
+         "title": "Netzwerk",
+         "addPortgroup": {
+            "title": "Portgruppe hinzufügen",
+            "tooltip": "Neue Portgruppe hinzufügen"
+         },
+         "addVSwitch": {
+            "title": "Standard-vSwitch hinzufügen",
+            "tooltip": "Virtuellen Standard-Switch hinzufügen"
+         },
+         "addVMKNIC": {
+            "title": "VMkernel-Netzwerkkarte hinzufügen",
+            "tooltip": "VMkernel-Schnittstelle hinzufügen"
+         }
+      },
+      "tabs": {
+         "vswitches": {
+            "title": "Virtuelle Switches",
+            "toolTip": "Virtuelle Switches des Hosts verwalten"
+         },
+         "portgroups": {
+            "title": "Portgruppen",
+            "toolTip": "Switch-Portgruppen des Hosts verwalten"
+         },
+         "pnics": {
+            "title": "Physische Netzwerkkarten",
+            "toolTip": "Physische Netzwerkkarten des Hosts verwalten"
+         },
+         "vmknics": {
+            "title": "VMkernel-Netzwerkkarten",
+            "toolTip": "VMkernel-Netzwerkkarten des Hosts verwalten"
+         },
+         "netstacks": {
+            "title": "TCP/IP-Stacks",
+            "toolTip": "TCP/IP-Stacks des Hosts verwalten"
+         },
+         "firewall": {
+            "title": "Firewallregeln",
+            "toolTip": "Firewallregeln verwalten"
+         }
+      },
+      "monitor": {
+         "events": {
+            "tabTitle": "Ereignisse",
+            "tabTooltip": "Systemereignisse"
+         },
+         "tasks": {
+            "tabTitle": "Aufgaben",
+            "tabTooltip": "Aufgaben"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "Berechtigungen",
+            "title": "Berechtigungen verwalten",
+            "close": "Schließen",
+            "cancel": "Abbrechen",
+            "noUsers": "Keine Benutzer",
+            "addUser": {
+               "label": "Benutzer hinzufügen",
+               "toolTip": "Einen Benutzer hinzufügen"
+            },
+            "removeUser": {
+               "label": "Benutzer entfernen",
+               "toolTip": "Einen Benutzer entfernen"
+            },
+            "assignRole": {
+               "label": "Rolle zuweisen",
+               "toolTip": "Eine Rolle einem Benutzer zuweisen"
+            },
+            "updatePermissions": {
+               "successNotification": "Berechtigungen wurden aktualisiert",
+               "failureNotification": "Berechtigungen konnten nicht aktualisiert werden: {{error}}"
+            },
+            "columns": {
+               "user": "Benutzer",
+               "role": "Rolle"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "Benutzer auswählen"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "Rolle auswählen"
+            },
+            "propagateLabel": "An alle untergeordneten Objekte weitergeben"
+         }
+      },
+      "firewall": {
+         "alt": "Firewall",
+         "list": {
+            "columns": {
+               "name": "Name",
+               "key": "Schlüssel",
+               "incoming": "Eingehende Ports",
+               "outgoing": "Ausgehende Ports",
+               "protocols": "Protokolle",
+               "daemon": "Daemon",
+               "service": "Dienst"
+            },
+            "actionBar": {
+               "edit": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Einstellungen für diesen Regelsatz bearbeiten"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für den ausgewählten Firewallregelsatz"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Firewallregeln aktualisieren"
+               }
+            },
+            "unknownRule": "Unbekannte Firewallregel",
+            "rule": "Regel",
+            "direction": "Richtung",
+            "port": "Port",
+            "protocol": "Protokoll",
+            "notification": {
+               "enable": {
+                  "success": "Regelsatz {{name}} wurde aktiviert.",
+                  "error": "Regelsatz {{}} konnte nicht aktiviert werden."
+               },
+               "disable": {
+                  "success": "Regelsatz {{name}} wurde deaktiviert.",
+                  "error": "Regelsatz {{}} konnte nicht deaktiviert werden."
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "Einstellungen bearbeiten",
+               "tooltip": "Firewallregel bearbeiten"
+            },
+            "enable": {
+               "label": "Aktivieren",
+               "tooltip": "Diese Firewallregel aktivieren"
+            },
+            "disable": {
+               "label": "Deaktivieren",
+               "tooltip": "Diese Firewallregel deaktivieren"
+            },
+            "service": {
+               "label": "Dienst",
+               "tooltip": "Einstellungen für den mit dieser Firewallregel verknüpften Dienst ändern"
+            },
+            "policy": {
+               "label": "Richtlinie",
+               "tooltip": "Richtlinienoptionen für den mit dieser Firewallregel verknüpften Dienst"
+            }
+         },
+         "summary": {
+            "key": "Schlüssel",
+            "enabled": "Aktiviert",
+            "true": "Ja",
+            "false": "Nein",
+            "required": "Erforderlich",
+            "rules": "Regeln",
+            "package": "Paketinformationen",
+            "allowedIP": "Zulässige IP-Adressen",
+            "all": "Alle",
+            "service": "Dienst",
+            "portlets": {
+               "rules": {
+                  "title": "Firewallregeln",
+                  "tooltip": "Firewallregeln"
+               }
+            }
+         },
+         "edit": {
+            "title": "Firewall-Einstellungen",
+            "header": "Zulässige IP-Adressen",
+            "allIP": "Alle Verbindungen von allen IP-Adressen",
+            "selectedIP": "Nur Verbindungen von den folgenden Netzwerken zulassen:",
+            "selectedIPInfo": "Trennen Sie Netzwerke durch Kommas.<br/>Beispiel:<br/>192.168.0.0/24, 192.168.1.2, 2001::1/64, fd3e:29a6:0a81:e478::/64",
+            "ok": "OK",
+            "rejectLabel": "Abbrechen",
+            "invalidIP": "Geben Sie eine gültige IP-Adresse ein."
+         }
+      },
+      "vmknic": {
+         "alt": "VMkernel-Netzwerkkarte",
+         "select": {
+            "title": "VMkernel-Schnittstelle auswählen",
+            "rejectLabel": "Abbrechen",
+            "confirmLabel": "Auswählen",
+            "loading": "Wird geladen..."
+         },
+         "summary": {
+            "virtualSwitch": "Virtueller Switch:",
+            "portGroup": "Portgruppe:",
+            "tcpIpConfiguration": "TCP/IP-Konfiguration",
+            "vswitchTopology": "vSwitch-Topologie",
+            "services": "Dienste",
+            "unknownVMKNIC": "Unbekannte VMkernel-Netzwerkkarte",
+            "ok": "OK",
+            "portlets": {
+               "tcpip": {
+                  "netstack": "TCP/IP-Stack",
+                  "ipv4DHCP": {
+                     "title": "IPv4-DHCP",
+                     "enabled": "Aktiviert",
+                     "disabled": "Deaktiviert"
+                  },
+                  "ipv4Address": "IPv4-Adresse",
+                  "ipv4Subnet": "IPv4-Subnetz",
+                  "ipv6DHCP": {
+                     "title": "IPv6-DHCP",
+                     "enabled": "Aktiviert",
+                     "disabled": "Deaktiviert"
+                  },
+                  "ipv6AutoConfig": {
+                     "title": "Automatische Konfiguration von IPv6",
+                     "enabled": "Aktiviert",
+                     "disabled": "Deaktiviert"
+                  },
+                  "ipv6Addresses": "IPv6-Adressen",
+                  "none": "Keine"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Daten für diese VMkernel-Netzwerkkarte aktualisieren"
+               },
+               "editSettings": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Daten für diese VMkernel-Netzwerkkarte bearbeiten"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für diese VMkernel-Netzwerkkarte"
+               }
+            }
+         },
+         "events": {
+            "type": "Typ:",
+            "time": "Uhrzeit:",
+            "virtualMachine": "Virtuelle Maschine:"
+         },
+         "list": {
+            "grid": {
+               "name": "Name",
+               "portgroup": "Portgruppe",
+               "tcpip": "TCP/IP-Stack",
+               "services": "Dienste",
+               "ipv4": "IPv4-Adresse",
+               "ipv6": "IPv6-Adressen",
+               "none": "Keine"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Adaptertabelle aktualisieren"
+               },
+               "add": {
+                  "label": "VMkernel-Netzwerkkarte hinzufügen",
+                  "tooltip": "VMkernel-Netzwerkkarte hinzufügen - in Bearbeitung"
+               },
+               "editSettings": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Einstellungen für diesen virtuellen Switch bearbeiten"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für diese VMkernel-Netzwerkkarte"
+               }
+            }
+         },
+         "monitor": {
+            "title": "Überwachen",
+            "tabs": {
+               "events": {
+                  "label": "Ereignisse",
+                  "tooltip": "Ereignisse"
+               },
+               "tasks": {
+                  "label": "Aufgaben",
+                  "tooltip": "Aufgaben"
+               }
+            }
+         },
+         "add": {
+            "loading": "Wird geladen...",
+            "title": "VMkernel-Netzwerkkarte hinzufügen",
+            "rejectLabel": "Abbrechen",
+            "ip": {
+               "ipv4": "Nur IPv4",
+               "ipv6": "Nur IPv6",
+               "both": "IPv4 und IPv6"
+            },
+            "vswitch": {
+               "label": "Virtuellen Switch auswählen"
+            },
+            "dialog": {
+               "create": "Erstellen",
+               "validation": {
+                  "nic": "Geben Sie einen Namen für die neue Portgruppe ein",
+                  "vswitch": "Wählen Sie einen virtuellen Switch für die Portgruppe aus",
+                  "vlanId": "Geben Sie eine VLAN-ID ein. Der Wert muss zwischen {{min}} und {{max}} liegen.",
+                  "ipv4": "Geben Sie IPv4-Adresse und Subnetz an",
+                  "portgroupExists": "Es ist bereits eine Portgruppe mit dem Namen {{name}} vorhanden. Wählen Sie einen anderen Namen aus."
+               },
+               "notification": {
+                  "success": "VMkernel-Netzwerkkarte {{name}} wurde erstellt.",
+                  "error": "Fehler beim Erstellen der neuen VMkernel-Netzwerkkarte"
+               }
+            }
+         },
+         "edit": {
+            "title": "Einstellungen bearbeiten – {{name}}",
+            "rejectLabel": "Abbrechen",
+            "confirmLabel": "Speichern",
+            "loading": "Wird geladen...",
+            "ip": {
+               "ipv4": "Nur IPv4",
+               "ipv6": "Nur IPv6",
+               "both": "IPv4 und IPv6"
+            },
+            "vswitch": {
+               "label": "Virtuellen Switch auswählen"
+            },
+            "dialog": {
+               "create": "Erstellen",
+               "validation": {
+                  "portgroup": "Die dieser VMkernel-Netzwerkkarte zugewiesene Portgruppe existiert nicht",
+                  "vswitch": "Wählen Sie einen virtuellen Switch für die Portgruppe aus",
+                  "ipv4": "Geben Sie IPv4-Adresse und Subnetz an"
+               },
+               "notification": {
+                  "success": "Konfiguration für VMkernel-Netzwerkkarte {{name}} wurde gespeichert",
+                  "error": "Konfiguration für VMkernel-Netzwerkkarte {{name}} konnte nicht gespeichert werden"
+               }
+            }
+         },
+         "context": {
+            "remove": {
+               "label": "Entfernen",
+               "tooltip": "Diese VMkernel-Netzwerkkarte entfernen"
+            },
+            "edit": {
+               "label": "Einstellungen bearbeiten",
+               "tooltip": "Einstellungen für diese VMkernel-Netzwerkkarte bearbeiten",
+               "tooltipDVS": "Die den verteilten Portgruppen zugewiesenen VMkernel-Netzwerkkarten können nicht bearbeitet werden"
+            }
+         },
+         "remove": {
+            "title": "VMKNIC entfernen – {{name}}",
+            "confirmLabel": "Bestätigen",
+            "rejectLabel": "Abbrechen",
+            "successNotification": "VMkernel-Netzwerkkarte {{name}} entfernt",
+            "failureNotification": "VMkernel-Netzwerkkarte {{name}} konnte nicht entfernt werden",
+            "confirmation": "Durch das Entfernen einer VMkernel-Netzwerkkarte stehen alle Dienste, die sie verwenden, nicht mehr zur Verfügung.\n\n{{name}} entfernen?"
+         },
+         "settings": {
+            "services": {
+               "vSphereProvisioning": {
+                  "label": "Bereitstellung"
+               },
+               "vMotion": {
+                  "label": "vMotion"
+               },
+               "vmotion": {
+                  "label": "vMotion"
+               },
+               "faultToleranceLogging": {
+                  "label": "Fault Tolerance-Protokollierung"
+               },
+               "management": {
+                  "label": "Management"
+               },
+               "vSphereReplication": {
+                  "label": "Replizierung"
+               },
+               "vSphereReplicationNFC": {
+                  "label": "NFC-Replikation"
+               },
+               "vsan": {
+                  "label": "vSAN"
+               },
+               "vsanWitness": {
+                  "label": "vSAN-Zeuge"
+               }
+            },
+            "portGroup": {
+               "label": "Portgruppe",
+               "newPortGroup": "Neue Portgruppe",
+               "vlandId": "VLAN-ID",
+               "ipVersion": {
+                  "label": "IP-Version"
+               },
+               "ipv4": {
+                  "label": "IPv4-Einstellungen",
+                  "dhcp": {
+                     "label": "Konfiguration",
+                     "dhcp": "DHCP",
+                     "static": "Statisch"
+                  },
+                  "address": "Adresse",
+                  "subnetMask": "Subnetzmaske"
+               },
+               "ipv6": {
+                  "label": "IPv6-Einstellungen",
+                  "clickExpand": "Klicken Sie zum Erweitern",
+                  "dhcpv6": {
+                     "label": "DHCPv6",
+                     "enabled": "Aktiviert",
+                     "disabled": "Deaktiviert"
+                  },
+                  "autoConfig": {
+                     "label": "Automatische Konfiguration",
+                     "yes": "Ja",
+                     "no": "Nein"
+                  },
+                  "staticAddresses": {
+                     "label": "Statische Adressen",
+                     "addAddress": "Adresse hinzufügen",
+                     "placeholder": {
+                        "address": "Adresse",
+                        "prefix": "Präfix"
+                     }
+                  },
+                  "vSwitch": {
+                     "label": "Virtueller Switch"
+                  },
+                  "tcpip": {
+                     "label": "TCP/IP-Stack"
+                  },
+                  "services": {
+                     "label": "Dienste",
+                     "vMotion": "vMotion"
+                  }
+               }
+            }
+         }
+      },
+      "vswitch": {
+         "alt": "Virtueller Switch",
+         "context": {
+            "addUplink": {
+               "title": "Uplink hinzufügen",
+               "tooltip": "Diesem virtuellen Switch einen Uplink hinzufügen"
+            },
+            "editSettings": {
+               "title": "Einstellungen bearbeiten",
+               "tooltip": "Einstellungen für diesen virtuellen Switch bearbeiten"
+            },
+            "remove": {
+               "title": "Entfernen",
+               "tooltip": "Virtuellen Switch entfernen",
+               "tooltipDVS": "Verteilte Switches können nur vom vCenter Server aus entfernt werden"
+            }
+         },
+         "summary": {
+            "type": "Typ:",
+            "virtualSwitch": "Virtueller Switch:",
+            "portGroups": "Portgruppen:",
+            "uplinks": "Uplinks:",
+            "vswitchDetails": "vSwitch-Details",
+            "vswitchTopology": "vSwitch-Topologie",
+            "portlet": {
+               "mtu": "MTU",
+               "ports": "Ports",
+               "link": "Verbindungserkennung",
+               "attached": "Hinzugefügte VMs",
+               "beacon": "Signalintervall",
+               "available": "Verfügbar",
+               "active": "Aktiv",
+               "linkDiscovery": {
+                  "mode": {
+                     "listen": "Überwachen",
+                     "advertise": "Werben",
+                     "both": "Beide",
+                     "none": "Keine"
+                  },
+                  "protocol": {
+                     "label": "Protokoll",
+                     "lldp": "LLDP (Link Layer Discovery Protocol)",
+                     "cdp": "CDP (Cisco Discovery Protocol)"
+                  }
+               }
+            },
+            "dialog": {
+               "title": "Unbekannter vSwitch"
+            },
+            "actionBar": {
+               "addUplink": {
+                  "label": "Uplink hinzufügen",
+                  "tooltip": "Einen neuen physischen Uplink zu einem virtuellen Switch hinzufügen"
+               },
+               "edit": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Einstellungen für diesen virtuellen Switch bearbeiten"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Adaptertabelle aktualisieren"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für ausgewählte Objekte in dieser Liste"
+               }
+            }
+         },
+         "list": {
+            "grid": {
+               "name": "Name",
+               "portgroups": "Portgruppen",
+               "uplinks": "Uplinks",
+               "type": "Typ"
+            },
+            "actionBar": {
+               "addStandard": {
+                  "label": "Virtuellen Standard-Switch hinzufügen",
+                  "tooltip": "Neuen virtuellen Standard-Switch hinzufügen"
+               },
+               "addUplink": {
+                  "label": "Uplink hinzufügen",
+                  "tooltip": "Diesem virtuellen Switch einen Uplink (physische Netzwerkkarte) hinzufügen"
+               },
+               "edit": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Einstellungen für diesen virtuellen Switch bearbeiten"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Liste der virtuellen Switches aktualisieren"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für den ausgewählten virtuellen Switch"
+               }
+            }
+         },
+         "events": {
+            "type": "Typ:",
+            "time": "Uhrzeit:",
+            "virtualMachine": "Virtuelle Maschine:"
+         },
+         "diagram": {
+            "loading": "vSwitch-Topologie wird geladen...",
+            "noPortgroups": "Keine Portgruppen",
+            "vlanId": "VLAN-ID:",
+            "virtualMachines": "Virtuelle Maschinen",
+            "macAddress": "MAC-Adresse",
+            "vmKernelPorts": "VMkernel-Ports",
+            "noPhysicalAdapters": "Keine physischen Adapter",
+            "physicalAdapters": "Physische Adapter"
+         },
+         "monitor": {
+            "title": "Überwachen",
+            "tabs": {
+               "events": {
+                  "label": "Ereignisse",
+                  "tooltip": "Ereignisse"
+               },
+               "tasks": {
+                  "label": "Aufgaben",
+                  "tooltip": "Aufgaben"
+               }
+            }
+         },
+         "noAdapters": "Es sind keine freien physischen Adapter vorhanden, die diesem virtuellen Switch hinzugefügt werden können.",
+         "remove": {
+            "title": "Virtual Switch entfernen – {{name}}",
+            "confirmation": "Möchten Sie die folgenden vSwitches wirklich entfernen?",
+            "confirmLabel": "Ja",
+            "rejectLabel": "Nein",
+            "portgroups": "Portgruppen",
+            "failureNotification": "Virtual Switch {{name}} konnte nicht entfernt werden",
+            "successNotification": "Virtual Switch {{name}} wurde entfernt"
+         },
+         "type": {
+            "dvs": "Verteilter vSwitch",
+            "standard": "Standard-vSwitch"
+         },
+         "add": {
+            "loading": "Wird geladen...",
+            "title": "Standardmäßigen Virtual Switch hinzufügen – {{name}}",
+            "titleNoName": "Virtuellen Standard-Switch hinzufügen",
+            "newSwitch": "Neuer Switch",
+            "confirmLabel": "Hinzufügen",
+            "rejectLabel": "Abbrechen",
+            "security": "Sicherheit",
+            "clickToExpand": "Klicken Sie zum Erweitern",
+            "promiscuousMode": "Promiscuous-Modus",
+            "accept": "Akzeptieren",
+            "reject": "Ablehnen",
+            "useVswitch": "Aus vSwitch übernehmen",
+            "macChanges": "MAC-Adressenänderungen",
+            "forgedTransmits": "Gefälschte Übertragungen",
+            "linkDiscovery": "Verbindungserkennung",
+            "mode": {
+               "label": "Modus",
+               "listen": "Überwachen",
+               "advertise": "Werben",
+               "both": "Beide",
+               "none": "Keine"
+            },
+            "protocol": {
+               "label": "Protokoll",
+               "lldp": "LLDP (Link Layer Discovery Protocol)",
+               "cdp": "CDP (Cisco Discovery Protocol)"
+            },
+            "dialog": {
+               "title": "Uplink kann nicht hinzugefügt werden",
+               "ok": "OK",
+               "create": "Hinzufügen"
+            },
+            "error": {
+               "name": "Geben Sie einen gültigen Namen für den virtuellen Switch ein",
+               "mtu": "Geben Sie eine gültige Zahl für die MTU ein. Die größtmögliche Zahl ist {{max}}, die kleinstmögliche Zahl {{min}}."
+            },
+            "notification": {
+               "success": "Virtual Switch {{name}} wurde erstellt",
+               "error": "Neuer Virtual Switch {{name}} konnte nicht erstellt werden"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für diesen TCP/IP-Stack"
+               },
+               "add": {
+                  "label": "Uplink hinzufügen",
+                  "tooltip": "Einen neuen physischen Uplink zu einem virtuellen Switch hinzufügen"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Diesen TCP/IP-Stack aktualisieren"
+               }
+            }
+         },
+         "edit": {
+            "loading": "Wird geladen...",
+            "title": "Standardmäßigen Virtual Switch bearbeiten – {{name}}",
+            "titleNoName": "Virtuellen Standard-Switch bearbeiten",
+            "confirmLabel": "Speichern",
+            "rejectLabel": "Abbrechen",
+            "dialog": {
+               "title": "Uplink kann nicht hinzugefügt werden",
+               "ok": "OK",
+               "create": "Einen virtuellen Switch erstellen"
+            },
+            "error": {
+               "name": "Geben Sie einen Namen für den virtuellen Switch ein",
+               "duplicate": "Wählen Sie eindeutige Uplink-Werte aus."
+            },
+            "notification": {
+               "success": "Virtual Switch {{name}} wurde gespeichert",
+               "error": "Virtual Switch {{name}} konnte nicht gespeichert werden"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für diesen TCP/IP-Stack"
+               },
+               "add": {
+                  "label": "Uplink hinzufügen",
+                  "tooltip": "Einen neuen physischen Uplink zu einem virtuellen Switch hinzufügen"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Diesen TCP/IP-Stack aktualisieren"
+               }
+            }
+         },
+         "notifications": {
+            "uplink": {
+               "message": "Dieser virtuelle Switch verfügt über keine Uplink-Redundanz.",
+               "suggested-action": "Sie sollten einen anderen Uplink-Adapter hinzufügen."
+            }
+         },
+         "settings": {
+            "vSwitchName": "vSwitch-Name",
+            "mtu": "MTU",
+            "uplink": "Uplink"
+         }
+      },
+      "netstack": {
+         "alt": "TCP/IP-Stack",
+         "names": {
+            "defaultTcpipStack": "Standard-TCP/IP-Stack",
+            "vSphereProvisioning": "Provisioning-Stack",
+            "vmotion": "vMotion-Stack",
+            "vxlan": "VXLAN"
+         },
+         "summary": {
+            "unknownNetstack": {
+               "title": "Unbekannter TCP/IP-Stack"
+            },
+            "key": "Schlüssel:",
+            "configuration": "Konfiguration",
+            "dnsConfiguration": "DNS-Konfiguration",
+            "routing": "Routing",
+            "actionBar": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für diesen TCP/IP-Stack"
+               },
+               "edit": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Konfiguration dieses TCP/IP-Stack bearbeiten"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Diesen TCP/IP-Stack aktualisieren"
+               }
+            },
+            "portlets": {
+               "configuration": {
+                  "ipv6": {
+                     "name": "IPv6"
+                  },
+                  "cca": {
+                     "name": "Algorithmus zur Überlastungssteuerung"
+                  },
+                  "maxConnections": {
+                     "name": "Maximale Verbindungen"
+                  },
+                  "vmknics": {
+                     "name": "VMKernel-Netzwerkkarten"
+                  },
+                  "dhcp": {
+                     "name": "DHCP"
+                  }
+               },
+               "dns": {
+                  "loadingMessage": "DNS-Konfiguration wird geladen...",
+                  "hostName": {
+                     "name": "Hostname"
+                  },
+                  "address": {
+                     "name": "Adressen"
+                  },
+                  "domainName": {
+                     "name": "Domänenname"
+                  },
+                  "searchDomains": {
+                     "name": "Domänen durchsuchen"
+                  }
+               },
+               "routing": {
+                  "loadingMessage": "Routing-Tabellen werden geladen...",
+                  "ipv4": {
+                     "name": "IPv4",
+                     "value": "Zum Erweitern auf die Beschriftung klicken",
+                     "routeTable": {
+                        "name": "Routing-Tabelle",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "Netzwerkadresse"
+                              },
+                              "prefixLength": {
+                                 "label": "Präfixlänge"
+                              },
+                              "gateway": {
+                                 "label": "Gateway"
+                              },
+                              "device": {
+                                 "label": "Gerät"
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "ipv6": {
+                     "name": "IPv6",
+                     "value": "Zum Erweitern auf die Beschriftung klicken",
+                     "routeTable": {
+                        "name": "IPv6",
+                        "localSubnet": "Lokale Subnetze",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "Netzwerkadresse"
+                              },
+                              "prefixLength": {
+                                 "label": "Präfixlänge"
+                              },
+                              "gateway": {
+                                 "label": "Gateway"
+                              },
+                              "device": {
+                                 "label": "Gerät"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "type": "Typ:",
+            "time": "Uhrzeit:",
+            "virtualMachine": "Virtuelle Maschine:"
+         },
+         "ipv6": {
+            "true": "Aktiviert",
+            "false": "Deaktiviert"
+         },
+         "dhcp": {
+            "true": "Aktiviert",
+            "false": "Deaktiviert"
+         },
+         "list": {
+            "columns": {
+               "name": {
+                  "label": "Name"
+               },
+               "ipv4Gateway": {
+                  "label": "IPv4-Gateway"
+               },
+               "ipv6Gateway": {
+                  "label": "IPv6-Gateway"
+               },
+               "preferredDNS": {
+                  "label": "Bevorzugter DNS"
+               },
+               "alternateDNS": {
+                  "label": "Alternativer DNS"
+               }
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für den ausgewählten TCP-/IP-Stack"
+               },
+               "edit": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Einstellungen für diesen TCP/IP-Stack bearbeiten"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "TCP/IP-Stack-Tabelle aktualisieren"
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "Einstellungen bearbeiten",
+               "tooltip": "Einstellungen für diesen TCP/IP-Stack bearbeiten"
+            }
+         },
+         "edit": {
+            "title": "TCP/IP-Konfiguration bearbeiten – {{displayName}}",
+            "confirmLabel": "Speichern",
+            "rejectLabel": "Abbrechen",
+            "basicConfig": {
+               "label": "Grundlegende DNS-Konfiguration",
+               "title":"Legen Sie fest, wie der Host seine Einstellungen für diesen TCP/IP-Stack erhalten soll.",
+               "useDHCP": {
+                  "label": "DHCP-DNS-Dienste aus dem folgenden Adapter verwenden"
+               },
+               "adapter": "Adapter",
+               "manual": {
+                  "label": "Einstellungen für diesen TCP/IP-Stack manuell konfigurieren",
+                  "hostName": "Hostname",
+                  "domainName": "Domänenname",
+                  "primaryDNS": "Primärer DNS-Server",
+                  "secondaryDNS": "Sekundärer DNS-Server",
+                  "searchDomains": "Domänen durchsuchen",
+                  "searchDomainsOnePerLine": "Eine Suchdomäne pro Zeile"
+               }
+            },
+            "routing": {
+               "title": "Routing",
+               "ipv4": "IPv4-Gateway",
+               "ipv6": "IPv6-Gateway"
+            },
+            "congestionControl": {
+               "newReno": "NewReno",
+               "cubic": "CUBIC",
+               "CUBIC": "CUBIC"
+            },
+            "advancedSettings": {
+               "title": "Erweiterte Einstellungen",
+               "congestionControl": "Algorithmus zur Überlastungssteuerung",
+               "maxNumberConnections": "Maximale Anzahl der Verbindungen"
+            },
+            "notification": {
+               "success": "Konfiguration für {{netstack}} wurde aktualisiert",
+               "failure": "Konfiguration für {{netstack}} konnte nicht aktualisiert werden"
+            },
+            "error": {
+               "hostName": "Geben Sie einen gültigen Hostnamen ein. Die Länge muss kleiner oder gleich {{max}} sein.",
+               "domainName": "Geben Sie einen gültigen Domänennamen ein. Die Länge muss kleiner oder gleich {{max}} sein.",
+               "primaryDNS": "Geben Sie einen gültigen primären DNS-Server ein. Die Länge muss kleiner oder gleich {{max}} sein.",
+               "secondaryDNS": "Geben Sie einen gültigen sekundären DNS-Server ein. Die Länge muss kleiner oder gleich {{max}} sein.",
+               "searchDomains": "Geben Sie gültige Suchdomänen ein (eine pro Zeile, keine Kommas).",
+               "ipv4Gateway": "Geben Sie ein gültiges IPv4-Gateway ein",
+               "ipv6Gateway": "Geben Sie ein gültiges IPv6-Gateway ein",
+               "maxConnections": "Geben Sie eine Zahl zwischen {{min}} und {{max}} für maximale Verbindungen ein."
+            }
+         }
+      },
+      "tcp": {
+         "congestionControl": {
+            "newreno": "NewReno",
+            "cubic": "CUBIC"
+         }
+      },
+      "portgroup": {
+         "alt": "Portgruppe",
+         "type": {
+            "Network": "Standard-Portgruppe",
+            "DistributedVirtualPortgroup": "Verteilte virtuelle Portgruppe",
+            "Opaque": "Nicht transparente Netzwerk-Portgruppe"
+         },
+         "summary": {
+            "accessible": "Verfügbar:",
+            "virtualMachines": "Virtuelle Maschinen:",
+            "virtualSwitch": "Virtueller Switch:",
+            "vlanId": "VLAN-ID:",
+            "activePorts": "Aktive Ports:",
+            "vswitchTopology": "vSwitch-Topologie",
+            "nicTeamingPolicy": "Netzwerkkarten-Gruppierungsrichtlinien",
+            "offloadPolicy": "Offload-Richtlinie",
+            "securityPolicy": "Sicherheitsrichtlinie",
+            "shapingPolicy": "Shaping-Richtlinie",
+            "actions": {
+               "editSettings": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Einstellungen für diesen virtuellen Switch bearbeiten"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Adaptertabelle aktualisieren"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für die ausgewählte Portgruppe"
+               }
+            }
+         },
+         "events": {
+            "type": "Typ:",
+            "time": "Uhrzeit:",
+            "virtualMachine": "Virtuelle Maschine:"
+         },
+         "accessible": {
+            "true": "Ja",
+            "false": "Nein"
+         },
+         "add": {
+            "title": "Portgruppe hinzufügen – {{name}}",
+            "titleNoName": "Portgruppe hinzufügen",
+            "newPortgroup": "Neue Portgruppe",
+            "confirmLabel": "Hinzufügen",
+            "rejectLabel": "Abbrechen",
+            "loading": "Wird geladen...",
+            "toolTip": "Portgruppe hinzufügen",
+            "selectVSwitch": "Virtuellen Switch auswählen",
+            "missingName": "Geben Sie einen Namen für die Portgruppe ein",
+            "missingVSwitch": "Wählen Sie einen virtuellen Switch für die Portgruppe aus",
+            "badVLANIDRange": "Die VLAN-ID muss zwischen 0 und 4095 liegen",
+            "success": "Portgruppe {{name}} wurde erstellt",
+            "failure": "Neue Portgruppe {{name}} konnte nicht erstellt werden"
+         },
+         "edit": {
+            "title": "Portgruppe bearbeiten – {{name}}",
+            "titleNoName": "Portgruppe bearbeiten",
+            "confirmLabel": "Speichern",
+            "rejectLabel": "Abbrechen",
+            "loading": "Wird geladen...",
+            "missingName": "Geben Sie einen Namen für die Portgruppe ein",
+            "missingVSwitch": "Wählen Sie einen virtuellen Switch für die Portgruppe aus",
+            "badVLANIDRange": "Die VLAN-ID muss zwischen 0 und 4095 liegen",
+            "success": "Portgruppe {{name}} wurde gespeichert",
+            "failure": "Portgruppe {{name}} konnte nicht gespeichert werden",
+            "trafficShaping": {
+               "title": "Traffic-Shaping",
+               "policyExceptions": "Richtlinienausnahmen",
+               "status": "Status",
+               "disabled": "Deaktiviert",
+               "enabled": "Aktiviert",
+               "averageBandwidth": "Durchschnittsbandbreite",
+               "peakBandwidth": "Spitzenbandbreite",
+               "burstSize": "Burstgröße",
+               "kbps": "KB/s",
+               "kb": "KB",
+               "clickToExpand": "Klicken Sie zum Erweitern",
+               "note": {
+                  "title": "Hinweis",
+                  "content": "Die Traffic-Shaping-Richtlinien werden auf den Datenverkehr jedes virtuellen Netzwerkadapters angewendet, der an den virtuellen Switch angeschlossen ist."
+               },
+               "inherit": "Aus vSwitch übernehmen"
+            },
+            "nicTeaming": {
+               "title": "NIC-Gruppierung",
+               "clickToExpand": "Klicken Sie zum Erweitern",
+               "loadBalancing": {
+                  "title": "Lastausgleich",
+                  "loadbalance_ip": "Anhand des IP-Hashs routen",
+                  "loadbalance_srcmac": "Anhand des Quell-MAC-Hashs routen",
+                  "loadbalance_srcid": "Anhand der Quelle der Port-ID routen",
+                  "failover_explicit": "Ausdrückliche Failover-Reihenfolge verwenden"
+               },
+               "failoverDetection": {
+                  "title": "Netzwerk-Failover-Ermittlung",
+                  "linkStatus": "Nur Verbindungsstatus",
+                  "beaconOnly": "Nur Signal"
+               },
+               "notifySwitches": {
+                  "title": "Switches benachrichtigen",
+                  "yes": "Ja",
+                  "no": "Nein"
+               },
+               "failBack": {
+                  "title": "Failback",
+                  "yes": "Ja",
+                  "no": "Nein"
+               },
+               "overrideFailoverOrder": {
+                  "title": "Failover-Reihenfolge außer Kraft setzen",
+                  "yes": "Ja",
+                  "no": "Nein"
+               },
+               "failoverOrder": {
+                  "title": "Failover-Reihenfolge",
+                  "override": "Switch-Failover-Reihenfolge außer Kraft setzen",
+                  "usedAs": "Status",
+                  "standby": "Standby",
+                  "active": "Aktiv",
+                  "unused": "Nicht verwendet",
+                  "name": "Name",
+                  "speed": "Geschwindigkeit",
+                  "networks": "Netzwerke",
+                  "markAsStandby": {
+                     "label": "Als „Standby“ markieren",
+                     "tooltip": "Diese physische Netzwerkkarte als „Standby“ markieren"
+                  },
+                  "markAsActive": {
+                     "label": "Als „Aktiv“ markieren",
+                     "tooltip": "Diese physische Netzwerkkarte als „Aktiv“ markieren"
+                  },
+                  "markAsUnused": {
+                     "label": "Als nicht verwendet markieren",
+                     "tooltip": "Diese physische Netzwerkkarte als nicht verwendet markieren"
+                  },
+                  "moveUp": {
+                     "label": "Nach oben verschieben",
+                     "tooltip": "Diesen Adapter nach oben in der Failover-Reihenfolge verschieben"
+                  },
+                  "moveDown": {
+                     "label": "Nach unten verschieben",
+                     "tooltip": "Diesen Adapter nach unten in der Failover-Reihenfolge verschieben"
+                  }
+               },
+               "inherit": "Aus vSwitch übernehmen"
+            }
+         },
+         "remove": {
+            "title": "Portgruppe entfernen",
+            "loading": "Wird geladen...",
+            "close": "Schließen",
+            "confirm": "Entfernen",
+            "rejectLabel": "Abbrechen",
+            "notification": {
+               "success": "Portgruppe {{name}} wurde entfernt",
+               "error": "Portgruppe {{name}} konnte nicht entfernt werden"
+            },
+            "confirmation": "Die folgende Portgruppe entfernen?",
+            "cantRemove": "Mindestens eine Portgruppe lässt sich nicht entfernen, da noch VMs oder VMkernel-Netzwerkkarten damit verbunden sind."
+         },
+         "settings": {
+            "name": {
+               "title": "Name",
+               "change": "Das Ändern des Namens dieser Portgruppe lässt <strong>{{length}}</strong> VMs verwaisen.",
+               "rename": "Sie können diese Portgruppe nicht umbenennen, da sie über einen <strong>{{length}}</strong> aktiven Port verfügt."
+            },
+            "vlanId": "VLAN-ID",
+            "vSwitch": {
+               "label": "Virtueller Switch",
+               "change": "Sie können vSwitch dieser Portgruppe nicht ändern, wenn aktive Ports ({{length}}) vorhanden sind."
+            }
+         },
+         "actions": {
+            "editSettings": {
+               "label": "Einstellungen bearbeiten",
+               "tooltip": "Diese Portgruppe bearbeiten"
+            },
+            "refresh": {
+               "label": "Aktualisieren",
+               "tooltip": "Portgruppenliste aktualisieren"
+            },
+            "actions": {
+               "label": "Aktionen",
+               "tooltip": "Aktionen für die ausgewählte Portgruppe"
+            },
+            "remove": {
+               "label": "Entfernen",
+               "tooltip": "Diese Portgruppe entfernen"
+            }
+         },
+         "list": {
+            "unknownVLANID": "Unbekannt",
+            "columns": {
+               "name": "Name",
+               "activePorts": "Aktive Ports",
+               "vlanId": "VLAN-ID",
+               "type": "Typ",
+               "vswitch": "vSwitch",
+               "vms": "VMs"
+            }
+         },
+         "portlets": {
+            "summary": {
+               "loading": "Übersicht wird geladen...",
+               "shaping": {
+                  "true": "Ja",
+                  "false": "Nein"
+               }
+            },
+            "teaming": {
+               "loading": "Teambildungsrichtlinie wird geladen...",
+               "notify": {
+                  "label": "Switches benachrichtigen",
+                  "true": "Ja",
+                  "false": "Nein"
+               },
+               "policy": {
+                  "label": "Richtlinie",
+                  "loadbalance_ip": "Anhand des IP-Hashs routen",
+                  "loadbalance_srcmac": "Anhand des Quell-MAC-Hashs routen",
+                  "loadbalance_srcid": "Anhand der Quelle der Port-ID routen",
+                  "failover_explicit": "Ausdrückliche Failover-Reihenfolge verwenden"
+               },
+               "reverse": {
+                  "label": "Umkehrrichtlinie",
+                  "true": "Ja",
+                  "false": "Nein"
+               },
+               "rolling": {
+                  "label": "Failback",
+                  "true": "Nein",
+                  "false": "Ja"
+               }
+            },
+            "shaping": {
+               "averageBandwidth": "Durchschnittsbandbreite",
+               "peakBandwidth": "Spitzenbandbreite",
+               "burstSize": "Burstgröße",
+               "enabled": {
+                  "label": "Aktiviert",
+                  "true": "Ja",
+                  "false": "Nein"
+               }
+            },
+            "offload": {
+               "loading": "Offload-Richtlinie wird geladen...",
+               "checksum": {
+                  "label": "Prüfsummen-Offload",
+                  "true": "Ja",
+                  "false": "Nein"
+               },
+               "tcpSegmentation": {
+                  "label": "TCP-Segmentierung",
+                  "true": "Ja",
+                  "false": "Nein"
+               },
+               "zeroCopy": {
+                  "label": "Null-Kopie-Übertragung",
+                  "true": "Ja",
+                  "false": "Nein"
+               }
+            },
+            "security": {
+               "loading": "Sicherheitsrichtlinie wird geladen...",
+               "allowPromiscuous": {
+                  "label": "Promiscuous-Modus zulassen",
+                  "true": "Ja",
+                  "false": "Nein"
+               },
+               "forgedTransmits": {
+                  "label": "Gefälschte Übertragungen zulassen",
+                  "true": "Ja",
+                  "false": "Nein"
+               },
+               "macChanges": {
+                  "label": "MAC-Änderungen zulassen",
+                  "true": "Ja",
+                  "false": "Nein"
+               }
+            }
+         },
+         "monitor": {
+            "title": "Überwachen"
+         }
+      },
+      "pnic": {
+         "alt": "Physische Netzwerkkarte",
+         "summary": {
+            "linkSpeed": "Verbindungsgeschwindigkeit:",
+            "driver": "Treiber:",
+            "macAddress": "MAC-Adresse:",
+            "adapterDetails": "Adapterdetails",
+            "halfduplex": "Halbduplex",
+            "fullduplex": "Vollduplex",
+            "up": "Betriebsbereit",
+            "down": "Ausgefallen",
+            "dialog": {
+               "unknown": {
+                  "title": "Unbekannte physische Netzwerkkarte"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Tabelle der physischen Adapter aktualisieren"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für den ausgewählten physischen Adapter"
+               },
+               "editSettings": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Einstellungen für den ausgewählten physischen Adapter bearbeiten"
+               }
+            },
+            "portlets": {
+               "details": {
+                  "pciAddress": "PCI-Adresse",
+                  "autoNegotiateSupport": "Unterstützung für automatisches Aushandeln",
+                  "autoNegotiateEnabled": "Automatisch aushandeln aktiviert",
+                  "directPathIOSupport": "Direktpfad-E/A-Unterstützung",
+                  "wakeOnLANSupport": "Wake-on-LAN-Unterstützung",
+                  "supportedSpeeds": "Unterstützte Geschwindigkeiten",
+                  "yes": "Ja",
+                  "no": "Nein",
+                  "enabled": "Aktiviert",
+                  "disabled": "Deaktiviert"
+               },
+               "subnets": {
+                  "title": "Erkannte Subnetze",
+                  "subnet": "Subnetz {{x}}"
+               },
+               "lldp": {
+                  "title": "Einzelheiten zum Link Layer Discovery Protocol",
+                  "chassisId": "Gehäuse-ID",
+                  "portId": "Port-ID",
+                  "timeToLive": "Gültigkeitsdauer (TTL)",
+                  "parameters": "Parameter"
+               },
+               "cdp": {
+                  "title": "Einzelheiten zum Cisco Discovery Protocol",
+                  "address": "IP-Adresse",
+                  "cdpVersion": "CDP-Version",
+                  "peerDeviceCapability": {
+                     "label": "Peer-Geräte-Funktionen",
+                     "host": "Host",
+                     "igmpEnabled": "IGMP",
+                     "networkSwitch": "Netzwerk-Switch",
+                     "repeater": "Repeater",
+                     "router": "Router",
+                     "sourceRouteBridge": "Quell-Route-Bridge",
+                     "transparentBridge": "Transparente Bridge"
+                  },
+                  "devId": "Geräte-ID",
+                  "fullDuplex": "Vollduplex",
+                  "hardwarePlatform": "Hardwareplattform",
+                  "ipPrefix": "IP-Präfix",
+                  "ipPrefixLen": "IP-Präfixlänge",
+                  "location": "Standort",
+                  "mgmtAddr": "Verwaltungsadresse",
+                  "mtu": "MTU",
+                  "portId": "Port-ID",
+                  "samples": "Beispiele",
+                  "softwareVersion": "Softwareversion",
+                  "systemName": "Systemname",
+                  "systemOID": "System-OID",
+                  "timeout": "Zeitüberschreitung",
+                  "ttl": "Gültigkeitsdauer (TTL)",
+                  "vlan": "VLAN-ID"
+               }
+            }
+         },
+         "edit": {
+            "confirmLabel": "Speichern",
+            "rejectLabel": "Abbrechen",
+            "title": "Physische Netzwerkkarte bearbeiten – {{nic}}",
+            "titleNoName": "Physische Netzwerkkarte bearbeiten",
+            "notification": {
+               "error": "Geschwindigkeit der physischen Netzwerkkarte konnte nicht für {{nic}} festgelegt werden",
+               "success": "Geschwindigkeit für physische Netzwerkkarte {{nic}} aktualisiert"
+            },
+            "speed": {
+               "label": "Geschwindigkeit",
+               "auto": "Autom. aushandeln"
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "Einstellungen bearbeiten",
+               "tooltip": "Einstellungen für diese physische Netzwerkkarte bearbeiten"
+            }
+         },
+         "list": {
+            "columns": {
+               "name": "Name",
+               "driver": "Treiber",
+               "macAddress": "MAC-Adresse",
+               "linkSpeed": "Verbindungsgeschwindigkeit",
+               "auto": "Autom. aushandeln"
+            },
+            "auto": {
+               "yes": "Aktiviert",
+               "no": "Deaktiviert"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Tabelle der physischen Adapter aktualisieren"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für den ausgewählten physischen Adapter"
+               },
+               "editSettings": {
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "Einstellungen für den ausgewählten physischen Adapter bearbeiten"
+               }
+            }
+         },
+         "monitor": {
+            "title": "Überwachen",
+            "events": {
+               "title": "Ereignisse",
+               "tooltip": "Ereignisse"
+            },
+            "tasks": {
+               "title": "Aufgaben",
+               "tooltip": "Aufgaben"
+            }
+         },
+         "events": {
+            "type": "Typ:",
+            "time": "Uhrzeit:",
+            "virtualMachine": "Virtuelle Maschine:"
+         },
+         "duplex": {
+            "half": "Halbduplex",
+            "full": "Vollduplex",
+            "true": "Voll",
+            "false": "Hälfte"
+         },
+         "mbps": "MBit/s",
+         "linkDown": "Link deaktiviert"
+      },
+      "error": {
+         "unknownNetwork": "Das Netzwerk {{moid}} konnte leider nicht gefunden werden.",
+         "unknownPortgroup": "Die Portgruppe {{moid}} konnte leider nicht gefunden werden.",
+         "unknownVMknic": "Die VMkernel-Netzwerkkarte {{moid}} konnte leider nicht gefunden werden.",
+         "unknownVSwitch": "vSwitch {{moid}} konnte leider nicht gefunden werden."
+      }
+   }
+}

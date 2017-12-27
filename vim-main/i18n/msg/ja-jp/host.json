@@ -1,0 +1,1704 @@
+{
+   "host": {
+      "defaultWelcomeMessage": "{{hostname}} へようこそ",
+      "about": {
+         "version": "クライアント バージョン:",
+         "buildNumber": "クライアント ビルド番号:",
+         "buildType": "ビルド タイプ:",
+         "branch": "ブランチ:",
+         "changeSet": "変更セット:",
+         "esxiVersion": "ESXi バージョン:",
+         "esxiBuildNumber": "ESXi ビルド番号:",
+         "openSourceLicenses": "オープン ソース ライセンス"
+      },
+      "error": {
+         "cause": "原因:",
+         "version": "バージョン:",
+         "build": "ビルド:",
+         "esxi": "ESXi:",
+         "browser": "ブラウザ:",
+         "title": "ハンドルされない例外 ({{num}})",
+         "details": "詳細",
+         "close": "閉じる",
+         "reload": "再ロード",
+         "lostConnection": "ホストへの接続が失われました。ブラウザを更新してください。",
+         "communication": "ホストとの通信中に問題が発生しました。",
+         "unhandledException": "予期しないエラーが発生しました。\n\nクライアントは機能し続ける可能性がありますが、ここでブラウザを更新し、バグ レポートを送信することを推奨します。\n\nこのダイアログを閉じ、更新せずに処理を続行するには、Esc キーを押してください。",
+         "stack": "例外スタック: "
+      },
+      "feedback": {
+         "title": "フィードバックを送信しています...",
+         "content": "役に立った製品の機能、問題点、今後必要な機能などについて、フィードバックをお送りください。",
+         "developers": "<p>次の方法でフィードバックをお送りいただけます。<ul><li><a href='mailto:esxui@vmware.com'>esxui@vmware.com</a> に電子メールを送る</li><li>SocialCast の<a href='https://vmware-com.socialcast.com/groups/122886-esxihostclient' target='_blank'>グループ</a>に投稿する</li><li>VMware.com コミュニティ フォーラムに投稿する (準備中)</li></ul></p>",
+         "release": "<p>VMware.com <a href='https://communities.vmware.com/community/vmtn/vsphere/hostclient' target='_blank'>コミュニティ フォーラム</a>にフィードバックを投稿してください。</p>"
+      },
+      "shutdown": {
+         "title": "シャットダウン: {{hostname}}",
+         "logoutMessage": "ホストをシャットダウンしています...",
+         "log": "このシャットダウン操作の理由をログに記録: ",
+         "log-placeholder": "理由を入力してください",
+         "not-maintenance": "このホストはメンテナンス モードではありません。",
+         "message": "メンテナンス モードになっていないホストをシャットダウンまたは再起動すると、このホスト上で実行されている仮想マシンは安全に停止されません。このホストが Virtual SAN クラスタの一部である場合、ホスト上の Virtual SAN データにアクセスできなくなることがあります。ホストを再起動またはシャットダウンする前にホストをメンテナンス モードにしてください。",
+         "confirmation": "選択したホストをシャットダウンしますか?",
+         "shutdown": "シャットダウン",
+         "rejectLabel": "キャンセル"
+      },
+      "reboot": {
+         "title": "ホストの再起動",
+         "logoutMessage": "ホストを再起動しています...",
+         "ok": "再起動",
+         "log": "この再起動操作の理由をログに記録: ",
+         "log-placeholder": "理由を入力してください",
+         "not-maintenance": "このホストはメンテナンス モードではありません。",
+         "message": "メンテナンス モードになっていないホストをシャットダウンまたは再起動すると、このホスト上で実行されている仮想マシンは安全に停止されません。このホストが Virtual SAN クラスタの一部である場合、ホスト上の Virtual SAN データにアクセスできなくなることがあります。ホストを再起動またはシャットダウンする前にホストをメンテナンス モードにしてください。",
+         "confirmation": "ホストを再起動しますか?",
+         "rejectLabel": "キャンセル"
+      },
+      "permissions": {
+         "manage": {
+            "menu": "権限",
+            "title": "権限を管理します",
+            "close": "閉じる",
+            "cancel": "キャンセル",
+            "noUsers": "ユーザーなし",
+            "addUser": {
+               "label": "ユーザーの追加",
+               "toolTip": "ユーザーを追加します"
+            },
+            "removeUser": {
+               "label": "ユーザーの削除",
+               "toolTip": "ユーザーを削除します"
+            },
+            "assignRole": {
+               "label": "ロールの割り当て",
+               "toolTip": "ユーザーにロールを割り当てます"
+            },
+            "updatePermissions": {
+               "successNotification": "権限が正常に更新されました",
+               "failureNotification": "権限の更新に失敗しました: {{error}}"
+            },
+            "columns": {
+               "user": "ユーザー",
+               "role": "ロール"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "ユーザーを選択"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "ロールを選択"
+            },
+            "propagateLabel": "すべての子へ伝達"
+         }
+      },
+      "context": {
+         "title": "ホスト",
+         "services": {
+            "label": "サービス",
+            "tooltip": "このホストのサービスを管理します",
+            "ssh": {
+               "labelEnable": "SSH の有効化",
+               "labelDisable": "SSH の無効化",
+               "tooltip": "このホストの SSH サービスを有効または無効に切り替えます"
+            },
+            "shell": {
+               "labelEnable": "コンソール シェルの有効化",
+               "labelDisable": "コンソール シェルの無効化",
+               "tooltip": "このホストのコンソール シェル サービスを有効または無効に切り替えます"
+            }
+         },
+         "service": {
+            "restart": {
+               "label": "再起動",
+               "tooltip": "このサービスを再起動します"
+            },
+            "start": {
+               "label": "起動",
+               "tooltip": "このサービスを起動します"
+            },
+            "stop": {
+               "label": "停止",
+               "tooltip": "このサービスを停止します"
+            },
+            "policy": {
+               "label": "ポリシー",
+               "tooltip": "このサービスのポリシー オプションです"
+            },
+            "firewallPolicy": {
+               "label": "ファイアウォール ポートに連動して起動および停止",
+               "tooltip": "ファイアウォール ポートが開くとサービスが起動し、閉じると停止します"
+            },
+            "hostPolicy": {
+               "label": "ホストと連動して起動および停止します",
+               "tooltip": "ホストが起動するとサービスが起動し、停止するとサービスが停止されます"
+            },
+            "manualPolicy": {
+               "label": "手動で起動および停止します",
+               "tooltip": "このサービスを手動で起動および停止します"
+            }
+         },
+         "manageWithVC": {
+            "label": "vCenter Server を使用した管理",
+            "tooltip": "VMware vCenter Server を使用してこのホストを管理します"
+         },
+         "disconnectFromVC": {
+            "label": "vCenter Server からの切断",
+            "tooltip": "VMware vCenter Server からのこのホストを切断します"
+         },
+         "createVM": {
+            "label": "仮想マシンの作成/登録",
+            "tooltip": "このホストに仮想マシンを作成または登録します"
+         },
+         "shutDown": {
+            "label": "シャットダウン",
+            "tooltip": "このホストをシャットダウンします"
+         },
+         "reboot": {
+            "label": "再起動",
+            "tooltip": "このホストを再起動します"
+         },
+         "maintenanceMode": {
+            "labelEnter": "メンテナンス モードへの切り替え",
+            "labelExit": "メンテナンス モードの終了",
+            "tooltipEnter": "このホストをメンテナンス モードに切り替えます",
+            "tooltipExit": "このホストのメンテナンス モードを終了します"
+         },
+         "lockdownMode": {
+            "label": "ロックダウン モード",
+            "tooltip": "このホストのロックダウン モードを管理します",
+            "enterNormalLockdown": {
+               "label": "通常のロックダウンへの切り替え",
+               "tooltip": "このホストを通常のロックダウン モードに切り替えます"
+            },
+            "enterStrictLockdown": {
+               "label": "厳密なロックダウンへの切り替え",
+               "tooltip": "このホストを厳密なロックダウン モードに切り替えます"
+            },
+            "exitLockdown": {
+               "label": "ロックダウンの終了",
+               "tooltip": "このホストのロックダウン モードを終了します"
+            },
+            "dialog": {
+               "title": "ロックダウン モードに関する警告",
+               "confirmStrictLabel": "厳密なロックダウンへの切り替え",
+               "confirmNormalLabel": "通常のロックダウンへの切り替え",
+               "rejectLabel": "キャンセル"
+            }
+         }
+      },
+      "summary": {
+         "host": "ホスト",
+         "version": "バージョン: ",
+         "state": "状態: ",
+         "uptime": "アップタイム: ",
+         "days": "日間",
+         "cpus": "CPU",
+         "metrics": {
+            "cpu": "CPU",
+            "storage": "ストレージ",
+            "memory": "メモリ"
+         },
+         "actionBar": {
+            "manageWithVC": {
+               "label": "vCenter Server を使用した管理",
+               "tooltip": "VMware vCenter Server を使用してこのホストを管理します"
+            },
+            "getVC": {
+               "label": "vCenter Server の取得",
+               "tooltip": "vCenter Server のダウンロードおよびインストール方法について学習します"
+            },
+            "createRegisterVM": {
+               "label": "仮想マシンの作成/登録",
+               "tooltip": "仮想マシンを作成または登録します"
+            },
+            "shutdown": {
+               "label": "シャットダウン",
+               "tooltip": "このホストをシャットダウンします"
+            },
+            "reboot": {
+               "label": "再起動",
+               "tooltip": "このホストを再起動します"
+            },
+            "refresh": {
+               "label": "更新",
+               "tooltip": "このページのデータを更新します"
+            },
+            "enterMaintenanceMode": {
+               "label": "メンテナンス モードへの切り替え",
+               "tooltip": "このホストをメンテナンス モードに切り替えます"
+            },
+            "exitMaintenanceMode": {
+               "label": "メンテナンス モードの終了",
+               "tooltip": "このホストのメンテナンス モードを終了します"
+            },
+            "actions": {
+               "label": "アクション",
+               "tooltip": "このホストに対するアクションです"
+            }
+         },
+         "portlets": {
+            "hardware": {
+               "title": "ハードウェア",
+               "manufacturer": "メーカー",
+               "model": "モデル",
+               "cpu": {
+                  "title": "CPU",
+                  "logicalProcessors": "論理プロセッサ",
+                  "processorType": "プロセッサ タイプ",
+                  "sockets": "ソケット",
+                  "coresPerSocket": "ソケットあたりのコア",
+                  "hyperthreading": "ハイパースレッディング",
+                  "yesEnabled": "使用 / 有効",
+                  "yesDisabled": "使用 / 無効",
+                  "no": "いいえ"
+               },
+               "memory": "メモリ",
+               "virtualFlash": {
+                  "title": "仮想フラッシュ",
+                  "capacity": "キャパシティ",
+                  "value": {
+                     "used": "使用済み",
+                     "capacity": "キャパシティ"
+                  },
+                  "used": "使用済み",
+                  "free": "空き"
+               },
+               "networking": {
+                  "title": "ネットワーク",
+                  "hostname": "ホスト名",
+                  "ips": "IP アドレス",
+                  "dns": "DNS サーバ",
+                  "defaultGateway": "デフォルト ゲートウェイ",
+                  "ipv6Enabled": {
+                     "title": "IPv6 対応",
+                     "yes": "はい",
+                     "no": "いいえ"
+                  },
+                  "physicalAdapters": "ホスト アダプタ",
+                  "networks": "ネットワーク",
+                  "list": {
+                     "columns": {
+                        "name": "名前",
+                        "vms": "仮想マシン"
+                     }
+                  }
+               },
+               "storage": {
+                  "title": "ストレージ",
+                  "physicalAdapters": "物理アダプタ",
+                  "datastores": "データストア",
+                  "list": {
+                     "columns": {
+                        "name": "名前",
+                        "type": "タイプ",
+                        "capacity": "キャパシティ",
+                        "free": "空き"
+                     }
+                  }
+               }
+            },
+            "configuration": {
+               "title": "構成",
+               "haState": {
+                  "title": "vSphere HA の状態",
+                  "agentRunning": "実行中のエージェント",
+                  "notConfigured": "未設定"
+               },
+               "imageProfile": "イメージ プロファイル",
+               "vMotion": {
+                  "title": "vMotion",
+                  "supported": "サポート対象",
+                  "notSupported": "未サポート",
+                  "vmknic": "vMotion 用の仮想 NIC",
+                  "yes": "はい",
+                  "no": "いいえ",
+                  "none": "なし"
+               }
+            },
+            "systemInformation": {
+               "title": "システム情報",
+               "currentDateTime": "ホストの日付と時刻",
+               "inception": "インストール日",
+               "assetTag": "アセット タグ",
+               "serviceTag": "サービス タグ",
+               "biosVersion": "BIOS バージョン",
+               "biosReleaseDate": "BIOS リリース日"
+            },
+            "perf": {
+               "label": "過去 1 時間のパフォーマンス サマリ",
+               "title": "パフォーマンス サマリ (過去 1 時間)",
+               "loading": "ロードしています...",
+               "noData": "利用できるパフォーマンス データがありません",
+               "xAxisLabel": "時刻",
+               "y1AxisLabel": "使用されたホスト CPU (%)",
+               "y2AxisLabel": "消費されたホスト メモリ (GB)",
+               "rightAxis": "(右の軸)",
+               "cpuUsage": "消費されたホスト CPU",
+               "memoryUsage": "消費されたホスト メモリ"
+            }
+         }
+      },
+      "manage": {
+         "title": "管理",
+         "system": {
+            "settings": "設定",
+            "tabTitle": "システム",
+            "tabTooltip": "システムの設定",
+            "advancedSettings": {
+               "tabTitle": "詳細設定",
+               "tabTooltip": "このホストの詳細設定を行います",
+               "context": {
+                  "resetToDefault": {
+                     "label": "デフォルトにリセット",
+                     "tooltip": "デフォルト値にリセットします"
+                  }
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "このリスト内で選択されたオブジェクトのアクション"
+               },
+               "resetToDefault": {
+                  "successNotification": "{{name}} がデフォルト値 {{value}} にリセットされました",
+                  "failureNotification": "{{name}} のデフォルト値 {{value}} へのリセットに失敗しました"
+               },
+               "change": {
+                  "title": "オプションの編集: {{key}}",
+                  "confirm": "保存",
+                  "rejectLabel": "キャンセル",
+                  "successMessage": "{{key}} が変更されました",
+                  "failureMessage": "{{key}} の変更に失敗しました"
+               },
+               "edit": {
+                  "label": "オプションの編集",
+                  "tooltip": "このオプションを編集します"
+               },
+               "quickFilters": {
+                  "overridden": "オーバーライドされた設定",
+                  "hostClient": "Host Client の設定"
+               },
+               "name": "名前",
+               "key": "キー",
+               "description": "説明",
+               "value": "値",
+               "default": "デフォルト",
+               "overridden": "オーバーライド済み",
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "詳細設定グリッドを更新します"
+               },
+               "readOnly": "読み取り専用",
+               "range": "範囲",
+               "currentValue": "現在の値",
+               "newValue": "新しい値",
+               "type": {
+                  "string": "(文字列型)",
+                  "integer": "(整数型)",
+                  "longInteger": "(長整数型)",
+                  "float": "(浮動小数点数型)"
+               },
+               "true": "True",
+               "false": "False"
+            },
+            "autostart": {
+               "tabTitle": "自動起動",
+               "tabTooltip": "このホストの自動起動の設定",
+               "edit": {
+                  "label": "設定の編集",
+                  "tooltip": "自動起動の設定"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "自動起動設定の更新"
+               },
+               "enabled": {
+                  "label": "有効",
+                  "true": "はい",
+                  "false": "いいえ"
+               },
+               "startDelay": {
+                  "label": "起動遅延時間"
+               },
+               "stopDelay": {
+                  "label": "停止遅延時間"
+               },
+               "stopAction": {
+                  "label": "停止アクション",
+                  "systemDefault": "システムのデフォルト",
+                  "powerOff": "パワーオフ",
+                  "suspend": "サスペンド",
+                  "Suspend": "サスペンド",
+                  "guestShutdown": "シャットダウン"
+               },
+               "waitForHeartbeat": {
+                  "label": "ハートビートを待機",
+                  "true": "はい",
+                  "false": "いいえ"
+               },
+               "change": {
+                  "title": "自動起動設定の変更",
+                  "rejectLabel": "キャンセル",
+                  "confirmLabel": "保存",
+                  "enabled": {
+                     "label": "有効",
+                     "yes": "はい",
+                     "no": "いいえ"
+                  },
+                  "waitForHeartbeat": {
+                     "label": "ハートビートを待機",
+                     "yes": "はい",
+                     "no": "いいえ"
+                  },
+                  "startDelay": {
+                     "label": "起動遅延時間",
+                     "seconds": "秒"
+                  },
+                  "stopDelay": {
+                     "label": "停止遅延時間",
+                     "seconds": "秒"
+                  },
+                  "stopAction": {
+                     "label": "停止アクション",
+                     "systemDefault": "システムのデフォルト",
+                     "PowerOff": "パワーオフ",
+                     "Suspend": "サスペンド",
+                     "ShutDown": "シャットダウン"
+                  },
+                  "successNotification": "ホストの自動起動が正常に更新されました",
+                  "failureNotification": "ホストの自動起動の更新に失敗しました"
+               }
+            },
+            "hardware": {
+               "tabTitle": "ハードウェア",
+               "tabTooltip": "このホストのハードウェアを設定します",
+               "powerManagement": {
+                  "tabTitle": "電源管理",
+                  "tabTooltip": "電源管理",
+                  "editSettings": {
+                     "label": "ポリシーの変更",
+                     "tooltip": "電源管理ポリシーを変更します"
+                  },
+                  "refresh": "更新",
+                  "refreshTooltip": "電源管理を更新します",
+                  "technology": {
+                     "label": "テクノロジー"
+                  },
+                  "activePolicy": {
+                     "label": "アクティブなポリシー"
+                  },
+                  "dialog": {
+                     "title": "電源ポリシーの変更",
+                     "confirmLabel": "OK",
+                     "cancelLabel": "キャンセル"
+                  },
+                  "PowerPolicy": {
+                     "off": {
+                        "name": "未サポート",
+                        "shortName": "未サポート",
+                        "description": "ホストの電源管理が検出されませんでした"
+                     },
+                     "static": {
+                        "name": "高パフォーマンス",
+                        "shortName": "高パフォーマンス",
+                        "description": "電源管理機能を使用しない"
+                     },
+                     "dynamic": {
+                        "name": "バランシング済み",
+                        "shortName": "バランシング済み",
+                        "description": "パフォーマンスへの影響を最小限に抑え消費電力を削減します"
+                     },
+                     "low": {
+                        "name": "省電力",
+                        "shortName": "省電力",
+                        "description": "消費電力を削減しますが、パフォーマンス低下のおそれがあります。"
+                     },
+                     "custom": {
+                        "name": "カスタム",
+                        "shortName": "カスタム",
+                        "description": "ユーザー定義の電源管理ポリシー。詳細な設定が可能です。"
+                     }
+                  },
+                  "columns": {
+                     "key": "キー",
+                     "name": "名前",
+                     "value": "値",
+                     "default": "デフォルト",
+                     "overridden": "オーバーライドされました"
+                  }
+               },
+               "pciDevices": {
+                  "tabTitle": "PCI デバイス",
+                  "tabTooltip": "PCI デバイス",
+                  "tooltip": "PCI デバイス",
+                  "active": "アクティブ",
+                  "enabled": "有効",
+                  "disabled": "無効",
+                  "notCapable": "不可",
+                  "reboot": "再起動が必要",
+                  "sriov": {
+                     "title": "{{name}} の SR-IOV の設定",
+                     "onConfirm": "保存",
+                     "onReject": "キャンセル",
+                     "enabled": {
+                        "label": "有効",
+                        "yes": "はい",
+                        "no": "いいえ"
+                     },
+                     "virtualFunctions": {
+                        "label": "仮想機能",
+                        "maximum": "最大 {{maxVirtualFunctionSupported}}"
+                     }
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "更新",
+                        "tooltip": "詳細設定グリッドを更新します"
+                     },
+                     "passthrough": {
+                        "label": "パススルーの切り替え",
+                        "tooltip": "選択したデバイスのパススルーを切り替えます"
+                     },
+                     "sriov": {
+                        "label": "SR-IOV の構成",
+                        "tooltip": "選択したデバイスの SR-IOV を構成します"
+                     },
+                     "reboot": {
+                        "label": "ホストの再起動",
+                        "tooltip": "ホストを再起動します"
+                     }
+                  },
+                  "datagrid": {
+                     "quickFilters": {
+                        "sriovCapable": "SR-IOV 対応",
+                        "passthroughCapable": "パススルー対応",
+                        "sriovActive": "SR-IOV がアクティブ",
+                        "passthroughActive": "パススルーがアクティブ"
+                     },
+                     "columns": {
+                        "address": "アドレス",
+                        "description": "説明",
+                        "passthrough": "パススルー",
+                        "sriov": "SR-IOV"
+                     }
+                  },
+                  "summary": {
+                     "notSupported": "このデバイスはパススルー対応です",
+                     "notRunning": "このデバイスはパススルーに対応していますが、パススルー モードでは実行されていません。",
+                     "needReboot": "このデバイスをパススルー モードで実行するには、ホストの再起動が必要です。",
+                     "deviceName": "デバイス名",
+                     "id": "ID",
+                     "deviceID": "デバイス ID",
+                     "vendorID": "ベンダー ID",
+                     "function": "機能",
+                     "bus": "バス",
+                     "vendorName": "ベンダー名",
+                     "classID": "クラス ID",
+                     "subdeviceID": "サブデバイス ID",
+                     "subvendorID": "サブベンダー ID",
+                     "slot": "スロット"
+                  },
+                  "notifications": {
+                     "successSriov": "デバイス {{deviceName}} の SR-IOV が構成されました。ホストが再起動されるまで、変更内容は適用されません",
+                     "failureSriov": "デバイス {{deviceName}} の SR-IOV の構成に失敗しました。詳細については、最近のタスクを参照してください。",
+                     "successSingular": "デバイス {{deviceName}} のパススルーが切り替わりました。ホストが再起動されるまで、変更内容は適用されません。",
+                     "successMultiple": "デバイスのパススルーが切り替わりました。ホストが再起動されるまで、変更内容は適用されません。",
+                     "error": "パススルー デバイスの設定に失敗しました"
+                  }
+               }
+            },
+            "licensing": {
+               "context": {
+                  "assignLicense": {
+                     "label": "ライセンスの割り当て",
+                     "tooltip": "このホストにライセンスを割り当てます"
+                  },
+                  "removeLicense": {
+                     "label": "ライセンスの削除",
+                     "tooltip": "ホストからこのライセンスを削除します"
+                  }
+               },
+               "tabTitle": "ライセンス",
+               "tabTooltip": "このホストのライセンスを設定します",
+               "name": "名前",
+               "key": "キー",
+               "license": "ライセンス キー",
+               "valid": "ライセンス キーは <strong>{{name}}</strong> に対して有効です",
+               "managedByVC": "このホストのライセンスは vCenter Server で管理されています",
+               "expiration": "有効期限",
+               "expireNever": "実行しない",
+               "features": "機能",
+               "refresh": "更新",
+               "refreshToolTip": "ライセンスを更新します",
+               "actions": "アクション",
+               "actionsToolTip": "このリスト内で選択されたライセンスに対するアクションです",
+               "assign": {
+                  "title": "ライセンスの割り当て",
+                  "hostManagedByVC": {
+                     "title": "ホストは vCenter Server で管理されています",
+                     "confirmLabel": "閉じる"
+                  },
+                  "toolTip": "このホストにライセンスを割り当てます",
+                  "checkLicense": "ライセンスの確認",
+                  "provideValidLicense": "有効なライセンス キーを指定してください",
+                  "failedToDecode": "指定したライセンスのデコードに失敗しました",
+                  "assignLicense": "ライセンスの割り当て",
+                  "invalidLicense": "有効なライセンス キーを指定してください",
+                  "notEnoughCores": "このホストには ({{licenseCores}}) に対して有効な指定のライセンスよりも多くのソケット ({{cores}}) があります。別のライセンスを指定してください。",
+                  "expired": "ライセンスの有効期限が切れています",
+                  "successMessage": "ライセンス {{name}} が割り当てられました",
+                  "failureMessage": "ライセンス {{name}} の割り当てに失敗しました",
+                  "rejectLabel": "キャンセル"
+               },
+               "remove": {
+                  "title": "ライセンスの削除",
+                  "remove": "削除",
+                  "removeLicense": "ライセンスの削除",
+                  "toolTip": "選択したライセンスを削除します",
+                  "content": "ライセンス \n<strong>{{name}}</strong> を削除しますか?",
+                  "successMessage": "ライセンス {{key}} が削除されました",
+                  "failureMessage": "ライセンス {{key}} の削除に失敗しました",
+                  "rejectLabel": "キャンセル"
+               }
+            },
+            "packages": {
+               "tabTitle": "パッケージ",
+               "tabTooltip": "このホストにインストールされたソフトウェアの設定を行います",
+               "error": "利用できるパッケージ データがありません",
+               "list": {
+                  "columns": {
+                     "name": "名前",
+                     "version": "バージョン",
+                     "description": "説明",
+                     "vendor": "ベンダー",
+                     "installDate": "インストール場所"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "更新",
+                        "tooltip": "パッケージ リストを更新します"
+                     },
+                     "update": {
+                        "label": "アップデートのインストール",
+                        "tooltip": "このホストにアップデートをインストールします"
+                     }
+                  }
+               }
+            },
+            "services": {
+               "tabTitle": "サービス",
+               "tabTooltip": "このホストで実行されているサービスの設定を行います",
+               "name": "名前:",
+               "restart": "再起動",
+               "stop": "停止",
+               "start": "起動",
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "イベント テーブルを更新します"
+               },
+               "actions": "アクション",
+               "actionsToolTip": "選択されたサービスに対するアクションです",
+               "name": "名前",
+               "description": "説明",
+               "base": "基本システム",
+               "firewallRules": "ファイアウォール ルール",
+               "status": {
+                  "label": "ステータス",
+                  "running": "実行中",
+                  "stopped": "停止"
+               },
+               "source": "ソース",
+               "startSuccess": "サービス {{name}} が起動しました",
+               "startFailure": "サービス {{name}} の起動に失敗しました",
+               "restartSuccess": "サービス {{name}} が再起動しました",
+               "restartFailure": "サービス {{name}} の再起動に失敗しました",
+               "stopSuccess": "サービス {{name}} が停止しました",
+               "stopFailure": "サービス {{name}} の停止に失敗しました"
+            },
+            "timeAndDate": {
+               "context": {
+                  "ntpService": {
+                     "label": "NTP サービス",
+                     "tooltip": "ホストの NTP サービスを管理します"
+                  }
+               },
+               "tabTitle": "日付と時刻",
+               "tabTooltip": "このホストに日付と時刻を設定します",
+               "unknown": "不明",
+               "none": "なし",
+               "ntpd": {
+                  "running": "実行中",
+                  "stopped": "停止",
+                  "enabled": "有効",
+                  "disabled": "無効"
+               },
+               "actions": "アクション",
+               "actionsTooltip": "時間設定のためのアクションです",
+               "servers": "NTP サーバ",
+               "clientStatus": "NTP クライアント ステータス",
+               "serviceStatus": "NTP サービスのステータス",
+               "currentDateTime": "現在の日付と時刻",
+               "editSettings": "設定の編集",
+               "editSettingsTooltip": "時刻設定を編集します",
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "日付と時刻を更新します"
+               },
+               "dialog": {
+                  "confirmLabel": "保存",
+                  "rejectLabel": "キャンセル",
+                  "title": "時刻の編集",
+                  "header": "このホストの日付および時刻の設定方法を指定します。",
+                  "manual": "このホストの日付および時刻を手動で設定します",
+                  "ntpdStartPolicy": {
+                     "on": {
+                        "description": "ホスト システムを使用して起動および停止します",
+                        "label": "ホストと連動して起動および停止します"
+                     },
+                     "off": {
+                        "description": "ユーザーがサービスを手動で起動および停止します",
+                        "label": "手動で起動および停止します"
+                     },
+                     "auto": {
+                        "description": "いずれかのポートが開いたときに起動し、すべてのポートが閉じたときに停止します",
+                        "label": "ポートを使用して起動および停止します"
+                     }
+                  },
+                  "ntp": "NTP を使用 (NTP クライアントの有効化)",
+                  "ntpPolicy": "NTP サービス起動ポリシー",
+                  "ntpServers": "NTP サーバ",
+                  "ntpServersLabel": "複数のサーバはカンマで区切ります (例: 10.31.21.2, fe00::2800)",
+                  "validation": {
+                     "emptyDate": "日付と時刻を入力してください。"
+                  }
+               }
+            },
+            "security": {
+               "tabTitle": "セキュリティとユーザー",
+               "tabTooltip": "このホストのセキュリティとユーザー権限を設定します",
+               "acceptance": {
+                  "tabTitle": "許容レベル",
+                  "tabTooltip": "このホストの許容レベルを設定します",
+                  "levels": {
+                     "partner": {
+                        "name": "パートナー",
+                        "description": "パートナーと VMware により署名および認証された VIB のみを受け入れます"
+                     },
+                     "community": {
+                        "name": "コミュニティ",
+                        "description": "署名されていない VIB を含むすべての VIB を受け入れます"
+                     },
+                     "vmware_accepted": {
+                        "name": "VMware 承認済み",
+                        "description": "VMware が承認した VIB を受け入れます"
+                     },
+                     "vmware_certified": {
+                        "name": "VMware 認証済み",
+                        "description": "VMware が署名および認証した VIB のみを受け入れます"
+                     }
+                  },
+                  "editSettings": {
+                     "title": "許容レベルの編集",
+                     "confirmLabel": "保存",
+                     "rejectLabel": "キャンセル",
+                     "failureNotification": "許容レベルを {{level}} に設定できませんでした",
+                     "successNotification": "ホストの許容レベルは {{level}} に変更されました"
+                  },
+                  "stack": {
+                     "acceptanceLevel": {
+                        "label": "許容レベル",
+                        "partner": "パートナー",
+                        "community": "コミュニティ",
+                        "vmware_accepted": "VMware 承認済み",
+                        "vmware_certified": "VMware 認証済み"
+                     }
+                  },
+                  "actions": {
+                     "editSettings": {
+                        "label": "設定の編集",
+                        "tooltip": "このホストの許容レベルを変更します"
+                     },
+                     "refresh": {
+                        "label": "更新",
+                        "tooltip": "このホストの許容レベル情報を更新します"
+                     }
+                  }
+               },
+               "authentication": {
+                  "tabTitle": "認証",
+                  "tabTooltip": "このホストの認証を設定します",
+                  "leaveDomain": {
+                     "title": "ドメインへの参加の解除",
+                     "content": "このホストをドメイン <strong>{{domain}}</strong> から削除しますか?",
+                     "confirmLabel": "はい",
+                     "rejectLabel": "キャンセル",
+                     "failureMessage": "ドメイン {{domain}} への参加の解除に失敗しました: {{reason}}",
+                     "successMessage": "ホストのドメイン {{domain}} への参加が解除されました"
+                  },
+                  "joinDomain": {
+                     "title": "ドメインに参加",
+                     "confirmLabel": "ドメインに参加",
+                     "rejectLabel": "キャンセル",
+                     "domainLabel": "ドメイン名",
+                     "usernameLabel": "ユーザー名",
+                     "passwordLabel": "パスワード",
+                     "confirmPasswordLabel": "パスワードの確認",
+                     "username": "ユーザー名",
+                     "password": "パスワード",
+                     "useAuthProxyLabel": "認証プロキシの使用",
+                     "authProxyLabel": "認証プロキシ",
+                     "successMessage": "ホストはドメイン {{domain}} に参加しました",
+                     "failureMessage": "ホストのドメイン {{domain}} への参加に失敗しました: {{reason}}",
+                     "errorNoDomain": "このホストが参加するドメイン サーバを指定してください",
+                     "errorAuthProxy": "使用する認証プロキシを指定してください",
+                     "errorNoPassword": "ドメイン コントローラ アカウントのパスワードを指定してください",
+                     "errorNoUsername": "ドメイン コントローラ アカウントのユーザー名を指定してください",
+                     "errorPasswordsDontMatch": "指定したドメイン コントローラのパスワードが一致しません"
+                  },
+                  "stack": {
+                     "activeDirectoryEnabled": {
+                        "label": "有効な Active Directory",
+                        "true": "はい",
+                        "false": "いいえ"
+                     },
+                     "smartCardAuthenticationEnabled": {
+                        "label": "有効なスマート カード認証",
+                        "true": "はい",
+                        "false": "いいえ"
+                     },
+                     "joinedDomain": {
+                        "label": "ドメインに参加済み"
+                     },
+                     "domainMembershipStatus": {
+                        "label": "ドメイン メンバーシップのステータス",
+                        "ok": "OK",
+                        "clientTrustBroken": "クライアントの信頼性が失われています",
+                        "inconsistentTrust": "信頼性が一貫していません",
+                        "noServers": "サーバがありません",
+                        "otherProblem": "その他の問題",
+                        "serverTrustBroken": "サーバの信頼性が失われています",
+                        "unknown": "不明"
+                     },
+                     "trustedDomain": {
+                        "label": "信頼性のあるドメイン"
+                     }
+                  },
+                  "actions": {
+                     "join": {
+                        "label": "ドメインに参加",
+                        "tooltip": "Active Directory ドメインに参加"
+                     },
+                     "leave": {
+                        "label": "ドメインへの参加の解除",
+                        "tooltip": "ドメインからこのホストを削除します"
+                     },
+                     "refresh": {
+                        "label": "更新",
+                        "tooltip": "このホストの認証情報を更新します"
+                     }
+                  }
+               },
+               "lockdown": {
+                  "tabTitle": "ロックダウン モード",
+                  "tabTooltip": "このホストにロックダウン モードを設定します",
+                  "lockdownStrict": {
+                     "name": "厳密なロックダウン",
+                     "description": "ユーザーは vCenter Server からのみログインするよう制限されています"
+                  },
+                  "lockdownNormal": {
+                     "name": "通常のロックダウン",
+                     "description": "ユーザーは DCUI および vCenter Server を介してログインできます"
+                  },
+                  "lockdownDisabled": {
+                     "name": "無効",
+                     "description": "ロックダウン モードが無効です"
+                  },
+                  "changeDialog": {
+                     "title": "ロックダウン モードの変更",
+                     "confirmLabel": "変更",
+                     "rejectLabel": "キャンセル"
+                  },
+                  "userDialog": {
+                     "title": "例外ユーザーの追加",
+                     "confirmLabel": "例外の追加",
+                     "rejectLabel": "キャンセル",
+                     "invalidUser": "有効なユーザー名を入力してください",
+                     "userName": "ユーザー名",
+                     "successNotification": "{{user}} がロックダウン モード例外ユーザーのリストに追加されました",
+                     "failureNotification": "ロックダウン モード例外ユーザーのリストへの {{user}} の追加に失敗しました"
+                  },
+                  "removeExceptionUser": {
+                     "title": "確認してください",
+                     "content": "ロックダウン モード例外のリストからユーザー {{name}} を削除しますか?",
+                     "confirmLabel": "はい",
+                     "rejectLabel": "キャンセル",
+                     "successNotification": "例外ユーザー {{name}} が削除されました",
+                     "failureNotification": "例外ユーザー {{name}} の削除に失敗しました"
+                  },
+                  "failureNotification": "ロックダウン モードへの切り替えに失敗しました: {{message}}",
+                  "successNotification": "ロックダウン モードに正常に切り替わりました",
+                  "stack": {
+                     "lockdownMode": {
+                        "label": "ロックダウン モード",
+                        "lockdownStrict": "厳密なロックダウンが有効",
+                        "lockdownNormal": "通常のロックダウンが有効",
+                        "lockdownDisabled": "無効"
+                     },
+                     "exceptionUsers": {
+                        "label": "例外ユーザー"
+                     }
+                  },
+                  "userList": {
+                     "noUsers": "例外ユーザーなし",
+                     "columns": {
+                        "name": "名前"
+                     }
+                  },
+                  "actions": {
+                     "refresh": {
+                        "label": "更新",
+                        "tooltip": "このホストの証明書情報を更新します"
+                     },
+                     "removeUser": {
+                        "label": "ユーザー例外の削除",
+                        "tooltip": "ロックダウン モードの例外リストからユーザーを削除します"
+                     },
+                     "addUser": {
+                        "label": "例外ユーザーの追加",
+                        "tooltip": "ロックダウン モードの例外リストにユーザーを追加します"
+                     },
+                     "configureLockdown": {
+                        "label": "設定の編集",
+                        "tooltip": "このホストにロックダウン モードを設定します"
+                     }
+                  }
+               },
+               "users": {
+                 "tabTitle": "ユーザー",
+                 "tabTooltip": "システム ユーザーを管理します",
+                 "noUsers": "ユーザーなし",
+                 "actions": {
+                   "refresh": {
+                      "label": "更新",
+                      "tooltip": "ユーザー リストを更新します"
+                   },
+                   "removeUser": {
+                      "label": "ユーザーの削除",
+                      "tooltip": "ユーザーを削除します"
+                   },
+                   "addUser": {
+                      "label": "ユーザーの追加",
+                      "tooltip": "ユーザーを追加します"
+                   },
+                   "updateUser": {
+                      "label": "ユーザーの編集",
+                      "tooltip": "ユーザー情報を変更します"
+                   }
+                 },
+                 "grid": {
+                    "username": "ユーザー名",
+                    "description": "説明"
+                 },
+                 "addUser": {
+                    "title": "ユーザーを追加します",
+                    "userNameBlockLabel": "ユーザー名 (必須)",
+                    "userDescriptionBlockLabel": "説明",
+                    "userPasswordBlockLabel": "パスワード (必須)",
+                    "userConfirmPasswordBlockLabel": "パスワードの確認 (必須)",
+                    "confirmLabel": "追加",
+                    "rejectLabel": "キャンセル",
+                    "failureNotification": "ユーザーの追加に失敗しました: {{error}}",
+                    "successNotification": "ユーザー {{user}} が追加されました"
+                 },
+                 "updateUser": {
+                    "title": "ユーザーの編集",
+                    "userNameBlockLabel": "ユーザー名",
+                    "userDescriptionBlockLabel": "説明",
+                    "userPasswordBlockLabel": "パスワード",
+                    "userConfirmPasswordBlockLabel": "パスワードの確認",
+                    "confirmLabel": "保存",
+                    "rejectLabel": "キャンセル",
+                    "failureNotification": "ユーザーの更新に失敗しました: {{error}}",
+                    "successNotification": "ユーザー {{user}} が更新されました"
+                 },
+                 "removeUser": {
+                    "title": "警告",
+                    "content": "ユーザー <strong>{{user}}</strong> を削除しますか?",
+                    "confirmLabel": "はい",
+                    "rejectLabel": "キャンセル",
+                    "failureNotification": "ユーザー {{user}} の削除に失敗しました",
+                    "successNotification": "ユーザー {{user}} が削除されました"
+                 }
+               },
+               "roles": {
+                 "tabTitle": "ロール",
+                 "tabTooltip": "ロールを管理します",
+                 "actions": {
+                   "refresh": {
+                      "label": "更新",
+                      "tooltip": "ロール リストを更新します"
+                   },
+                   "removeRole": {
+                      "label": "ロールの削除",
+                      "tooltip": "認証ロールを削除します"
+                   },
+                   "addRole": {
+                      "label": "ロールの追加",
+                      "tooltip": "認証ロールを追加します"
+                   },
+                   "updateRole": {
+                      "label": "ロールの編集",
+                      "tooltip": "認証ロールを変更します"
+                   }
+                 },
+                 "grid": {
+                    "name": "名前",
+                    "summary": "サマリ"
+                 },
+                 "addRole": {
+                    "title": "ロールを追加します",
+                    "roleNameBlockLabel": "ロール名 (必須)",
+                    "rolePrivilegesBlockLabel": "権限",
+                    "confirmLabel": "追加",
+                    "rejectLabel": "キャンセル",
+                    "validation": {
+                       "nameExists": "名前が {{name}} のロールはすでにあります。別の名前を選択してください。"
+                    },
+                    "failureNotification": "ロールの追加に失敗しました: {{error}}",
+                    "successNotification": "ロール {{role}} は追加されました"
+                 },
+                 "updateRole": {
+                    "title": "ロールの編集",
+                    "roleNameBlockLabel": "ロール名 (必須)",
+                    "rolePrivilegesBlockLabel": "権限",
+                    "confirmLabel": "保存",
+                    "rejectLabel": "キャンセル",
+                    "failureNotification": "ロールの更新に失敗しました: {{error}}",
+                    "successNotification": "ロール {{role}} が更新されました"
+                 },
+                 "removeRole": {
+                    "title": "警告",
+                    "content": "ロール <strong>{{roleName}}</strong> を削除しますか?",
+                    "option": "未使用の場合のみ削除します",
+                    "confirmLabel": "はい",
+                    "rejectLabel": "キャンセル",
+                    "failureNotification": "ロール {{role}} の削除に失敗しました",
+                    "successNotification": "ロール {{role}} が削除されました"
+                 }
+               },
+               "certificates": {
+                  "tabTitle": "証明書",
+                  "tabTooltip": "このホストの SSL 証明書を設定します",
+                  "warningVC": "このホストの証明書は vCenter Server で管理されています。Host Client を使用してこれらを設定することはできません。",
+                  "import": {
+                     "title": "証明書をインポートします",
+                     "confirmLabel": "インポート",
+                     "rejectLabel": "キャンセル",
+                     "invalidCert": "提供された証明書が PEM 形式ではありませんでした。証明書全体を貼り付けてください。",
+                     "certLabel": "証明書",
+                     "certTitle": "PEM 形式の証明書をここに貼り付けます。",
+                     "successMessage": "証明書は正常に更新されました。ブラウザを更新する必要があります",
+                     "failureMessage": "新しい SSL 証明書のインポートに失敗しました",
+                     "reboot": {
+                        "title": "再起動が必要です",
+                        "content": "新しい証明書をロードするにはホストを再起動する必要があります。今すぐ再起動しますか?",
+                        "confirmLabel": "再起動",
+                        "rejectLabel": "後で"
+                     }
+                  },
+                  "stack": {
+                     "notAfter": {
+                        "label": "次の日付以降は無効"
+                     },
+                     "notBefore": {
+                        "label": "次の日付以前は無効"
+                     },
+                     "subject": {
+                        "label": "件名"
+                     },
+                     "issuer": {
+                        "label": "発行者"
+                     },
+                     "unknown": "不明"
+                  },
+                  "actions": {
+                     "import": {
+                        "label": "新しい証明書のインポート",
+                        "tooltip": "このホストに新しい SSL 証明書をインポートします"
+                     },
+                     "genCSR": {
+                        "copyToClipboard": "クリップボードにコピー",
+                        "title": "証明書署名要求の結果",
+                        "close": "閉じる",
+                        "labelIPBased": "IP アドレス署名要求の生成",
+                        "labelHostnameBased": "FQDN 署名要求の生成",
+                        "tooltip": "証明書署名要求を生成"
+                     },
+                     "refresh": {
+                        "label": "更新",
+                        "tooltip": "このホストの証明書情報を更新します"
+                     }
+                  }
+               }
+            },
+            "swap": {
+               "tabTitle": "スワップ",
+               "tabTooltip": "このホストのシステム スワップを設定します",
+               "localSwap": "ローカル スワップ",
+               "localSwapEnabled": "ローカル スワップを有効化",
+               "hostCache": "ホスト キャッシュ",
+               "hostCacheEnabled": "ホスト キャッシュを有効化",
+               "datastore": "データストア",
+               "enabled": "有効",
+               "true": "はい",
+               "false": "いいえ",
+               "none": "なし",
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "スワップ設定の更新"
+               },
+               "editSettings": {
+                  "label": "設定の編集",
+                  "tooltip": "システム スワップ設定の変更"
+               },
+               "dialog": {
+                  "title": "スワップの編集",
+                  "rejectLabel": "キャンセル",
+                  "confirmLabel": "保存",
+                  "successNotification": "ホストのスワップ設定が正常に更新されました",
+                  "failureNotification": "ホストのスワップ設定を更新できませんでした",
+                  "mustSelect": "少なくとも 1 つのタイプのスワップ デバイスを有効にする必要があります"
+               }
+            }
+         },
+         "changeUsername": {
+            "dialog": {
+               "nonAscii": "ユーザー名に無効な文字が含まれています。ASCII 文字の小文字のみを使用してください。",
+               "badCharacters": "ユーザー名に無効な文字が含まれています。英数字のみを使用してください。"
+            }
+         },
+         "changePassword": {
+            "menu": {
+               "label": "パスワードを変更"
+            },
+            "dialog": {
+               "title": "パスワードを変更",
+               "newPassword": "新しいパスワード",
+               "newPasswordAgain": "新しいパスワードを再作成します",
+               "confirmLabel": "パスワードを変更",
+               "rejectLabel": "キャンセル",
+               "noMatch": "パスワードが一致しません",
+               "nonAscii": "パスワードに無効な文字が含まれています。ASCII 文字の小文字のみを使用してください。",
+               "success": "{{username}} のパスワードが変更されました",
+               "blank": "パスワードが入力されていません。",
+               "failed": "パスワードの変更に失敗しました"
+            }
+         }
+      },
+      "sshConsole": {
+         "menu": {
+            "label": "SSH コンソール",
+            "tooltip": "このホストの SSH コンソールを開きます",
+            "labelGetChrome": "Chrome の SSH を取得します"
+         }
+      },
+      "scriptingConsole": {
+         "menu": {
+            "label": "スクリプト コンソール",
+            "tooltip": "このホストに対して実行するアクションをスクリプト処理するためのコンソールを開きます"
+         },
+         "actionBar": {
+            "runButton": {
+               "label": "実行",
+               "tooltip": "スクリプトを実行"
+            },
+            "clearButton": {
+               "label": "クリア",
+               "tooltip": "ログ ウィンドウをクリア"
+            }
+         }
+      },
+      "supportBundle": {
+         "successNotification": "サポート バンドルの作成が完了しました。{{url}} からバンドルをダウンロードできます。",
+         "failureNotification": "サポート バンドルの作成に失敗しました: {{error}}",
+         "dialog": {
+            "title": "サポート バンドルが完成しました",
+            "content": "サポート バンドルの作成が完了しました。サポート バンドルは<a href='{{url}}'>ここ</a>からダウンロードできます。\n\nこのサポート バンドルのダウンロード URL は、「サポート バンドルの生成タスク」に記載されています。\n\n15 分が経過すると、サポート バンドルはホストから自動的に削除されます。",
+            "confirmLabel": "ダウンロード",
+            "rejectLabel": "閉じる"
+         },
+         "menu": {
+            "label": "サポート バンドルの生成",
+            "tooltip": "このホストからサポート バンドルを生成します"
+         }
+      },
+      "monitor": {
+         "title": "{{hostname}}: 監視",
+         "performance": {
+            "tabTitle": "パフォーマンス",
+            "tabTooltip": "システムのパフォーマンスを監視します",
+            "refresh": {
+               "label": "更新",
+               "tooltip": "パフォーマンス チャートを更新"
+            },
+            "configure": {
+               "action": {
+                  "label": "仮想マシンの選択",
+                  "tooltip": "パフォーマンス チャートにデータを表示する仮想マシンを設定します"
+               },
+               "dialog": {
+                  "title": "仮想マシンの選択",
+                  "rejectLabel": "キャンセル",
+                  "confirmLabel": "保存"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "データの可用性",
+                  "message": "利用可能なデータ範囲が「過去 1 時間」に限られるのは、ESXi ホストには過去 1 時間の履歴データのみが格納されるためです。表示されるデータ範囲を広げるには、vCenter Server を使用する必要があります。"
+               }
+            },
+            "grid": {
+               "name": "名前",
+               "unit": "ユニット",
+               "average": "平均値",
+               "maximum": "最大値",
+               "minimum": "最小値",
+               "latest": "最新値"
+            },
+            "noMatches": "フィルタ「{{search}}」と一致するデータ シリーズがありません",
+            "colors": {
+               "vmware": "デフォルトの色",
+               "highContrast": "ハイ コントラスト色"
+            },
+            "filter": {
+               "type": "フィルタのタイプ",
+               "cpuFilter": "CPU フィルタ",
+               "time": "時刻"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "すべて",
+                     "hostDropdownTitle": "ホスト",
+                     "allCoresDropdownTitle": "すべての PCPU",
+                     "allPackagesDropdownTitle": "すべてのパッケージ",
+                     "packageDropdownTitle": "パッケージ {{pkg}} コア",
+                     "custom": "カスタム",
+                     "seriesLabel": "PCPU {{core}}",
+                     "vmSeriesLabel": "仮想マシン: {{name}}",
+                     "packageSeriesLabel": "パッケージ {{pkg}}",
+                     "y1AxisLabel": "使用されたホスト CPU (%)",
+                     "xAxisLabel": "時刻"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "メモリ",
+                     "seriesLabel": "消費されたホスト メモリ",
+                     "vmSeriesLabel": "仮想マシン: {{name}}",
+                     "y1AxisLabel": "消費されたホスト メモリ (GB)",
+                     "xAxisLabel": "時刻"
+                  }
+               },
+               "cpuAndMemory": {
+                  "dropdownTitle": "CPU + メモリ (複合)"
+               },
+               "network": {
+                  "dropdownTitle": "ネットワーク",
+                  "usageSeriesLabel": "全体的なネットワークの使用",
+                  "vmUsageSeriesLabel": "全体的なネットワーク使用率: {{name}}",
+                  "transmitSeriesLabel": "全体的な転送速度",
+                  "receiveSeriesLabel": "全体的な受信速度",
+                  "nicTransmitRateSeriesLabel": "転送速度: {{nic}}",
+                  "nicReceiveRateSeriesLabel": "受信速度: {{nic}}",
+                  "y1AxisLabel": "転送/受信速度 (mbps)",
+                  "y2AxisLabel": "数量",
+                  "xAxisLabel": "時刻"
+               },
+               "disk": {
+                  "dropdownTitle": "ディスク",
+                  "usageSeriesLabel": "全体的なディスク使用量",
+                  "readRateSeriesLabel": "全体的な読み取り速度",
+                  "writeRateSeriesLabel": "全体的な書き込み速度",
+                  "diskReadRateSeriesLabel": "読み取り速度: {{disk}}",
+                  "diskWriteRateSeriesLabel": "書き込み速度: {{disk}}",
+                  "vmRateSeriesLabel": "全体的なディスク使用率: {{name}}",
+                  "maxLatencySeriesLabel": "最大待ち時間",
+                  "y1AxisLabel": "データ速度 (MB/秒)",
+                  "y2AxisLabel": "遅延 (ミリ秒)",
+                  "xAxisLabel": "時刻"
+               },
+               "scale": {
+                  "lastHour": "過去 1 時間"
+               }
+            }
+         },
+         "logs": {
+            "context": {
+               "openInNewWindow": {
+                  "label": "新しいウィンドウで開く",
+                  "tooltip": "新しいウィンドウでこのログを開きます"
+               }
+            },
+            "descriptions": {
+               "vmkernel": "VMkernel サブシステムからの情報",
+               "vpxa": "vCenter Server エージェント ログ",
+               "hostd": "ホスト エージェント ログ",
+               "dhclient": "DHCP クライアント ログ",
+               "esxupdate": "ESX 更新ログ ファイル",
+               "vmauthd": "vMotion 認証デーモン ログ",
+               "sysboot": "システム ブート ログ",
+               "vmkeventd": "VMkernel イベント デーモン ログ",
+               "vobd": "VMware 観測デーモン ログ",
+               "auth": "認証サブシステム ログ",
+               "fdm": "Fault Tolerance 管理エージェント ログ",
+               "syslog": "一般的なシステム ログ",
+               "vmkwarning": "VMkernel 警告ログ",
+               "vmkdevmgr": "VMkernel デバイス マネージャ ログ",
+               "shell": "ESXi Shell アクティビティ ログ"
+            },
+            "tabTitle": "ログ",
+            "tabTooltip": "システム ログの表示",
+            "noLogSelected": "ログが選択されていません",
+            "actionBar": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択したログ ファイルに対するアクションです"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "選択したログ ファイルを更新します"
+               },
+               "close": {
+                  "label": "閉じる",
+                  "tooltip": "このウィンドウを閉じます"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "ログに記録",
+                  "description": "説明"
+               }
+            }
+         },
+         "hardware": {
+            "tabTitle": "ハードウェア",
+            "tabTooltip": "システムのハードウェアを監視します",
+            "sensors": {
+               "alt": "システム センサー",
+               "tabTitle": "システム センサー",
+               "tabTooltip": "システム センサー",
+               "type": "カテゴリ",
+               "health": "健全性",
+               "fru": "現場で交換可能なユニット (FRU)",
+               "lastUpdated": "最終更新日",
+               "noSensors": "利用できるセンサー データがありません",
+               "currentReading": "現在の読み取り値",
+               "eventLogEntries": "イベント ログのエントリ",
+               "notifications": {
+                  "noIPMI": "このシステムには IPMI 機能がありません。センサー データを取得できるようにするには、ドライバをインストールしなければならない可能性があります。"
+               },
+               "discreteSensorStates": {
+                  "DMI-discrete": {
+                     "0": "アイドルへの移行",
+                     "1": "アクティブへの移行",
+                     "2": "ビジーへの移行"
+                  },
+                  "assert-discrete": {
+                     "0": "状態がデアサートされました",
+                     "1": "状態がアサートされました"
+                  },
+                  "predictive-discrete": {
+                     "0": "予期される障害がデアサートされました",
+                     "1": "予期される障害がアサートされました"
+                  },
+                  "limit-discrete": {
+                     "0": "制限を超えていません",
+                     "1": "制限を超えました"
+                  },
+                  "performance-discrete": {
+                     "0": "パフォーマンス良好",
+                     "1": "パフォーマンス低下"
+                  },
+                  "severity-discrete": {
+                     "0": "OK 状態への移行",
+                     "1": "OK 状態から重大でない状態への移行",
+                     "2": "重大でない状態から重大な状態への移行",
+                     "3": "重大でない状態からリカバリ不能状態への移行",
+                     "4": "重大な状態から重大でない状態への移行",
+                     "5": "リカバリ不能状態から重大な状態への移行",
+                     "6": "リカバリ不能状態への移行",
+                     "7": "監視",
+                     "8": "情報"
+                  },
+                  "present-discrete": {
+                     "0": "デバイスが削除されました",
+                     "1": "デバイスが挿入されました"
+                  },
+                  "enabled-discrete": {
+                     "0": "デバイスが無効になりました",
+                     "1": "デバイスが有効になりました"
+                  },
+                  "availability-discrete": {
+                     "0": "実行中への移行",
+                     "1": "テスト中への移行",
+                     "2": "パワーオフへの移行",
+                     "3": "オン ラインへの移行",
+                     "4": "オフ ラインへの移行",
+                     "5": "オフ モードへの移行",
+                     "6": "低下への移行",
+                     "7": "節電への移行",
+                     "8": "インストール エラー"
+                  },
+                  "redundancy-discrete": {
+                     "0": "完全冗長",
+                     "1": "冗長性喪失",
+                     "2": "冗長性低下",
+                     "3": "冗長な状態～非冗長リソースが十分な状態",
+                     "4": "非冗長リソースが不十分な状態～十分な状態",
+                     "5": "非冗長リソースが不十分な状態",
+                     "6": "完全冗長な状態から冗長性低下",
+                     "7": "非冗長な状態から冗長性低下"
+                  },
+                  "ACPI-discrete": {
+                     "0": "D0 電源状態",
+                     "1": "D1 電源状態",
+                     "2": "D2 電源状態",
+                     "3": "D3 電源状態",
+                     "157": "不明な状態"
+                  },
+                  "watchdog": {
+                     "0": "タイマー時間が経過しました",
+                     "1": "再起動しました",
+                     "2": "パワーオフ",
+                     "3": "電源の入れ直し"
+                  },
+                  "int-drive": {
+                     "0": "あり",
+                     "1": "ドライブ障害",
+                     "2": "予期される障害",
+                     "3": "ホット スペア",
+                     "4": "整合性チェックが進行中",
+                     "5": "重要な配列",
+                     "6": "失敗した配列",
+                     "7": "再構築が進行中",
+                     "8": "再構築が中止されました"
+                  },
+                  "cable": {
+                     "0": "あり/接続済み",
+                     "1": "なし/構成エラー"
+                  },
+                  "available-discrete": {
+                     "0": "デバイスがない",
+                     "1": "デバイスがある"
+                  }
+               },
+               "state": {
+                  "green": "緑",
+                  "red": "赤",
+                  "yellow": "黄色",
+                  "unknown": "不明"
+               },
+               "list": {
+                  "columns": {
+                     "sensor": "センサー",
+                     "id": "ID",
+                     "category": "カテゴリ",
+                     "health": "健全性",
+                     "current": "現在の読み取り値",
+                     "selEntries": "SEL エントリ",
+                     "updated": "最終更新日",
+                     "hasFRU": "FRU データ",
+                     "type": "タイプ/ユニット"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "更新",
+                        "tooltip": "センサー テーブルを更新します。注： 実際の更新速度はホストの内部システムによって制限されるため、ここでの更新を行っても、データが生成されないことがあります"
+                     },
+                     "clearSEL": {
+                        "label": "イベント ログをクリアします",
+                        "tooltip": "システム イベント ログをクリアします"
+                     }
+                  }
+               }
+            },
+            "storage": {
+               "alt": "ストレージ",
+               "tabTitle": "ストレージ",
+               "tabTooltip": "ストレージの健全性データ",
+               "operationalInfo": "追加情報",
+               "noData": "利用できるデータがありません",
+               "statusTitle": "ステータス",
+               "status": {
+                  "Green": "緑",
+                  "Red": "赤",
+                  "Yellow": "黄色",
+                  "Unknown": "不明"
+               },
+               "notifications": {
+                  "noSFCBD": "Small Footprint CIM Broker Daemon (SFCBD) が実行されていません。ストレージの健全性データはこのデーモンによって報告されます。このサービスを有効にする方法については、<a href=\"http://kb.vmware.com/kb/1025757\" target=\"_blank\">このナレッジベースの記事</a>を参照してください。",
+                  "noReportedData": "Small Footprint CIM Broker Daemon (SFCBD) が実行されていますが、データが報告されていません。使用しているストレージ アダプタに対応する CIM プロバイダをインストールしなければならない可能性があります。"
+               },
+               "list": {
+                  "columns": {
+                     "name": "名前",
+                     "status": "健全性",
+                     "description": "説明"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "更新",
+                        "tooltip": "センサー テーブルを更新します。注： 実際の更新速度はホストの内部システムによって制限されるため、ここでの更新を行っても、データが生成されないことがあります"
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "tabTitle": "イベント",
+            "tabTooltip": "システム イベント",
+            "type": "タイプ",
+            "time": "時刻",
+            "virtualMachine": "仮想マシン",
+            "searchKB": "ナレッジベースの記事",
+            "searchKBLink": "このイベントについて VMware.com のオンライン ナレッジベースを検索する場合は、ここをクリックしてください",
+            "event": "イベント",
+            "time": "時刻",
+            "type": "タイプ",
+            "previousPage": "前のページ",
+            "nextPage": "次のページ",
+            "refresh": "更新",
+            "perPage": "ページ当たり {{num}}",
+            "none": "なし",
+            "actions": {
+               "label": "アクション",
+               "tooltip": "選択したイベントに関連付けられたオブジェクトのアクション"
+            },
+            "refresh": {
+               "label": "更新",
+               "tooltip": "イベント テーブルを更新します"
+            }
+         },
+         "notifications": {
+            "tabTitle": "通知",
+            "tabTooltip": "システム通知",
+            "suggestedAction": "推奨されるアクション",
+            "actionBar": {
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "通知の更新"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択した通知に対するアクション"
+               }
+            },
+            "grid": {
+               "notification": "通知",
+               "type": "タイプ"
+            }
+         },
+         "tasks": {
+            "alt": "タスク",
+            "tabTitle": "タスク",
+            "tabTooltip": "タスク",
+            "noTasks": "タスクがありません",
+            "key": "キー",
+            "description": "説明",
+            "state": "状態",
+            "errors": "エラー",
+            "result": "結果"
+         }
+      },
+      "state": {
+         "inMaintenanceMode": "メンテナンス モード",
+         "normal": "正常",
+         "connected": "次の vCenter Server に接続されています",
+         "disconnected": "vCenter Server に接続されていません",
+         "lockdownStrict": "ロックダウン済み (厳密)",
+         "lockdownNormal": "ロックダウン済み (通常)",
+         "lockdownDisabled": "ロックダウンされていない"
+      },
+      "disconnectFromVC": {
+         "title": "vCenter Server からの切断",
+         "confirmLabel": "切断",
+         "rejectLabel": "キャンセル",
+         "warning": "このホストを切断すると、vCenter Server はホストが応答していないと判断します。\n\nこの方法は、vCenter Server が停止していて、ホストに緊急措置が必要な場合にのみ使用してください。vCenter Server が実行中の場合にこの操作を実行すると、アラームが表示されなくなります。\n\nまた、このホストを再起動すると、vCenter Server に再接続される可能性もあります。",
+         "success": "このホストは vCenter Server から正常に切断されました"
+      },
+      "maintenanceMode": {
+         "title": "メンテナンス モードの変更を確認します",
+         "rejectLabel": "キャンセル",
+         "confirmLabel": "はい",
+         "vsan": "Virtual SAN クラスタのホストに Virtual SAN データが存在する可能性があります。ホストをメンテナンス モードにする前に、いずれかのオプションを選択して、Virtual SAN データの移行メカニズムを設定してください。",
+         "vsanLabel": "vSAN データの移行",
+         "vsanDataMigration": {
+            "noAction": {
+               "label": " データの移行なし",
+               "help": " Virtual SAN は、このホストからのデータの退避は行いません。ホストをパワーオフするか、クラスタから削除する場合、一部の仮想マシンがアクセス不能になることがあります。"
+            },
+            "ensureObjectAccessibility": {
+               "label": " アクセシビリティの確保",
+               "help": "これはデフォルトのオプションです。ホストのパワーオフ、またはクラスタからホストを削除する際、Virtual SAN は、このホスト上のアクセス可能なすべての仮想マシンに引き続きアクセスできるようにします。通常、退避する必要があるのは、データの一部のみです。\n\nこのオプションは、クラスタからホストを一時的に除外する場合に選択してください。たとえば、アップグレードをインストールしたあと、ホストをクラスタに戻す場合などです。このオプションは、ホストをクラスタから永続的に削除する場合には適しません。"
+            },
+            "evacuateAllData":{
+               "label": "すべてのデータを退避",
+               "help": " Virtual SAN は、すべてのデータをクラスタ内の他のホストに退避し、クラスタ内で影響を受けるコンポーネントの可用性に関するコンプライアンスを維持または修正します。このオプションを使用すると、データ転送量が最大になり、時間とリソースを最大限消費します。このオプションは、ホストを一時的ではなく、完全に移行する場合に選択してください。クラスタ内の最後のホストからデータを退避させる場合は、仮想マシンを別のデータストアに移行してから、ホストをメンテナンス モードにしてください。ホスト上にデータを持つ仮想マシン オブジェクトがアクセス不能な場合、ホストはメンテナンス モードに切り替わらず、完全に退避させることができません。"
+            }
+         },
+         "vmsPoweredOn": "仮想マシンは引き続きパワーオン状態です。すべての仮想マシンが移行されるか、パワーダウン/サスペンド状態にならない限り、メンテナンス モードには切り替わりません。",
+         "vmsPoweredOnTitle": "メンテナンス モードへの切り替えが遅延しました",
+         "warning": "メンテナンス モードの場合は、仮想マシンの作成、パワーオン、または構成を行うことができません。また、VMware vCenter Server がメンテナンス モードの場合、仮想マシンはこのホストに移行されません。\n\n場合によっては仮想マシンをパワーオフするか、またはホストから仮想マシンを手動で移行する必要があります。\n\nメンテナンス モードへの切り替えタスクはいつでもキャンセルできます。",
+         "confirmEnter": "このホストをメンテナンス モードに切り替えますか?",
+         "notifications": {
+            "failure": "メンテナンス モードへの切り替えに失敗しました: {{message}}",
+            "failureUnknown": "メンテナンス モードへの切り替えに失敗しました。不明なエラーです。"
+         }
+      },
+      "lockdownMode": {
+         "warning": "ロックダウン モードに切り替えると、現在のユーザーに例外が設定されていない場合、このセッションが応答不能になる可能性があります。例外が設定されていない場合は、このクライアント アプリケーションを再接続することはできません。"
+      },
+      "notifications": {
+         "freeLicense": {
+            "message": "このホストに割り当てられたライセンスに制限があるため、一部の操作 (仮想マシンの電源操作など) を実行することはできません。",
+            "suggested-action": "評価ライセンスに戻すことで、この問題を解決できる可能性があります。"
+         },
+         "licenseExpired": {
+            "message": "ESXi のライセンスの有効期限が切れました。"
+         },
+         "evalLicenseValid": {
+            "message": "現在 ESXi を評価モードで使用しています。このライセンスは {{days}} 日後に有効期限が切れます。"
+         },
+         "evalLicenseExpired": {
+            "message": "ESXi の評価ライセンスの有効期限が切れました。"
+         },
+         "certNotValidBefore": {
+            "message": "このホストに割り当てられた証明書はまだ有効ではありません。",
+            "suggested-action": "有効な証明書をインストールする必要があります。"
+         },
+         "certExpired": {
+            "message": "このホストに割り当てられた証明書の有効期限が切れています。",
+            "suggested-action": "有効な証明書をインストールする必要があります。"
+         },
+         "rebootRequired": {
+            "message": "設定を完了するには、このホストを再起動する必要があります。"
+         },
+         "ssh": {
+            "message": "このホストでは SSH が有効です。",
+            "suggested-action": "管理に必要な場合を除き、SSH を無効にする必要があります。"
+         },
+         "shell": {
+            "message": "このホストでは ESXi シェルが有効です。",
+            "suggested-action": "管理に必要な場合を除き、このシェルを無効にする必要があります。"
+         },
+         "vc": {
+            "message": "このホストは vCenter Server で管理されています。",
+            "suggested-action": "ユーザーに通知することなく vCenter Server によってアクションが自動実行される場合があります。"
+         },
+         "maxRegisteredVMs": {
+            "message": "このホストは登録済み仮想マシンの最大数に到達しました。",
+            "suggested-action": "このホストにメモリを追加すると、サポートされる仮想マシンの最大数が増えます。"
+         }
+      }
+   }
+}

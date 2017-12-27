@@ -1,0 +1,6 @@
+{
+  "gosWin1032": "Microsoft Windows 10 (32 位)",
+  "loginError": "由于用户名或密码不正确，无法完成登录。",
+  "diskTypeSSD": "磁盘 (SSD)",
+  "taskFailureHostConfig": "失败 - 主机配置过程中出错。"
+}

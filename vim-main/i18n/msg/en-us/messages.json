@@ -1,0 +1,466 @@
+{
+   "number": {
+      "format": {
+         "separator": ".",
+         "delimiter": ",",
+         "strip_insignificant_zeros": "1"
+      }
+   },
+   "date": {
+      "day_names": [
+         "Sunday",
+         "Monday",
+         "Tuesday",
+         "Wednesday",
+         "Thursday",
+         "Friday",
+         "Saturday"
+      ],
+      "abbr_day_names": [
+         "Sun.",
+         "Mon.",
+         "Tue.",
+         "Wed.",
+         "Thurs.",
+         "Fri.",
+         "Sat."
+      ],
+      "month_names": [
+         "null",
+         "January",
+         "February",
+         "March",
+         "April",
+         "May",
+         "June",
+         "July",
+         "August",
+         "September",
+         "October",
+         "November",
+         "December"
+      ],
+      "abbr_month_names": [
+         "null",
+         "Jan.",
+         "Feb.",
+         "Mar.",
+         "Apr.",
+         "May.",
+         "Jun.",
+         "Jul.",
+         "Aug.",
+         "Sep.",
+         "Oct.",
+         "Nov.",
+         "Dec."
+      ],
+      "format": {
+         "iso": "%Y/%m/%d %H:%M:%S",
+         "long": "%A, %B %d, %Y, %H:%M:%S",
+         "short": "%m/%d/%Y %H:%M:%S",
+         "date": "%m/%d/%Y",
+         "time": "%H:%M:%S"
+      }
+   },
+   "units": {
+      "TB": "TB",
+      "GB": "GB",
+      "MB": "MB",
+      "KB": "KB",
+      "B": "B",
+      "MHz": "MHz",
+      "GHz": "GHz"
+   },
+   "grid": {
+      "noItems": "No items",
+      "sortAscending": "Sort ascending",
+      "sortDescending": "Sort descending",
+      "filter": "Filter",
+      "filterHeader": "Show items with value that",
+      "clear": "Clear",
+      "columns": "Select columns",
+      "isTrue": "is true",
+      "isFalse": "is false",
+      "and": "and",
+      "or": "or",
+      "startswith": "starts with",
+      "contains": "contains",
+      "endswith": "ends with",
+      "eq": "is equal to",
+      "neq": "is not equal to",
+      "gte": "is greater than or equal to",
+      "gt": "is greater than",
+      "lte": "is less than or equal to",
+      "lt": "is less than"
+   },
+   "general": {
+      "yes": "Yes",
+      "no": "No",
+      "na": {
+         "label": "N/A",
+         "title": "Not Applicable"
+      },
+      "openDocumentation": "Open the VMware Host Client documentation",
+      "loading": {
+         "label": "Loading...",
+         "title": "Loading"
+      },
+      "unknown": "Unknown",
+      "unlimited": "Unlimited",
+      "active": "Active",
+      "automatic": "Automatic",
+      "notActive": "Not active",
+      "help": "Help",
+      "time": {
+         "minutes": "minutes",
+         "seconds": "seconds"
+      }
+   },
+   "performance": {
+      "dataAt": "Data at"
+   },
+   "wizard": {
+      "back": "Back",
+      "next": "Next",
+      "finish": "Finish"
+   },
+   "localeOverride": {
+      "title": "Locale override warning",
+      "content": "A URL locale override (e.g. ?locale=fr-fr) and settings locale override are both set, using the URL specified locale."
+   },
+   "client": {
+      "about": {
+         "title": "About",
+         "close": "Close"
+      },
+      "context": {
+         "about": {
+            "label": "About",
+            "tooltip": "Show information about the VMware Host Client"
+         },
+         "vmrc": {
+            "label": "VMware remote console",
+            "tooltip": "Get the standalone VMware Remote Console application"
+         },
+         "help": {
+            "label": "Help",
+            "tooltip": "Open official VMware Host Documentation in a new window"
+         },
+         "tools": {
+            "label": "Tools and links",
+            "tooltip": "Tools available from this host"
+         },
+         "getVC": {
+            "label": "Get vCenter Server",
+            "tooltip": "Download and evaluate VMware vCenter Server"
+         },
+         "mob": {
+            "label": "Managed object browser",
+            "tooltip": "Open the managed object browser",
+            "tooltipDisabled": "The managed object browser is disabled. You can enabled it by setting the advanced option Config.HostAgent.plugins.solo.enableMob to true",
+            "dialog": {
+               "title": "Enable managed object browser",
+               "content": "The managed object browser is currently disabled. Enable and open?",
+               "cancel": "Cancel"
+            }
+         },
+         "feedback": {
+            "label": "Feedback",
+            "tooltip": "Find out how to submit feedback about the VMware Host Client"
+         },
+         "sdk": {
+            "label": "SDK documentation",
+            "tooltip": "Find out how to use VMware's web services SDK"
+         },
+         "vcli": {
+            "label": "Remote command line tools",
+            "tooltip": "Find out how to use VMware's remote command line tools"
+         },
+         "vmware": {
+            "label": "VMware.com",
+            "tooltip": "Visit VMware's website"
+         },
+         "clientSettings": {
+            "label": "Client settings",
+            "tooltip": "Manage settings for the VMware Host Client",
+            "sendTelemetry": {
+               "label": "Send usage statistics",
+               "tooltip": "Send usage statistics back to VMware.com to help us identify issues with the VMware Host Client"
+            },
+            "keyboardSettings": {
+               "label": "Keyboard settings",
+               "tooltip": "Configure keyboard settings for the Host Client",
+               "en-US": "English",
+               "de-DE": "German",
+               "it-IT": "Italian",
+               "es-ES": "Spanish",
+               "ja-JP_106/109": "Japanese"
+            },
+            "languageSettings": {
+               "label": "Language settings",
+               "tooltip": "Configure language settings for the Host Client",
+               "en-us": {
+                  "label": "English",
+                  "tooltip": "English"
+               },
+               "fr-fr": {
+                  "label": "French",
+                  "tooltip": "French"
+               },
+               "es-es": {
+                  "label": "Spanish",
+                  "tooltip": "Spanish"
+               },
+               "de-de": {
+                  "label": "German",
+                  "tooltip": "German"
+               },
+               "ko-kr": {
+                  "label": "Korean",
+                  "tooltip": "Korean"
+               },
+               "zh-cn": {
+                  "label": "Chinese (simplified)",
+                  "tooltip": "Chinese (simplified)"
+               },
+               "zh-tw": {
+                  "label": "Chinese (traditional)",
+                  "tooltip": "Chinese (traditional)"
+               },
+               "ja-jp": {
+                  "label": "Japanese",
+                  "tooltip": "Japanese"
+               },
+               "browserDefault": {
+                  "label": "Browser default",
+                  "tooltip": "Let the Host Client use the browser's settings"
+               }
+            },
+            "applicationTimeout": {
+               "label": "Application timeout",
+               "tooltip": "The amount of idle time before the Host Client will automatically log out",
+               "xMinutes": "{{x}} minutes",
+               "xHour": "{{x}} hour",
+               "xHours": "{{x}} hours",
+               "off": "Off",
+               "warning": {
+                  "confirmLabel": "Yes",
+                  "rejectLabel": "Cancel",
+                  "title": "Warning",
+                  "content": "Disabling session time out could leave your ESXi host vulnerable to malicious activity. Are you sure you want to disable session time out?"
+               }
+            },
+            "reset": {
+               "label": "Reset client settings",
+               "tooltip": "Reset the Host Client's settings to the default values"
+            }
+         },
+         "autorefresh": {
+            "label": "Auto-refresh",
+            "tooltip": "Tells the Host Client to automatically refresh data from the host at the specified period",
+            "off": {
+               "label": "Off",
+               "tooltip": "Don't auto-refresh"
+            },
+            "xSeconds": "{{x} seconds"
+         }
+      },
+      "feedback": {
+         "title": "Feedback",
+         "close": "Close"
+      }
+   },
+   "scriptingConsole": {
+      "title": "Scripting console",
+      "close": "Close"
+   },
+   "upload": {
+      "inProgress": "A file upload is in progress"
+   },
+   "hypervisorLicense": {
+      "title": "Restricted license",
+      "closeAndDismiss": "Close and dismiss",
+      "content": "The license assigned to this host restricts operations that may be performed.",
+      "close": "Close"
+   },
+   "restrictedVersion": {
+      "title": "Restricted version",
+      "close": "Close",
+      "content": "The assigned license does not allow this operation"
+   },
+   "update": {
+      "notify": {
+         "dialog": {
+            "title": "Client update available",
+            "content": "A new version of the ESXi Host Client is available.",
+            "updateNow": "Update now",
+            "ok": "OK"
+         }
+      },
+      "perform": {
+         "update": "Update",
+         "success": "Host successfully updated",
+         "successWithMessage": "Host successfully updated: {{message}}",
+         "failure": "The host client update failed: {{reason}}",
+         "badFormat": "Update was not in expected format. Please provide a metadata.zip bundle or VIB",
+         "vumWarning": {
+            "title": "Warning",
+            "content": "If this host is being managed by VMware Update Manager, performing an update may cause the host to become non-compliant. Continue?",
+            "rejectLabel": "Cancel",
+            "confirmLabel": "Continue"
+         },
+         "dialog": {
+            "title": "Install update",
+            "content": "Enter the URL of the VIB or metadata.zip below",
+            "missingVIBURL": "Please enter the URL to the VIB or metadata.zip you wish to update",
+            "missingProxy": "Please enter the proxy server address",
+            "rejectLabel": "Cancel",
+            "proxy": {
+               "use": "Use proxy server",
+               "server": "Proxy server",
+               "username": "User name",
+               "password": "Password",
+               "port": "Port"
+            }
+         }
+      }
+   },
+   "anonymous": {
+      "dialog": {
+         "title": "Help us improve the VMware Host Client",
+         "ok": "OK",
+         "content": "VMware’s Customer Experience Improvement Program (“CEIP”) provides VMware with information that enables VMware to improve its products and services and to fix problems. By choosing to participate in CEIP, you agree that VMware may collect technical information about your use of VMware products and services on a regular basis.  This information does not personally identify you. For more details about the Program, please see the <a href='{{docURL}}'>VMware Host Client documentation</a>.",
+         "checkbox": {
+            "label": "Join CEIP"
+         }
+      }
+   },
+   "settings": {
+      "reset": {
+         "dialog": {
+            "title": "Reset settings",
+            "ok": "OK",
+            "cancel": "Cancel",
+            "content": "All application settings will now be reset to the factory defaults. This operation cannot be reversed. When the reset is complete the application will reload."
+         }
+      }
+   },
+   "root": {
+      "client": "ESXi",
+      "title": "VMware ESXi",
+      "titleWithMessage": "VMware ESXi - {{message}}",
+      "logIn": "Log in",
+      "logViewer": "Log viewer",
+      "console": "Console",
+      "recent_tasks": "Recent Tasks",
+      "about": "Copyright © 1998-2015 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. VMware products are covered by one or more patents listed at <a href=\"http://www.vmware.com/go/patents\">http://www.vmware.com/go/patents</a>.",
+      "navigator": "Navigator",
+      "loading": "Loading",
+      "backgroundImage": "Background image",
+      "resize": "Window resize",
+      "progressBar": "Progress bar",
+      "lostConnection": "Lost connection"
+   },
+   "notification": {
+      "type": {
+         "info": "Info",
+         "warning": "Warning",
+         "error": "Error",
+         "question": "Question"
+      },
+      "dismiss": "dismiss",
+      "dismissNotification": "Dismiss notification",
+      "actions": {
+         "label": "Actions",
+         "tooltip": "Actions relating to this notification"
+      }
+   },
+   "entity": {
+      "type": {
+         "VirtualMachine": "Virtual machine",
+         "HostSystem": "Host",
+         "Datastore": "Datastore",
+         "Folder": "Folder",
+         "ResourcePool": "Resource pool"
+      }
+   },
+   "menu": {
+      "host": {
+         "title": "Host",
+         "summary": "Summary",
+         "manage": "Manage",
+         "monitor": "Monitor",
+         "permissions": "Permissions",
+         "licensing": "Licensing"
+      },
+      "vm": {
+         "title": "Virtual Machines",
+         "summary": "Summary",
+         "manage": "Manage",
+         "monitor": "Monitor",
+         "more": "More VMs..."
+      },
+      "storage": {
+         "title": "Storage",
+         "summary": "Summary",
+         "manage": "Manage",
+         "monitor": "Monitor",
+         "more": "More storage..."
+      },
+      "network": {
+         "title": "Networking",
+         "summary": "Summary",
+         "manage": "Manage",
+         "monitor": "Monitor",
+         "more": "More networks..."
+      },
+      "rp": {
+         "title": "Resource Pools",
+         "summary": "Summary",
+         "manage": "Manage",
+         "monitor": "Monitor"
+      },
+      "monitor": {
+         "title": "Monitor",
+         "events": "Events",
+         "tasks": "Tasks",
+         "logs": "Logs"
+      }
+   },
+   "session": {
+      "start": "Your session will expire in {{time}}.",
+      "timeout": "You were logged out due to inactivity",
+      "appTitleIdle": "until your session times out",
+      "appTitleTimedOut": "Session timed out"
+   },
+   "logout": {
+      "menu": {
+         "label": "Log out",
+         "tooltip": "End the session associated with this host"
+      }
+   },
+   "login": {
+      "host": "Hostname",
+      "username": "User name",
+      "password": "Password",
+      "timeout": "Connection to ESXi host timed out",
+      "logging": "Logging in to ESXi host..."
+   },
+   "search": {
+      "placeholder": "Search"
+   },
+   "directives": {
+      "progressChart": {
+         "free": "FREE:",
+         "used": "USED:",
+         "capacity": "CAPACITY:"
+      },
+      "search": {
+         "noResults": "No results found"
+      },
+      "notification": {
+         "close": "Close"
+      }
+   }
+}

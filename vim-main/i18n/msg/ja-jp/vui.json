@@ -1,0 +1,41 @@
+{
+   "vui": {
+      "ok": "OK",
+      "back": "戻る",
+      "next": "次へ",
+      "finish": "完了",
+      "cancel": "キャンセル",
+      "filter": "フィルタ",
+      "of": "/",
+      "item": "アイテム",
+      "items": "アイテム",
+      "actionsMenu" : {
+         "empty": "使用可能なアクションがありません"
+      },
+      "datagrid" : {
+         "emptyTable": "表示するアイテムがありません",
+         "zeroRecords": "一致するレコードがありませんでした",
+         "colFilterInfo": "以下の値をもつアイテムを表示",
+         "colFilterBooleanInfo": "値が次の通りであるアイテムを表示",
+         "filter": "フィルタ",
+         "clear": "クリア",
+         "isTrue": "True",
+         "isFalse": "False",
+         "and": "および",
+         "or": "または",
+         "contains": "次を含む",
+         "eq": "次の値と等しい",
+         "neq": "次の値に等しくない",
+         "gte": "次の値以上",
+         "gt": "次の値を超える",
+         "lte": "次の値以下",
+         "lt": "次の値未満",
+         "item": "アイテム",
+         "items": "アイテム",
+         "save": "変更を適用"
+      },
+      "notification" : {
+         "defaultTitle" : "通知"
+      }
+   }
+}

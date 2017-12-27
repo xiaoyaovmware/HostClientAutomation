@@ -1,0 +1,1361 @@
+{
+   "network": {
+      "title": "{{hostname}}: ネットワーク",
+      "context": {
+         "title": "ネットワーク",
+         "addPortgroup": {
+            "title": "ポート グループを追加します",
+            "tooltip": "新規ポート グループを追加します"
+         },
+         "addVSwitch": {
+            "title": "標準 vSwitch の追加",
+            "tooltip": "標準仮想スイッチを追加します"
+         },
+         "addVMKNIC": {
+            "title": "VMkernel NIC の追加",
+            "tooltip": "VMkernel インターフェイスを追加します"
+         }
+      },
+      "tabs": {
+         "vswitches": {
+            "title": "仮想スイッチ",
+            "toolTip": "ホストの仮想スイッチを管理します"
+         },
+         "portgroups": {
+            "title": "ポート グループ",
+            "toolTip": "ホストのスイッチ ポート グループを管理します"
+         },
+         "pnics": {
+            "title": "物理 NIC",
+            "toolTip": "ホストの物理 NIC を管理します"
+         },
+         "vmknics": {
+            "title": "VMkernel NIC",
+            "toolTip": "ホストの VMkernel NIC を管理します"
+         },
+         "netstacks": {
+            "title": "TCP/IP スタック",
+            "toolTip": "ホストの TCP/IP スタックを管理します"
+         },
+         "firewall": {
+            "title": "ファイアウォール ルール",
+            "toolTip": "ファイアウォール ルールを管理します"
+         }
+      },
+      "monitor": {
+         "events": {
+            "tabTitle": "イベント",
+            "tabTooltip": "システム イベント"
+         },
+         "tasks": {
+            "tabTitle": "タスク",
+            "tabTooltip": "タスク"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "権限",
+            "title": "権限を管理します",
+            "close": "閉じる",
+            "cancel": "キャンセル",
+            "noUsers": "ユーザーなし",
+            "addUser": {
+               "label": "ユーザーの追加",
+               "toolTip": "ユーザーを追加します"
+            },
+            "removeUser": {
+               "label": "ユーザーの削除",
+               "toolTip": "ユーザーを削除します"
+            },
+            "assignRole": {
+               "label": "ロールの割り当て",
+               "toolTip": "ユーザーにロールを割り当てます"
+            },
+            "updatePermissions": {
+               "successNotification": "権限が正常に更新されました",
+               "failureNotification": "権限の更新に失敗しました: {{error}}"
+            },
+            "columns": {
+               "user": "ユーザー",
+               "role": "ロール"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "ユーザーを選択"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "ロールを選択"
+            },
+            "propagateLabel": "すべての子へ伝達"
+         }
+      },
+      "firewall": {
+         "alt": "ファイアウォール",
+         "list": {
+            "columns": {
+               "name": "名前",
+               "key": "キー",
+               "incoming": "入力ポート",
+               "outgoing": "出力ポート",
+               "protocols": "プロトコル",
+               "daemon": "デーモン",
+               "service": "サービス"
+            },
+            "actionBar": {
+               "edit": {
+                  "label": "設定の編集",
+                  "tooltip": "このルールセットの設定を編集します"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択したファイアウォール ルールセットに対するアクションです"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "ファイアウォール ルールを更新します"
+               }
+            },
+            "unknownRule": "不明な FirewallRule",
+            "rule": "ルール",
+            "direction": "方向",
+            "port": "ポート",
+            "protocol": "プロトコル",
+            "notification": {
+               "enable": {
+                  "success": "{{name}} ルールセットが有効になりました。",
+                  "error": "{{}} ルールセットを有効にできませんでした。"
+               },
+               "disable": {
+                  "success": "{{name}} ルールセットが無効になりました。",
+                  "error": "{{}} ルールセットを無効にできませんでした。"
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "設定の編集",
+               "tooltip": "このファイアウォール ルールを編集します"
+            },
+            "enable": {
+               "label": "有効",
+               "tooltip": "このファイアウォール ルールを有効にします"
+            },
+            "disable": {
+               "label": "無効",
+               "tooltip": "このファイアウォール ルールを無効にします"
+            },
+            "service": {
+               "label": "サービス",
+               "tooltip": "このファイアウォール ルールに関連付けられているサービスの設定を変更します"
+            },
+            "policy": {
+               "label": "ポリシー",
+               "tooltip": "このファイアウォール ルールに関連付けられているサービスのポリシー オプションです"
+            }
+         },
+         "summary": {
+            "key": "キー",
+            "enabled": "有効",
+            "true": "はい",
+            "false": "いいえ",
+            "required": "必須",
+            "rules": "ルール",
+            "package": "パッケージ情報",
+            "allowedIP": "許可された IP アドレス",
+            "all": "すべて",
+            "service": "サービス",
+            "portlets": {
+               "rules": {
+                  "title": "ファイアウォール ルール",
+                  "tooltip": "ファイアウォール ルール"
+               }
+            }
+         },
+         "edit": {
+            "title": "ファイアウォール設定",
+            "header": "許可された IP アドレス",
+            "allIP": "すべての IP アドレスからのすべての接続を許可",
+            "selectedIP": "次のネットワークからの接続のみを許可: ",
+            "selectedIPInfo": "各ネットワークをコンマで区切ります。<br/>例:<br/>192.168.0.0/24, 192.168.1.2, 2001::1/64, fd3e:29a6:0a81:e478::/64",
+            "ok": "OK",
+            "rejectLabel": "キャンセル",
+            "invalidIP": "有効な IP アドレスを入力してください"
+         }
+      },
+      "vmknic": {
+         "alt": "VMkernel NIC",
+         "select": {
+            "title": "VMkernel インターフェイスを選択します",
+            "rejectLabel": "キャンセル",
+            "confirmLabel": "選択",
+            "loading": "ロードしています..."
+         },
+         "summary": {
+            "virtualSwitch": "仮想スイッチ:",
+            "portGroup": "ポート グループ: ",
+            "tcpIpConfiguration": "TCP/IP 構成",
+            "vswitchTopology": "vSwitch トポロジ",
+            "services": "サービス",
+            "unknownVMKNIC": "不明な VMkernel NIC",
+            "ok": "OK",
+            "portlets": {
+               "tcpip": {
+                  "netstack": "TCP/IP スタック",
+                  "ipv4DHCP": {
+                     "title": "IPv4 DHCP",
+                     "enabled": "有効",
+                     "disabled": "無効"
+                  },
+                  "ipv4Address": "IPv4 アドレス",
+                  "ipv4Subnet": "IPv4 サブネット",
+                  "ipv6DHCP": {
+                     "title": "IPv6 DHCP",
+                     "enabled": "有効",
+                     "disabled": "無効"
+                  },
+                  "ipv6AutoConfig": {
+                     "title": "IPv6 の自動構成",
+                     "enabled": "有効",
+                     "disabled": "無効"
+                  },
+                  "ipv6Addresses": "IPv6 アドレス",
+                  "none": "なし"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "この VMkernel NIC のデータを更新します"
+               },
+               "editSettings": {
+                  "label": "設定の編集",
+                  "tooltip": "この VMkernel NIC の設定を編集します"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "この VMkernel NIC に対するアクションです"
+               }
+            }
+         },
+         "events": {
+            "type": "タイプ:",
+            "time": "時間:",
+            "virtualMachine": "仮想マシン:"
+         },
+         "list": {
+            "grid": {
+               "name": "名前",
+               "portgroup": "ポート グループ",
+               "tcpip": "TCP/IP スタック",
+               "services": "サービス",
+               "ipv4": "IPv4 アドレス",
+               "ipv6": "IPv6 アドレス",
+               "none": "なし"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "アダプタ テーブルを更新します"
+               },
+               "add": {
+                  "label": "VMkernel NIC の追加",
+                  "tooltip": "VMkernel NICの追加: 作成中"
+               },
+               "editSettings": {
+                  "label": "設定の編集",
+                  "tooltip": "この仮想スイッチの設定を編集します"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "この VMkernel NIC に対するアクションです"
+               }
+            }
+         },
+         "monitor": {
+            "title": "監視",
+            "tabs": {
+               "events": {
+                  "label": "イベント",
+                  "tooltip": "イベント"
+               },
+               "tasks": {
+                  "label": "タスク",
+                  "tooltip": "タスク"
+               }
+            }
+         },
+         "add": {
+            "loading": "ロードしています...",
+            "title": "VMkernel NIC の追加",
+            "rejectLabel": "キャンセル",
+            "ip": {
+               "ipv4": "IPv4 のみ",
+               "ipv6": "IPv6 のみ",
+               "both": "IPv4 および IPv6"
+            },
+            "vswitch": {
+               "label": "仮想スイッチの選択"
+            },
+            "dialog": {
+               "create": "作成",
+               "validation": {
+                  "nic": "新しいポート グループの名前を入力してください",
+                  "vswitch": "ポート グループの仮想スイッチを選択してください",
+                  "vlanId": "VLAN ID を入力してください。値は {{min}} ～ {{max}} の範囲にする必要があります。",
+                  "ipv4": "IPv4 アドレスとサブネットを入力してください",
+                  "portgroupExists": "名前が {{name}} のポート グループはすでにあります。別の名前を選択してください。"
+               },
+               "notification": {
+                  "success": "VMkernel NIC {{name}} が正常に作成されました",
+                  "error": "新規 VMkernel NIC の作成に失敗しました"
+               }
+            }
+         },
+         "edit": {
+            "title": "設定の編集: {{name}}",
+            "rejectLabel": "キャンセル",
+            "confirmLabel": "保存",
+            "loading": "ロードしています...",
+            "ip": {
+               "ipv4": "IPv4 のみ",
+               "ipv6": "IPv6 のみ",
+               "both": "IPv4 および IPv6"
+            },
+            "vswitch": {
+               "label": "仮想スイッチの選択"
+            },
+            "dialog": {
+               "create": "作成",
+               "validation": {
+                  "portgroup": "この VMkernel NIC に関連付けられているポート グループは存在しません",
+                  "vswitch": "ポート グループの仮想スイッチを選択してください",
+                  "ipv4": "IPv4 アドレスとサブネットを入力してください"
+               },
+               "notification": {
+                  "success": "VMkernel NIC {{name}} の構成が保存されました",
+                  "error": "VMkernel NIC {{name}} の構成の保存に失敗しました"
+               }
+            }
+         },
+         "context": {
+            "remove": {
+               "label": "削除",
+               "tooltip": "この VMkernel NIC を削除します"
+            },
+            "edit": {
+               "label": "設定の編集",
+               "tooltip": "この VMkernel NIC の設定を編集します",
+               "tooltipDVS": "分散ポート グループに接続されている VMkernel NIC は編集できません"
+            }
+         },
+         "remove": {
+            "title": "VMKNIC の削除: {{name}}",
+            "confirmLabel": "確認",
+            "rejectLabel": "キャンセル",
+            "successNotification": "VMkernel NIC {{name}} が削除されました",
+            "failureNotification": "VMkernel NIC {{name}} の削除に失敗しました",
+            "confirmation": "VMkernel NIC を削除すると、その NIC を使用するすべてのサービスが使用できなくなります。\n\n{{name}} を削除しますか?"
+         },
+         "settings": {
+            "services": {
+               "vSphereProvisioning": {
+                  "label": "プロビジョニング"
+               },
+               "vMotion": {
+                  "label": "vMotion"
+               },
+               "vmotion": {
+                  "label": "vMotion"
+               },
+               "faultToleranceLogging": {
+                  "label": "Fault Tolerance のログ"
+               },
+               "management": {
+                  "label": "管理"
+               },
+               "vSphereReplication": {
+                  "label": "レプリケーション"
+               },
+               "vSphereReplicationNFC": {
+                  "label": "NFC レプリケーション"
+               },
+               "vsan": {
+                  "label": "vSAN"
+               },
+               "vsanWitness": {
+                  "label": "vSAN 監視"
+               }
+            },
+            "portGroup": {
+               "label": "ポート グループ",
+               "newPortGroup": "新規ポート グループ",
+               "vlandId": "VLAN ID",
+               "ipVersion": {
+                  "label": "IP バージョン"
+               },
+               "ipv4": {
+                  "label": "IPv4 設定",
+                  "dhcp": {
+                     "label": "構成",
+                     "dhcp": "DHCP",
+                     "static": "スタティック"
+                  },
+                  "address": "アドレス",
+                  "subnetMask": "サブネット マスク"
+               },
+               "ipv6": {
+                  "label": "IPv6 設定",
+                  "clickExpand": "クリックして展開",
+                  "dhcpv6": {
+                     "label": "DHCPv6",
+                     "enabled": "有効",
+                     "disabled": "無効"
+                  },
+                  "autoConfig": {
+                     "label": "自動構成",
+                     "yes": "はい",
+                     "no": "いいえ"
+                  },
+                  "staticAddresses": {
+                     "label": "固定アドレス",
+                     "addAddress": "アドレスの追加",
+                     "placeholder": {
+                        "address": "アドレス",
+                        "prefix": "プリフィックス"
+                     }
+                  },
+                  "vSwitch": {
+                     "label": "仮想スイッチ"
+                  },
+                  "tcpip": {
+                     "label": "TCP/IP スタック"
+                  },
+                  "services": {
+                     "label": "サービス",
+                     "vMotion": "vMotion"
+                  }
+               }
+            }
+         }
+      },
+      "vswitch": {
+         "alt": "仮想スイッチ",
+         "context": {
+            "addUplink": {
+               "title": "アップリンクの追加",
+               "tooltip": "この仮想スイッチへアップリンクを追加します"
+            },
+            "editSettings": {
+               "title": "設定の編集",
+               "tooltip": "この仮想スイッチの設定を編集します"
+            },
+            "remove": {
+               "title": "削除",
+               "tooltip": "仮想スイッチの削除",
+               "tooltipDVS": "分散スイッチの削除は、vCenter Server からのみ可能です"
+            }
+         },
+         "summary": {
+            "type": "タイプ:",
+            "virtualSwitch": "仮想スイッチ:",
+            "portGroups": "ポート グループ: ",
+            "uplinks": "アップリンク: ",
+            "vswitchDetails": "vSwitch の詳細",
+            "vswitchTopology": "vSwitch トポロジ",
+            "portlet": {
+               "mtu": "MTU",
+               "ports": "ポート",
+               "link": "リンクの検出",
+               "attached": "接続された仮想マシン",
+               "beacon": "ビーコン間隔",
+               "available": "使用可能",
+               "active": "アクティブ",
+               "linkDiscovery": {
+                  "mode": {
+                     "listen": "待機",
+                     "advertise": "アドバタイズ",
+                     "both": "両方",
+                     "none": "なし"
+                  },
+                  "protocol": {
+                     "label": "プロトコル",
+                     "lldp": "Link Layer Discovery Protocol (LLDP)",
+                     "cdp": "Cisco Discovery Protocol (CDP)"
+                  }
+               }
+            },
+            "dialog": {
+               "title": "不明な vSwitch"
+            },
+            "actionBar": {
+               "addUplink": {
+                  "label": "アップリンクの追加",
+                  "tooltip": "仮想スイッチに新しい物理アップリンクを追加します"
+               },
+               "edit": {
+                  "label": "設定の編集",
+                  "tooltip": "この仮想スイッチの設定を編集します"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "アダプタ テーブルを更新します"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "このリスト内で選択されたオブジェクトのアクション"
+               }
+            }
+         },
+         "list": {
+            "grid": {
+               "name": "名前",
+               "portgroups": "ポート グループ",
+               "uplinks": "アップリンク",
+               "type": "タイプ"
+            },
+            "actionBar": {
+               "addStandard": {
+                  "label": "標準仮想スイッチの追加",
+                  "tooltip": "新しい標準仮想スイッチを追加します"
+               },
+               "addUplink": {
+                  "label": "アップリンクの追加",
+                  "tooltip": "この仮想スイッチへのアップリンク (物理 NIC) を追加します"
+               },
+               "edit": {
+                  "label": "設定の編集",
+                  "tooltip": "この仮想スイッチの設定を編集します"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "仮想スイッチのリストを更新します"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択した仮想スイッチに対するアクションです"
+               }
+            }
+         },
+         "events": {
+            "type": "タイプ:",
+            "time": "時間:",
+            "virtualMachine": "仮想マシン:"
+         },
+         "diagram": {
+            "loading": "vSwitch トポロジをロードしています...",
+            "noPortgroups": "ポート グループがありません",
+            "vlanId": "VLAN ID:",
+            "virtualMachines": "仮想マシン",
+            "macAddress": "MAC アドレス",
+            "vmKernelPorts": "VMkernel ポート",
+            "noPhysicalAdapters": "物理アダプタがありません",
+            "physicalAdapters": "物理アダプタ"
+         },
+         "monitor": {
+            "title": "監視",
+            "tabs": {
+               "events": {
+                  "label": "イベント",
+                  "tooltip": "イベント"
+               },
+               "tasks": {
+                  "label": "タスク",
+                  "tooltip": "タスク"
+               }
+            }
+         },
+         "noAdapters": "この仮想スイッチに接続できる未使用の物理アダプタはありません。",
+         "remove": {
+            "title": "仮想スイッチの削除: {{name}}",
+            "confirmation": "次の vSwitch を削除しますか?",
+            "confirmLabel": "はい",
+            "rejectLabel": "いいえ",
+            "portgroups": "ポート グループ",
+            "failureNotification": "仮想スイッチ {{name}} の削除に失敗しました",
+            "successNotification": "仮想スイッチ {{name}} が削除されました"
+         },
+         "type": {
+            "dvs": "分散 vSwitch",
+            "standard": "標準 vSwitch"
+         },
+         "add": {
+            "loading": "ロードしています...",
+            "title": "標準仮想スイッチの追加: {{name}}",
+            "titleNoName": "標準仮想スイッチの追加",
+            "newSwitch": "新しいスイッチ",
+            "confirmLabel": "追加",
+            "rejectLabel": "キャンセル",
+            "security": "セキュリティ",
+            "clickToExpand": "クリックして展開",
+            "promiscuousMode": "無差別モード",
+            "accept": "承諾",
+            "reject": "拒否",
+            "useVswitch": "vSwitch から継承",
+            "macChanges": "MAC アドレス変更",
+            "forgedTransmits": "偽装転送",
+            "linkDiscovery": "リンクの検出",
+            "mode": {
+               "label": "モード",
+               "listen": "待機",
+               "advertise": "アドバタイズ",
+               "both": "両方",
+               "none": "なし"
+            },
+            "protocol": {
+               "label": "プロトコル",
+               "lldp": "Link Layer Discovery Protocol (LLDP)",
+               "cdp": "Cisco Discovery Protocol (CDP)"
+            },
+            "dialog": {
+               "title": "アップリンクを追加できません",
+               "ok": "OK",
+               "create": "追加"
+            },
+            "error": {
+               "name": "仮想スイッチの有効な名前を入力してください",
+               "mtu": "MTU の有効な数値を入力してください。使用可能な最大値は {{max}}、最小値は {{min}} です"
+            },
+            "notification": {
+               "success": "仮想スイッチ {{name}} が作成されました",
+               "error": "新しい仮想スイッチ {{name}} の作成に失敗しました"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "この TCP/IP スタックに対するアクションです"
+               },
+               "add": {
+                  "label": "アップリンクの追加",
+                  "tooltip": "仮想スイッチに新しい物理アップリンクを追加します"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "この TCP/IP スタックを更新します"
+               }
+            }
+         },
+         "edit": {
+            "loading": "ロードしています...",
+            "title": "標準仮想スイッチの編集: {{name}}",
+            "titleNoName": "標準仮想スイッチの編集",
+            "confirmLabel": "保存",
+            "rejectLabel": "キャンセル",
+            "dialog": {
+               "title": "アップリンクを追加できません",
+               "ok": "OK",
+               "create": "仮想スイッチの作成"
+            },
+            "error": {
+               "name": "仮想スイッチの名前を入力してください",
+               "duplicate": "一意のアップリンク値を選択してください。"
+            },
+            "notification": {
+               "success": "仮想スイッチ {{name}} が保存されました",
+               "error": "仮想スイッチ {{name}} の保存に失敗しました"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "この TCP/IP スタックに対するアクションです"
+               },
+               "add": {
+                  "label": "アップリンクの追加",
+                  "tooltip": "仮想スイッチに新しい物理アップリンクを追加します"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "この TCP/IP スタックを更新します"
+               }
+            }
+         },
+         "notifications": {
+            "uplink": {
+               "message": "この仮想スイッチには、アップリンクの冗長性がありません。",
+               "suggested-action": "別のアップリンク アダプタを追加する必要があります。"
+            }
+         },
+         "settings": {
+            "vSwitchName": "vSwitch 名",
+            "mtu": "MTU",
+            "uplink": "アップリンク"
+         }
+      },
+      "netstack": {
+         "alt": "TCP/IP スタック",
+         "names": {
+            "defaultTcpipStack": "デフォルトの TCP/IP スタック",
+            "vSphereProvisioning": "プロビジョニング スタック",
+            "vmotion": "vMotion スタック",
+            "vxlan": "VXLAN"
+         },
+         "summary": {
+            "unknownNetstack": {
+               "title": "不明な TCP/IP スタック"
+            },
+            "key": "キー:",
+            "configuration": "構成",
+            "dnsConfiguration": "DNS 構成",
+            "routing": "ルーティング",
+            "actionBar": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "この TCP/IP スタックに対するアクションです"
+               },
+               "edit": {
+                  "label": "設定の編集",
+                  "tooltip": "この TCP/IP スタックの構成を編集します"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "この TCP/IP スタックを更新します"
+               }
+            },
+            "portlets": {
+               "configuration": {
+                  "ipv6": {
+                     "name": "IPv6"
+                  },
+                  "cca": {
+                     "name": "輻輳制御アルゴリズム"
+                  },
+                  "maxConnections": {
+                     "name": "最大接続数"
+                  },
+                  "vmknics": {
+                     "name": "VMkernel NIC"
+                  },
+                  "dhcp": {
+                     "name": "DHCP"
+                  }
+               },
+               "dns": {
+                  "loadingMessage": "DNS 構成をロードしています...",
+                  "hostName": {
+                     "name": "ホスト名"
+                  },
+                  "address": {
+                     "name": "アドレス"
+                  },
+                  "domainName": {
+                     "name": "ドメイン名"
+                  },
+                  "searchDomains": {
+                     "name": "ドメインの検索"
+                  }
+               },
+               "routing": {
+                  "loadingMessage": "ルーティング テーブルをロードしています...",
+                  "ipv4": {
+                     "name": "IPv4",
+                     "value": "ラベルをクリックして展開",
+                     "routeTable": {
+                        "name": "ルーティング テーブル",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "ネットワーク アドレス"
+                              },
+                              "prefixLength": {
+                                 "label": "プリフィックスの長さ"
+                              },
+                              "gateway": {
+                                 "label": "ゲートウェイ"
+                              },
+                              "device": {
+                                 "label": "デバイス"
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "ipv6": {
+                     "name": "IPv6",
+                     "value": "ラベルをクリックして展開",
+                     "routeTable": {
+                        "name": "IPv6",
+                        "localSubnet": "ローカル サブネット",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "ネットワーク アドレス"
+                              },
+                              "prefixLength": {
+                                 "label": "プリフィックスの長さ"
+                              },
+                              "gateway": {
+                                 "label": "ゲートウェイ"
+                              },
+                              "device": {
+                                 "label": "デバイス"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "type": "タイプ:",
+            "time": "時間:",
+            "virtualMachine": "仮想マシン:"
+         },
+         "ipv6": {
+            "true": "有効",
+            "false": "無効"
+         },
+         "dhcp": {
+            "true": "有効",
+            "false": "無効"
+         },
+         "list": {
+            "columns": {
+               "name": {
+                  "label": "名前"
+               },
+               "ipv4Gateway": {
+                  "label": "IPv4 ゲートウェイ"
+               },
+               "ipv6Gateway": {
+                  "label": "IPv6 ゲートウェイ"
+               },
+               "preferredDNS": {
+                  "label": "優先 DNS"
+               },
+               "alternateDNS": {
+                  "label": "代替 DNS"
+               }
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択した TCP/IP スタックに対するアクションです"
+               },
+               "edit": {
+                  "label": "設定の編集",
+                  "tooltip": "この TCP/IP スタックの設定を編集"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "TCP/IP スタック テーブルを更新します"
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "設定の編集",
+               "tooltip": "この TCP/IP スタックの設定を編集"
+            }
+         },
+         "edit": {
+            "title": "TCP/IP 構成の編集: {{displayName}}",
+            "confirmLabel": "保存",
+            "rejectLabel": "キャンセル",
+            "basicConfig": {
+               "label": "基本的な DNS 構成",
+               "title":"この TCP/IP スタックのホスト設定をホストが取得する方法を指定します。",
+               "useDHCP": {
+                  "label": "次のアダプタから DHCP DNS サービスを使用"
+               },
+               "adapter": "アダプタ",
+               "manual": {
+                  "label": "この TCP/IP スタックの設定を手動で構成",
+                  "hostName": "ホスト名",
+                  "domainName": "ドメイン名",
+                  "primaryDNS": "プライマリ DNS サーバ",
+                  "secondaryDNS": "セカンダリ DNS サーバ",
+                  "searchDomains": "ドメインの検索",
+                  "searchDomainsOnePerLine": "1 ラインあたり 1 つの検索ドメイン"
+               }
+            },
+            "routing": {
+               "title": "ルーティング",
+               "ipv4": "IPv4 ゲートウェイ",
+               "ipv6": "IPv6 ゲートウェイ"
+            },
+            "congestionControl": {
+               "newReno": "NewReno",
+               "cubic": "CUBIC",
+               "CUBIC": "CUBIC"
+            },
+            "advancedSettings": {
+               "title": "詳細設定",
+               "congestionControl": "輻輳制御アルゴリズム",
+               "maxNumberConnections": "接続の最大数"
+            },
+            "notification": {
+               "success": "{{netstack}} 構成が更新されました",
+               "failure": "{{netstack}} 構成の更新に失敗しました"
+            },
+            "error": {
+               "hostName": "有効なホスト名を入力してください。文字数は {{max}} 文字以下にする必要があります",
+               "domainName": "有効なドメイン名を入力してください。文字数は {{max}} 文字以下にする必要があります",
+               "primaryDNS": "有効なプライマリ DNS サーバを入力してください。文字数は {{max}} 文字以下にする必要があります",
+               "secondaryDNS": "有効なセカンダリ DNS サーバを入力してください。文字数は {{max}} 文字以下にする必要があります。",
+               "searchDomains": "有効な検索ドメインを 1 行に 1 つずつ、カンマを含めずに入力してください。",
+               "ipv4Gateway": "有効な IPv4 ゲートウェイを入力してください",
+               "ipv6Gateway": "有効な IPv6 ゲートウェイを入力してください",
+               "maxConnections": "最大接続数を {{min}} ～ {{max}} の範囲で入力してください"
+            }
+         }
+      },
+      "tcp": {
+         "congestionControl": {
+            "newreno": "NewReno",
+            "cubic": "CUBIC"
+         }
+      },
+      "portgroup": {
+         "alt": "ポート グループ",
+         "type": {
+            "Network": "標準ポート グループ",
+            "DistributedVirtualPortgroup": "分散仮想ポート グループ",
+            "Opaque": "非透過ネットワーク ポート グループ"
+         },
+         "summary": {
+            "accessible": "アクセス可能:",
+            "virtualMachines": "仮想マシン:",
+            "virtualSwitch": "仮想スイッチ:",
+            "vlanId": "VLAN ID:",
+            "activePorts": "アクティブ ポート:",
+            "vswitchTopology": "vSwitch トポロジ",
+            "nicTeamingPolicy": "NIC チーミング ポリシー",
+            "offloadPolicy": "オフロード ポリシー",
+            "securityPolicy": "セキュリティ ポリシー",
+            "shapingPolicy": "シェーピング ポリシー",
+            "actions": {
+               "editSettings": {
+                  "label": "設定の編集",
+                  "tooltip": "この仮想スイッチの設定を編集します"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "アダプタ テーブルを更新します"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択したポート グループに対するアクションです"
+               }
+            }
+         },
+         "events": {
+            "type": "タイプ:",
+            "time": "時間:",
+            "virtualMachine": "仮想マシン:"
+         },
+         "accessible": {
+            "true": "はい",
+            "false": "いいえ"
+         },
+         "add": {
+            "title": "ポート グループの追加: {{name}}",
+            "titleNoName": "ポート グループを追加します",
+            "newPortgroup": "新規ポート グループ",
+            "confirmLabel": "追加",
+            "rejectLabel": "キャンセル",
+            "loading": "ロードしています...",
+            "toolTip": "ポート グループの追加",
+            "selectVSwitch": "仮想スイッチの選択",
+            "missingName": "ポート グループの名前を入力してください",
+            "missingVSwitch": "ポート グループの仮想スイッチを選択してください",
+            "badVLANIDRange": "VLAN ID には 0 ～ 4095 までの数値を設定する必要があります",
+            "success": "ポート グループ {{name}} が作成されました",
+            "failure": "新規ポート グループ {{name}} の作成に失敗しました"
+         },
+         "edit": {
+            "title": "ポート グループの編集: {{name}}",
+            "titleNoName": "ポート グループの編集",
+            "confirmLabel": "保存",
+            "rejectLabel": "キャンセル",
+            "loading": "ロードしています...",
+            "missingName": "ポート グループの名前を入力してください",
+            "missingVSwitch": "ポート グループの仮想スイッチを選択してください",
+            "badVLANIDRange": "VLAN ID には 0 ～ 4095 までの数値を設定する必要があります",
+            "success": "ポート グループ {{name}} が保存されました",
+            "failure": "ポート グループ {{name}} の保存に失敗しました",
+            "trafficShaping": {
+               "title": "トラフィック シェーピング",
+               "policyExceptions": "ポリシー例外",
+               "status": "ステータス",
+               "disabled": "無効",
+               "enabled": "有効",
+               "averageBandwidth": "平均バンド幅",
+               "peakBandwidth": "ピーク バンド幅",
+               "burstSize": "バースト サイズ",
+               "kbps": "Kb/秒",
+               "kb": "KB",
+               "clickToExpand": "クリックして展開",
+               "note": {
+                  "title": "注",
+                  "content": "トラフィック シェーピング ポリシーは、仮想スイッチに接続された各仮想ネットワーク アダプタのトラフィックに適用されます。"
+               },
+               "inherit": "vSwitch から継承"
+            },
+            "nicTeaming": {
+               "title": "NIC チーミング",
+               "clickToExpand": "クリックして展開",
+               "loadBalancing": {
+                  "title": "ロード バランシング",
+                  "loadbalance_ip": "IP ハッシュに基づいたルート",
+                  "loadbalance_srcmac": "発信元 MAC ハッシュに基づいたルート",
+                  "loadbalance_srcid": "発信元ポート ID に基づいたルート",
+                  "failover_explicit": "明示的なフェイルオーバー順序を使用"
+               },
+               "failoverDetection": {
+                  "title": "ネットワークのフェイルオーバー検出",
+                  "linkStatus": "リンク状態のみ",
+                  "beaconOnly": "ビーコンのみ"
+               },
+               "notifySwitches": {
+                  "title": "スイッチへの通知",
+                  "yes": "はい",
+                  "no": "いいえ"
+               },
+               "failBack": {
+                  "title": "フェイルバック",
+                  "yes": "はい",
+                  "no": "いいえ"
+               },
+               "overrideFailoverOrder": {
+                  "title": "フェイルオーバー順序のオーバーライド",
+                  "yes": "はい",
+                  "no": "いいえ"
+               },
+               "failoverOrder": {
+                  "title": "フェイルオーバーの順序",
+                  "override": "スイッチのフェイルオーバー順序のオーバーライド",
+                  "usedAs": "ステータス",
+                  "standby": "スタンバイ",
+                  "active": "アクティブ",
+                  "unused": "未使用",
+                  "name": "名前",
+                  "speed": "速度",
+                  "networks": "ネットワーク",
+                  "markAsStandby": {
+                     "label": "スタンバイとしてマーク",
+                     "tooltip": "この物理 NIC にスタンバイとしてマークを付けます"
+                  },
+                  "markAsActive": {
+                     "label": "アクティブとしてマーク",
+                     "tooltip": "この物理 NIC にアクティブとしてマークを付けます"
+                  },
+                  "markAsUnused": {
+                     "label": "未使用としてマーク",
+                     "tooltip": "この物理 NIC に未使用としてマークを付けます"
+                  },
+                  "moveUp": {
+                     "label": "上へ移動",
+                     "tooltip": "フェイルオーバー順序の上位にこのアダプタを移動します"
+                  },
+                  "moveDown": {
+                     "label": "下へ移動",
+                     "tooltip": "フェイルオーバーの順序の下位にこのアダプタを移動します"
+                  }
+               },
+               "inherit": "vSwitch から継承"
+            }
+         },
+         "remove": {
+            "title": "ポート グループの削除",
+            "loading": "ロードしています...",
+            "close": "閉じる",
+            "confirm": "削除",
+            "rejectLabel": "キャンセル",
+            "notification": {
+               "success": "ポート グループ {{name}} が削除されました",
+               "error": "ポート グループ {{name}} の削除に失敗しました"
+            },
+            "confirmation": "次のポート グループを削除しますか?",
+            "cantRemove": "接続されている仮想マシンまたは VMkernel NIC があるので、1 つ以上のポート グループを削除できませんでした。"
+         },
+         "settings": {
+            "name": {
+               "title": "名前",
+               "change": "このポート グループの名前を変更すると、<strong>{{length}}</strong> 仮想マシンが孤立します。",
+               "rename": "<strong>{{length}}</strong> のアクティブ ポートがあるので、このポート グループの名前を変更することはできません"
+            },
+            "vlanId": "VLAN ID",
+            "vSwitch": {
+               "label": "仮想スイッチ",
+               "change": "アクティブなポート ({{length}}) がある場合、このポート グループの vSwitch は変更できません。"
+            }
+         },
+         "actions": {
+            "editSettings": {
+               "label": "設定の編集",
+               "tooltip": "このポート グループを編集します"
+            },
+            "refresh": {
+               "label": "更新",
+               "tooltip": "ポート グループのリストを更新します"
+            },
+            "actions": {
+               "label": "アクション",
+               "tooltip": "選択したポート グループに対するアクションです"
+            },
+            "remove": {
+               "label": "削除",
+               "tooltip": "このポート グループを削除します"
+            }
+         },
+         "list": {
+            "unknownVLANID": "不明",
+            "columns": {
+               "name": "名前",
+               "activePorts": "アクティブ ポート",
+               "vlanId": "VLAN ID",
+               "type": "タイプ",
+               "vswitch": "vSwitch",
+               "vms": "仮想マシン"
+            }
+         },
+         "portlets": {
+            "summary": {
+               "loading": "サマリをロードしています...",
+               "shaping": {
+                  "true": "はい",
+                  "false": "いいえ"
+               }
+            },
+            "teaming": {
+               "loading": "チーミング ポリシーをロードしています...",
+               "notify": {
+                  "label": "スイッチへの通知",
+                  "true": "はい",
+                  "false": "いいえ"
+               },
+               "policy": {
+                  "label": "ポリシー",
+                  "loadbalance_ip": "IP ハッシュに基づいたルート",
+                  "loadbalance_srcmac": "発信元 MAC ハッシュに基づいたルート",
+                  "loadbalance_srcid": "発信元ポート ID に基づいたルート",
+                  "failover_explicit": "明示的なフェイルオーバー順序を使用"
+               },
+               "reverse": {
+                  "label": "リバース ポリシー",
+                  "true": "はい",
+                  "false": "いいえ"
+               },
+               "rolling": {
+                  "label": "フェイルバック",
+                  "true": "いいえ",
+                  "false": "はい"
+               }
+            },
+            "shaping": {
+               "averageBandwidth": "平均バンド幅",
+               "peakBandwidth": "ピーク バンド幅",
+               "burstSize": "バースト サイズ",
+               "enabled": {
+                  "label": "有効",
+                  "true": "はい",
+                  "false": "いいえ"
+               }
+            },
+            "offload": {
+               "loading": "オフロード ポリシーをロードしています...",
+               "checksum": {
+                  "label": "チェックサム オフロード",
+                  "true": "はい",
+                  "false": "いいえ"
+               },
+               "tcpSegmentation": {
+                  "label": "TCP セグメンテーション",
+                  "true": "はい",
+                  "false": "いいえ"
+               },
+               "zeroCopy": {
+                  "label": "ゼロコピー転送",
+                  "true": "はい",
+                  "false": "いいえ"
+               }
+            },
+            "security": {
+               "loading": "セキュリティ ポリシーをロードしています...",
+               "allowPromiscuous": {
+                  "label": "無差別モードを許可",
+                  "true": "はい",
+                  "false": "いいえ"
+               },
+               "forgedTransmits": {
+                  "label": "偽装転送を許可",
+                  "true": "はい",
+                  "false": "いいえ"
+               },
+               "macChanges": {
+                  "label": "MAC 変更を許可",
+                  "true": "はい",
+                  "false": "いいえ"
+               }
+            }
+         },
+         "monitor": {
+            "title": "監視"
+         }
+      },
+      "pnic": {
+         "alt": "物理 NIC",
+         "summary": {
+            "linkSpeed": "リンク速度:",
+            "driver": "ドライバ:",
+            "macAddress": "MAC アドレス:",
+            "adapterDetails": "アダプタの詳細",
+            "halfduplex": "半二重",
+            "fullduplex": "全二重",
+            "up": "接続中",
+            "down": "切断",
+            "dialog": {
+               "unknown": {
+                  "title": "不明な PNIC"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "物理アダプタ テーブルを更新します"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択した物理アダプタに対するアクションです"
+               },
+               "editSettings": {
+                  "label": "設定の編集",
+                  "tooltip": "選択した物理アダプタの設定を編集します"
+               }
+            },
+            "portlets": {
+               "details": {
+                  "pciAddress": "PCI アドレス",
+                  "autoNegotiateSupport": "オート ネゴシエーションのサポート",
+                  "autoNegotiateEnabled": "オート ネゴシエーションの有効化",
+                  "directPathIOSupport": "DirectPath I/O のサポート",
+                  "wakeOnLANSupport": "Wake-on-LAN のサポート",
+                  "supportedSpeeds": "サポートされている速度",
+                  "yes": "はい",
+                  "no": "いいえ",
+                  "enabled": "有効",
+                  "disabled": "無効"
+               },
+               "subnets": {
+                  "title": "サブネットが検出されました",
+                  "subnet": "サブネット {{x}}"
+               },
+               "lldp": {
+                  "title": "Link Layer Discovery Protocol の詳細",
+                  "chassisId": "シャーシ ID",
+                  "portId": "ポート ID",
+                  "timeToLive": "TTL 時間",
+                  "parameters": "パラメータ"
+               },
+               "cdp": {
+                  "title": "Cisco Discovery Protocol の詳細",
+                  "address": "IP アドレス",
+                  "cdpVersion": "CDP のバージョン",
+                  "peerDeviceCapability": {
+                     "label": "ピア デバイス機能",
+                     "host": "ホスト",
+                     "igmpEnabled": "IGMP",
+                     "networkSwitch": "ネットワーク スイッチ",
+                     "repeater": "リピータ",
+                     "router": "ルーター",
+                     "sourceRouteBridge": "ソース ルート ブリッジ",
+                     "transparentBridge": "透過的ブリッジ"
+                  },
+                  "devId": "デバイス ID",
+                  "fullDuplex": "全二重",
+                  "hardwarePlatform": "ハードウェア プラットフォーム",
+                  "ipPrefix": "IP アドレスのプリフィックス",
+                  "ipPrefixLen": "IP アドレスのプリフィックス長",
+                  "location": "場所",
+                  "mgmtAddr": "管理アドレス",
+                  "mtu": "MTU",
+                  "portId": "ポート ID",
+                  "samples": "サンプル",
+                  "softwareVersion": "ソフトウェア バージョン",
+                  "systemName": "システム名",
+                  "systemOID": "システム OID",
+                  "timeout": "タイムアウト",
+                  "ttl": "TTL 時間",
+                  "vlan": "VLAN ID"
+               }
+            }
+         },
+         "edit": {
+            "confirmLabel": "保存",
+            "rejectLabel": "キャンセル",
+            "title": "物理 NIC の編集: {{nic}}",
+            "titleNoName": "物理 NIC の編集",
+            "notification": {
+               "error": "物理 NIC {{nic}} の速度の設定に失敗しました",
+               "success": "物理 NIC {{nic}} の速度が更新されました"
+            },
+            "speed": {
+               "label": "速度",
+               "auto": "オート ネゴシエーション"
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "設定の編集",
+               "tooltip": "この物理 NIC の設定を編集します"
+            }
+         },
+         "list": {
+            "columns": {
+               "name": "名前",
+               "driver": "ドライバ",
+               "macAddress": "MAC アドレス",
+               "linkSpeed": "リンク速度",
+               "auto": "オート ネゴシエーション"
+            },
+            "auto": {
+               "yes": "有効",
+               "no": "無効"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "物理アダプタ テーブルを更新します"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択した物理アダプタに対するアクションです"
+               },
+               "editSettings": {
+                  "label": "設定の編集",
+                  "tooltip": "選択した物理アダプタの設定を編集します"
+               }
+            }
+         },
+         "monitor": {
+            "title": "監視",
+            "events": {
+               "title": "イベント",
+               "tooltip": "イベント"
+            },
+            "tasks": {
+               "title": "タスク",
+               "tooltip": "タスク"
+            }
+         },
+         "events": {
+            "type": "タイプ:",
+            "time": "時間:",
+            "virtualMachine": "仮想マシン:"
+         },
+         "duplex": {
+            "half": "半二重",
+            "full": "全二重",
+            "true": "完全",
+            "false": "半二重"
+         },
+         "mbps": "Mbps",
+         "linkDown": "リンク ダウン"
+      },
+      "error": {
+         "unknownNetwork": "ネットワーク「{{moid}}」は見つかりませんでした。",
+         "unknownPortgroup": "ポート グループ「{{moid}}」は見つかりませんでした。",
+         "unknownVMknic": "VMkernel NIC「{{moid}}」は見つかりませんでした。",
+         "unknownVSwitch": "vSwitch「{{moid}}」は見つかりませんでした。"
+      }
+   }
+}

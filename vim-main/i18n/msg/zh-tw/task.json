@@ -1,0 +1,55 @@
+{
+   "task": {
+      "task": "工作",
+      "entity": "目標",
+      "queued": "已排入佇列",
+      "started": "已開始",
+      "completed": "已完成",
+      "initiator": "啟動器",
+      "result": "結果",
+      "state": {
+         "running": "正在執行...",
+         "success": "已成功完成",
+         "successful": "成功完成",
+         "error": "失敗"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "重新整理",
+            "tooltip": "重新整理工作資料表"
+         },
+         "actions": {
+            "label": "動作",
+            "tooltip": "與所選工作相關的物件適用的動作"
+         }
+      },
+      "pseudo": {
+         "vmrc": {
+            "download": {
+               "label": "下載 VMRC",
+               "summary": "下載 VMware Remote Console 安裝程式"
+            }
+         },
+         "certificate": {
+            "upload": {
+               "label": "取代主機憑證",
+               "summary": "取代主機的 SSL 憑證"
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "上傳檔案到資料存放區",
+               "summary": "上傳檔案到資料存放區",
+               "cancelled": "上傳檔案已取消"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "上傳磁碟",
+               "summary": "上傳虛擬機器磁碟",
+               "cancelled": "上傳磁碟已取消"
+            }
+         }
+      }
+   }
+}

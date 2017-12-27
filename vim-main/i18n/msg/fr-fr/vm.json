@@ -1,0 +1,2288 @@
+{
+   "vm": {
+      "answer": {
+         "dialog": {
+            "title": "Répondre à la question - {{name}}",
+            "ok": "Répondre",
+            "rejectLabel": "Annuler"
+         }
+      },
+      "autostart": {
+         "unset": "Non défini",
+         "change": {
+            "title": "Configurer le démarrage automatique - {{name}}",
+            "rejectLabel": "Annuler",
+            "confirmLabel": "Enregistrer",
+            "waitForHeartbeat": {
+               "label": "Attendre le signal de pulsation",
+               "yes": "Oui",
+               "no": "Non",
+               "systemDefault": "Système par défaut"
+            },
+            "startDelay": {
+               "label": "Délai de démarrage",
+               "seconds": "secondes"
+            },
+            "stopDelay": {
+               "label": "Délai d'arrêt",
+               "seconds": "secondes"
+            },
+            "stopAction": {
+               "label": "Arrêter l'action",
+               "systemDefault": "Système par défaut",
+               "PowerOff": "Mettre hors tension",
+               "Suspend": "Interrompre",
+               "ShutDown": "Arrêter"
+            },
+            "successNotification": "La configuration du démarrage automatique de {{name}} a été mise à jour.",
+            "failureNotification": "Échec de la mise à jour de la configuration du démarrage automatique de {{name}}"
+         }
+      },
+      "console": {
+         "close": "Fermer",
+         "actions": "Actions",
+         "showKeyboard": "Afficher le clavier",
+         "keyboardLayout": "Disposition de clavier",
+         "maximize": "Agrandir",
+         "fullscreen": "Plein écran",
+         "minimize": "Réduire",
+         "shrink": "Réduire",
+         "failedToConnect": "Échec de la connexion",
+         "resolutionChangeDialog": {
+            "title": "Résolution non modifiée",
+            "content": "VMware Tools est installé sur cette machine virtuelle, mais la résolution n'a pas été modifiée. Souhaitez-vous dimensionner cette console ?",
+            "confirmLabel": "Oui",
+            "rejectLabel": "Non"
+         },
+         "multipleConnectionsNotificationSingle": "Un autre utilisateur a ouvert une session de console pour la machine virtuelle",
+         "multipleConnectionsNotificationMultiple": "{{num}} autres utilisateurs ont ouvert une session de console sur cette machine virtuelle."
+      },
+      "power": {
+         "powerOffWarning": {
+            "title": "Avertissement",
+            "content": "La mise hors tension de cette machine virtuelle peut provoquer une perte de données. Voulez-vous vraiment mettre hors tension cette machine virtuelle ?",
+            "contentMulti": "La mise hors tension d'une ou de plusieurs des machines virtuelles sélectionnées peut provoquer une perte de données. Voulez-vous vraiment continuer ?",
+            "rejectLabel": "Annuler",
+            "confirmLabel": "Oui"
+         },
+         "resetWarning": {
+            "title": "Avertissement",
+            "content": "La réinitialisation de cette machine virtuelle peut provoquer une perte de données. Voulez-vous vraiment réinitialiser cette machine virtuelle ?",
+            "contentMulti": "La réinitialisation d'une ou de plusieurs des machines virtuelles sélectionnées peut provoquer une perte de données. Voulez-vous vraiment continuer ?",
+            "rejectLabel": "Annuler",
+            "confirmLabel": "Oui"
+         }
+      },
+      "list": {
+         "title": "{{hostname}} - Machines virtuelles",
+         "empty": "Aucune machine virtuelle",
+         "columns": {
+            "name": "Machine virtuelle",
+            "state": "État",
+            "status": "État",
+            "provisionedSpace": "Espace provisionné",
+            "usedSpace": "Espace utilisé",
+            "guest": "SE invité",
+            "toolsInstalled": "Tools installé",
+            "toolsVersion": "Version de Tools",
+            "ipAddress": "Adresse IP",
+            "datastore": "Banque de données",
+            "hostName": "Nom d'hôte",
+            "hostCPU": "CPU hôte",
+            "hostMemory": "Mémoire hôte",
+            "autostartStartOrder": "Séquence de démarrage automatique",
+            "autostartStartDelay": "Délai de démarrage",
+            "autostartStopDelay": "Délai d'arrêt",
+            "notes": "Notes"
+         },
+         "quickFilters": {
+            "vmsWithoutTools": "VM sans VMware Tools",
+            "poweredOnVMs": "VM sous tension",
+            "poweredOffVMs": "VM hors tension",
+            "suspendedVMs": "VM suspendues",
+            "vmsParticipatingInAutostart": "VM participant au démarrage automatique"
+         },
+         "status": {
+            "normal": "Normale",
+            "warning": "Avertissement",
+            "inconsistent": "Incohérent",
+            "question": "Question en attente",
+            "invalid": "Non valide"
+         },
+         "actionBar": {
+            "createRegister": {
+               "label": "Créer/Enregistrer une machine virtuelle",
+               "tooltip": "Créer ou enregistrer une machine virtuelle"
+            },
+            "columns": {
+               "label": "Colonnes",
+               "tooltip": "Choisir les colonnes à afficher dans ce tableau",
+               "contextTitle": "Sélectionner les colonnes"
+            },
+            "console": {
+               "label": "Console",
+               "tooltip": "Ouvrir une console pour les machines virtuelles sélectionnées"
+            },
+            "powerOn": {
+               "label": "Mettre sous tension",
+               "tooltip": "Mettre sous tension ou reprendre les machines virtuelles sélectionnées"
+            },
+            "powerOff": {
+               "label": "Mettre hors tension",
+               "tooltip": "Mettre hors tension les machines virtuelles sélectionnées"
+            },
+            "shutDown": {
+               "label": "Arrêter",
+               "tooltip": "Initier un arrêt approprié dans les machines virtuelles sélectionnées"
+            },
+            "shutDownSuspended": {
+               "label": "Arrêter/Mettre hors tension",
+               "tooltip": "Arrêter ou mettre hors tension les machines virtuelles sélectionnées"
+            },
+            "suspend": {
+               "label": "Interrompre",
+               "tooltip": "Interrompre les machines virtuelles sélectionnées"
+            },
+            "restart": {
+               "label": "Redémarrer",
+               "tooltip": "Redémarrer les machines virtuelles sélectionnées"
+            },
+            "edit": {
+               "label": "Modifier les paramètres",
+               "tooltip": "Modifier les paramètres de la machine virtuelle sélectionnée"
+            },
+            "refresh": {
+               "label": "Actualiser",
+               "tooltip": "Actualiser le tableau des machines virtuelles"
+            },
+            "actions": {
+               "label": "Actions",
+               "tooltip": "Actions pour les machines virtuelles sélectionnées"
+            }
+         }
+      },
+      "attachISO": {
+         "button": {
+            "label": "Sélectionner l'image disque",
+            "tooltip": "Rechercher une image disque"
+         },
+         "dialog": {
+            "title": "Sélectionner l'image disque du CD/DVD",
+            "confirmLabel": "Sélectionner"
+         },
+         "failureNotification": "Échec de l'attachement de l'image disque : {{message}}",
+         "successNotification": "L'image disque {{file}} a été attachée au périphérique CD/DVD."
+      },
+      "delete": {
+         "title": "Supprimer la machine virtuelle - {{name}}",
+         "titleMultiple": "Supprimer des machines virtuelles",
+         "confirmLabel": "Supprimer",
+         "rejectLabel": "Annuler",
+         "failedAtLeastOne": "Impossible de supprimer au moins une machine virtuelle",
+         "ok": "OK"
+      },
+      "supportBundle": {
+         "menu": {
+            "label": "Générer un bundle de support",
+            "tooltip": "Générer un bundle de support depuis cette machine virtuelle"
+         }
+      },
+      "template": {
+         "label": "Modèle",
+         "convert": {
+            "title": "Convertir en modèle",
+            "label": "Convertir en modèle",
+            "tooltip": "Convertir la machine virtuelle en modèle",
+            "message": "Convertir la machine virtuelle « {{name}} » en modèle ?",
+            "ok": "Convertir",
+            "rejectLabel": "Annuler"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "Autorisations",
+            "title": "Gérer les autorisations",
+            "header": "Attribuer des utilisateurs et des rôles pour ",
+            "close": "Fermer",
+            "cancel": "Annuler",
+            "noUsers": "Aucun utilisateur",
+            "addUser": {
+               "label": "Ajouter utilisateur",
+               "toolTip": "Ajouter un utilisateur",
+               "header": "Ajouter un utilisateur pour "
+            },
+            "removeUser": {
+               "label": "Supprimer utilisateur",
+               "toolTip": "Supprimer un utilisateur"
+            },
+            "assignRole": {
+               "label": "Affecter rôle",
+               "toolTip": "Affecter un rôle à un utilisateur",
+               "header": "Définir des autorisations pour "
+            },
+            "updatePermissions": {
+               "successNotification": "Autorisations mises à jour",
+               "failureNotification": "Échec de la mise à jour des autorisations : {{error}}"
+            },
+            "columns": {
+               "user": "Utilisateur",
+               "role": "Rôle"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "Sélectionner un utilisateur"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "Sélectionner un rôle"
+            },
+            "propagateLabel": "Propager vers tous les enfants",
+            "groupLabel": "Ajouter en tant que groupe"
+         }
+      },
+      "snapshot": {
+         "consolidate": {
+            "menu": "Consolider disques",
+            "consolidationComplete": "La consolidation des disques de la VM {{name}} est terminée.",
+            "consolidationFailed": "Échec de la consolidation des disques de la VM {{name}} : {{reason}}"
+         },
+         "take": {
+            "menu": "Prendre un snapshot",
+            "title": "Prendre un snapshot de {{name}}",
+            "takeSnapshot": "Prendre un snapshot",
+            "name": "Nom",
+            "description": "Description",
+            "memory": "Prendre un snapshot de la mémoire de la machine virtuelle",
+            "quiesce": "Système de fichiers invité suspendu (VMware Tools doit être installé)",
+            "ok": "OK",
+            "cancel": "Annuler",
+            "notification": {
+               "success": "Le snapshot « {{title}} » a été créé sur la machine virtuelle {{vmName}}.",
+               "error": "Échec de la création du snapshot « {{title}} » sur la machine virtuelle {{vmName}}"
+            }
+         },
+         "edit": {
+            "notification": {
+               "error": "Échec de l'enregistrement des modifications apportées au snapshot « {{name}} »"
+            }
+         },
+         "revertLatest": {
+            "menu": "Restaurer le dernier snapshot",
+            "title": "Restaurer le dernier snapshot",
+            "content": "L'état actuel de la machine virtuelle sera perdu à moins qu'il ne soit enregistré dans un snapshot. Revenir au dernier snapshot (le plus récent) ?",
+            "revert": "Restaurer",
+            "cancel": "Annuler",
+            "notification": {
+               "success": "Le dernier snapshot a été restauré sur la machine virtuelle {{name}}.",
+               "error": "Échec de la restauration de la machine virtuelle {{name}} vers le dernier snapshot"
+            }
+         },
+         "revert": {
+            "menu": "Restaurer le snapshot",
+            "title": "Restaurer le snapshot",
+            "content": "Pour conserver l'état actuel de la machine virtuelle, vous devez l'enregistrer dans un snapshot. Voulez-vous restaurer le snapshot « {{title}} » ?",
+            "revert": "Restaurer",
+            "cancel": "Annuler",
+            "notification": {
+               "success": "La machine virtuelle {{name}} a été restaurée vers le snapshot « {{title}} ».",
+               "error": "Échec de la restauration de la machine virtuelle {{name}} vers le snapshot « {{title}} »"
+            }
+         },
+         "delete": {
+            "menu": "Supprimer le snapshot",
+            "title": "Supprimer le snapshot",
+            "content": "Voulez-vous vraiment supprimer le snapshot « {{title}} » ?",
+            "ok": "Supprimer",
+            "removeChildren": "Supprimer tous les snapshots enfants.",
+            "cancel": "Annuler",
+            "notification": {
+               "success": "Le snapshot « {{title}} » a été supprimé.",
+               "error": "Échec de la suppression du snapshot « {{title}} »"
+            }
+         },
+         "deleteAll": {
+            "menu": "Supprimer tous les snapshots",
+            "title": "Supprimer tous les snapshots",
+            "content": "Cette action consolide et supprime tous les snapshots de la machine virtuelle. Les snapshots sont consolidés sur un seul disque. Voulez-vous continuer ?",
+            "ok": "Supprimer",
+            "cancel": "Annuler",
+            "notification": {
+               "success": "Tous les snapshots ont été supprimés de la machine virtuelle « {{name}} ».",
+               "error": "Échec de la suppression des snapshots de la machine virtuelle « {{name}} »"
+            }
+         },
+         "manage": {
+            "menu": "Gérer les snapshots",
+            "notitle": "Gérer le snapshot",
+            "title": "Gérer les snapshots - {{name}}",
+            "name": "Nom",
+            "description": "Description",
+            "created": "Créé",
+            "diskUsage": "Utilisation du disque",
+            "console": "Console",
+            "here": "Vous êtes ici",
+            "edit": "Modifier",
+            "take": {
+               "label": "Prendre un snapshot",
+               "tooltip": "Enregistrer l'état actuel de la machine virtuelle pour y revenir ultérieurement"
+            },
+            "restore": {
+               "label": "Restaurer le snapshot",
+               "tooltip": "Rétablir l'état de votre machine virtuelle correspondant au snapshot sélectionné."
+            },
+            "delete": {
+               "label": "Supprimer le snapshot",
+               "tooltip": "Supprimer le snapshot sélectionné"
+            },
+            "deleteAll": {
+               "label": "Supprimer tout",
+               "tooltip": "Supprimer tous les snapshots"
+            },
+            "edit": {
+               "label": "Modifier un snapshot",
+               "tooltip": "Modifier le snapshot sélectionné"
+            },
+            "refresh": {
+               "label": "Actualiser",
+               "tooltip": "Actualiser"
+            },
+            "save": "Enregistrer",
+            "cancel": "Annuler",
+            "close": "Fermer"
+         }
+      },
+      "compatibility": {
+         "upgrade": {
+            "label": "Mettre à jour la compatibilité VM",
+            "tooltip": "Mettre à niveau la compatibilité des machines virtuelles",
+            "rejectLabel": "Annuler",
+            "configure": {
+               "title": "Configurer la compatibilité VM",
+               "header": "Sélectionnez une compatibilité pour la mise à niveau <em>{{name}}</em>.",
+               "label": "Mettre à niveau le matériel de la VM vers la version sélectionnée",
+               "message": "{{version}}.",
+               "ok": "Mise à niveau"
+            },
+            "notifications": {
+               "success": "La machine virtuelle {{name}} a été mise à niveau.",
+               "failure": "Échec de la mise à niveau de la machine virtuelle {{name}}. {{reason}}"
+            },
+            "confirm": {
+               "title": "Confirmer la mise à niveau de compatibilité VM",
+               "message": "Cette opération modifie la compatibilité de la machine virtuelle. Son effet est irréversible et rend la machine virtuelle incompatible avec les versions antérieures des produits logiciels VMware. Créez une copie de sauvegarde des fichiers de la machine virtuelle avant de poursuivre. Mettre à niveau votre compatibilité ?",
+               "ok": "Oui",
+               "cancel": "Non"
+            }
+         }
+      },
+      "notes": {
+         "dialog": {
+            "title": "Modifier les notes - {{name}}.",
+            "titleNoVM": "Modifier notes",
+            "ok": "Enregistrer",
+            "rejectLabel": "Annuler"
+         },
+         "title": "Modifiez les notes pour <em>{{name}}</em>.",
+         "more": "Plus...",
+         "less": "Moins",
+         "edit": "Modifier notes",
+         "save": "Enregistrer les notes",
+         "cancel": "Annuler"
+      },
+      "summary": {
+         "dialog": {
+            "unknown": {
+               "title": "VM inconnue",
+               "ok": "OK"
+            }
+         },
+         "screen": {
+            "refresh": "Actualiser la capture d'écran de console"
+         },
+         "unknown": "Inconnu",
+         "general": {
+            "label": "Informations générales",
+            "title": "Informations générales",
+            "vmScreen": "Cliquer pour ouvrir la console du navigateur pour cette machine virtuelle",
+            "vmTemplateScreen": "Logo d'écran de la machine virtuelle",
+            "cpu": {
+               "name": "CPU"
+            },
+            "networking": {
+               "name": "Mise en réseau",
+               "ipAddresses": "Adresses IP",
+               "hostName": "Nom d'hôte"
+            },
+            "notes": "Notes",
+            "vmwareTools": {
+               "name": "VMware Tools",
+               "info": {
+                  "installed": "Installé",
+                  "notInstalled": "Non installé",
+                  "guestManaged": "Invité géré",
+                  "version": "Version",
+                  "running": "En cours d'exécution"
+               },
+               "actionBar": {
+                  "action": {
+                     "label": "Actions",
+                     "tooltip": "Actions pour les objets sélectionnés dans cette liste."
+                  }
+               }
+            },
+            "storage": {
+               "name": "Stockage",
+               "disk": "disque",
+               "disks": "disques",
+               "info": {
+                  "guestDisks": "Disque invité",
+                  "noGuestDisks": "Informations sur le disque invité non disponibles",
+                  "diskPath": "Chemin d'accès aux disques",
+                  "capacity": "Capacité",
+                  "free": "Libre"
+               }
+            }
+         },
+         "perf": {
+            "label": "Résumé de performances de la dernière heure",
+            "title": "Résumé de performances de la dernière heure",
+            "loading": "Chargement en cours...",
+            "noData": "Aucune donnée de performances disponible",
+            "chart": {
+               "xAxis": "Heure",
+               "y1Axis": "CPU hôte utilisé/prêt (%)",
+               "y2Axis": "Mémoire hôte utilisée (Go)",
+               "cpu": "CPU hôte utilisé",
+               "ready": "Prêt",
+               "rightAxis": " (axe droit)",
+               "memory": "Mémoire hôte utilisée"
+            }
+         },
+         "noNetworkInfo": "Aucune information sur le réseau",
+         "hardware": {
+            "label": "configuration matérielle",
+            "title": "configuration matérielle",
+            "cpu": {
+               "cpu": "CPU",
+               "cores": "Cœurs de CPU",
+               "sockets": "Sockets",
+               "coreSocket": "Cœur par socket",
+               "memory": "Mémoire"
+            },
+            "disk": {
+               "backing": "Sauvegarde",
+               "capacity": "Capacité",
+               "thinProvisioned": "À provisionnement dynamique",
+               "controller": "Contrôleur",
+               "deviceName": "UUID du périphérique",
+               "compatibility": {
+                  "label": "Mode de compatibilité",
+                  "virtualMode": "Virtuel",
+                  "physicalMode": "Physique"
+               },
+               "mode": {
+                  "label": "Mode",
+                  "persistent": "Dépendant",
+                  "independent_nonpersistent": "Indépendant non persistant",
+                  "independent_persistent": "Indépendant persistant"
+               }
+            },
+            "cdrom": {
+               "backing": "Sauvegarde",
+               "connected": "Connecté",
+               "controller": "Contrôleur"
+            },
+            "serial": {
+               "backing": "Sauvegarde",
+               "connected": "Connecté",
+               "concentrator": "Concentrateur"
+            },
+            "parallel": {
+               "backing": "Sauvegarde",
+               "connected": "Connecté"
+            },
+            "usb": {
+               "controller": "Contrôleur USB"
+            },
+            "usbDevice": {
+               "label": "Périphérique USB",
+               "connected": "Connecté",
+               "disconnected": "Déconnecté"
+            },
+            "sound": {
+               "label": "Adaptateur son",
+               "ensoniq1371": "Ensoniq 1371",
+               "soundBlaster16": "Sound Blaster 16"
+            },
+            "floppy": {
+               "connected": "Connecté",
+               "notConnected": "Non connecté"
+            },
+            "video": {
+               "totalMemory":"Mémoire vidéo totale",
+               "numDisplays":"Nombre d'écrans",
+               "3dGraphics":"Graphiques 3D",
+               "3dRenderer":"Récepteur 3D",
+               "3dMemory":"Mémoire 3D",
+               "automatic": "Automatique",
+               "software": "Logiciel",
+               "hardware": "Matériel",
+               "enabled": "Activé",
+               "disabled": "Désactivé"
+            },
+            "network": {
+               "networkAdapter": "Adaptateur réseau",
+               "connected": "Connecté",
+               "disconnected": "Déconnecté",
+               "network": "Réseau",
+               "macAddress": "Adresse MAC",
+               "passThrough": "Relais (Direct-path I/O)"
+            },
+            "others": {
+               "others": "Autres",
+               "additionalHw": "Matériel supplémentaire",
+               "scsiAdapters": "Adaptateurs SCSI",
+               "nvmeAdapters": "Adaptateurs NVMe",
+               "controllers": "Contrôleurs",
+               "inputDevices": "Périphériques d'entrée"
+            }
+         },
+         "resource": {
+            "label": "Utilisation des ressources",
+            "title": "Utilisation des ressources",
+            "activeGuestMemory": "Mémoire d'invité active",
+            "consumedHostMemory": "Mémoire hôte utilisée",
+            "consumedHostCPU": "CPU hôte utilisé",
+            "storage": "Stockage",
+            "uncommitted": "Non validé",
+            "provisioned": "Provisionné",
+            "notShared": "Non partagé",
+            "used": "Utilisée"
+         },
+         "actionBar": {
+            "console": {
+               "label": "Console",
+               "tooltip": "Ouvrir une console pour une machine virtuelle"
+            },
+            "monitor": {
+               "label": "Surveiller",
+               "tooltip": "Surveiller cette machine virtuelle"
+            },
+            "powerOn": {
+               "label": "Mettre sous tension",
+               "tooltip": "Mettre sous tension cette machine virtuelle"
+            },
+            "powerOff": {
+               "label": "Mettre hors tension",
+               "tooltip": "Mettre hors tension cette machine virtuelle",
+               "tooltipWarnSuspended": "Cette machine virtuelle est actuellement interrompue. Sa mise hors tension risque d'entraîner une perte de données dans l'invité",
+               "tooltipWarnPoweredOn": "Cette machine virtuelle est actuellement mise sous tension. Sa mise hors tension risque d'entraîner une perte de données dans l'invité"
+            },
+            "reset": {
+               "label": "Réinitialiser",
+               "tooltip": "Réinitialise la machine virtuelle",
+               "tooltipWarnSuspended": "Cette machine virtuelle est actuellement interrompue. Sa réinitialisation risque d'entraîner une perte de données dans l'invité",
+               "tooltipWarnPoweredOn": "Cette machine virtuelle est actuellement mise sous tension. Sa réinitialisation risque d'entraîner une perte de données dans l'invité"
+            },
+            "shutDown": {
+               "label": "Arrêter",
+               "tooltip": "Initier un arrêt approprié dans le système d'exploitation invité de cette machine virtuelle"
+            },
+            "suspend": {
+               "label": "Interrompre",
+               "tooltip": "Interrompre cette machine virtuelle"
+            },
+            "resume": {
+               "label": "Reprendre",
+               "tooltip": "Reprendre cette machine virtuelle"
+            },
+            "restart": {
+               "label": "Redémarrer",
+               "tooltip": "Redémarrer cette machine virtuelle"
+            },
+            "editSettings": {
+               "label": "Modifier",
+               "tooltip": "Modifier les paramètres de cette machine virtuelle"
+            },
+            "refresh": {
+               "label": "Actualiser",
+               "tooltip": "Actualiser le résumé de cette machine virtuelle"
+            },
+            "actions": {
+               "label": "Actions",
+               "tooltip": "Actions pour cette machine virtuelle"
+            }
+         }
+      },
+      "manage": {
+         "title": "{{name}} - Gérer"
+      },
+      "monitor": {
+         "tabs": {
+            "performance": {
+               "label": "Performance",
+               "tooltip": "Performance"
+            },
+            "events": {
+               "label": "Événements",
+               "tooltip": "Événements"
+            },
+            "tasks": {
+               "label": "Tâches",
+               "tooltip": "Tâches"
+            },
+            "logs": {
+               "label": "Journaux",
+               "tooltip": "Journaux"
+            },
+            "notifications": {
+               "label": "Notifications",
+               "tooltip": "Notifications"
+            }
+         },
+         "title": "{{name}} - Surveiller",
+         "logs": {
+            "tabTitle": "Journaux",
+            "tabTooltip": "Afficher les journaux système",
+            "failedToLoad": "Échec du chargement du journal {{log}}",
+            "noLogSelected": "Aucun journal sélectionné",
+            "actionBar": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions pour le fichier journal sélectionné"
+               },
+               "openInNewWindow": {
+                  "label": "Ouvrir dans une nouvelle fenêtre",
+                  "tooltip":"Ouvrir ce journal dans une nouvelle fenêtre"
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser le fichier journal sélectionné"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "Journal",
+                  "size": "Taille"
+               }
+            }
+         },
+         "performance": {
+            "tabTitle": "Performance",
+            "tabTooltip": "Surveiller les performances du système",
+            "poweredOff": "VM hors tension",
+            "grid": {
+               "name": "Nom",
+               "unit": "Unité",
+               "average": "Moyen",
+               "maximum": "Maximum",
+               "minimum": "Minimum",
+               "latest": "Dernière"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser le diagramme"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions pour les machines virtuelles sélectionnées"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "Disponibilité des données",
+                  "message": "Pourquoi la plage de données Dernière heure est-elle la seule disponible ? Les hôtes ESXi stockent des données historiques uniquement pour la dernière heure. Pour afficher une plus grande plage de données, vous devez utiliser vCenter Server."
+               }
+            },
+            "filter": {
+               "type": "Type de filtre",
+               "cpuFilter": "Filtre CPU",
+               "time": "Heure"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "Tous",
+                     "hostDropdownTitle": "Hôte",
+                     "allCoresDropdownTitle": "Tous les PCPU",
+                     "allPackagesDropdownTitle": "Tous les modules",
+                     "seriesLabel": "PCPU {{core}}",
+                     "packageSeriesLabel": "Module {{pkg}}",
+                     "y1AxisLabel": "CPU hôte utilisé/prêt (%)",
+                     "x1AxisLabel": "Heure",
+                     "x2AxisLabel": "Heure",
+                     "ready": "Prêt"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "Mémoire",
+                     "seriesLabel": "Mémoire hôte utilisée",
+                     "y1AxisLabel": "Mémoire hôte utilisée (Go)",
+                     "x1AxisLabel": "Heure",
+                     "x2AxisLabel": "Heure"
+                  }
+               },
+               "disk": {
+                  "usage": {
+                     "dropdownTitle": "Disque",
+                     "y1AxisLabel": "Taux de lecture/écriture sur disque (Mo/s)",
+                     "y2AxisLabel": "Latence (ms)",
+                     "aggregateSeriesLabel": "Taux d'E/S de disque (agrégé)",
+                     "readRateSeriesLabel": "Taux de lecture total",
+                     "writeRateSeriesLabel": "Taux d'écriture total",
+                     "maxLatencySeriesLabel": "Latence maximale",
+                     "x1AxisLabel": "Heure"
+                  }
+               },
+               "network": {
+                  "usage": {
+                     "dropdownTitle": "Réseau",
+                     "usageSeriesLabel": "Utilisation totale du réseau",
+                     "transmitSeriesLabel": "Taux de transmission total",
+                     "receiveSeriesLabel": "Taux de réception total",
+                     "y1AxisLabel": "Taux de transmission/réception (Mbit/s)",
+                     "y2AxisLabel": "Nombre",
+                     "xAxisLabel": "Heure"
+                  }
+               },
+               "scale": {
+                  "lastHour": "Dernière heure"
+               }
+            }
+         },
+         "events": {
+            "type": "Type",
+            "time": "Heure",
+            "virtualmachine": "Machine virtuelle",
+            "noEvents": "Aucun événement"
+         },
+         "tasks": {
+            "alt": "Tâche",
+            "key": "Clé",
+            "noTasks": "Aucune tâche",
+            "description": "Description",
+            "host": "Cet hôte",
+            "state": "État"
+         },
+         "notifications": {
+            "suggested": "Action suggérée :",
+            "noNotification": "Aucune notification",
+            "unknownState": {
+               "message": "Cette machine virtuelle est dans un état inconnu.",
+               "suggested-action": "La prise en charge de cycles d'alimentation de la machine virtuelle ou le redémarrage de l'agent hostd sur l'hôte ESXi peut résoudre le problème."
+            },
+            "guestOther": {
+               "message": "Le système d'exploitation invité de cette machine virtuelle est défini actuellement sur \"Autre\".",
+               "suggested-action": "Il est conseillé de spécifier le système d'exploitation invité correct pour permettre les optimisations propres aux invités et l'installation de VMware Tools."
+            },
+            "guestMismatch": {
+               "message": "Le SE invité configuré ({{assigned}}) pour cette machine virtuelle ne correspond pas à l'invité en cours d'exécution ({{reported}}).",
+               "suggested-action": "Il est conseillé de spécifier le système d'exploitation invité correct pour permettre les optimisations propres aux invités."
+            },
+            "VmDiskConsolidationNeeded": {
+               "message": "Les disques de cette machine virtuelle doivent être consolidés.",
+               "suggested-action": "Vous devez consolider les disques pour améliorer les performances et optimiser l'utilisation des disques."
+            },
+            "questionPending": {
+               "message": "Cette VM est associée à une question qui attend une réponse.",
+               "suggested-action": "Répondez à la question pour effectuer l'opération de mise sous tension."
+            },
+            "orphanedNetwork": {
+               "message": "Cette VM est attachée à un groupe de ports réseau <em>{{name}}</em> qui n'existe pas.",
+               "suggested-action": "Modifiez cette machine virtuelle et associez-la à un réseau différent."
+            },
+            "toolsNotInstalled": {
+               "message": "VMware Tools n'est pas installé sur cette machine virtuelle.",
+               "suggested-action": "VMware Tools permet d'afficher des informations détaillées sur l'invité et d'effectuer des opérations sur le système d'exploitation invité, par exemple l'arrêt approprié, le redémarrage, etc. Il est conseillé d'installer VMware Tools."
+            },
+            "toolsOld": {
+               "message": "La version de VMware Tools installée sur cette machine virtuelle est obsolète.",
+               "suggested-action": "La mise à niveau de VMware Tools peut permettre de bénéficier de fonctionnalités améliorées et d'une meilleure stabilité."
+            },
+            "ftSecondary": {
+               "message": "Cette machine virtuelle est utilisée en tant que VM secondaire dans une paire de VM tolérante aux pannes. Vous ne pouvez pas la configurer.",
+               "suggested-action": ""
+            }
+         }
+      },
+      "operations": {
+         "notifications": {
+            "failedToPowerOn": "Échec de la mise sous tension de la machine virtuelle {{name}}. {{reason}} Cliquez ici pour plus de détails.",
+            "failedToPowerOff": "Échec de la mise hors tension de la machine virtuelle {{name}}. {{reason}}",
+            "failedToRestart": "Échec de la réinitialisation de la machine virtuelle {{name}}. {{reason}}",
+            "failedToRename": "Échec de l'attribution d'un nouveau nom à la machine virtuelle {{name}}. {{reason}}",
+            "failedToCreate": "Échec de la création de la machine virtuelle {{name}}. {{reason}}",
+            "failedToDelete": "Échec de la suppression de la machine virtuelle {{name}}. {{reason}}",
+            "failedToSaveNotes": "Échec de l'enregistrement des notes pour la machine virtuelle {{name}}. {{reason}}",
+            "failedToReconfig": "Échec de la reconfiguration de la machine virtuelle {{name}}. {{reason}}",
+            "failedToSuspend": "Échec de l'interruption de la machine virtuelle {{name}}. {{reason}}"
+         }
+      },
+      "banner": {
+         "guestOS": "SE invité",
+         "compatibility": "Compatibilité",
+         "vmwaretools": "VMware Tools",
+         "hostName": "Nom d'hôte",
+         "cpus": "CPU",
+         "cpuUsage": "Utilisation du CPU",
+         "memory": "Mémoire",
+         "memoryUsage": "Utilisation de la mémoire",
+         "diskUsage": "Utilisation du disque",
+         "metrics": {
+            "cpu": "CPU",
+            "memory": "MÉMOIRE",
+            "storage": "STOCKAGE"
+         }
+      },
+      "edit": {
+         "title": "Modifier les paramètres",
+         "titleWithName": "Modifier les paramètres - {{name}}",
+         "rejectLabel": "Annuler",
+         "tabs": {
+            "hardware": {
+               "label": "Matériel virtuel",
+               "tooltip": "Matériel virtuel"
+            },
+            "options": {
+               "label": "Options VM",
+               "tooltip": "Options VM"
+            }
+         },
+         "compatibility": "Compatibilité :",
+         "save": "Enregistrer",
+         "notification": {
+            "info": "La machine virtuelle {{name}} a été reconfigurée."
+         },
+         "powerOptions": {
+            "stop": {
+               "hard": "Mettre hors tension",
+               "soft": "Arrêter l'invité",
+               "preset": "Système par défaut"
+            },
+            "pause": {
+               "hard": "Interrompre",
+               "soft": "Mettre l'invité en attente",
+               "preset": "Système par défaut"
+            },
+            "restart": {
+               "hard": "Réinitialiser",
+               "soft": "Redémarrer l'invité",
+               "preset": "Système par défaut"
+            }
+         }
+      },
+      "create": {
+         "new": {
+            "label": "Créer une machine virtuelle",
+            "description": "Cette option vous aide pas à pas à créer une nouvelle machine virtuelle. Vous allez pouvoir personnaliser les processeurs, la mémoire, les connexions réseau et le stockage. Vous devrez installer un système d'exploitation invité à la fin de la création."
+         },
+         "clone": {
+            "label": "Cloner une VM existante",
+            "description": "Créer un clone d'une machine virtuelle existante"
+         },
+         "ovf": {
+            "label": "Déployer une machine virtuelle à partir d'un fichier OVF ou OVA",
+            "description": "Cette option vous guide tout au long du processus de création d'une machine virtuelle à partir de fichiers OVF et VMDK."
+         },
+         "register": {
+            "label": "Enregistrer une machine virtuelle existante",
+            "description": "Cette option vous guide à travers le processus d'enregistrement d'une machine virtuelle existante dans une banque de données."
+         }
+      },
+      "deleteVMConfirmation": "Voulez-vous vraiment supprimer les machines virtuelles suivantes ?",
+      "state": {
+         "poweredOn": "Activé",
+         "poweredOff": "Désactivé",
+         "suspended": "Interrompu",
+         "undefined": "Inconnu"
+      },
+      "tools": {
+         "state": {
+            "toolsOk": "Installé et en cours d'exécution",
+            "toolsNotRunning": "Installé mais pas en cours d'exécution",
+            "toolsNotInstalled": "Non installé",
+            "toolsOld": "VMware Tools est obsolète - il est conseillé de le mettre à niveau dans cet invité"
+         },
+         "installed": {
+            "true": "Oui",
+            "false": "Non"
+         },
+         "running": {
+            "guestToolsRunning": "Oui",
+            "guestToolsNotRunning": "Non"
+         }
+      },
+      "hardwareVersion": {
+         "vmx-02": {
+            "label":"ESX 2.0.2 et version ultérieure (machine virtuelle version 2)",
+            "desc": ""
+         },
+         "vmx-03": {
+            "label":"ESX 2.x et version ultérieure (machine virtuelle version 3)",
+            "desc": ""
+         },
+         "vmx-04": {
+            "label":"ESX/ESXi 3.5 et version ultérieure (machine virtuelle version 4)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 4, qui est également compatible avec ESXi 4.x, ESXi 5.0, ESXi 5.1 et ESXi 5.5. Certaines fonctionnalités matérielles de la machine virtuelle ne sont pas disponibles avec cette option."
+         },
+         "vmx-06": {
+            "label":"Workstation 6 (machine virtuelle version 6)",
+            "desc": ""
+         },
+         "vmx-07": {
+            "label":"ESX/ESXi 4,0 et version ultérieure (machine virtuelle version 7)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 7, qui est également compatible avec ESXi 5.0, ESXi 5.1, ESXi 5.5 et ESXi 6.0. Certaines fonctionnalités matérielles de la machine virtuelle ne sont pas disponibles avec cette option."
+         },
+         "vmx-08": {
+            "label":"ESXi 5.0 et version ultérieure (machine virtuelle version 8)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 8, qui est également compatible avec ESXi 5.1, ESXi 5.5 et ESXi 6.0. Certaines fonctionnalités matérielles de la machine virtuelle ne sont pas disponibles avec cette option."
+         },
+         "vmx-09": {
+            "label":"ESXi 5.1 et version ultérieure (machine virtuelle version 9)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 9, qui est également compatible avec ESXi 5.5 et ESXi 6.0."
+         },
+         "vmx-10": {
+            "label":"ESXi 5.5 et version ultérieure (machine virtuelle version 10)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 10, qui est également compatible avec ESXi 6.0."
+         },
+         "vmx-11": {
+            "label":"ESXi 6.0 et version ultérieure (machine virtuelle version 11)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 11 et offre les meilleures performances et les dernières fonctionnalités disponibles dans ESXi 6.0."
+         },
+         "vmx-12": {
+            "label":"Workstation 12 (VM version 12)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 12 et offre les meilleures performances et les dernières fonctionnalités disponibles dans Workstation 12."
+         },
+         "vmx-13": {
+            "label":"ESXi 6.5 et version ultérieure (machine virtuelle version 13)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 13 et offre les meilleures performances et les dernières fonctionnalités disponibles dans ESXi 6.5."
+         },
+         "vmx-14": {
+            "label":"ESXi 6.x et version ultérieure (VM version 14)",
+            "desc": "Cette machine virtuelle utilise la version matérielle 14, et offre les meilleures performances et les dernières fonctionnalités disponibles dans ESXi 6.x."
+         }
+      },
+      "wizard": {
+         "title": "Nouvelle machine virtuelle",
+         "registerTitle": "Enregistrer la machine virtuelle",
+         "cloneTitle": "Cloner machine virtuelle",
+         "compatibility": "Compatibilité",
+         "creationType": {
+            "title": "Sélectionner un type de création",
+            "description": "Comment voulez-vous créer une machine virtuelle ?",
+            "select": "Sélectionner un type de création",
+            "warnNestedESXi": "VMware ne prend pas en charge l'exécution de serveurs ESXi/ESX imbriqués dans des environnements de production. Reportez-vous à <a href=\"{{kbURL}}\" target=\"_blank\">cet article</a> de la base de connaissances pour plus d'informations."
+         },
+         "basics": {
+            "title": "Sélectionner un nom et un système d'exploitation invité",
+            "description": "Spécifier un nom unique et un système d'exploitation",
+            "name": {
+               "label": "Saisissez un nom pour la machine virtuelle.",
+               "placeholder": "Nom",
+               "desc": "Les noms des machines virtuelles peuvent comporter jusqu'à 80 caractères et doivent être uniques dans chaque instance ESXi."
+            },
+            "desc": "L'identification du système d'exploitation invité permet à l'assistant de fournir les valeurs par défaut appropriées pour l'installation du système d'exploitation.",
+            "compatibility": "Compatibilité",
+            "selectOSFamily": "Sélectionner une famille de systèmes d'exploitation invités",
+            "guestOSFamily": "Famille de systèmes d'exploitation invités",
+            "selectOSVersion": "Sélectionner une version du SE invité",
+            "guestOSVersion": "Version du SE invité",
+            "osVersion": {
+               "windowsGuest": "Windows",
+               "linuxGuest": "Linux",
+               "darwinGuestFamily": "Mac OS",
+               "solarisGuest": "Solaris",
+               "netwareGuest": "Novell Netware",
+               "otherGuestFamily": "Autre"
+            },
+            "validation": {
+               "emptyName": "Indiquez le nom de la machine virtuelle.",
+               "invalidName": "Le nom de la machine virtuelle ne doit contenir ni guillemets doubles, ni deux-points, ni barres obliques.",
+               "nameSize": "Le nom de la machine virtuelle doit contenir entre {{min}} et {{max}} caractères. La longueur actuelle est {{length}}. Vérifiez le nom.",
+               "guestOSFamily": "Sélectionnez une famille de systèmes d'exploitation invités.",
+               "guestOSVersion": "Sélectionnez une version du SE invité.",
+               "existingName": "Une machine virtuelle ou un modèle de même nom existe dans cet hôte. Saisissez un nouveau nom."
+            }
+         },
+         "storage": {
+            "title": "Sélectionner un stockage",
+            "description": "Sélectionnez la banque de données dans laquelle stocker les fichiers de configuration et de disque.",
+            "desc": "Les banques de données suivantes sont accessibles depuis la ressource de destination que vous avez sélectionnée. Sélectionnez la banque de données de destination des fichiers de configuration de machine virtuelle et de tous les disques virtuels.",
+            "policy": {
+               "default": "Valeur par défaut de la banque de données",
+               "vvol": "Stratégie d'absence d'exigences en matière de volume",
+               "vsan": "Stratégie de stockage Virtual SAN par défaut"
+            },
+            "grid": {
+               "name": "Nom",
+               "capacity": "Capacité",
+               "free": "Libre",
+               "type": "Type",
+               "thinProvisioning": "Provisionnement dynamique",
+               "access": "Accès"
+            },
+            "validation": {
+               "datastore": "Sélectionnez la banque de données sur laquelle stocker les fichiers de machines virtuelles."
+            },
+            "status": {
+               "ova": "Extraction du fichier OVA en cours, cette opération peut prendre un certain temps...",
+               "ovf": "Lecture des données OVF en cours...",
+               "ovfHasCompressedDisks": "La VM que vous tentez de déployer contient des images disque compressées. Host Client ne peut pas actuellement déployer de VM contenant des images disque compressées. Envisagez plutôt d'utiliser OVFTool ou vCenter Server pour déployer cette VM."
+            }
+         },
+         "hardware": {
+            "title": "Personnaliser les paramètres",
+            "description": "Configurer le matériel virtuel et les autres options de la machine virtuelle",
+            "tabs": {
+               "virtualhardware": {
+                  "label": "Matériel virtuel",
+                  "tooltip": "Matériel virtuel"
+               },
+               "vmoptions": {
+                  "label": "Options VM",
+                  "tooltip": "Options VM"
+               }
+            },
+            "virtualhardware": {
+               "managedVC": "Étant donné que les ressources de cet hôte sont gérées par vCenter Server, certaines options de configuration sont désactivées. Si vous souhaitez modifier les paramètres de ressources de cette machine virtuelle, faites-le à partir de vCenter Server.",
+               "signpost": "Les processeurs virtuels disponibles pour une machine virtuelle dépendent du nombre de processeurs sous licence sur l'hôte et du nombre de processeurs pris en charge par le système d'exploitation invité. Pour pouvoir utiliser la fonctionnalité de processeurs virtuels multicœurs VMware, vous devez respecter les conditions de CLUF du système d'exploitation invité.",
+               "virtualizationSignpost": "Active la virtualisation complète de CPU en exposant les caractéristiques de virtualisation assistée du matériel du processeur sous-jacent à ce système d'exploitation invité.",
+               "schedulingAffinitySignPost": "<p>Sélectionner l'affinité de processeur besoin pour cette machine virtuelle.</p><p>Utilisez \"-\" pour les plages et \",\" pour séparer des valeurs. Par exemple, \"0, 2, 4-7\" indique les processeurs 0, 2, 4, 5, 6 et 7.</p><p>Effacer la chaîne pour supprimer les paramètres d'affinité.</p>",
+               "cpuMMUSignPost": "<p>ESXi peut déterminer automatiquement si une machine virtuelle doit utiliser un support matériel pour la virtualisation en fonction du type de processeur et de la machine virtuelle. Toutefois, pour certaines charges de travail, le remplacement de la sélection automatique peut améliorer les performances.</p><p>Remarque : si un paramètre sélectionné n'est pas pris en charge par l'hôte ou est en conflit avec les paramètres de machine virtuelle existants, il est ignoré et la sélection \"automatique\" est utilisée.</p>",
+               "cpu": {
+                  "label": "CPU",
+                  "cores": {
+                     "label": "Cœurs par socket",
+                     "desc": "Sockets :"
+                  },
+                  "hotPlug": {
+                     "label": "Connexion CPU à chaud",
+                     "desc": "Activer l'ajout à chaud du CPU"
+                  },
+                  "reservation": {
+                     "label": "Réservation",
+                     "unit": "Unité de réservation"
+                  },
+                  "limit": {
+                     "label": "Limite",
+                     "unit": "Unité de limite"
+                  },
+                  "shares": {
+                     "label": "Parts",
+                     "unit": "Unité des parts",
+                     "low": "Basse",
+                     "normal": "Normale",
+                     "high": "Haute",
+                     "custom": "Personnalisé"
+                  },
+                  "hardwareVirtualization": {
+                     "label": "Virtualisation matérielle",
+                     "desc": "Exposer l'assistance matérielle à la virtualisation au SE invité"
+                  },
+                  "performanceCounters": {
+                     "label": "Compteurs de performance",
+                     "desc": "Activer les compteurs de performance CPU virtualisés"
+                  },
+                  "schedulingAffinity": {
+                     "label": "Planification affinité",
+                     "value": "Planification de la valeur d'affinité",
+                     "hyper": "État de l'hyperthreading :",
+                     "available": "CPU disponibles :",
+                     "logical": "(CPU logiques)"
+                  },
+                  "cpuMmuVirtualization": {
+                     "label": "Virtualisation du CPU/MMU",
+                     "auto": "Automatique",
+                     "software": "CPU et MMU du logiciel",
+                     "hardwareCPU": "CPU du matériel, MMU du logiciel",
+                     "hardwareBoth": "CPU et MMU du matériel"
+                  },
+                  "validation": {
+                     "invalidReservation": "Valeur de réservation de CPU non valide",
+                     "badReservation": "La réservation de CPU doit être comprise entre 0 et {{maxMhz}} MHz.",
+                     "NaNReservation": "La réservation de CPU doit être un nombre",
+                     "negativeReservation": "La réservation de CPU ne peut pas être une valeur négative",
+                     "nonIntegerReservation": "La réservation de CPU doit être une valeur entière",
+                     "NaNLimit": "La limite de CPU doit être un nombre",
+                     "negativeLimit": "La limite de CPU ne peut pas être une valeur négative",
+                     "invalidLimit": "La limite de CPU doit être supérieure ou égale à la réservation.",
+                     "invalidShares": "Valeur des parts de CPU non valide.",
+                     "invalidAffinity": "Valeur d'affinité de CPU non valide."
+                  }
+               },
+               "memory": {
+                  "label": "Mémoire",
+                  "unit": "Unité de mémoire",
+                  "ram": {
+                     "label" :"RAM",
+                     "unit": "Unité de mémoire RAM"
+                  },
+                  "reservation": {
+                     "label": "Réservation",
+                     "unit": "Unité de réservation",
+                     "desc": "Réserver toute la mémoire d'invité (entièrement verrouillée)",
+                     "validation" : {
+                        "emptyValue" : "La réservation de mémoire ne doit pas être vide",
+                        "NaN" : "La réservation de mémoire accepte uniquement les valeurs numériques",
+                        "negativeValue" : "La réservation de mémoire n'accepte pas la valeur négative {{value}}.",
+                        "floatValue" : "La réservation de mémoire ne peut accepter que des valeurs entières"
+                     }
+                  },
+                  "limit": {
+                     "label": "Limite",
+                     "unit": "Unité de limite",
+                     "validation" : {
+                        "emptyValue" : "La limite de mémoire ne doit pas être vide",
+                        "NaN" : "La limite de mémoire accepte uniquement les valeurs numériques",
+                        "negativeValue" : "La limite de mémoire n'accepte pas la valeur négative {{value}}.",
+                        "limitLow" : "La limite de mémoire doit être supérieure ou égale à la réservation.",
+                        "floatValue" : "La limite de mémoire n'accepte que des valeurs entières"
+                     }
+                  },
+                  "shares": {
+                     "label": "Parts",
+                     "unit": "Unité des parts"
+                  },
+                  "hotPlug": {
+                     "label": "Connexion mémoire à chaud",
+                     "desc": "Activé"
+                  },
+                  "validation": {
+                     "invalidRAM": "Valeur de mémoire RAM non valide.",
+                     "badRAM": "La valeur de la mémoire doit être un multiple de 4.",
+                     "lowCapacity": "Saisissez une valeur de mémoire supérieure à la valeur initiale.",
+                     "highRAM": "La mémoire spécifiée est supérieure à la quantité disponible dans l'hôte. La surcharge de la mémoire peut affecter les performances sur la machine virtuelle.",
+                     "lowRAM": "La mémoire minimale recommandée pour cet invité est {{min}}. L'indication d'une valeur inférieure risque d'entraîner une instabilité ou un échec de démarrage.",
+                     "maxRAM": "La mémoire doit être inférieure ou égale à {{max}}.",
+                     "invalidReservation": "Valeur de réservation de mémoire non valide.",
+                     "reservationHigh": "La réservation de mémoire doit être inférieure ou égale à {{max}}. La valeur entrée ({{value}}) est trop grande.",
+                     "invalidLimit": "Limite de mémoire non valide",
+                     "limitLow": "La limite de mémoire doit être supérieure ou égale à la réservation.",
+                     "invalidShares": "Valeur des parts de mémoire non valide."
+                  }
+               },
+               "sound": {
+                  "VirtualHdAudioCard": "Audio HD",
+                  "VirtualSoundBlaster16": "Sound Blaster 16",
+                  "VirtualEnsoniq1371": "Ensoniq 1371",
+                  "type": "Type",
+                  "title": "Adaptateur son"
+               },
+               "video":{
+                  "label": "Carte vidéo",
+                  "settings": {
+                     "custom": "Spécifier les paramètres personnalisés",
+                     "auto": "Détecter automatiquement les paramètres"
+                  },
+                  "display": "Nombre d'écrans",
+                  "memory": {
+                     "label" :"Mémoire vidéo totale",
+                     "unit": "Mo",
+                     "calculator":"Calculateur de mémoire vidéo",
+                     "dialog": {
+                        "title": "Calculateur de mémoire vidéo",
+                        "desc": "Calculez la mémoire vidéo requise en fonction du nombre d'écrans et de la résolution maximum que l'invité devra prendre en charge.",
+                        "display": "Nombre d'écrans :",
+                        "resolution": "Résolution :",
+                        "total": "Mémoire vidéo totale :",
+                        "ok": "OK",
+                        "cancel": "Annuler"
+                     }
+                  },
+                  "3d": {
+                     "graphics": {
+                        "label":"Graphiques 3D",
+                        "desc": "Activer support 3D"
+                     },
+                     "renderer": {
+                        "label": "Récepteur 3D",
+                        "automatic": "Automatique",
+                        "software": "Logiciel",
+                        "hardware": "Matériel"
+                     },
+                     "memory":{
+                        "label": "Mémoire 3D",
+                        "unit": "Mo"
+                     }
+                  }
+               },
+               "hd": {
+                  "title": "Disque dur {{size}}",
+                  "label": "disque dur",
+                  "size": "Taille de disque dur",
+                  "new": "Nouveau disque dur",
+                  "unit": "Unité de disque dur",
+                  "delete": "Supprimer les fichiers de la banque de données",
+                  "device": "Chemin du périphérique",
+                  "maximumsize": "Taille maximale",
+                  "location": "Emplacement",
+                  "selectDirectory": "Sélectionner le répertoire",
+                  "browse": "Parcourir...",
+                  "diskProvisioning": "Provisionnement du disque",
+                  "thin": "À provisionnement dynamique",
+                  "thick": "À provisionnement statique, mise à zéro tardive",
+                  "eager": "À provisionnement statique, mise à zéro imminente",
+                  "type": "Type",
+                  "diskFile": "Fichier disque",
+                  "shares": {
+                     "label": "Parts",
+                     "type": "Type des parts",
+                     "value": "Valeur des parts",
+                     "unit": "Unité des parts"
+                  },
+                  "limitIOP": "Limite - IOPs",
+                  "virtualFlash": {
+                     "label": "Virtual Flash Read Cache",
+                     "unit": "Unité Virtual Flash Read Cache"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "Nœud de périphérique virtuel",
+                     "unit": "Unité Nœud périphérique virtuel"
+                  },
+                  "diskCompatibility": {
+                    "label": "Compatibilité du disque",
+                    "physical": "Physique",
+                    "virtual": "Virtuel"
+                  },
+                  "diskSharing": {
+                     "label": "Partage",
+                     "sharingMultiWriter": "Multi-écriture en partage",
+                     "sharingNone": "Aucun",
+                     "info": "Le partage de disque est possible uniquement avec les disques à provisionnement statique et mise à zéro imminente."
+                  },
+                  "diskMode": {
+                     "label": "Mode Disque",
+                     "dependent": "Dépendant",
+                     "independentPersistent": "Indépendant - Persistant",
+                     "independentNonpersistent" :"Indépendant - Non persistant"
+                  },
+                  "provisioning": {
+                     "thin": "À provisionnement dynamique",
+                     "thickEager": "À provisionnement statique, mise à zéro imminente",
+                     "thickLazy": "À provisionnement statique, mise à zéro tardive"
+                  },
+                  "menu": {
+                     "new": {
+                        "label": "Nouveau disque dur",
+                        "tooltip": "Ajouter un nouveau disque dur à la machine virtuelle"
+                     },
+                     "existing": {
+                        "label": "Disque dur existant",
+                        "tooltip": "Ajouter un disque dur existant à la machine virtuelle"
+                     },
+                     "rdm": {
+                        "label": "Ajouter un nouveau disque RDM",
+                        "tooltip": "Ajouter un disque RDM à la machine virtuelle"
+                     }
+                  },
+                  "validation": {
+                     "numDisks": "Cette configuration de machine virtuelle prend uniquement en charge les disques durs de {{size}}.",
+                     "missingDatastore": "La banque de données de {{disk}} est introuvable. Ce disque sera ignoré, sauf si vous modifiez sa configuration.",
+                     "invalidHD": "Valeur de taille de disque non valide.",
+                     "lowCapacity": "Entrez une taille de disque plus grande que sa capacité d'origine.",
+                     "highCapacity": "La taille de disque spécifiée est supérieure à la quantité disponible dans la banque de données. La surcharge d'espace disque peut utiliser tout l'espace de la banque de données et bloquer la machine virtuelle. Augmentez la capacité de la banque de données avant de continuer, ou réduisez la taille de disque.",
+                     "highCapacityThick": "La taille de disque spécifiée est supérieure à la quantité disponible dans la banque de données. Vous ne pouvez pas surcharger l'espace disque lorsque vous utilisez un disque à provisionnement statique. Vous devez augmenter la capacité de la banque de données ou réduire la taille de disque avant de continuer.",
+                     "invalidController": "Sélectionnez un contrôleur valide pour le disque",
+                     "invalidShares": "Valeur de parts de disque non valide.",
+                     "limitIOPsEmpty" : "La limite des IOPs de disque ne peut pas être vide",
+                     "limitIOPsNaN" : "Limite des IOPs de disque non valide",
+                     "limitIOPsNegative" : "La limite des IOPs de disque ne peut pas être une valeur négative",
+                     "limitIOPsNonInteger" : "La limite des IOPs de disque n'accepte qu'une valeur entière",
+                     "invalidReadCache": "Valeur de lecture du cache non valide.",
+                     "badReservation": "La réservation doit être comprise entre {{min}} et {{max}}. Saisissez 0 pour désactiver Virtual Flash Read Cache pour machines virtuelles.",
+                     "noAvailableLocation": "Aucun emplacement disponible sur le contrôleur sélectionné. Choisissez un autre contrôleur.",
+                     "locationInUse": "Cet emplacement est utilisé par un autre périphérique, utilisation de l'emplacement disponible suivant."
+                  }
+               },
+               "pci": {
+                  "title": "Périphérique PCI {{size}}",
+                  "new": "Nouveau périphérique PCI",
+                  "physical": {
+                     "label": "Périphérique PCI/PCIe physique",
+                     "warning": "La VM ne sera pas mise sous tension tant que sa réserve de mémoire ne sera pas égale à sa taille de mémoire.",
+                     "button": "Réserver toute la mémoire",
+                     "note": "Certaines opérations de machine virtuelle ne sont pas disponibles lorsque des périphériques relais PCI/PCIe sont présents. Vous ne pouvez ni suspendre, ni migrer avec vMotion, ni créer, ni restaurer des snapshots de ces machines virtuelles."
+                  }
+               },
+               "ide": {
+                  "label": "Contrôleur IDE {{index}}",
+                  "master": "Maître",
+                  "slave": "Esclave"
+               },
+               "scsi": {
+                  "title": "Contrôleur SCSI {{size}}",
+                  "new": "Nouveau contrôleur SCSI",
+                  "type": "Type SCSI",
+                  "label": "Contrôleur SCSI {{index}}",
+                  "busSharing": {
+                     "label": "Partage de bus de SCSI",
+                     "none": "Aucun",
+                     "virtual": "Virtuel",
+                     "physical": "Physique"
+                  },
+                  "validation": {
+                     "diskAttached": "Un disque dur est toujours attaché à ce contrôleur, réattribuez-le d'abord.",
+                     "maxControllersReached": "Le nombre maximal de contrôleurs SCSI ({{max}}) a été atteint."
+                  }
+               },
+               "nvme": {
+                  "title": "Contrôleur NVMe {{size}}",
+                  "new": "Nouveau contrôleur NVMe",
+                  "label": "Contrôleur NVMe {{index}}",
+                  "validation": {
+                     "diskAttached": "Un disque dur est toujours attaché à ce contrôleur, réattribuez-le d'abord.",
+                     "maxControllersReached": "Le nombre maximal de contrôleurs NVMe ({{max}}) a été atteint."
+                  }
+               },
+               "sata": {
+                  "title": "Contrôleur SATA {{size}}",
+                  "new": "Nouveau contrôleur SATA",
+                  "label": "Contrôleur SATA {{index}}",
+                  "validation": {
+                     "diskAttached": "Un disque dur est toujours attaché à ce contrôleur, réattribuez-le d'abord.",
+                     "cdromAttached": "Un lecteur CD/DVD est toujours attaché à ce contrôleur, réattribuez-le d'abord.",
+                     "maxControllersReached": "Le nombre maximal de contrôleurs SATA ({{max}}) a été atteint."
+                  }
+               },
+               "usbController": {
+                  "title": "Contrôleur USB {{size}}",
+                  "new": "Nouveau contrôleur USB",
+                  "settings": "Paramètres",
+                  "warnUnsupported": "Le contrôleur USB sélectionné n'est pas pris en charge par le SE invité",
+                  "validation": {
+                     "numUSBs": "Cette configuration de machine virtuelle prend uniquement en charge les périphériques USB de {{size}}.",
+                     "maxUSB2Devices": "Cette configuration de machine virtuelle prend uniquement en charge {{max}} périphériques USB 2.0.",
+                     "maxUSB3Devices": "Cette configuration de machine virtuelle prend uniquement en charge {{max}} périphériques USB 3.0."
+                  }
+               },
+               "usbDevice": {
+                  "title": "Périphérique USB {{size}}",
+                  "new": "Nouveau périphérique USB",
+                  "deviceNotFound": "Périphérique introuvable",
+                  "connect": "Connecter",
+                  "validation": {
+                     "duplicateUsb": "Un périphérique USB unique ne peut pas être ajouté plusieurs fois.",
+                     "tooMany": "Aucun autre périphérique USB disponible à ajouter",
+                     "maxDevices": "Le nombre maximal de périphériques USB est 20"
+                  }
+               },
+               "serialPort": {
+                  "title": "Port série {{size}}",
+                  "new": "Nouveau port série",
+                  "status": "État",
+                  "connect": "Connecter",
+                  "connectAt": "Connecter lors de la mise sous tension",
+                  "connection": "Connexion",
+                  "physicalType": "Type de port série physique",
+                  "browse": "Parcourir...",
+                  "pipeName": "Nom de canal",
+                  "portURI": {
+                     "label": "URI port :",
+                     "desc": "Utiliser concentrateur port série virtuel"
+                  },
+                  "vSPCURI": "URI vSPC :",
+                  "deviceType": {
+                     "file": "Utiliser un fichier de sortie",
+                     "physical": "Utiliser un port série physique",
+                     "pipe": "Utiliser le canal nommé",
+                     "network": "Utiliser le réseau",
+                     "thinprint": "ThinPrint"
+                  },
+                  "nearEnd": {
+                     "label": "Extrémité proche",
+                     "client": "Client",
+                     "server": "Serveur"
+                  },
+                  "farEnd": {
+                     "label": "Extrémité lointaine",
+                     "vm": "Une machine virtuelle",
+                     "process": "Un processus"
+                  },
+                  "direction": {
+                     "label": "Direction",
+                     "client": "Client",
+                     "server": "Serveur"
+                  },
+                  "validation": {
+                     "missingOutputFile": "Entrez un nom pour le fichier de sortie du port parallèle.",
+                     "invalidOutputFile": "Indiquez un format de fichier de sortie valide.",
+                     "invalidPipeName": "Indiquez un nom de fichier de canal valide.",
+                     "invalidPortUri": "Indiquez un numéro de port URI valide sous la forme &lt;protocole&gt;://&lt;ip ou nom d'hôte&gt;:&lt;port&gt;.",
+                     "invalidVSPC": "Indiquez un concentrateur port série virtuel valide sous la forme &lt;protocole&gt;://&lt;ip ou nom d'hôte&gt;:&lt;port&gt;."
+                  }
+               },
+               "parallelPort": {
+                  "title": "Port parallèle {{size}}",
+                  "new": "Nouveau port parallèle",
+                  "status": "État",
+                  "connect": "Connecter",
+                  "connectAt": "Connecter lors de la mise sous tension",
+                  "connection": "Connexion",
+                  "browse": "Parcourir...",
+                  "deviceType": {
+                     "file": "Utiliser un fichier de sortie"
+                  },
+                  "validation": {
+                     "invalidOutputFile": "Format de fichier de sortie non valide.",
+                     "missingOutputFile": "Veuillez entrer un nom pour le fichier de sortie du port parallèle"
+                  }
+               },
+               "network": {
+                  "title": "Adaptateur réseau {{size}}",
+                  "new": "Nouvel adaptateur réseau",
+                  "status": "État",
+                  "connect": "Connecter",
+                  "connectAt": "Connecter lors de la mise sous tension",
+                  "adapterType": "Type d'adaptateur",
+                  "physicalFunction": "Fonction physique",
+                  "virtualFunction": "Fonction virtuelle",
+                  "sriovPassthrough": "Relais SR-IOV",
+                  "sriovMemReserved": "Réservation de mémoire",
+                  "passthroughAllMemReserved": "Pour activer le relais PCI ou SR-IOV, la mémoire de la VM sera réservée.",
+                  "vmxnet2Enhanced": "VMXNET 2 (amélioré)",
+                  "guestOSMTUChange": {
+                     "label": "Changement de MTU du SE client",
+                     "allow": "Autoriser",
+                     "disallow": "Interdire"
+                  },
+                  "macAddress": "Adresse MAC",
+                  "macAddressType": {
+                     "label": "Type d'adresse MAC",
+                     "auto": "Automatique",
+                     "assigned": "Attribué",
+                     "manual": "Manuel"
+                  },
+                  "validation": {
+                     "missingMACAddress": "Adresse MAC obligatoire",
+                     "invalidMACAddress": "Adresse MAC non valide",
+                     "missingPortgroup": "Le groupe de ports pour l'adaptateur réseau {{index}}, {{missing}}, est introuvable. Il a été attribué à {{assigned}} .",
+                     "cantAssign": "La reconfiguration ou l'ajout d'adaptateurs réseau attachés à des groupes de ports virtuels distribués non éphémères ({{name}}) n'est pas pris(e) en charge."
+                  }
+               },
+               "floppy": {
+                  "title": "Lecteur de disquettes {{size}}",
+                  "new": "Nouveau lecteur de disquette",
+                  "status": "État",
+                  "connect": "Connecter",
+                  "connectAt": "Connecter lors de la mise sous tension",
+                  "browse": "Parcourir...",
+                  "unsupportedLabel": "Non pris en charge",
+                  "unsupported": "Les périphériques disquette clients ne sont pas pris en charge lorsque vous utilisez le client de l'hôte VMware. Si vous souhaitez utiliser un périphérique client, utilisez vSphere Web Client.\n\nCe périphérique sera ignoré.",
+                  "media": {
+                     "label": "Support disquette",
+                     "desc": "Pour vous connecter, mettez sous tension la machine virtuelle, puis sélectionnez le support dans le panneau Matériel VM de l'onglet Résumé."
+                  },
+                  "deviceType": {
+                     "client": "Périphérique client",
+                     "floppy": "Utiliser une image de disquette existante"
+                  },
+                  "validation": {
+                     "numFloppy": "Cette configuration de machine virtuelle prend uniquement en charge les disquettes de {{size}}.",
+                     "missingImage": "Sélectionnez une image pour le lecteur de disquettes."
+                  }
+               },
+               "cdrom": {
+                  "title": "Lecteur de CD/DVD {{size}}",
+                  "new": "Nouveau lecteur CD/DVD",
+                  "status": "État",
+                  "connect": "Connecter",
+                  "connectAt": "Connecter lors de la mise sous tension",
+                  "browse": "Parcourir...",
+                  "type": "Type",
+                  "atapiDevice": "Périphérique hôte",
+                  "unsupportedLabel": "Non pris en charge",
+                  "unsupported": "Les périphériques CD/DVD clients ne sont pas pris en charge lorsque vous utilisez le client de l'hôte VMware. Si vous souhaitez utiliser un périphérique client, utilisez vSphere Web Client.\n\nCe périphérique sera ignoré.",
+                  "media": {
+                     "label": "Support CD/DVD",
+                     "desc": "Pour vous connecter, mettez sous tension la machine virtuelle, puis sélectionnez le support dans le panneau Matériel VM de l'onglet Résumé."
+                  },
+                  "deviceType": {
+                     "client": "Périphérique client",
+                     "host": "Périphérique hôte",
+                     "iso": "Fichier ISO banque de données"
+                  },
+                  "deviceMode": {
+                     "label": "Mode Périphérique",
+                     "controller": "Contrôleur du mode Périphérique",
+                     "location": "Emplacement du mode Périphérique",
+                     "emulate": "Émuler CD-ROM",
+                     "passthrough": "CD-ROM de relais"
+                  },
+                  "deviceNode": {
+                     "sata": "Contrôleur SATA"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "Nœud de périphérique virtuel",
+                     "location": "Emplacement du contrôleur",
+                     "controller": "Type de contrôleur"
+                  },
+                  "validation": {
+                     "missingISO": "Veuillez sélectionner une image ISO pour le CD-ROM",
+                     "missingDevice": "Le périphérique CD/DVD hôte n'est pas disponible, choisissez une sauvegarde CD/DVD différente, par exemple le fichier ISO de la banque de données ou supprimez le lecteur CD/DVD",
+                     "invalidController": "Sélectionnez un contrôleur valide pour le CD/DVD",
+                     "noAvailableLocation": "Aucun emplacement disponible sur le contrôleur sélectionné. Choisissez un autre contrôleur.",
+                     "locationInUse": "Cet emplacement est utilisé par un autre périphérique, utilisation de l'emplacement disponible suivant."
+                  }
+               },
+               "actionBar": {
+                  "addHD": {
+                     "label": "Ajouter des disques durs",
+                     "tooltip": "Ajouter un disque dur à la machine virtuelle"
+                  },
+                  "addNetwork": {
+                     "label": "Ajouter un adaptateur réseau",
+                     "tooltip": "Ajouter un adaptateur réseau à la machine virtuelle"
+                  },
+                  "newHD": {
+                     "label": "Nouveau disque dur",
+                     "tooltip": "Ajouter un nouveau disque dur à la machine virtuelle"
+                  },
+                  "existingHD": {
+                     "label": "Disque dur existant",
+                     "tooltip": "Ajouter un disque dur existant à la machine virtuelle"
+                  },
+                  "rdm": {
+                     "label": "Ajouter un nouveau disque RDM",
+                     "tooltip": "Ajouter un nouveau disque RDM (mappage de périphériques bruts) à la machine virtuelle"
+                  },
+                  "network": {
+                     "label": "Adaptateur réseau",
+                     "tooltip": "Ajouter un adaptateur réseau"
+                  },
+                  "cdrom": {
+                     "label": "Lecteur de CD/DVD",
+                     "tooltip": "Ajouter un nouveau lecteur de CD/DVD"
+                  },
+                  "floppy": {
+                     "label": "Lecteur de disquette",
+                     "tooltip": "Ajouter une disquette"
+                  },
+                  "serial": {
+                     "label": "Port série",
+                     "tooltip": "Ajouter un port série"
+                  },
+                  "parallel": {
+                     "label": "Port parallèle",
+                     "tooltip": "Ajouter un port parallèle"
+                  },
+                  "usb": {
+                     "label": "Contrôleur USB",
+                     "tooltip": "Ajouter un contrôleur USB"
+                  },
+                  "usbDevice": {
+                     "label": "Périphérique USB",
+                     "tooltip": "Ajouter un nouveau périphérique USB"
+                  },
+                  "scsi": {
+                     "label": "Contrôleur SCSI",
+                     "tooltip": "Ajouter un contrôleur SCSI"
+                  },
+                  "pci": {
+                     "label": "Périphérique PCI",
+                     "tooltip": "Ajouter un nouveau périphérique PCI"
+                  },
+                  "sata": {
+                     "label": "Contrôleur SATA",
+                     "tooltip": "Ajouter un contrôleur SATA"
+                  },
+                  "nvme": {
+                     "label": "Contrôleur NVMe",
+                     "tooltip": "Ajouter un contrôleur NVMe"
+                  },
+                  "sound": {
+                     "label": "Contrôleur audio",
+                     "tooltip": "Ajouter un contrôleur audio"
+                  },
+                  "other": {
+                     "label": "Ajouter un autre périphérique",
+                     "tooltip": "Ajouter un autre matériel à cette machine virtuelle"
+                  }
+               }
+            },
+            "hdlocation": {
+               "title": "Les banques de données suivantes sont accessibles depuis la ressource de destination que vous avez sélectionnée. Sélectionnez la banque de données de destination des fichiers de configuration de machine virtuelle et de tous les disques virtuels.",
+               "storagePolicy": {
+                  "default": "Valeur par défaut de la banque de données",
+                  "vvol": "Stratégie d'absence d'exigences en matière de volume",
+                  "vsan": "Stratégie de stockage Virtual SAN par défaut"
+               },
+               "grid": {
+                  "name": "Nom",
+                  "capacity": "Capacité",
+                  "freeSpace": "Libre",
+                  "type": "Type",
+                  "thinProvisioning": "Provisionnement dynamique",
+                  "access": "Accès"
+               },
+               "dialog": {
+                  "ok": "OK",
+                  "select": "Sélectionner une banque de données"
+               }
+            },
+            "vmoptions": {
+               "general": {
+                  "title": "Options générales",
+                  "vmname": "Nom de la VM :",
+                  "vmconfigfile": "Fichier de config. VM",
+                  "vmworkinglocation": "Emplacement de travail VM",
+                  "guestOS": "SE invité",
+                  "guestOSVersion": "Version du SE invité",
+                  "remoteConsole": "Options de VMware Remote Console",
+                  "guestOSLock": {
+                     "label": "Verrou du système d'exploitation invité",
+                     "desc": "Verrouiller le système d'exploitation invité quand le dernier utilisateur à distance se déconnecte"
+                  },
+                  "maxNumSessions": {
+                     "label": "Nombre maximum de sessions",
+                     "desc": "Limiter le nombre de connexions simultanées sur cette machine virtuelle",
+                     "validation" : {
+                        "invalid" : "Spécifiez un nombre valide de sessions de console. Le nombre maximal possible est {{num}}."
+                     }
+                  },
+                  "vmwareTools": {
+                     "label": "VMware Tools",
+                     "desc": "Développer les paramètres de VMware Tools"
+                  },
+                  "powerOperations": {
+                     "label": "Opérations d'alimentation",
+                     "stop": "Arrêter",
+                     "pause": "Suspendre",
+                     "restart": "Redémarrer",
+                     "desc": "Mettre sous tension/Reprendre VM"
+                  },
+                  "vmwareToolsScript": {
+                     "label": "Exécuter scripts de VMware Tools",
+                     "afterPoweringOn": "Après la mise sous tension",
+                     "afterResuming": "Après la reprise",
+                     "beforeSuspending": "Avant l'interruption",
+                     "beforeShuttingDown": "Avant l'arrêt de l'invité"
+                  },
+                  "toolsUpgrades": {
+                     "label": "Mises à niveau de VMware Tools",
+                     "desc": "Contrôler et mettre à niveau VMware Tools avant chaque mise sous tension"
+                  },
+                  "time": {
+                     "label": "Heure",
+                     "desc": "Synchroniser l'heure invité avec l'hôte"
+                  },
+                  "powerManagement": {
+                     "label": "Gestion de l'alimentation",
+                     "desc": "Développer les paramètres de gestion de l'alimentation",
+                     "standbyResponse": {
+                        "label": "Réponse en attente",
+                        "desc": "Comment la machine virtuelle doit-elle répondre quand le SE invité est mis en veille ?",
+                        "suspend": "Suspendre la machine virtuelle",
+                        "standby": "Mettre le SE invité en mode veille et laisser la machine virtuelle sous tension."
+                     },
+                     "wakeOnLan": {
+                        "label": "Wake on LAN",
+                        "desc": "Wake on LAN pour trafic de machine virtuelle dans :",
+                        "network": "Nouveau réseau (réseau de la VM)"
+                     }
+                  },
+                  "bootOptions": {
+                     "label": "Options de démarrage",
+                     "desc": "Développer les outils de démarrage",
+                     "firmware": {
+                        "label": "Microprogramme",
+                        "desc": "Choisir quel microprogramme doit être utilisé pour démarrer la machine virtuelle :"
+                     },
+                     "enableUEFISecureBoot": {
+                        "label": "Activer le démarrage sécurisé UEFI",
+                        "desc": "Activer le démarrage sécurisé UEFI pour cette VM"
+                     },
+                     "bootDelay": {
+                        "label": "Délai de démarrage",
+                        "desc": "Chaque fois que la machine virtuelle est mise sous tension ou réinitialisée, retarder l'ordre de démarrage de",
+                        "ms": "millisecondes"
+                     },
+                     "forceBiosSetup": {
+                        "label": "Forcer la configuration BIOS",
+                        "desc": "Au prochaine démarrage de la machine virtuelle, forcez l'entrée dans l'écran de configuration du BIOS."
+                     },
+                     "failedBootRecovery": {
+                        "label": "Récupération après échec du démarrage",
+                        "desc": "Quand la machine virtuelle ne trouve pas un périphérique de démarrage, réessayer le démarrage automatiquement après",
+                        "sec": "secondes"
+                     }
+                  },
+                  "advanced": {
+                     "label": "Avancé",
+                     "settings": {
+                        "label": "Paramètres",
+                        "desc": "Développer les paramètres avancés",
+                        "acceleration": "Désactiver l'accélération",
+                        "logging": "Activer journalisation"
+                     },
+                     "debuggingStats": {
+                        "label": "Débogage et statistiques",
+                        "release": "Exécution normale",
+                        "debug": "Enregistrer les informations de débogage",
+                        "stats": "Enregistrer les statistiques"
+                     },
+                     "swapFileLocation": {
+                        "label": "Emplacement du fichier d'échange",
+                        "default": {
+                           "label": "Par défaut",
+                           "desc": "Utiliser les paramètres du cluster ou de l'hôte sur lequel réside la machine virtuelle."
+                        },
+                        "vmDirectory": {
+                           "label": "Répertoire de machines virtuelles",
+                           "desc": "Stocker les fichiers d'échange dans le même répertoire que la machine virtuelle."
+                        },
+                        "datastore": {
+                           "label": "Banque de données spécifiée par l'hôte",
+                           "desc": "Stocker les fichiers d'échange dans la banque de données spécifiée par l'hôte à utiliser pour les fichiers d'échange. Si ce n'est pas possible, stocker les fichiers d'échange dans le même répertoire que la machine virtuelle. L'utilisation d'une banque de données qui n'est pas visible des deux hôtes pendant vMotion peut réduire les performances vMotion des machines virtuelles concernées."
+                        }
+                     },
+                     "configParams": {
+                        "label": "Paramètres de configuration",
+                        "ok": "Modifier la configuration...",
+                        "tooltip": "Modifier les paramètres de configuration de la machine virtuelle",
+                        "dialog": {
+                           "title": "Paramètres de configuration",
+                           "header": "Modifier ou ajouter les paramètres de configuration comme nécessaire pour les fonctions expérimentales ou comme requis par le support technique. Impossible de supprimer les entrées.",
+                           "ok": "OK",
+                           "cancel": "Annuler",
+                           "remove": {
+                              "warning": {
+                                 "title": "Avertissement",
+                                 "content": "Voulez-vous vraiment supprimer le paramètre de configuration <strong>{{key}}</strong> ?",
+                                 "confirmLabel": "Supprimer",
+                                 "rejectLabel": "Annuler"
+                              }
+                           },
+                           "add": {
+                              "title": "Ajouter le paramètre configuration",
+                              "ok": "Ajouter",
+                              "cancel": "Annuler",
+                              "notNull": "La clé du paramètre de configuration est obligatoire.",
+                              "existing": "Dupliquer le paramètre de configuration."
+                           },
+                           "edit": {
+                              "title": "Modifier le paramètre configuration",
+                              "ok": "Enregistrer",
+                              "cancel": "Annuler"
+                           },
+                           "actionBar": {
+                              "add": {
+                                 "label": "Ajouter un paramètre",
+                                 "tooltip": "Ajouter un paramètre"
+                              },
+                              "edit": {
+                                 "label": "Modifier un paramètre",
+                                 "tooltip": "Modifier un paramètre"
+                              },
+                              "delete": {
+                                 "label": "Supprimer le paramètre",
+                                 "tooltip": "Supprimer le paramètre"
+                              },
+                              "refresh": {
+                                 "label": "Actualiser",
+                                 "tooltip": "Actualiser les paramètres de configuration"
+                              },
+                              "actions": {
+                                 "label": "Actions",
+                                 "tooltip": "Actions pour le paramètre de configuration sélectionné"
+                              }
+                           },
+                           "grid": {
+                              "key": "Clé",
+                              "value": "Valeur",
+                              "placeholder": {
+                                 "key": "Cliquez pour modifier la clé",
+                                 "value": "Cliquez pour modifier la valeur"
+                              }
+                           }
+                        }
+                     },
+                     "latencySensitivity": {
+                        "label": "Sensibilité de latence"
+                     }
+                  },
+                  "fiberChannel": {
+                     "label": "Fiber Channel NPIV",
+                     "desc": "Développer Fibre Channel NPIV",
+                     "wwns": {
+                        "label": "WWN virtuels Fibre Channel",
+                        "desc": "Les machines virtuelles s'exécutant sur les hôtes avec du matériel Fibre Channel supportant NPIV peuvent se voir assigner les WWN virtuels pour les fonctionnalités avancées. Ces WWN sont normalement assignés par l'hôte ou vCenter Server.",
+                        "disable": "Désactiver temporairement NPIV pour cette machine virtuelle",
+                        "noWWNs": {
+                           "label": "Aucun WWN assigné actuellement.",
+                           "unchanged": "Laisser tel quel",
+                           "generate": {
+                              "label": "Générer nouveaux WWN",
+                              "WWNNs": "Nombre de WWNN",
+                              "WWPNs": "Nombre de WWPN"
+                           }
+                        },
+                        "assignments": "Attributions de WWN"
+                     },
+                     "wwps": {
+                        "assignments": "Attributions de WWP"
+                     }
+                  }
+               },
+               "firmware": {
+                  "bios": "BIOS (recommandé)",
+                  "efi": "EFI"
+               },
+               "latency": {
+                  "low": "Basse",
+                  "medium": "Intermédiaire",
+                  "normal": "Normale",
+                  "high": "Haute  "
+               },
+               "validation": {
+                  "numberWWNNs": "Le nombre de noms NPIV WorldWideNode doit être compris entre {{min}} et {{max}}.",
+                  "numberWWPNs": "Le nombre de noms NPIV WorldWidePort doit être compris entre {{min}} et {{max}}."
+               }
+            }
+         },
+         "deploy": {
+            "expand": "Cliquer pour développer",
+            "refreshWarning": "N'actualisez pas le navigateur lors du déploiement de cette machine virtuelle.",
+            "start": {
+               "title": "Sélectionner des fichiers OVF et VMDK",
+               "description": "Sélectionner les fichiers OVF et VMDK ou OVA pour la machine virtuelle à déployer",
+               "validation": {
+                  "name": "Saisissez un nom valide pour cette machine virtuelle.",
+                  "vmdk": "Vous devez sélectionner un fichier VMDK",
+                  "vmdk-ova": "Il n'est pas nécessaire de spécifier des fichiers VMDK avec OVA",
+                  "ovf-ova": "Vous devez sélectionner un fichier OVF ou OVA"
+               }
+            },
+            "eula": {
+               "title": "Contrats de licence",
+               "description": "Lire et accepter les contrats de licence",
+               "agree": "J'accepte",
+               "notAgreed": "Vous devez accepter toutes licences avant de continuer"
+            },
+            "options": {
+               "title": "Options de déploiement",
+               "description": "Sélectionnez des options de déploiement.",
+               "deploymentOption": "Type de déploiement",
+               "networkMappings": "Mappages de réseau",
+               "diskProvisioning": "Provisionnement du disque",
+               "powerOnAutomatically": "Mettre automatiquement sous tension",
+               "thin": "Mince",
+               "thick": "Statique"
+            },
+            "properties": {
+               "title": "Paramètres supplémentaires",
+               "description": "Propriétés supplémentaires de la machine virtuelle"
+            },
+            "summary": {
+               "loading": "Validation de la configuration de la VM...",
+               "product": "Produit",
+               "vmName": "Nom de VM",
+               "disks": "Disques",
+               "diskType": {
+                  "label": "Type de provisionnement",
+                  "thin": "Mince",
+                  "thick": "Statique"
+               },
+               "networkMappings": "Mappages de réseau",
+               "datastore": "Banque de données",
+               "guestOSName": "Nom du SE invité",
+               "cpus": "CPU",
+               "memory": "Mémoire",
+               "expand": "Cliquer pour développer",
+               "properties": "Propriétés",
+               "validation": {
+                  "extraDisk": "Au moins une image disque supplémentaire fournie sera ignorée.",
+                  "diskMissing": "Une image disque requise est manquante.",
+                  "error": "Une erreur s'est produite lors de la création de la spécification d'importation à partir du fichier OVF."
+               },
+               "notification": {
+                  "success": "La VM {{name}} a été importée.",
+                  "error": "Échec du déploiement de la VM : {{message}}"
+               }
+            },
+            "name": {
+               "label": "Saisissez un nom pour la machine virtuelle.",
+               "placeholder": "Nom",
+               "desc": "Les noms des machines virtuelles peuvent comporter jusqu'à 80 caractères et doivent être uniques dans chaque instance ESXi."
+            },
+            "select": {
+               "click": "Cliquer pour sélectionner des fichiers",
+               "drag": " ou glisser-déplacer"
+            },
+            "notification": {
+               "match": "Le champ {{name}} ne correspond pas.",
+               "required": "Le champ {{name}} est obligatoire."
+            }
+         },
+         "register": {
+            "select": "Sélectionnez une ou plusieurs machines virtuelles, une banque de données ou un répertoire.",
+            "noVMsFound": "Aucune VM n'a été trouvée dans {{folder}}.",
+            "title": "Sélectionner des VM à enregistrer",
+            "description": "Sélectionnez une ou plusieurs machines virtuelles que vous souhaitez enregistrer. Si vous sélectionnez une banque de données ou un répertoire, toutes les VM trouvées dans cette banque de données ou ce répertoire seront enregistrées.",
+            "list": {
+               "columns": {
+                  "vmx": "Fichier VMX",
+                  "remove": "Supprimer"
+               },
+               "actions": {
+                  "removeSelected": {
+                     "label": "Supprimer la sélection",
+                     "tooltip": "Supprimer les VM sélectionnées de la liste d'enregistrement"
+                  },
+                  "removeAll": {
+                     "label": "Supprimer tout",
+                     "tooltip": "Supprimer toutes les VM de la liste d'enregistrement"
+                  }
+               },
+               "none": "Aucun"
+            },
+            "summary": {
+               "provisionType": "Type de provisionnement",
+               "vm": "Machines virtuelles"
+            },
+            "notification": {
+               "success": "La VM {{name}} a été enregistrée.",
+               "register": "{{count}} VM enregistrées",
+               "error": "Échec de l'enregistrement de la VM {{name}}. {{message}}"
+            }
+         },
+         "clone": {
+            "summary": {
+               "vm": "VM à cloner",
+               "clone": "Clonage dans",
+               "datastore": "Banque de données :"
+            },
+            "notification": {
+               "sucess": "La VM {{name}} a été clonée.",
+               "error": "Échec du clonage de la VM {{name}}"
+            }
+         },
+         "summary": {
+            "title": "Prêt à terminer",
+            "description": "Vérifiez vos sélections de paramètres avant de terminer l'assistant.",
+            "provisionType": "Type de provisionnement",
+            "vmName": "Nom",
+            "datastore": "Banque de données",
+            "guestOS": "Nom du SE invité",
+            "cpu": "vCPU",
+            "memory": "Mémoire",
+            "nic": "Adaptateurs réseau",
+            "nicNetwork": "Adaptateur réseau {{size}} - Réseau",
+            "nicType": "Adaptateur réseau {{size}} - Type",
+            "ideController": "Contrôleur IDE {{size}}",
+            "scsiController": "Contrôleur SCSI {{size}}",
+            "nvmeController": "Contrôleur NVMe {{size}}",
+            "sataController": "Contrôleur SATA {{size}}",
+            "newSataController": "Nouveau contrôleur SATA",
+            "newNVMEController": "Nouveau contrôleur NVMe",
+            "createHardDisk": "Disque dur {{size}}",
+            "capacity": "Capacité",
+            "datastore": "Banque de données",
+            "diskProvisioning": "Provisionnement",
+            "thin": "À provisionnement dynamique",
+            "lazy": "À provisionnement statique, mise à zéro tardive",
+            "eager": "À provisionnement statique, mise à zéro imminente",
+            "mode": "Mode",
+            "controller": "Contrôleur",
+            "serialPort": "Port série {{size}}",
+            "newSerialPort": "Nouveau port série",
+            "parallelPort": "Port parallèle {{size}}",
+            "newParallelPort": "Nouveau port parallèle",
+            "usbController": "Contrôleur USB {{size}}",
+            "usbDevice": "Périphérique USB {{size}}",
+            "createCdrom": "Lecteur de CD/DVD {{size}}",
+            "createFloppy": "Lecteur de disquettes {{size}}",
+            "backing": "Sauvegarde",
+            "client": "CD-ROM de périphérique distant",
+            "connected": "Connecté",
+            "sound": {
+               "label": "Contrôleur audio",
+               "VirtualHdAudioCard": "Audio HD",
+               "VirtualSoundBlaster16": "Sound Blaster 16",
+               "VirtualEnsoniq1371": "Ensoniq 1371"
+            },
+            "notification": {
+               "success": "La machine virtuelle {{name}} a été créée.",
+               "error": {
+                  "title": "Erreur de configuration de VM",
+                  "message": "La configuration de la VM a été rejetée. Reportez-vous à la console du navigateur."
+               }
+            }
+         }
+      },
+      "unregister": {
+         "title": "Désinscrire des machines virtuelles",
+         "title-single": "Désinscrire la machine virtuelle - {{name}}",
+         "title-multiple": "Désinscrire {{count}} machines virtuelles",
+         "content": "Voulez-vous vraiment désinscrire les machines virtuelles suivantes ?",
+         "success": "{{num}} machines virtuelles ont été désinscrites.",
+         "failure": "Impossible de désinscrire au moins une machine virtuelle",
+         "rejectLabel": "Annuler"
+      },
+      "context": {
+         "title": "Machines virtuelles",
+         "newWindow": {
+            "label": "Ouvrir dans une nouvelle fenêtre",
+            "tooltip": "Ouvrir la liste des machines virtuelles dans une nouvelle fenêtre"
+         },
+         "closeConsole": {
+            "label": "Fermer la console",
+            "tooltip": "Fermer cette fenêtre de console"
+         },
+         "exitFullScreenConsole": {
+            "label": "Quitter le mode plein écran",
+            "tooltip": "Quitter le mode plein écran"
+         },
+         "autostart": {
+            "autostart": {
+               "label": "démarrage automatique",
+               "tooltip": "Configurer les options de démarrage automatique"
+            },
+            "enable": {
+               "label": "Activer",
+               "tooltip": "Activer le démarrage automatique pour la machine virtuelle"
+            },
+            "increasePriority": {
+               "label": "Démarrer plus tard",
+               "tooltip": "Définir l'ordre de démarrage de la machine virtuelle pour qu'elle démarre après les autres"
+            },
+            "decreasePriority": {
+               "label": "Démarrer plus tôt",
+               "tooltip": "Définir l'ordre de démarrage de la machine virtuelle pour qu'elle démarre avant les autres"
+            },
+            "disable": {
+               "label": "Désactiver",
+               "tooltip": "Supprimer la machine virtuelle de la configuration du démarrage automatique"
+            },
+            "configure": {
+               "label": "Configurer",
+               "tooltip": "Configurer les paramètres de démarrage automatique de la machine virtuelle"
+            }
+         },
+         "export": {
+            "label": "Exporter",
+            "tooltip": "Exporter cette VM en tant que modèle OVF",
+            "download": {
+               "title": "Télécharger le fichier",
+               "contentSize": "Vous allez télécharger {{fileIndex}} fichiers sur {{numFiles}} pour cette machine virtuelle. La taille de ce fichier est de {{size}}.\n\nVeillez à autoriser les fenêtres contextuelles provenant de l'adresse IP ou du nom de domaine complet de cet hôte.",
+               "contentNoSize": "Vous allez télécharger {{fileIndex}} fichiers sur {{numFiles}} pour cette machine virtuelle.\n\nVeillez à autoriser les fenêtres contextuelles provenant de l'adresse IP ou du nom de domaine complet de cet hôte.",
+               "confirmLabel": "OK",
+               "rejectLabel": "Annuler"
+            }
+         },
+         "unregister": {
+            "label": "Désinscrire",
+            "tooltip": "Désinscrire cette machine virtuelle",
+            "tooltipMultiple": "Désinscrire ces machines virtuelles",
+            "tooltipDisabled": "Désinscrire une ou plusieurs machines virtuelles",
+            "tooltipWarnPoweredOn": " - au moins une VM est encore sous tension. Vous ne pouvez pas désinscrire des machines virtuelles sous tension"
+         },
+         "delete": {
+            "label": "Supprimer",
+            "tooltip": "Supprimer cette machine virtuelle",
+            "tooltipMultiple": "Supprimer ces machines virtuelles",
+            "tooltipDisabled": "Supprimer une machine virtuelle",
+            "tooltipWarnPoweredOn": " - au moins une VM est encore sous tension. Vous ne pouvez pas supprimer des machines virtuelles sous tension"
+         },
+         "help": {
+            "label": "Aide",
+            "tooltip": "Rubriques d'aide sur les machines virtuelles"
+         },
+         "openInNewWindow": {
+            "label": "Ouvrir dans une nouvelle fenêtre",
+            "tooltip": "Ouvrir cette machine virtuelle dans une nouvelle fenêtre"
+         },
+         "answerQuestion": {
+            "label": "Répondre à une question",
+            "tooltip": "Répondre à une question en attente pour cette machine virtuelle",
+            "tooltipMultipleVMs": "Vous pouvez répondre aux questions pour une seule machine virtuelle à la fois"
+         },
+         "power": {
+            "label": "Alimentation",
+            "tooltip": "Opérations d'alimentation pour ces machines virtuelles",
+            "powerOn": {
+               "label": "Mettre sous tension",
+               "tooltip": "Mettre sous tension cette machine virtuelle"
+            },
+            "powerOff": {
+               "label": "Mettre hors tension",
+               "tooltip": "Mettre hors tension cette machine virtuelle",
+               "warnSuspendedOrOn": "Au moins une machine virtuelle est interrompue ou sous tension ; la mise hors tension d'une machine virtuelle interrompue risque d'entraîner la perte de données dans l'invité.",
+               "warnSuspended": "Cette VM est actuellement interrompue. Sa mise hors tension risque d'entraîner la perte de données dans l'invité.",
+               "warnOn": "Cette VM est actuellement sous tension. Sa mise hors tension risque d'entraîner la perte de données dans l'invité."
+            },
+            "suspend": {
+               "label": "Interrompre",
+               "tooltip": "Interrompre cette machine virtuelle"
+            },
+            "reset": {
+               "label": "Réinitialiser",
+               "tooltip": "Réinitialise la machine virtuelle"
+            }
+         },
+         "create": {
+            "label": "Créer/Enregistrer une VM",
+            "tooltip": "Créer ou enregistrer une machine virtuelle à l'aide d'un assistant"
+         },
+         "snapshots": {
+            "label": "Snapshots",
+            "tooltip": "Opérations de snapshot pour cette machine virtuelle"
+         },
+         "console": {
+            "console": {
+               "label": "Console",
+               "tooltip": "Options de la console pour cette machine virtuelle"
+            },
+            "browser": {
+               "label": "Ouvrir une console de navigateur",
+               "tooltip": "Ouvrir une console de navigateur pour cette machine virtuelle"
+            },
+            "browserNewWindow": {
+               "label": "Ouvrir une console dans une nouvelle fenêtre",
+               "tooltip": "Ouvrir une console de navigateur pour cette machine virtuelle dans une nouvelle fenêtre"
+            },
+            "browserNewTab": {
+               "label": "Ouvrir une console dans un nouvel onglet",
+               "tooltip": "Ouvrir une console de navigateur pour cette machine virtuelle dans un nouvel onglet"
+            },
+            "showMousePad": {
+               "label": "Afficher un tapis de souris relatif",
+               "tooltip": "Afficher un tapis de souris relatif pour cette VM, utile pour les VM qui ont des problèmes avec le contrôle de la souris depuis la console de navigateur."
+            },
+            "resetSize": {
+               "label": "Réinitialiser sur la résolution native",
+               "tooltip": "Réinitialiser la console sur la résolution native de la VM"
+            },
+            "vmrc": {
+               "label": "Lancer la console distante",
+               "tooltip": "Lancer une console à l'aide de l'application VMRC autonome"
+            },
+            "downloadVMRC": {
+               "label": "Télécharger VMRC",
+               "tooltip": "Accéder à VMware.com pour télécharger l'application VMRC autonome"
+            }
+         },
+         "guest": {
+            "guestOS": {
+               "label": "SE invité",
+               "tooltip": "Opérations pour le système d'exploitation invité"
+            },
+            "shutDown": {
+               "label": "Arrêter",
+               "tooltip": "Arrêter cet invité"
+            },
+            "restart": {
+               "label": "Redémarrer",
+               "tooltip": "Redémarrer cet invité"
+            },
+            "sendKeys": {
+               "title": "Envoyer les touches",
+               "toolTip": "Envoyer les touches à l'invité",
+               "toolTipKeys": "Envoyer {{description}} à l'invité",
+               "toolTipNoWebMKS": "Une session de console de navigateur est requise pour envoyer des touches"
+            },
+            "keyCombinations": {
+               "ctrlAltDelete": {
+                  "title": "Ctrl-Alt-Suppr",
+                  "toolTip": "Envoyer Ctrl-Alt-Suppr à l'invité"
+               },
+               "ctrlC": {
+                  "title": "Ctrl-C",
+                  "toolTip": "Envoyer Ctrl-C à l'invité"
+               },
+               "escape": {
+                  "title": "Échappement",
+                  "toolTip": "Envoyer l'échappement à l'invité"
+               },
+               "functionKey": {
+                  "title": "{{description}}",
+                  "toolTip": "Envoyer {{description}} à l'invité"
+               }
+            },
+            "installTools": {
+               "label": "Installation de VMware Tools",
+               "tooltip": "Monter le CD-ROM du programme d'installation de VMware Tools dans ce SE invité"
+            },
+            "upgradeTools": {
+               "label": "Mettre à niveau VMware Tools",
+               "tooltip": "Mettre à niveau VMware Tools ans ce SE invité",
+               "notification": {
+                  "successSingle": "VMware Tools a été mis à niveau sur {{vmName}}.",
+                  "failedSingle": "Échec de la mise à niveau de VMware Tools sur {{vmName}} : {{reason}}",
+                  "successMultiple": "VMware Tools a été mis à niveau sur {{num}} machines virtuelles.",
+                  "failedMultiple": "Échec de la mise à niveau de VMware Tools sur au moins 1 machine virtuelle : {{reason}}"
+               }
+            }
+         },
+         "editSettings": {
+            "label": "Modifier les paramètres",
+            "tooltip": "Modifier les paramètres pour cette machine virtuelle"
+         },
+         "editNotes": {
+            "label": "Modifier notes",
+            "tooltip": "Modifier les notes de cette machine virtuelle"
+         },
+         "rename": {
+            "label": "Renommer",
+            "tooltip": "Renommer cette machine virtuelle",
+            "tooltipSingle": "Une seule VM peut être renommée"
+         }
+      },
+      "error": {
+         "unknown": "Désolé, la VM « {{moid}} » est introuvable."
+      },
+      "warning": {
+         "multiThreshold": {
+            "title": "Avertissement",
+            "confirmLabel": "Oui",
+            "rejectLabel": "Non",
+            "content": "Si vous effectuez cette opération sur les VM sélectionnées ({{num}}), votre navigateur Web pourrait se bloquer temporairement ou devenir instable. Nous vous recommandons de réduire le nombre de VM sélectionnées (moins de {{threshold}}). Voulez-vous continuer ?"
+         },
+         "shutDown": {
+            "title": "Confirmer l'arrêt de l'invité",
+            "confirmLabel": "Oui",
+            "rejectLabel": "Annuler",
+            "content": "Voulez-vous vraiment arrêter {{name}} ?",
+            "contentMultiple": "Voulez-vous vraiment arrêter {{num}} machines virtuelles ?"
+         },
+         "restart": {
+            "title": "Confirmer le redémarrage de l'invité",
+            "confirmLabel": "Oui",
+            "rejectLabel": "Annuler",
+            "content": "Voulez-vous vraiment redémarrer {{name}} ?",
+            "contentMultiple": "Voulez-vous vraiment redémarrer {{num}} machines virtuelles ?"
+         }
+      },
+      "logs": {
+         "dropdown": {
+            "default": "Sélectionner un journal"
+         },
+         "actionBar": {
+            "refresh": {
+               "label": "Actualiser",
+               "tooltip": "Actualiser le journal"
+            },
+            "close": {
+               "label": "Fermer",
+               "tooltip": "Fermer cette fenêtre"
+            }
+         }
+      },
+      "rename": {
+         "current": "Nom actuel",
+         "new": "Nouveau nom",
+         "title": "Renommer la machine virtuelle - {{name}}",
+         "ok": "Renommer",
+         "error": "Veuillez indiquer un nom",
+         "rejectLabel": "Annuler",
+         "notification": {
+            "success": "La VM {{name}} a été renommée.",
+            "error": "Échec de l'attribution d'un nouveau nom à {{name}}"
+         }
+      },
+      "help": {
+         "content": "<p>Les paramètres des machines virtuelles sont décrits ci-dessous :</p><dl><dt>État</dt><dd>La colonne d'état indique l'état actuel de la machine virtuelle : sous tension, hors tension, interrompu.</dd><dt>État</dt><dd>La colonne de statut montre un statut de niveau supérieur de la machine virtuelle en fonction des notifications actuellement en attente pour cette machine. Par exemple, si VMware Tools n'est pas installé, le statut sera <strong>Info</strong>.<br /><br /> Un état <strong>Non valide</strong> signifie que la machine virtuelle n'apparaît pas comme accessible dans la banque de données. Il se peut que les fichiers aient été supprimés. La seule opération disponible pour une machine virtuelle non valide est Désinscrire.<br /><br /> Un état <strong>Incohérent</strong> indique que l'état de la machine virtuelle est inconnu. La prise en charge de cycles d'alimentation pour la machine virtuelle résout généralement ce problème. </dd><dt>Espace alloué</dt><dd>La colonne d'espace provisionné affiche la quantité de stockage allouée à la machine virtuelle (cumulée sur l'ensemble des disques virtuels).</dd><dt>Espace utilisé</dt><dd>La colonne d'espace utilisé affiche la quantité de stockage actuellement utilisée par la machine virtuelle. Cette quantité inclut le stockage de données sur les disques virtuels des machines virtuelles, l'état interrompu, les snapshots et les fichiers d'échange.</dd><dt>Nom d'hôte</dt><dd>La colonne de nom d'hôte montre le nom d'hôte du système d'exploitation invité.</dd><dt>CPU Hôte</dt><dd>La colonne de CPU hôte indique la quantité de ressources CPU utilisée par les VCPU de la machine virtuelle sur le CPU hôte.</dd><dt>Mémoire hôte</dt><dd>La colonne de mémoire hôte indique la quantité de mémoire utilisée par la machine virtuelle sur le système hôte.</dd></dl>",
+         "title": "Aide"
+      }
+   }
+}

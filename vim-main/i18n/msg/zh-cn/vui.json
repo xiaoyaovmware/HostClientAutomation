@@ -1,0 +1,41 @@
+{
+   "vui": {
+      "ok": "确定",
+      "back": "上一页",
+      "next": "下一页",
+      "finish": "完成",
+      "cancel": "取消",
+      "filter": "筛选",
+      "of": "/",
+      "item": "项",
+      "items": "项",
+      "actionsMenu" : {
+         "empty": "无任何可用操作"
+      },
+      "datagrid" : {
+         "emptyTable": "没有要显示的项",
+         "zeroRecords": "未找到匹配的记录",
+         "colFilterInfo": "显示值符合以下条件的项",
+         "colFilterBooleanInfo": "显示值符合以下条件的项",
+         "filter": "筛选",
+         "clear": "清除",
+         "isTrue": "True",
+         "isFalse": "False",
+         "and": "与",
+         "or": "或",
+         "contains": "包含",
+         "eq": "等于",
+         "neq": "不等于",
+         "gte": "大于或等于",
+         "gt": "大于",
+         "lte": "小于或等于",
+         "lt": "小于",
+         "item": "项",
+         "items": "项",
+         "save": "应用更改"
+      },
+      "notification" : {
+         "defaultTitle" : "通知"
+      }
+   }
+}

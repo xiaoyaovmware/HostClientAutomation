@@ -1,0 +1,537 @@
+{
+   "number": {
+      "format": {
+         "separator": ".",
+         "delimiter": ",",
+         "strip_insignificant_zeros": "1"
+      }
+   },
+   "date": {
+      "day_names": [
+         "星期日",
+         "星期一",
+         "星期二",
+         "星期三",
+         "星期四",
+         "星期五",
+         "星期六"
+      ],
+      "abbr_day_names": [
+         "星期日",
+         "星期一",
+         "星期二",
+         "星期三",
+         "星期四",
+         "星期五",
+         "星期六"
+      ],
+      "month_names": [
+         "null",
+         "一月",
+         "二月",
+         "三月",
+         "四月",
+         "五月",
+         "六月",
+         "七月",
+         "八月",
+         "九月",
+         "十月",
+         "十一月",
+         "十二月"
+      ],
+      "abbr_month_names": [
+         "null",
+         "一月",
+         "二月",
+         "三月",
+         "四月",
+         "五月",
+         "六月",
+         "七月",
+         "八月",
+         "九月",
+         "十月",
+         "十一月",
+         "十二月"
+      ],
+      "format": {
+         "iso": "%Y/%m/%d %H:%M:%S",
+         "long": "%Y年%-m月%d日 %A %H:%M:%S %z",
+         "utc": "%Y年%-m月%d日 %A %H:%M:%S %z",
+         "short": "%Y/%m/%d %H:%M:%S",
+         "short_utc": "%m/%d/%Y %H:%M:%S UTC",
+         "date": "%Y/%m/%d",
+         "time": "%H:%M:%S"
+      }
+   },
+   "units": {
+      "TB": "TB",
+      "GB": "GB",
+      "MB": "MB",
+      "KB": "KB",
+      "B": "B",
+      "MHz": "MHz",
+      "GHz": "GHz",
+      "mbps": "mbps"
+   },
+   "grid": {
+      "quickFilters": "快速篩選器...",
+      "noItems": "沒有項目",
+      "sortAscending": "遞增排序",
+      "sortDescending": "遞減排序",
+      "filter": "篩選",
+      "filterHeader": "顯示值滿足下列條件的項目",
+      "clear": "清除",
+      "columns": "選取資料行",
+      "isTrue": "為 true",
+      "isFalse": "為 false",
+      "and": "和",
+      "or": "或",
+      "startswith": "開始於",
+      "contains": "包含",
+      "endswith": "結束於",
+      "eq": " 等於",
+      "neq": " 不等於",
+      "gte": "大於或等於",
+      "gt": "大於",
+      "lte": "小於或等於",
+      "lt": "小於"
+   },
+   "general": {
+      "yes": "是",
+      "no": "否",
+      "ok": "確定",
+      "cancel": "取消",
+      "default": "預設值",
+      "enabled": "已啟用",
+      "disabled": "已停用",
+      "none": "無",
+      "select": "選取",
+      "na": {
+         "label": "不適用",
+         "title": "不適用"
+      },
+      "or": "或",
+      "openDocumentation": "開啟 VMware Host Client 說明文件",
+      "loading": {
+         "label": "正在載入...",
+         "title": "正在載入",
+         "error": "發生錯誤，請再試一次"
+      },
+      "unknown": "未知",
+      "unlimited": "無限制",
+      "active": "作用中",
+      "automatic": "自動",
+      "notActive": "非作用中",
+      "help": "說明",
+      "time": {
+         "minutes": "分鐘",
+         "seconds": "秒"
+      }
+   },
+   "performance": {
+      "dataAt": "位於下列位置的資料"
+   },
+   "wizard": {
+      "back": "上一頁",
+      "next": "下一頁",
+      "finish": "完成"
+   },
+   "localeOverride": {
+      "title": "地區設定覆寫警告",
+      "content": "URL 地區設定覆寫 (例如 ?locale=fr-fr) 及設定地區設定覆寫均已使用 URL 指定的地區設定設定。"
+   },
+   "missingTunnel": {
+      "title": "主機 Proxy 組態錯誤",
+      "contentAdded": "必要主機 Proxy 組態遺失且已自動更正。<strong>但是，您必須將主機重新開機才可讓變更生效。</strong>如需更多詳細資料，請閱讀<a href=\"http://pubs.vmware.com/Release_Notes/tw/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">已知問題</a>。",
+      "contentNotAdded": "必要主機 Proxy 組態遺失。此將導致瀏覽器內主控台連線失敗。您仍可以使用獨立 VMRC 應用程式。請在<a href=\"http://pubs.vmware.com/Release_Notes/en/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">此處</a>閱讀已知問題，瞭解修正此問題的指示。"
+   },
+   "client": {
+      "about": {
+         "title": "關於",
+         "close": "關閉",
+         "warnVersionMismatch": "在 ESXi 上安裝的 Host Client 版本與正在執行的版本不相符。請嘗試重新整理瀏覽器或清除瀏覽器快取。",
+         "fullOSSDisclosure": "如需完整的 ESXi 開放原始碼授權公開內容，請參閱<a href=\"{{url}}\" target=\"_blank\">此處</a>。"
+      },
+      "context": {
+         "about": {
+            "label": "關於",
+            "tooltip": "顯示有關 VMware Host Client 的資訊"
+         },
+         "vmrc": {
+            "label": "VMware Remote Console",
+            "tooltip": "取得獨立 VMware Remote Console 應用程式"
+         },
+         "help": {
+            "label": "說明",
+            "tooltip": "在新視窗中開啟正式 VMware 主機說明文件"
+         },
+         "tools": {
+            "label": "工具和連結",
+            "tooltip": "此主機提供的工具"
+         },
+         "getVC": {
+            "label": "取得 vCenter Server",
+            "tooltip": "下載並評估 VMware vCenter Server"
+         },
+         "mob": {
+            "label": "受管理物件瀏覽器",
+            "tooltip": "開啟受管理物件瀏覽器",
+            "tooltipDisabled": "已停用受管理物件瀏覽器。可透過將進階選項 Config.HostAgent.plugins.solo.enableMob 設定為 true 加以啟用",
+            "dialog": {
+               "title": "啟用受管理物件瀏覽器",
+               "content": "目前已停用受管理物件瀏覽器。要啟用並開啟嗎?",
+               "cancel": "取消",
+               "confirmLabel": "啟用"
+            }
+         },
+         "feedback": {
+            "label": "意見反應",
+            "tooltip": "瞭解如何提交有關 VMware Host Client 的意見反應"
+         },
+         "sdk": {
+            "label": "SDK 說明文件",
+            "tooltip": "瞭解如何使用 VMware 的 Web 服務 SDK"
+         },
+         "vcli": {
+            "label": "遠端命令列工具",
+            "tooltip": "瞭解如何使用 VMware 的遠端命令列工具"
+         },
+         "vmware": {
+            "label": "VMware.com",
+            "tooltip": "造訪 VMware 網站"
+         },
+         "clientSettings": {
+            "label": "設定",
+            "tooltip": "管理 VMware Host Client 的設定",
+            "sendTelemetry": {
+               "label": "傳送使用量統計資料",
+               "tooltip": "將使用量統計資料傳回 VMware.com 以協助我們識別 VMware Host Client 存在的問題"
+            },
+            "visualEffects": {
+               "label": "啟用視覺效果",
+               "tooltip": "啟用視覺效果，如內容功能表的淡入和淡出"
+            },
+            "recentItems": {
+               "label": "僅顯示最近的物件",
+               "tooltip": "僅在物件導覽器中顯示最近選取的物件"
+            },
+            "showWelcome": {
+               "label": "顯示歡迎訊息",
+               "tooltip": "是否在登入時顯示歡迎訊息通知"
+            },
+            "consoleSettings": {
+               "label": "主控台",
+               "tooltip":"主控台設定",
+               "defaultConsole": {
+                  "label": "預設主控台",
+                  "tooltip": "按一下螢幕擷取畫面時出現的預設主控台",
+                  "vmrc": {
+                     "label": "VMware Remote Console",
+                     "tooltip": "開啟虛擬機器主控台時使用 VMware Remote Console"
+                  },
+                  "webmks": {
+                     "label": "瀏覽器內",
+                     "tooltip": "開啟虛擬機器主控台時使用瀏覽器內 HTML5 主控台"
+                  }
+               }
+            },
+            "keyboardSettings": {
+               "label": "鍵盤配置",
+               "tooltip": "設定 Host Client 的鍵盤設定",
+               "en-US": "英文",
+               "fr-FR": "法文",
+               "fr-CH": "法文 (瑞士)",
+               "de-DE": "德文",
+               "de-CH": "德文 (瑞士)",
+               "pt-BR": "葡萄牙文 (巴西)",
+               "pt-PT": "葡萄牙文 (葡萄牙)",
+               "it-IT": "義大利文",
+               "es-ES": "西班牙文",
+               "ja-JP_106/109": "日文"
+            },
+            "languageSettings": {
+               "label": "語言",
+               "tooltip": "設定 Host Client 的語言設定",
+               "en-us": {
+                  "label": "英文",
+                  "tooltip": "英文"
+               },
+               "fr-fr": {
+                  "label": "法文",
+                  "tooltip": "法文"
+               },
+               "es-es": {
+                  "label": "西班牙文",
+                  "tooltip": "西班牙文"
+               },
+               "de-de": {
+                  "label": "德文",
+                  "tooltip": "德文"
+               },
+               "ko-kr": {
+                  "label": "韓文",
+                  "tooltip": "韓文"
+               },
+               "zh-cn": {
+                  "label": "簡體中文",
+                  "tooltip": "簡體中文"
+               },
+               "zh-tw": {
+                  "label": "繁體中文",
+                  "tooltip": "繁體中文"
+               },
+               "ja-jp": {
+                  "label": "日文",
+                  "tooltip": "日文"
+               },
+               "browserDefault": {
+                  "label": "瀏覽器預設",
+                  "tooltip": "讓 Host Client 使用瀏覽器設定"
+               }
+            },
+            "applicationTimeout": {
+               "label": "應用程式逾時",
+               "tooltip": "Host Client 自動登出前的閒置時間量",
+               "xMinutes": "{{x}} 分鐘",
+               "xHour": "{{x}} 小時",
+               "xHours": "{{x}} 小時",
+               "off": "關閉",
+               "warning": {
+                  "confirmLabel": "是",
+                  "rejectLabel": "取消",
+                  "title": "警告",
+                  "content": "停用工作階段逾時可能會讓您的 ESXi 主機容易遭受惡意活動。是否確定要停用工作階段逾時?"
+               }
+            },
+            "reset": {
+               "label": "重設為預設值",
+               "tooltip": "將 Host Client 設定重設為預設值"
+            }
+         },
+         "autorefresh": {
+            "label": "自動重新整理",
+            "tooltip": "告知 Host Client 在指定期間從主機自動重新整理資料",
+            "off": {
+               "label": "關閉",
+               "tooltip": "不自動重新整理"
+            },
+            "xSeconds": "{{x}} 秒"
+         }
+      },
+      "feedback": {
+         "title": "意見反應",
+         "close": "關閉"
+      }
+   },
+   "scriptingConsole": {
+      "title": "指令碼主控台",
+      "close": "關閉"
+   },
+   "upload": {
+      "inProgress": "檔案上傳正在進行中"
+   },
+   "hypervisorLicense": {
+      "title": "受限制的授權",
+      "closeAndDismiss": "關閉",
+      "content": "指派至此主機的授權會限制可執行的作業。",
+      "close": "關閉"
+   },
+   "restrictedVersion": {
+      "title": "受限制的版本",
+      "close": "關閉",
+      "content": "指派的授權不允許執行此作業"
+   },
+   "update": {
+      "check": {
+         "checkForUpdates": "檢查更新",
+         "title": "最新",
+         "content": "VMware Host Client 已經是最新版本。",
+         "ok": "確定"
+      },
+      "notify": {
+         "dialog": {
+            "title": "用戶端更新可用",
+            "content": "有新版 VMware Host Client {{version}} 可用。",
+            "current": "您目前正在執行 {{current}} 版。",
+            "whatsNew": "有哪些新增功能?",
+            "never": "以後不要自動檢查更新",
+            "updateNow": "更新",
+            "ok": "不是現在"
+         }
+      },
+      "perform": {
+         "update": "更新",
+         "success": "主機已成功更新",
+         "successWithMessage": "主機已成功更新: {{message}}",
+         "failure": "無法套用更新 - {{reason}}",
+         "badFormat": "更新未使用預期格式。請提供 VIB 檔案的路徑或 URL。",
+         "vumWarning": {
+            "title": "警告",
+            "content": "如果此主機正受 VMware Update Manager 管理，執行更新可能會導致主機變為不符合標準。繼續嗎?",
+            "rejectLabel": "取消",
+            "confirmLabel": "繼續"
+         },
+         "dialog": {
+            "title": "安裝更新",
+            "content": "在下面輸入 VIB 的 URL 或資料存放區路徑",
+            "missingVIBURL": "請輸入您要更新之 VIB 的 URL 或資料存放區路徑",
+            "missingProxy": "請輸入 Proxy 伺服器位址",
+            "malformedPath": "URL 的開頭必須為 <em>http://</em> 或 <em>https://</em> <br>本機路徑的開頭必須為 <em>/</em> ",
+            "rejectLabel": "取消",
+            "proxy": {
+               "use": "使用 Proxy 伺服器",
+               "server": "Proxy 伺服器",
+               "username": "使用者名稱",
+               "password": "密碼",
+               "port": "連接埠"
+            }
+         }
+      }
+   },
+   "anonymous": {
+      "dialog": {
+         "title": "協助我們改進 VMware Host Client",
+         "ok": "確定",
+         "content": "本產品參與 VMware 的客戶經驗改進計劃 (以下稱「CEIP」)。CEIP 為 VMware 提供能讓其改進產品與服務、修正問題的資訊，並就如何以最佳方式部署和使用我們的產品為您提供建議。做為 CEIP 的一部分，VMware 會結合貴組織的 VMware 授權金鑰，定期收集貴組織使用 VMware 產品和服務的相關技術資訊。此類資訊不會單獨識別任何個人身分。如需有關 CEIP 的其他資訊，請參閱位於 <a href=\"http://www.vmware.com/trustvmware/ceip.html\" target=\"_blank\">VMware.com</a> 的信任與保證中心。您可以在下方及 Host Client 的「設定」功能表中選取您的參與喜好設定。",
+         "checkbox": {
+            "label": "加入 VMware 客戶經驗改進計劃"
+         }
+      }
+   },
+   "settings": {
+      "reset": {
+         "dialog": {
+            "title": "重設設定",
+            "ok": "確定",
+            "cancel": "取消",
+            "content": "所有應用程式設定現在都將重設為出廠預設值。此作業無法回復。重設完成後將重新載入應用程式。"
+         }
+      }
+   },
+   "root": {
+      "client": "ESXi",
+      "title": "VMware ESXi",
+      "titleWithMessage": "{{message}} - VMware ESXi",
+      "logIn": "登入",
+      "logViewer": "記錄檢視器",
+      "console": "主控台",
+      "recent_tasks": "最近的工作",
+      "minimize": " 最小化",
+      "about": "Copyright © 1998-{{copyrightYear}} VMware, Inc. 版權所有。本產品係受美國和國際之版權及智慧財產權法保護。VMware 產品受 <a href=\"http://www.vmware.com/go/patents-tw\" target=\"_blank\">http://www.vmware.com/go/patents-tw</a> 中所列一或多項專利所保障。",
+      "navigator": "導覽器",
+      "loading": "正在載入",
+      "backgroundImage": "背景影像",
+      "resize": "視窗調整大小",
+      "progressBar": "進度列",
+      "lostConnection": "已中斷連線"
+   },
+   "notification": {
+      "type": {
+         "info": "資訊",
+         "warning": "警告",
+         "error": "錯誤",
+         "question": "問題"
+      },
+      "ok": "確定",
+      "dismiss": "關閉",
+      "dismissNotification": "關閉通知",
+      "actions": {
+         "label": "動作",
+         "tooltip": "與此通知相關的動作"
+      }
+   },
+   "entity": {
+      "type": {
+         "VirtualMachine": "虛擬機器",
+         "HostSystem": "主機",
+         "Datastore": "資料存放區",
+         "Folder": "資料夾",
+         "ResourcePool": "資源集區"
+      }
+   },
+   "menu": {
+      "host": {
+         "title": "主機",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "監控",
+         "permissions": "權限",
+         "licensing": "授權"
+      },
+      "vm": {
+         "title": "虛擬機器",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "監控",
+         "more": "更多虛擬機器..."
+      },
+      "storage": {
+         "title": "儲存區",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "監控",
+         "more": "更多儲存區..."
+      },
+      "network": {
+         "title": "網路",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "監控",
+         "more": "更多網路..."
+      },
+      "rp": {
+         "title": "資源集區",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "監控"
+      },
+      "monitor": {
+         "title": "監控",
+         "events": "事件",
+         "tasks": "工作",
+         "logs": "記錄"
+      }
+   },
+   "session": {
+      "start": "您的工作階段將於 {{time}} 到期。",
+      "timeout": "由於閒置，您已登出",
+      "appTitleIdle": "直至您的工作階段逾時",
+      "appTitleTimedOut": "工作階段逾時"
+   },
+   "logout": {
+      "error": "登出時發生不明錯誤",
+      "menu": {
+         "label": "登出",
+         "tooltip": "結束與此主機相關的工作階段"
+      }
+   },
+   "login": {
+      "host": "主機名稱",
+      "username": "使用者名稱",
+      "password": "密碼",
+      "timeout": "與 ESXi 主機的連線已逾時",
+      "logging": "正在登入 ESXi 主機..."
+   },
+   "search": {
+      "placeholder": "搜尋",
+      "filterSeries": "篩選器系列"
+   },
+   "directives": {
+      "progressChart": {
+         "free": "可用:",
+         "used": "已使用:",
+         "capacity": "容量:"
+      },
+      "search": {
+         "noResults": "找不到任何結果"
+      },
+      "notification": {
+         "close": "關閉"
+      }
+   },
+   "links": {
+      "language": "tw"
+   }
+}

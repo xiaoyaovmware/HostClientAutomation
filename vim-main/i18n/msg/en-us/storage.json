@@ -1,0 +1,642 @@
+{
+   "storage": {
+      "title": "Storage",
+      "tabs": {
+         "datastores": {
+            "label": "Datastores",
+            "tooltip": "Datastores"
+         },
+         "adapters": {
+            "label": "Adapters",
+            "tooltip": "Adapters"
+         },
+         "devices": {
+            "label": "Devices",
+            "tooltip": "Devices"
+         }
+      },
+      "wizard": {
+         "partitionType": "Partition Type",
+         "error": {
+            "scheme": "Please select a partitioning scheme",
+            "partition": "No partition has been created"
+         }
+      },
+      "device": {
+         "context": {
+            "disk": {
+               "clear": {
+                  "label": "Clear partition table",
+                  "tooltip": "Clear the partition table of this disk"
+               },
+               "editPartitions": {
+                  "label": "Edit partitions",
+                  "tooltip": "Edit the partition table of this disk"
+               },
+               "rescan": {
+                  "title": "Rescan",
+                  "tooltip": "Rescan all storage devices for datastores"
+               }
+            }
+         },
+         "editPartitions": {
+            "title": "Edit partitions - {{disk}}",
+            "rejectLabel": "Cancel",
+            "confirmLabel": "Save partitions",
+            "before": "Before",
+            "after": "After, select a partition",
+            "actions": {
+               "delete": {
+                  "label": "Delete partition",
+                  "tooltip": "Delete the selected partition"
+               },
+               "reset": {
+                  "label": "Reset",
+                  "tooltip": "Reset the partitions to their original state"
+               }
+            },
+            "warning": {
+               "title": "Confirm partition table changes to {{disk}}",
+               "content": "You are about to alter the partition table of <strong>{{disk}}</strong>. This is a destructive action that could lead to loss of data. Are you sure you want to proceed?",
+               "confirmLabel": "Yes",
+               "rejectLabel": "No"
+            },
+            "successNotification": "Partition table of {{disk}} successfully updated",
+            "failureNotification": "Failed to update partition table of {{disk}}"
+         },
+         "clear": {
+            "title": "Confirm clear partition table - {{disk}}",
+            "content": "You are about to clear the partition table of <strong>{{disk}}</strong>. This is a destructive action that could lead to loss of data. Are you sure you want to proceed?",
+            "confirmLabel": "Yes",
+            "rejectLabel": "No",
+            "failureNotification": "Failed to clear disk {{disk}}",
+            "successNotification": "Successfully cleared disk {{disk}}"
+         },
+         "type": {
+            "disk": "Disk",
+            "cdrom": "CDROM"
+         },
+         "summary": {
+            "alt": "Device",
+            "uuid": "UUID:",
+            "notApplicable": "N/A",
+            "type": "Type:",
+            "model": "Model:",
+            "path": "Path:",
+            "capacity": "Capacity:",
+            "partitionFormat": "Partition Format:",
+            "partitions": "Partitions",
+            "partitionDiagram": "Partition diagram",
+            "blocks": "blocks",
+            "portlet": {
+               "type": "Type",
+               "startBlock": "Start block",
+               "endBlock": "End block",
+               "blockSize": "Block size",
+               "size": "Size"
+            },
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for selected objects in this list."
+               },
+               "increaseCapacity": {
+                  "label": "Increase datastore capacity onto this disk",
+                  "tooltip": "Increase datastore capacity onto this device"
+               },
+               "newDatastore": {
+                  "label": "New datastore",
+                  "tooltip": "Create a new VMFS datastore on this device"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh this device's information"
+               }
+            }
+         },
+         "list": {
+            "normal": "Normal",
+            "disk": "Disk",
+            "cdrom": "CDROM",
+            "unknown": "Unknown",
+            "notApplicable": "N/A",
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for selected objects in this list."
+               },
+               "increaseCapacity": {
+                  "label": "Increase datastore capacity onto this disk",
+                  "tooltip": "Increase datastore capacity onto this device"
+               },
+               "rescan": {
+                  "label": "Rescan",
+                  "tooltip": "Rescan all storage devices for datastores"
+               },
+               "newDatastore": {
+                  "label": "New datastore",
+                  "tooltip": "Create a new VMFS datastore on this device"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh this device's information"
+               }
+            },
+            "datagrid": {
+               "name": "Name",
+               "status": "Status",
+               "type": "Type",
+               "capacity": "Capacity",
+               "queue": "Queue Depth",
+               "free": "Free space",
+               "vendor": "Vendor"
+            }
+         }
+      },
+      "partitionTypes": {
+         "C12A7328F81F11D2BA4B00A0C93EC93B": "EFI System",
+         "EBD0A0A2B9E5443387C068B6B72699C7": "Basic Data",
+         "AA31E02A400F11DB9590000C2911D1B8": "VMFS",
+         "9D27538040AD11DBBF97000C2911D1B8": "VMware Diagnostic",
+         "free": "Free space",
+         "extended": "Extended",
+         "linuxNative": "Linux native",
+         "linuxSwap": "Linux swap",
+         "none": "None",
+         "ntfs": "NTFS",
+         "vffs": "VFFS",
+         "vmfs": "VMFS",
+         "vmkDiagnostic": "VMware diagnostic"
+      },
+      "datastore": {
+         "create": {
+            "title": "New datastore",
+            "titleExtend": "Increase datastore capacity",
+            "pages": {
+               "creationType": {
+                  "title": "Select creation type",
+                  "description": "How would you like to create a datastore?"
+               },
+               "name": {
+                  "title": "Datastore name",
+                  "description": "Provide a name for the new datastore"
+               },
+               "device": {
+                  "title": "Select device",
+                  "description": "Select a device on which to create a new VMFS partition"
+               },
+               "nfs": {
+                  "title": "Provide NFS mount details",
+                  "description": "Provide the details of the NFS share you wish to mount"
+               },
+               "partitioning": {
+                  "title": "Select partitioning options",
+                  "description": "Select how you would like to partition the device",
+                  "before": "Before, select a partition",
+                  "after": "After",
+                  "selectScheme": "Select partitioning scheme",
+                  "full": "Use full disk",
+                  "custom": "Custom"
+               },
+               "datastore": {
+                  "title": "Select datastore",
+                  "description": "Select the datastore for which you want to increase capacity"
+               },
+               "summary": {
+                  "title": "Ready to complete",
+                  "description": "Summary",
+                  "type": "Datastore type",
+                  "name": "Name",
+                  "datastore": "Datastore",
+                  "disk": "Disk",
+                  "partitioning": "Partitioning"
+               }
+            },
+            "device": {
+               "desc": "The following devices are unclaimed and can be used to create a new VMFS datastore"
+            },
+            "vmfs": {
+               "label": "Create new VMFS datastore",
+               "description": "Create a new VMFS datastore on a local disk device",
+               "notificationSuccess": "VMFS datastore {{name}} succesfully created",
+               "notificationFailure": "Failed to create VMFS datastore {{name}} - {{message}}",
+               "unknown": "Unknown reason"
+            },
+            "mountVmfs": {
+               "label": "Mount existing VMFS datastore",
+               "description": "Mount an existing VMFS volume",
+               "notificationSuccess": "VMFS datastore {{name}} succesfully mounted",
+               "notificationFailure": "Failed to mount VMFS datastore {{name}} - {{message}}"
+            },
+            "extendVmfs": {
+               "label": "Increase the size of an existing VMFS datastore",
+               "description": "Increase the size of an existing datastore by adding a new extent on another disk",
+               "notificationSuccess": "VMFS datastore {{name}} succesfully extended",
+               "notificationFailure": "Failed to extend VMFS datastore {{name}} - {{message}}",
+               "unknown": "Unknown reason"
+            },
+            "nfs": {
+               "label": "Mount NFS datastore",
+               "description": "Create a new datastore by mounting a remote NFS volume",
+               "notificationSuccess": "NFS datastore {{name}} succesfully mounted",
+               "notificationFailure": "Failed to mount NFS datastore {{name}} - {{message}}",
+               "server": "NFS server",
+               "share": "NFS share",
+               "version": "NFS version",
+               "user": "Username",
+               "password": "Password",
+               "validation": {
+                  "name": "Please provide a name for the new datastore",
+                  "server": "Please provide an NFS server",
+                  "share": "Please provide an NFS share"
+               }
+            },
+            "warnFull": {
+               "title": "Warning",
+               "content": "The entire contents of this disk are about to be erased and replaced with the specified configuration, are you sure?",
+               "confirmLabel": "Yes",
+               "rejectLabel": "No"
+            }
+         },
+         "registerVM": {
+            "title": "Register VM",
+            "confirmLabel": "Register",
+            "successNotification": "VM {{path}} successfully registered",
+            "failureNotification": "Failed to register VM {{path}}. {{message}}",
+            "failureReasonUnknown": "Reason unknown",
+            "vmAlreadyRegistered": {
+               "title": "VM already registered",
+               "content": "is already registered",
+               "confirmLabel": "Close",
+               "cancelLabel": "Cancel"
+            }
+         },
+         "unmountVMFS": {
+            "title": "Confirm unmount datastore - {{name}}",
+            "confirmLabel": "Yes",
+            "rejectLabel": "Cancel",
+            "content": "Are you sure you want to unmount <strong>{{name}}</strong>?",
+            "successNotification": "Datastore {{name}} successfully unmounted",
+            "failureNotification": "Failed to unmount datastore {{name}}"
+         },
+         "mountVMFS": {
+            "successNotification": "Datastore {{name}} mounted",
+            "failureNotification": "Datastore {{name}} failed to mount"
+         },
+         "summary": {
+            "alt": "Datastore",
+            "type": "Type:",
+            "location": "Location:",
+            "hosts": "Hosts:",
+            "uuid": "UUID:",
+            "virtualMachines": "Virtual Machines:",
+            "metrics": {
+               "storage": "STORAGE"
+            },
+            "portlets": {
+               "vmfs": {
+                  "title": "VMFS details",
+                  "local": {
+                     "label": "Local",
+                     "true": "Yes",
+                     "false": "No"
+                  },
+                  "blockSize": "Block size",
+                  "version": "Version",
+                  "uuid": "UUID",
+                  "extent": "Extent {{index}}",
+                  "extentValue": "{{disk}}, partition {{partition}}"
+               }
+            },
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for selected objects in this list."
+               },
+               "increaseCapacity": {
+                  "label": "Increase capacity",
+                  "tooltip": "Increase the capacity of a datastore"
+               },
+               "register": {
+                  "label": "Register a VM",
+                  "tooltip": "Register an existing Virtual Machine in the inventory."
+               },
+               "fileBrowser": {
+                  "label": "Datastore browser",
+                  "tooltip": "Navigate to the datastore file browser."
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh this datastore's information"
+               }
+            }
+         },
+         "list": {
+            "actions": {
+               "mountVMFSDatastore": {
+                  "label": "Mount",
+                  "tooltip": "Mount an existing VMFS volume as a datastore"
+               },
+               "unmountVMFSDatastore": {
+                  "label": "Unmount",
+                  "tooltip": "Unmount this VMFS datastore"
+               },
+               "mountNFSDatastore": {
+                  "label": "Mount NFS datastore",
+                  "tooltip": "Mount a remote NFS share as a datastore"
+               },
+               "createDatastore": {
+                  "label": "New datastore",
+                  "tooltip": "Create a new datastore"
+               },
+               "increaseCapacity": {
+                  "label": "Increase capacity",
+                  "tooltip": "Increase the capacity of a datastore"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for selected objects in this list."
+               },
+               "fileBrowser": {
+                  "label": "Datastore browser",
+                  "tooltip": "Navigate to the datastore file browser."
+               },
+               "register": {
+                  "label": "Register a VM",
+                  "tooltip": "Register an existing Virtual Machine in the inventory."
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the information in the table."
+               }
+            },
+            "datagrid": {
+               "name": "Name",
+               "driveType": "Drive Type",
+               "capacity": "Capacity",
+               "provisioned": "Provisioned",
+               "free": "Free",
+               "type": "Type",
+               "thin": "Thin provisioning",
+               "access": "Access"
+            },
+            "thinProvisioning": {
+               "supported": "Supported",
+               "notSupported": "Not supported"
+            },
+            "access": {
+               "multiple": "Multiple",
+               "single": "Single"
+            }
+         },
+         "manage": {
+            "title": "Manage"
+         },
+         "browser": {
+            "nfs": {
+               "noBrowse": "Browsing NFS datastores is not possible"
+            },
+            "contextMenu": {
+               "deleteFile": {
+                  "label": "Delete",
+                  "toolTip": "Delete this file or directory"
+               }
+            },
+            "actions": {
+               "delete": {
+                  "label": "Delete",
+                  "tooltip": "Delete the currently selected file or directory"
+               },
+               "copy": {
+                  "label": "Copy",
+                  "tooltip": "Copy this file or directory"
+               },
+               "move": {
+                  "label": "Move",
+                  "tooltip": "Move this file or directory"
+               },
+               "download": {
+                  "label": "Download",
+                  "tooltip": "Download the selected file"
+               },
+               "directory": {
+                  "label": "Create directory",
+                  "tooltip": "Create a new directory"
+               },
+               "upload": {
+                  "label": "Upload",
+                  "tooltip": "Upload a file to the selected datastore"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the view"
+               }
+            },
+            "dialog": {
+               "defaultTitle": "Datastore browser",
+               "noDatastore": {
+                  "title": "No browsable datastores",
+                  "content": "There are no browsable datastores. Currently, only VSAN and local VMFS datastores can be browsed."
+               },
+               "select": {
+                  "title": "Select destination",
+                  "titleFor": "Select destination for {{name}}",
+                  "move": "Move",
+                  "copy": "Copy"
+               },
+               "selectDatastore": {
+                  "title": "Select a datastore",
+                  "rejectLabel": "Cancel"
+               },
+               "directory": {
+                  "title": "New directory",
+                  "create": "Create directory"
+               },
+               "delete": {
+                  "title": "Confirm delete",
+                  "content": "Are you sure you want to delete the following file or directory?",
+                  "delete": "Delete",
+                  "cancel": "Cancel"
+               },
+               "upload": {
+                  "notEnoughSpace": {
+                     "title": "Not enough space on Datastore",
+                     "confirmLabel": "OK",
+                     "content": "There is not enough free space available on {{datastore}} to upload this file. You need to free at least {{needed}}."
+                  }
+               },
+               "close": "Close",
+               "cancel": "Cancel"
+            }
+         },
+         "monitor": {
+            "title": "Monitor",
+            "event": {
+               "datagrid": {
+                  "event": {
+                     "label": "Event"
+                  },
+                  "time": {
+                     "label": "Time"
+                  }
+               }
+            },
+            "health": {
+               "green": "Green",
+               "orange": "Orange",
+               "red": "Red",
+               "unknown": "Unknown",
+               "actions": {
+                  "refresh": {
+                     "label": "Refresh",
+                     "tooltip": "Refresh the health data",
+                     "error": "VSAN health monitoring not available"
+                  }
+               },
+               "datagridGroup": {
+                  "test": {
+                     "label": "Test group"
+                  },
+                  "overall": {
+                     "label": "Overall result"
+                  }
+               },
+               "datagrid": {
+                  "test": {
+                     "label": "Test"
+                  },
+                  "description": {
+                     "label": "Description"
+                  },
+                  "result": {
+                     "label": "Result"
+                  }
+               }
+            },
+            "tabs": {
+               "events": {
+                  "label": "Events",
+                  "tooltip": "Events"
+               },
+               "tasks": {
+                  "label": "Tasks",
+                  "tooltip": "Tasks"
+               },
+               "health": {
+                  "label": "Health",
+                  "tooltip": "Health"
+               }
+            }
+         },
+         "delete": {
+            "label": "Delete",
+            "tooltip": "Delete this datastore",
+            "confirm": {
+               "title": "Delete datastore - {{name}}",
+               "content": "Are you sure you want to delete the following datastore?"
+            },
+            "rejectLabel": "Cancel",
+            "confirmLabel": "Confirm",
+            "successNotification": "The datastore {{name}} was successfully deleted",
+            "failureNotification": "Failed to delete datastore {{name}}"
+         },
+         "rename": {
+            "dialog": {
+               "title": "Rename datastore",
+               "rejectLabel": "Cancel",
+               "save": "Save",
+               "emptyName": "Empty name",
+               "notification": {
+                  "info": "Datastore {{oldName}} has been renamed to {{newName}}.",
+                  "error": "Failed to rename datastore {{oldName}} has been renamed to {{newName}}."
+               }
+            }
+         },
+         "contextMenu": {
+            "rename": {
+               "label": "Rename",
+               "tooltip": "Rename this datastore",
+               "tooltipVC": "Datastores cannot be renamed on hosts being managed by vCenter Server"
+            },
+            "browse": {
+               "label": "Browse",
+               "toolTip": "Browse this datastore",
+               "browseDatastores": "Browse datastores"
+            },
+            "registerSingle": {
+               "label": "Register VM",
+               "toolTip": "Register this Virtual Machine"
+            },
+            "register": {
+               "label": "Register a VM",
+               "toolTip": "Register an existing Virtual Machine from a datastore into the host's inventory"
+            }
+         }
+      },
+      "adapter": {
+         "list": {
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for selected objects in this list."
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the adapter table"
+               },
+               "rescan": {
+                  "label": "Rescan",
+                  "tooltipAll": "Rescan all host-based adapters for new LUNs",
+                  "tooltipOne": "Rescan the selected host-based adapter for new LUNs"
+               }
+            },
+            "datagrid": {
+               "name": "Name",
+               "model": "Model",
+               "status": "Status",
+               "driver": "Driver"
+            }
+         },
+         "context": {
+            "rescan": {
+               "title": "Rescan",
+               "tooltip": "Rescan this host-based adapter for new LUNs"
+            }
+         },
+         "summary": {
+            "alt": "Adapter",
+            "model": "Model",
+            "driver": "Driver",
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for selected objects in this list."
+               },
+               "fileBrowser": {
+                  "label": "File Browser",
+                  "tooltip": "Navigate to the adapter file browser."
+               },
+               "recalculate": {
+                  "label": "Recalculate",
+                  "tooltip": "Recalculates the adapter usage information including capacity and free space."
+               },
+               "increaseCapacity": {
+                  "label": "Increase capacity",
+                  "tooltip": "Increase adapter capacity."
+               },
+               "manageProviders": {
+                  "label": "Manage Providers",
+                  "tooltip": "Manage storage providers."
+               }
+            }
+         }
+      },
+      "list": {
+         "title": "The following datastores are accessible from the destination resource that you selected. Select the destination datastore for the virtual machine configuration files and all of the virtual disks."
+      },
+      "rename": {
+         "current": "Current name",
+         "new": "New name"
+      }
+   }
+}

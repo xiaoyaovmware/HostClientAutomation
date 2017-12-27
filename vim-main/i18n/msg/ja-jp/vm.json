@@ -1,0 +1,2288 @@
+{
+   "vm": {
+      "answer": {
+         "dialog": {
+            "title": "質問への回答: {{name}}",
+            "ok": "回答",
+            "rejectLabel": "キャンセル"
+         }
+      },
+      "autostart": {
+         "unset": "設定解除",
+         "change": {
+            "title": "自動起動の設定: {{name}}",
+            "rejectLabel": "キャンセル",
+            "confirmLabel": "保存",
+            "waitForHeartbeat": {
+               "label": "ハートビートを待機",
+               "yes": "はい",
+               "no": "いいえ",
+               "systemDefault": "システムのデフォルト"
+            },
+            "startDelay": {
+               "label": "起動遅延時間",
+               "seconds": "秒"
+            },
+            "stopDelay": {
+               "label": "停止遅延時間",
+               "seconds": "秒"
+            },
+            "stopAction": {
+               "label": "停止アクション",
+               "systemDefault": "システムのデフォルト",
+               "PowerOff": "パワーオフ",
+               "Suspend": "サスペンド",
+               "ShutDown": "シャットダウン"
+            },
+            "successNotification": "{{name}} の自動起動設定が正常に更新されました",
+            "failureNotification": "{{name}} の自動起動設定を更新できませんでした"
+         }
+      },
+      "console": {
+         "close": "閉じる",
+         "actions": "アクション",
+         "showKeyboard": "キーボードの表示",
+         "keyboardLayout": "キーボード レイアウト",
+         "maximize": "最大化",
+         "fullscreen": "フル スクリーン",
+         "minimize": " 最小化",
+         "shrink": "縮小",
+         "failedToConnect": "接続に失敗しました",
+         "resolutionChangeDialog": {
+            "title": "解像度が変更されていません",
+            "content": "この仮想マシンには VMware Tools がインストールされていますが、解像度が変更されていません。このコンソールを拡張しますか?",
+            "confirmLabel": "はい",
+            "rejectLabel": "いいえ"
+         },
+         "multipleConnectionsNotificationSingle": "別のユーザーがこの仮想マシンへのコンソール セッションを開いています",
+         "multipleConnectionsNotificationMultiple": "{{num}} 人の他のユーザーがこの仮想マシンへのコンソール セッションを開いています"
+      },
+      "power": {
+         "powerOffWarning": {
+            "title": "警告",
+            "content": "この仮想マシンをパワーオフすると、データが失われる可能性があります。この仮想マシンをパワーオフしますか?",
+            "contentMulti": "選択した 1 台以上の仮想マシンをパワーオフすると、データが失われる可能性があります。続行しますか?",
+            "rejectLabel": "キャンセル",
+            "confirmLabel": "はい"
+         },
+         "resetWarning": {
+            "title": "警告",
+            "content": "この仮想マシンをリセットすると、データが失われる可能性があります。この仮想マシンをリセットしますか?",
+            "contentMulti": "選択した 1 台以上の仮想マシンをリセットすると、データが失われる可能性があります。続行しますか?",
+            "rejectLabel": "キャンセル",
+            "confirmLabel": "はい"
+         }
+      },
+      "list": {
+         "title": "{{hostname}}: 仮想マシン",
+         "empty": "仮想マシンがありません",
+         "columns": {
+            "name": "仮想マシン",
+            "state": "状態",
+            "status": "ステータス",
+            "provisionedSpace": "プロビジョニング済み容量",
+            "usedSpace": "使用済み容量",
+            "guest": "ゲスト OS",
+            "toolsInstalled": "Tools がインストール済み",
+            "toolsVersion": "Tools バージョン",
+            "ipAddress": "IP アドレス",
+            "datastore": "データストア",
+            "hostName": "ホスト名",
+            "hostCPU": "ホスト CPU",
+            "hostMemory": "ホスト メモリ",
+            "autostartStartOrder": "自動起動の順序",
+            "autostartStartDelay": "起動遅延時間",
+            "autostartStopDelay": "停止遅延時間",
+            "notes": "注"
+         },
+         "quickFilters": {
+            "vmsWithoutTools": "VMware Tools のない仮想マシン",
+            "poweredOnVMs": "パワーオン状態の仮想マシン",
+            "poweredOffVMs": "パワーオフ状態の仮想マシン",
+            "suspendedVMs": "サスペンド状態の仮想マシン",
+            "vmsParticipatingInAutostart": "自動起動に参加している仮想マシン"
+         },
+         "status": {
+            "normal": "正常",
+            "warning": "警告",
+            "inconsistent": "不整合",
+            "question": "保留中の質問",
+            "invalid": "無効"
+         },
+         "actionBar": {
+            "createRegister": {
+               "label": "仮想マシンの作成/登録",
+               "tooltip": "仮想マシンを作成または登録します"
+            },
+            "columns": {
+               "label": "列",
+               "tooltip": "このテーブルに表示する列を選択します",
+               "contextTitle": "列の選択"
+            },
+            "console": {
+               "label": "コンソール",
+               "tooltip": "選択した仮想スイッチのコンソールを開きます"
+            },
+            "powerOn": {
+               "label": "パワーオン",
+               "tooltip": "選択した仮想マシンをパワーオンまたはレジュームします"
+            },
+            "powerOff": {
+               "label": "パワーオフ",
+               "tooltip": "選択した仮想マシンをパワーオフします"
+            },
+            "shutDown": {
+               "label": "シャットダウン",
+               "tooltip": "選択した仮想マシンを適切にシャットダウンします"
+            },
+            "shutDownSuspended": {
+               "label": "シャットダウン/パワーオフ",
+               "tooltip": "選択した仮想マシンをシャットダウンまたはパワーオフします"
+            },
+            "suspend": {
+               "label": "サスペンド",
+               "tooltip": "選択した仮想マシンをサスペンドします"
+            },
+            "restart": {
+               "label": "再起動",
+               "tooltip": "選択した仮想マシンを再起動します"
+            },
+            "edit": {
+               "label": "設定の編集",
+               "tooltip": "選択した仮想マシンの設定を編集します"
+            },
+            "refresh": {
+               "label": "更新",
+               "tooltip": "仮想マシン テーブルを更新します"
+            },
+            "actions": {
+               "label": "アクション",
+               "tooltip": "選択した仮想マシンに対するアクションです"
+            }
+         }
+      },
+      "attachISO": {
+         "button": {
+            "label": "ディスク イメージの選択",
+            "tooltip": "ディスク イメージを参照します"
+         },
+         "dialog": {
+            "title": "CD/DVD ディスク イメージの選択",
+            "confirmLabel": "選択"
+         },
+         "failureNotification": "ディスク イメージの接続に失敗しました: {{message}}",
+         "successNotification": "ディスク イメージ {{file}} を CD/DVD デバイスに接続しました"
+      },
+      "delete": {
+         "title": "仮想マシンの削除: {{name}}",
+         "titleMultiple": "仮想マシンの削除",
+         "confirmLabel": "削除",
+         "rejectLabel": "キャンセル",
+         "failedAtLeastOne": "少なくとも 1 台の仮想マシンの削除に失敗しました",
+         "ok": "OK"
+      },
+      "supportBundle": {
+         "menu": {
+            "label": "サポート バンドルの生成",
+            "tooltip": "この仮想マシンからサポート バンドルを生成します"
+         }
+      },
+      "template": {
+         "label": "テンプレート",
+         "convert": {
+            "title": "テンプレートに変換",
+            "label": "テンプレートに変換",
+            "tooltip": "仮想マシンをテンプレートに変換",
+            "message": "仮想マシン「{{name}}」をテンプレートに変換しますか?",
+            "ok": "変換",
+            "rejectLabel": "キャンセル"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "権限",
+            "title": "権限を管理します",
+            "header": "次にユーザーおよびロールを割り当てます",
+            "close": "閉じる",
+            "cancel": "キャンセル",
+            "noUsers": "ユーザーなし",
+            "addUser": {
+               "label": "ユーザーの追加",
+               "toolTip": "ユーザーを追加します",
+               "header": "次にユーザーを追加します"
+            },
+            "removeUser": {
+               "label": "ユーザーの削除",
+               "toolTip": "ユーザーを削除します"
+            },
+            "assignRole": {
+               "label": "ロールの割り当て",
+               "toolTip": "ユーザーにロールを割り当てます",
+               "header": "次に権限を設定します"
+            },
+            "updatePermissions": {
+               "successNotification": "権限が正常に更新されました",
+               "failureNotification": "権限の更新に失敗しました: {{error}}"
+            },
+            "columns": {
+               "user": "ユーザー",
+               "role": "ロール"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "ユーザーを選択"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "ロールを選択"
+            },
+            "propagateLabel": "すべての子へ伝達",
+            "groupLabel": "グループとして追加"
+         }
+      },
+      "snapshot": {
+         "consolidate": {
+            "menu": "ディスクの統合",
+            "consolidationComplete": "仮想マシン {{name}} のディスクの統合が完了しました",
+            "consolidationFailed": "仮想マシン {{name}} のディスクの統合に失敗しました: {{reason}}"
+         },
+         "take": {
+            "menu": "スナップショットの作成",
+            "title": "{{name}} のスナップショットを作成します",
+            "takeSnapshot": "スナップショットの作成",
+            "name": "名前",
+            "description": "説明",
+            "memory": "仮想マシンのメモリのスナップショットを作成します。",
+            "quiesce": "静止ゲスト ファイル システム (VMware Tools のインストールが必要)。",
+            "ok": "OK",
+            "cancel": "キャンセル",
+            "notification": {
+               "success": "スナップショット「{{title}}」が仮想マシン {{vmName}} 上に作成されました",
+               "error": "スナップショット「{{title}}」を仮想マシン {{vmName}} 上に作成できませんでした"
+            }
+         },
+         "edit": {
+            "notification": {
+               "error": "スナップショット「{{name}}」の変更を保存できませんでした。"
+            }
+         },
+         "revertLatest": {
+            "menu": "最新のスナップショットのリストア",
+            "title": "最新のスナップショットのリストア",
+            "content": "スナップショットに仮想マシンの現在の状態を保存していない場合は、現在の状態は失われます。最新 (直近) のスナップショットに戻しますか?",
+            "revert": "リストア",
+            "cancel": "キャンセル",
+            "notification": {
+               "success": "仮想マシン {{name}} に最新のスナップショットがリストアされました",
+               "error": "仮想マシン {{name}} に、最新のスナップショットをリストアできませんでした"
+            }
+         },
+         "revert": {
+            "menu": "スナップショットのリストア",
+            "title": "スナップショットのリストア",
+            "content": "スナップショットに保存していない場合、現時点の仮想マシンの状態は失われます。スナップショット「{{title}}」をリストアしますか?",
+            "revert": "リストア",
+            "cancel": "キャンセル",
+            "notification": {
+               "success": "仮想マシン {{name}} にスナップショット「{{title}}」がリストアされました",
+               "error": "仮想マシン {{name}} にスナップショット「{{title}}」をリストアできませんでした"
+            }
+         },
+         "delete": {
+            "menu": "スナップショットの削除",
+            "title": "スナップショットの削除",
+            "content": "スナップショット「{{title}}」を削除しますか?",
+            "ok": "削除",
+            "removeChildren": "すべての子スナップショットを削除します。",
+            "cancel": "キャンセル",
+            "notification": {
+               "success": "スナップショット「{{title}}」が削除されました。",
+               "error": "スナップショット「{{title}}」の削除に失敗しました。"
+            }
+         },
+         "deleteAll": {
+            "menu": "すべてのスナップショットを削除",
+            "title": "すべてのスナップショットを削除",
+            "content": "これにより、この仮想マシンのすべてのスナップショットが統合され、削除されます。スナップショットは 1 つのディスクに統合されます。処理を続行しますか?",
+            "ok": "削除",
+            "cancel": "キャンセル",
+            "notification": {
+               "success": "仮想マシン「{{name}}」のすべてのスナップショットは削除されました。",
+               "error": "仮想マシン「{{name}}」のすべてのスナップショットの削除に失敗しました。"
+            }
+         },
+         "manage": {
+            "menu": "スナップショットの管理",
+            "notitle": "スナップショットの管理",
+            "title": "スナップショットの管理: {{name}}",
+            "name": "名前",
+            "description": "説明",
+            "created": "作成済み",
+            "diskUsage": "ディスク使用率",
+            "console": "コンソール",
+            "here": "現在点",
+            "edit": "編集",
+            "take": {
+               "label": "スナップショットの作成",
+               "tooltip": "後でリストアできるように、仮想マシンの状態を正確に保存します。"
+            },
+            "restore": {
+               "label": "スナップショットのリストア",
+               "tooltip": "仮想マシンを選択したスナップショットの状態にリストアします。"
+            },
+            "delete": {
+               "label": "スナップショットの削除",
+               "tooltip": "選択したスナップショットを削除します。"
+            },
+            "deleteAll": {
+               "label": "すべて削除",
+               "tooltip": "すべてのスナップショットを削除します。"
+            },
+            "edit": {
+               "label": "スナップショットの編集",
+               "tooltip": "選択したスナップショットを編集します。"
+            },
+            "refresh": {
+               "label": "更新",
+               "tooltip": "更新"
+            },
+            "save": "保存",
+            "cancel": "キャンセル",
+            "close": "閉じる"
+         }
+      },
+      "compatibility": {
+         "upgrade": {
+            "label": "仮想マシンの互換性のアップグレード",
+            "tooltip": "仮想マシンの互換性のアップグレード",
+            "rejectLabel": "キャンセル",
+            "configure": {
+               "title": "仮想マシンの互換性の構成",
+               "header": "{{name}} をアップグレードするための互換性を選択します。<em></em>",
+               "label": "仮想マシン ハードウェアを選択したバージョンにアップグレード",
+               "message": "{{version}}。",
+               "ok": "アップグレード"
+            },
+            "notifications": {
+               "success": "仮想マシン {{name}} がアップグレードされました",
+               "failure": "仮想マシン {{name}} のアップグレードに失敗しました。{{reason}}"
+            },
+            "confirm": {
+               "title": "仮想マシンの互換性のアップグレード確認",
+               "message": "この操作を行うと、仮想マシンの互換性が変更されます。この操作は取り消し不可能で、仮想マシンは以前のバージョンの VMware ソフトウェア製品との互換性が失われます。互換性のアップグレードを続行する前に仮想マシン ファイルのバックアップ コピーを作成してください。互換性をアップグレードしますか?",
+               "ok": "はい",
+               "cancel": "いいえ"
+            }
+         }
+      },
+      "notes": {
+         "dialog": {
+            "title": "メモの編集: {{name}}。",
+            "titleNoVM": "メモの編集",
+            "ok": "保存",
+            "rejectLabel": "キャンセル"
+         },
+         "title": "{{name}} のメモを編集します。<em></em>",
+         "more": "詳細",
+         "less": "簡単表示",
+         "edit": "メモの編集",
+         "save": "メモの保存",
+         "cancel": "キャンセル"
+      },
+      "summary": {
+         "dialog": {
+            "unknown": {
+               "title": "不明な仮想マシン",
+               "ok": "OK"
+            }
+         },
+         "screen": {
+            "refresh": "コンソールのスクリーン ショットを更新します"
+         },
+         "unknown": "不明",
+         "general": {
+            "label": "全般情報",
+            "title": "全般情報",
+            "vmScreen": "クリックして、この仮想マシンのブラウザ コンソールを開きます",
+            "vmTemplateScreen": "仮想マシン画面のロゴ",
+            "cpu": {
+               "name": "CPU"
+            },
+            "networking": {
+               "name": "ネットワーク",
+               "ipAddresses": "IP アドレス",
+               "hostName": "ホスト名"
+            },
+            "notes": "注",
+            "vmwareTools": {
+               "name": "VMware Tools",
+               "info": {
+                  "installed": "インストール済み",
+                  "notInstalled": "未インストール",
+                  "guestManaged": "管理対象ゲスト",
+                  "version": "バージョン",
+                  "running": "実行中"
+               },
+               "actionBar": {
+                  "action": {
+                     "label": "アクション",
+                     "tooltip": "このリスト内で選択されたオブジェクトのアクション"
+                  }
+               }
+            },
+            "storage": {
+               "name": "ストレージ",
+               "disk": "ディスク",
+               "disks": "ディスク",
+               "info": {
+                  "guestDisks": "ゲスト ディスク",
+                  "noGuestDisks": "ゲスト ディスク情報は利用できません",
+                  "diskPath": "ディスク パス",
+                  "capacity": "キャパシティ",
+                  "free": "空き"
+               }
+            }
+         },
+         "perf": {
+            "label": "過去 1 時間のパフォーマンス サマリ",
+            "title": "パフォーマンス サマリ (過去 1 時間)",
+            "loading": "ロードしています...",
+            "noData": "利用できるパフォーマンス データがありません",
+            "chart": {
+               "xAxis": "時刻",
+               "y1Axis": "消費された CPU / 使用可能な CPU (%)",
+               "y2Axis": "消費されたホスト メモリ (GB)",
+               "cpu": "消費されたホスト CPU",
+               "ready": "動作可能",
+               "rightAxis": "(右の軸)",
+               "memory": "消費されたホスト メモリ"
+            }
+         },
+         "noNetworkInfo": "ネットワーク情報がありません",
+         "hardware": {
+            "label": "ハードウェア構成",
+            "title": "ハードウェア構成",
+            "cpu": {
+               "cpu": "CPU",
+               "cores": "CPU コア",
+               "sockets": "ソケット",
+               "coreSocket": "1 ソケットあたりのコア",
+               "memory": "メモリ"
+            },
+            "disk": {
+               "backing": "バッキング",
+               "capacity": "キャパシティ",
+               "thinProvisioned": "シン プロビジョニング",
+               "controller": "コントローラ",
+               "deviceName": "デバイスの UUID",
+               "compatibility": {
+                  "label": "互換モード",
+                  "virtualMode": "仮想",
+                  "physicalMode": "物理"
+               },
+               "mode": {
+                  "label": "モード",
+                  "persistent": "依存型",
+                  "independent_nonpersistent": "独立型、読み取り専用",
+                  "independent_persistent": "独立型、通常"
+               }
+            },
+            "cdrom": {
+               "backing": "バッキング",
+               "connected": "接続済み",
+               "controller": "コントローラ"
+            },
+            "serial": {
+               "backing": "バッキング",
+               "connected": "接続済み",
+               "concentrator": "コンセントレータ"
+            },
+            "parallel": {
+               "backing": "バッキング",
+               "connected": "接続済み"
+            },
+            "usb": {
+               "controller": "USB コントローラ"
+            },
+            "usbDevice": {
+               "label": "USB デバイス",
+               "connected": "接続済み",
+               "disconnected": "切断済み"
+            },
+            "sound": {
+               "label": "サウンド カード",
+               "ensoniq1371": "Ensoniq 1371",
+               "soundBlaster16": "Sound Blaster 16"
+            },
+            "floppy": {
+               "connected": "接続済み",
+               "notConnected": "未接続"
+            },
+            "video": {
+               "totalMemory":"ビデオ メモリの合計",
+               "numDisplays":"ディスプレイ数",
+               "3dGraphics":"3D グラフィックス",
+               "3dRenderer":"3D レンダラ",
+               "3dMemory":"3D メモリ",
+               "automatic": "自動",
+               "software": "ソフトウェア",
+               "hardware": "ハードウェア",
+               "enabled": "有効",
+               "disabled": "無効"
+            },
+            "network": {
+               "networkAdapter": "ネットワーク アダプタ",
+               "connected": "接続済み",
+               "disconnected": "切断済み",
+               "network": "ネットワーク",
+               "macAddress": "MAC アドレス",
+               "passThrough": "パススルー (DirectPath I/O)"
+            },
+            "others": {
+               "others": "その他",
+               "additionalHw": "追加ハードウェア",
+               "scsiAdapters": "SCSI アダプタ",
+               "nvmeAdapters": "NVMe アダプタ",
+               "controllers": "コントローラ",
+               "inputDevices": "入力デバイス"
+            }
+         },
+         "resource": {
+            "label": "リソース消費",
+            "title": "リソース消費",
+            "activeGuestMemory": "有効なゲスト メモリ",
+            "consumedHostMemory": "消費されたホスト メモリ",
+            "consumedHostCPU": "消費されたホスト CPU",
+            "storage": "ストレージ",
+            "uncommitted": "未コミット",
+            "provisioned": "プロビジョニング済み",
+            "notShared": "非共有",
+            "used": "使用済み"
+         },
+         "actionBar": {
+            "console": {
+               "label": "コンソール",
+               "tooltip": "この仮想マシンのコンソールを開きます"
+            },
+            "monitor": {
+               "label": "監視",
+               "tooltip": "この仮想マシンを監視"
+            },
+            "powerOn": {
+               "label": "パワーオン",
+               "tooltip": "この仮想マシンをパワーオンします"
+            },
+            "powerOff": {
+               "label": "パワーオフ",
+               "tooltip": "この仮想マシンをパワーオフする",
+               "tooltipWarnSuspended": "この仮想マシンは現在サスペンド状態です。パワーオフすると、ゲストのデータが消失する可能性があります",
+               "tooltipWarnPoweredOn": "この仮想マシンは現在パワーオン状態です。パワーオフすると、ゲストのデータが消失する可能性があります"
+            },
+            "reset": {
+               "label": "リセット",
+               "tooltip": "この仮想マシンをリセットします",
+               "tooltipWarnSuspended": "この仮想マシンは現在サスペンド状態です。リセットすると、ゲストのデータが消失する可能性があります",
+               "tooltipWarnPoweredOn": "この仮想マシンは現在パワーオン状態です。リセットすると、ゲストのデータが消失する可能性があります"
+            },
+            "shutDown": {
+               "label": "シャットダウン",
+               "tooltip": "この仮想マシンのゲスト OS 上で正常なシャットダウンを行います"
+            },
+            "suspend": {
+               "label": "サスペンド",
+               "tooltip": "この仮想マシンをサスペンドする"
+            },
+            "resume": {
+               "label": "レジューム",
+               "tooltip": "この仮想マシンをレジュームする"
+            },
+            "restart": {
+               "label": "再起動",
+               "tooltip": "この仮想マシンを再起動します"
+            },
+            "editSettings": {
+               "label": "編集",
+               "tooltip": "この仮想マシンの設定を編集します"
+            },
+            "refresh": {
+               "label": "更新",
+               "tooltip": "この仮想マシンのサマリを更新します"
+            },
+            "actions": {
+               "label": "アクション",
+               "tooltip": "この仮想マシンに対するアクションです"
+            }
+         }
+      },
+      "manage": {
+         "title": "{{name}}: 管理"
+      },
+      "monitor": {
+         "tabs": {
+            "performance": {
+               "label": "パフォーマンス",
+               "tooltip": "パフォーマンス"
+            },
+            "events": {
+               "label": "イベント",
+               "tooltip": "イベント"
+            },
+            "tasks": {
+               "label": "タスク",
+               "tooltip": "タスク"
+            },
+            "logs": {
+               "label": "ログ",
+               "tooltip": "ログ"
+            },
+            "notifications": {
+               "label": "通知",
+               "tooltip": "通知"
+            }
+         },
+         "title": "{{name}}: 監視",
+         "logs": {
+            "tabTitle": "ログ",
+            "tabTooltip": "システム ログの表示",
+            "failedToLoad": "ログ {{log}} のロードに失敗しました",
+            "noLogSelected": "ログが選択されていません",
+            "actionBar": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択したログ ファイルに対するアクションです"
+               },
+               "openInNewWindow": {
+                  "label": "新しいウィンドウで開く",
+                  "tooltip":"新しいウィンドウでこのログを開きます"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "選択したログ ファイルを更新します"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "ログに記録",
+                  "size": "サイズ"
+               }
+            }
+         },
+         "performance": {
+            "tabTitle": "パフォーマンス",
+            "tabTooltip": "システムのパフォーマンスを監視します",
+            "poweredOff": "仮想マシンはパワーオフ状態です",
+            "grid": {
+               "name": "名前",
+               "unit": "ユニット",
+               "average": "平均値",
+               "maximum": "最大値",
+               "minimum": "最小値",
+               "latest": "最新値"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "チャートの更新"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "選択した仮想マシンに対するアクションです"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "データの可用性",
+                  "message": "利用可能なデータ範囲が「過去 1 時間」に限られるのは、ESXi ホストには過去 1 時間の履歴データのみが格納されるためです。表示されるデータ範囲を広げるには、vCenter Server を使用する必要があります。"
+               }
+            },
+            "filter": {
+               "type": "フィルタのタイプ",
+               "cpuFilter": "CPU フィルタ",
+               "time": "時刻"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "すべて",
+                     "hostDropdownTitle": "ホスト",
+                     "allCoresDropdownTitle": "すべての PCPU",
+                     "allPackagesDropdownTitle": "すべてのパッケージ",
+                     "seriesLabel": "PCPU {{core}}",
+                     "packageSeriesLabel": "パッケージ {{pkg}}",
+                     "y1AxisLabel": "消費された CPU / 使用可能な CPU (%)",
+                     "x1AxisLabel": "時刻",
+                     "x2AxisLabel": "時刻",
+                     "ready": "動作可能"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "メモリ",
+                     "seriesLabel": "消費されたホスト メモリ",
+                     "y1AxisLabel": "消費されたホスト メモリ (GB)",
+                     "x1AxisLabel": "時刻",
+                     "x2AxisLabel": "時刻"
+                  }
+               },
+               "disk": {
+                  "usage": {
+                     "dropdownTitle": "ディスク",
+                     "y1AxisLabel": "ディスクの読み取り/書き込み速度 (MB/秒)",
+                     "y2AxisLabel": "遅延 (ミリ秒)",
+                     "aggregateSeriesLabel": "ディスクの I/O 速度 (合計)",
+                     "readRateSeriesLabel": "全体的な読み取り速度",
+                     "writeRateSeriesLabel": "全体的な書き込み速度",
+                     "maxLatencySeriesLabel": "最大待ち時間",
+                     "x1AxisLabel": "時刻"
+                  }
+               },
+               "network": {
+                  "usage": {
+                     "dropdownTitle": "ネットワーク",
+                     "usageSeriesLabel": "全体的なネットワークの使用",
+                     "transmitSeriesLabel": "全体的な転送速度",
+                     "receiveSeriesLabel": "全体的な受信速度",
+                     "y1AxisLabel": "転送/受信速度 (mbps)",
+                     "y2AxisLabel": "数量",
+                     "xAxisLabel": "時刻"
+                  }
+               },
+               "scale": {
+                  "lastHour": "過去 1 時間"
+               }
+            }
+         },
+         "events": {
+            "type": "タイプ",
+            "time": "時刻",
+            "virtualmachine": "仮想マシン",
+            "noEvents": "イベントがありません"
+         },
+         "tasks": {
+            "alt": "タスク",
+            "key": "キー",
+            "noTasks": "タスクがありません",
+            "description": "説明",
+            "host": "このホスト",
+            "state": "状態"
+         },
+         "notifications": {
+            "suggested": "推奨されるアクション:",
+            "noNotification": "通知がありません",
+            "unknownState": {
+               "message": "この仮想マシンの状態は不明です。",
+               "suggested-action": "ESXi ホスト上での仮想マシンの電源サイクルまたはホスト エージェントの再起動で問題が解決することがあります。"
+            },
+            "guestOther": {
+               "message": "この仮想マシンのゲスト OS は現在「その他」に設定されています。",
+               "suggested-action": "ゲスト固有の最適化を行い、VMware Tools のインストールを可能にするには、正しいゲスト OS を指定する必要があります。"
+            },
+            "guestMismatch": {
+               "message": "この仮想マシンに構成されたゲスト OS ({{assigned}}) は、現在実行中のゲスト ({{reported}}) と一致しません。",
+               "suggested-action": "ゲスト固有の最適化を許可するには、正しいゲスト OS を指定する必要があります。"
+            },
+            "VmDiskConsolidationNeeded": {
+               "message": "仮想マシンでディスクの統合が必要です。",
+               "suggested-action": "パフォーマンスの向上およびディスク使用率の最適化のため、ディスクを統合する必要があります。"
+            },
+            "questionPending": {
+               "message": "この仮想マシンでは、すべての質問が回答されていません。",
+               "suggested-action": "質問に回答してパワーオン操作を完了してください。"
+            },
+            "orphanedNetwork": {
+               "message": "この仮想マシンは、存在しないネットワーク ポート グループ {{name}} に接続されています。<em></em>",
+               "suggested-action": "この仮想マシンを編集して、別のネットワークに接続してください。"
+            },
+            "toolsNotInstalled": {
+               "message": "VMware Tools がこの仮想マシンにインストールされていません。",
+               "suggested-action": "VMware Tools では、ゲストの詳細情報を表示し、ゲスト OS 上で正常なシャットダウンや再起動などの操作を実行できます。VMware Tools をインストールすることをお勧めします。"
+            },
+            "toolsOld": {
+               "message": "この仮想マシンの VMware Tools は最新のバージョンではありません。",
+               "suggested-action": "VMware Tools をアップグレードすると、機能が改善され、安定性が向上することがあります。"
+            },
+            "ftSecondary": {
+               "message": "この仮想マシンは、フォールト トレラント ペア内のセカンダリ仮想マシンとして機能しています。この仮想マシンに対して設定を行うことはできません。",
+               "suggested-action": ""
+            }
+         }
+      },
+      "operations": {
+         "notifications": {
+            "failedToPowerOn": "仮想マシン {{name}} のパワーオンに失敗しました。{{reason}} 詳細についてはここをクリックしてください。",
+            "failedToPowerOff": "仮想マシン {{name}} のパワーオフに失敗しました。{{reason}}",
+            "failedToRestart": "仮想マシン {{name}} のリセットに失敗しました。{{reason}}",
+            "failedToRename": "仮想マシン {{name}} の名前の変更に失敗しました。{{reason}}",
+            "failedToCreate": "仮想マシン {{name}} の作成に失敗しました。{{reason}}",
+            "failedToDelete": "仮想マシン {{name}} の削除に失敗しました。{{reason}}",
+            "failedToSaveNotes": "仮想マシン {{name}} のメモの保存に失敗しました。{{reason}}",
+            "failedToReconfig": "仮想マシン {{name}} の再構成に失敗しました。{{reason}}",
+            "failedToSuspend": "仮想マシン {{name}} のサスペンドに失敗しました。{{reason}}"
+         }
+      },
+      "banner": {
+         "guestOS": "ゲスト OS",
+         "compatibility": "互換性",
+         "vmwaretools": "VMware Tools",
+         "hostName": "ホスト名",
+         "cpus": "CPU",
+         "cpuUsage": "CPU 使用率",
+         "memory": "メモリ",
+         "memoryUsage": "メモリ使用量",
+         "diskUsage": "ディスク使用率",
+         "metrics": {
+            "cpu": "CPU",
+            "memory": "メモリ",
+            "storage": "ストレージ"
+         }
+      },
+      "edit": {
+         "title": "設定の編集",
+         "titleWithName": "設定の編集: {{name}}",
+         "rejectLabel": "キャンセル",
+         "tabs": {
+            "hardware": {
+               "label": "仮想ハードウェア",
+               "tooltip": "仮想ハードウェア"
+            },
+            "options": {
+               "label": "仮想マシン オプション",
+               "tooltip": "仮想マシン オプション"
+            }
+         },
+         "compatibility": "互換性:",
+         "save": "保存",
+         "notification": {
+            "info": "仮想マシン {{name}} は再構成されました"
+         },
+         "powerOptions": {
+            "stop": {
+               "hard": "パワーオフ",
+               "soft": "ゲストのシャットダウン",
+               "preset": "システムのデフォルト"
+            },
+            "pause": {
+               "hard": "サスペンド",
+               "soft": "ゲストのスタンバイ",
+               "preset": "システムのデフォルト"
+            },
+            "restart": {
+               "hard": "リセット",
+               "soft": "ゲストの再起動",
+               "preset": "システムのデフォルト"
+            }
+         }
+      },
+      "create": {
+         "new": {
+            "label": "新規仮想マシンの作成",
+            "description": "このオプションに従って、新規仮想マシンを作成します。プロセッサ、メモリ、ネットワーク接続、およびストレージをカスタマイズできます。作成後にゲスト OS をインストールする必要があります。"
+         },
+         "clone": {
+            "label": "既存の仮想マシンのクローン作成",
+            "description": "既存の仮想マシンのクローンを作成します"
+         },
+         "ovf": {
+            "label": "OVF ファイルまたは OVA ファイルから仮想マシンをデプロイ",
+            "description": "このオプションに従って、OVF および VMDK ファイルから仮想マシンを作成します。"
+         },
+         "register": {
+            "label": "既存の仮想マシンの登録",
+            "description": "このオプションを使用すると、データストアにすでに存在する仮想マシンを登録できます"
+         }
+      },
+      "deleteVMConfirmation": "次の仮想マシンを削除しますか?",
+      "state": {
+         "poweredOn": "パワーオン",
+         "poweredOff": "パワーオフ",
+         "suspended": "サスペンド",
+         "undefined": "不明"
+      },
+      "tools": {
+         "state": {
+            "toolsOk": "インストール済み/稼動状態",
+            "toolsNotRunning": "インストール済み/停止状態",
+            "toolsNotInstalled": "未インストール",
+            "toolsOld": "VMware Tools は最新のバージョンではありません。このゲスト内で VMware Tools をアップグレードする必要があります"
+         },
+         "installed": {
+            "true": "はい",
+            "false": "いいえ"
+         },
+         "running": {
+            "guestToolsRunning": "はい",
+            "guestToolsNotRunning": "いいえ"
+         }
+      },
+      "hardwareVersion": {
+         "vmx-02": {
+            "label":"ESX 2.0.2 以降 (仮想マシン バージョン 2)",
+            "desc": ""
+         },
+         "vmx-03": {
+            "label":"ESX 2.x 以降 (仮想マシン バージョン 3)",
+            "desc": ""
+         },
+         "vmx-04": {
+            "label":"ESX/ESXi 3.5 以降 (仮想マシン バージョン 4)",
+            "desc": "この仮想マシンはハードウェア バージョン 4 を使用しており、ESXi 4.x、ESXi 5.0、ESXi 5.1、および ESXi 5.5 と互換性があります。このオプションでは、仮想マシン ハードウェア機能の一部を使用できません。"
+         },
+         "vmx-06": {
+            "label":"Workstation 6 (仮想マシン バージョン 6)",
+            "desc": ""
+         },
+         "vmx-07": {
+            "label":"ESX/ESXi 4.0 以降 (仮想マシン バージョン 7)",
+            "desc": "この仮想マシンはハードウェア バージョン 7 を使用しており、ESXi 5.0、ESXi 5.1、ESXi 5.5、および ESXi 6.0 と互換性があります。このオプションでは、仮想マシン ハードウェア機能の一部を使用できません。"
+         },
+         "vmx-08": {
+            "label":"ESXi 5.0 以降 (仮想マシン バージョン 8)",
+            "desc": "この仮想マシンはハードウェア バージョン 8 を使用しており、ESXi 5.1、ESXi 5.5、および ESXi 6.0 と互換性があります。このオプションでは、仮想マシン ハードウェア機能の一部を使用できません。"
+         },
+         "vmx-09": {
+            "label":"ESXi 5.1 以降 (仮想マシン バージョン 9)",
+            "desc": "この仮想マシンはハードウェア バージョン 9 を使用しており、ESXi 5.5 および ESXi 6.0 と互換性があります。"
+         },
+         "vmx-10": {
+            "label":"ESXi 5.5 以降 (仮想マシン バージョン 10)",
+            "desc": "この仮想マシンはハードウェア バージョン 7 を使用しており、ESXi 6.0 と互換性があります。"
+         },
+         "vmx-11": {
+            "label":"ESXi 6.0 以降 (仮想マシン バージョン 11)",
+            "desc": "この仮想マシンはハードウェア バージョン 11 を使用しており、最適なパフォーマンスと ESXi 6.0 で利用可能な最新機能を提供します。"
+         },
+         "vmx-12": {
+            "label":"Workstation 12 (仮想マシン バージョン 12)",
+            "desc": "この仮想マシンはハードウェア バージョン 12 を使用しており、最適なパフォーマンスと Workstation 12 で利用可能な最新機能を提供します。"
+         },
+         "vmx-13": {
+            "label":"ESXi 6.5 以降 (仮想マシン バージョン 13)",
+            "desc": "この仮想マシンはハードウェア バージョン 13 を使用しており、最適なパフォーマンスと ESXi 6.5 で利用可能な最新機能を提供します。"
+         },
+         "vmx-14": {
+            "label":"ESXi 6.x 以降 (仮想マシン バージョン 14)",
+            "desc": "この仮想マシンはハードウェア バージョン 14 を使用しており、最適なパフォーマンスと ESXi 6.x で利用可能な最新機能を提供します。"
+         }
+      },
+      "wizard": {
+         "title": "新規仮想マシン",
+         "registerTitle": "仮想マシンの登録",
+         "cloneTitle": "仮想マシンをクローン作成します",
+         "compatibility": "互換性",
+         "creationType": {
+            "title": "作成タイプの選択",
+            "description": "仮想マシンの作成方法を指定します。",
+            "select": "作成タイプの選択",
+            "warnNestedESXi": "VMware は本番環境でのネストされた ESXi/ESX サーバの実行をサポートしません。詳細については、<a href=\"{{kbURL}}\" target=\"_blank\">この</a>ナレッジベースの記事を参照してください。"
+         },
+         "basics": {
+            "title": "名前とゲスト OS の選択",
+            "description": "一意の名前と OS の指定",
+            "name": {
+               "label": "仮想マシンの名前を指定してください。",
+               "placeholder": "名前",
+               "desc": "仮想マシン名には最大 80 文字指定できますが、ESXi の各インスタンス内で一意の名前にする必要があります。"
+            },
+            "desc": "ゲスト OS をここで特定すると、ウィザードで、そのオペレーティング システムのインストールに適したデフォルト値が入力されます。",
+            "compatibility": "互換性",
+            "selectOSFamily": "ゲスト OS ファミリの選択",
+            "guestOSFamily": "ゲスト OS ファミリ",
+            "selectOSVersion": "ゲスト OS のバージョンの選択",
+            "guestOSVersion": "ゲスト OS のバージョン",
+            "osVersion": {
+               "windowsGuest": "Windows",
+               "linuxGuest": "Linux",
+               "darwinGuestFamily": "Mac OS",
+               "solarisGuest": "Solaris",
+               "netwareGuest": "Novell Netware",
+               "otherGuestFamily": "その他"
+            },
+            "validation": {
+               "emptyName": "仮想マシンの名前を入力してください。",
+               "invalidName": "仮想マシンの名前に二重引用符、コロンまたはスラッシュ文字を含めることはできません",
+               "nameSize": "仮想マシンの名前は {{min}} ～ {{max}} 文字にする必要があります。現在の長さは {{length}} 文字です。名前を修正してください。",
+               "guestOSFamily": "ゲスト OS ファミリを選択します。",
+               "guestOSVersion": "ゲスト OS のバージョンを選択します。",
+               "existingName": "このホストに同じ名前の仮想マシンまたはテンプレートが存在します。新しい名前を入力してください。"
+            }
+         },
+         "storage": {
+            "title": "ストレージの選択",
+            "description": "構成とディスク ファイルを保存するデータストアを選択します。",
+            "desc": "次のデータストアには、選択したターゲット リソースからアクセスできます。仮想マシンの構成ファイルとすべての仮想ディスクのターゲット データストアを選択してください。",
+            "policy": {
+               "default": "データストアのデフォルト",
+               "vvol": "VVol 要件なしのポリシー",
+               "vsan": "Virtual SAN のデフォルト ストレージ ポリシー"
+            },
+            "grid": {
+               "name": "名前",
+               "capacity": "キャパシティ",
+               "free": "空き",
+               "type": "タイプ",
+               "thinProvisioning": "シン プロビジョニング",
+               "access": "アクセス"
+            },
+            "validation": {
+               "datastore": "仮想マシンのファイルを格納するデータストアを選択します。"
+            },
+            "status": {
+               "ova": "OVA を抽出しています。多少時間がかかることがあります...",
+               "ovf": "OVF データを読み取っています...",
+               "ovfHasCompressedDisks": "デプロイしようとしている仮想マシンに圧縮されたディスク イメージが含まれています。ホスト クライアントは現在、圧縮されたディスク イメージを含む仮想マシンをデプロイできません。この仮想マシンをデプロイするには、OVFTool または vCenter Server を使用することを検討してください。"
+            }
+         },
+         "hardware": {
+            "title": "設定のカスタマイズ",
+            "description": "仮想マシンのハードウェアおよびその他のオプションを構成します",
+            "tabs": {
+               "virtualhardware": {
+                  "label": "仮想ハードウェア",
+                  "tooltip": "仮想ハードウェア"
+               },
+               "vmoptions": {
+                  "label": "仮想マシン オプション",
+                  "tooltip": "仮想マシン オプション"
+               }
+            },
+            "virtualhardware": {
+               "managedVC": "このホストのリソースは vCenter Server によって管理されているので、いくつかの構成オプションは無効になっています。この仮想マシンのリソース設定を変更する場合は、vCenter Server から行ってください。",
+               "signpost": "仮想マシンで使用可能な仮想 CPU は、ライセンス供与されたホスト上の CPU 数、およびゲスト OS でサポートされている CPU 数によって変わります。VMware の仮想マルチコア CPU の機能を使用するには、ゲスト OS の EULA の要件に準拠している必要があります。",
+               "virtualizationSignpost": "基盤となるプロセッサのハードウェア アシストによる仮想化機能をこのゲスト OS に公開することにより、完全な CPU 仮想化を有効化します。",
+               "schedulingAffinitySignPost": "<p>この仮想マシンに対する論理プロセッサのアフィニティを選択します。</p><p>範囲には「-」、値を区切るには「,」を使用します。たとえば、「0,2,4-7」はプロセッサ 0、2、4、5、6、7 を表します。</p><p>文字列をクリアしてアフィニティ設定を削除します。</p>",
+               "cpuMMUSignPost": "<p>ESXi は、プロセッサのタイプおよび仮想マシンに基づいて、仮想マシンが仮想化のハードウェア サポートを使用する必要があるかどうかを自動的に判別します。ただし、ワークロードによっては、自動選択された設定を別の設定でオーバーライドすることでパフォーマンスが向上する場合があります。</p><p>注意： 選択した設定がホストでサポートされていないか、または既存の仮想マシンの設定と競合する場合、その設定は無視され、「自動」設定が使用されます。</p>",
+               "cpu": {
+                  "label": "CPU",
+                  "cores": {
+                     "label": "ソケットあたりのコア",
+                     "desc": "ソケット:"
+                  },
+                  "hotPlug": {
+                     "label": "CPU のホット プラグ",
+                     "desc": "CPU ホット アドの有効化"
+                  },
+                  "reservation": {
+                     "label": "予約",
+                     "unit": "予約ユニット"
+                  },
+                  "limit": {
+                     "label": "制限",
+                     "unit": "制限ユニット"
+                  },
+                  "shares": {
+                     "label": "シェア",
+                     "unit": "シェア ユニット",
+                     "low": "低",
+                     "normal": "正常",
+                     "high": "高",
+                     "custom": "カスタム"
+                  },
+                  "hardwareVirtualization": {
+                     "label": "ハードウェア仮想化",
+                     "desc": "ハードウェア アシストによる仮想化をゲスト OS に公開"
+                  },
+                  "performanceCounters": {
+                     "label": "パフォーマンス カウンタ",
+                     "desc": "仮想 CPU パフォーマンス カウンタの有効化"
+                  },
+                  "schedulingAffinity": {
+                     "label": "スケジュール設定のアフィニティ",
+                     "value": "アフィニティ値のスケジュール設定",
+                     "hyper": "ハイパースレッディング ステータス:",
+                     "available": "使用可能な CPU:",
+                     "logical": "(論理 CPU)"
+                  },
+                  "cpuMmuVirtualization": {
+                     "label": "CPU/MMU 仮想化",
+                     "auto": "自動",
+                     "software": "ソフトウェアの CPU および MMU",
+                     "hardwareCPU": "ハードウェアの CPU、ソフトウェアの MMU",
+                     "hardwareBoth": "ハードウェアの CPU および MMU"
+                  },
+                  "validation": {
+                     "invalidReservation": "CPU 予約の値が無効です。",
+                     "badReservation": "CPU 予約は 0 MHz ～ {{maxMhz}} MHz にする必要があります。",
+                     "NaNReservation": "CPU 予約は数値にする必要があります",
+                     "negativeReservation": "CPU 予約を負の値にすることはできません",
+                     "nonIntegerReservation": "CPU 予約は整数値にする必要があります",
+                     "NaNLimit": "CPU 制限は数値にする必要があります",
+                     "negativeLimit": "CPU 制限を負の値にすることはできません",
+                     "invalidLimit": "CPU 制限は予約値以上にする必要があります。",
+                     "invalidShares": "CPU シェアの値が無効です。",
+                     "invalidAffinity": "CPU アフィニティの値が無効です。"
+                  }
+               },
+               "memory": {
+                  "label": "メモリ",
+                  "unit": "メモリ ユニット",
+                  "ram": {
+                     "label" :"RAM",
+                     "unit": "RAM ユニット"
+                  },
+                  "reservation": {
+                     "label": "予約",
+                     "unit": "予約ユニット",
+                     "desc": "すべてのゲスト メモリを予約 (すべてロック)",
+                     "validation" : {
+                        "emptyValue" : "メモリ予約を空にすることはできません",
+                        "NaN" : "メモリ予約には数値のみ使用できます",
+                        "negativeValue" : "メモリ予約に負の値 {{value}} は指定できません",
+                        "floatValue" : "メモリ予約には整数値のみ指定できます"
+                     }
+                  },
+                  "limit": {
+                     "label": "制限",
+                     "unit": "制限ユニット",
+                     "validation" : {
+                        "emptyValue" : "メモリ制限を空にすることはできません",
+                        "NaN" : "メモリ制限には数値のみ指定できます",
+                        "negativeValue" : "メモリ制限に負の値 {{value}} は指定できません",
+                        "limitLow" : "メモリ制限は予約値以上にする必要があります。",
+                        "floatValue" : "メモリ制限には整数値のみ指定できます"
+                     }
+                  },
+                  "shares": {
+                     "label": "シェア",
+                     "unit": "シェア ユニット"
+                  },
+                  "hotPlug": {
+                     "label": "メモリ ホット プラグ",
+                     "desc": "有効"
+                  },
+                  "validation": {
+                     "invalidRAM": "RAM の値が無効です。",
+                     "badRAM": "メモリ値は 4 の倍数にする必要があります。",
+                     "lowCapacity": "元の値より大きいメモリ値を入力してください。",
+                     "highRAM": "指定されたメモリはホストで利用可能なメモリ量を超えています。メモリのオーバーコミットは仮想マシンのパフォーマンスに影響することがあります。",
+                     "lowRAM": "このゲストの推奨最小メモリは {{min}} です。これより少ない値を指定すると、動作が不安定になったり、起動に失敗することがあります。",
+                     "maxRAM": "メモリは {{max}} 以下にする必要があります。",
+                     "invalidReservation": "メモリ予約の値が無効です。",
+                     "reservationHigh": "メモリ予約は {{max}} 以下にする必要があります。入力した値 ({{value}}) は大きすぎます。",
+                     "invalidLimit": "無効なメモリ制限",
+                     "limitLow": "メモリ制限は予約値以上にする必要があります。",
+                     "invalidShares": "無効なメモリ シェア値です。"
+                  }
+               },
+               "sound": {
+                  "VirtualHdAudioCard": "HD オーディオ",
+                  "VirtualSoundBlaster16": "Sound Blaster 16",
+                  "VirtualEnsoniq1371": "Ensoniq 1371",
+                  "type": "タイプ",
+                  "title": "サウンド カード"
+               },
+               "video":{
+                  "label": "ビデオ カード",
+                  "settings": {
+                     "custom": "カスタム設定の指定",
+                     "auto": "設定の自動検出"
+                  },
+                  "display": "ディスプレイ数",
+                  "memory": {
+                     "label" :"ビデオ メモリの合計",
+                     "unit": "MB",
+                     "calculator":"ビデオ メモリ計算機",
+                     "dialog": {
+                        "title": "ビデオ メモリ計算機",
+                        "desc": "ゲストがサポートする必要があるディスプレイの最大数および解像度に基づいて必要なビデオ メモリを計算します。",
+                        "display": "ディスプレイ数:",
+                        "resolution": "解像度:",
+                        "total": "ビデオ メモリの合計:",
+                        "ok": "OK",
+                        "cancel": "キャンセル"
+                     }
+                  },
+                  "3d": {
+                     "graphics": {
+                        "label":"3D グラフィックス",
+                        "desc": "3D サポートを有効化"
+                     },
+                     "renderer": {
+                        "label": "3D レンダラ",
+                        "automatic": "自動",
+                        "software": "ソフトウェア",
+                        "hardware": "ハードウェア"
+                     },
+                     "memory":{
+                        "label": "3D メモリ",
+                        "unit": "MB"
+                     }
+                  }
+               },
+               "hd": {
+                  "title": "ハード ディスク {{size}}",
+                  "label": "ハード ディスク",
+                  "size": "ハード ディスク サイズ",
+                  "new": "新規ハード ディスク",
+                  "unit": "ハード ディスク ユニット",
+                  "delete": "データストアからファイルを削除します",
+                  "device": "デバイス パス",
+                  "maximumsize": "最大サイズ",
+                  "location": "場所",
+                  "selectDirectory": "ディレクトリの選択",
+                  "browse": "参照...",
+                  "diskProvisioning": "ディスク プロビジョニング",
+                  "thin": "シン プロビジョニング",
+                  "thick": "シック プロビジョニング (Lazy Zeroed)",
+                  "eager": "シック プロビジョニング (Eager Zeroed)",
+                  "type": "タイプ",
+                  "diskFile": "ディスク ファイル",
+                  "shares": {
+                     "label": "シェア",
+                     "type": "シェア タイプ",
+                     "value": "シェア値",
+                     "unit": "シェア ユニット"
+                  },
+                  "limitIOP": "制限 - IOPs",
+                  "virtualFlash": {
+                     "label": "仮想フラッシュ読み取りキャッシュ",
+                     "unit": "仮想フラッシュ読み取りキャッシュ ユニット"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "仮想デバイス ノード",
+                     "unit": "仮想デバイス ノード ユニット"
+                  },
+                  "diskCompatibility": {
+                    "label": "ディスクの互換性",
+                    "physical": "物理",
+                    "virtual": "仮想"
+                  },
+                  "diskSharing": {
+                     "label": "共有",
+                     "sharingMultiWriter": "マルチライターの共有",
+                     "sharingNone": "なし",
+                     "info": "ディスク共有を使用できるのは、シック プロビジョニング (Eager Zeroed) ディスクの場合のみです。"
+                  },
+                  "diskMode": {
+                     "label": "ディスク モード",
+                     "dependent": "依存型",
+                     "independentPersistent": "独立型：通常",
+                     "independentNonpersistent" :"独立型：読み取り専用"
+                  },
+                  "provisioning": {
+                     "thin": "シン プロビジョニング",
+                     "thickEager": "シック プロビジョニング (Eager Zeroed)",
+                     "thickLazy": "シック プロビジョニング (Lazy Zeroed)"
+                  },
+                  "menu": {
+                     "new": {
+                        "label": "新規ハード ディスク",
+                        "tooltip": "仮想マシンに新しいハード ディスクを追加します"
+                     },
+                     "existing": {
+                        "label": "既存のハード ディスク",
+                        "tooltip": "仮想マシンに既存のハード ディスクを追加します"
+                     },
+                     "rdm": {
+                        "label": "新しい RDM の追加",
+                        "tooltip": "仮想マシンへの RDM の追加"
+                     }
+                  },
+                  "validation": {
+                     "numDisks": "この仮想マシンの構成は {{size}} のハード ディスクのみをサポートします。",
+                     "missingDatastore": "{{disk}} のデータストアが見つかりませんでした。構成を変更しない限り、このディスクは無視されます。",
+                     "invalidHD": "ディスク サイズの値が無効です。",
+                     "lowCapacity": "元の容量より大きいディスク サイズを入力してください。",
+                     "highCapacity": "指定されたディスク サイズがデータストアで使用できる量を超えています。ディスク容量のオーバーコミットにより、データストアのすべての容量が消費され、仮想マシンがブロックされる可能性があります。次に進む前にデータストア容量を増やすか、またはディスク サイズを小さくしてください。",
+                     "highCapacityThick": "指定されたディスク サイズがデータストアで使用できる量を超えています。シック プロビジョニング ディスクを使用している場合に、ディスク容量をオーバーコミットすることはできません。次に進む前にデータストア容量を増やすか、またはディスク サイズを小さくしてください。",
+                     "invalidController": "ディスクに対し有効なコントローラを選択してください",
+                     "invalidShares": "メモリ シェアの値が無効です。",
+                     "limitIOPsEmpty" : "ディスクの IOPs 制限は空にできません",
+                     "limitIOPsNaN" : "ディスクの IOPs 制限が無効です",
+                     "limitIOPsNegative" : "ディスクの IOPs 制限は負の値にできません",
+                     "limitIOPsNonInteger" : "ディスクの IOPs 制限には整数値のみ指定できます",
+                     "invalidReadCache": "読み取りキャッシュの値が無効です。",
+                     "badReservation": "予約は {{min}} と {{max}} の間にする必要があります。仮想 Flash Read Cache を無効にする場合は 0 を入力します。",
+                     "noAvailableLocation": "選択したコントローラに使用できるターゲット ID はありません。別のコントローラを選択してください。",
+                     "locationInUse": "このターゲット ID は別のデバイスが使用しています。別のターゲット ID を選択してください。"
+                  }
+               },
+               "pci": {
+                  "title": "PCI デバイス {{size}}",
+                  "new": "新規 PCI デバイス",
+                  "physical": {
+                     "label": "物理 PCI/PCIe デバイス",
+                     "warning": "メモリ予約がメモリ サイズと等しくなるまで、仮想マシンはパワーオンされません。",
+                     "button": "すべてのメモリの予約",
+                     "note": "PCI/PCIe パススルー デバイスがあると、一部の仮想マシンの操作を行えません。たとえば、サスペンド、vMotion を使用した移行、仮想マシンのスナップショットの取得やリストアなどを行えません。"
+                  }
+               },
+               "ide": {
+                  "label": "IDE コントローラ {{index}}",
+                  "master": "マスター",
+                  "slave": "スレーブ"
+               },
+               "scsi": {
+                  "title": "SCSI コントローラ {{size}}",
+                  "new": "新規 SCSI コントローラ",
+                  "type": "SCSI タイプ",
+                  "label": "SCSI コントローラ {{index}}",
+                  "busSharing": {
+                     "label": "SCSI バスの共有",
+                     "none": "なし",
+                     "virtual": "仮想",
+                     "physical": "物理"
+                  },
+                  "validation": {
+                     "diskAttached": "このコントローラにはまだ、ハード ディスクがマウントされています。まずハード ディスクを再割り当てしてください。",
+                     "maxControllersReached": "SCSI コントローラの最大数 ({{max}}) に達しました。"
+                  }
+               },
+               "nvme": {
+                  "title": "NVMe コントローラ {{size}}",
+                  "new": "新規 NVMe コントローラ",
+                  "label": "NVMe コントローラ {{index}}",
+                  "validation": {
+                     "diskAttached": "このコントローラにはまだ、ハード ディスクがマウントされています。まずハード ディスクを再割り当てしてください。",
+                     "maxControllersReached": "NVMe コントローラの最大数 ({{max}}) に達しました。"
+                  }
+               },
+               "sata": {
+                  "title": "SATA コントローラ {{size}}",
+                  "new": "新規 SATA コントローラ",
+                  "label": "SATA コントローラ {{index}}",
+                  "validation": {
+                     "diskAttached": "このコントローラにはまだ、ハード ディスクがマウントされています。まずハード ディスクを再割り当てしてください。",
+                     "cdromAttached": "このコントローラにはまだ、CD/DVD ドライブがマウントされています。まず CD/DVD ドライブを再割り当てしてください。",
+                     "maxControllersReached": "SATA コントローラの最大数 ({{max}}) に達しました。"
+                  }
+               },
+               "usbController": {
+                  "title": "USB コントローラ {{size}}",
+                  "new": "新規 USB コントローラ",
+                  "settings": "設定",
+                  "warnUnsupported": "選択した USB コントローラはこのゲスト OS でサポートされていません",
+                  "validation": {
+                     "numUSBs": "この仮想マシンの構成は {{size}} の USB デバイスのみをサポートします。",
+                     "maxUSB2Devices": "この仮想マシンの構成は {{max}} の USB 2.0 デバイスのみをサポートします。",
+                     "maxUSB3Devices": "この仮想マシンの構成は {{max}} の USB 3.0 デバイスのみをサポートします。"
+                  }
+               },
+               "usbDevice": {
+                  "title": "USB デバイス {{size}}",
+                  "new": "新規 USB デバイス",
+                  "deviceNotFound": "デバイスが見つかりません",
+                  "connect": "接続",
+                  "validation": {
+                     "duplicateUsb": "1 つの USB デバイスを複数回追加することはできません。",
+                     "tooMany": "追加できる USB デバイスはありません",
+                     "maxDevices": "USB デバイスの最大数は 20 個です"
+                  }
+               },
+               "serialPort": {
+                  "title": "シリアル ポート {{size}}",
+                  "new": "新規シリアル ポート",
+                  "status": "ステータス",
+                  "connect": "接続",
+                  "connectAt": "パワーオン時に接続",
+                  "connection": "接続",
+                  "physicalType": "物理シリアル ポートのタイプ",
+                  "browse": "参照...",
+                  "pipeName": "パイプ名",
+                  "portURI": {
+                     "label": "ポート URI:",
+                     "desc": "仮想シリアル ポート コンセントレータの使用"
+                  },
+                  "vSPCURI": "vSPC URI:",
+                  "deviceType": {
+                     "file": "出力ファイルを使用",
+                     "physical": "物理シリアル ポートを使用",
+                     "pipe": "名前付きパイプを使用",
+                     "network": "ネットワークの使用",
+                     "thinprint": "ThinPrint"
+                  },
+                  "nearEnd": {
+                     "label": "近端",
+                     "client": "クライアント",
+                     "server": "サーバ"
+                  },
+                  "farEnd": {
+                     "label": "遠端",
+                     "vm": "仮想マシン",
+                     "process": "プロセス"
+                  },
+                  "direction": {
+                     "label": "方向",
+                     "client": "クライアント",
+                     "server": "サーバ"
+                  },
+                  "validation": {
+                     "missingOutputFile": "シリアル ポートの出力ファイルの名前を入力してください。",
+                     "invalidOutputFile": "有効な出力ファイル形式を入力してください。",
+                     "invalidPipeName": "有効なパイプ ファイル名を入力してください。",
+                     "invalidPortUri": "有効なポートの URI を、&lt;プロトコル&gt;://&lt;ip または ホスト名&gt;:&lt;ポート&gt; の形式で入力してください。",
+                     "invalidVSPC": "有効な仮想ポート シリアル ポート コンセントレータを、&lt;プロトコル&gt;://&lt;ip または ホスト名&gt;:&lt;ポート&gt; の形式で入力してください。"
+                  }
+               },
+               "parallelPort": {
+                  "title": "パラレル ポート {{size}}",
+                  "new": "新規パラレル ポート",
+                  "status": "ステータス",
+                  "connect": "接続",
+                  "connectAt": "パワーオン時に接続",
+                  "connection": "接続",
+                  "browse": "参照...",
+                  "deviceType": {
+                     "file": "出力ファイルを使用"
+                  },
+                  "validation": {
+                     "invalidOutputFile": "出力ファイル形式が無効です。",
+                     "missingOutputFile": "パラレル ポートの出力ファイルの名前を入力してください"
+                  }
+               },
+               "network": {
+                  "title": "ネットワーク アダプタ {{size}}",
+                  "new": "新規ネットワーク アダプタ",
+                  "status": "ステータス",
+                  "connect": "接続",
+                  "connectAt": "パワーオン時に接続",
+                  "adapterType": "アダプタ タイプ",
+                  "physicalFunction": "物理機能",
+                  "virtualFunction": "仮想機能",
+                  "sriovPassthrough": "SR-IOV パススルー",
+                  "sriovMemReserved": "メモリ予約",
+                  "passthroughAllMemReserved": "PCI パススルーまたは SR-IOV を有効にするために、仮想マシンのメモリが予約されます。",
+                  "vmxnet2Enhanced": "VMXNET 2 (拡張)",
+                  "guestOSMTUChange": {
+                     "label": "ゲスト OS MTU の変更",
+                     "allow": "許可",
+                     "disallow": "不許可"
+                  },
+                  "macAddress": "MAC アドレス",
+                  "macAddressType": {
+                     "label": "MAC アドレス タイプ",
+                     "auto": "自動",
+                     "assigned": "割り当て済み",
+                     "manual": "手動"
+                  },
+                  "validation": {
+                     "missingMACAddress": "MAC アドレスは必須です",
+                     "invalidMACAddress": "無効な MAC アドレス",
+                     "missingPortgroup": "ネットワーク アダプタ {{index}} のポート グループ {{missing}} が見つかりません。これは {{assigned}} に割り当てられています。",
+                     "cantAssign": "非短期の分散仮想ポート グループ ({{name}}) に接続されているネットワーク アダプタの追加または再構成はサポートされていません。"
+                  }
+               },
+               "floppy": {
+                  "title": "フロッピー ドライブ {{size}}",
+                  "new": "新規フロッピー ドライブ",
+                  "status": "ステータス",
+                  "connect": "接続",
+                  "connectAt": "パワーオン時に接続",
+                  "browse": "参照...",
+                  "unsupportedLabel": "未サポート",
+                  "unsupported": "VMware Host Client では、クライアント フロッピー デバイスはサポートされていません。クライアント デバイスを使用する場合は、vSphere Web Client を使用してください。\n\nこのデバイスは無視されます。",
+                  "media": {
+                     "label": "フロッピー メディア",
+                     "desc": "接続するには、仮想マシンをパワーオンして、「サマリ」タブの仮想マシン ハードウェア パネルからメディアを選択します。"
+                  },
+                  "deviceType": {
+                     "client": "クライアント デバイス",
+                     "floppy": "既存のフロッピー イメージを使用"
+                  },
+                  "validation": {
+                     "numFloppy": "この仮想マシンの構成は {{size}} のフロッピー ドライブのみをサポートします。",
+                     "missingImage": "フロッピー ドライブのイメージを選択してください"
+                  }
+               },
+               "cdrom": {
+                  "title": "CD/DVD ドライブ {{size}}",
+                  "new": "新規 CD/DVD ドライブ",
+                  "status": "ステータス",
+                  "connect": "接続",
+                  "connectAt": "パワーオン時に接続",
+                  "browse": "参照...",
+                  "type": "タイプ",
+                  "atapiDevice": "ホスト デバイス",
+                  "unsupportedLabel": "未サポート",
+                  "unsupported": "VMware Host Client の使用時は、クライアント CD/DVD デバイスはサポートされていません。クライアント デバイスを使用する場合は、vSphere Web Client を使用してください。\n\nこのデバイスは無視されます。",
+                  "media": {
+                     "label": "CD/DVD メディア",
+                     "desc": "接続するには、仮想マシンをパワーオンして、「サマリ」タブの仮想マシン ハードウェア パネルからメディアを選択します。"
+                  },
+                  "deviceType": {
+                     "client": "クライアント デバイス",
+                     "host": "ホスト デバイス",
+                     "iso": "データストア ISO ファイル"
+                  },
+                  "deviceMode": {
+                     "label": "デバイス モード",
+                     "controller": "デバイス モード コントローラ",
+                     "location": "デバイス モードの場所",
+                     "emulate": "CD-ROM のエミュレート",
+                     "passthrough": "パススルー CD-ROM"
+                  },
+                  "deviceNode": {
+                     "sata": "SATA コントローラ"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "仮想デバイス ノード",
+                     "location": "コントローラーの場所",
+                     "controller": "コントローラ タイプ"
+                  },
+                  "validation": {
+                     "missingISO": "CDROM の ISO イメージを選択してください",
+                     "missingDevice": "ホストの CD/DVD デバイスを使用できません。データストア ISO などの別の CD/DVD バッキングを選択するか、CD/DVD ドライブを削除してください",
+                     "invalidController": "CD/DVD 用に有効なコントローラを選択してください",
+                     "noAvailableLocation": "選択したコントローラに使用できるターゲット ID はありません。別のコントローラを選択してください。",
+                     "locationInUse": "このターゲット ID は別のデバイスが使用しています。別のターゲット ID を選択してください。"
+                  }
+               },
+               "actionBar": {
+                  "addHD": {
+                     "label": "ハード ディスクの追加",
+                     "tooltip": "仮想マシンへのハード ディスクの追加"
+                  },
+                  "addNetwork": {
+                     "label": "ネットワーク アダプタの追加",
+                     "tooltip": "仮想マシンへのネットワーク アダプタの追加"
+                  },
+                  "newHD": {
+                     "label": "新規ハード ディスク",
+                     "tooltip": "仮想マシンに新しいハード ディスクを追加します"
+                  },
+                  "existingHD": {
+                     "label": "既存のハード ディスク",
+                     "tooltip": "仮想マシンに既存のハード ディスクを追加します"
+                  },
+                  "rdm": {
+                     "label": "新しい RDM ディスクの追加",
+                     "tooltip": "仮想マシンに新しい Raw デバイス マッピング ディスクを追加します"
+                  },
+                  "network": {
+                     "label": "ネットワーク アダプタ",
+                     "tooltip": "新しいネットワーク アダプタを追加します"
+                  },
+                  "cdrom": {
+                     "label": "CD/DVD ドライブ",
+                     "tooltip": "新しい CD/DVD ドライブを追加します"
+                  },
+                  "floppy": {
+                     "label": "フロッピー ドライブ",
+                     "tooltip": "新しいフロッピー ドライブを追加します"
+                  },
+                  "serial": {
+                     "label": "シリアル ポート",
+                     "tooltip": "新しいシリアル ポートを追加します"
+                  },
+                  "parallel": {
+                     "label": "パラレル ポート",
+                     "tooltip": "新しいパラレル ポートを追加します"
+                  },
+                  "usb": {
+                     "label": "USB コントローラ",
+                     "tooltip": "新しい USB コントローラを追加します"
+                  },
+                  "usbDevice": {
+                     "label": "USB デバイス",
+                     "tooltip": "新しい USB デバイスを追加します"
+                  },
+                  "scsi": {
+                     "label": "SCSI コントローラ",
+                     "tooltip": "新しい SCSI コントローラを追加します"
+                  },
+                  "pci": {
+                     "label": "PCI デバイス",
+                     "tooltip": "新しい PCI デバイスを追加します"
+                  },
+                  "sata": {
+                     "label": "SATA コントローラ",
+                     "tooltip": "新しい SATA コントローラを追加します"
+                  },
+                  "nvme": {
+                     "label": "NVMe コントローラ",
+                     "tooltip": "新しい NVMe コントローラを追加します"
+                  },
+                  "sound": {
+                     "label": "サウンド コントローラ",
+                     "tooltip": "サウンド コントローラを追加します"
+                  },
+                  "other": {
+                     "label": "その他のデバイスの追加",
+                     "tooltip": "この仮想マシンにその他のハードウェアを追加します"
+                  }
+               }
+            },
+            "hdlocation": {
+               "title": "次のデータストアには、選択したターゲット リソースからアクセスできます。仮想マシンの構成ファイルとすべての仮想ディスクのターゲット データストアを選択してください。",
+               "storagePolicy": {
+                  "default": "データストアのデフォルト",
+                  "vvol": "VVol 要件なしのポリシー",
+                  "vsan": "Virtual SAN のデフォルト ストレージ ポリシー"
+               },
+               "grid": {
+                  "name": "名前",
+                  "capacity": "キャパシティ",
+                  "freeSpace": "空き",
+                  "type": "タイプ",
+                  "thinProvisioning": "シン プロビジョニング",
+                  "access": "アクセス"
+               },
+               "dialog": {
+                  "ok": "OK",
+                  "select": "データストアの選択"
+               }
+            },
+            "vmoptions": {
+               "general": {
+                  "title": "一般オプション",
+                  "vmname": "仮想マシン名:",
+                  "vmconfigfile": "仮想マシン構成ファイル",
+                  "vmworkinglocation": "仮想マシンの動作場所",
+                  "guestOS": "ゲスト OS",
+                  "guestOSVersion": "ゲスト OS のバージョン",
+                  "remoteConsole": "VMware Remote Console のオプション",
+                  "guestOSLock": {
+                     "label": "ゲスト OS のロック",
+                     "desc": "最後のリモート ユーザーの切断時にゲスト OS をロック"
+                  },
+                  "maxNumSessions": {
+                     "label": "最大セッション数",
+                     "desc": "この仮想マシンへの同時接続数を制限",
+                     "validation" : {
+                        "invalid" : "有効な最大コンソール セッション数を指定してください。使用できる最大数は {{num}} です。"
+                     }
+                  },
+                  "vmwareTools": {
+                     "label": "VMware Tools",
+                     "desc": "VMware Tools 設定の拡張"
+                  },
+                  "powerOperations": {
+                     "label": "電源操作",
+                     "stop": "停止",
+                     "pause": "一時停止",
+                     "restart": "再起動",
+                     "desc": "仮想マシンのパワー オン/レジューム"
+                  },
+                  "vmwareToolsScript": {
+                     "label": "VMware Tools スクリプトの実行",
+                     "afterPoweringOn": "パワーオン後",
+                     "afterResuming": "レジューム後",
+                     "beforeSuspending": "サスペンド前",
+                     "beforeShuttingDown": "ゲストをシャットダウンする前"
+                  },
+                  "toolsUpgrades": {
+                     "label": "Tools のアップグレード",
+                     "desc": "パワーオン前に毎回 VMware Tools をチェックしてアップグレード"
+                  },
+                  "time": {
+                     "label": "時刻",
+                     "desc": "ホストとゲスト時間を同期"
+                  },
+                  "powerManagement": {
+                     "label": "電源管理",
+                     "desc": "電源管理設定の拡張",
+                     "standbyResponse": {
+                        "label": "スタンバイ応答",
+                        "desc": "ゲスト OS がスタンバイ状態になったときの仮想マシンの応答方法を指定します。",
+                        "suspend": "仮想マシンをサスペンドにします。",
+                        "standby": "ゲスト OS をスタンバイ モードにして、仮想マシンをパワーオンのままにします。"
+                     },
+                     "wakeOnLan": {
+                        "label": "Wake on LAN",
+                        "desc": "次の仮想マシン トラフィックの Wake On LAN:",
+                        "network": "新規ネットワーク (仮想マシン ネットワーク)"
+                     }
+                  },
+                  "bootOptions": {
+                     "label": "起動オプション",
+                     "desc": "起動オプションの拡張",
+                     "firmware": {
+                        "label": "ファームウェア",
+                        "desc": "仮想マシンの起動に使用するファームウェアを選択:"
+                     },
+                     "enableUEFISecureBoot": {
+                        "label": "UEFI セキュア ブートの有効化",
+                        "desc": "この仮想マシンに対して UEFI セキュア ブートを有効にするかどうかを指定します"
+                     },
+                     "bootDelay": {
+                        "label": "起動遅延時間",
+                        "desc": "仮想マシンのパワーオンまたはリセット時に、起動を遅延します。遅延時間:",
+                        "ms": "ミリ秒"
+                     },
+                     "forceBiosSetup": {
+                        "label": "強制的に BIOS セットアップ",
+                        "desc": "次回仮想マシンの起動時に、強制的に BIOS セットアップ画面に入る。"
+                     },
+                     "failedBootRecovery": {
+                        "label": "失敗した起動のリカバリ",
+                        "desc": "仮想マシンが起動デバイスを検出できない場合、自動的に起動を再試行します。再試行までの待機時間:",
+                        "sec": "秒"
+                     }
+                  },
+                  "advanced": {
+                     "label": "詳細",
+                     "settings": {
+                        "label": "設定",
+                        "desc": "詳細設定の拡張",
+                        "acceleration": "アクセラレーション機能の無効化",
+                        "logging": "ログの有効化"
+                     },
+                     "debuggingStats": {
+                        "label": "デバッグと統計",
+                        "release": "正常に実行",
+                        "debug": "デバッグ情報の記録",
+                        "stats": "統計の記録"
+                     },
+                     "swapFileLocation": {
+                        "label": "スワップ ファイルの場所",
+                        "default": {
+                           "label": "デフォルト",
+                           "desc": "仮想マシンを含むクラスタまたはホストの設定を使用します。"
+                        },
+                        "vmDirectory": {
+                           "label": "仮想マシン ディレクトリ",
+                           "desc": "仮想マシンと同じディレクトリにスワップ ファイルを格納します。"
+                        },
+                        "datastore": {
+                           "label": "ホストによって指定されたデータストア",
+                           "desc": "ホストがスワップ ファイル用に指定したデータストアにスワップ ファイルを格納します。これができない場合は、仮想マシンと同じディレクトリにスワップ ファイルを格納します。vMotion 中に両方のホストに認識されないデータストアを使用すると、影響を受ける仮想マシンの vMotion パフォーマンスに影響が及ぶ可能性があります。"
+                        }
+                     },
+                     "configParams": {
+                        "label": "構成パラメータ",
+                        "ok": "構成の編集...",
+                        "tooltip": "仮想マシンの構成パラメータの編集",
+                        "dialog": {
+                           "title": "構成パラメータ",
+                           "header": "試験的な機能に必要な場合、またはテクニカル サポートにより指示された場合、構成パラメータを変更または追加します。エントリは削除できません。",
+                           "ok": "OK",
+                           "cancel": "キャンセル",
+                           "remove": {
+                              "warning": {
+                                 "title": "警告",
+                                 "content": "構成パラメータ <strong>{{key}}</strong> を削除しますか?",
+                                 "confirmLabel": "削除",
+                                 "rejectLabel": "キャンセル"
+                              }
+                           },
+                           "add": {
+                              "title": "構成パラメータの追加",
+                              "ok": "追加",
+                              "cancel": "キャンセル",
+                              "notNull": "構成パラメータ キーは必須です。",
+                              "existing": "構成パラメータを複製します。"
+                           },
+                           "edit": {
+                              "title": "構成パラメータの編集",
+                              "ok": "保存",
+                              "cancel": "キャンセル"
+                           },
+                           "actionBar": {
+                              "add": {
+                                 "label": "パラメータの追加",
+                                 "tooltip": "パラメータの追加"
+                              },
+                              "edit": {
+                                 "label": "パラメータの編集",
+                                 "tooltip": "パラメータの編集"
+                              },
+                              "delete": {
+                                 "label": "パラメータの削除",
+                                 "tooltip": "パラメータの削除"
+                              },
+                              "refresh": {
+                                 "label": "更新",
+                                 "tooltip": "構成パラメータの更新"
+                              },
+                              "actions": {
+                                 "label": "アクション",
+                                 "tooltip": "選択した構成パラメータに対するアクション"
+                              }
+                           },
+                           "grid": {
+                              "key": "キー",
+                              "value": "値",
+                              "placeholder": {
+                                 "key": "クリックしてキーを編集",
+                                 "value": "クリックして値を編集"
+                              }
+                           }
+                        }
+                     },
+                     "latencySensitivity": {
+                        "label": "待ち時間感度"
+                     }
+                  },
+                  "fiberChannel": {
+                     "label": "ファイバ チャネル NPIV",
+                     "desc": "ファイバ チャネル NPIV の展開",
+                     "wwns": {
+                        "label": "ファイバ チャネルの仮想 WWN",
+                        "desc": "NPIV をサポートしているファイバ チャネル ハードウェアを持つホストで動作する仮想マシンには、高度な機能向けに仮想 WWN を割り当てることができます。通常、これらの WWN はホストまたは vCenter Server によって割り当てられます。",
+                        "disable": "この仮想マシンの NPIV を一時的に無効にする",
+                        "noWWNs": {
+                           "label": "現在、割り当てられている WWN はありません。",
+                           "unchanged": "変更しない",
+                           "generate": {
+                              "label": "新しい WWN を生成する",
+                              "WWNNs": "WWNN 数",
+                              "WWPNs": "WWPN 数"
+                           }
+                        },
+                        "assignments": "WWN の割り当て"
+                     },
+                     "wwps": {
+                        "assignments": "WWP の割り当て"
+                     }
+                  }
+               },
+               "firmware": {
+                  "bios": "BIOS (推奨)",
+                  "efi": "EFI"
+               },
+               "latency": {
+                  "low": "低",
+                  "medium": "中程度",
+                  "normal": "正常",
+                  "high": "高  "
+               },
+               "validation": {
+                  "numberWWNNs": "NPIV によって割り当てられる WWNN の数は {{min}} と {{max}} の間に設定する必要があります。",
+                  "numberWWPNs": "NPIV によって割り当てられる WWPN の数は {{min}} と {{max}} の間に設定する必要があります。"
+               }
+            }
+         },
+         "deploy": {
+            "expand": "クリックして展開",
+            "refreshWarning": "この仮想マシンがデプロイされている間は、ブラウザを更新しないでください。",
+            "start": {
+               "title": "OVF ファイルと VMDK ファイルの選択",
+               "description": "デプロイする仮想マシンの OVF ファイルと VMDK ファイルまたは OVA を選択します",
+               "validation": {
+                  "name": "この仮想マシンの有効な名前を指定してください。",
+                  "vmdk": "VMDK を選択する必要があります",
+                  "vmdk-ova": "OVA で VMDK ファイルを提供する必要はありません",
+                  "ovf-ova": "OVF または OVA を選択する必要があります"
+               }
+            },
+            "eula": {
+               "title": "使用許諾契約書",
+               "description": "使用許諾契約書を読んで同意します",
+               "agree": "同意します",
+               "notAgreed": "続行する前に、すべての使用許諾に同意する必要があります"
+            },
+            "options": {
+               "title": "デプロイのオプション",
+               "description": "デプロイ オプションの選択",
+               "deploymentOption": "デプロイ タイプ",
+               "networkMappings": "ネットワークのマッピング",
+               "diskProvisioning": "ディスク プロビジョニング",
+               "powerOnAutomatically": "自動的にパワーオン",
+               "thin": "シン",
+               "thick": "シック"
+            },
+            "properties": {
+               "title": "その他の設定",
+               "description": "仮想マシンのその他のプロパティ"
+            },
+            "summary": {
+               "loading": "仮想マシン構成を検証しています",
+               "product": "製品",
+               "vmName": "仮想マシン名",
+               "disks": "ディスク",
+               "diskType": {
+                  "label": "プロビジョニング タイプ",
+                  "thin": "シン",
+                  "thick": "シック"
+               },
+               "networkMappings": "ネットワークのマッピング",
+               "datastore": "データストア",
+               "guestOSName": "ゲスト OS 名",
+               "cpus": "CPU",
+               "memory": "メモリ",
+               "expand": "クリックして展開",
+               "properties": "プロパティ",
+               "validation": {
+                  "extraDisk": "1 つ以上の余分なディスク イメージが提供されましたが、このイメージは無視されます。",
+                  "diskMissing": "必要なディスク イメージが見つかりませんでした。",
+                  "error": "OVF ファイルからのインポート仕様の作成中にエラーが発生しました。"
+               },
+               "notification": {
+                  "success": "仮想マシン {{name}} はインポートされました",
+                  "error": "仮想マシンのデプロイに失敗しました: {{message}}"
+               }
+            },
+            "name": {
+               "label": "仮想マシンの名前を指定してください。",
+               "placeholder": "名前",
+               "desc": "仮想マシン名には最大 80 文字指定できますが、ESXi の各インスタンス内で一意の名前にする必要があります。"
+            },
+            "select": {
+               "click": "クリックしてファイルを選択するか、",
+               "drag": "またはドラッグ/ドロップします"
+            },
+            "notification": {
+               "match": "フィールド {{name}} が一致しません",
+               "required": "フィールド {{name}} が必要です"
+            }
+         },
+         "register": {
+            "select": "仮想マシン、データストア、またはディレクトリを 1 つ以上選択してください",
+            "noVMsFound": "{{folder}} に仮想マシンが見つかりませんでした",
+            "title": "登録のための仮想マシンの選択",
+            "description": "登録する仮想マシンを 1 台以上選択してください。データストアまたはディレクトリを選択すると、データストアまたはディレクトリで検出されるすべての仮想マシンが登録されます。",
+            "list": {
+               "columns": {
+                  "vmx": "VMX ファイル",
+                  "remove": "削除"
+               },
+               "actions": {
+                  "removeSelected": {
+                     "label": "選択内容を削除",
+                     "tooltip": "選択した仮想マシンを登録リストから削除します"
+                  },
+                  "removeAll": {
+                     "label": "すべて削除",
+                     "tooltip": "すべての仮想マシンを登録リストから削除します"
+                  }
+               },
+               "none": "なし"
+            },
+            "summary": {
+               "provisionType": "プロビジョニング タイプ",
+               "vm": "仮想マシン"
+            },
+            "notification": {
+               "success": "仮想マシン {{name}} は登録されました",
+               "register": "{{count}} 台の仮想マシンを登録しました",
+               "error": "仮想マシン {{name}} の登録に失敗しました。{{message}}"
+            }
+         },
+         "clone": {
+            "summary": {
+               "vm": "クローン作成する仮想マシン",
+               "clone": "以下にクローン作成:",
+               "datastore": "データストア:"
+            },
+            "notification": {
+               "sucess": "仮想マシン {{name}} のクローンが正常に作成されました",
+               "error": "仮想マシン {{name}} のクローン作成に失敗しました"
+            }
+         },
+         "summary": {
+            "title": "設定の確認",
+            "description": "選択した設定を確認してからウィザードを終了してください",
+            "provisionType": "プロビジョニング タイプ",
+            "vmName": "名前",
+            "datastore": "データストア",
+            "guestOS": "ゲスト OS 名",
+            "cpu": "vCPU",
+            "memory": "メモリ",
+            "nic": "ネットワーク アダプタ",
+            "nicNetwork": "ネットワーク アダプタ {{size}} のネットワーク",
+            "nicType": "ネットワーク アダプタ {{size}} のタイプ",
+            "ideController": "IDE コントローラ {{size}}",
+            "scsiController": "SCSI コントローラ {{size}}",
+            "nvmeController": "NVMe コントローラ {{size}}",
+            "sataController": "SATA コントローラ {{size}}",
+            "newSataController": "新規 SATA コントローラ",
+            "newNVMEController": "新規 NVMe コントローラ",
+            "createHardDisk": "ハード ディスク {{size}}",
+            "capacity": "キャパシティ",
+            "datastore": "データストア",
+            "diskProvisioning": "プロビジョニング",
+            "thin": "シン プロビジョニング",
+            "lazy": "シック プロビジョニング (Lazy Zeroed)",
+            "eager": "シック プロビジョニング (Eager Zeroed)",
+            "mode": "モード",
+            "controller": "コントローラ",
+            "serialPort": "シリアル ポート {{size}}",
+            "newSerialPort": "新規シリアル ポート",
+            "parallelPort": "パラレル ポート {{size}}",
+            "newParallelPort": "新規パラレル ポート",
+            "usbController": "USB コントローラ {{size}}",
+            "usbDevice": "USB デバイス {{size}}",
+            "createCdrom": "CD/DVD ドライブ {{size}}",
+            "createFloppy": "フロッピー ドライブ {{size}}",
+            "backing": "バッキング",
+            "client": "リモート デバイス CDROM",
+            "connected": "接続済み",
+            "sound": {
+               "label": "サウンド コントローラ",
+               "VirtualHdAudioCard": "HD オーディオ",
+               "VirtualSoundBlaster16": "Sound Blaster 16",
+               "VirtualEnsoniq1371": "Ensoniq 1371"
+            },
+            "notification": {
+               "success": "仮想マシン {{name}} が正常に作成されました",
+               "error": {
+                  "title": "仮想マシン構成エラー",
+                  "message": "仮想マシン構成は拒否されました。ブラウザ コンソールを参照してください。"
+               }
+            }
+         }
+      },
+      "unregister": {
+         "title": "仮想マシンの登録解除",
+         "title-single": "仮想マシンの登録解除: {{name}}",
+         "title-multiple": "{{count}} 台の仮想マシンの登録解除",
+         "content": "次の仮想マシンを登録解除しますか?",
+         "success": "{{num}} 台の仮想マシンが登録解除されました",
+         "failure": "1 台以上の仮想マシンを登録解除できませんでした",
+         "rejectLabel": "キャンセル"
+      },
+      "context": {
+         "title": "仮想マシン",
+         "newWindow": {
+            "label": "新しいウィンドウで開く",
+            "tooltip": "新しいウィンドウで仮想マシン リストを開きます"
+         },
+         "closeConsole": {
+            "label": "コンソールを閉じる",
+            "tooltip": "このコンソール ウィンドウを閉じます"
+         },
+         "exitFullScreenConsole": {
+            "label": "フル スクリーンを終了",
+            "tooltip": "フル スクリーンを終了"
+         },
+         "autostart": {
+            "autostart": {
+               "label": "自動起動",
+               "tooltip": "自動起動のオプションを構成します"
+            },
+            "enable": {
+               "label": "有効",
+               "tooltip": "この仮想マシンに対して自動起動を有効にします"
+            },
+            "increasePriority": {
+               "label": "後で起動",
+               "tooltip": "この仮想マシンが他の仮想マシンの後に起動するように、起動順序を大きくします"
+            },
+            "decreasePriority": {
+               "label": "先に起動",
+               "tooltip": "この仮想マシンが他の仮想マシンの前に起動するように、起動順序を小さくします"
+            },
+            "disable": {
+               "label": "無効",
+               "tooltip": "自動起動設定からこの仮想マシンを削除します"
+            },
+            "configure": {
+               "label": "設定",
+               "tooltip": "この仮想マシンの自動起動を設定します"
+            }
+         },
+         "export": {
+            "label": "エクスポート",
+            "tooltip": "この仮想マシンを OVF テンプレートとしてエクスポートします",
+            "download": {
+               "title": "ファイルのダウンロード",
+               "contentSize": "この仮想マシンの {{numFiles}} ファイルのうち {{fileIndex}} をダウンロードしようとしています。このファイルは {{size}} です。\n\nこのホストの IP または FQDN からのポップアップを許可していることを確認してください。",
+               "contentNoSize": "この仮想マシンの {{numFiles}} ファイルのうち {{fileIndex}} をダウンロードしようとしています。\n\nこのホストの IP または FQDN からのポップアップを許可していることを確認してください。",
+               "confirmLabel": "OK",
+               "rejectLabel": "キャンセル"
+            }
+         },
+         "unregister": {
+            "label": "登録解除",
+            "tooltip": "この仮想マシンの登録を解除します",
+            "tooltipMultiple": "これらの仮想マシンを登録解除します",
+            "tooltipDisabled": "1 台以上の仮想マシンの登録を解除します",
+            "tooltipWarnPoweredOn": " - 少なくとも 1 台の仮想マシンがパワーオンです。パワーオンの仮想マシンの登録は解除できません"
+         },
+         "delete": {
+            "label": "削除",
+            "tooltip": "この仮想マシンを削除します",
+            "tooltipMultiple": "これらの仮想マシンを削除します",
+            "tooltipDisabled": "仮想マシンの削除",
+            "tooltipWarnPoweredOn": " - 少なくとも 1 台の仮想マシンがパワーオンです。パワーオンの仮想マシンは削除できません"
+         },
+         "help": {
+            "label": "ヘルプ",
+            "tooltip": "仮想マシンのヘルプ トピック"
+         },
+         "openInNewWindow": {
+            "label": "新しいウィンドウで開く",
+            "tooltip": "この仮想マシンを新しいウィンドウで開きます"
+         },
+         "answerQuestion": {
+            "label": "質問への回答",
+            "tooltip": "この仮想マシンの保留中の質問に回答します",
+            "tooltipMultipleVMs": "質問に一度に回答できる仮想マシンは 1 台のみです"
+         },
+         "power": {
+            "label": "パワー",
+            "tooltip": "仮想マシンの電源操作",
+            "powerOn": {
+               "label": "パワーオン",
+               "tooltip": "この仮想マシンをパワーオンします"
+            },
+            "powerOff": {
+               "label": "パワーオフ",
+               "tooltip": "この仮想マシンをパワーオフする",
+               "warnSuspendedOrOn": "少なくとも 1 台の仮想マシンがサスペンドまたはパワーオンです。サスペンド状態の仮想マシンをパワーオフすると、ゲストのデータが消失する可能性があります。",
+               "warnSuspended": "この仮想マシンは現在サスペンドされています。パワーオフすると、ゲストのデータが消失する可能性があります。",
+               "warnOn": "この仮想マシンは現在パワーオンです。パワーオフすると、ゲストのデータが消失する可能性があります。"
+            },
+            "suspend": {
+               "label": "サスペンド",
+               "tooltip": "この仮想マシンをサスペンドする"
+            },
+            "reset": {
+               "label": "リセット",
+               "tooltip": "この仮想マシンをリセットします"
+            }
+         },
+         "create": {
+            "label": "仮想マシンの作成/登録",
+            "tooltip": "ウィザードを使用して仮想マシンを作成または登録します"
+         },
+         "snapshots": {
+            "label": "スナップショット",
+            "tooltip": "この仮想マシンのスナップショット操作"
+         },
+         "console": {
+            "console": {
+               "label": "コンソール",
+               "tooltip": "この仮想マシンのコンソール オプション"
+            },
+            "browser": {
+               "label": "ブラウザ コンソールを開く",
+               "tooltip": "この仮想マシンのコンソールをブラウザ内に開きます"
+            },
+            "browserNewWindow": {
+               "label": "コンソールを新しいウィンドウで開く",
+               "tooltip": "この仮想マシンのコンソールを新しいウィンドウでブラウザ内に開きます"
+            },
+            "browserNewTab": {
+               "label": "コンソールを新しいタブで開く",
+               "tooltip": "この仮想マシンのコンソールを新しいタブでブラウザ内に開きます"
+            },
+            "showMousePad": {
+               "label": "相対マウス パッドを表示",
+               "tooltip": "この仮想マシンの相対マウス パッドを表示します。ブラウザ コンソール内のマウス コントロールに問題のある仮想マシンで役立ちます。"
+            },
+            "resetSize": {
+               "label": "ネイティブ解像度にリセット",
+               "tooltip": "コンソールを仮想マシンのネイティブ解像度にリセットします"
+            },
+            "vmrc": {
+               "label": "リモート コンソールを起動",
+               "tooltip": "スタンドアロン の VMware Remote Console (VMRC) アプリケーションを使用してコンソールを起動します"
+            },
+            "downloadVMRC": {
+               "label": "VMRC のダウンロード",
+               "tooltip": "VMware.com にアクセスし、スタンドアロン VMware Remote Console (VMRC) アプリケーションをダウンロードします"
+            }
+         },
+         "guest": {
+            "guestOS": {
+               "label": "ゲスト OS",
+               "tooltip": "ゲスト OS の操作"
+            },
+            "shutDown": {
+               "label": "シャットダウン",
+               "tooltip": "このゲストをシャットダウンします"
+            },
+            "restart": {
+               "label": "再起動",
+               "tooltip": "このゲストを再起動します"
+            },
+            "sendKeys": {
+               "title": "キーの送信",
+               "toolTip": "ゲストにキーを送信します",
+               "toolTipKeys": "ゲストに {{description}} を送信します",
+               "toolTipNoWebMKS": "キーを送信するには、アクティブなブラウザ内コンソール セッションが必要です"
+            },
+            "keyCombinations": {
+               "ctrlAltDelete": {
+                  "title": "Ctrl + Alt + Delete",
+                  "toolTip": "ゲストに Ctrl + Alt + Delete を送信します"
+               },
+               "ctrlC": {
+                  "title": "Ctrl + C",
+                  "toolTip": "ゲストに Ctrl + C を送信します"
+               },
+               "escape": {
+                  "title": "Esc",
+                  "toolTip": "ゲストに Esc を送信します"
+               },
+               "functionKey": {
+                  "title": "{{description}}",
+                  "toolTip": "ゲストに {{description}} を送信します"
+               }
+            },
+            "installTools": {
+               "label": "VMware Tools のインストール",
+               "tooltip": "このゲスト OS に VMware Tools インストーラの CDROM をマウントします"
+            },
+            "upgradeTools": {
+               "label": "VMware Tools のアップグレード",
+               "tooltip": "このゲスト OS で VMware Tools をアップグレードします",
+               "notification": {
+                  "successSingle": "{{vmName}} の VMware Tools がアップグレードされました",
+                  "failedSingle": "{{vmName}} の VMware Tools のアップグレードに失敗しました: {{reason}}",
+                  "successMultiple": "{{num}} 台の仮想マシンの VMware Tools がアップグレードされました。",
+                  "failedMultiple": "少なくとも 1 台の仮想マシンの VMware Tools のアップグレードに失敗しました: {{reason}}"
+               }
+            }
+         },
+         "editSettings": {
+            "label": "設定の編集",
+            "tooltip": "この仮想マシンの設定を編集します"
+         },
+         "editNotes": {
+            "label": "メモの編集",
+            "tooltip": "この仮想マシンのメモを編集します"
+         },
+         "rename": {
+            "label": "名前の変更",
+            "tooltip": "この仮想マシンの名前を変更します",
+            "tooltipSingle": "名前を変更できる仮想マシンは 1 台のみです"
+         }
+      },
+      "error": {
+         "unknown": "仮想マシン「{{moid}}」は見つかりませんでした。"
+      },
+      "warning": {
+         "multiThreshold": {
+            "title": "警告",
+            "confirmLabel": "はい",
+            "rejectLabel": "いいえ",
+            "content": "選択した仮想マシン ({{num}}) 上でこの操作を実行すると、Web ブラウザがしばらく動作を停止したり、不安定になる可能性があります。選択する仮想マシンの数を {{threshold}} 台よりも少なくすることをお勧めします。続行しますか?"
+         },
+         "shutDown": {
+            "title": "ゲストのシャットダウンの確認",
+            "confirmLabel": "はい",
+            "rejectLabel": "キャンセル",
+            "content": "{{name}} をシャットダウンしますか?",
+            "contentMultiple": "{{num}} 台の仮想マシンをシャットダウンしますか?"
+         },
+         "restart": {
+            "title": "ゲストの再起動の確認",
+            "confirmLabel": "はい",
+            "rejectLabel": "キャンセル",
+            "content": "{{name}} を再起動しますか?",
+            "contentMultiple": "{{num}} 台の仮想マシンを再起動しますか?"
+         }
+      },
+      "logs": {
+         "dropdown": {
+            "default": "ログの選択"
+         },
+         "actionBar": {
+            "refresh": {
+               "label": "更新",
+               "tooltip": "ログの更新"
+            },
+            "close": {
+               "label": "閉じる",
+               "tooltip": "このウィンドウを閉じます"
+            }
+         }
+      },
+      "rename": {
+         "current": "現在の名前",
+         "new": "新規名前",
+         "title": "仮想マシン名の変更: {{name}}",
+         "ok": "名前の変更",
+         "error": "名前を入力してください",
+         "rejectLabel": "キャンセル",
+         "notification": {
+            "success": "仮想マシン {{name}} の名前が変更されました",
+            "error": "仮想マシン {{name}} の名前の変更に失敗しました"
+         }
+      },
+      "help": {
+         "content": "<p>仮想マシンのパラメータについて説明します。</p><dl><dt>状態</dt><dd>状態列には、仮想マシンの現在の状態が表示されます: パワーオン、パワーオフ、またはサスペンド。</dd><dt>ステータス</dt><dd>ステータス列には、仮想マシンで保留中の通知に基づいて仮想マシンの高レベルのステータスが表示されます。たとえば、VMware Tools がインストールされていない場合、ステータスは<strong>情報</strong>になります。<br /><br /> <strong>無効</strong>状態は、仮想マシンがデータストアでアクセスできないことを意味します。ファイルが削除された可能性があります。無効な仮想マシンにできる唯一の操作は登録解除です。<br /><br /> <strong>不整合</strong>状態は、仮想マシンの状態が不明であることを意味します。この問題は仮想マシンの電源サイクルで解決します。</dd><dt>プロビジョニングした領域</dt><dd>プロビジョニング領域列には、仮想マシンに提供されているストレージ容量が表示されます (すべての仮想ディスクの累積)。</dd><dt>使用領域</dt><dd>使用領域列には、仮想マシンが現在消費しているストレージ容量が表示されます。これには、仮想マシンの仮想ディスク上のデータ ストレージ、サスペンド状態、スナップショット、およびスワップ ファイルによる消費量が含まれます。</dd><dt>ホスト名</dt><dd>ホスト名列には、ゲスト OS のホスト名が表示されます。</dd><dt>ホスト CPU</dt><dd>ホスト CPU 列には、仮想マシンの vCPU が現在ホストの CPU で消費している CPU リソース量が表示されます。</dd><dt>ホスト メモリ</dt><dd>ホスト メモリ列には、仮想マシンがホスト システムで消費しているメモリ量が表示されます。</dd></dl>",
+         "title": "ヘルプ"
+      }
+   }
+}

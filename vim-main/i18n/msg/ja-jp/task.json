@@ -1,0 +1,55 @@
+{
+   "task": {
+      "task": "タスク",
+      "entity": "ターゲット",
+      "queued": "キュー済み",
+      "started": "起動済み",
+      "completed": "完了",
+      "initiator": "イニシエータ",
+      "result": "結果",
+      "state": {
+         "running": "実行中です...",
+         "success": "正常終了",
+         "successful": "正常終了",
+         "error": "失敗"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "更新",
+            "tooltip": "タスク テーブルの更新"
+         },
+         "actions": {
+            "label": "アクション",
+            "tooltip": "選択したタスクに関連するオブジェクトに対するアクション"
+         }
+      },
+      "pseudo": {
+         "vmrc": {
+            "download": {
+               "label": "VMRC のダウンロード",
+               "summary": "VMware Remote Console インストーラをダウンロードします"
+            }
+         },
+         "certificate": {
+            "upload": {
+               "label": "ホスト証明書の置き換え",
+               "summary": "ホストの SSL 証明書を置き換えます"
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "データストアへのファイルのアップロード",
+               "summary": "データストアにファイルをアップロードします",
+               "cancelled": "ファイルのアップロードがキャンセルされました"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "ディスクのアップロード",
+               "summary": "ディスクを仮想マシンにアップロードします",
+               "cancelled": "ディスクのアップロードがキャンセルされました"
+            }
+         }
+      }
+   }
+}

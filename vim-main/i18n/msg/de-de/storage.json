@@ -1,0 +1,923 @@
+{
+   "storage": {
+      "title": "Speicher",
+      "tabs": {
+         "datastores": {
+            "label": "Datenspeicher",
+            "tooltip": "Datenspeicher"
+         },
+         "adapters": {
+            "label": "Adapter",
+            "tooltip": "Adapter"
+         },
+         "devices": {
+            "label": "Geräte",
+            "tooltip": "Geräte"
+         }
+      },
+      "wizard": {
+         "partitionType": "Partitionstyp",
+         "vmfsVersion": "VMFS-Version",
+         "error": {
+            "scheme": "Wählen Sie ein Partitionierungsschema aus",
+            "size": "Wählen Sie eine Partitionsgröße zwischen {{min}} und {{max}}",
+            "partition": "Es wurde keine Partition ausgewählt. Wählen Sie im linken Diagramm eine Partition aus."
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "Berechtigungen",
+            "title": "Berechtigungen verwalten",
+            "close": "Schließen",
+            "cancel": "Abbrechen",
+            "noUsers": "Keine Benutzer",
+            "addUser": {
+               "label": "Benutzer hinzufügen",
+               "toolTip": "Einen Benutzer hinzufügen"
+            },
+            "removeUser": {
+               "label": "Benutzer entfernen",
+               "toolTip": "Einen Benutzer entfernen"
+            },
+            "assignRole": {
+               "label": "Rolle zuweisen",
+               "toolTip": "Eine Rolle einem Benutzer zuweisen"
+            },
+            "updatePermissions": {
+               "successNotification": "Berechtigungen wurden aktualisiert",
+               "failureNotification": "Berechtigungen konnten nicht aktualisiert werden: {{error}}"
+            },
+            "columns": {
+               "user": "Benutzer",
+               "role": "Rolle"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "Benutzer auswählen"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "Rolle auswählen"
+            },
+            "propagateLabel": "An alle untergeordneten Objekte weitergeben"
+         }
+      },
+      "devices": {
+        "browser": {
+          "dialog": {
+            "title": "Speichergerät auswählen",
+            "reject": "Abbrechen",
+            "confirm": "Auswählen"
+          },
+          "datagrid": {
+            "name": "Name",
+            "capacity": "Kapazität"
+          }
+        }
+      },
+      "device": {
+         "context": {
+            "disk": {
+               "clear": {
+                  "label": "Partitionstabelle löschen",
+                  "tooltip": "Partitionstabelle dieser Festplatte löschen"
+               },
+               "editPartitions": {
+                  "label": "Partitionen bearbeiten",
+                  "tooltip": "Partitionstabelle dieser Festplatte bearbeiten"
+               },
+               "rescan": {
+                  "title": "Erneut scannen",
+                  "tooltip": "Alle Speichergeräte erneut auf Datenspeicherr scannen"
+               }
+            }
+         },
+         "editPartitions": {
+            "title": "Partitionen bearbeiten – {{disk}}",
+            "rejectLabel": "Abbrechen",
+            "confirmLabel": "Partitionen speichern",
+            "before": "Vor der Bearbeitung einer Partition",
+            "after": "Nach der Bearbeitung einer Partition",
+            "actions": {
+               "delete": {
+                  "label": "Partition löschen",
+                  "tooltip": "Ausgewählte Partition löschen"
+               },
+               "reset": {
+                  "label": "Zurücksetzen",
+                  "tooltip": "Partitionen auf ihren ursprünglichen Zustand zurücksetzen"
+               }
+            },
+            "warning": {
+               "title": "Änderungen der Partitionstabelle von {{disk}} bestätigen",
+               "content": "Sie sind dabei, die Partitionstabelle von <strong>{{disk}}</strong> zu ändern. Dies ist eine destruktive Aktion, die zu Datenverlust führen könnte. Möchten Sie den Vorgang wirklich fortsetzen?",
+               "confirmLabel": "Ja",
+               "rejectLabel": "Nein"
+            },
+            "successNotification": "Partitionstabelle von {{disk}} wurde aktualisiert",
+            "failureNotification": "Partitionstabelle von {{disk}} konnte nicht aktualisiert werden"
+         },
+         "clear": {
+            "title": "Löschen der Partitionstabelle bestätigen – {{disk}}",
+            "content": "Sie sind dabei, die Partitionstabelle von <strong>{{disk}}</strong> zu löschen. Dies ist eine destruktive Aktion, die zu Datenverlust führen könnte. Möchten Sie den Vorgang wirklich fortsetzen?",
+            "confirmLabel": "Ja",
+            "rejectLabel": "Nein",
+            "failureNotification": "Löschen der Festplatte {{disk}} fehlgeschlagen",
+            "successNotification": "Festplatte {{disk}} wurde gelöscht"
+         },
+         "type": {
+            "disk": "Festplatte",
+            "cdrom": "CD-ROM"
+         },
+         "summary": {
+            "alt": "Gerät",
+            "uuid": "UUID:",
+            "notApplicable": "Nicht verfügbar",
+            "type": "Typ:",
+            "model": "Modell:",
+            "path": "Pfad:",
+            "capacity": "Kapazität:",
+            "partitionFormat": "Partitionsformat:",
+            "partitions": "Partitionen",
+            "partitionDiagram": "Partitionsdiagramm",
+            "blocks": "Blöcke",
+            "portlet": {
+               "type": "Typ",
+               "startBlock": "Startblock",
+               "endBlock": "Endblock",
+               "blockSize": "Blockgröße",
+               "size": "Größe"
+            },
+            "actions": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für ausgewählte Objekte in dieser Liste."
+               },
+               "increaseCapacity": {
+                  "label": "Datenspeicherkapazität auf dieser Festplatte erhöhen",
+                  "tooltip": "Datenspeicherkapazität auf diesem Gerät erhöhen"
+               },
+               "newDatastore": {
+                  "label": "Neuer Datenspeicher",
+                  "tooltip": "Neuen VMFS-Datenspeicher auf diesem Gerät erstellen"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Informationen dieses Geräts aktualisieren"
+               }
+            }
+         },
+         "list": {
+            "ok": "Normal",
+            "error": "Fehler",
+            "timeout": "Zeitüberschreitung",
+            "degraded": "Herabgestuft",
+            "disk": "Festplatte",
+            "cdrom": "CD-ROM",
+            "unknown": "Unbekannt",
+            "notApplicable": "Nicht verfügbar",
+            "actions": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für ausgewählte Objekte in dieser Liste."
+               },
+               "increaseCapacity": {
+                  "label": "Datenspeicherkapazität auf dieser Festplatte erhöhen",
+                  "tooltip": "Datenspeicherkapazität auf diesem Gerät erhöhen"
+               },
+               "rescan": {
+                  "label": "Erneut scannen",
+                  "tooltip": "Alle Speichergeräte erneut auf Datenspeicherr scannen"
+               },
+               "newDatastore": {
+                  "label": "Neuer Datenspeicher",
+                  "tooltip": "Neuen VMFS-Datenspeicher auf diesem Gerät erstellen"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Informationen dieses Geräts aktualisieren"
+               }
+            },
+            "datagrid": {
+               "name": "Name",
+               "status": "Status",
+               "type": "Typ",
+               "capacity": "Kapazität",
+               "queue": "Warteschlangentiefe",
+               "free": "Freier Speicherplatz",
+               "vendor": "Anbieter"
+            }
+         }
+      },
+      "partitionTypes": {
+         "C12A7328F81F11D2BA4B00A0C93EC93B": "EFI-System",
+         "EBD0A0A2B9E5443387C068B6B72699C7": "Basisdaten",
+         "AA31E02A400F11DB9590000C2911D1B8": "VMFS",
+         "9D27538040AD11DBBF97000C2911D1B8": "VMware Diagnose",
+         "381CFCCC728811E092EE000C2911D0B2": "vSAN",
+         "77719A0CA4A011E3A47E000C29745A24": "vSAN",
+         "free": "Freier Speicherplatz",
+         "extended": "Erweitert",
+         "linuxNative": "Linux Native",
+         "linuxSwap": "Linux swap",
+         "none": "Keine",
+         "ntfs": "NTFS",
+         "vffs": "VFFS",
+         "vmfs": "VMFS",
+         "vmkDiagnostic": "VMware Diagnose",
+         "undefined": "Unbekannt",
+         "unknown": "Unbekannt",
+         "0xde": "Dell-Diagnose",
+         "0x0b": "FAT 32",
+         "0x07": "NTFS"
+      },
+      "datastore": {
+         "create": {
+            "title": "Neuer Datenspeicher",
+            "titleExtend": "Datenspeicherkapazität erhöhen",
+            "pages": {
+               "creationType": {
+                  "title": "Erstellungstyp auswählen",
+                  "description": "Wie möchten Sie einen Datenspeicher erstellen?"
+               },
+               "name": {
+                  "title": "Datenspeichername",
+                  "description": "Namen für den neuen Datenspeicher angeben"
+               },
+               "device": {
+                  "title": "Gerät auswählen",
+                  "description": "Gerät auswählen, auf dem eine neue VMFS-Partition erstellt werden soll",
+                  "noDevice": "Wählen Sie ein Gerät aus."
+               },
+               "nfs": {
+                  "title": "NFS-Mount-Details angeben",
+                  "description": "Details der NFS-Freigabe, die gemountet werden soll, angeben"
+               },
+               "partitioning": {
+                  "title": "Partitionierungsoptionen auswählen",
+                  "description": "Wählen Sie aus, wie dieses Gerät partitioniert werden soll",
+                  "before": "Vor der Bearbeitung einer Partition",
+                  "after": "Nach der Bearbeitung einer Partition",
+                  "selectScheme": "Partitionierungsschema auswählen",
+                  "full": "Gesamte Festplatte nutzen",
+                  "custom": "Benutzerdefiniert"
+               },
+               "datastore": {
+                  "title": "Datenspeicher auswählen",
+                  "description": "Datenspeicher auswählen, für den die Kapazität erhöht werden soll"
+               },
+               "summary": {
+                  "title": "Bereit zum Abschließen",
+                  "description": "Übersicht",
+                  "type": "Datenspeichertyp",
+                  "name": "Name",
+                  "datastore": "Datenspeicher",
+                  "disk": "Festplatte",
+                  "partitioning": "Partitionierung",
+                  "vmfsVersion": "VMFS-Version"
+               }
+            },
+            "device": {
+               "desc": "Die folgenden Geräte sind unbeansprucht und können zum Erstellen eines neuen VMFS-Datenspeichers verwendet werden",
+               "noFree": "Keine Geräte mit freiem Speicherplatz"
+            },
+            "vmfs": {
+               "label": "Neuen VMFS-Datenspeicher erstellen",
+               "description": "Einen neuen VMFS-Datenspeicher auf einem lokalen Festplattengerät erstellen",
+               "notificationSuccess": "VMFS-Datenspeicher {{name}} wurde erstellt",
+               "notificationFailure": "VMFS-Datenspeicher {{name}} konnte nicht erstellt werden – {{message}}",
+               "unknown": "Unbekannter Grund",
+               "validation": {
+                  "name" : {
+                     "empty" : "Geben Sie einen Namen für den neuen Datenspeicher an",
+                     "length": "Der Name des Datenspeichers sollte zwischen {{min}} und {{max}} Zeichen lang sein. Die aktuelle Länge beträgt {{length}}. Bitte ändern Sie den Namen.",
+                     "exists": "Ein Datenspeicher mit dem Namen {{name}} ist bereits vorhanden."
+                  }
+               }
+            },
+            "mountVmfs": {
+               "label": "Bestehenden VMFS-Datenspeicher mounten",
+               "description": "Vorhandenes VMFS-Volume mounten",
+               "notificationSuccess": "VMFS-Datenspeicher {{name}} wurde gemountet",
+               "notificationFailure": "VMFS-Datenspeicher {{name}} konnte nicht gemountet werden – {{message}}"
+            },
+            "extendVmfs": {
+               "label": "Vorhandenem VMFS-Datenspeicher eine Erweiterung hinzufügen",
+               "description": "Größe eines vorhandenen Datenspeichers durch Hinzufügen eines neuen Umfangs auf einer anderen Festplatte erhöhen",
+               "notificationSuccess": "VMFS-Datenspeicher {{name}} wurde erweitert",
+               "notificationFailure": "VMFS-Datenspeicher {{name}} konnte nicht erweitert werden – {{message}}",
+               "unknown": "Unbekannter Grund"
+            },
+            "expandVmfs": {
+               "label": "Vorhandene VMFS-Datenspeichererweiterung erweitern",
+               "description": "Vorhandenen Datenspeicher durch Ausdehnen einer vorhandenen Erweiterung in benachbarten freien Speicher vergrößern",
+               "notificationSuccess": "VMFS-Datenspeicher {{name}} erfolgreich erweitert",
+               "notificationFailure": "Fehler beim Erweitern des VMFS-Datenspeichers {{name}} - {{message}}",
+               "unknown": "Unbekannter Grund"
+            },
+            "nfs": {
+               "label": "NFS-Datenspeicher mounten",
+               "description": "Neuen Datenspeicher durch Mounten eines Remote-NFS-Volumes erstellen",
+               "notificationSuccess": "NFS-Datenspeicher {{name}} wurde gemountet",
+               "notificationFailure": "NFS-Datenspeicher {{name}} konnte nicht gemountet werden – {{message}}",
+               "server": "NFS-Server",
+               "share": "NFS-Freigabe",
+               "version": "NFS-Version",
+               "user": "Benutzername",
+               "password": "Kennwort",
+               "validation": {
+                  "name": "Geben Sie einen Namen für den neuen Datenspeicher an",
+                  "server": "Geben Sie einen NFS-Server an",
+                  "share": "Geben Sie eine NFS-Freigabe an"
+               }
+            },
+            "warnFull": {
+               "title": "Warnung",
+               "content": "Der gesamte Inhalt dieser Festplatte wird gelöscht und durch die angegebene Konfiguration ersetzt. Möchten Sie wirklich fortfahren?",
+               "confirmLabel": "Ja",
+               "rejectLabel": "Nein"
+            }
+         },
+         "registerVM": {
+            "title": "VM registrieren",
+            "confirmLabel": "Registrieren",
+            "successNotification": "VM {{path}} wurde registriert",
+            "failureNotification": "VM {{path}} konnte nicht registriert werden. {{message}}",
+            "failureReasonUnknown": "Unbekannte Ursache",
+            "vmAlreadyRegistered": {
+               "title": "VM ist bereits registriert",
+               "content": "ist bereits registriert",
+               "confirmLabel": "Schließen",
+               "cancelLabel": "Abbrechen"
+            }
+         },
+         "unmountVMFS": {
+            "title": "Unmounten des Datenspeichers bestätigen – {{name}}",
+            "confirmLabel": "Ja",
+            "rejectLabel": "Abbrechen",
+            "content": "Möchten Sie <strong>{{name}}</strong> wirklich unmounten?",
+            "successNotification": "Datenspeicher {{name}} wurde ungemountet",
+            "failureNotification": "Unmounten von Datenspeicher {{name}} ist fehlgeschlagen"
+         },
+         "mountVMFS": {
+            "successNotification": "Datenspeicher {{name}} gemountet",
+            "failureNotification": "Datenspeicher {{name}} konnte nicht gemountet werden"
+         },
+         "upgradeVMFS": {
+            "successNotification": "Upgrade von Datenspeicher {{name}} von {{oldVersion}} auf {{version}} wurde durchgeführt",
+            "failureNotification": "Upgrade von VMFS-Datenspeichern {{name}} ist fehlgeschlagen"
+         },
+         "nonSSD": "Nicht-SSD",
+         "SSD": "SSD",
+         "summary": {
+            "alt": "Datenspeicher",
+            "type": "Typ:",
+            "location": "Speicherort:",
+            "hosts": "Hosts:",
+            "uuid": "UUID:",
+            "virtualMachines": "Virtuelle Maschinen:",
+            "metrics": {
+               "storage": "SPEICHER"
+            },
+            "portlets": {
+               "vmfs": {
+                  "title": "VMFS-Details",
+                  "local": {
+                     "label": "Lokal",
+                     "true": "Ja",
+                     "false": "Nein"
+                  },
+                  "blockSize": "Blockgröße",
+                  "version": "Version",
+                  "uuid": "UUID",
+                  "extent": "Erweiterung {{index}}",
+                  "extentValue": "{{disk}}, Partition {{partition}}"
+               }
+            },
+            "actions": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für ausgewählte Objekte in dieser Liste."
+               },
+               "increaseCapacity": {
+                  "label": "Kapazität erhöhen",
+                  "tooltip": "Kapazität eines Datenspeichers erhöhen"
+               },
+               "register": {
+                  "label": "VM registrieren",
+                  "tooltip": "Registrieren Sie eine vorhandene virtuelle Maschine in der Bestandsliste."
+               },
+               "fileBrowser": {
+                  "label": "Datenspeicherbrowser",
+                  "tooltip": "Navigieren Sie zum Datei-Browser des Datenspeichers."
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Informationen dieses Datenspeichers aktualisieren"
+               }
+            }
+         },
+         "list": {
+            "actions": {
+               "upgradeVMFSDatastore": {
+                  "label": "Upgrade",
+                  "tooltip": "Diesen Datenspeicher auf die neueste Version aktualisieren"
+               },
+               "mountVMFSDatastore": {
+                  "label": "Mounten",
+                  "tooltip": "Vorhandenes VMFS-Volume als Datenspeicher mounten"
+               },
+               "unmountVMFSDatastore": {
+                  "label": "Unmounten",
+                  "tooltip": "Diesen VMFS-Datenspeicher unmounten"
+               },
+               "mountNFSDatastore": {
+                  "label": "NFS-Datenspeicher mounten",
+                  "tooltip": "Remote-NFS-Freigabe als Datenspeicher mounten"
+               },
+               "createDatastore": {
+                  "label": "Neuer Datenspeicher",
+                  "tooltip": "Neuen Datenspeicher erstellen"
+               },
+               "increaseCapacity": {
+                  "label": "Kapazität erhöhen",
+                  "tooltip": "Kapazität eines Datenspeichers erhöhen"
+               },
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für ausgewählte Objekte in dieser Liste."
+               },
+               "fileBrowser": {
+                  "label": "Datenspeicherbrowser",
+                  "tooltip": "Navigieren Sie zum Datei-Browser des Datenspeichers."
+               },
+               "register": {
+                  "label": "VM registrieren",
+                  "tooltip": "Registrieren Sie eine vorhandene virtuelle Maschine in der Bestandsliste."
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Aktualisieren Sie die Informationen in der Tabelle."
+               }
+            },
+            "datagrid": {
+               "name": "Name",
+               "driveType": "Laufwerktyp",
+               "capacity": "Kapazität",
+               "provisioned": "Bereitgestellt",
+               "free": "Frei",
+               "type": "Typ",
+               "thin": "Schlanke Speicherzuweisung",
+               "access": "Zugriff"
+            },
+            "thinProvisioning": {
+               "supported": "Unterstützt",
+               "notSupported": "Nicht unterstützt"
+            },
+            "access": {
+               "multiple": "Mehrere",
+               "single": "Einzel"
+            }
+         },
+         "manage": {
+            "title": "Verwalten"
+         },
+         "browser": {
+            "nfs": {
+               "noBrowse": "Das Durchsuchen von NFS-Datenspeichern ist nicht möglich"
+            },
+            "contextMenu": {
+               "deleteFile": {
+                  "label": "Löschen",
+                  "toolTip": "Diese Datei bzw. dieses Verzeichnis löschen"
+               }
+            },
+            "actions": {
+               "inflateDisk": {
+                  "label": "Festplatte vergrößern",
+                  "tooltip": "Diese per Thin Provisioning bereitgestellte Festplatte in eine per Thick Provisioning bereitgestellte Festplatte konvertieren",
+                  "successNotification": "Festplatte {{disk}} wurde vergrößert",
+                  "errorNotification": "Festplatte {{disk}} konnte nicht vergrößert werden: {{reason}}",
+                  "datastoreCapacity": "Vergrößerter Festplattenplatz übersteigt den auf diesem Datenspeicher verfügbaren Speicherplatz. Geben Sie Speicherplatz auf {{datastoreName}} frei und wiederholen Sie den Vorgang."
+               },
+               "delete": {
+                  "label": "Löschen",
+                  "tooltip": "Derzeit ausgewählte Datei bzw. derzeit ausgewähltes Verzeichnis löschen"
+               },
+               "copy": {
+                  "label": "Kopieren",
+                  "tooltip": "Diese Datei bzw. dieses Verzeichnis kopieren"
+               },
+               "move": {
+                  "label": "Verschieben",
+                  "tooltip": "Datei oder Verzeichnis verschieben"
+               },
+               "download": {
+                  "label": "Herunterladen",
+                  "tooltip": "Die ausgewählte Datei herunterladen"
+               },
+               "directory": {
+                  "label": "Verzeichnis erstellen",
+                  "tooltip": "Neues Verzeichnis erstellen"
+               },
+               "upload": {
+                  "label": "Upload",
+                  "tooltip": "Eine Datei in den ausgewählten Datenspeicher hochladen"
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Ansicht aktualisieren"
+               }
+            },
+            "dialog": {
+               "defaultTitle": "Datenspeicherbrowser",
+               "noDatastore": {
+                  "title": "Keine durchsuchbaren Datenspeicher",
+                  "content": "Es sind keine durchsuchbaren Datenspeicher vorhanden. Derzeit lassen sich nur vSAN- sowie lokale VMFS-Datenspeicher durchsuchen."
+               },
+               "select": {
+                  "title": "Ziel auswählen",
+                  "titleFor": "Ziel für {{name}} auswählen",
+                  "move": "Verschieben",
+                  "copy": "Kopieren"
+               },
+               "selectDatastore": {
+                  "title": "Datenspeicher auswählen",
+                  "rejectLabel": "Abbrechen"
+               },
+               "directory": {
+                  "title": "Neues Verzeichnis",
+                  "create": "Verzeichnis erstellen",
+                  "invalidDirectory": "Geben Sie einen gültigen Verzeichnisnamen ein.",
+                  "cancel": "Abbrechen",
+                  "placeholder": "Verzeichnisname",
+                  "createdIn": "Dieses Verzeichnis wird in {{location}}/ erstellt."
+               },
+               "delete": {
+                  "title": "Löschen bestätigen",
+                  "content": "Möchten Sie die folgende Datei bzw. das folgende Verzeichnis wirklich löschen?",
+                  "delete": "Löschen",
+                  "cancel": "Abbrechen"
+               },
+               "upload": {
+                  "inProgress": "{{num}} Datei(en)",
+                  "notEnoughSpace": {
+                     "title": "Nicht genügend Speicherplatz im Datenspeicher",
+                     "confirmLabel": "OK",
+                     "content": "Für den Upload dieser Datei ist nicht genügend Speicherplatz im {{datastore}} vorhanden. Sie müssen mindestens {{needed}} freigeben."
+                  },
+                  "ielimit": {
+                     "title": "Überschreitet Grenzwert für Dateigröße von Internet Explorer",
+                     "confirmLabel": "OK",
+                     "content": "Eine ausgewählte Datei überschreitet den Internet Explorer-Grenzwert für den Upload von Dateien von 4 GB"
+                  }
+               },
+               "close": "Schließen",
+               "cancel": "Abbrechen"
+            }
+         },
+         "monitor": {
+            "title": "Überwachen",
+            "event": {
+               "datagrid": {
+                  "event": {
+                     "label": "Ereignis"
+                  },
+                  "time": {
+                     "label": "Uhrzeit"
+                  }
+               }
+            },
+            "general": {
+               "title": "Allgemein",
+               "desc": "Allgemein",
+               "settings": {
+                  "enabled": "vSAN",
+                  "claimingMode": "Beanspruchungsmodus",
+                  "deduplication": "Deduplizierung",
+                  "encryption": "Verschlüsselung",
+                  "iscsi": "ISCSI-Dienst",
+                  "health": {
+                     "service": "Integritätsdienst",
+                     "intervalChecks": "Integritätsprüfungsintervall"
+                  },
+                  "performance": {
+                     "status": "Leistungsdienst",
+                     "statsObjectHealth": "Integrität des Statistikobjekts",
+                     "statsObjectUuid": "UUID des Statistikobjekts",
+                     "storagePolicy": "Speicherrichtlinie",
+                     "complianceStatus": "Übereinstimmungsstatus"
+                  },
+                  "faultDomain": "Fault Domain"
+               },
+               "edit": {
+                  "title": "Einstellungen bearbeiten",
+                  "warning": "Wenn Sie diese Optionen ändern, kann der vSAN-Cluster in einen fehlkonfigurierten Zustand übergehen."
+               }
+            },
+            "health": {
+               "noResultsFound": "Keine Ergebnisse gefunden",
+               "info": "Info"
+            },
+            "actions": {
+               "edit":{
+                  "label": "Einstellungen bearbeiten",
+                  "tooltip": "vSAN-Einstellungen bearbeiten"
+               },
+               "enableVsan":{
+                  "label": "Aktivieren",
+                  "tooltip": "Aktivieren"
+               },
+               "refresh":{
+                  "label": "Aktualisieren",
+                  "tooltip": "Aktualisieren"
+               }
+            },
+            "task": {
+               "UpdateVsan_Task": {
+                  "success": "Die vSAN-Konfiguration des Hosts wurde erfolgreich aktualisiert",
+                  "error": "Die vSAN-Konfiguration des Hosts konnte nicht aktualisiert werden"
+               }
+            },
+            "common": {
+               "enabled": "Aktiviert",
+               "disabled": "Deaktiviert",
+               "yes": "Ja",
+               "no": "Nein",
+               "ok": "OK",
+               "cancel": "Abbrechen",
+               "auto": "Auto",
+               "manual": "Manuell",
+               "save": "Speichern",
+               "seconds": "Sekunden"
+            },
+            "policyStatus": {
+               "compliant" : "Übereinstimmung",
+               "nonCompliant" : "Keine Übereinstimmung",
+               "notApplicable" : "Nicht anwendbar",
+               "unknow" : "Unbekannt"
+            },
+            "healthStatus": {
+               "inaccessible": "Kein Zugriff",
+               "reducedAvailabilityWithNoRebuild": "Reduzierte Verfügbarkeit ohne Neuerstellung",
+               "reducedAvailabilityWithNoRebuildDelayTimer": "Reduzierte Verfügbarkeit ohne Neuerstellung - Verzögerungszeitgeber",
+               "reducedAvailabilityWithActiveRebuild": "Reduzierte Verfügbarkeit mit aktiver Neuerstellung",
+               "dataMove": "Datenverschiebung",
+               "nonAvailabilityRelatedReconfig": "Mit Nichtverfügbarkeit in Zusammenhang stehende Neukonfiguration",
+               "nonAvailabilityRelatedIncompliance": "Mit Nichtverfügbarkeit in Zusammenhang stehende Inkompatibilität",
+               "healthy": "Ordnungsgemäß",
+               "unknown": "Unbekannt"
+            },
+            "tabs": {
+               "events": {
+                  "label": "Ereignisse",
+                  "tooltip": "Ereignisse"
+               },
+               "tasks": {
+                  "label": "Aufgaben",
+                  "tooltip": "Aufgaben"
+               },
+               "general": {
+                  "label": "vSAN",
+                  "tooltip": "Allgemeine vSAN-Einstellungen"
+               },
+               "hosts": {
+                  "label": "Hosts",
+                  "tooltip": "Am vSAN-Cluster teilnehmende Hosts"
+               },
+               "health": {
+                  "label": "Integrität",
+                  "tooltip": "Integrität"
+               }
+            }
+         },
+         "delete": {
+            "label": "Löschen",
+            "tooltip": "Diesen Datenspeicher löschen",
+            "confirm": {
+               "title": "Datenspeicher löschen – {{name}}",
+               "content": "Möchten Sie den folgenden Datenspeicher wirklich löschen?"
+            },
+            "rejectLabel": "Abbrechen",
+            "confirmLabel": "Bestätigen",
+            "successNotification": "Datenspeicher {{name}} wurde gelöscht",
+            "failureNotification": "Datenspeicher {{name}} konnte nicht gelöscht werden"
+         },
+         "rename": {
+            "dialog": {
+               "title": "Datenspeicher umbenennen",
+               "rejectLabel": "Abbrechen",
+               "save": "Speichern",
+               "emptyName": "Leerer Name",
+               "lengthValidation" : "Datenspeichername muss zwischen {{min}} und {{max}} Zeichen lang sein. Die aktuelle Länge beträgt {{actual}}.",
+               "notification": {
+                  "info": "Datenspeicher {{oldName}} wurde in {{newName}} umbenannt.",
+                  "error": "Datenspeicher {{oldName}} konnte nicht umbenannt werden: {{localizedMessage}}."
+               }
+            }
+         },
+         "contextMenu": {
+            "rename": {
+               "label": "Umbenennen",
+               "tooltip": "Diesen Datenspeicher umbenennen",
+               "tooltipVC": "Datenspeicher können auf Hosts, die von vCenter Server verwaltet werden, nicht umbenannt werden"
+            },
+            "browse": {
+               "label": "Durchsuchen",
+               "toolTip": "Diesen Datenspeicher durchsuchen",
+               "browseDatastores": "Datenspeicher durchsuchen"
+            },
+            "registerSingle": {
+               "label": "VM registrieren",
+               "toolTip": "Diese virtuelle Maschine registrieren"
+            },
+            "register": {
+               "label": "VM registrieren",
+               "toolTip": "Vorhandene virtuelle Maschine von einem Datenspeicher in der Bestandsliste des Hosts registrieren"
+            }
+         }
+      },
+      "adapter": {
+         "status": {
+            "online": "Online",
+            "offline": "Offline",
+            "unbound": "Nicht gebunden",
+            "unknown": "Unbekannt"
+         },
+         "list": {
+            "actions": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für ausgewählte Objekte in dieser Liste."
+               },
+               "refresh": {
+                  "label": "Aktualisieren",
+                  "tooltip": "Adaptertabelle aktualisieren"
+               },
+               "rescan": {
+                  "label": "Erneut scannen",
+                  "tooltipAll": "Alle Host-basierten Adapter erneut auf neue LUNs scannen",
+                  "tooltipOne": "Ausgewählten Host-basierten Adapter erneut auf neue LUNs scannen"
+               },
+               "iscsi": {
+                  "label": "iSCSI konfigurieren",
+                  "tooltip": "iSCSI für diesen Host konfigurieren"
+               }
+            },
+            "datagrid": {
+               "name": "Name",
+               "model": "Modell",
+               "status": "Status",
+               "driver": "Treiber"
+            }
+         },
+         "iscsi": {
+            "title": "iSCSI konfigurieren – {{adapter}}",
+            "titleNoDevice": "iSCSI konfigurieren",
+            "confirmLabel": "Konfiguration speichern",
+            "rejectLabel": "Abbrechen",
+            "close": "Schließen",
+            "loading": "Wird geladen...",
+            "configuring": "Konfigurieren",
+            "iscsiEnabled": "iSCSI aktiviert",
+            "nameAndAlias": "Name und Alias",
+            "alias": "Alias",
+            "enabled": "Aktiviert",
+            "disabled": "Deaktiviert",
+            "networkPortBindings": "Netzwerk-Port-Bindungen",
+            "staticTargets": "Statische Ziele",
+            "dynamicTargets": "Dynamische Ziele",
+            "authentication": {
+               "chapAuthentication": "CHAP-Authentifizierung",
+               "mutualChapAuthentication": "Gegenseitige CHAP-Authentifizierung",
+               "name": "Name",
+               "secret": "Geheim"
+            },
+            "warnReboot": "Ein Neustart ist erforderlich, um den iSCSI-Adapter und Kernel-Module zu entfernen.",
+            "warnNoDevice": "Es wurde kein iSCSI-Adapter gefunden. Schließen Sie das Konfigurations-Dialogfeld und öffnen Sie es erneut.",
+            "resetAdvancedOption": "Auf Standardeinstellungen zurücksetzen",
+            "isInherited": "Vom übergeordneten Element übernehmen",
+            "chapDisabled": "CHAP nicht verwenden",
+            "chapRequired": "CHAP nicht verwenden, sofern nicht vom Ziel benötigt",
+            "chapProhibited": "CHAP verwenden, es sei denn, das Ziel verbietet dies",
+            "chapPreferred": "CHAP verwenden",
+            "noStaticTargets": "Keine statischen Ziele",
+            "noDynamicTargets": "Keine dynamischen Ziele",
+            "noPortBindings": "Keine Port-Bindungen",
+            "advancedBlock": {
+               "label": "Erweiterte Einstellungen",
+               "expand": "Klicken Sie zum Erweitern",
+               "maximum": "Maximalwert",
+               "minimum": "Mindestwert",
+               "default": "Standard"
+            },
+            "boundPortsGrid": {
+               "vmknic": "VMkernel-Netzwerkkarte",
+               "portgroup": "Portgruppe",
+               "ipv4Address": "IPv4-Adresse"
+            },
+            "addPort": {
+               "label": "Port-Bindung hinzufügen",
+               "tooltip": "Eine neue Port-Bindung hinzufügen",
+               "alreadyBound": {
+                  "title": "Fehler",
+                  "content": "VMKernel-Netzwerkkarte {{vmknic}} ist bereits an diesen iSCSI-Adapter gebunden."
+               }
+            },
+            "removePort": {
+               "label": "Port-Bindung entfernen",
+               "tooltip": "Die ausgewählte Port-Bindung entfernen",
+               "inUse": {
+                  "title": "Port in Verwendung",
+                  "content": "Der Port {{port}} wird derzeit verwendet. Entfernen Sie zuerst die Ziele, die diesen Pfad verwenden.",
+                  "forceRemove": "Entfernen erzwingen",
+                  "ok": "OK"
+               }
+            },
+            "staticTargetGrid": {
+               "target": "Ziel",
+               "address": "Adresse",
+               "port": "Port"
+            },
+            "addStaticTarget": {
+               "label": "Statisches Ziel hinzufügen",
+               "tooltip": "Ein statisches iSCSI-Ziel hinzufügen",
+               "addName": "Klicken, um Namen hinzuzufügen",
+               "addAddress": "Klicken, um Adresse hinzuzufügen"
+            },
+            "editStaticTarget": {
+               "label": "Einstellungen bearbeiten",
+               "tooltip": "Einstellungen für dieses statische Ziel bearbeiten"
+            },
+            "removeStaticTarget": {
+               "label": "Statisches Ziel entfernen",
+               "tooltip": "Das ausgewählte statische iSCSI-Ziel entfernen"
+            },
+            "dynamicTargetGrid": {
+               "address": "Adresse",
+               "port": "Port"
+            },
+            "addDynamicTarget": {
+               "label": "Dynamisches Ziel hinzufügen",
+               "tooltip": "Ein dynamisches iSCSI-Ziel hinzufügen",
+               "addAddress": "Klicken, um Adresse hinzuzufügen"
+            },
+            "editDynamicTarget": {
+               "label": "Einstellungen bearbeiten",
+               "tooltip": "Einstellungen für dieses dynamische Ziel bearbeiten"
+            },
+            "removeDynamicTarget": {
+               "label": "Dynamisches Ziel entfernen",
+               "tooltip": "Das ausgewählte dynamische iSCSI-Ziel entfernen"
+            },
+            "notification": {
+               "success": "iSCSI konfiguriert",
+               "failure": "iSCSI konnte nicht konfiguriert werden."
+            }
+         },
+         "iscsi-target": {
+            "title": "iSCSI-Ziel konfigurieren – {{target}}",
+            "confirmLabel": "Speichern",
+            "rejectLabel": "Abbrechen"
+         },
+         "context": {
+            "rescan": {
+               "title": "Erneut scannen",
+               "tooltip": "Diesen Host-basierten Adapter erneut auf neue LUNs scannen"
+            }
+         },
+         "summary": {
+            "alt": "Adapter",
+            "model": "Modell",
+            "driver": "Treiber",
+            "actions": {
+               "actions": {
+                  "label": "Aktionen",
+                  "tooltip": "Aktionen für ausgewählte Objekte in dieser Liste."
+               },
+               "fileBrowser": {
+                  "label": "Datei-Browser",
+                  "tooltip": "Navigieren Sie zum Dateibrowser des Adapters."
+               },
+               "recalculate": {
+                  "label": "Neu berechnen",
+                  "tooltip": "Berechnet Adapternutzungsdaten neu, einschließlich der Kapazität und des freien Speicherplatzes."
+               },
+               "increaseCapacity": {
+                  "label": "Kapazität erhöhen",
+                  "tooltip": "Erhöhen Sie die Adapterkapazität."
+               },
+               "manageProviders": {
+                  "label": "Anbieter verwalten",
+                  "tooltip": "Verwalten Sie Speicheranbieter."
+               }
+            }
+         }
+      },
+      "list": {
+         "title": "Die folgenden Datenspeicher stehen auf der von Ihnen ausgewählten Zielressource zur Verfügung. Wählen Sie den Zieldatenspeicher für die Konfigurationsdateien der virtuellen Maschine und für alle virtuellen Festplatten aus."
+      },
+      "rename": {
+         "current": "Aktueller Name",
+         "new": "Neuer Name"
+      }
+   }
+}

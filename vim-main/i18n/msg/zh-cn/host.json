@@ -1,0 +1,1704 @@
+{
+   "host": {
+      "defaultWelcomeMessage": "欢迎使用 {{hostname}}",
+      "about": {
+         "version": "客户端版本:",
+         "buildNumber": "客户端内部版本号:",
+         "buildType": "内部版本类型:",
+         "branch": "分支:",
+         "changeSet": "更改集:",
+         "esxiVersion": "ESXi 版本:",
+         "esxiBuildNumber": "ESXi 内部版本号:",
+         "openSourceLicenses": "开源许可证"
+      },
+      "error": {
+         "cause": "原因:",
+         "version": "版本:",
+         "build": "内部版本:",
+         "esxi": "ESXi:",
+         "browser": "浏览器:",
+         "title": "未处理的异常 ({{num}})",
+         "details": "详细信息",
+         "close": "关闭",
+         "reload": "重新加载",
+         "lostConnection": "似乎已失去与主机的连接，请尝试刷新浏览器。",
+         "communication": "抱歉，与主机通信时出现问题。",
+         "unhandledException": "很遗憾，发生意外错误。\n\n客户端可能可以继续工作，但此时我们建议您刷新浏览器并提交错误报告。\n\n按 Esc 键可隐藏此对话框并继续，但不执行刷新操作。",
+         "stack": "异常堆栈:"
+      },
+      "feedback": {
+         "title": "提供反馈...",
+         "content": "请向我们提供反馈! 哪些正常运行? 哪些意外崩溃? 还缺少哪些您真正需要的内容?",
+         "developers": "<p>您可以<ul><li>发送电子邮件到 <a href='mailto:esxui@vmware.com'>esxui@vmware.com</a>，</li><li>发布到 SocialCast <a href='https://vmware-com.socialcast.com/groups/122886-esxihostclient' target='_blank'>组</a></li><li>或发布在 VMware.com 社区论坛 (即将上线)。</li></ul></p>",
+         "release": "<p>请发布在 VMware.com <a href='https://communities.vmware.com/community/vmtn/vsphere/hostclient' target='_blank'>社区论坛</a>。</p>"
+      },
+      "shutdown": {
+         "title": "关机 - {{hostname}}",
+         "logoutMessage": "正在关闭主机...",
+         "log": "记录此关闭操作的原因:",
+         "log-placeholder": "在此处输入原因",
+         "not-maintenance": "此主机未处于维护模式。",
+         "message": "关闭或重新引导未处于维护模式的主机将无法安全停止此主机上正在运行的虚拟机。如果主机是 Virtual SAN 群集的一部分，则可能会失去对主机上的 Virtual SAN 数据的访问权限。在重新引导或关闭主机之前，先将主机置于维护模式。",
+         "confirmation": "是否关闭选定主机?",
+         "shutdown": "关机",
+         "rejectLabel": "取消"
+      },
+      "reboot": {
+         "title": "重新引导主机",
+         "logoutMessage": "正在重新引导主机...",
+         "ok": "重新引导",
+         "log": "记录此重新引导操作的原因:",
+         "log-placeholder": "在此处输入原因",
+         "not-maintenance": "此主机未处于维护模式。",
+         "message": "关闭或重新引导未处于维护模式的主机将无法安全停止此主机上正在运行的虚拟机。如果主机是 Virtual SAN 群集的一部分，则可能会失去对主机上的 Virtual SAN 数据的访问权限。在重新引导或关闭主机之前，先将主机置于维护模式。",
+         "confirmation": "是否重新引导主机?",
+         "rejectLabel": "取消"
+      },
+      "permissions": {
+         "manage": {
+            "menu": "权限",
+            "title": "管理权限",
+            "close": "关闭",
+            "cancel": "取消",
+            "noUsers": "无用户",
+            "addUser": {
+               "label": "添加用户",
+               "toolTip": "添加用户"
+            },
+            "removeUser": {
+               "label": "移除用户",
+               "toolTip": "移除用户"
+            },
+            "assignRole": {
+               "label": "分配角色",
+               "toolTip": "将角色分配给用户"
+            },
+            "updatePermissions": {
+               "successNotification": "已成功更新权限",
+               "failureNotification": "无法更新权限: {{error}}"
+            },
+            "columns": {
+               "user": "用户",
+               "role": "角色"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "选择用户"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "选择角色"
+            },
+            "propagateLabel": "传播到所有子对象"
+         }
+      },
+      "context": {
+         "title": "主机",
+         "services": {
+            "label": "服务",
+            "tooltip": "管理此主机上的服务",
+            "ssh": {
+               "labelEnable": "启用安全 Shell (SSH)",
+               "labelDisable": "禁用安全 Shell (SSH)",
+               "tooltip": "切换此主机上的安全 Shell 服务"
+            },
+            "shell": {
+               "labelEnable": "启用控制台 Shell",
+               "labelDisable": "禁用控制台 Shell",
+               "tooltip": "切换此主机上的控制台 Shell 服务"
+            }
+         },
+         "service": {
+            "restart": {
+               "label": "重新启动",
+               "tooltip": "重新启动此服务"
+            },
+            "start": {
+               "label": "启动",
+               "tooltip": "启动此服务"
+            },
+            "stop": {
+               "label": "停止",
+               "tooltip": "停止此服务"
+            },
+            "policy": {
+               "label": "策略",
+               "tooltip": "此服务的策略选项"
+            },
+            "firewallPolicy": {
+               "label": "随防火墙端口启动和停止",
+               "tooltip": "打开或关闭防火墙端口时相应启动或停止此服务"
+            },
+            "hostPolicy": {
+               "label": "随主机启动和停止",
+               "tooltip": "启动或停止主机时启动或停止此服务"
+            },
+            "manualPolicy": {
+               "label": "手动启动和停止",
+               "tooltip": "手动启动和停止此服务"
+            }
+         },
+         "manageWithVC": {
+            "label": "使用 vCenter Server 管理",
+            "tooltip": "使用 VMware vCenter Server 管理此主机"
+         },
+         "disconnectFromVC": {
+            "label": "从 vCenter Server 断开连接",
+            "tooltip": "从 VMware vCenter Server 断开此主机的连接"
+         },
+         "createVM": {
+            "label": "创建/注册虚拟机",
+            "tooltip": "在此主机上创建或注册虚拟机"
+         },
+         "shutDown": {
+            "label": "关机",
+            "tooltip": "关闭此主机"
+         },
+         "reboot": {
+            "label": "重新引导",
+            "tooltip": "重新引导此主机"
+         },
+         "maintenanceMode": {
+            "labelEnter": "进入维护模式",
+            "labelExit": "退出维护模式",
+            "tooltipEnter": "将此主机置于维护模式",
+            "tooltipExit": "将此主机退出维护模式"
+         },
+         "lockdownMode": {
+            "label": "锁定模式",
+            "tooltip": "管理此主机的锁定模式",
+            "enterNormalLockdown": {
+               "label": "进入正常锁定",
+               "tooltip": "将此主机置于正常锁定模式"
+            },
+            "enterStrictLockdown": {
+               "label": "进入严格锁定",
+               "tooltip": "将此主机置于严格锁定模式"
+            },
+            "exitLockdown": {
+               "label": "退出锁定",
+               "tooltip": "将此主机退出锁定模式"
+            },
+            "dialog": {
+               "title": "锁定模式警告",
+               "confirmStrictLabel": "进入严格锁定",
+               "confirmNormalLabel": "进入正常锁定",
+               "rejectLabel": "取消"
+            }
+         }
+      },
+      "summary": {
+         "host": "主机",
+         "version": "版本:",
+         "state": "状况:",
+         "uptime": "正常运行时间:",
+         "days": "天",
+         "cpus": "CPU",
+         "metrics": {
+            "cpu": "CPU",
+            "storage": "存储",
+            "memory": "内存"
+         },
+         "actionBar": {
+            "manageWithVC": {
+               "label": "使用 vCenter Server 管理",
+               "tooltip": "使用 VMware vCenter Server 管理此主机"
+            },
+            "getVC": {
+               "label": "获取 vCenter Server",
+               "tooltip": "了解如何下载并安装 vCenter Server"
+            },
+            "createRegisterVM": {
+               "label": "创建/注册虚拟机",
+               "tooltip": "创建或注册虚拟机"
+            },
+            "shutdown": {
+               "label": "关机",
+               "tooltip": "关闭此主机"
+            },
+            "reboot": {
+               "label": "重新引导",
+               "tooltip": "重新引导此主机"
+            },
+            "refresh": {
+               "label": "刷新",
+               "tooltip": "刷新此页上的数据"
+            },
+            "enterMaintenanceMode": {
+               "label": "进入维护模式",
+               "tooltip": "将此主机置于维护模式"
+            },
+            "exitMaintenanceMode": {
+               "label": "退出维护模式",
+               "tooltip": "将此主机退出维护模式"
+            },
+            "actions": {
+               "label": "操作",
+               "tooltip": "对此主机执行的操作"
+            }
+         },
+         "portlets": {
+            "hardware": {
+               "title": "硬件",
+               "manufacturer": "制造商",
+               "model": "型号",
+               "cpu": {
+                  "title": "CPU",
+                  "logicalProcessors": "逻辑处理器",
+                  "processorType": "处理器类型",
+                  "sockets": "插槽数",
+                  "coresPerSocket": "每个插槽内核数",
+                  "hyperthreading": "超线程",
+                  "yesEnabled": "是，已启用",
+                  "yesDisabled": "是，已禁用",
+                  "no": "否"
+               },
+               "memory": "内存",
+               "virtualFlash": {
+                  "title": "虚拟闪存",
+                  "capacity": "容量",
+                  "value": {
+                     "used": "已用",
+                     "capacity": "容量"
+                  },
+                  "used": "已用",
+                  "free": "可用"
+               },
+               "networking": {
+                  "title": "网络",
+                  "hostname": "主机名",
+                  "ips": "IP 地址",
+                  "dns": "DNS 服务器",
+                  "defaultGateway": "默认网关",
+                  "ipv6Enabled": {
+                     "title": "IPv6 已启用",
+                     "yes": "是",
+                     "no": "否"
+                  },
+                  "physicalAdapters": "主机适配器",
+                  "networks": "网络",
+                  "list": {
+                     "columns": {
+                        "name": "名称",
+                        "vms": "虚拟机"
+                     }
+                  }
+               },
+               "storage": {
+                  "title": "存储",
+                  "physicalAdapters": "物理适配器",
+                  "datastores": "数据存储",
+                  "list": {
+                     "columns": {
+                        "name": "名称",
+                        "type": "类型",
+                        "capacity": "容量",
+                        "free": "可用"
+                     }
+                  }
+               }
+            },
+            "configuration": {
+               "title": "配置",
+               "haState": {
+                  "title": "vSphere HA 状况",
+                  "agentRunning": "代理正在运行",
+                  "notConfigured": "未配置"
+               },
+               "imageProfile": "映像配置文件",
+               "vMotion": {
+                  "title": "vMotion",
+                  "supported": "受支持",
+                  "notSupported": "不受支持",
+                  "vmknic": "vMotion 的虚拟网卡",
+                  "yes": "是",
+                  "no": "否",
+                  "none": "无"
+               }
+            },
+            "systemInformation": {
+               "title": "系统信息",
+               "currentDateTime": "主机上的日期/时间",
+               "inception": "安装日期",
+               "assetTag": "资产标记",
+               "serviceTag": "服务标记",
+               "biosVersion": "BIOS 版本",
+               "biosReleaseDate": "BIOS 发布日期"
+            },
+            "perf": {
+               "label": "过去 1 小时的性能摘要",
+               "title": "性能摘要，过去 1 小时",
+               "loading": "正在加载...",
+               "noData": "无可用性能数据",
+               "xAxisLabel": "时间",
+               "y1AxisLabel": "已消耗的主机 CPU (%)",
+               "y2AxisLabel": "已消耗的主机内存 (GB)",
+               "rightAxis": "(右轴)",
+               "cpuUsage": "已消耗的主机 CPU",
+               "memoryUsage": "已消耗的主机内存"
+            }
+         }
+      },
+      "manage": {
+         "title": "管理",
+         "system": {
+            "settings": "设置",
+            "tabTitle": "系统",
+            "tabTooltip": "配置系统设置",
+            "advancedSettings": {
+               "tabTitle": "高级设置",
+               "tabTooltip": "配置此主机的高级设置",
+               "context": {
+                  "resetToDefault": {
+                     "label": "重置为默认值",
+                     "tooltip": "重置为默认值"
+                  }
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对此列表中的选定对象执行的操作"
+               },
+               "resetToDefault": {
+                  "successNotification": "已成功将 {{name}} 重置为默认值 {{value}}",
+                  "failureNotification": "无法将 {{name}} 重置为默认值 {{value}}"
+               },
+               "change": {
+                  "title": "编辑选项 - {{key}}",
+                  "confirm": "保存",
+                  "rejectLabel": "取消",
+                  "successMessage": "已成功更改 {{key}}",
+                  "failureMessage": "无法更改 {{key}}"
+               },
+               "edit": {
+                  "label": "编辑选项",
+                  "tooltip": "编辑此选项"
+               },
+               "quickFilters": {
+                  "overridden": "已覆盖设置",
+                  "hostClient": "Host Client 设置"
+               },
+               "name": "名称",
+               "key": "键",
+               "description": "描述",
+               "value": "值",
+               "default": "默认",
+               "overridden": "已覆盖",
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新高级设置网格"
+               },
+               "readOnly": "只读",
+               "range": "范围",
+               "currentValue": "当前值",
+               "newValue": "新值",
+               "type": {
+                  "string": "(字符串)",
+                  "integer": "(整数)",
+                  "longInteger": "(长整数)",
+                  "float": "(浮点数)"
+               },
+               "true": "True",
+               "false": "False"
+            },
+            "autostart": {
+               "tabTitle": "自动启动",
+               "tabTooltip": "为此主机配置自动启动设置",
+               "edit": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑自动启动设置"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新自动启动配置"
+               },
+               "enabled": {
+                  "label": "已启用",
+                  "true": "是",
+                  "false": "否"
+               },
+               "startDelay": {
+                  "label": "启动延迟"
+               },
+               "stopDelay": {
+                  "label": "停止延迟"
+               },
+               "stopAction": {
+                  "label": "停止操作",
+                  "systemDefault": "系统默认值",
+                  "powerOff": "关闭电源",
+                  "suspend": "挂起",
+                  "Suspend": "挂起",
+                  "guestShutdown": "关机"
+               },
+               "waitForHeartbeat": {
+                  "label": "等待检测信号",
+                  "true": "是",
+                  "false": "否"
+               },
+               "change": {
+                  "title": "更改自动启动配置",
+                  "rejectLabel": "取消",
+                  "confirmLabel": "保存",
+                  "enabled": {
+                     "label": "已启用",
+                     "yes": "是",
+                     "no": "否"
+                  },
+                  "waitForHeartbeat": {
+                     "label": "等待检测信号",
+                     "yes": "是",
+                     "no": "否"
+                  },
+                  "startDelay": {
+                     "label": "启动延迟",
+                     "seconds": "秒"
+                  },
+                  "stopDelay": {
+                     "label": "停止延迟",
+                     "seconds": "秒"
+                  },
+                  "stopAction": {
+                     "label": "停止操作",
+                     "systemDefault": "系统默认值",
+                     "PowerOff": "关闭电源",
+                     "Suspend": "挂起",
+                     "ShutDown": "关机"
+                  },
+                  "successNotification": "已成功更新主机自动启动配置",
+                  "failureNotification": "无法更新主机自动启动配置"
+               }
+            },
+            "hardware": {
+               "tabTitle": "硬件",
+               "tabTooltip": "配置此主机的硬件",
+               "powerManagement": {
+                  "tabTitle": "电源管理",
+                  "tabTooltip": "电源管理",
+                  "editSettings": {
+                     "label": "更改策略",
+                     "tooltip": "更改电源管理策略"
+                  },
+                  "refresh": "刷新",
+                  "refreshTooltip": "刷新电源管理",
+                  "technology": {
+                     "label": "技术"
+                  },
+                  "activePolicy": {
+                     "label": "活动策略"
+                  },
+                  "dialog": {
+                     "title": "更改电源策略",
+                     "confirmLabel": "确定",
+                     "cancelLabel": "取消"
+                  },
+                  "PowerPolicy": {
+                     "off": {
+                        "name": "不受支持",
+                        "shortName": "不受支持",
+                        "description": "未检测到主机电源管理"
+                     },
+                     "static": {
+                        "name": "高性能",
+                        "shortName": "高性能",
+                        "description": "不使用任何电源管理功能"
+                     },
+                     "dynamic": {
+                        "name": "平衡",
+                        "shortName": "平衡",
+                        "description": "在对性能影响最小的情况下，减少能量消耗"
+                     },
+                     "low": {
+                        "name": "低能耗",
+                        "shortName": "低能耗",
+                        "description": "在可能降低性能的情况下，减少能量消耗"
+                     },
+                     "custom": {
+                        "name": "自定义",
+                        "shortName": "自定义",
+                        "description": "用户定义的电源管理策略。高级配置将可用。"
+                     }
+                  },
+                  "columns": {
+                     "key": "键",
+                     "name": "名称",
+                     "value": "值",
+                     "default": "默认",
+                     "overridden": "已覆盖"
+                  }
+               },
+               "pciDevices": {
+                  "tabTitle": "PCI 设备",
+                  "tabTooltip": "PCI 设备",
+                  "tooltip": "PCI 设备",
+                  "active": "活动",
+                  "enabled": "已启用",
+                  "disabled": "已禁用",
+                  "notCapable": "不支持",
+                  "reboot": "需要重新引导",
+                  "sriov": {
+                     "title": "为 {{name}} 配置 SR-IOV",
+                     "onConfirm": "保存",
+                     "onReject": "取消",
+                     "enabled": {
+                        "label": "已启用",
+                        "yes": "是",
+                        "no": "否"
+                     },
+                     "virtualFunctions": {
+                        "label": "虚拟功能",
+                        "maximum": "最大 {{maxVirtualFunctionSupported}}"
+                     }
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "刷新",
+                        "tooltip": "刷新高级设置网格"
+                     },
+                     "passthrough": {
+                        "label": "切换直通",
+                        "tooltip": "为所选设备切换直通"
+                     },
+                     "sriov": {
+                        "label": "配置 SR-IOV",
+                        "tooltip": "为所选设备配置 SR-IOV"
+                     },
+                     "reboot": {
+                        "label": "重新引导主机",
+                        "tooltip": "重新引导主机"
+                     }
+                  },
+                  "datagrid": {
+                     "quickFilters": {
+                        "sriovCapable": "支持 SR-IOV",
+                        "passthroughCapable": "支持直通",
+                        "sriovActive": "SR-IOV 活动",
+                        "passthroughActive": "直通活动"
+                     },
+                     "columns": {
+                        "address": "地址",
+                        "description": "描述",
+                        "passthrough": "直通",
+                        "sriov": "SR-IOV"
+                     }
+                  },
+                  "summary": {
+                     "notSupported": "此设备不能直通",
+                     "notRunning": "此设备是可直通的设备，但未以直通模式运行",
+                     "needReboot": "此设备需要主机重新引导以便以直通模式开始运行",
+                     "deviceName": "设备名称",
+                     "id": "ID",
+                     "deviceID": "设备 ID",
+                     "vendorID": "供应商 ID",
+                     "function": "功能",
+                     "bus": "总线",
+                     "vendorName": "供应商名称",
+                     "classID": "类 ID",
+                     "subdeviceID": "子设备 ID",
+                     "subvendorID": "子供应商 ID",
+                     "slot": "插槽"
+                  },
+                  "notifications": {
+                     "successSriov": "已成功为设备 {{deviceName}} 配置 SR-IOV。所做更改将在主机重新启动后生效",
+                     "failureSriov": "无法为设备 {{deviceName}} 配置 SR-IOV。请查看近期任务，了解更多详细信息。",
+                     "successSingular": "已成功为设备 {{deviceName}} 切换直通。所做更改将在主机重新启动后生效",
+                     "successMultiple": "已成功为设备切换直通。所做更改将在主机重新启动后生效",
+                     "error": "无法配置直通设备"
+                  }
+               }
+            },
+            "licensing": {
+               "context": {
+                  "assignLicense": {
+                     "label": "分配许可证",
+                     "tooltip": "将许可证分配给此主机"
+                  },
+                  "removeLicense": {
+                     "label": "移除许可证",
+                     "tooltip": "从主机移除此许可证"
+                  }
+               },
+               "tabTitle": "许可",
+               "tabTooltip": "为此主机配置许可证",
+               "name": "名称",
+               "key": "键",
+               "license": "许可证密钥",
+               "valid": "<strong>{{name}}</strong> 的许可证密钥有效",
+               "managedByVC": "此主机的许可证正由 vCenter Server 管理",
+               "expiration": "过期日期",
+               "expireNever": "从未",
+               "features": "功能",
+               "refresh": "刷新",
+               "refreshToolTip": "刷新许可证",
+               "actions": "操作",
+               "actionsToolTip": "对此列表中的选定许可证执行的操作",
+               "assign": {
+                  "title": "分配许可证",
+                  "hostManagedByVC": {
+                     "title": "主机正由 vCenter Server 管理",
+                     "confirmLabel": "关闭"
+                  },
+                  "toolTip": "将许可证分配给此主机",
+                  "checkLicense": "检查许可证",
+                  "provideValidLicense": "请提供有效的许可证密钥",
+                  "failedToDecode": "无法对提供的许可证进行解码",
+                  "assignLicense": "分配许可证",
+                  "invalidLicense": "请提供有效的许可证密钥",
+                  "notEnoughCores": "该主机的插槽 ({{cores}}) 多于为 ({{licenseCores}}) 提供的有效许可证，请提供其他许可证。",
+                  "expired": "许可证已过期",
+                  "successMessage": "已成功分配许可证 {{name}}",
+                  "failureMessage": "无法分配许可证 {{name}}",
+                  "rejectLabel": "取消"
+               },
+               "remove": {
+                  "title": "移除许可证",
+                  "remove": "移除",
+                  "removeLicense": "移除许可证",
+                  "toolTip": "移除选定的许可证",
+                  "content": "是否确定要移除许可证 \n<strong>{{name}}</strong>?",
+                  "successMessage": "已成功移除许可证 {{key}}",
+                  "failureMessage": "无法移除许可证 {{key}}",
+                  "rejectLabel": "取消"
+               }
+            },
+            "packages": {
+               "tabTitle": "软件包",
+               "tabTooltip": "配置安装在此主机上的软件",
+               "error": "无可用软件包数据",
+               "list": {
+                  "columns": {
+                     "name": "名称",
+                     "version": "版本",
+                     "description": "描述",
+                     "vendor": "供应商",
+                     "installDate": "安装日期"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "刷新",
+                        "tooltip": "刷新软件包列表"
+                     },
+                     "update": {
+                        "label": "安装更新",
+                        "tooltip": "在此主机上安装更新"
+                     }
+                  }
+               }
+            },
+            "services": {
+               "tabTitle": "服务",
+               "tabTooltip": "配置在此主机上运行的服务",
+               "name": "名称:",
+               "restart": "重新启动",
+               "stop": "停止",
+               "start": "启动",
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新事件表"
+               },
+               "actions": "操作",
+               "actionsToolTip": "对选定服务执行的操作",
+               "name": "名称",
+               "description": "描述",
+               "base": "基础系统",
+               "firewallRules": "防火墙规则",
+               "status": {
+                  "label": "状态",
+                  "running": "正在运行",
+                  "stopped": "已停止"
+               },
+               "source": "源",
+               "startSuccess": "已成功启动服务 {{name}}",
+               "startFailure": "无法启动服务 {{name}}",
+               "restartSuccess": "已成功重新启动服务 {{name}}",
+               "restartFailure": "无法重新启动服务 {{name}}",
+               "stopSuccess": "已成功停止服务 {{name}}",
+               "stopFailure": "无法停止服务 {{name}}"
+            },
+            "timeAndDate": {
+               "context": {
+                  "ntpService": {
+                     "label": "NTP 服务",
+                     "tooltip": "管理主机的 NTP 服务"
+                  }
+               },
+               "tabTitle": "时间和日期",
+               "tabTooltip": "配置此主机的时间和日期",
+               "unknown": "未知",
+               "none": "无",
+               "ntpd": {
+                  "running": "正在运行",
+                  "stopped": "已停止",
+                  "enabled": "已启用",
+                  "disabled": "已禁用"
+               },
+               "actions": "操作",
+               "actionsTooltip": "用于时间配置的操作",
+               "servers": "NTP 服务器",
+               "clientStatus": "NTP 客户端状态",
+               "serviceStatus": "NTP 服务状态",
+               "currentDateTime": "当前日期和时间",
+               "editSettings": "编辑设置",
+               "editSettingsTooltip": "编辑时间配置设置",
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新时间和日期配置"
+               },
+               "dialog": {
+                  "confirmLabel": "保存",
+                  "rejectLabel": "取消",
+                  "title": "编辑时间配置",
+                  "header": "指定应如何设置此主机的日期和时间。",
+                  "manual": "在此主机上手动配置日期和时间",
+                  "ntpdStartPolicy": {
+                     "on": {
+                        "description": "随主机系统启动和停止",
+                        "label": "随主机启动和停止"
+                     },
+                     "off": {
+                        "description": "用户手动启动和停止服务",
+                        "label": "手动启动和停止"
+                     },
+                     "auto": {
+                        "description": "打开任何端口时启动，关闭所有端口时停止",
+                        "label": "根据端口使用情况启动和停止"
+                     }
+                  },
+                  "ntp": "使用 Network Time Protocol (启用 NTP 客户端)",
+                  "ntpPolicy": "NTP 服务启动策略",
+                  "ntpServers": "NTP 服务器",
+                  "ntpServersLabel": "以逗号分隔服务器，例如 10.31.21.2, fe00::2800",
+                  "validation": {
+                     "emptyDate": "请提供日期和时间。"
+                  }
+               }
+            },
+            "security": {
+               "tabTitle": "安全和用户",
+               "tabTooltip": "配置此主机的安全设置和用户权限",
+               "acceptance": {
+                  "tabTitle": "接受级别",
+                  "tabTooltip": "配置此主机的接受级别",
+                  "levels": {
+                     "partner": {
+                        "name": "合作伙伴",
+                        "description": "仅接受合作伙伴以及 VMware 签名和认证的 VIB"
+                     },
+                     "community": {
+                        "name": "社区",
+                        "description": "接受所有 VIB (包括未签名 VIB)"
+                     },
+                     "vmware_accepted": {
+                        "name": "VMware 认可",
+                        "description": "接受由 VMware 认可的 VIB"
+                     },
+                     "vmware_certified": {
+                        "name": "VMware 认证",
+                        "description": "只接受 VMware 签名和认证的 VIB"
+                     }
+                  },
+                  "editSettings": {
+                     "title": "编辑接受级别设置",
+                     "confirmLabel": "保存",
+                     "rejectLabel": "取消",
+                     "failureNotification": "无法将接受级别设置为 {{level}}",
+                     "successNotification": "主机的接受级别已成功更改为 {{level}}"
+                  },
+                  "stack": {
+                     "acceptanceLevel": {
+                        "label": "接受级别",
+                        "partner": "合作伙伴",
+                        "community": "社区",
+                        "vmware_accepted": "VMware 认可",
+                        "vmware_certified": "VMware 认证"
+                     }
+                  },
+                  "actions": {
+                     "editSettings": {
+                        "label": "编辑设置",
+                        "tooltip": "更改此主机的接受级别"
+                     },
+                     "refresh": {
+                        "label": "刷新",
+                        "tooltip": "刷新此主机的接受级别信息"
+                     }
+                  }
+               },
+               "authentication": {
+                  "tabTitle": "身份验证",
+                  "tabTooltip": "配置此主机的身份验证",
+                  "leaveDomain": {
+                     "title": "退出域",
+                     "content": "是否确定要从域 <strong>{{domain}}</strong> 中移除此主机?",
+                     "confirmLabel": "是",
+                     "rejectLabel": "取消",
+                     "failureMessage": "无法退出域 {{domain}}: {{reason}}",
+                     "successMessage": "主机已成功退出域 {{domain}}"
+                  },
+                  "joinDomain": {
+                     "title": "加入域",
+                     "confirmLabel": "加入域",
+                     "rejectLabel": "取消",
+                     "domainLabel": "域名",
+                     "usernameLabel": "用户名",
+                     "passwordLabel": "密码",
+                     "confirmPasswordLabel": "确认密码",
+                     "username": "用户名",
+                     "password": "密码",
+                     "useAuthProxyLabel": "使用身份验证代理",
+                     "authProxyLabel": "身份验证代理",
+                     "successMessage": "主机已成功加入域 {{domain}}",
+                     "failureMessage": "主机无法加入域 {{domain}}: {{reason}}",
+                     "errorNoDomain": "请指定希望此主机加入的域服务器",
+                     "errorAuthProxy": "请指定要使用的身份验证代理",
+                     "errorNoPassword": "请指定域控制器帐户密码",
+                     "errorNoUsername": "请指定域控制器帐户用户名",
+                     "errorPasswordsDontMatch": "指定的域控制器密码不匹配"
+                  },
+                  "stack": {
+                     "activeDirectoryEnabled": {
+                        "label": "已启用 Active Directory",
+                        "true": "是",
+                        "false": "否"
+                     },
+                     "smartCardAuthenticationEnabled": {
+                        "label": "已启用智能卡身份验证",
+                        "true": "是",
+                        "false": "否"
+                     },
+                     "joinedDomain": {
+                        "label": "已加入域"
+                     },
+                     "domainMembershipStatus": {
+                        "label": "域成员资格状态",
+                        "ok": "确定",
+                        "clientTrustBroken": "客户端信任已背弃",
+                        "inconsistentTrust": "信任不一致",
+                        "noServers": "无服务器",
+                        "otherProblem": "其他问题",
+                        "serverTrustBroken": "服务器信任已背弃",
+                        "unknown": "未知"
+                     },
+                     "trustedDomain": {
+                        "label": "受信任的域"
+                     }
+                  },
+                  "actions": {
+                     "join": {
+                        "label": "加入域",
+                        "tooltip": "加入 Active Directory 域"
+                     },
+                     "leave": {
+                        "label": "退出域",
+                        "tooltip": "从域中移除此主机"
+                     },
+                     "refresh": {
+                        "label": "刷新",
+                        "tooltip": "刷新此主机的身份验证信息"
+                     }
+                  }
+               },
+               "lockdown": {
+                  "tabTitle": "锁定模式",
+                  "tabTooltip": "配置此主机的锁定模式",
+                  "lockdownStrict": {
+                     "name": "严格锁定",
+                     "description": "将用户限制为仅从 vCenter Server 登录"
+                  },
+                  "lockdownNormal": {
+                     "name": "正常锁定",
+                     "description": "用户可以通过 DCUI 和 vCenter Server 登录"
+                  },
+                  "lockdownDisabled": {
+                     "name": "已禁用",
+                     "description": "已禁用锁定模式"
+                  },
+                  "changeDialog": {
+                     "title": "更改锁定模式",
+                     "confirmLabel": "更改",
+                     "rejectLabel": "取消"
+                  },
+                  "userDialog": {
+                     "title": "添加例外用户",
+                     "confirmLabel": "添加例外",
+                     "rejectLabel": "取消",
+                     "invalidUser": "请输入有效的用户名",
+                     "userName": "用户名",
+                     "successNotification": "已成功将 {{user}} 添加到锁定模式例外用户列表",
+                     "failureNotification": "无法将 {{user}} 添加到锁定模式例外用户列表"
+                  },
+                  "removeExceptionUser": {
+                     "title": "请确认",
+                     "content": "是否确定要从锁定模式例外列表中移除用户 {{name}}?",
+                     "confirmLabel": "确定",
+                     "rejectLabel": "取消",
+                     "successNotification": "已成功移除例外用户 {{name}}",
+                     "failureNotification": "无法移除例外用户 {{name}}"
+                  },
+                  "failureNotification": "无法进入锁定模式: {{message}}",
+                  "successNotification": "已成功进入锁定模式",
+                  "stack": {
+                     "lockdownMode": {
+                        "label": "锁定模式",
+                        "lockdownStrict": "已启用严格锁定",
+                        "lockdownNormal": "已启用正常锁定",
+                        "lockdownDisabled": "已禁用"
+                     },
+                     "exceptionUsers": {
+                        "label": "例外用户"
+                     }
+                  },
+                  "userList": {
+                     "noUsers": "没有例外用户",
+                     "columns": {
+                        "name": "名称"
+                     }
+                  },
+                  "actions": {
+                     "refresh": {
+                        "label": "刷新",
+                        "tooltip": "刷新此主机的证书信息"
+                     },
+                     "removeUser": {
+                        "label": "移除用户例外",
+                        "tooltip": "从锁定模式例外列表中移除用户"
+                     },
+                     "addUser": {
+                        "label": "添加用户例外",
+                        "tooltip": "将用户添加到锁定模式例外列表"
+                     },
+                     "configureLockdown": {
+                        "label": "编辑设置",
+                        "tooltip": "配置此主机的锁定模式"
+                     }
+                  }
+               },
+               "users": {
+                 "tabTitle": "用户",
+                 "tabTooltip": "管理系统用户",
+                 "noUsers": "无用户",
+                 "actions": {
+                   "refresh": {
+                      "label": "刷新",
+                      "tooltip": "刷新用户列表"
+                   },
+                   "removeUser": {
+                      "label": "移除用户",
+                      "tooltip": "移除用户"
+                   },
+                   "addUser": {
+                      "label": "添加用户",
+                      "tooltip": "添加用户"
+                   },
+                   "updateUser": {
+                      "label": "编辑用户",
+                      "tooltip": "修改用户信息"
+                   }
+                 },
+                 "grid": {
+                    "username": "用户名",
+                    "description": "描述"
+                 },
+                 "addUser": {
+                    "title": "添加用户",
+                    "userNameBlockLabel": "用户名 (必需)",
+                    "userDescriptionBlockLabel": "描述",
+                    "userPasswordBlockLabel": "密码 (必需)",
+                    "userConfirmPasswordBlockLabel": "确认密码 (必需)",
+                    "confirmLabel": "添加",
+                    "rejectLabel": "取消",
+                    "failureNotification": "无法添加用户: {{error}}",
+                    "successNotification": "已成功添加用户 {{user}}"
+                 },
+                 "updateUser": {
+                    "title": "编辑用户",
+                    "userNameBlockLabel": "用户名",
+                    "userDescriptionBlockLabel": "描述",
+                    "userPasswordBlockLabel": "密码",
+                    "userConfirmPasswordBlockLabel": "确认密码",
+                    "confirmLabel": "保存",
+                    "rejectLabel": "取消",
+                    "failureNotification": "无法更新用户: {{error}}",
+                    "successNotification": "已成功更新用户 {{user}}"
+                 },
+                 "removeUser": {
+                    "title": "警告",
+                    "content": "是否确定要移除用户: <strong>{{user}}</strong>?",
+                    "confirmLabel": "是",
+                    "rejectLabel": "取消",
+                    "failureNotification": "无法移除用户 {{user}}",
+                    "successNotification": "已成功移除用户 {{user}}"
+                 }
+               },
+               "roles": {
+                 "tabTitle": "角色",
+                 "tabTooltip": "管理角色",
+                 "actions": {
+                   "refresh": {
+                      "label": "刷新",
+                      "tooltip": "刷新角色列表"
+                   },
+                   "removeRole": {
+                      "label": "移除角色",
+                      "tooltip": "移除授权角色"
+                   },
+                   "addRole": {
+                      "label": "添加角色",
+                      "tooltip": "添加授权角色"
+                   },
+                   "updateRole": {
+                      "label": "编辑角色",
+                      "tooltip": "修改授权角色"
+                   }
+                 },
+                 "grid": {
+                    "name": "名称",
+                    "summary": "摘要"
+                 },
+                 "addRole": {
+                    "title": "添加角色",
+                    "roleNameBlockLabel": "角色名称 (必需)",
+                    "rolePrivilegesBlockLabel": "特权",
+                    "confirmLabel": "添加",
+                    "rejectLabel": "取消",
+                    "validation": {
+                       "nameExists": "已存在名为 {{name}} 的角色，请选择其他名称。"
+                    },
+                    "failureNotification": "无法添加角色: {{error}}",
+                    "successNotification": "已成功添加角色 {{role}}"
+                 },
+                 "updateRole": {
+                    "title": "编辑角色",
+                    "roleNameBlockLabel": "角色名称 (必需)",
+                    "rolePrivilegesBlockLabel": "特权",
+                    "confirmLabel": "保存",
+                    "rejectLabel": "取消",
+                    "failureNotification": "无法更新角色: {{error}}",
+                    "successNotification": "已成功更新角色: {{role}}"
+                 },
+                 "removeRole": {
+                    "title": "警告",
+                    "content": "是否确定要移除角色: <strong>{{roleName}}</strong>?",
+                    "option": "仅移除未使用",
+                    "confirmLabel": "是",
+                    "rejectLabel": "取消",
+                    "failureNotification": "无法移除角色 {{role}}",
+                    "successNotification": "已成功移除角色 {{role}}"
+                 }
+               },
+               "certificates": {
+                  "tabTitle": "证书",
+                  "tabTooltip": "配置此主机的 SSL 证书",
+                  "warningVC": "此主机的证书由 vCenter Server 管理，您不能通过 Host Client 配置它们。",
+                  "import": {
+                     "title": "导入证书",
+                     "confirmLabel": "导入",
+                     "rejectLabel": "取消",
+                     "invalidCert": "提供的证书不是 PEM 格式。请粘贴整个证书。",
+                     "certLabel": "证书",
+                     "certTitle": "请在此处粘贴 PEM 格式的证书。",
+                     "successMessage": "已成功更新证书，您应刷新浏览器",
+                     "failureMessage": "无法导入新的 SSL 证书",
+                     "reboot": {
+                        "title": "需要重新引导",
+                        "content": "必须重新引导主机，才能加载新证书。是否立即重新引导?",
+                        "confirmLabel": "重新引导",
+                        "rejectLabel": "稍后"
+                     }
+                  },
+                  "stack": {
+                     "notAfter": {
+                        "label": "有效截止日期"
+                     },
+                     "notBefore": {
+                        "label": "有效起始日期"
+                     },
+                     "subject": {
+                        "label": "主体"
+                     },
+                     "issuer": {
+                        "label": "颁发者"
+                     },
+                     "unknown": "未知"
+                  },
+                  "actions": {
+                     "import": {
+                        "label": "导入新证书",
+                        "tooltip": "导入此主机的新 SSL 证书"
+                     },
+                     "genCSR": {
+                        "copyToClipboard": "复制到剪贴板",
+                        "title": "证书签名请求结果",
+                        "close": "关闭",
+                        "labelIPBased": "生成 IP 签名请求",
+                        "labelHostnameBased": "生成 FQDN 签名请求",
+                        "tooltip": "生成证书签名请求"
+                     },
+                     "refresh": {
+                        "label": "刷新",
+                        "tooltip": "刷新此主机的证书信息"
+                     }
+                  }
+               }
+            },
+            "swap": {
+               "tabTitle": "交换",
+               "tabTooltip": "配置此主机的系统交换",
+               "localSwap": "本地交换",
+               "localSwapEnabled": "已启用本地交换",
+               "hostCache": "主机缓存",
+               "hostCacheEnabled": "已启用主机缓存",
+               "datastore": "数据存储",
+               "enabled": "已启用",
+               "true": "是",
+               "false": "否",
+               "none": "无",
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新交换配置"
+               },
+               "editSettings": {
+                  "label": "编辑设置",
+                  "tooltip": "更改系统交换配置"
+               },
+               "dialog": {
+                  "title": "编辑交换配置",
+                  "rejectLabel": "取消",
+                  "confirmLabel": "保存",
+                  "successNotification": "已成功更新主机交换配置",
+                  "failureNotification": "无法更新主机交换配置",
+                  "mustSelect": "必须启用至少一种交换设备"
+               }
+            }
+         },
+         "changeUsername": {
+            "dialog": {
+               "nonAscii": "用户名中存在无效字符。请只使用低位 ASCII 字符。",
+               "badCharacters": "用户名中存在无效字符。请只使用字母数字字符。"
+            }
+         },
+         "changePassword": {
+            "menu": {
+               "label": "更改密码"
+            },
+            "dialog": {
+               "title": "更改密码",
+               "newPassword": "新密码",
+               "newPasswordAgain": "再次输入新密码",
+               "confirmLabel": "更改密码",
+               "rejectLabel": "取消",
+               "noMatch": "密码不匹配",
+               "nonAscii": "密码中存在无效字符。请只使用低 ASCII 字符。",
+               "success": "已成功更改 {{username}} 的密码",
+               "blank": "未输入任何密码。",
+               "failed": "无法更改密码"
+            }
+         }
+      },
+      "sshConsole": {
+         "menu": {
+            "label": "SSH 控制台",
+            "tooltip": "打开此主机的 SSH 控制台",
+            "labelGetChrome": "为 Chrome 获取 SSH"
+         }
+      },
+      "scriptingConsole": {
+         "menu": {
+            "label": "脚本处理控制台",
+            "tooltip": "打开用于对此主机执行脚本处理操作的控制台"
+         },
+         "actionBar": {
+            "runButton": {
+               "label": "运行",
+               "tooltip": "运行脚本"
+            },
+            "clearButton": {
+               "label": "清除",
+               "tooltip": "清除日志窗口"
+            }
+         }
+      },
+      "supportBundle": {
+         "successNotification": "已完成支持包创建，可以从 {{url}} 下载支持包",
+         "failureNotification": "无法创建支持包: {{error}}",
+         "dialog": {
+            "title": "支持包已完成",
+            "content": "支持包创建完成。您可以从<a href='{{url}}'>此处</a>下载此支持包。\n\n您可以从“生成支持包”任务找到此支持包的下载 URL\n\n 15 分钟后将自动从主机移除此支持包。",
+            "confirmLabel": "下载",
+            "rejectLabel": "关闭"
+         },
+         "menu": {
+            "label": "生成支持包",
+            "tooltip": "从此主机生成支持包"
+         }
+      },
+      "monitor": {
+         "title": "{{hostname}} - 监控",
+         "performance": {
+            "tabTitle": "性能",
+            "tabTooltip": "监控系统性能",
+            "refresh": {
+               "label": "刷新",
+               "tooltip": "刷新性能图表"
+            },
+            "configure": {
+               "action": {
+                  "label": "选择虚拟机",
+                  "tooltip": "配置要在性能图表中显示其数据的虚拟机"
+               },
+               "dialog": {
+                  "title": "选择虚拟机",
+                  "rejectLabel": "取消",
+                  "confirmLabel": "保存"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "数据可用性",
+                  "message": "为什么仅“过去 1 小时”数据范围可用? ESXi 主机将仅存储过去 1 小时的历史数据。要查看较大范围的数据，需要使用 vCenter Server。"
+               }
+            },
+            "grid": {
+               "name": "名称",
+               "unit": "单位",
+               "average": "平均值",
+               "maximum": "最大值",
+               "minimum": "最小值",
+               "latest": "最新值"
+            },
+            "noMatches": "没有与筛选器“{{search}}”匹配的数据系列",
+            "colors": {
+               "vmware": "默认颜色",
+               "highContrast": "高对比度颜色"
+            },
+            "filter": {
+               "type": "筛选器类型",
+               "cpuFilter": "CPU 筛选器",
+               "time": "时间"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "全部",
+                     "hostDropdownTitle": "主机",
+                     "allCoresDropdownTitle": "所有 PCPU",
+                     "allPackagesDropdownTitle": "所有软件包",
+                     "packageDropdownTitle": "软件包 {{pkg}} 内核",
+                     "custom": "自定义",
+                     "seriesLabel": "PCPU {{core}}",
+                     "vmSeriesLabel": "虚拟机 - {{name}}",
+                     "packageSeriesLabel": "软件包 {{pkg}}",
+                     "y1AxisLabel": "已消耗的主机 CPU (%)",
+                     "xAxisLabel": "时间"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "内存",
+                     "seriesLabel": "已消耗的主机内存",
+                     "vmSeriesLabel": "虚拟机 - {{name}}",
+                     "y1AxisLabel": "已消耗的主机内存 (GB)",
+                     "xAxisLabel": "时间"
+                  }
+               },
+               "cpuAndMemory": {
+                  "dropdownTitle": "CPU + 内存组合"
+               },
+               "network": {
+                  "dropdownTitle": "网络",
+                  "usageSeriesLabel": "网络总体使用情况",
+                  "vmUsageSeriesLabel": "网络总体使用情况 - {{name}}",
+                  "transmitSeriesLabel": "总传输速率",
+                  "receiveSeriesLabel": "总接收速率",
+                  "nicTransmitRateSeriesLabel": "传输速率 - {{nic}}",
+                  "nicReceiveRateSeriesLabel": "接收速率 - {{nic}",
+                  "y1AxisLabel": "传输/接收速率 (mbps)",
+                  "y2AxisLabel": "数量",
+                  "xAxisLabel": "时间"
+               },
+               "disk": {
+                  "dropdownTitle": "磁盘",
+                  "usageSeriesLabel": "磁盘总体使用情况",
+                  "readRateSeriesLabel": "总读取速率",
+                  "writeRateSeriesLabel": "总写入速率",
+                  "diskReadRateSeriesLabel": "读取速率 - {{disk}}",
+                  "diskWriteRateSeriesLabel": "写入速率 - {{disk}}",
+                  "vmRateSeriesLabel": "磁盘总体使用情况 - {{name}}",
+                  "maxLatencySeriesLabel": "最长延迟",
+                  "y1AxisLabel": "数据速率 (MB/s)",
+                  "y2AxisLabel": "延迟 (ms)",
+                  "xAxisLabel": "时间"
+               },
+               "scale": {
+                  "lastHour": "过去 1 小时"
+               }
+            }
+         },
+         "logs": {
+            "context": {
+               "openInNewWindow": {
+                  "label": "在新窗口中打开",
+                  "tooltip": "在新窗口中打开此日志"
+               }
+            },
+            "descriptions": {
+               "vmkernel": "VMkernel 子系统中的信息",
+               "vpxa": "vCenter 代理日志",
+               "hostd": "主机代理日志",
+               "dhclient": "DHCP 客户端日志",
+               "esxupdate": "ESX 更新日志文件",
+               "vmauthd": "vMotion 身份验证守护进程日志",
+               "sysboot": "系统引导日志",
+               "vmkeventd": "VMkernel 事件守护进程日志",
+               "vobd": "VMware 监测守护进程日志",
+               "auth": "身份验证子系统日志",
+               "fdm": "Fault Tolerance 管理代理日志",
+               "syslog": "常规系统日志",
+               "vmkwarning": "VMkernel 警告日志",
+               "vmkdevmgr": "VMkernel 设备管理器日志",
+               "shell": "ESXi Shell 活动日志"
+            },
+            "tabTitle": "日志",
+            "tabTooltip": "查看系统日志",
+            "noLogSelected": "未选定日志",
+            "actionBar": {
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定日志文件执行的操作"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新选定日志文件"
+               },
+               "close": {
+                  "label": "关闭",
+                  "tooltip": "关闭此窗口"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "日志",
+                  "description": "描述"
+               }
+            }
+         },
+         "hardware": {
+            "tabTitle": "硬件",
+            "tabTooltip": "监控系统硬件",
+            "sensors": {
+               "alt": "系统传感器",
+               "tabTitle": "系统传感器",
+               "tabTooltip": "系统传感器",
+               "type": "类别",
+               "health": "运行状况",
+               "fru": "现场可更换单元",
+               "lastUpdated": "上次更新时间",
+               "noSensors": "无可用传感器数据",
+               "currentReading": "当前读数",
+               "eventLogEntries": "事件日志条目",
+               "notifications": {
+                  "noIPMI": "此系统没有 IPMI 功能，您可能需要安装驱动程序才能检索传感器数据。"
+               },
+               "discreteSensorStates": {
+                  "DMI-discrete": {
+                     "0": "转变为空闲",
+                     "1": "转变为活动",
+                     "2": "转变为忙碌"
+                  },
+                  "assert-discrete": {
+                     "0": "已取消断言状态",
+                     "1": "已断言状态"
+                  },
+                  "predictive-discrete": {
+                     "0": "已取消断言预测性故障",
+                     "1": "已断言预测性故障"
+                  },
+                  "limit-discrete": {
+                     "0": "未超出限制",
+                     "1": "已超出限制"
+                  },
+                  "performance-discrete": {
+                     "0": "性能良好",
+                     "1": "性能滞后"
+                  },
+                  "severity-discrete": {
+                     "0": "转变为正常",
+                     "1": "从正常转变为非致命",
+                     "2": "从不太严重转变为致命",
+                     "3": "从不太严重转变为不可恢复",
+                     "4": "从较严重转变为非致命",
+                     "5": "从不可恢复转变为致命",
+                     "6": "转变为不可恢复",
+                     "7": "监控",
+                     "8": "信息"
+                  },
+                  "present-discrete": {
+                     "0": "设备已移除",
+                     "1": "设备已插入"
+                  },
+                  "enabled-discrete": {
+                     "0": "设备已禁用",
+                     "1": "设备已启用"
+                  },
+                  "availability-discrete": {
+                     "0": "转换为正在运行",
+                     "1": "转换为正在测试",
+                     "2": "转换为关闭电源",
+                     "3": "转换为联机",
+                     "4": "转换为脱机",
+                     "5": "转换为未运行",
+                     "6": "转换为已降级",
+                     "7": "转换为节电",
+                     "8": "安装错误"
+                  },
+                  "redundancy-discrete": {
+                     "0": "完全冗余",
+                     "1": "无冗余",
+                     "2": "冗余已降级",
+                     "3": "从冗余转变为非冗余足够资源",
+                     "4": "从不足转变为非冗余足够资源",
+                     "5": "非冗余不足资源",
+                     "6": "冗余已从完全冗余降级",
+                     "7": "冗余已从非冗余降级"
+                  },
+                  "ACPI-discrete": {
+                     "0": "D0 电源状况",
+                     "1": "D1 电源状况",
+                     "2": "D2 电源状况",
+                     "3": "D3 电源状况",
+                     "157": "未知状况"
+                  },
+                  "watchdog": {
+                     "0": "定时器已过期",
+                     "1": "已重新引导",
+                     "2": "关闭电源",
+                     "3": "重新启动"
+                  },
+                  "int-drive": {
+                     "0": "存在",
+                     "1": "驱动器故障",
+                     "2": "预测性故障",
+                     "3": "热备用",
+                     "4": "正在进行一致性检查",
+                     "5": "临界阵列",
+                     "6": "失败阵列",
+                     "7": "正在重新构建",
+                     "8": "重新构建已中止"
+                  },
+                  "cable": {
+                     "0": "存在/已连接",
+                     "1": "不存在/配置错误"
+                  },
+                  "available-discrete": {
+                     "0": "设备不存在",
+                     "1": "设备存在"
+                  }
+               },
+               "state": {
+                  "green": "绿色",
+                  "red": "红色",
+                  "yellow": "黄色",
+                  "unknown": "未知"
+               },
+               "list": {
+                  "columns": {
+                     "sensor": "传感器",
+                     "id": "ID",
+                     "category": "类别",
+                     "health": "运行状况",
+                     "current": "当前读数",
+                     "selEntries": "SEL 条目",
+                     "updated": "上次更新时间",
+                     "hasFRU": "FRU 数据",
+                     "type": "类型/单位"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "刷新",
+                        "tooltip": "刷新传感器表。注意: 实际更新速率受主机内部系统的限制，因此该刷新操作可能不会更新数据"
+                     },
+                     "clearSEL": {
+                        "label": "清除事件日志",
+                        "tooltip": "清除系统事件日志"
+                     }
+                  }
+               }
+            },
+            "storage": {
+               "alt": "存储",
+               "tabTitle": "存储",
+               "tabTooltip": "存储运行状况数据",
+               "operationalInfo": "附加信息",
+               "noData": "无可用数据",
+               "statusTitle": "状态",
+               "status": {
+                  "Green": "绿色",
+                  "Red": "红色",
+                  "Yellow": "黄色",
+                  "Unknown": "未知"
+               },
+               "notifications": {
+                  "noSFCBD": "轻量级 CIM 代理守护进程 (SFCBD) 未运行。此守护进程已报告存储运行状况数据。请参见<a href=\"http://kb.vmware.com/kb/1025757\" target=\"_blank\">此知识库文章</a>，了解关于启用此服务的信息。",
+                  "noReportedData": "轻量级 CIM 代理守护进程 (SFCBD) 正在运行，但是没有报告任何数据。您可能需要为存储适配器安装 CIM 提供程序。"
+               },
+               "list": {
+                  "columns": {
+                     "name": "名称",
+                     "status": "运行状况",
+                     "description": "描述"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "刷新",
+                        "tooltip": "刷新传感器表。注意: 实际更新速率受主机内部系统的限制，因此该刷新操作可能不会更新数据"
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "tabTitle": "事件",
+            "tabTooltip": "系统事件",
+            "type": "类型",
+            "time": "时间",
+            "virtualMachine": "虚拟机",
+            "searchKB": "知识库",
+            "searchKBLink": "单击此处搜索 VMware.com 在线知识库中有关此事件的内容",
+            "event": "事件",
+            "time": "时间",
+            "type": "类型",
+            "previousPage": "上一页",
+            "nextPage": "下一页",
+            "refresh": "刷新",
+            "perPage": "每页 {{num}} 个",
+            "none": "无",
+            "actions": {
+               "label": "操作",
+               "tooltip": "与所选事件相关的对象的操作"
+            },
+            "refresh": {
+               "label": "刷新",
+               "tooltip": "刷新事件表"
+            }
+         },
+         "notifications": {
+            "tabTitle": "通知",
+            "tabTooltip": "系统通知",
+            "suggestedAction": "建议的操作",
+            "actionBar": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新通知"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对所选通知执行的操作"
+               }
+            },
+            "grid": {
+               "notification": "通知",
+               "type": "类型"
+            }
+         },
+         "tasks": {
+            "alt": "任务",
+            "tabTitle": "任务",
+            "tabTooltip": "任务",
+            "noTasks": "无任务",
+            "key": "键",
+            "description": "描述",
+            "state": "状况",
+            "errors": "错误",
+            "result": "结果"
+         }
+      },
+      "state": {
+         "inMaintenanceMode": "维护模式",
+         "normal": "正常",
+         "connected": "已连接到 vCenter Server，位于",
+         "disconnected": "未连接到任何 vCenter Server",
+         "lockdownStrict": "锁定，严格",
+         "lockdownNormal": "锁定，正常",
+         "lockdownDisabled": "未锁定"
+      },
+      "disconnectFromVC": {
+         "title": "从 vCenter Server 断开连接",
+         "confirmLabel": "断开连接",
+         "rejectLabel": "取消",
+         "warning": "断开此主机的连接将导致 vCenter Server 认为主机未响应。\n\n应只在 VC 失败并需要在主机上执行紧急操作时使用此方法。如果 vCenter Server 仍在运行，此操作将引发警报。\n\n重新引导此主机也可能会导致其重新连接到 vCenter Server。",
+         "success": "此主机已成功从 vCenter Server 断开连接"
+      },
+      "maintenanceMode": {
+         "title": "确认维护模式更改",
+         "rejectLabel": "取消",
+         "confirmLabel": "是",
+         "vsan": "Virtual SAN 数据可能位于 Virtual SAN 群集中的主机上。请选择一个选项来设置 Virtual SAN 数据的迁移机制，将在主机进入维护模式之前强制实施该机制。",
+         "vsanLabel": "vSAN 数据迁移",
+         "vsanDataMigration": {
+            "noAction": {
+               "label": "不进行数据迁移",
+               "help": "Virtual SAN 不会从该主机撤出任何数据。如果关闭主机电源或将主机从群集中移除，则某些虚拟机可能变得不可访问。"
+            },
+            "ensureObjectAccessibility": {
+               "label": "确保可访问性",
+               "help": "这是默认选项。在关闭主机电源或将主机从群集中移除时，Virtual SAN 将确保此主机上的所有可访问的虚拟机均保持可访问状态。通常，只需撤出部分数据。\n\n如果将主机暂时移出群集 (例如，为了安装升级) 并计划将主机移回群集，请选择此选项。如果将主机从群集中永久移除，则此选项不适用。"
+            },
+            "evacuateAllData":{
+               "label": "撤出所有数据",
+               "help": "Virtual SAN 将所有数据撤离到群集中的其他主机，并维护或修复群集中受影响组件的可用性合规性。此选项导致出现大量数据传输并消耗大部分时间和资源。如果计划永久迁移主机，请选择此选项。如果从群集中的最后一个主机撤出数据，请确保将虚拟机迁移到其他数据存储，然后将主机置于维护模式。如果主机中含有数据的虚拟机对象不可访问且未完全撤出，该主机将无法进入维护模式。"
+            }
+         },
+         "vmsPoweredOn": "虚拟机电源仍开启。所有虚拟机已迁移或关闭电源/挂起后才会进入维护模式。",
+         "vmsPoweredOnTitle": "进入维护模式时出现延迟",
+         "warning": "在维护模式下，无法创建、配置虚拟机或打开虚拟机电源。此外，当主机处于维护模式时，VMware vCenter Server 不会将任何虚拟机迁移到此主机。\n\n可能需要手动关闭虚拟机电源或从主机迁移虚拟机。\n\n可以随时取消“进入维护模式”任务。",
+         "confirmEnter": "是否确定要将此主机置于维护模式?",
+         "notifications": {
+            "failure": "无法进入维护模式: {{message}}",
+            "failureUnknown": "无法进入维护模式，未知错误。"
+         }
+      },
+      "lockdownMode": {
+         "warning": "除非当前用户存在例外，否则进入锁定模式可能会导致此会话无响应。如果没有例外，将无法重新连接到此客户端应用程序。"
+      },
+      "notifications": {
+         "freeLicense": {
+            "message": "分配给此主机的许可证具有限制，会导致一些操作无法执行，例如虚拟机电源操作。",
+            "suggested-action": "通过恢复为评估许可证可能会解决此问题。"
+         },
+         "licenseExpired": {
+            "message": "您的 ESXi 许可证已过期。"
+         },
+         "evalLicenseValid": {
+            "message": "您当前正在评估模式下使用 ESXi。此许可证将在 {{days}} 天后过期。"
+         },
+         "evalLicenseExpired": {
+            "message": "ESXi 的评估许可证已过期。"
+         },
+         "certNotValidBefore": {
+            "message": "分配至该主机的证书尚未生效。",
+            "suggested-action": "应该安装有效证书。"
+         },
+         "certExpired": {
+            "message": "分配至该主机的证书已过期。",
+            "suggested-action": "应该安装有效证书。"
+         },
+         "rebootRequired": {
+            "message": "此主机需重新引导才能完成配置。"
+         },
+         "ssh": {
+            "message": "SSH 已在此主机上启用。",
+            "suggested-action": "只有出于管理目的需要时才应禁用 SSH。"
+         },
+         "shell": {
+            "message": "ESXi shell 已在此主机上启用。",
+            "suggested-action": "只有出于管理目的需要时才应禁用 shell。"
+         },
+         "vc": {
+            "message": "此主机由 vCenter Server 管理。",
+            "suggested-action": "vCenter Server 可以自动执行这些操作，无需干预。"
+         },
+         "maxRegisteredVMs": {
+            "message": "该主机的注册虚拟机已达到最大数量。",
+            "suggested-action": "向该主机添加更多内存可以增加受支持虚拟机的最大数量。"
+         }
+      }
+   }
+}

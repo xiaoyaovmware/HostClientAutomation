@@ -1,0 +1,46 @@
+{
+   "task": {
+      "task": "Task",
+      "entity": "Target",
+      "queued": "Queued",
+      "started": "Started",
+      "completed": "Completed",
+      "initiator": "Initiator",
+      "result": "Result",
+      "state": {
+         "running": "Running...",
+         "success": "Completed successfully",
+         "error": "Failed"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "Refresh",
+            "tooltip": "Refresh the tasks table"
+         },
+         "actions": {
+            "label": "Actions",
+            "tooltip": "Actions for the object related to the selecte task"
+         }
+      },
+      "pseudo": {
+         "certificate": {
+            "upload": {
+               "label": "Replace host certificate",
+               "summary": "Replace the host's SSL certificate"
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "Upload file to datastore",
+               "summary": "Upload a file to a datastore"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "Upload disk",
+               "summary": "Upload a disk for a virtual machine"
+            }
+         }
+      }
+   }
+}

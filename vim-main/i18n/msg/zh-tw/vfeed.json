@@ -1,0 +1,20 @@
+{
+     "title": "意見反應",
+     "text": "我們歡迎您提供有關 VMware Host Client 的意見反應。請使用下方的表單來提供意見或建議。您也可以建立螢幕擷取畫面，並使用喜歡的視覺化意見反應來註釋。使用編校器移除您不想分享的任何資料。",
+     "experience": "一般而言，您的體驗如何?",
+     "tellMore": "請告知我們更多內容 (還可以輸入 $1 個字元)",
+     "privacyPolicy": "隱私權政策",
+     "privacyPolicyContent": "VMware 可能會使用您提供的任何意見反應來改進 VMware 產品及服務，以修正問題並就如何最好地部署和使用 VMware 產品及服務為客戶提供建議。您有責任對向 VMware 提供之任何螢幕擷取畫面中的任何機密、敏感或個人資訊進行模糊處理或移除，意見反應中也不應包含任何此類資訊。您的電子郵件位址將用於就您意見反應的相關事宜與您連絡。",
+     "emailPlaceholder": "電子郵件地址",
+     "screenshotTitle": "",
+     "penTooltip": "註釋",
+     "eraserTooltip": "編校",
+     "undoTooltip": "復原",
+     "zoomInTooltip": "放大",
+     "zoomOutTooltip": "縮小",
+     "takeScreenshotButton": "建立螢幕擷取畫面",
+     "removeScreenshotButton": "移除螢幕擷取畫面",
+     "sendButton": "傳送",
+     "cancelButton": "取消"
+}
+

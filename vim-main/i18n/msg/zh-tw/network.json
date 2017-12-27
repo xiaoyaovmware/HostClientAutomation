@@ -1,0 +1,1361 @@
+{
+   "network": {
+      "title": "{{hostname}} - 網路功能",
+      "context": {
+         "title": "網路",
+         "addPortgroup": {
+            "title": "新增連接埠群組",
+            "tooltip": "新增連接埠群組"
+         },
+         "addVSwitch": {
+            "title": "新增標準 vSwitch",
+            "tooltip": "新增標準虛擬交換器"
+         },
+         "addVMKNIC": {
+            "title": "新增 VMkernel NIC",
+            "tooltip": "新增 VMkernel 介面"
+         }
+      },
+      "tabs": {
+         "vswitches": {
+            "title": "虛擬交換器",
+            "toolTip": "管理主機的虛擬交換器"
+         },
+         "portgroups": {
+            "title": "連接埠群組",
+            "toolTip": "管理主機的交換器連接埠群組"
+         },
+         "pnics": {
+            "title": "實體 NIC",
+            "toolTip": "管理主機的實體 NIC"
+         },
+         "vmknics": {
+            "title": "VMkernel NIC",
+            "toolTip": "管理主機的 VMkernel NIC"
+         },
+         "netstacks": {
+            "title": "TCP/IP 堆疊",
+            "toolTip": "管理主機的 TCP/IP 堆疊"
+         },
+         "firewall": {
+            "title": "防火牆規則",
+            "toolTip": "管理防火牆規則"
+         }
+      },
+      "monitor": {
+         "events": {
+            "tabTitle": "事件",
+            "tabTooltip": "系統事件"
+         },
+         "tasks": {
+            "tabTitle": "工作",
+            "tabTooltip": "工作"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "權限",
+            "title": "管理權限",
+            "close": "關閉",
+            "cancel": "取消",
+            "noUsers": "無使用者",
+            "addUser": {
+               "label": "新增使用者",
+               "toolTip": "新增使用者"
+            },
+            "removeUser": {
+               "label": "移除使用者",
+               "toolTip": "移除使用者"
+            },
+            "assignRole": {
+               "label": "指派角色",
+               "toolTip": "指派角色給使用者"
+            },
+            "updatePermissions": {
+               "successNotification": "已成功更新權限",
+               "failureNotification": "無法更新權限: {{error}}"
+            },
+            "columns": {
+               "user": "使用者",
+               "role": "角色"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "選取使用者"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "選取角色"
+            },
+            "propagateLabel": "散佈到所有子系"
+         }
+      },
+      "firewall": {
+         "alt": "防火牆",
+         "list": {
+            "columns": {
+               "name": "名稱",
+               "key": "金鑰",
+               "incoming": "傳入連接埠",
+               "outgoing": "傳出連接埠",
+               "protocols": "通訊協定",
+               "daemon": "精靈",
+               "service": "服務"
+            },
+            "actionBar": {
+               "edit": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯此規則集的設定"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選防火牆規則集執行的動作"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理防火牆規則"
+               }
+            },
+            "unknownRule": "未知防火牆規則",
+            "rule": "規則",
+            "direction": "方向",
+            "port": "連接埠",
+            "protocol": "通訊協定",
+            "notification": {
+               "enable": {
+                  "success": "已成功啟用 {{name}} 規則集。",
+                  "error": "無法啟用 {{}} 規則集。"
+               },
+               "disable": {
+                  "success": "已成功停用 {{name}} 規則集。",
+                  "error": "無法停用 {{}} 規則集。"
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "編輯設定",
+               "tooltip": "編輯此防火牆規則"
+            },
+            "enable": {
+               "label": "啟用",
+               "tooltip": "啟用此防火牆規則"
+            },
+            "disable": {
+               "label": "停用",
+               "tooltip": "停用此防火牆規則"
+            },
+            "service": {
+               "label": "服務",
+               "tooltip": "修改此防火牆規則相關服務的設定"
+            },
+            "policy": {
+               "label": "原則",
+               "tooltip": "此防火牆規則相關服務的原則選項"
+            }
+         },
+         "summary": {
+            "key": "金鑰",
+            "enabled": "已啟用",
+            "true": "是",
+            "false": "否",
+            "required": "必要",
+            "rules": "規則",
+            "package": "套件資訊",
+            "allowedIP": "允許的 IP 位址",
+            "all": "全部",
+            "service": "服務",
+            "portlets": {
+               "rules": {
+                  "title": "防火牆規則",
+                  "tooltip": "防火牆規則"
+               }
+            }
+         },
+         "edit": {
+            "title": "防火牆設定",
+            "header": "允許的 IP 位址",
+            "allIP": "來自所有 IP 位址的所有連線",
+            "selectedIP": "僅允許從下列網路連線:",
+            "selectedIPInfo": "選取以逗號分隔的每個網路。<br/>範例:<br/>192.168.0.0/24, 192.168.1.2, 2001::1/64, fd3e:29a6:0a81:e478::/64",
+            "ok": "確定",
+            "rejectLabel": "取消",
+            "invalidIP": "請提供有效的 IP 位址"
+         }
+      },
+      "vmknic": {
+         "alt": "VMkernel NIC",
+         "select": {
+            "title": "選取 VMkernel 介面",
+            "rejectLabel": "取消",
+            "confirmLabel": "選取",
+            "loading": "正在載入..."
+         },
+         "summary": {
+            "virtualSwitch": "虛擬交換器:",
+            "portGroup": "連接埠群組:",
+            "tcpIpConfiguration": "TCP/IP 組態",
+            "vswitchTopology": "vSwitch 拓撲",
+            "services": "服務",
+            "unknownVMKNIC": "未知 VMkernel NIC",
+            "ok": "確定",
+            "portlets": {
+               "tcpip": {
+                  "netstack": "TCP/IP 堆疊",
+                  "ipv4DHCP": {
+                     "title": "IPv4 DHCP",
+                     "enabled": "已啟用",
+                     "disabled": "已停用"
+                  },
+                  "ipv4Address": "IPv4 位址",
+                  "ipv4Subnet": "IPv4 子網路",
+                  "ipv6DHCP": {
+                     "title": "IPv6 DHCP",
+                     "enabled": "已啟用",
+                     "disabled": "已停用"
+                  },
+                  "ipv6AutoConfig": {
+                     "title": "IPv6 自動組態",
+                     "enabled": "已啟用",
+                     "disabled": "已停用"
+                  },
+                  "ipv6Addresses": "IPv6 位址",
+                  "none": "無"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理此 VMkernel NIC 的資料"
+               },
+               "editSettings": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯此 VMkernel NIC 的設定"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此 VMkernel NIC 執行的動作"
+               }
+            }
+         },
+         "events": {
+            "type": "類型:",
+            "time": "時間:",
+            "virtualMachine": "虛擬機器:"
+         },
+         "list": {
+            "grid": {
+               "name": "名稱",
+               "portgroup": "連接埠群組",
+               "tcpip": "TCP/IP 堆疊",
+               "services": "服務",
+               "ipv4": "IPv4 位址",
+               "ipv6": "IPv6 位址",
+               "none": "無"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理介面卡資料表"
+               },
+               "add": {
+                  "label": "新增 VMkernel NIC",
+                  "tooltip": "新增 VMkernel NIC - 正在建構中"
+               },
+               "editSettings": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯此虛擬交換器的設定"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此 VMkernel NIC 執行的動作"
+               }
+            }
+         },
+         "monitor": {
+            "title": "監控",
+            "tabs": {
+               "events": {
+                  "label": "事件",
+                  "tooltip": "事件"
+               },
+               "tasks": {
+                  "label": "工作",
+                  "tooltip": "工作"
+               }
+            }
+         },
+         "add": {
+            "loading": "正在載入...",
+            "title": "新增 VMkernel NIC",
+            "rejectLabel": "取消",
+            "ip": {
+               "ipv4": "僅限 IPv4",
+               "ipv6": "僅限 IPv6",
+               "both": "IPv4 和 IPv6"
+            },
+            "vswitch": {
+               "label": "選取虛擬交換器"
+            },
+            "dialog": {
+               "create": "建立",
+               "validation": {
+                  "nic": "請提供新連接埠群組的名稱",
+                  "vswitch": "請為連接埠群組選取虛擬交換器",
+                  "vlanId": "請提供 VLAN 識別碼，值必須介於 {{min}} 和 {{max}} 之間",
+                  "ipv4": "請提供 IPv4 位址和子網路",
+                  "portgroupExists": "已存在名稱為 {{name}} 的連接埠群組，請選擇另一個名稱"
+               },
+               "notification": {
+                  "success": "已成功建立 VMkernel NIC {{name}}",
+                  "error": "無法建立新的 VMkernel NIC"
+               }
+            }
+         },
+         "edit": {
+            "title": "編輯設定 - {{name}}",
+            "rejectLabel": "取消",
+            "confirmLabel": "儲存",
+            "loading": "正在載入...",
+            "ip": {
+               "ipv4": "僅限 IPv4",
+               "ipv6": "僅限 IPv6",
+               "both": "IPv4 和 IPv6"
+            },
+            "vswitch": {
+               "label": "選取虛擬交換器"
+            },
+            "dialog": {
+               "create": "建立",
+               "validation": {
+                  "portgroup": "不存在與此 VMkernel NIC 相關聯的連接埠群組",
+                  "vswitch": "請為連接埠群組選取虛擬交換器",
+                  "ipv4": "請提供 IPv4 位址和子網路"
+               },
+               "notification": {
+                  "success": "已儲存 VMkernel NIC {{name}} 的組態",
+                  "error": "無法儲存 VMkernel NIC {{name}} 的組態"
+               }
+            }
+         },
+         "context": {
+            "remove": {
+               "label": "移除",
+               "tooltip": "移除此 VMkernel NIC"
+            },
+            "edit": {
+               "label": "編輯設定",
+               "tooltip": "編輯此 VMkernel NIC 的設定",
+               "tooltipDVS": "無法編輯連結至分散式連接埠群組的 VMkernel NIC"
+            }
+         },
+         "remove": {
+            "title": "移除 VMKNIC - {{name}}",
+            "confirmLabel": "確認",
+            "rejectLabel": "取消",
+            "successNotification": "已成功移除 VMkernel NIC {{name}}",
+            "failureNotification": "無法移除 VMkernel NIC {{name}}",
+            "confirmation": "移除 VMkernel NIC 將導致使用它的所有服務無法使用。\n\n移除 {{name}}?"
+         },
+         "settings": {
+            "services": {
+               "vSphereProvisioning": {
+                  "label": "佈建"
+               },
+               "vMotion": {
+                  "label": "vMotion"
+               },
+               "vmotion": {
+                  "label": "vMotion"
+               },
+               "faultToleranceLogging": {
+                  "label": "Fault Tolerance 記錄"
+               },
+               "management": {
+                  "label": "管理"
+               },
+               "vSphereReplication": {
+                  "label": "複寫"
+               },
+               "vSphereReplicationNFC": {
+                  "label": "NFC 複寫"
+               },
+               "vsan": {
+                  "label": "vSAN"
+               },
+               "vsanWitness": {
+                  "label": "vSAN 見證"
+               }
+            },
+            "portGroup": {
+               "label": "連接埠群組",
+               "newPortGroup": "新增連接埠群組",
+               "vlandId": "VLAN 識別碼",
+               "ipVersion": {
+                  "label": "IP 版本"
+               },
+               "ipv4": {
+                  "label": "IPv4 設定",
+                  "dhcp": {
+                     "label": "組態",
+                     "dhcp": "DHCP",
+                     "static": "靜態"
+                  },
+                  "address": "位址",
+                  "subnetMask": "子網路遮罩"
+               },
+               "ipv6": {
+                  "label": "IPv6 設定",
+                  "clickExpand": "按一下以展開",
+                  "dhcpv6": {
+                     "label": "DHCPv6",
+                     "enabled": "已啟用",
+                     "disabled": "已停用"
+                  },
+                  "autoConfig": {
+                     "label": "自動組態",
+                     "yes": "是",
+                     "no": "否"
+                  },
+                  "staticAddresses": {
+                     "label": "靜態位址",
+                     "addAddress": "新增位址",
+                     "placeholder": {
+                        "address": "位址",
+                        "prefix": "首碼"
+                     }
+                  },
+                  "vSwitch": {
+                     "label": "虛擬交換器"
+                  },
+                  "tcpip": {
+                     "label": "TCP/IP 堆疊"
+                  },
+                  "services": {
+                     "label": "服務",
+                     "vMotion": "vMotion"
+                  }
+               }
+            }
+         }
+      },
+      "vswitch": {
+         "alt": "虛擬交換器",
+         "context": {
+            "addUplink": {
+               "title": "新增上行",
+               "tooltip": "將上行新增至此虛擬交換器"
+            },
+            "editSettings": {
+               "title": "編輯設定",
+               "tooltip": "編輯此虛擬交換器的設定"
+            },
+            "remove": {
+               "title": "移除",
+               "tooltip": "移除虛擬交換器",
+               "tooltipDVS": "僅可從 vCenter Server 移除分散式交換器"
+            }
+         },
+         "summary": {
+            "type": "類型:",
+            "virtualSwitch": "虛擬交換器:",
+            "portGroups": "連接埠群組:",
+            "uplinks": "上行:",
+            "vswitchDetails": "vSwitch 詳細資料",
+            "vswitchTopology": "vSwitch 拓撲",
+            "portlet": {
+               "mtu": "MTU",
+               "ports": "連接埠",
+               "link": "連結探索",
+               "attached": "連結的虛擬機器",
+               "beacon": "指標時間間隔",
+               "available": "可用",
+               "active": "作用中",
+               "linkDiscovery": {
+                  "mode": {
+                     "listen": "接聽",
+                     "advertise": "通告",
+                     "both": "兩者",
+                     "none": "無"
+                  },
+                  "protocol": {
+                     "label": "通訊協定",
+                     "lldp": "Link Layer Discovery Protocol (LLDP)",
+                     "cdp": "Cisco Discovery Protocol (CDP)"
+                  }
+               }
+            },
+            "dialog": {
+               "title": "未知 vSwitch"
+            },
+            "actionBar": {
+               "addUplink": {
+                  "label": "新增上行",
+                  "tooltip": "將新的實體上行新增至虛擬交換器"
+               },
+               "edit": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯此虛擬交換器的設定"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理介面卡資料表"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此清單中所選物件執行的動作"
+               }
+            }
+         },
+         "list": {
+            "grid": {
+               "name": "名稱",
+               "portgroups": "連接埠群組",
+               "uplinks": "上行",
+               "type": "類型"
+            },
+            "actionBar": {
+               "addStandard": {
+                  "label": "新增標準虛擬交換器",
+                  "tooltip": "新增標準虛擬交換器"
+               },
+               "addUplink": {
+                  "label": "新增上行",
+                  "tooltip": "將上行 (實體 NIC) 新增至此虛擬交換器"
+               },
+               "edit": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯此虛擬交換器的設定"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理虛擬交換器清單"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選虛擬交換器執行的動作"
+               }
+            }
+         },
+         "events": {
+            "type": "類型:",
+            "time": "時間:",
+            "virtualMachine": "虛擬機器:"
+         },
+         "diagram": {
+            "loading": "正在載入 vSwitch 拓撲...",
+            "noPortgroups": "無連接埠群組",
+            "vlanId": "VLAN 識別碼:",
+            "virtualMachines": "虛擬機器",
+            "macAddress": "MAC 位址",
+            "vmKernelPorts": "VMkernel 連接埠",
+            "noPhysicalAdapters": "無實體介面卡",
+            "physicalAdapters": "實體介面卡"
+         },
+         "monitor": {
+            "title": "監控",
+            "tabs": {
+               "events": {
+                  "label": "事件",
+                  "tooltip": "事件"
+               },
+               "tasks": {
+                  "label": "工作",
+                  "tooltip": "工作"
+               }
+            }
+         },
+         "noAdapters": "沒有要連結至此虛擬交換器的可用實體介面卡。",
+         "remove": {
+            "title": "移除虛擬交換器 - {{name}}",
+            "confirmation": "是否確定要移除下列 vSwitch?",
+            "confirmLabel": "是",
+            "rejectLabel": "否",
+            "portgroups": "連接埠群組",
+            "failureNotification": "無法移除虛擬交換器 {{name}}",
+            "successNotification": "已成功移除虛擬交換器 {{name}}"
+         },
+         "type": {
+            "dvs": "分散式 vSwitch",
+            "standard": "標準 vSwitch"
+         },
+         "add": {
+            "loading": "正在載入...",
+            "title": "新增標準虛擬交換器 - {{name}}",
+            "titleNoName": "新增標準虛擬交換器",
+            "newSwitch": "新增交換器",
+            "confirmLabel": "新增",
+            "rejectLabel": "取消",
+            "security": "安全性",
+            "clickToExpand": "按一下以展開",
+            "promiscuousMode": "混合模式",
+            "accept": "接受",
+            "reject": "拒絕",
+            "useVswitch": "從 vSwitch 繼承",
+            "macChanges": "MAC 位址變更",
+            "forgedTransmits": "偽造的傳輸",
+            "linkDiscovery": "連結探索",
+            "mode": {
+               "label": "模式",
+               "listen": "接聽",
+               "advertise": "通告",
+               "both": "兩者",
+               "none": "無"
+            },
+            "protocol": {
+               "label": "通訊協定",
+               "lldp": "Link Layer Discovery Protocol (LLDP)",
+               "cdp": "Cisco Discovery Protocol (CDP)"
+            },
+            "dialog": {
+               "title": "無法新增上行",
+               "ok": "確定",
+               "create": "新增"
+            },
+            "error": {
+               "name": "請提供有效的虛擬交換器名稱",
+               "mtu": "請提供 MTU 的有效數目。允許的數目上限是 {{max}}，允許的數目下限是 {{min}}"
+            },
+            "notification": {
+               "success": "已成功建立虛擬交換器 {{name}}",
+               "error": "無法建立新的虛擬交換器 {{name}}"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此 TCP/IP 堆疊執行的動作"
+               },
+               "add": {
+                  "label": "新增上行",
+                  "tooltip": "將新的實體上行新增至虛擬交換器"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理此 TCP/IP 堆疊"
+               }
+            }
+         },
+         "edit": {
+            "loading": "正在載入...",
+            "title": "編輯標準虛擬交換器 - {{name}}",
+            "titleNoName": "編輯標準虛擬交換器",
+            "confirmLabel": "儲存",
+            "rejectLabel": "取消",
+            "dialog": {
+               "title": "無法新增上行",
+               "ok": "確定",
+               "create": "建立虛擬交換器"
+            },
+            "error": {
+               "name": "請提供虛擬交換器的名稱",
+               "duplicate": "請選取唯一的上行值。"
+            },
+            "notification": {
+               "success": "已成功儲存虛擬交換器 {{name}}",
+               "error": "無法儲存虛擬交換器 {{name}}"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此 TCP/IP 堆疊執行的動作"
+               },
+               "add": {
+                  "label": "新增上行",
+                  "tooltip": "將新的實體上行新增至虛擬交換器"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理此 TCP/IP 堆疊"
+               }
+            }
+         },
+         "notifications": {
+            "uplink": {
+               "message": "此虛擬交換器不具有上行冗餘。",
+               "suggested-action": "應新增其他上行介面卡。"
+            }
+         },
+         "settings": {
+            "vSwitchName": "vSwitch 名稱",
+            "mtu": "MTU",
+            "uplink": "上行"
+         }
+      },
+      "netstack": {
+         "alt": "TCP/IP 堆疊",
+         "names": {
+            "defaultTcpipStack": "預設 TCP/IP 堆疊",
+            "vSphereProvisioning": "佈建堆疊",
+            "vmotion": "vMotion 堆疊",
+            "vxlan": "VXLAN"
+         },
+         "summary": {
+            "unknownNetstack": {
+               "title": "未知 TCP/IP 堆疊"
+            },
+            "key": "金鑰:",
+            "configuration": "組態",
+            "dnsConfiguration": "DNS 組態",
+            "routing": "路由傳送",
+            "actionBar": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此 TCP/IP 堆疊執行的動作"
+               },
+               "edit": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯此 TCP/IP 堆疊的組態"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理此 TCP/IP 堆疊"
+               }
+            },
+            "portlets": {
+               "configuration": {
+                  "ipv6": {
+                     "name": "IPv6"
+                  },
+                  "cca": {
+                     "name": "壅塞控制演算法"
+                  },
+                  "maxConnections": {
+                     "name": "連線數上限"
+                  },
+                  "vmknics": {
+                     "name": "VMKernel NIC"
+                  },
+                  "dhcp": {
+                     "name": "DHCP"
+                  }
+               },
+               "dns": {
+                  "loadingMessage": "正在載入 DNS 組態...",
+                  "hostName": {
+                     "name": "主機名稱"
+                  },
+                  "address": {
+                     "name": "位址"
+                  },
+                  "domainName": {
+                     "name": "網域名稱"
+                  },
+                  "searchDomains": {
+                     "name": "搜尋網域"
+                  }
+               },
+               "routing": {
+                  "loadingMessage": "正在載入路由資料表...",
+                  "ipv4": {
+                     "name": "IPv4",
+                     "value": "按一下標籤以展開",
+                     "routeTable": {
+                        "name": "路由資料表",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "網路位址"
+                              },
+                              "prefixLength": {
+                                 "label": "首碼長度"
+                              },
+                              "gateway": {
+                                 "label": "閘道"
+                              },
+                              "device": {
+                                 "label": "裝置"
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "ipv6": {
+                     "name": "IPv6",
+                     "value": "按一下標籤以展開",
+                     "routeTable": {
+                        "name": "IPv6",
+                        "localSubnet": "本機子網路",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "網路位址"
+                              },
+                              "prefixLength": {
+                                 "label": "首碼長度"
+                              },
+                              "gateway": {
+                                 "label": "閘道"
+                              },
+                              "device": {
+                                 "label": "裝置"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "type": "類型:",
+            "time": "時間:",
+            "virtualMachine": "虛擬機器:"
+         },
+         "ipv6": {
+            "true": "已啟用",
+            "false": "已停用"
+         },
+         "dhcp": {
+            "true": "已啟用",
+            "false": "已停用"
+         },
+         "list": {
+            "columns": {
+               "name": {
+                  "label": "名稱"
+               },
+               "ipv4Gateway": {
+                  "label": "IPv4 閘道"
+               },
+               "ipv6Gateway": {
+                  "label": "IPv6 閘道"
+               },
+               "preferredDNS": {
+                  "label": "慣用 DNS"
+               },
+               "alternateDNS": {
+                  "label": "備用 DNS"
+               }
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選 TCP/IP 堆疊執行的動作"
+               },
+               "edit": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯此 TCP/IP 堆疊的設定"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理 TCP/IP 堆疊資料表"
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "編輯設定",
+               "tooltip": "編輯此 TCP/IP 堆疊的設定"
+            }
+         },
+         "edit": {
+            "title": "編輯 TCP/IP 組態 - {{displayName}}",
+            "confirmLabel": "儲存",
+            "rejectLabel": "取消",
+            "basicConfig": {
+               "label": "基本 DNS 組態",
+               "title":"指定主機應如何從此 TCP/IP 堆疊取得其設定。",
+               "useDHCP": {
+                  "label": "從下列介面卡使用 DHCP DNS 服務"
+               },
+               "adapter": "介面卡",
+               "manual": {
+                  "label": "手動設定此 TCP/IP 堆疊的設定",
+                  "hostName": "主機名稱",
+                  "domainName": "網域名稱",
+                  "primaryDNS": "主要 DNS 伺服器",
+                  "secondaryDNS": "次要 DNS 伺服器",
+                  "searchDomains": "搜尋網域",
+                  "searchDomainsOnePerLine": "每行一個搜尋網域"
+               }
+            },
+            "routing": {
+               "title": "路由傳送",
+               "ipv4": "IPv4 閘道",
+               "ipv6": "IPv6 閘道"
+            },
+            "congestionControl": {
+               "newReno": "NewReno",
+               "cubic": "CUBIC",
+               "CUBIC": "CUBIC"
+            },
+            "advancedSettings": {
+               "title": "進階設定",
+               "congestionControl": "壅塞控制演算法",
+               "maxNumberConnections": "連線數目上限"
+            },
+            "notification": {
+               "success": "已成功更新 {{netstack}} 的組態",
+               "failure": "無法更新 {{netstack}} 的組態"
+            },
+            "error": {
+               "hostName": "請提供有效的主機名稱，長度必須小於或等於 {{max}}",
+               "domainName": "請提供有效的網域名稱，長度必須小於或等於 {{max}}",
+               "primaryDNS": "請提供有效的主要 DNS 伺服器，長度必須小於或等於 {{max}}",
+               "secondaryDNS": "請提供有效的次要 DNS 伺服器，長度必須小於或等於 {{max}}",
+               "searchDomains": "請提供有效的搜尋網域，一行一個，不加逗點。",
+               "ipv4Gateway": "請提供有效的 IPv4 閘道",
+               "ipv6Gateway": "請提供有效的 IPv6 閘道",
+               "maxConnections": "請針對連線數上限提供介於 {{min}} 和 {{max}} 之間的數字"
+            }
+         }
+      },
+      "tcp": {
+         "congestionControl": {
+            "newreno": "NewReno",
+            "cubic": "CUBIC"
+         }
+      },
+      "portgroup": {
+         "alt": "連接埠群組",
+         "type": {
+            "Network": "標準連接埠群組",
+            "DistributedVirtualPortgroup": "分散式虛擬連接埠群組",
+            "Opaque": "不透明網路連接埠群組"
+         },
+         "summary": {
+            "accessible": "可存取:",
+            "virtualMachines": "虛擬機器:",
+            "virtualSwitch": "虛擬交換器:",
+            "vlanId": "VLAN 識別碼:",
+            "activePorts": "作用中的連接埠:",
+            "vswitchTopology": "vSwitch 拓撲",
+            "nicTeamingPolicy": "NIC 整併原則",
+            "offloadPolicy": "卸載原則",
+            "securityPolicy": "安全性原則",
+            "shapingPolicy": "控管原則",
+            "actions": {
+               "editSettings": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯此虛擬交換器的設定"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理介面卡資料表"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選連接埠群組執行的動作"
+               }
+            }
+         },
+         "events": {
+            "type": "類型:",
+            "time": "時間:",
+            "virtualMachine": "虛擬機器:"
+         },
+         "accessible": {
+            "true": "是",
+            "false": "否"
+         },
+         "add": {
+            "title": "新增連接埠群組 - {{name}}",
+            "titleNoName": "新增連接埠群組",
+            "newPortgroup": "新增連接埠群組",
+            "confirmLabel": "新增",
+            "rejectLabel": "取消",
+            "loading": "正在載入...",
+            "toolTip": "新增連接埠群組",
+            "selectVSwitch": "選取虛擬交換器",
+            "missingName": "請提供連接埠群組的名稱",
+            "missingVSwitch": "請為連接埠群組選取虛擬交換器",
+            "badVLANIDRange": "VLAN 識別碼必須介於 0 到 4095 之間",
+            "success": "已成功建立連接埠群組 {{name}}",
+            "failure": "無法建立新的連接埠群組 {{name}}"
+         },
+         "edit": {
+            "title": "編輯連接埠群組 - {{name}}",
+            "titleNoName": "編輯連接埠群組",
+            "confirmLabel": "儲存",
+            "rejectLabel": "取消",
+            "loading": "正在載入...",
+            "missingName": "請提供連接埠群組的名稱",
+            "missingVSwitch": "請為連接埠群組選取虛擬交換器",
+            "badVLANIDRange": "VLAN 識別碼必須介於 0 到 4095 之間",
+            "success": "已成功儲存連接埠群組 {{name}}",
+            "failure": "無法儲存連接埠群組 {{name}}",
+            "trafficShaping": {
+               "title": "流量控管",
+               "policyExceptions": "原則例外狀況",
+               "status": "狀況",
+               "disabled": "已停用",
+               "enabled": "已啟用",
+               "averageBandwidth": "平均頻寬",
+               "peakBandwidth": "尖峰頻寬",
+               "burstSize": "高載大小",
+               "kbps": "Kb/s",
+               "kb": "KB",
+               "clickToExpand": "按一下以展開",
+               "note": {
+                  "title": "附註",
+                  "content": "流量控管原則會套用到每個連結到虛擬交換器的虛擬網路介面卡的流量。"
+               },
+               "inherit": "從 vSwitch 繼承"
+            },
+            "nicTeaming": {
+               "title": "NIC 整併",
+               "clickToExpand": "按一下以展開",
+               "loadBalancing": {
+                  "title": "負載平衡",
+                  "loadbalance_ip": "根據 IP 雜湊進行路由",
+                  "loadbalance_srcmac": "根據來源 MAC 雜湊進行路由",
+                  "loadbalance_srcid": "根據原始連接埠識別碼進行路由",
+                  "failover_explicit": "使用明確容錯移轉順序"
+               },
+               "failoverDetection": {
+                  "title": "網路容錯移轉偵測",
+                  "linkStatus": "僅連結狀態",
+                  "beaconOnly": "僅限指標"
+               },
+               "notifySwitches": {
+                  "title": "通知交換器",
+                  "yes": "是",
+                  "no": "否"
+               },
+               "failBack": {
+                  "title": "容錯回復",
+                  "yes": "是",
+                  "no": "否"
+               },
+               "overrideFailoverOrder": {
+                  "title": "覆寫容錯移轉順序",
+                  "yes": "是",
+                  "no": "否"
+               },
+               "failoverOrder": {
+                  "title": "容錯移轉順序",
+                  "override": "覆寫交換器容錯移轉順序",
+                  "usedAs": "狀況",
+                  "standby": "待命",
+                  "active": "作用中",
+                  "unused": "未使用",
+                  "name": "名稱",
+                  "speed": "速度",
+                  "networks": "網路",
+                  "markAsStandby": {
+                     "label": "標記為待命",
+                     "tooltip": "將此實體 NIC 標記為待命"
+                  },
+                  "markAsActive": {
+                     "label": "標記為作用中",
+                     "tooltip": "將此實體 NIC 標記為作用中"
+                  },
+                  "markAsUnused": {
+                     "label": "標記未使用的",
+                     "tooltip": "將此實體 NIC 標記為未使用"
+                  },
+                  "moveUp": {
+                     "label": "上移",
+                     "tooltip": "將此介面卡的容錯移轉順序上移"
+                  },
+                  "moveDown": {
+                     "label": "下移",
+                     "tooltip": "將此介面卡的容錯移轉順序下移"
+                  }
+               },
+               "inherit": "從 vSwitch 繼承"
+            }
+         },
+         "remove": {
+            "title": "移除連接埠群組",
+            "loading": "正在載入...",
+            "close": "關閉",
+            "confirm": "移除",
+            "rejectLabel": "取消",
+            "notification": {
+               "success": "已移除連接埠群組 {{name}}",
+               "error": "無法移除連接埠群組 {{name}}"
+            },
+            "confirmation": "是否移除下列連接埠群組?",
+            "cantRemove": "無法移除一或多個連接埠群組，因為仍連結有虛擬機器或 VMkernel NIC。"
+         },
+         "settings": {
+            "name": {
+               "title": "名稱",
+               "change": "變更此連接埠群組的名稱會孤立 <strong>{{length}}</strong> 台虛擬機器。",
+               "rename": "無法重新命名此連接埠群組，因其具有 <strong>{{length}}</strong> 個作用中的連接埠"
+            },
+            "vlanId": "VLAN 識別碼",
+            "vSwitch": {
+               "label": "虛擬交換器",
+               "change": "若存在作用中的連接埠 ({{length}})，則您無法變更此連接埠群組的 vSwitch。"
+            }
+         },
+         "actions": {
+            "editSettings": {
+               "label": "編輯設定",
+               "tooltip": "編輯此連接埠群組"
+            },
+            "refresh": {
+               "label": "重新整理",
+               "tooltip": "重新整理連接埠群組清單"
+            },
+            "actions": {
+               "label": "動作",
+               "tooltip": "對所選連接埠群組執行的動作"
+            },
+            "remove": {
+               "label": "移除",
+               "tooltip": "移除此連接埠群組"
+            }
+         },
+         "list": {
+            "unknownVLANID": "未知",
+            "columns": {
+               "name": "名稱",
+               "activePorts": "作用中的連接埠",
+               "vlanId": "VLAN 識別碼",
+               "type": "類型",
+               "vswitch": "vSwitch",
+               "vms": "虛擬機器"
+            }
+         },
+         "portlets": {
+            "summary": {
+               "loading": "正在載入摘要...",
+               "shaping": {
+                  "true": "是",
+                  "false": "否"
+               }
+            },
+            "teaming": {
+               "loading": "正在載入整併原則...",
+               "notify": {
+                  "label": "通知交換器",
+                  "true": "是",
+                  "false": "否"
+               },
+               "policy": {
+                  "label": "原則",
+                  "loadbalance_ip": "根據 IP 雜湊進行路由",
+                  "loadbalance_srcmac": "根據來源 MAC 雜湊進行路由",
+                  "loadbalance_srcid": "根據原始連接埠識別碼進行路由",
+                  "failover_explicit": "使用明確容錯移轉順序"
+               },
+               "reverse": {
+                  "label": "反向原則",
+                  "true": "是",
+                  "false": "否"
+               },
+               "rolling": {
+                  "label": "容錯回復",
+                  "true": "否",
+                  "false": "是"
+               }
+            },
+            "shaping": {
+               "averageBandwidth": "平均頻寬",
+               "peakBandwidth": "尖峰頻寬",
+               "burstSize": "高載大小",
+               "enabled": {
+                  "label": "已啟用",
+                  "true": "是",
+                  "false": "否"
+               }
+            },
+            "offload": {
+               "loading": "正在載入卸載原則...",
+               "checksum": {
+                  "label": "總和檢查碼卸載",
+                  "true": "是",
+                  "false": "否"
+               },
+               "tcpSegmentation": {
+                  "label": "TCP 分割",
+                  "true": "是",
+                  "false": "否"
+               },
+               "zeroCopy": {
+                  "label": "零複製傳輸",
+                  "true": "是",
+                  "false": "否"
+               }
+            },
+            "security": {
+               "loading": "正在載入安全性原則...",
+               "allowPromiscuous": {
+                  "label": "允許混合模式",
+                  "true": "是",
+                  "false": "否"
+               },
+               "forgedTransmits": {
+                  "label": "允許偽造的傳輸",
+                  "true": "是",
+                  "false": "否"
+               },
+               "macChanges": {
+                  "label": "允許 MAC 變更",
+                  "true": "是",
+                  "false": "否"
+               }
+            }
+         },
+         "monitor": {
+            "title": "監控"
+         }
+      },
+      "pnic": {
+         "alt": "實體 NIC",
+         "summary": {
+            "linkSpeed": "連結速度:",
+            "driver": "驅動程式:",
+            "macAddress": "MAC 位址:",
+            "adapterDetails": "介面卡詳細資料",
+            "halfduplex": "半雙工",
+            "fullduplex": "全雙工",
+            "up": "向上",
+            "down": "向下",
+            "dialog": {
+               "unknown": {
+                  "title": "未知 PNIC"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理實體介面卡資料表"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選實體介面卡執行的動作"
+               },
+               "editSettings": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯所選實體介面卡的設定"
+               }
+            },
+            "portlets": {
+               "details": {
+                  "pciAddress": "PCI 位址",
+                  "autoNegotiateSupport": "自動交涉支援",
+                  "autoNegotiateEnabled": "已啟用自動交涉",
+                  "directPathIOSupport": "Direct-path IO 支援",
+                  "wakeOnLANSupport": "網路喚醒支援",
+                  "supportedSpeeds": "支援的速度",
+                  "yes": "是",
+                  "no": "否",
+                  "enabled": "已啟用",
+                  "disabled": "已停用"
+               },
+               "subnets": {
+                  "title": "探索到的子網路",
+                  "subnet": "子網路 {{x}}"
+               },
+               "lldp": {
+                  "title": "連結層探索通訊協定詳細資料",
+                  "chassisId": "底座識別碼",
+                  "portId": "連接埠識別碼",
+                  "timeToLive": "存留時間",
+                  "parameters": "參數"
+               },
+               "cdp": {
+                  "title": "Cisco 探索通訊協定詳細資料",
+                  "address": "IP 位址",
+                  "cdpVersion": "CDP 版本",
+                  "peerDeviceCapability": {
+                     "label": "對等裝置功能",
+                     "host": "主機",
+                     "igmpEnabled": "IGMP",
+                     "networkSwitch": "網路交換器",
+                     "repeater": "中繼器",
+                     "router": "路由器",
+                     "sourceRouteBridge": "來源路由橋接器",
+                     "transparentBridge": "透明橋接器"
+                  },
+                  "devId": "裝置識別碼",
+                  "fullDuplex": "全雙工",
+                  "hardwarePlatform": "硬體平台",
+                  "ipPrefix": "IP 首碼",
+                  "ipPrefixLen": "IP 首碼長度",
+                  "location": "位置",
+                  "mgmtAddr": "管理位址",
+                  "mtu": "MTU",
+                  "portId": "連接埠識別碼",
+                  "samples": "範例",
+                  "softwareVersion": "軟體版本",
+                  "systemName": "系統名稱",
+                  "systemOID": "系統 OID",
+                  "timeout": "逾時",
+                  "ttl": "存留時間",
+                  "vlan": "VLAN 識別碼"
+               }
+            }
+         },
+         "edit": {
+            "confirmLabel": "儲存",
+            "rejectLabel": "取消",
+            "title": "編輯實體 NIC - {{nic}}",
+            "titleNoName": "編輯實體 NIC",
+            "notification": {
+               "error": "無法為 {{nic}} 設定實體 NIC 速度",
+               "success": "已成功更新實體 NIC {{nic}} 的速度"
+            },
+            "speed": {
+               "label": "速度",
+               "auto": "自動交涉"
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "編輯設定",
+               "tooltip": "編輯此實體 NIC 的設定"
+            }
+         },
+         "list": {
+            "columns": {
+               "name": "名稱",
+               "driver": "驅動程式",
+               "macAddress": "MAC 位址",
+               "linkSpeed": "連結速度",
+               "auto": "自動交涉"
+            },
+            "auto": {
+               "yes": "已啟用",
+               "no": "已停用"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理實體介面卡資料表"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選實體介面卡執行的動作"
+               },
+               "editSettings": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯所選實體介面卡的設定"
+               }
+            }
+         },
+         "monitor": {
+            "title": "監控",
+            "events": {
+               "title": "事件",
+               "tooltip": "事件"
+            },
+            "tasks": {
+               "title": "工作",
+               "tooltip": "工作"
+            }
+         },
+         "events": {
+            "type": "類型:",
+            "time": "時間:",
+            "virtualMachine": "虛擬機器:"
+         },
+         "duplex": {
+            "half": "半雙工",
+            "full": "全雙工",
+            "true": "全雙工",
+            "false": "半雙工"
+         },
+         "mbps": "Mbps",
+         "linkDown": "連結失效"
+      },
+      "error": {
+         "unknownNetwork": "抱歉，找不到網路「{{moid}}」。",
+         "unknownPortgroup": "抱歉，找不到連接埠群組「{{moid}}」。",
+         "unknownVMknic": "抱歉，找不到 VMkernel NIC「{{moid}}」。",
+         "unknownVSwitch": "抱歉，找不到 vSwitch「{{moid}}」。"
+      }
+   }
+}

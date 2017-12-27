@@ -1,0 +1,2288 @@
+{
+   "vm": {
+      "answer": {
+         "dialog": {
+            "title": "回答问题 - {{name}}",
+            "ok": "回答",
+            "rejectLabel": "取消"
+         }
+      },
+      "autostart": {
+         "unset": "取消设置",
+         "change": {
+            "title": "配置自动启动 - {{name}}",
+            "rejectLabel": "取消",
+            "confirmLabel": "保存",
+            "waitForHeartbeat": {
+               "label": "等待检测信号",
+               "yes": "是",
+               "no": "否",
+               "systemDefault": "系统默认值"
+            },
+            "startDelay": {
+               "label": "启动延迟",
+               "seconds": "秒"
+            },
+            "stopDelay": {
+               "label": "停止延迟",
+               "seconds": "秒"
+            },
+            "stopAction": {
+               "label": "停止操作",
+               "systemDefault": "系统默认值",
+               "PowerOff": "关闭电源",
+               "Suspend": "挂起",
+               "ShutDown": "关机"
+            },
+            "successNotification": "已成功更新 {{name}} 的自动启动配置",
+            "failureNotification": "无法更新 {{name}} 的自动启动配置"
+         }
+      },
+      "console": {
+         "close": "关闭",
+         "actions": "操作",
+         "showKeyboard": "显示键盘",
+         "keyboardLayout": "键盘布局",
+         "maximize": "最大化",
+         "fullscreen": "全屏",
+         "minimize": " 最小化",
+         "shrink": "压缩",
+         "failedToConnect": "无法连接",
+         "resolutionChangeDialog": {
+            "title": "分辨率未更改",
+            "content": "该虚拟机安装了 VMware Tools，但分辨率尚未更改。是否要扩展此控制台?",
+            "confirmLabel": "是",
+            "rejectLabel": "否"
+         },
+         "multipleConnectionsNotificationSingle": "其他用户打开了此虚拟机的控制台会话",
+         "multipleConnectionsNotificationMultiple": "{{num}} 个其他用户打开了此虚拟机的控制台会话"
+      },
+      "power": {
+         "powerOffWarning": {
+            "title": "警告",
+            "content": "关闭此虚拟机的电源可能导致数据丢失。是否确定要关闭此虚拟机的电源?",
+            "contentMulti": "关闭一个或多个选定虚拟机的电源可能导致数据丢失。是否确定要继续?",
+            "rejectLabel": "取消",
+            "confirmLabel": "是"
+         },
+         "resetWarning": {
+            "title": "警告",
+            "content": "重置此虚拟机可能导致数据丢失。是否确定要重置此虚拟机?",
+            "contentMulti": "重置一个或多个选定虚拟机可能导致数据丢失。是否确定要继续?",
+            "rejectLabel": "取消",
+            "confirmLabel": "是"
+         }
+      },
+      "list": {
+         "title": "{{hostname}} - 虚拟机",
+         "empty": "无虚拟机",
+         "columns": {
+            "name": "虚拟机",
+            "state": "状况",
+            "status": "状态",
+            "provisionedSpace": "已置备空间",
+            "usedSpace": "已用空间",
+            "guest": "客户机操作系统",
+            "toolsInstalled": "已安装 Tools",
+            "toolsVersion": "Tools 版本",
+            "ipAddress": "IP 地址",
+            "datastore": "数据存储",
+            "hostName": "主机名称",
+            "hostCPU": "主机 CPU",
+            "hostMemory": "主机内存",
+            "autostartStartOrder": "自动启动顺序",
+            "autostartStartDelay": "启动延迟",
+            "autostartStopDelay": "停止延迟",
+            "notes": "备注"
+         },
+         "quickFilters": {
+            "vmsWithoutTools": "未配置 VMware Tools 的虚拟机",
+            "poweredOnVMs": "已打开电源的虚拟机",
+            "poweredOffVMs": "已关闭电源的虚拟机",
+            "suspendedVMs": "已挂起的虚拟机",
+            "vmsParticipatingInAutostart": "加入自动启动的虚拟机"
+         },
+         "status": {
+            "normal": "正常",
+            "warning": "警告",
+            "inconsistent": "不一致",
+            "question": "问题未解决",
+            "invalid": "无效"
+         },
+         "actionBar": {
+            "createRegister": {
+               "label": "创建/注册虚拟机",
+               "tooltip": "创建或注册虚拟机"
+            },
+            "columns": {
+               "label": "列",
+               "tooltip": "选择要在此表中显示的列",
+               "contextTitle": "选择列"
+            },
+            "console": {
+               "label": "控制台",
+               "tooltip": "打开选定虚拟机的控制台"
+            },
+            "powerOn": {
+               "label": "打开电源",
+               "tooltip": "打开选定虚拟机的电源或继续运行它们"
+            },
+            "powerOff": {
+               "label": "关闭电源",
+               "tooltip": "关闭选定虚拟机的电源"
+            },
+            "shutDown": {
+               "label": "关机",
+               "tooltip": "在选定虚拟机中执行正常关机"
+            },
+            "shutDownSuspended": {
+               "label": "关机/关闭电源",
+               "tooltip": "关闭选定虚拟机或关闭其电源"
+            },
+            "suspend": {
+               "label": "挂起",
+               "tooltip": "挂起选定的虚拟机"
+            },
+            "restart": {
+               "label": "重新启动",
+               "tooltip": "重新启动选定的虚拟机"
+            },
+            "edit": {
+               "label": "编辑设置",
+               "tooltip": "编辑选定虚拟机的设置"
+            },
+            "refresh": {
+               "label": "刷新",
+               "tooltip": "刷新虚拟机表"
+            },
+            "actions": {
+               "label": "操作",
+               "tooltip": "对选定虚拟机执行的操作"
+            }
+         }
+      },
+      "attachISO": {
+         "button": {
+            "label": "选择磁盘映像",
+            "tooltip": "浏览磁盘映像"
+         },
+         "dialog": {
+            "title": "选择 CD/DVD 磁盘映像",
+            "confirmLabel": "选择"
+         },
+         "failureNotification": "无法附加磁盘映像: {{message}}",
+         "successNotification": "已成功将磁盘映像 {{file}} 附加到 CD/DVD 设备"
+      },
+      "delete": {
+         "title": "删除虚拟机 - {{name}}",
+         "titleMultiple": "删除虚拟机",
+         "confirmLabel": "删除",
+         "rejectLabel": "取消",
+         "failedAtLeastOne": "至少有一个虚拟机无法删除",
+         "ok": "确定"
+      },
+      "supportBundle": {
+         "menu": {
+            "label": "生成支持包",
+            "tooltip": "通过此虚拟机生成支持包"
+         }
+      },
+      "template": {
+         "label": "模板",
+         "convert": {
+            "title": "转换为模板",
+            "label": "转换为模板",
+            "tooltip": "将虚拟机转换为模板",
+            "message": "是否将虚拟机“{{name}}”转换为模板?",
+            "ok": "转换",
+            "rejectLabel": "取消"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "权限",
+            "title": "管理权限",
+            "header": "将用户和角色分配给",
+            "close": "关闭",
+            "cancel": "取消",
+            "noUsers": "无用户",
+            "addUser": {
+               "label": "添加用户",
+               "toolTip": "添加用户",
+               "header": "将用户添加到"
+            },
+            "removeUser": {
+               "label": "移除用户",
+               "toolTip": "移除用户"
+            },
+            "assignRole": {
+               "label": "分配角色",
+               "toolTip": "将角色分配给用户",
+               "header": "设置以下对象的权限"
+            },
+            "updatePermissions": {
+               "successNotification": "已成功更新权限",
+               "failureNotification": "无法更新权限: {{error}}"
+            },
+            "columns": {
+               "user": "用户",
+               "role": "角色"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "选择用户"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "选择角色"
+            },
+            "propagateLabel": "传播到所有子对象",
+            "groupLabel": "添加为组"
+         }
+      },
+      "snapshot": {
+         "consolidate": {
+            "menu": "整合磁盘",
+            "consolidationComplete": "虚拟机 {{name}} 的磁盘整合已完成",
+            "consolidationFailed": "虚拟机 {{name}} 的磁盘整合失败: {{reason}}"
+         },
+         "take": {
+            "menu": "生成快照",
+            "title": "生成 {{name}} 的快照",
+            "takeSnapshot": "生成快照",
+            "name": "名称",
+            "description": "描述",
+            "memory": "生成虚拟机内存的快照。",
+            "quiesce": "使客户机文件系统处于静默状态 (需要安装有 VMware Tools)",
+            "ok": "确定",
+            "cancel": "取消",
+            "notification": {
+               "success": "已成功在虚拟机 {{vmName}} 上创建快照“{{title}}”",
+               "error": "无法在虚拟机 {{vmName}} 上创建快照“{{title}}”"
+            }
+         },
+         "edit": {
+            "notification": {
+               "error": "无法在快照“{{name}}”上保存更改。"
+            }
+         },
+         "revertLatest": {
+            "menu": "还原最新快照",
+            "title": "还原最新快照",
+            "content": "除非将虚拟机的当前状态保存在快照中，否则该状态将丢失。是否恢复为最新 (最近) 的快照?",
+            "revert": "还原",
+            "cancel": "取消",
+            "notification": {
+               "success": "已成功将虚拟机 {{name}} 还原到最新快照",
+               "error": "无法将虚拟机 {{name}} 还原到最新快照"
+            }
+         },
+         "revert": {
+            "menu": "还原快照",
+            "title": "还原快照",
+            "content": "除非将虚拟机的当前状态保存到快照中，否则该状态将丢失。是否还原快照“{{title}}”?",
+            "revert": "还原",
+            "cancel": "取消",
+            "notification": {
+               "success": "已成功将虚拟机 {{name}} 还原到快照“{{title}}”",
+               "error": "无法将虚拟机 {{name}} 还原到快照“{{title}}”"
+            }
+         },
+         "delete": {
+            "menu": "删除快照",
+            "title": "删除快照",
+            "content": "是否确定要删除快照“{{title}}”?",
+            "ok": "移除",
+            "removeChildren": "移除所有子快照。",
+            "cancel": "取消",
+            "notification": {
+               "success": "已成功删除快照“{{title}}”。",
+               "error": "无法删除快照“{{title}}”。"
+            }
+         },
+         "deleteAll": {
+            "menu": "删除所有快照",
+            "title": "删除所有快照",
+            "content": "此操作将整合并移除该虚拟机的所有快照。快照将整合到一个磁盘中。是否要继续?",
+            "ok": "移除",
+            "cancel": "取消",
+            "notification": {
+               "success": "已成功删除虚拟机“{{name}}”的所有快照。",
+               "error": "无法删除虚拟机“{{name}}”的所有快照。"
+            }
+         },
+         "manage": {
+            "menu": "管理快照",
+            "notitle": "管理快照",
+            "title": "管理快照 - {{name}}",
+            "name": "名称",
+            "description": "描述",
+            "created": "创建时间",
+            "diskUsage": "磁盘使用情况",
+            "console": "控制台",
+            "here": "您在此处",
+            "edit": "编辑",
+            "take": {
+               "label": "生成快照",
+               "tooltip": "保存虚拟机的确切状态，这样就可以稍后还原它。"
+            },
+            "restore": {
+               "label": "还原快照",
+               "tooltip": "将虚拟机还原到选定快照的状态。"
+            },
+            "delete": {
+               "label": "删除快照",
+               "tooltip": "删除选定的快照。"
+            },
+            "deleteAll": {
+               "label": "全部删除",
+               "tooltip": "删除所有快照。"
+            },
+            "edit": {
+               "label": "编辑快照",
+               "tooltip": "编辑选定的快照。"
+            },
+            "refresh": {
+               "label": "刷新",
+               "tooltip": "刷新"
+            },
+            "save": "保存",
+            "cancel": "取消",
+            "close": "关闭"
+         }
+      },
+      "compatibility": {
+         "upgrade": {
+            "label": "升级虚拟机兼容性",
+            "tooltip": "升级虚拟机兼容性",
+            "rejectLabel": "取消",
+            "configure": {
+               "title": "配置虚拟机兼容性",
+               "header": "选择 <em>{{name}}</em> 升级的兼容性。",
+               "label": "将虚拟机硬件升级到所选版本",
+               "message": "{{version}}。",
+               "ok": "升级"
+            },
+            "notifications": {
+               "success": "已成功升级虚拟机 {{name}}",
+               "failure": "无法升级虚拟机 {{name}}。{{reason}}"
+            },
+            "confirm": {
+               "title": "确认虚拟机兼容性升级",
+               "message": "此操作将更改虚拟机的兼容性。此操作不可逆，并会使虚拟机无法与先前版本的 VMware 软件产品兼容。请在继续之前备份虚拟机文件的副本。是否升级兼容性?",
+               "ok": "是",
+               "cancel": "否"
+            }
+         }
+      },
+      "notes": {
+         "dialog": {
+            "title": "编辑备注 - {{name}}。",
+            "titleNoVM": "编辑备注",
+            "ok": "保存",
+            "rejectLabel": "取消"
+         },
+         "title": "编辑 <em>{{name}}</em> 的备注。",
+         "more": "更多",
+         "less": "更少",
+         "edit": "编辑备注",
+         "save": "保存备注",
+         "cancel": "取消"
+      },
+      "summary": {
+         "dialog": {
+            "unknown": {
+               "title": "未知虚拟机",
+               "ok": "确定"
+            }
+         },
+         "screen": {
+            "refresh": "刷新控制台屏幕截图"
+         },
+         "unknown": "未知",
+         "general": {
+            "label": "一般信息",
+            "title": "一般信息",
+            "vmScreen": "单击以打开此虚拟机的浏览器控制台",
+            "vmTemplateScreen": "虚拟机屏幕徽标",
+            "cpu": {
+               "name": "CPU"
+            },
+            "networking": {
+               "name": "网络",
+               "ipAddresses": "IP 地址",
+               "hostName": "主机名称"
+            },
+            "notes": "备注",
+            "vmwareTools": {
+               "name": "VMware Tools",
+               "info": {
+                  "installed": "已安装",
+                  "notInstalled": "未安装",
+                  "guestManaged": "受管客户机",
+                  "version": "版本",
+                  "running": "正在运行"
+               },
+               "actionBar": {
+                  "action": {
+                     "label": "操作",
+                     "tooltip": "对此列表中的选定对象执行的操作"
+                  }
+               }
+            },
+            "storage": {
+               "name": "存储",
+               "disk": "磁盘",
+               "disks": "磁盘",
+               "info": {
+                  "guestDisks": "客户机磁盘",
+                  "noGuestDisks": "客户机磁盘信息不可用",
+                  "diskPath": "磁盘路径",
+                  "capacity": "容量",
+                  "free": "可用"
+               }
+            }
+         },
+         "perf": {
+            "label": "过去 1 小时的性能摘要",
+            "title": "性能摘要，过去 1 小时",
+            "loading": "正在加载...",
+            "noData": "无可用性能数据",
+            "chart": {
+               "xAxis": "时间",
+               "y1Axis": "已消耗的主机 CPU/就绪时间 (%)",
+               "y2Axis": "已消耗的主机内存 (GB)",
+               "cpu": "已消耗的主机 CPU",
+               "ready": "就绪",
+               "rightAxis": "(右轴)",
+               "memory": "已消耗的主机内存"
+            }
+         },
+         "noNetworkInfo": "没有网络信息",
+         "hardware": {
+            "label": "硬件配置",
+            "title": "硬件配置",
+            "cpu": {
+               "cpu": "CPU",
+               "cores": "CPU 内核数",
+               "sockets": "插槽数",
+               "coreSocket": "每个插槽内核数",
+               "memory": "内存"
+            },
+            "disk": {
+               "backing": "备用",
+               "capacity": "容量",
+               "thinProvisioned": "精简置备",
+               "controller": "控制器",
+               "deviceName": "设备 UUID",
+               "compatibility": {
+                  "label": "兼容模式",
+                  "virtualMode": "虚拟",
+                  "physicalMode": "物理"
+               },
+               "mode": {
+                  "label": "模式",
+                  "persistent": "从属",
+                  "independent_nonpersistent": "独立非持久",
+                  "independent_persistent": "独立持久"
+               }
+            },
+            "cdrom": {
+               "backing": "备用",
+               "connected": "已连接",
+               "controller": "控制器"
+            },
+            "serial": {
+               "backing": "备用",
+               "connected": "已连接",
+               "concentrator": "集中器"
+            },
+            "parallel": {
+               "backing": "备用",
+               "connected": "已连接"
+            },
+            "usb": {
+               "controller": "USB 控制器"
+            },
+            "usbDevice": {
+               "label": "USB 设备",
+               "connected": "已连接",
+               "disconnected": "已断开连接"
+            },
+            "sound": {
+               "label": "声卡",
+               "ensoniq1371": "Ensoniq 1371",
+               "soundBlaster16": "Sound Blaster 16"
+            },
+            "floppy": {
+               "connected": "已连接",
+               "notConnected": "未连接"
+            },
+            "video": {
+               "totalMemory":"总显存",
+               "numDisplays":"显示器数量",
+               "3dGraphics":"3D 图形",
+               "3dRenderer":"3D 渲染器",
+               "3dMemory":"3D 显存",
+               "automatic": "自动",
+               "software": "软件",
+               "hardware": "硬件",
+               "enabled": "已启用",
+               "disabled": "已禁用"
+            },
+            "network": {
+               "networkAdapter": "网络适配器",
+               "connected": "已连接",
+               "disconnected": "已断开连接",
+               "network": "网络",
+               "macAddress": "MAC 地址",
+               "passThrough": "直通 (直接路径 I/O)"
+            },
+            "others": {
+               "others": "其他",
+               "additionalHw": "其他硬件",
+               "scsiAdapters": "SCSI 适配器",
+               "nvmeAdapters": "NVMe 适配器",
+               "controllers": "控制器",
+               "inputDevices": "输入设备"
+            }
+         },
+         "resource": {
+            "label": "资源消耗",
+            "title": "资源消耗",
+            "activeGuestMemory": "活动客户机内存",
+            "consumedHostMemory": "已消耗的主机内存",
+            "consumedHostCPU": "已消耗的主机 CPU",
+            "storage": "存储",
+            "uncommitted": "未提交",
+            "provisioned": "已置备",
+            "notShared": "未共享",
+            "used": "已用"
+         },
+         "actionBar": {
+            "console": {
+               "label": "控制台",
+               "tooltip": "打开此虚拟机的控制台"
+            },
+            "monitor": {
+               "label": "监控",
+               "tooltip": "监控此虚拟机"
+            },
+            "powerOn": {
+               "label": "打开电源",
+               "tooltip": "打开此虚拟机的电源"
+            },
+            "powerOff": {
+               "label": "关闭电源",
+               "tooltip": "关闭此虚拟机的电源",
+               "tooltipWarnSuspended": "此虚拟机当前已挂起。关闭其电源可能会导致客户机中的数据丢失",
+               "tooltipWarnPoweredOn": "此虚拟机当前已打开电源。关闭其电源可能会导致客户机中的数据丢失"
+            },
+            "reset": {
+               "label": "重置",
+               "tooltip": "重置此虚拟机",
+               "tooltipWarnSuspended": "此虚拟机当前已挂起。重置该虚拟机可能会导致客户机中的数据丢失",
+               "tooltipWarnPoweredOn": "此虚拟机当前已打开电源。重置该虚拟机可能会导致客户机中的数据丢失"
+            },
+            "shutDown": {
+               "label": "关机",
+               "tooltip": "在此虚拟机的客户机操作系统中执行正常关机"
+            },
+            "suspend": {
+               "label": "挂起",
+               "tooltip": "挂起此虚拟机"
+            },
+            "resume": {
+               "label": "继续运行",
+               "tooltip": "继续运行此虚拟机"
+            },
+            "restart": {
+               "label": "重新启动",
+               "tooltip": "重新启动此虚拟机"
+            },
+            "editSettings": {
+               "label": "编辑",
+               "tooltip": "编辑此虚拟机的设置"
+            },
+            "refresh": {
+               "label": "刷新",
+               "tooltip": "刷新此虚拟机的摘要"
+            },
+            "actions": {
+               "label": "操作",
+               "tooltip": "对此虚拟机执行的操作"
+            }
+         }
+      },
+      "manage": {
+         "title": "{{name}} - 管理"
+      },
+      "monitor": {
+         "tabs": {
+            "performance": {
+               "label": "性能",
+               "tooltip": "性能"
+            },
+            "events": {
+               "label": "事件",
+               "tooltip": "事件"
+            },
+            "tasks": {
+               "label": "任务",
+               "tooltip": "任务"
+            },
+            "logs": {
+               "label": "日志",
+               "tooltip": "日志"
+            },
+            "notifications": {
+               "label": "通知",
+               "tooltip": "通知"
+            }
+         },
+         "title": "{{name}} - 监控",
+         "logs": {
+            "tabTitle": "日志",
+            "tabTooltip": "查看系统日志",
+            "failedToLoad": "无法加载日志 {{log}}",
+            "noLogSelected": "未选定日志",
+            "actionBar": {
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定日志文件执行的操作"
+               },
+               "openInNewWindow": {
+                  "label": "在新窗口中打开",
+                  "tooltip":"在新窗口中打开此日志"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新选定日志文件"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "日志",
+                  "size": "大小"
+               }
+            }
+         },
+         "performance": {
+            "tabTitle": "性能",
+            "tabTooltip": "监控系统性能",
+            "poweredOff": "已关闭虚拟机电源",
+            "grid": {
+               "name": "名称",
+               "unit": "单位",
+               "average": "平均值",
+               "maximum": "最大值",
+               "minimum": "最小值",
+               "latest": "最新值"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新图表"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定虚拟机执行的操作"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "数据可用性",
+                  "message": "为什么仅“过去 1 小时”数据范围可用? ESXi 主机将仅存储过去 1 小时的历史数据。要查看较大范围的数据，需要使用 vCenter Server。"
+               }
+            },
+            "filter": {
+               "type": "筛选器类型",
+               "cpuFilter": "CPU 筛选器",
+               "time": "时间"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "全部",
+                     "hostDropdownTitle": "主机",
+                     "allCoresDropdownTitle": "所有 PCPU",
+                     "allPackagesDropdownTitle": "所有软件包",
+                     "seriesLabel": "PCPU {{core}}",
+                     "packageSeriesLabel": "软件包 {{pkg}}",
+                     "y1AxisLabel": "已消耗的主机 CPU/就绪时间 (%)",
+                     "x1AxisLabel": "时间",
+                     "x2AxisLabel": "时间",
+                     "ready": "就绪"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "内存",
+                     "seriesLabel": "已消耗的主机内存",
+                     "y1AxisLabel": "已消耗的主机内存 (GB)",
+                     "x1AxisLabel": "时间",
+                     "x2AxisLabel": "时间"
+                  }
+               },
+               "disk": {
+                  "usage": {
+                     "dropdownTitle": "磁盘",
+                     "y1AxisLabel": "磁盘读取/写入速率 (MB/s)",
+                     "y2AxisLabel": "延迟 (ms)",
+                     "aggregateSeriesLabel": "磁盘 I/O 速率 (汇总)",
+                     "readRateSeriesLabel": "总读取速率",
+                     "writeRateSeriesLabel": "总写入速率",
+                     "maxLatencySeriesLabel": "最长延迟",
+                     "x1AxisLabel": "时间"
+                  }
+               },
+               "network": {
+                  "usage": {
+                     "dropdownTitle": "网络",
+                     "usageSeriesLabel": "网络总体使用情况",
+                     "transmitSeriesLabel": "总传输速率",
+                     "receiveSeriesLabel": "总接收速率",
+                     "y1AxisLabel": "传输/接收速率 (mbps)",
+                     "y2AxisLabel": "数量",
+                     "xAxisLabel": "时间"
+                  }
+               },
+               "scale": {
+                  "lastHour": "过去 1 小时"
+               }
+            }
+         },
+         "events": {
+            "type": "类型",
+            "time": "时间",
+            "virtualmachine": "虚拟机",
+            "noEvents": "无事件"
+         },
+         "tasks": {
+            "alt": "任务",
+            "key": "键",
+            "noTasks": "无任务",
+            "description": "描述",
+            "host": "此主机",
+            "state": "状况"
+         },
+         "notifications": {
+            "suggested": "建议的操作:",
+            "noNotification": "无通知",
+            "unknownState": {
+               "message": "此虚拟机处于未知状态。",
+               "suggested-action": "重新启动虚拟机的电源，或重新启动 ESXi 主机上的 hostd 代理可能有所帮助。"
+            },
+            "guestOther": {
+               "message": "此虚拟机的客户机操作系统当前设置为“其他”。",
+               "suggested-action": "您应指定正确的客户机操作系统，以允许特定于客户机的优化并允许安装 VMware Tools。"
+            },
+            "guestMismatch": {
+               "message": "此虚拟机配置的客户机操作系统 ({{assigned}}) 与当前运行的客户机 ({{reported}}) 不匹配。",
+               "suggested-action": "您应指定正确的客户机操作系统，以允许进行特定于客户机的优化。"
+            },
+            "VmDiskConsolidationNeeded": {
+               "message": "此虚拟机需要整合其磁盘。",
+               "suggested-action": "您应整合磁盘，以提高性能并优化磁盘利用率。"
+            },
+            "questionPending": {
+               "message": "此虚拟机有未决问题需要回答。",
+               "suggested-action": "回答问题，以完成打开电源的操作。"
+            },
+            "orphanedNetwork": {
+               "message": "此虚拟机附加到的网络端口组 <em>{{name}}</em> 不存在。",
+               "suggested-action": "编辑此虚拟机，并将其附加到另一个网络。"
+            },
+            "toolsNotInstalled": {
+               "message": "此虚拟机上未安装 VMware Tools。",
+               "suggested-action": "VMware Tools 允许显示详细的客户机信息，并允许您在客户机操作系统上执行操作，例如正常关闭、重新引导等。您应安装 VMware Tools。"
+            },
+            "toolsOld": {
+               "message": "此虚拟机中的 VMware Tools 已过时。",
+               "suggested-action": "升级 VMware Tools 可以提供改善的功能和更好的稳定性。"
+            },
+            "ftSecondary": {
+               "message": "此虚拟机充当容错对中的辅助虚拟机。您将无法对此虚拟机执行任何配置。",
+               "suggested-action": ""
+            }
+         }
+      },
+      "operations": {
+         "notifications": {
+            "failedToPowerOn": "无法打开虚拟机 {{name}} 的电源。{{reason}} 单击此处了解更多详细信息。",
+            "failedToPowerOff": "无法关闭虚拟机 {{name}} 的电源。{{reason}}",
+            "failedToRestart": "无法重置虚拟机 {{name}}。{{reason}}",
+            "failedToRename": "无法重命名虚拟机 {{name}}。{{reason}}",
+            "failedToCreate": "无法创建虚拟机 {{name}}。{{reason}}",
+            "failedToDelete": "无法删除虚拟机 {{name}}。{{reason}}",
+            "failedToSaveNotes": "无法保存虚拟机 {{name}} 的备注。{{reason}}",
+            "failedToReconfig": "无法重新配置虚拟机 {{name}}。{{reason}}",
+            "failedToSuspend": "无法挂起虚拟机 {{name}}。{{reason}}"
+         }
+      },
+      "banner": {
+         "guestOS": "客户机操作系统",
+         "compatibility": "兼容性",
+         "vmwaretools": "VMware Tools",
+         "hostName": "主机名称",
+         "cpus": "CPU",
+         "cpuUsage": "CPU 利用率",
+         "memory": "内存",
+         "memoryUsage": "内存使用情况",
+         "diskUsage": "磁盘使用情况",
+         "metrics": {
+            "cpu": "CPU",
+            "memory": "内存",
+            "storage": "存储"
+         }
+      },
+      "edit": {
+         "title": "编辑设置",
+         "titleWithName": "编辑设置 - {{name}}",
+         "rejectLabel": "取消",
+         "tabs": {
+            "hardware": {
+               "label": "虚拟硬件",
+               "tooltip": "虚拟硬件"
+            },
+            "options": {
+               "label": "虚拟机选项",
+               "tooltip": "虚拟机选项"
+            }
+         },
+         "compatibility": "兼容性:",
+         "save": "保存",
+         "notification": {
+            "info": "已成功重新配置虚拟机 {{name}}"
+         },
+         "powerOptions": {
+            "stop": {
+               "hard": "关闭电源",
+               "soft": "关闭客户机",
+               "preset": "系统默认值"
+            },
+            "pause": {
+               "hard": "挂起",
+               "soft": "将客户机置于待机状态",
+               "preset": "系统默认值"
+            },
+            "restart": {
+               "hard": "重置",
+               "soft": "重新启动客户机",
+               "preset": "系统默认值"
+            }
+         }
+      },
+      "create": {
+         "new": {
+            "label": "创建新虚拟机",
+            "description": "此选项将指导您完成创建新虚拟机的过程。您可以自定义处理器、内存、网络连接和存储。创建之后您需要安装客户机操作系统。"
+         },
+         "clone": {
+            "label": "克隆现有虚拟机",
+            "description": "创建现有虚拟机的克隆"
+         },
+         "ovf": {
+            "label": "从 OVF 或 OVA 文件部署虚拟机",
+            "description": "此选项将引导您完成从 OVF 和 VMDK 文件创建虚拟机的过程。"
+         },
+         "register": {
+            "label": "注册现有虚拟机",
+            "description": "此选项可指导您注册数据存储上已存在的虚拟机"
+         }
+      },
+      "deleteVMConfirmation": "是否确定要删除以下虚拟机?",
+      "state": {
+         "poweredOn": "已打开电源",
+         "poweredOff": "已关闭电源",
+         "suspended": "已挂起",
+         "undefined": "未知"
+      },
+      "tools": {
+         "state": {
+            "toolsOk": "已安装且正在运行",
+            "toolsNotRunning": "已安装但尚未运行",
+            "toolsNotInstalled": "未安装",
+            "toolsOld": "Tools 已过时 - 您应在此客户机中升级 Tools"
+         },
+         "installed": {
+            "true": "是",
+            "false": "否"
+         },
+         "running": {
+            "guestToolsRunning": "是",
+            "guestToolsNotRunning": "否"
+         }
+      },
+      "hardwareVersion": {
+         "vmx-02": {
+            "label":"ESX 2.0.2 及更高版本 (虚拟机版本 2)",
+            "desc": ""
+         },
+         "vmx-03": {
+            "label":"ESX 2.x 及更高版本 (虚拟机版本 3)",
+            "desc": ""
+         },
+         "vmx-04": {
+            "label":"ESX/ESXi 3.5 及更高版本 (虚拟机版本 4)",
+            "desc": "此虚拟机使用硬件版本 4，还与 ESXi 4.x、ESXi 5.0、ESXi 5.1 和 ESXi 5.5 兼容。某些虚拟机硬件功能在使用此选项时不可用。"
+         },
+         "vmx-06": {
+            "label":"Workstation 6 (虚拟机版本 6)",
+            "desc": ""
+         },
+         "vmx-07": {
+            "label":"ESX/ESXi 4.0 及更高版本 (虚拟机版本 7)",
+            "desc": "此虚拟机使用硬件版本 7，还与 ESXi 5.0、ESXi 5.1、ESXi 5.5 和 ESXi 6.0 兼容。某些虚拟机硬件功能在使用此选项时不可用。"
+         },
+         "vmx-08": {
+            "label":"ESXi 5.0 及更高版本 (虚拟机版本 8)",
+            "desc": "此虚拟机使用硬件版本 8，还与 ESXi 5.1、ESXi 5.5 和 ESXi 6.0 兼容。某些虚拟机硬件功能在使用此选项时不可用。"
+         },
+         "vmx-09": {
+            "label":"ESXi 5.1 及更高版本 (虚拟机版本 9)",
+            "desc": "此虚拟机使用硬件版本 9，还与 ESXi 5.5 和 ESXi 6.0 兼容。"
+         },
+         "vmx-10": {
+            "label":"ESXi 5.5 及更高版本 (虚拟机版本 10)",
+            "desc": "此虚拟机使用硬件版本 10，还与 ESXi 6.0 兼容。"
+         },
+         "vmx-11": {
+            "label":"ESXi 6.0 及更高版本 (虚拟机版本 11)",
+            "desc": "此虚拟机使用硬件版本 11，提供最佳性能和 ESXi 6.0 中最新的可用功能。"
+         },
+         "vmx-12": {
+            "label":"Workstation 12 (虚拟机版本 12)",
+            "desc": "此虚拟机使用硬件版本 12，提供了最佳性能和 Workstation 12 中可用的最新功能。"
+         },
+         "vmx-13": {
+            "label":"ESXi 6.5 及更高版本 (虚拟机版本 13)",
+            "desc": "此虚拟机使用硬件版本 13，提供最佳性能和 ESXi 6.5 中最新的可用功能。"
+         },
+         "vmx-14": {
+            "label":"ESXi 6.x 及更高版本 (虚拟机版本 14)",
+            "desc": "此虚拟机使用硬件版本 14，可提供最佳性能以及 ESXi 6.x 中的最新功能。"
+         }
+      },
+      "wizard": {
+         "title": "新建虚拟机",
+         "registerTitle": "注册虚拟机",
+         "cloneTitle": "克隆虚拟机",
+         "compatibility": "兼容性",
+         "creationType": {
+            "title": "选择创建类型",
+            "description": "您要如何创建虚拟机?",
+            "select": "选择创建类型",
+            "warnNestedESXi": "VMware 不支持在生产环境中运行嵌套的 ESXi Server/ESX Server。请参见<a href=\"{{kbURL}}\" target=\"_blank\">此</a>知识库文章，了解更多详细信息。"
+         },
+         "basics": {
+            "title": "选择名称和客户机操作系统",
+            "description": "指定唯一名称和操作系统",
+            "name": {
+               "label": "为该虚拟机输入名称。",
+               "placeholder": "名称",
+               "desc": "虚拟机名称最多可包含 80 个字符，且名称在每个 ESXi 实例中必须是唯一的。"
+            },
+            "desc": "在此处标识客户机操作系统可让向导为操作系统的安装提供适当的默认值。",
+            "compatibility": "兼容性",
+            "selectOSFamily": "选择客户机操作系统系列",
+            "guestOSFamily": "客户机操作系统系列",
+            "selectOSVersion": "选择客户机操作系统版本",
+            "guestOSVersion": "客户机操作系统版本",
+            "osVersion": {
+               "windowsGuest": "Windows",
+               "linuxGuest": "Linux",
+               "darwinGuestFamily": "Mac OS",
+               "solarisGuest": "Solaris",
+               "netwareGuest": "Novel Netware",
+               "otherGuestFamily": "其他"
+            },
+            "validation": {
+               "emptyName": "请提供虚拟机名称。",
+               "invalidName": "虚拟机名称不能包含双引号、冒号或斜线字符",
+               "nameSize": "虚拟机名称应介于 {{min}} 和 {{max}} 个字符之间。当前长度为 {{length}}。请修改名称。",
+               "guestOSFamily": "选择客户机操作系统系列。",
+               "guestOSVersion": "选择客户机操作系统版本。",
+               "existingName": "此主机中存在同名的虚拟机或模板。请输入一个新名称。"
+            }
+         },
+         "storage": {
+            "title": "选择存储",
+            "description": "选择要存储配置和磁盘文件的数据存储。",
+            "desc": "可从您选择的目标资源中访问以下数据存储。为虚拟机配置文件和所有虚拟磁盘选择目标数据存储。",
+            "policy": {
+               "default": "数据存储默认值",
+               "vvol": "VVol 无要求策略",
+               "vsan": "Virtual SAN 默认存储策略"
+            },
+            "grid": {
+               "name": "名称",
+               "capacity": "容量",
+               "free": "可用",
+               "type": "类型",
+               "thinProvisioning": "精简置备",
+               "access": "访问"
+            },
+            "validation": {
+               "datastore": "选择要在其中存储虚拟机文件的数据存储。"
+            },
+            "status": {
+               "ova": "正在提取 OVA，这可能需要一些时间...",
+               "ovf": "正在读取 OVF 数据...",
+               "ovfHasCompressedDisks": "尝试部署的虚拟机包含压缩磁盘映像。Host Client 当前无法部署包含压缩磁盘映像的虚拟机。请考虑使用 OVF Tool 或 vCenter Server 部署此虚拟机。"
+            }
+         },
+         "hardware": {
+            "title": "自定义设置",
+            "description": "配置虚拟机硬件和虚拟机附加选项",
+            "tabs": {
+               "virtualhardware": {
+                  "label": "虚拟硬件",
+                  "tooltip": "虚拟硬件"
+               },
+               "vmoptions": {
+                  "label": "虚拟机选项",
+                  "tooltip": "虚拟机选项"
+               }
+            },
+            "virtualhardware": {
+               "managedVC": "由于此主机的资源由 vCenter Server 管理，因此一些配置选项已禁用。如果您希望更改此虚拟机的资源设置，请通过 vCenter Server 来执行。",
+               "signpost": "虚拟机可用的虚拟 CPU 取决于主机上许可的 CPU 的数量和客户机操作系统支持的 CPU 的数量。要使用 VMware 多核虚拟 CPU 功能，必须符合客户机操作系统 EULA 的要求。",
+               "virtualizationSignpost": "通过向客户机操作系统公开底层处理器的硬件辅助的虚拟化功能，启用完全 CPU 虚拟化。",
+               "schedulingAffinitySignPost": "<p>为此虚拟机选择逻辑处理器关联性。</p><p>使用“-”表示范围，使用“,”来分隔值。例如，“0, 2, 4-7”表示处理器 0、2、4、5、6 和 7。</p><p>清除字符串可移除关联性设置。</p>",
+               "cpuMMUSignPost": "<p>ESXi 可以根据处理器类型和虚拟机自动确定虚拟机是否应使用硬件支持进行虚拟化。但是，对于某些工作负载，覆盖自动选择可提供更好的性能。</p><p>注意: 如果选定的设置不受主机支持，或者与现有的虚拟机设置发生冲突，则该设置将被忽略，并使用“自动”选项。</p>",
+               "cpu": {
+                  "label": "CPU",
+                  "cores": {
+                     "label": "每个插槽内核数",
+                     "desc": "插槽数:"
+                  },
+                  "hotPlug": {
+                     "label": "CPU 热插拔",
+                     "desc": "启用 CPU 热添加"
+                  },
+                  "reservation": {
+                     "label": "预留",
+                     "unit": "预留单位"
+                  },
+                  "limit": {
+                     "label": "限制",
+                     "unit": "限制单位"
+                  },
+                  "shares": {
+                     "label": "份额",
+                     "unit": "份额单位",
+                     "low": "低",
+                     "normal": "正常",
+                     "high": "高",
+                     "custom": "自定义"
+                  },
+                  "hardwareVirtualization": {
+                     "label": "硬件虚拟化",
+                     "desc": "向客户机操作系统公开硬件辅助的虚拟化"
+                  },
+                  "performanceCounters": {
+                     "label": "性能计数器",
+                     "desc": "启用虚拟化 CPU 性能计数器"
+                  },
+                  "schedulingAffinity": {
+                     "label": "调度关联性",
+                     "value": "调度关联性值",
+                     "hyper": "超线程状态:",
+                     "available": "可用 CPU 数量:",
+                     "logical": "(逻辑 CPU)"
+                  },
+                  "cpuMmuVirtualization": {
+                     "label": "CPU/MMU 虚拟化",
+                     "auto": "自动",
+                     "software": "软件 CPU 和 MMU",
+                     "hardwareCPU": "硬件 CPU，软件 MMU",
+                     "hardwareBoth": "硬件 CPU 和 MMU"
+                  },
+                  "validation": {
+                     "invalidReservation": "CPU 预留值无效。",
+                     "badReservation": "CPU 预留必须介于 0 MHz 和 {{maxMhz}} MHz 之间。",
+                     "NaNReservation": "CPU 预留必须是一个数字",
+                     "negativeReservation": "CPU 预留不能为负值",
+                     "nonIntegerReservation": "CPU 预留必须是整数值",
+                     "NaNLimit": "CPU 限制必须是一个数字",
+                     "negativeLimit": "CPU 限制不能为负值",
+                     "invalidLimit": "CPU 限制必须大于或等于预留。",
+                     "invalidShares": "CPU 份额值无效。",
+                     "invalidAffinity": "CPU 关联性值无效。"
+                  }
+               },
+               "memory": {
+                  "label": "内存",
+                  "unit": "内存单位",
+                  "ram": {
+                     "label" :"RAM",
+                     "unit": "RAM 单位"
+                  },
+                  "reservation": {
+                     "label": "预留",
+                     "unit": "预留单位",
+                     "desc": "预留所有客户机内存 (全部锁定)",
+                     "validation" : {
+                        "emptyValue" : "内存预留不应为空",
+                        "NaN" : "内存预留只接受数值",
+                        "negativeValue" : "内存预留不接受负值 {{value}}",
+                        "floatValue" : "内存预留只能是整数值"
+                     }
+                  },
+                  "limit": {
+                     "label": "限制",
+                     "unit": "限制单位",
+                     "validation" : {
+                        "emptyValue" : "内存限制不应为空",
+                        "NaN" : "内存限制只接受数值",
+                        "negativeValue" : "内存限制不接受负值 {{value}}",
+                        "limitLow" : "内存限制必须大于或等于预留。",
+                        "floatValue" : "内存限制只能是整数值"
+                     }
+                  },
+                  "shares": {
+                     "label": "份额",
+                     "unit": "份额单位"
+                  },
+                  "hotPlug": {
+                     "label": "内存热插拔",
+                     "desc": "已启用"
+                  },
+                  "validation": {
+                     "invalidRAM": "RAM 值无效。",
+                     "badRAM": "内存值必须是 4 的倍数。",
+                     "lowCapacity": "请输入大于原始值的内存值。",
+                     "highRAM": "指定的内存大于主机中可用的量。内存过量分配会影响虚拟机性能。",
+                     "lowRAM": "此客户机的建议最小内存为 {{min}}。内存过小可能会导致不稳定或无法引导。",
+                     "maxRAM": "内存必须小于或等于 {{max}}。",
+                     "invalidReservation": "内存预留值无效。",
+                     "reservationHigh": "内存预留必须小于或等于 {{max}}。输入的数值 ({{value}}) 太大。",
+                     "invalidLimit": "内存限制无效",
+                     "limitLow": "内存限制必须大于或等于预留。",
+                     "invalidShares": "内存份额值无效。"
+                  }
+               },
+               "sound": {
+                  "VirtualHdAudioCard": "HD 音频",
+                  "VirtualSoundBlaster16": "Sound Blaster 16",
+                  "VirtualEnsoniq1371": "Ensoniq 1371",
+                  "type": "类型",
+                  "title": "声卡"
+               },
+               "video":{
+                  "label": "显卡",
+                  "settings": {
+                     "custom": "指定自定义设置",
+                     "auto": "自动检测设置"
+                  },
+                  "display": "显示器数量",
+                  "memory": {
+                     "label" :"总显存",
+                     "unit": "MB",
+                     "calculator":"显存计算器",
+                     "dialog": {
+                        "title": "显存计算器",
+                        "desc": "根据客户机需要支持的最大显示器数和最高分辨率，计算所需显存。",
+                        "display": "显示器数量:",
+                        "resolution": "屏幕分辨率:",
+                        "total": "总显存:",
+                        "ok": "确定",
+                        "cancel": "取消"
+                     }
+                  },
+                  "3d": {
+                     "graphics": {
+                        "label":"3D 图形",
+                        "desc": "启用 3D 支持"
+                     },
+                     "renderer": {
+                        "label": "3D 渲染器",
+                        "automatic": "自动",
+                        "software": "软件",
+                        "hardware": "硬件"
+                     },
+                     "memory":{
+                        "label": "3D 显存",
+                        "unit": "MB"
+                     }
+                  }
+               },
+               "hd": {
+                  "title": "硬盘 {{size}}",
+                  "label": "硬盘",
+                  "size": "硬盘大小",
+                  "new": "新硬盘",
+                  "unit": "硬盘单位",
+                  "delete": "从数据存储删除文件",
+                  "device": "设备路径",
+                  "maximumsize": "大小上限",
+                  "location": "位置",
+                  "selectDirectory": "选择目录",
+                  "browse": "浏览...",
+                  "diskProvisioning": "磁盘置备",
+                  "thin": "精简置备",
+                  "thick": "厚置备，延迟置零",
+                  "eager": "厚置备，置零",
+                  "type": "类型",
+                  "diskFile": "磁盘文件",
+                  "shares": {
+                     "label": "份额",
+                     "type": "份额类型",
+                     "value": "份额值",
+                     "unit": "份额单位"
+                  },
+                  "limitIOP": "限制 - IOPs",
+                  "virtualFlash": {
+                     "label": "虚拟闪存读取缓存",
+                     "unit": "虚拟闪存读取缓存单位"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "虚拟设备节点",
+                     "unit": "虚拟设备节点单位"
+                  },
+                  "diskCompatibility": {
+                    "label": "磁盘兼容性",
+                    "physical": "物理",
+                    "virtual": "虚拟"
+                  },
+                  "diskSharing": {
+                     "label": "共享",
+                     "sharingMultiWriter": "多写入器共享",
+                     "sharingNone": "无",
+                     "info": "只有厚置备置零磁盘可以进行磁盘共享。"
+                  },
+                  "diskMode": {
+                     "label": "磁盘模式",
+                     "dependent": "从属",
+                     "independentPersistent": "独立 - 持久",
+                     "independentNonpersistent" :"独立 - 非持久"
+                  },
+                  "provisioning": {
+                     "thin": "精简置备",
+                     "thickEager": "厚置备，置零",
+                     "thickLazy": "厚置备，延迟置零"
+                  },
+                  "menu": {
+                     "new": {
+                        "label": "新硬盘",
+                        "tooltip": "将新硬盘添加到虚拟机"
+                     },
+                     "existing": {
+                        "label": "现有硬盘",
+                        "tooltip": "将现有硬盘添加到虚拟机"
+                     },
+                     "rdm": {
+                        "label": "添加新的 RDM",
+                        "tooltip": "将 RDM 添加到虚拟机"
+                     }
+                  },
+                  "validation": {
+                     "numDisks": "此虚拟机配置仅支持 {{size}} 硬盘。",
+                     "missingDatastore": "未找到 {{disk}} 的数据存储。除非修改其配置，否则将忽略此磁盘。",
+                     "invalidHD": "磁盘大小值无效。",
+                     "lowCapacity": "请输入大于原始容量的磁盘大小。",
+                     "highCapacity": "指定的磁盘大小大于数据存储中的可用容量。磁盘空间过量分配会消耗数据存储中的所有空间并阻止虚拟机运行。应先增加数据存储的容量或减小磁盘大小，然后再继续。",
+                     "highCapacityThick": "指定的磁盘大小大于数据存储中的可用容量。使用厚置备磁盘时不能过量分配磁盘空间。必须先增加数据存储的容量或减小磁盘大小，然后再继续。",
+                     "invalidController": "请为磁盘选择有效的控制器",
+                     "invalidShares": "磁盘份额值无效。",
+                     "limitIOPsEmpty" : "磁盘限制 IOPs 不能为空",
+                     "limitIOPsNaN" : "磁盘限制 IOPs 无效",
+                     "limitIOPsNegative" : "磁盘限制 IOPs 不能为负值",
+                     "limitIOPsNonInteger" : "磁盘限制 IOPs 只接受整数值",
+                     "invalidReadCache": "读取缓存值无效。",
+                     "badReservation": "预留必须介于 {{min}} 和 {{max}} 之间。输入 0 可禁用虚拟 Flash Read Cache。",
+                     "noAvailableLocation": "选定控制器上无可用位置。请选择其他控制器。",
+                     "locationInUse": "此位置正由其他设备使用，请选择下一个可用位置。"
+                  }
+               },
+               "pci": {
+                  "title": "PCI 设备 {{size}}",
+                  "new": "新 PCI 设备",
+                  "physical": {
+                     "label": "物理 PCI/PCIe 设备",
+                     "warning": "在虚拟机的内存预留等于其内存大小之前，将不会打开虚拟机电源。",
+                     "button": "预留所有内存",
+                     "note": "存在 PCI/PCIe 直通设备时，部分虚拟机操作将不可用。您无法挂起、通过 vMotion 进行迁移或者生成或还原此类虚拟机的快照。"
+                  }
+               },
+               "ide": {
+                  "label": "IDE 控制器 {{index}}",
+                  "master": "主要",
+                  "slave": "从属"
+               },
+               "scsi": {
+                  "title": "SCSI 控制器 {{size}}",
+                  "new": "新的 SCSI 控制器",
+                  "type": "SCSI 类型",
+                  "label": "SCSI 控制器 {{index}}",
+                  "busSharing": {
+                     "label": "SCSI 总线共享",
+                     "none": "无",
+                     "virtual": "虚拟",
+                     "physical": "物理"
+                  },
+                  "validation": {
+                     "diskAttached": "硬盘仍连接到此控制器，请先进行重新分配。",
+                     "maxControllersReached": "已达到 SCSI 控制器的最大数目 ({{max}})。"
+                  }
+               },
+               "nvme": {
+                  "title": "NVMe 控制器 {{size}}",
+                  "new": "新的 NVMe 控制器",
+                  "label": "NVMe 控制器 {{index}}",
+                  "validation": {
+                     "diskAttached": "硬盘仍连接到此控制器，请先进行重新分配。",
+                     "maxControllersReached": "已达到 NVMe 控制器的最大数目 ({{max}})。"
+                  }
+               },
+               "sata": {
+                  "title": "SATA 控制器 {{size}}",
+                  "new": "新的 SATA 控制器",
+                  "label": "SATA 控制器 {{index}}",
+                  "validation": {
+                     "diskAttached": "硬盘仍连接到此控制器，请先进行重新分配。",
+                     "cdromAttached": "CD/DVD 驱动器仍连接到此控制器，请先进行重新分配。",
+                     "maxControllersReached": "已达到 SATA 控制器的最大数目 ({{max}})。"
+                  }
+               },
+               "usbController": {
+                  "title": "USB 控制器 {{size}}",
+                  "new": "新的 USB 控制器",
+                  "settings": "设置",
+                  "warnUnsupported": "此客户机操作系统不支持选定的 USB 控制器",
+                  "validation": {
+                     "numUSBs": "此虚拟机配置仅支持 {{size}} USB 设备。",
+                     "maxUSB2Devices": "此虚拟机配置仅支持 {{max}} USB 2.0 设备。",
+                     "maxUSB3Devices": "此虚拟机配置仅支持 {{max}} USB 3.0 设备。"
+                  }
+               },
+               "usbDevice": {
+                  "title": "USB 设备 {{size}}",
+                  "new": "新的 USB 设备",
+                  "deviceNotFound": "未找到设备",
+                  "connect": "连接",
+                  "validation": {
+                     "duplicateUsb": "不能多次添加一个 USB 设备。",
+                     "tooMany": "没有其他可添加的 USB 设备",
+                     "maxDevices": "USB 设备最大数量为 20"
+                  }
+               },
+               "serialPort": {
+                  "title": "串行端口 {{size}}",
+                  "new": "新的串行端口",
+                  "status": "状态",
+                  "connect": "连接",
+                  "connectAt": "打开电源时连接",
+                  "connection": "连接",
+                  "physicalType": "物理串行端口类型",
+                  "browse": "浏览...",
+                  "pipeName": "管道名称",
+                  "portURI": {
+                     "label": "端口 URI:",
+                     "desc": "使用虚拟串行端口集中器"
+                  },
+                  "vSPCURI": "vSPC URI:",
+                  "deviceType": {
+                     "file": "使用输出文件",
+                     "physical": "使用物理串行端口",
+                     "pipe": "使用命名管道",
+                     "network": "使用网络",
+                     "thinprint": "Thinprint"
+                  },
+                  "nearEnd": {
+                     "label": "近端",
+                     "client": "客户端",
+                     "server": "服务器"
+                  },
+                  "farEnd": {
+                     "label": "远端",
+                     "vm": "虚拟机",
+                     "process": "进程"
+                  },
+                  "direction": {
+                     "label": "方向",
+                     "client": "客户端",
+                     "server": "服务器"
+                  },
+                  "validation": {
+                     "missingOutputFile": "请输入串行端口的输出文件的名称。",
+                     "invalidOutputFile": "请提供有效的输出文件格式。",
+                     "invalidPipeName": "请提供有效的管道文件名称。",
+                     "invalidPortUri": "请提供有效的端口 URI，格式为 &lt;protocol&gt;://&lt;ip 或 hostname&gt;:&lt;port&gt;。",
+                     "invalidVSPC": "请提供有效的虚拟串行端口集中器，格式为 &lt;protocol&gt;://&lt;ip 或 hostname&gt;:&lt;port&gt;。"
+                  }
+               },
+               "parallelPort": {
+                  "title": "并行端口 {{size}}",
+                  "new": "新的并行端口",
+                  "status": "状态",
+                  "connect": "连接",
+                  "connectAt": "打开电源时连接",
+                  "connection": "连接",
+                  "browse": "浏览...",
+                  "deviceType": {
+                     "file": "使用输出文件"
+                  },
+                  "validation": {
+                     "invalidOutputFile": "输出文件格式无效。",
+                     "missingOutputFile": "请输入并行端口的输出文件的名称"
+                  }
+               },
+               "network": {
+                  "title": "网络适配器 {{size}}",
+                  "new": "新的网络适配器",
+                  "status": "状态",
+                  "connect": "连接",
+                  "connectAt": "打开电源时连接",
+                  "adapterType": "适配器类型",
+                  "physicalFunction": "物理功能",
+                  "virtualFunction": "虚拟功能",
+                  "sriovPassthrough": "SR-IOV 直通",
+                  "sriovMemReserved": "内存预留",
+                  "passthroughAllMemReserved": "要启用 PCI 直通或 SR-IOV，将预留虚拟机的内存。",
+                  "vmxnet2Enhanced": "VMXNET 2 (增强型)",
+                  "guestOSMTUChange": {
+                     "label": "客户机操作系统 MTU 更改",
+                     "allow": "允许",
+                     "disallow": "禁止"
+                  },
+                  "macAddress": "MAC 地址",
+                  "macAddressType": {
+                     "label": "MAC 地址类型",
+                     "auto": "自动",
+                     "assigned": "已分配",
+                     "manual": "手动"
+                  },
+                  "validation": {
+                     "missingMACAddress": "MAC 地址必填",
+                     "invalidMACAddress": "MAC 地址无效",
+                     "missingPortgroup": "找不到网络适配器 {{index}} 的端口组 {{missing}}。它已分配给 {{assigned}}。",
+                     "cantAssign": "不支持添加或重新配置连接到非临时分布式虚拟端口组 ({{name}}) 的网络适配器。"
+                  }
+               },
+               "floppy": {
+                  "title": "软盘驱动器 {{size}}",
+                  "new": "新软盘驱动器",
+                  "status": "状态",
+                  "connect": "连接",
+                  "connectAt": "打开电源时连接",
+                  "browse": "浏览...",
+                  "unsupportedLabel": "不受支持",
+                  "unsupported": "使用 VMware Host Client 时不支持客户端软盘设备。如果要使用客户端设备，请使用 vSphere Web Client。\n\n将忽略此设备。",
+                  "media": {
+                     "label": "软盘介质",
+                     "desc": "要进行连接，请打开虚拟机电源，然后从“摘要”选项卡的“虚拟机硬件”面板中选择介质。"
+                  },
+                  "deviceType": {
+                     "client": "客户端设备",
+                     "floppy": "使用现有软盘映像"
+                  },
+                  "validation": {
+                     "numFloppy": "此虚拟机配置仅支持 {{size}} 软盘驱动器。",
+                     "missingImage": "请选择软盘驱动器的映像"
+                  }
+               },
+               "cdrom": {
+                  "title": "CD/DVD 驱动器 {{size}}",
+                  "new": "新的 CD/DVD 驱动器",
+                  "status": "状态",
+                  "connect": "连接",
+                  "connectAt": "打开电源时连接",
+                  "browse": "浏览...",
+                  "type": "类型",
+                  "atapiDevice": "主机设备",
+                  "unsupportedLabel": "不受支持",
+                  "unsupported": "使用 VMware Host Client 时不支持客户端 CD/DVD 设备。如果要使用客户端设备，请使用 vSphere Web Client。\n\n将忽略此设备。",
+                  "media": {
+                     "label": "CD/DVD 介质",
+                     "desc": "要进行连接，请打开虚拟机电源，然后从“摘要”选项卡的“虚拟机硬件”面板中选择介质。"
+                  },
+                  "deviceType": {
+                     "client": "客户端设备",
+                     "host": "主机设备",
+                     "iso": "数据存储 ISO 文件"
+                  },
+                  "deviceMode": {
+                     "label": "设备模式",
+                     "controller": "设备模式控制器",
+                     "location": "设备模式位置",
+                     "emulate": "模拟 CD-ROM",
+                     "passthrough": "直通 CD-ROM"
+                  },
+                  "deviceNode": {
+                     "sata": "SATA 控制器"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "虚拟设备节点",
+                     "location": "控制器位置",
+                     "controller": "控制器类型"
+                  },
+                  "validation": {
+                     "missingISO": "请选择 CDROM 的 ISO 映像",
+                     "missingDevice": "主机 CD/DVD 设备不可用，请选择其他 CD/DVD 备用设备 (例如，数据存储 ISO) 或移除 CD/DVD 驱动器",
+                     "invalidController": "请为 CD/DVD 选择有效的控制器",
+                     "noAvailableLocation": "选定控制器上无可用位置。请选择其他控制器。",
+                     "locationInUse": "此位置正由其他设备使用，请选择下一个可用位置。"
+                  }
+               },
+               "actionBar": {
+                  "addHD": {
+                     "label": "添加硬盘",
+                     "tooltip": "将硬盘添加到虚拟机"
+                  },
+                  "addNetwork": {
+                     "label": "添加网络适配器",
+                     "tooltip": "将网络适配器添加到虚拟机"
+                  },
+                  "newHD": {
+                     "label": "新硬盘",
+                     "tooltip": "将新硬盘添加到虚拟机"
+                  },
+                  "existingHD": {
+                     "label": "现有硬盘",
+                     "tooltip": "将现有硬盘添加到虚拟机"
+                  },
+                  "rdm": {
+                     "label": "添加新 RDM 磁盘",
+                     "tooltip": "将新的裸设备映射磁盘添加到虚拟机"
+                  },
+                  "network": {
+                     "label": "网络适配器",
+                     "tooltip": "添加新的网络适配器"
+                  },
+                  "cdrom": {
+                     "label": "CD/DVD 驱动器",
+                     "tooltip": "添加新的 CD/DVD 驱动器"
+                  },
+                  "floppy": {
+                     "label": "软盘驱动器",
+                     "tooltip": "添加新的软盘驱动器"
+                  },
+                  "serial": {
+                     "label": "串行端口",
+                     "tooltip": "添加新的串行端口"
+                  },
+                  "parallel": {
+                     "label": "并行端口",
+                     "tooltip": "添加新的并行端口"
+                  },
+                  "usb": {
+                     "label": "USB 控制器",
+                     "tooltip": "添加新的 USB 控制器"
+                  },
+                  "usbDevice": {
+                     "label": "USB 设备",
+                     "tooltip": "添加新的 USB 设备"
+                  },
+                  "scsi": {
+                     "label": "SCSI 控制器",
+                     "tooltip": "添加新的 SCSI 控制器"
+                  },
+                  "pci": {
+                     "label": "PCI 设备",
+                     "tooltip": "添加新的 PCI 设备"
+                  },
+                  "sata": {
+                     "label": "SATA 控制器",
+                     "tooltip": "添加新的 SATA 控制器"
+                  },
+                  "nvme": {
+                     "label": "NVMe 控制器",
+                     "tooltip": "添加新的 NVMe 控制器"
+                  },
+                  "sound": {
+                     "label": "声音控制器",
+                     "tooltip": "添加声音控制器"
+                  },
+                  "other": {
+                     "label": "添加其他设备",
+                     "tooltip": "将其他硬件添加到此虚拟机"
+                  }
+               }
+            },
+            "hdlocation": {
+               "title": "可从您选择的目标资源中访问以下数据存储。为虚拟机配置文件和所有虚拟磁盘选择目标数据存储。",
+               "storagePolicy": {
+                  "default": "数据存储默认值",
+                  "vvol": "VVol 无要求策略",
+                  "vsan": "Virtual SAN 默认存储策略"
+               },
+               "grid": {
+                  "name": "名称",
+                  "capacity": "容量",
+                  "freeSpace": "可用",
+                  "type": "类型",
+                  "thinProvisioning": "精简置备",
+                  "access": "访问"
+               },
+               "dialog": {
+                  "ok": "确定",
+                  "select": "选择数据存储"
+               }
+            },
+            "vmoptions": {
+               "general": {
+                  "title": "常规选项",
+                  "vmname": "虚拟机名称:",
+                  "vmconfigfile": "虚拟机配置文件",
+                  "vmworkinglocation": "虚拟机工作位置",
+                  "guestOS": "客户机操作系统",
+                  "guestOSVersion": "客户机操作系统版本",
+                  "remoteConsole": "VMware Remote Console 选项",
+                  "guestOSLock": {
+                     "label": "客户机操作系统锁定",
+                     "desc": "最后一个远程用户断开连接后，锁定客户机操作系统"
+                  },
+                  "maxNumSessions": {
+                     "label": "会话数上限",
+                     "desc": "限制与此虚拟机的同时连接数",
+                     "validation" : {
+                        "invalid" : "请指定最大控制台会话数的有效数值。允许的最大数值为 {{num}}。"
+                     }
+                  },
+                  "vmwareTools": {
+                     "label": "VMware Tools",
+                     "desc": "展开以查看 VMware Tools 设置"
+                  },
+                  "powerOperations": {
+                     "label": "电源操作",
+                     "stop": "停止",
+                     "pause": "暂停",
+                     "restart": "重新启动",
+                     "desc": "打开虚拟机电源/恢复虚拟机"
+                  },
+                  "vmwareToolsScript": {
+                     "label": "运行 VMware Tools 脚本",
+                     "afterPoweringOn": "打开电源后",
+                     "afterResuming": "恢复后",
+                     "beforeSuspending": "挂起前",
+                     "beforeShuttingDown": "关闭客户机前"
+                  },
+                  "toolsUpgrades": {
+                     "label": "Tools 升级",
+                     "desc": "每次打开电源前检查并升级 VMware Tools"
+                  },
+                  "time": {
+                     "label": "时间",
+                     "desc": "同步客户机时间与主机时间"
+                  },
+                  "powerManagement": {
+                     "label": "电源管理",
+                     "desc": "展开以查看电源管理设置",
+                     "standbyResponse": {
+                        "label": "待机响应",
+                        "desc": "当客户机操作系统进入待机时，虚拟机应如何响应?",
+                        "suspend": "挂起虚拟机。",
+                        "standby": "将客户机操作系统置于待机模式，并使虚拟机的电源保持打开状态。"
+                     },
+                     "wakeOnLan": {
+                        "label": "LAN 唤醒",
+                        "desc": "为以下虚拟机流量启用 LAN 唤醒:",
+                        "network": "新网络 (虚拟机网络)"
+                     }
+                  },
+                  "bootOptions": {
+                     "label": "引导选项",
+                     "desc": "展开以查看引导选项",
+                     "firmware": {
+                        "label": "固件",
+                        "desc": "选择应当用来引导虚拟机的固件:"
+                     },
+                     "enableUEFISecureBoot": {
+                        "label": "启用 UEFI 安全引导",
+                        "desc": "是否为此虚拟机启用 UEFI 安全引导"
+                     },
+                     "bootDelay": {
+                        "label": "引导延迟",
+                        "desc": "打开虚拟机电源或重置虚拟机时，引导将延迟",
+                        "ms": "毫秒"
+                     },
+                     "forceBiosSetup": {
+                        "label": "强制执行 BIOS 设置",
+                        "desc": "虚拟机下次引导时，强制进入 BIOS 设置画面。"
+                     },
+                     "failedBootRecovery": {
+                        "label": "引导失败后恢复",
+                        "desc": "虚拟机找不到引导设备时，在以下时间后自动重试引导",
+                        "sec": "秒"
+                     }
+                  },
+                  "advanced": {
+                     "label": "高级",
+                     "settings": {
+                        "label": "设置",
+                        "desc": "展开以查看高级设置",
+                        "acceleration": "禁用加速",
+                        "logging": "启用日志记录"
+                     },
+                     "debuggingStats": {
+                        "label": "调试和统计信息",
+                        "release": "正常运行",
+                        "debug": "记录调试信息",
+                        "stats": "记录统计信息"
+                     },
+                     "swapFileLocation": {
+                        "label": "交换文件位置",
+                        "default": {
+                           "label": "默认",
+                           "desc": "使用包含虚拟机的群集或主机的设置。"
+                        },
+                        "vmDirectory": {
+                           "label": "虚拟机目录",
+                           "desc": "将交换文件与虚拟机存储在同一目录中。"
+                        },
+                        "datastore": {
+                           "label": "由主机指定的数据存储",
+                           "desc": "将交换文件存储在由其所用主机指定的数据存储中。如果无法存储，将交换文件与虚拟机存储在同一目录中。在执行 vMotion 期间，使用两个主机均无法识别的数据存储可能会影响受影响虚拟机的 vMotion 性能。"
+                        }
+                     },
+                     "configParams": {
+                        "label": "配置参数",
+                        "ok": "编辑配置...",
+                        "tooltip": "编辑虚拟机配置参数",
+                        "dialog": {
+                           "title": "配置参数",
+                           "header": "根据实验功能的需要或根据技术支持的指导，修改或添加配置参数。无法移除条目。",
+                           "ok": "确定",
+                           "cancel": "取消",
+                           "remove": {
+                              "warning": {
+                                 "title": "警告",
+                                 "content": "是否确定要删除配置参数 <strong>{{key}}</strong>?",
+                                 "confirmLabel": "删除",
+                                 "rejectLabel": "取消"
+                              }
+                           },
+                           "add": {
+                              "title": "添加配置参数",
+                              "ok": "添加",
+                              "cancel": "取消",
+                              "notNull": "配置参数键必填。",
+                              "existing": "重复的配置参数。"
+                           },
+                           "edit": {
+                              "title": "编辑配置参数",
+                              "ok": "保存",
+                              "cancel": "取消"
+                           },
+                           "actionBar": {
+                              "add": {
+                                 "label": "添加参数",
+                                 "tooltip": "添加参数"
+                              },
+                              "edit": {
+                                 "label": "编辑参数",
+                                 "tooltip": "编辑参数"
+                              },
+                              "delete": {
+                                 "label": "删除参数",
+                                 "tooltip": "删除参数"
+                              },
+                              "refresh": {
+                                 "label": "刷新",
+                                 "tooltip": "刷新配置参数"
+                              },
+                              "actions": {
+                                 "label": "操作",
+                                 "tooltip": "对选定的配置参数执行的操作"
+                              }
+                           },
+                           "grid": {
+                              "key": "键",
+                              "value": "值",
+                              "placeholder": {
+                                 "key": "单击以编辑键",
+                                 "value": "单击以编辑值"
+                              }
+                           }
+                        }
+                     },
+                     "latencySensitivity": {
+                        "label": "延迟敏感度"
+                     }
+                  },
+                  "fiberChannel": {
+                     "label": "光纤通道 NPIV",
+                     "desc": "展开以查看光纤通道 NPIV",
+                     "wwns": {
+                        "label": "光纤通道虚拟 WWN",
+                        "desc": "如果主机使用支持 NPIV 的光纤通道硬件，则可以为在这些主机上运行的虚拟机分配虚拟 WWN 以实现高级功能。这些 WWN 正常情况下由主机或 vCenter Server 分配。",
+                        "disable": "临时禁用此虚拟机的 NPIV",
+                        "noWWNs": {
+                           "label": "当前未分配任何 WWN。",
+                           "unchanged": "保留不变",
+                           "generate": {
+                              "label": "生成新的 WWN",
+                              "WWNNs": "WWNN 的数量",
+                              "WWPNs": "WWPN 的数量"
+                           }
+                        },
+                        "assignments": "WWN 分配"
+                     },
+                     "wwps": {
+                        "assignments": "WWP 分配"
+                     }
+                  }
+               },
+               "firmware": {
+                  "bios": "BIOS (推荐)",
+                  "efi": "EFI"
+               },
+               "latency": {
+                  "low": "低",
+                  "medium": "中等",
+                  "normal": "正常",
+                  "high": "高  "
+               },
+               "validation": {
+                  "numberWWNNs": "NPIV WorldWideNode 名称的数量必须介于 {{min}} 和 {{max}} 之间。",
+                  "numberWWPNs": "NPIV WorldWidePort 名称的数量必须介于 {{min}} 和 {{max}} 之间。"
+               }
+            }
+         },
+         "deploy": {
+            "expand": "单击以展开",
+            "refreshWarning": "请勿在部署此虚拟机时刷新浏览器。",
+            "start": {
+               "title": "选择 OVF 和 VMDK 文件",
+               "description": "为要部署的虚拟机选择 OVF 和 VMDK 文件或者选择 OVA",
+               "validation": {
+                  "name": "为此虚拟机输入有效的名称。",
+                  "vmdk": "您需要选择 VMDK",
+                  "vmdk-ova": "无需为 OVA 提供 VMDK 文件",
+                  "ovf-ova": "您需要选择 OVF 或 OVA"
+               }
+            },
+            "eula": {
+               "title": "许可协议",
+               "description": "阅读并接受许可协议",
+               "agree": "我同意",
+               "notAgreed": "您必须同意所有许可，然后才能继续"
+            },
+            "options": {
+               "title": "部署选项",
+               "description": "选择部署选项",
+               "deploymentOption": "部署类型",
+               "networkMappings": "网络映射",
+               "diskProvisioning": "磁盘置备",
+               "powerOnAutomatically": "自动打开电源",
+               "thin": "精简",
+               "thick": "厚置备"
+            },
+            "properties": {
+               "title": "其他设置",
+               "description": "虚拟机的其他属性"
+            },
+            "summary": {
+               "loading": "正在验证虚拟机配置...",
+               "product": "产品",
+               "vmName": "虚拟机名称",
+               "disks": "磁盘",
+               "diskType": {
+                  "label": "置备类型",
+                  "thin": "精简",
+                  "thick": "厚置备"
+               },
+               "networkMappings": "网络映射",
+               "datastore": "数据存储",
+               "guestOSName": "客户机操作系统名称",
+               "cpus": "CPU",
+               "memory": "内存",
+               "expand": "单击以展开",
+               "properties": "属性",
+               "validation": {
+                  "extraDisk": "至少有一个提供的额外磁盘映像将被忽略。",
+                  "diskMissing": "缺少所需的磁盘映像。",
+                  "error": "从 OVF 文件中创建导入规范时出现错误。"
+               },
+               "notification": {
+                  "success": "已成功导入虚拟机 {{name}}",
+                  "error": "无法部署虚拟机: {{message}}"
+               }
+            },
+            "name": {
+               "label": "为该虚拟机输入名称。",
+               "placeholder": "名称",
+               "desc": "虚拟机名称最多可包含 80 个字符，且名称在每个 ESXi 实例中必须是唯一的。"
+            },
+            "select": {
+               "click": "单击以选择",
+               "drag": "或拖放文件"
+            },
+            "notification": {
+               "match": "字段 {{name}} 不匹配",
+               "required": "字段 {{name}} 为必填字段"
+            }
+         },
+         "register": {
+            "select": "选择一个或多个虚拟机、一个数据存储或一个目录",
+            "noVMsFound": "{{folder}} 中找不到任何虚拟机",
+            "title": "选择要注册的虚拟机",
+            "description": "选择要注册的一个或多个虚拟机。通过选择数据存储或目录，将注册该数据存储或目录中找到的所有虚拟机。",
+            "list": {
+               "columns": {
+                  "vmx": "VMX 文件",
+                  "remove": "移除"
+               },
+               "actions": {
+                  "removeSelected": {
+                     "label": "移除选定项",
+                     "tooltip": "从注册列表中移除选定的虚拟机"
+                  },
+                  "removeAll": {
+                     "label": "全部移除",
+                     "tooltip": "从注册列表中移除所有虚拟机"
+                  }
+               },
+               "none": "无"
+            },
+            "summary": {
+               "provisionType": "置备类型",
+               "vm": "虚拟机"
+            },
+            "notification": {
+               "success": "已成功注册虚拟机 {{name}}",
+               "register": "已注册 {{count}} 个虚拟机",
+               "error": "无法注册虚拟机 {{name}}。{{message}}"
+            }
+         },
+         "clone": {
+            "summary": {
+               "vm": "要克隆的虚拟机",
+               "clone": "克隆到",
+               "datastore": "数据存储:"
+            },
+            "notification": {
+               "sucess": "已成功克隆虚拟机 {{name}}",
+               "error": "无法克隆虚拟机 {{name}}"
+            }
+         },
+         "summary": {
+            "title": "即将完成",
+            "description": "在完成向导之前查看您的设置选择",
+            "provisionType": "置备类型",
+            "vmName": "名称",
+            "datastore": "数据存储",
+            "guestOS": "客户机操作系统名称",
+            "cpu": "vCPU",
+            "memory": "内存",
+            "nic": "网络适配器",
+            "nicNetwork": "网络适配器 {{size}} 网络",
+            "nicType": "网络适配器 {{size}} 类型",
+            "ideController": "IDE 控制器 {{size}}",
+            "scsiController": "SCSI 控制器 {{size}}",
+            "nvmeController": "NVMe 控制器 {{size}}",
+            "sataController": "SATA 控制器 {{size}}",
+            "newSataController": "新的 SATA 控制器",
+            "newNVMEController": "新的 NVMe 控制器",
+            "createHardDisk": "硬盘 {{size}}",
+            "capacity": "容量",
+            "datastore": "数据存储",
+            "diskProvisioning": "置备",
+            "thin": "精简置备",
+            "lazy": "厚置备，延迟置零",
+            "eager": "厚置备，置零",
+            "mode": "模式",
+            "controller": "控制器",
+            "serialPort": "串行端口 {{size}}",
+            "newSerialPort": "新的串行端口",
+            "parallelPort": "并行端口 {{size}}",
+            "newParallelPort": "新的并行端口",
+            "usbController": "USB 控制器 {{size}}",
+            "usbDevice": "USB 设备 {{size}}",
+            "createCdrom": "CD/DVD 驱动器 {{size}}",
+            "createFloppy": "软盘驱动器 {{size}}",
+            "backing": "备用",
+            "client": "远程设备 Cdrom",
+            "connected": "已连接",
+            "sound": {
+               "label": "声音控制器",
+               "VirtualHdAudioCard": "HD 音频",
+               "VirtualSoundBlaster16": "Sound Blaster 16",
+               "VirtualEnsoniq1371": "Ensoniq 1371"
+            },
+            "notification": {
+               "success": "已成功创建虚拟机 {{name}}",
+               "error": {
+                  "title": "虚拟机配置错误",
+                  "message": "已拒绝虚拟机配置。请参见浏览器控制"
+               }
+            }
+         }
+      },
+      "unregister": {
+         "title": "取消注册虚拟机",
+         "title-single": "取消注册虚拟机 - {{name}}",
+         "title-multiple": "取消注册 {{count}} 个虚拟机",
+         "content": "是否确定要取消注册以下虚拟机?",
+         "success": "已取消注册 {{num}} 个虚拟机",
+         "failure": "至少有一个虚拟机无法取消注册",
+         "rejectLabel": "取消"
+      },
+      "context": {
+         "title": "虚拟机",
+         "newWindow": {
+            "label": "在新窗口中打开",
+            "tooltip": "在新窗口中打开虚拟机列表"
+         },
+         "closeConsole": {
+            "label": "关闭控制台",
+            "tooltip": "关闭此控制台窗口"
+         },
+         "exitFullScreenConsole": {
+            "label": "退出全屏",
+            "tooltip": "退出全屏"
+         },
+         "autostart": {
+            "autostart": {
+               "label": "自动启动",
+               "tooltip": "配置自动启动选项"
+            },
+            "enable": {
+               "label": "启用",
+               "tooltip": "为此虚拟机启用自动启动"
+            },
+            "increasePriority": {
+               "label": "更晚启动",
+               "tooltip": "增大此虚拟机的启动顺序，使其在其他虚拟机之后启动"
+            },
+            "decreasePriority": {
+               "label": "更早启动",
+               "tooltip": "减小此虚拟机的启动顺序，使其在其他虚拟机之前启动"
+            },
+            "disable": {
+               "label": "禁用",
+               "tooltip": "从自动启动配置中移除此虚拟机"
+            },
+            "configure": {
+               "label": "配置",
+               "tooltip": "配置此虚拟机的自动启动设置"
+            }
+         },
+         "export": {
+            "label": "导出",
+            "tooltip": "将该虚拟机导出为 OVF 模板",
+            "download": {
+               "title": "下载文件",
+               "contentSize": "您即将为此虚拟机下载 {{fileIndex}} (共 {{numFiles}} 个文件)。此文件大小为 {{size}}。\n\n请确保允许来自此主机 IP 或 FQDN 的弹出窗口。",
+               "contentNoSize": "您即将为此虚拟机下载 {{fileIndex}} (共 {{numFiles}} 个文件)。\n\n请确保允许来自此主机 IP 或 FQDN 的弹出窗口。",
+               "confirmLabel": "确定",
+               "rejectLabel": "取消"
+            }
+         },
+         "unregister": {
+            "label": "取消注册",
+            "tooltip": "取消注册此虚拟机",
+            "tooltipMultiple": "取消注册这些虚拟机",
+            "tooltipDisabled": "取消注册虚拟机或计算机",
+            "tooltipWarnPoweredOn": " - 至少仍有一个虚拟机已打开电源。无法取消注册已打开电源的虚拟机"
+         },
+         "delete": {
+            "label": "删除",
+            "tooltip": "删除此虚拟机",
+            "tooltipMultiple": "删除这些虚拟机",
+            "tooltipDisabled": "删除虚拟机",
+            "tooltipWarnPoweredOn": " - 至少仍有一个虚拟机已打开电源。无法删除已打开电源的虚拟机"
+         },
+         "help": {
+            "label": "帮助",
+            "tooltip": "有关虚拟机的帮助主题"
+         },
+         "openInNewWindow": {
+            "label": "在新窗口中打开",
+            "tooltip": "在新窗口中打开此虚拟机"
+         },
+         "answerQuestion": {
+            "label": "回答问题",
+            "tooltip": "回答此虚拟机的未决问题",
+            "tooltipMultipleVMs": "您一次只能回答一个虚拟机的问题"
+         },
+         "power": {
+            "label": "电源",
+            "tooltip": "虚拟机的电源操作",
+            "powerOn": {
+               "label": "打开电源",
+               "tooltip": "打开此虚拟机的电源"
+            },
+            "powerOff": {
+               "label": "关闭电源",
+               "tooltip": "关闭此虚拟机的电源",
+               "warnSuspendedOrOn": "至少一个虚拟机已挂起或打开电源，关闭已挂起虚拟机的电源可能会导致客户机中的数据丢失。",
+               "warnSuspended": "此虚拟机当前已挂起。关闭其电源可能会导致客户机中的数据丢失。",
+               "warnOn": "此虚拟机当前已打开电源。关闭其电源可能会导致客户机中的数据丢失。"
+            },
+            "suspend": {
+               "label": "挂起",
+               "tooltip": "挂起此虚拟机"
+            },
+            "reset": {
+               "label": "重置",
+               "tooltip": "重置此虚拟机"
+            }
+         },
+         "create": {
+            "label": "创建/注册虚拟机",
+            "tooltip": "使用向导创建或注册虚拟机"
+         },
+         "snapshots": {
+            "label": "快照",
+            "tooltip": "此虚拟机的快照操作"
+         },
+         "console": {
+            "console": {
+               "label": "控制台",
+               "tooltip": "此虚拟机的控制台选项"
+            },
+            "browser": {
+               "label": "打开浏览器控制台",
+               "tooltip": "打开此虚拟机的浏览器内控制台"
+            },
+            "browserNewWindow": {
+               "label": "在新窗口中打开控制台",
+               "tooltip": "在新窗口中打开此虚拟机的浏览器内控制台"
+            },
+            "browserNewTab": {
+               "label": "在新选项卡中打开控制台",
+               "tooltip": "在新选项卡中打开此虚拟机的浏览器内控制台"
+            },
+            "showMousePad": {
+               "label": "显示相关鼠标触控板",
+               "tooltip": "显示此虚拟机的相关鼠标触控板，该触控板对于无法从浏览器控制台进行鼠标控制的虚拟机很有用。"
+            },
+            "resetSize": {
+               "label": "重置为本机分辨率",
+               "tooltip": "将控制台重置为虚拟机的本机分辨率"
+            },
+            "vmrc": {
+               "label": "启动远程控制台",
+               "tooltip": "使用独立 VMRC 应用程序启动控制台"
+            },
+            "downloadVMRC": {
+               "label": "下载 VMRC",
+               "tooltip": "转到 VMware.com 下载独立 VMRC 应用程序"
+            }
+         },
+         "guest": {
+            "guestOS": {
+               "label": "客户机操作系统",
+               "tooltip": "客户机操作系统的操作"
+            },
+            "shutDown": {
+               "label": "关机",
+               "tooltip": "关闭此客户机"
+            },
+            "restart": {
+               "label": "重新启动",
+               "tooltip": "重新启动此客户机"
+            },
+            "sendKeys": {
+               "title": "发送键值",
+               "toolTip": "向客户机发送键值",
+               "toolTipKeys": "向客户机发送 {{description}}",
+               "toolTipNoWebMKS": "发送键值时需要活动的浏览器控制台会话"
+            },
+            "keyCombinations": {
+               "ctrlAltDelete": {
+                  "title": "Ctrl-Alt-Delete",
+                  "toolTip": "向客户机发送 Ctrl-Alt-Delete"
+               },
+               "ctrlC": {
+                  "title": "Ctrl-c",
+                  "toolTip": "向客户机发送 Ctrl-c"
+               },
+               "escape": {
+                  "title": "Esc",
+                  "toolTip": "向客户机发送 Esc"
+               },
+               "functionKey": {
+                  "title": "{{description}}",
+                  "toolTip": "向客户机发送 {{description}}"
+               }
+            },
+            "installTools": {
+               "label": "安装 VMware Tools",
+               "tooltip": "在此客户机操作系统中挂载 VMware Tools 安装程序 CDROM"
+            },
+            "upgradeTools": {
+               "label": "升级 VMware Tools",
+               "tooltip": "在此客户机操作系统中升级 VMware Tools",
+               "notification": {
+                  "successSingle": "已成功为 {{vmName}} 升级 VMware Tools",
+                  "failedSingle": "无法为 {{vmName}} 升级 VMware Tools: {{reason}}",
+                  "successMultiple": "已成功为 {{num}} 个虚拟机升级 VMware Tools。",
+                  "failedMultiple": "无法为至少 1 个虚拟机升级 VMware Tools: {{reason}}"
+               }
+            }
+         },
+         "editSettings": {
+            "label": "编辑设置",
+            "tooltip": "编辑此虚拟机的设置"
+         },
+         "editNotes": {
+            "label": "编辑备注",
+            "tooltip": "编辑此虚拟机的备注"
+         },
+         "rename": {
+            "label": "重命名",
+            "tooltip": "重命名此虚拟机",
+            "tooltipSingle": "只能重命名单个虚拟机"
+         }
+      },
+      "error": {
+         "unknown": "抱歉，找不到虚拟机“{{moid}}”。"
+      },
+      "warning": {
+         "multiThreshold": {
+            "title": "警告",
+            "confirmLabel": "是",
+            "rejectLabel": "否",
+            "content": "在选定虚拟机 ({{num}}) 上执行此操作可能会导致您的 Web 浏览器冻结一段时间或变得不稳定。我们建议您将选定虚拟机的数量降为少于 {{threshold}}。是否要继续?"
+         },
+         "shutDown": {
+            "title": "确认客户机关闭",
+            "confirmLabel": "是",
+            "rejectLabel": "取消",
+            "content": "是否确定要关闭 {{name}}?",
+            "contentMultiple": "是否确定要关闭 {{num}} 个虚拟机?"
+         },
+         "restart": {
+            "title": "确认客户机重新启动",
+            "confirmLabel": "是",
+            "rejectLabel": "取消",
+            "content": "是否确定要重新启动 {{name}}?",
+            "contentMultiple": "是否确定要重新启动 {{num}} 个虚拟机?"
+         }
+      },
+      "logs": {
+         "dropdown": {
+            "default": "选择日志"
+         },
+         "actionBar": {
+            "refresh": {
+               "label": "刷新",
+               "tooltip": "刷新日志"
+            },
+            "close": {
+               "label": "关闭",
+               "tooltip": "关闭此窗口"
+            }
+         }
+      },
+      "rename": {
+         "current": "当前名称",
+         "new": "新名称",
+         "title": "重命名虚拟机 - {{name}}",
+         "ok": "重命名",
+         "error": "请提供名称",
+         "rejectLabel": "取消",
+         "notification": {
+            "success": "已成功重命名虚拟机 {{name}}",
+            "error": "无法重命名 {{name}}"
+         }
+      },
+      "help": {
+         "content": "<p>以下是对虚拟机参数的描述:</p><dl><dt>状况</dt><dd>状况列显示虚拟机的当前状况: 打开电源、关闭电源、已挂起。</dd><dt>状态</dt><dd>状态列基于当前等待虚拟机处理的任何通知，显示虚拟机的高级状态。例如，如果未安装 VMware Tools，状态将为<strong>信息</strong>。<br /><br /> <strong>无效</strong>状态表示虚拟机在数据存储上似乎无法访问。文件可能已被移除。对无效虚拟机可用的唯一操作是取消注册。<br /><br /> <strong>不一致</strong>状态表示虚拟机状态未知。重新启动虚拟机电源通常将解决此问题。</dd><dt>已置备空间</dt><dd>已置备空间列显示为虚拟机提供的存储量 (将所有虚拟磁盘累计)。</dd><dt>已用空间</dt><dd>已用空间列显示虚拟机当前消耗的存储量。这包括虚拟机虚拟磁盘上的数据存储、挂起状态、快照和交换文件的消耗。</dd><dt>主机名</dt><dd>主机名列显示客户机操作系统的主机名。</dd><dt>主机 CPU</dt><dd>主机 CPU 列显示虚拟机的 VCPU 当前在主机的 CPU 上消耗了多少 CPU 资源。</dd><dt>主机内存</dt><dd>主机内存列显示虚拟机在主机系统上消耗了多少内存。</dd></dl>",
+         "title": "帮助"
+      }
+   }
+}

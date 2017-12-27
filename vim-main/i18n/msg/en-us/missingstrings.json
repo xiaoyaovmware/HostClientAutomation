@@ -1,0 +1,7 @@
+{
+  "gosWin1032": "Microsoft Windows 10 (32-bit)",
+  "loginError": "Cannot complete login due to an incorrect user name or password.",
+  "diskTypeSSD": "Disk (SSD)",
+  "taskFailureHostConfig": "Failed - An error occurred during host configuration."
+
+}
