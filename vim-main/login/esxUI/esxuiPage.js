@@ -167,8 +167,27 @@ var EsxuiPage = {
             return element(by.css('.dropdown-toggle'));
         },
 
+        changepasswordMenu: function () {
+            return element(by.id('userChangePassword'));
+        },
+
         logoutMenu: function () {
             return element.all(by.css('#contextMenu>li>a')).get(3);
+        },
+
+    },
+
+    changepasswordDialog: {
+        // self: function () {
+        //
+        // },
+
+        newpasswordTextBox: function () {
+            return element(by.id('password'));
+        },
+
+        newpasswordagainTextBox: function () {
+            return element(by.id('passwordAgain'));
         },
 
     },

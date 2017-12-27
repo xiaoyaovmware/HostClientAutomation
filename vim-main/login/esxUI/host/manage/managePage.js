@@ -22,5 +22,8 @@ var ManagePage = {
         return element.all(by.css('.nav.nav-tabs>li>a')).get(5);
     },
 
+
+
+
 };
 module.exports = ManagePage;

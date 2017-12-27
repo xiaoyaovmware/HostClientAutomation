@@ -20,8 +20,7 @@ var EsxuiUtil = function () {
             return self.dismissAlert(EsxuiPage);
         }
     };
-    
-    
+
     this.dismissAlert = function(EsxuiPage){
         return  EsxuiPage.dismissNotificationButton().isPresent().then(function (present) {
             if(present){
@@ -519,22 +518,6 @@ var EsxuiUtil = function () {
 
         return duplicates;
     };
-
-    // this.feedbackload = function (EsxuiPage) {
-    //
-    //     return globalUtil.waitForVisibility(EsxuiPage.helpDropDown.self()).then(function () {
-    //         return racetrack.log("Click help drop down menu and select Feedback");
-    //     }).then(function () {
-    //         return EsxuiPage.helpDropDown.self().click();
-    //     }).then(function () {
-    //         return globalUtil.waitForVisibility(EsxuiPage.helpDropDown.feedbackMenu());
-    //     }).then(function () {
-    //         return EsxuiPage.helpDropDown.feedbackMenu().click();
-    //     }).then(function () {
-    //         return browser.sleep(Timeout.WAIT_FOR_HOST_TASK);
-    //     });
-    //
-    // };
 
 
 };

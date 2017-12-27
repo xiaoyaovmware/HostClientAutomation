@@ -20,6 +20,7 @@ exports.config = {
         //  'i18n/testcases/P0/edit-vm/edit-notes-script.js',
 
          // 'i18n/testcases/P0/host/load-host-client-fall-back.js',
+        // 'i18n/testcases/P0/host/change-password.js',
          // 'i18n/testcases/P0/host/load-feedback.js',
         // 'i18n/testcases/P0/host/load-host-summary.js',
         //
@@ -49,7 +50,8 @@ exports.config = {
         // 'i18n/testcases/P0/manage/change-advanced-settings.js',                                //
         // 'i18n/testcases/P0/manage/assign-license.js',                               //
         // 'i18n/testcases/P0/manage/assign-license-create-vm.js',
-        'i18n/testcases/P0/manage/add-remove-user.js',
+        'i18n/testcases/P0/manage/config-negative-time-and-date.js',
+        // 'i18n/testcases/P0/manage/add-remove-user.js',
         // 'i18n/testcases/P0/search/search-item.js',                                  //
         //
         // 'i18n/testcases/P0/register-vm/unregister-register-vm.js',                  //
@@ -172,7 +174,7 @@ exports.config = {
         // 'i18n/testcases/P1/host/reboot-host.js',
         // 'i18n/testcases/P0/host/shutdown-host.js'
     ],
-    baseUrl: 'https://172.16.168.97/ui',
+    baseUrl: 'https://172.16.171.121/ui',
     allScriptsTimeout: 60000,
     restartBrowserBetweenTests: true,
     jasmineNodeOpts: {
@@ -309,7 +311,7 @@ exports.config = {
         login: {
             //host: '10.117.163.36',
             user: 'root',
-            password: 'CA$HC0W'
+            password: 'ca$hc0w'
         },
         domain: {
             domainName: 'test.com',
