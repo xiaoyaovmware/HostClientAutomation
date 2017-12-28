@@ -6,6 +6,10 @@ var ManagePage = {
         return element.all(by.css('.nav.nav-tabs>li>a')).get(0);
     },
 
+    systemTab: function () {
+        return element.all(by.css('.nav.nav-tabs>li>a')).get(0);
+    },
+
     licensingTab: function () {
         return element.all(by.css('.nav.nav-tabs>li>a')).get(2);
     },
