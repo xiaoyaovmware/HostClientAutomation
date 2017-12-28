@@ -1,0 +1,55 @@
+{
+   "task": {
+      "task": "Aufgabe",
+      "entity": "Ziel",
+      "queued": "In der Warteschlange",
+      "started": "Gestartet",
+      "completed": "Abgeschlossen",
+      "initiator": "Initiator",
+      "result": "Ergebnis",
+      "state": {
+         "running": "Wird ausgeführt...",
+         "success": "Erfolgreich abgeschlossen",
+         "successful": "Abgeschlossen",
+         "error": "Fehlgeschlagen"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "Aktualisieren",
+            "tooltip": "Aufgabentabelle aktualisieren"
+         },
+         "actions": {
+            "label": "Aktionen",
+            "tooltip": "Aktionen für das mit der ausgewählten Aufgabe verbundene Objekt"
+         }
+      },
+      "pseudo": {
+         "vmrc": {
+            "download": {
+               "label": "VMRC herunterladen",
+               "summary": "Installationsprogramm von VMware Remote Console herunterladen"
+            }
+         },
+         "certificate": {
+            "upload": {
+               "label": "Hostzertifikat ersetzen",
+               "summary": "Ersetzen Sie das SSL-Zertifikat des Hosts."
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "Datei in Datenspeicher hochladen",
+               "summary": "Datei in einen Datenspeicher hochladen",
+               "cancelled": "Heraufladen der Datei wurde abgebrochen"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "Festplatte hochladen",
+               "summary": "Festplatte für eine virtuelle Maschine hochladen",
+               "cancelled": "Heraufladen der Festplatte wurde abgebrochen"
+            }
+         }
+      }
+   }
+}

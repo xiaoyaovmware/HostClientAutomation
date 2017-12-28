@@ -1,0 +1,1814 @@
+{
+   "vm": {
+      "answer": {
+         "dialog": {
+            "title": "Answer question - {{name}}",
+            "ok": "Answer",
+            "rejectLabel": "Cancel"
+         }
+      },
+      "autostart": {
+         "unset": "Unset"
+      },
+      "console": {
+         "close": "Close",
+         "actions": "Actions",
+         "maximize": "Maximize",
+         "fullscreen": "Full screen",
+         "minimize": "Minimize",
+         "shrink": "Shrink",
+         "failedToConnect": "Failed to connect"
+      },
+      "list": {
+         "title": "{{hostname}} - Virtual Machines",
+         "empty": "No virtual machines",
+         "columns": {
+            "name": "Virtual machine",
+            "status": "Status",
+            "provisionedSpace": "Provisioned space",
+            "usedSpace": "Used space",
+            "hostName": "Host name",
+            "hostCPU": "Host CPU",
+            "hostMemory": "Host memory",
+            "autostartStartOrder": "Autostart order",
+            "autostartStartDelay": "Start delay",
+            "autostartStopDelay": "Stop delay"
+         },
+         "actionBar": {
+            "createRegister": {
+               "label": "Create / Register VM",
+               "tooltip": "Create or register a virtual machine"
+            },
+            "columns": {
+               "label": "Columns",
+               "tooltip": "Choose columns to display in this table",
+               "contextTitle": "Select columns"
+            },
+            "console": {
+               "label": "Console",
+               "tooltip": "Open a console for the selected virtual machines"
+            },
+            "powerOn": {
+               "label": "Power on",
+               "tooltip": "Power on or resume the selected virtual machines"
+            },
+            "powerOff": {
+               "label": "Power off",
+               "tooltip": "Power off the selected virtual machines"
+            },
+            "shutDown": {
+               "label": "Shut down",
+               "tooltip": "Perform a graceful shutdown in the selected virtual machines"
+            },
+            "shutDownSuspended": {
+               "label": "Shut down / Power off",
+               "tooltip": "Shut down or power off the selected virtual machines"
+            },
+            "suspend": {
+               "label": "Suspend",
+               "tooltip": "Suspend the selected virtual machines"
+            },
+            "restart": {
+               "label": "Restart",
+               "tooltip": "Restart the selected virtual machines"
+            },
+            "edit": {
+               "label": "Edit settings",
+               "tooltip": "Edit the settings for the selected virtual machine"
+            },
+            "refresh": {
+               "label": "Refresh",
+               "tooltip": "Refresh the virtual machines table"
+            },
+            "actions": {
+               "label": "Actions",
+               "tooltip": "Actions for the selected virtual machines"
+            }
+         }
+      },
+      "attachISO": {
+         "button": {
+            "label": "Select disc image",
+            "tooltip": "Browse for a disc image"
+         },
+         "dialog": {
+            "title": "Select CD/DVD disc image",
+            "confirmLabel": "Select"
+         },
+         "failureNotification": "Failed to attach disc image: {{message}}",
+         "successNotification": "Successfully attached disc image {{file}} to CD/DVD device"
+      },
+      "delete": {
+         "title": "Delete VM - {{name}}",
+         "titleMultiple": "Delete VMs",
+         "confirmLabel": "Delete",
+         "rejectLabel": "Cancel",
+         "failedAtLeastOne": "Failed to delete at least one VM",
+         "ok": "OK"
+      },
+      "supportBundle": {
+         "menu": {
+            "label": "Generate support bundle",
+            "tooltip": "Generate a support bundle from this VM"
+         }
+      },
+      "template": {
+         "label": "Template",
+         "convert": {
+            "title": "Convert to template",
+            "label": "Convert to template",
+            "tooltip": "Convert virtual machine into template",
+            "message": "Convert the virtual machine '{{name}}' to a template?",
+            "ok": "Convert",
+            "rejectLabel": "Cancel"
+         }
+      },
+      "snapshot": {
+         "take": {
+            "menu": "Take snapshot",
+            "title": "Take snapshot for {{name}}",
+            "name": "Name",
+            "description": "Description",
+            "memory": "Snapshot the virtual machine's memory.",
+            "quiesce": "Quiesce guest file system (needs VMware tools installed).",
+            "ok": "OK",
+            "cancel": "Cancel",
+            "notification": {
+               "success": "Snapshot '{{title}}' successfully created on virtual machine {{vmName}}",
+               "error": "Failed to create snapshot '{{title}}' on virtual machine {{vmName}}"
+            }
+         },
+         "edit": {
+            "notification": {
+               "error": "Failed to save changes on snapshot '{{name}}'."
+            }
+         },
+         "revertLatest": {
+            "menu": "Revert to latest snapshot",
+            "title": "Revert to latest snapshot",
+            "content": "Current state of the virtual machine will be lost unless it is saved in a snapshot. Revert to latest (most recent) snapshot?",
+            "revert": "Revert",
+            "cancel": "Cancel",
+            "notification": {
+               "success": "Virtual machine {{name}} successfully reverted to latest snapshot",
+               "error": "Failed to revert virtual machine {{name}} to latest snapshot"
+            }
+         },
+         "revert": {
+            "menu": "Revert to snapshot",
+            "title": "Revert to snapshot",
+            "content": "Current state of the virtual machine will be lost unless it is saved in a snapshot. Revert to snapshot '{{title}}'?",
+            "revert": "Revert",
+            "cancel": "Cancel",
+            "notification": {
+               "success": "Virtual machine {{name}} successfully reverted to snapshot '{{title}}'",
+               "error": "Failed to revert virtual machine {{name}} to snapshot '{{title}}'"
+            }
+         },
+         "delete": {
+            "menu": "Delete snapshot",
+            "title": "Delete snapshot",
+            "content": "Are you sure you want to delete the snapshot '{{title}}'?",
+            "ok": "Remove",
+            "removeChildren": "Remove all children snapshots.",
+            "cancel": "Cancel",
+            "notification": {
+               "success": "Snapshot '{{title}}' successfully deleted.",
+               "error": "Failed to delete snapshot '{{title}}'."
+            }
+         },
+         "deleteAll": {
+            "menu": "Delete all snapshots",
+            "title": "Delete all snapshots",
+            "content": "This will consolidate and remove all snapshots for this virtual machine. The snapshots will be consolidated to a single disk. Do you want to continue?",
+            "ok": "Remove",
+            "cancel": "Cancel",
+            "notification": {
+               "success": "All snapshots from virtual machine '{{name}}' were successfully deleted.",
+               "error": "Failed to delete all snapshots from virtual machine '{{name}}'."
+            }
+         },
+         "manage": {
+            "menu": "Manage snapshots",
+            "notitle": "Manage VM snapshot",
+            "title": "Manage VM snapshot for {{name}}",
+            "name": "Name",
+            "description": "Description",
+            "created": "Created",
+            "diskUsage": "Disk Usage",
+            "console": "Console",
+            "here": "You are here",
+            "edit": "Edit",
+            "take": {
+               "label": "Take",
+               "tooltip": "Save the exact state of the virtual machine, so you can restore it later."
+            },
+            "restore": {
+               "label": "Restore",
+               "tooltip": "Restore your virtual machine to the state of the selected snapshot."
+            },
+            "delete": {
+               "label": "Delete",
+               "tooltip": "Delete the selected snapshot."
+            },
+            "deleteAll": {
+               "label": "Delete All",
+               "tooltip": "Delete all snapshots."
+            },
+            "edit": {
+               "label": "Edit",
+               "tooltip": "Edit the selected snapshot."
+            },
+            "refresh": {
+               "label": "Refresh",
+               "tooltip": "Refresh"
+            },
+            "save": "Save",
+            "cancel": "Cancel",
+            "close": "Close"
+         }
+      },
+      "compatibility": {
+         "upgrade": {
+            "label": "Upgrade VM Compatibility",
+            "tooltip": "Upgrade Virtual Machine Compatibility",
+            "rejectLabel": "Cancel",
+            "configure": {
+               "title": "Configure VM Compatibility",
+               "header": "Select a compatibility for <em>{{name}}</em> upgrade.",
+               "label": "Compatible with:",
+               "message": "{{version}}.",
+               "ok": "Upgrade"
+            },
+            "confirm": {
+               "title": "Confirm VM Compatibility Upgrade",
+               "message": "This operation changes the compatibility of your virtual machine. It is an irreversible operation that makes your virtual machine incompatible with earlier versions of VMware software products. Make a backup copy of your virtual machine files before proceeding. Upgrade your compatibility?",
+               "ok": "Yes",
+               "cancel": "No"
+            }
+         }
+      },
+      "notes": {
+         "dialog": {
+            "title": "Edit notes - {{name}}.",
+            "titleNoVM": "Edit notes",
+            "ok": "Save",
+            "rejectLabel": "Cancel"
+         },
+         "title": "Edit the notes for <em>{{name}}</em>.",
+         "more": "More",
+         "less": "Less",
+         "edit": "Edit notes",
+         "save": "Save notes",
+         "cancel": "Cancel"
+      },
+      "summary": {
+         "dialog": {
+            "unknown": {
+               "title": "Unknown VM",
+               "ok": "OK"
+            }
+         },
+         "unknown": "Unknown",
+         "general": {
+            "label": "General Information",
+            "title": "General Information",
+            "vmScreen": "Click to open a browser console to this virtual machine",
+            "vmTemplateScreen": "Virtual machine screen logo",
+            "cpu": {
+               "name": "CPU"
+            },
+            "networking": {
+               "name": "Networking",
+               "ipAddresses": "IP addresses",
+               "hostName": "Host name"
+            },
+            "notes": "Notes",
+            "vmwareTools": {
+               "name": "VMware Tools",
+               "info": {
+                  "installed": "Installed",
+                  "notInstalled": "Not installed",
+                  "version": "Version",
+                  "running": "Running"
+               },
+               "actionBar": {
+                  "action": {
+                     "label": "Actions",
+                     "tooltip": "Actions for selected objects in this list"
+                  }
+               }
+            },
+            "storage": {
+               "name": "Storage",
+               "disk": "disk",
+               "info": {
+                  "guestDisks": "Guest Disks",
+                  "noGuestDisks": "Guest disk information not available",
+                  "diskPath": "Disk path",
+                  "capacity": "Capacity",
+                  "free": "Free"
+               }
+            }
+         },
+         "perf": {
+            "label": "Performance summary last hour",
+            "title": "Performance summary, last hour",
+            "loading": "Loading...",
+            "noData": "No performance data available",
+            "chart": {
+               "xAxis": "Time",
+               "y1Axis": "Consumed host CPU / Ready (%)",
+               "y2Axis": "Consumed host memory (GiB)",
+               "cpu": "Consumed host CPU",
+               "ready": "Ready",
+               "rightAxis": " (right axis)",
+               "memory": "Consumed host memory"
+            }
+         },
+         "noNetworkInfo": "No network information",
+         "hardware": {
+            "label": "Hardware Configuration",
+            "title": "Hardware Configuration",
+            "cpu": {
+               "cpu": "CPU",
+               "cores": "CPU Cores",
+               "sockets": "Sockets",
+               "coreSocket": "Core per Socket",
+               "memory": "Memory"
+            },
+            "disk": {
+               "backing": "Backing",
+               "capacity": "Capacity",
+               "thinProvisioned": "Thin provisioned"
+            },
+            "cdrom": {
+               "backing": "Backing",
+               "connected": "Connected"
+            },
+            "serial": {
+               "backing": "Backing",
+               "connected": "Connected"
+            },
+            "parallel": {
+               "backing": "Backing",
+               "connected": "Connected"
+            },
+            "usb": {
+               "controller": "USB controller"
+            },
+            "floppy": {
+               "connected": "Connected",
+               "notConnected": "Not connected"
+            },
+            "video": {
+               "totalMemory":"Total video memory",
+               "numDisplays":"Number of displays",
+               "3dGraphics":"3D Graphics",
+               "3dRenderer":"3D Renderer",
+               "3dMemory":"3D Memory",
+               "automatic": "Automatic",
+               "software": "Software",
+               "hardware": "Hardware",
+               "enabled": "Enabled",
+               "disabled": "Disabled"
+            },
+            "network": {
+               "networkAdapter": "Network adapter",
+               "connected": "Connected",
+               "disconnected": "Disconnected",
+               "network": "Network",
+               "macAddress": "MAC address",
+               "passThrough": "Pass-through (Direct-path I/O)"
+            },
+            "others": {
+               "others": "Others",
+               "additionalHw": "Additional Hardware",
+               "scsiAdapters": "SCSI Adapters",
+               "controllers": "Controllers",
+               "inputDevices": "Input Devices"
+            }
+         },
+         "resource": {
+            "label": "Resource Consumption",
+            "title": "Resource Consumption",
+            "activeGuestMemory": "Active guest memory",
+            "consumedHostMemory": "Consumed host memory",
+            "consumedHostCPU": "Consumed host CPU",
+            "storage": "Storage",
+            "uncommitted": "Uncommitted",
+            "provisioned": "Provisioned",
+            "notShared": "Not-shared",
+            "used": "Used"
+         },
+         "actionBar": {
+            "console": {
+               "label": "Console",
+               "tooltip": "Open a console to this virtual machine"
+            },
+            "powerOn": {
+               "label": "Power on",
+               "tooltip": "Power on this virtual machine"
+            },
+            "powerOff": {
+               "label": "Power off",
+               "tooltip": "Power off this virtual machine",
+               "tooltipWarnSuspended": "This virtual machine is currently suspended. Powering it off may cause data loss in the guest",
+               "tooltipWarnPoweredOn": "This virtual machine is currently powered on. Powering it off may cause data loss in the guest"
+            },
+            "reset": {
+               "label": "Reset",
+               "tooltip": "Reset this virtual machine",
+               "tooltipWarnSuspended": "This virtual machine is currently suspended. Resetting it may cause data loss in the guest",
+               "tooltipWarnPoweredOn": "This virtual machine is currently powered on. Resetting it may cause data loss in the guest"
+            },
+            "shutDown": {
+               "label": "Shut down",
+               "tooltip": "Perform a graceful shut down within in the guest OS of this Virtual Machine"
+            },
+            "suspend": {
+               "label": "Suspend",
+               "tooltip": "Suspend this virtual machine"
+            },
+            "resume": {
+               "label": "Resume",
+               "tooltip": "Resume this virtual machine"
+            },
+            "restart": {
+               "label": "Restart",
+               "tooltip": "Restart this virtual machine"
+            },
+            "editSettingsMenu": {
+               "label": "Edit settings",
+               "tooltip": "Edit this virtual machine's settings"
+            },
+            "refresh": {
+               "label": "Refresh",
+               "tooltip": "Refresh this virtual machine's summary"
+            },
+            "actions": {
+               "label": "Actions",
+               "tooltip": "Actions for this virtual machine"
+            }
+         }
+      },
+      "manage": {
+         "title": "{{name}} - Manage"
+      },
+      "monitor": {
+         "tabs": {
+            "performance": {
+               "label": "Performance",
+               "tooltip": "Performance"
+            },
+            "events": {
+               "label": "Events",
+               "tooltip": "Events"
+            },
+            "tasks": {
+               "label": "Tasks",
+               "tooltip": "Tasks"
+            },
+            "logs": {
+               "label": "Logs",
+               "tooltip": "Logs"
+            },
+            "notifications": {
+               "label": "Notifications",
+               "tooltip": "Notifications"
+            }
+         },
+         "title": "{{name}} - Monitor",
+         "logs": {
+            "tabTitle": "Logs",
+            "tabTooltip": "View system logs",
+            "failedToLoad": "Failed to load log {{log}}",
+            "noLogSelected": "No log selected",
+            "actionBar": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for the selected log file"
+               },
+               "openInNewWindow": {
+                  "label": "Open in new window",
+                  "tooltip":"Open this log in a new window"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the selected log file"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "Log",
+                  "size": "Size"
+               }
+            }
+         },
+         "performance": {
+            "tabTitle": "Performance",
+            "tabTooltip": "Monitor the system's performance",
+            "poweredOff": "VM is powered off",
+            "grid": {
+               "name": "Name",
+               "unit": "Unit",
+               "average": "Average",
+               "maximum": "Maximum",
+               "minimum": "Minimum",
+               "latest": "Latest"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh chart"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for the selected virtual machines"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "Data availability",
+                  "message": "Why is 'Last hour' the only data range available? ESXi hosts store historical data only for the last hour. To see a larger range of data, you need to use vCenter Server."
+               }
+            },
+            "filter": {
+               "type": "Filter type",
+               "cpuFilter": "CPU Filter",
+               "time": "Time"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "Consumed host CPU",
+                     "allDropdownTitle": "All",
+                     "hostDropdownTitle": "Host",
+                     "allCoresDropdownTitle": "All PCPUs",
+                     "allPackagesDropdownTitle": "All packages",
+                     "seriesLabel": "PCPU {{core}}",
+                     "packageSeriesLabel": "Package {{pkg}}",
+                     "y1AxisLabel": "Consumed host CPU / ready (%)",
+                     "x1AxisLabel": "Time",
+                     "x2AxisLabel": "Time"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "Consumed host memory",
+                     "seriesLabel": "Consumed host memory",
+                     "y1AxisLabel": "Consumed host memory (GiB)",
+                     "x1AxisLabel": "Time",
+                     "x2AxisLabel": "Time"
+                  }
+               },
+               "cpuAndMemory": {
+                  "dropdownTitle": "CPU + memory usage composite"
+               },
+               "scale": {
+                  "lastHour": "Last hour"
+               }
+            }
+         },
+         "events": {
+            "type": "Type",
+            "time": "Time",
+            "virtualmachine": "Virtual machine",
+            "noEvents": "No events"
+         },
+         "tasks": {
+            "alt": "Task",
+            "key": "Key",
+            "noTasks": "No tasks",
+            "description": "Description",
+            "host": "This host",
+            "state": "State"
+         },
+         "notifications": {
+            "suggested": "Suggested action:",
+            "noNotification": "No notifications",
+            "unknownState": {
+               "message": "This virtual machine is in an unknown state.",
+               "suggested-action": "Power cycling the VM or restarting the hostd agent on the ESXi host may help."
+            },
+            "guestOther": {
+               "message": "The guest OS for this virtual machine is currently set to 'Other'.",
+               "suggested-action": "You should specify the correct guest OS to allow for guest-specific optimizations and to enable installation of VMware Tools."
+            },
+            "questionPending": {
+               "message": "This VM has a pending question that needs to be answered.",
+               "suggested-action": "Answer the question to complete the power on operation."
+            },
+            "orphanedNetwork": {
+               "message": "This VM is attached to a network portgroup <em>{{name}}</em> that doesn't exist.",
+               "suggested-action": "Edit this VM and attach it to a different network."
+            },
+            "toolsNotInstalled": {
+               "message": "VMware Tools is not installed in this virtual machine.",
+               "suggested-action": "VMware Tools allows detailed guest information to be displayed as well as allowing you to perform operations on the guest OS, e.g. graceful shutdown, reboot, etc. You should install VMware Tools."
+            },
+            "toolsOld": {
+               "message": "VMware Tools in this virtual machine is out-dated.",
+               "suggested-action": "Upgrading VMware Tools may provide improved features and better stability."
+            }
+         }
+      },
+      "operations": {
+         "notifications": {
+            "failedToPowerOn": "Failed to power on virtual machine {{name}}. {{reason}}",
+            "failedToPowerOff": "Failed to power off virtual machine {{name}}. {{reason}}",
+            "failedToRestart": "Failed to reset virtual machine {{name}}. {{reason}}",
+            "failedToRename": "Failed to rename virtual machine {{name}}. {{reason}}",
+            "failedToCreate": "Failed to create virtual machine {{name}}. {{reason}}",
+            "failedToDelete": "Failed to delete virtual machine {{name}}. {{reason}}",
+            "failedToUpgrade": "Failed to upgrade virtual machine {{name}}. {{reason}}",
+            "failedToSaveNotes": "Failed to save notes for virtual machine {{name}}. {{reason}}",
+            "failedToReconfig": "Failed to reconfigure virtual machine {{name}}. {{reason}}",
+            "failedToSuspend": "Failed to suspend virtual machine {{name}}. {{reason}}"
+         }
+      },
+      "banner": {
+         "guestOS": "Guest OS",
+         "compatibility": "Compatibility",
+         "vmwaretools": "VMware Tools",
+         "hostName": "Host name",
+         "cpus": "CPUs",
+         "cpuUsage": "CPU Utilization",
+         "memory": "Memory",
+         "memoryUsage": "Memory usage",
+         "diskUsage": "Disk usage",
+         "metrics": {
+            "cpu": "CPU",
+            "memory": "MEMORY",
+            "storage": "STORAGE"
+         }
+      },
+      "edit": {
+         "title": "Edit settings",
+         "titleWithName": "Edit settings - {{name}}",
+         "rejectLabel": "Cancel",
+         "tabs": {
+            "hardware": {
+               "label": "Virtual Hardware",
+               "tooltip": "Virtual Hardware"
+            },
+            "options": {
+               "label": "VM Options",
+               "tooltip": "VM Options"
+            }
+         },
+         "compatibility": "Compatibility:",
+         "save": "Save",
+         "notification": {
+            "info": "Virtual machine {{name}} was successfully reconfigured."
+         },
+         "powerOptions": {
+            "stop": {
+               "hard": "Power Off",
+               "soft": "Shut Down Guest",
+               "preset": "System Default"
+            },
+            "pause": {
+               "hard": "Suspend",
+               "soft": "Put Guest on Standby",
+               "preset": "System Default"
+            },
+            "restart": {
+               "hard": "Reset",
+               "soft": "Restart Guest",
+               "preset": "System Default"
+            }
+         }
+      },
+      "create": {
+         "new": {
+            "label": "Create a new virtual machine",
+            "description": "This option guides you through creating a new virtual machine. You will be able to customize processors, memory, network connections, and storage. You will need to install a guest operating system after creation."
+         },
+         "clone": {
+            "label": "Clone an existing VM",
+            "description": "Create a clone of an existing virtual machine"
+         },
+         "ovf": {
+            "label": "Deploy a virtual machine from an OVF or OVA file",
+            "description": "This option guides you through the process of creating a virtual machine from an OVF and VMDK files.\n\nOVA deployment is currently limited to files under 1 gigabyte in size due to web browser limitations.\n\nIf you wish to deploy an OVA greater than 1 gigabyte, please extract the OVA using tar and provide the OVF and VMDK files separately."
+         },
+         "register": {
+            "label": "Register an existing virtual machine",
+            "description": "This option guides you through registering a virtual machine that already exists on a datastore"
+         }
+      },
+      "deleteVMConfirmation": "Are you sure you want to delete the following virtual machines?",
+      "state": {
+         "poweredOn": "Powered on",
+         "poweredOff": "Powered off",
+         "suspended": "Suspended",
+         "undefined": "Unknown"
+      },
+      "tools": {
+         "state": {
+            "toolsOk": "Installed and running",
+            "toolsNotRunning": "Installed but not running",
+            "toolsNotInstalled": "Not installed",
+            "toolsOld": "Tools is outdated - you should upgrade Tools inside this guest"
+         },
+         "installed": {
+            "true": "Yes",
+            "false": "No"
+         },
+         "running": {
+            "guestToolsRunning": "Yes",
+            "guestToolsNotRunning": "No"
+         }
+      },
+      "hardwareVersion": {
+         "vmx-02": {
+            "label":"ESX 2.0.2 and later (VM version 2)",
+            "desc": ""
+         },
+         "vmx-03": {
+            "label":"ESX 2.x and later (VM version 3)",
+            "desc": ""
+         },
+         "vmx-04": {
+            "label":"ESX/ESXi 3.5 and later (VM version 4)",
+            "desc": "This virtual machine uses hardware version 4, which is also compatible with ESXi 4.x, ESXi 5.0, ESXi 5.1, and ESXi 5.5. Some virtual machine hardware features are unavailable with this option."
+         },
+         "vmx-06": {
+            "label":"Workstation 6 (VM version 6)",
+            "desc": ""
+         },
+         "vmx-07": {
+            "label":"ESX/ESXi 4.0 and later (VM version 7)",
+            "desc": "This virtual machine uses hardware version 7, which is also compatible with ESXi 5.0, ESXi 5.1, ESXi 5.5 and ESXi 6.0. Some virtual machine hardware features are unavailable with this option."
+         },
+         "vmx-08": {
+            "label":"ESXi 5.0 and later (VM version 8)",
+            "desc": "This virtual machine uses hardware version 8, which is also compatible with ESXi 5.1, ESXi 5.5 and ESXi 6.0. Some virtual machine hardware features are unavailable with this option."
+         },
+         "vmx-09": {
+            "label":"ESXi 5.1 and later (VM version 9)",
+            "desc": "This virtual machine uses hardware version 9, which is also compatible with ESXi 5.5 and ESXi 6.0."
+         },
+         "vmx-10": {
+            "label":"ESXi 5.5 and later (VM version 10)",
+            "desc": "This virtual machine uses hardware version 10, which is also compatible with ESXi 6.0."
+         },
+         "vmx-11": {
+            "label":"ESXi 6.0 and later (VM version 11)",
+            "desc": "This virtual machine uses hardware version 11 and provides the best performance and latest features available in ESXi 6.0."
+         },
+         "vmx-13": {
+            "label":"ESXi 6.5 and later (VM version 13)",
+            "desc": "This virtual machine uses hardware version 13 and provides the best performance and latest features available in ESXi 6.5."
+         }
+      },
+      "wizard": {
+         "title": "New virtual machine",
+         "registerTitle": "Register virtual machine",
+         "cloneTitle": "Clone virtual machine",
+         "compatibility": "Compatibility",
+         "creationType": {
+            "title": "Select creation type",
+            "description": "How would you like to create a Virtual Machine?",
+            "select": "Select creation type"
+         },
+         "basics": {
+            "title": "Select a name and guest OS",
+            "description": "Specify a unique name and OS",
+            "name": {
+               "label": "Enter a name for the virtual machine.",
+               "placeholder": "Name",
+               "desc": "Virtual machine names can contain up to 80 characters and they must be unique within each ESXi instance."
+            },
+            "desc": "Identifying the guest operating system here allows the wizard to provide the appropriate defaults for the operating system installation.",
+            "compatibility": "Compatibility",
+            "selectOSFamily": "Select Guest OS Family",
+            "guestOSFamily": "Guest OS family",
+            "selectOSVersion": "Select Guest OS Version",
+            "guestOSVersion": "Guest OS version",
+            "osVersion": {
+               "windowsGuest": "Windows",
+               "linuxGuest": "Linux",
+               "darwinGuestFamily": "Mac OS",
+               "solarisGuest": "Solaris",
+               "netwareGuest": "Novel Netware",
+               "otherGuestFamily": "Other"
+            },
+            "validation": {
+               "name": "Enter a valid name for this virtual machine.",
+               "nameSize": "Name is larger than 80 characters or has invalid characters.",
+               "guestOSFamily": "Select a Guest OS Family.",
+               "guestOSVersion": "Select a Guest OS Version.",
+               "existingName": "A virtual machine or template with the same name exists in this host. Enter a new name."
+            }
+         },
+         "storage": {
+            "title": "Select storage",
+            "description": "Select the datastore in which to store the configuration and disk files.",
+            "desc": "The following datastores are accessible from the destination resource that you selected. Select the destination datastore for the virtual machine configuration files and all of the virtual disks.",
+            "policy": {
+               "default": "Datastore Default",
+               "vvol": "VVol No Requirements Policy",
+               "vsan": "Virtual SAN Default Storage Policy"
+            },
+            "grid": {
+               "name": "Name",
+               "capacity": "Capacity",
+               "free": "Free",
+               "type": "Type",
+               "thinProvisioning": "Thin provisioning",
+               "access": "Access"
+            },
+            "validation": {
+               "datastore": "Select a datastore in which to store the virtual machine files."
+            },
+            "status": {
+               "ova": "Extracting OVA, this could take some time...",
+               "ovf": "Reading OVF data..."
+            }
+         },
+         "hardware": {
+            "title": "Customize settings",
+            "description": "Configure the virtual machine hardware and virtual machine additional options",
+            "tabs": {
+               "virtualhardware": {
+                  "label": "Virtual Hardware",
+                  "tooltip": "Virtual Hardware"
+               },
+               "vmoptions": {
+                  "label": "VM Options",
+                  "tooltip": "VM Options"
+               }
+            },
+            "virtualhardware": {
+               "managedVC": "As this host’s resources are being managed by vCenter Server, some configuration options are disabled. If you wish to change this VM’s resource settings, please do so from vCenter Server.",
+               "signpost": "The virtual CPUs available to a virtual machine depend on the number of licensed CPUs on the host and the number of CPUs supported by the guest OS. To use the VMware multicore virtual CPUs feature, you must be in compliance with the requirements of the guest operating system EULA.",
+               "virtualizationSignpost": "Enables full CPU virtualization by exposing hardware assisted virtualization features of the underlying processor to this guest operating system.",
+               "schedulingAffinitySignPost": "<p>Select logical processor affinity for this virtual machine.</p><p>Use \"-\" for ranges and \",\" to separate values. For example, \"0, 2, 4-7\" would indicate processors 0, 2, 4, 5, 6 and 7.</p><p>Clear the string to remove affinity settings.</p>",
+               "cpuMMUSignPost": "<p>ESXi can automatically determine if a virtual machine should use hardware support for virtualization based on the processor type and the virtual machine. However for some workloads, overriding the automatic selection can provide better performance.</p><p>Note: If a selected setting is not supported by the host or conflicts with existing virtual machine settings, the setting is ignored and the \"Automatic\" selection is used.</p>",
+               "cpu": {
+                  "label": "CPU",
+                  "cores": {
+                     "label": "Cores per Socket",
+                     "desc": "Sockets:"
+                  },
+                  "hotPlug": {
+                     "label": "CPU Hot Plug",
+                     "desc": "Enable CPU Hot Add"
+                  },
+                  "reservation": {
+                     "label": "Reservation",
+                     "unit": "Reservation Unit"
+                  },
+                  "limit": {
+                     "label": "Limit",
+                     "unit": "Limit Unit"
+                  },
+                  "shares": {
+                     "label": "Shares",
+                     "unit": "Shares Unit",
+                     "low": "Low",
+                     "normal": "Normal",
+                     "high": "High",
+                     "custom": "Custom"
+                  },
+                  "hardwareVirtualization": {
+                     "label": "Hardware virtualization",
+                     "desc": "Expose hardware assisted virtualization to the guest OS"
+                  },
+                  "performanceCounters": {
+                     "label": "Performance counters",
+                     "desc": "Enable virtualized CPU performance counters"
+                  },
+                  "schedulingAffinity": {
+                     "label": "Scheduling Affinity",
+                     "value": "Scheduling affinity value",
+                     "hyper": "Hyperthreading Status:",
+                     "available": "Available CPUs:",
+                     "logical": "(Logical CPUs)"
+                  },
+                  "cpuMmuVirtualization": {
+                     "label": "CPU/MMU Virtualization",
+                     "auto": "Automatic",
+                     "software": "Software CPU and MMU",
+                     "hardwareCPU": "Hardware CPU, software MMU",
+                     "hardwareBoth": "Hardware CPU and MMU"
+                  },
+                  "validation": {
+                     "invalidReservation": "Invalid CPU Reservation value.",
+                     "badReservation": "CPU Reservation must be between 0 MHz and {{maxMhz}} MHz. The number entered is too large.",
+                     "invalidLimit": "CPU Limit must be bigger than or equal to Reservation.",
+                     "invalidShares": "Invalid CPU Shares value.",
+                     "invalidAffinity": "Invalid CPU affinity value."
+                  }
+               },
+               "memory": {
+                  "label": "Memory",
+                  "unit": "Memory Unit",
+                  "ram": {
+                     "label" :"RAM",
+                     "unit": "RAM Unit"
+                  },
+                  "reservation": {
+                     "label": "Reservation",
+                     "unit": "Reservation Unit",
+                     "desc": "Reserve all guest memory (All locked)"
+                  },
+                  "limit": {
+                     "label": "Limit",
+                     "unit": "Limit Unit"
+                  },
+                  "shares": {
+                     "label": "Shares",
+                     "unit": "Shares Unit"
+                  },
+                  "hotPlug": {
+                     "label": "Memory Hot Plug",
+                     "desc": "Enabled"
+                  },
+                  "validation": {
+                     "invalidRAM": "Invalid RAM value.",
+                     "badRAM": "The memory value must be a multiple of 4.",
+                     "lowCapacity": "Enter memory value which is larger than its original value.",
+                     "highRAM": "The memory specified is greater than the amount available in the host. RAM memory overcommitment can affect the performance on the virtual machine.",
+                     "lowRAM": "The recommended minimum memory for this guest is {{min}}. Providing less may result in instability or failure to boot.",
+                     "maxRAM": "The memory must be less than or equal to {{max}} .",
+                     "invalidReservation": "Invalid Memory Reservation value.",
+                     "reservationHigh": "The memory reservation must be less than or equal to {{max}}. The number entered is too large.",
+                     "invalidLimit": "Invalid memory limit",
+                     "limitLow": "Memory Limit must be bigger than or equal to Reservation.",
+                     "invalidShares": "Invalid memory shares value."
+                  }
+               },
+               "video":{
+                  "label": "Video Card",
+                  "settings": {
+                     "custom": "Specify custom settings",
+                     "auto": "Auto-detect settings"
+                  },
+                  "display": "Number of displays",
+                  "memory": {
+                     "label" :"Total video memory",
+                     "unit": "MB",
+                     "calculator":"Video Memory Calculator",
+                     "dialog": {
+                        "title": "Video Memory Calculator",
+                        "desc": "Calculate the required video memory based on the maximum number of displays and resolution that the guest will need to support.",
+                        "display": "Number of displays:",
+                        "resolution": "Resolution:",
+                        "total": "Total video memory:",
+                        "ok": "OK",
+                        "cancel": "Cancel"
+                     }
+                  },
+                  "3d": {
+                     "graphics": {
+                        "label":"3D Graphics",
+                        "desc": "Enable 3D Support"
+                     },
+                     "renderer": {
+                        "label": "3D Renderer",
+                        "automatic": "Automatic",
+                        "software": "Software",
+                        "hardware": "Hardware"
+                     },
+                     "memory":{
+                        "label": "3D Memory",
+                        "unit": "MB"
+                     }
+                  }
+               },
+               "hd": {
+                  "title": "Hard disk {{size}}",
+                  "label": "Hard disk",
+                  "new": "New Hard disk",
+                  "unit": "Hard disk unit",
+                  "delete": "Delete files from datastore",
+                  "maximumsize": "Maximum Size",
+                  "location": "Location",
+                  "browse": "Browse...",
+                  "diskProvisioning": "Disk Provisioning",
+                  "thin": "Thin provisioned",
+                  "thick": "Thick provisioned, lazily zeroed",
+                  "eager": "Thick provisioned, eagerly zeroed",
+                  "type": "Type",
+                  "diskFile": "Disk File",
+                  "shares": {
+                     "label": "Shares",
+                     "type": "Shares type",
+                     "value": "Shares value",
+                     "unit": "Shares Unit"
+                  },
+                  "limitIOP": "Limit - IOPs",
+                  "virtualFlash": {
+                     "label": "Virtual flash read cache",
+                     "unit": "Virtual flash read cache unit"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "Virtual Device Node",
+                     "unit": "Virtual Device Node unit"
+                  },
+                  "diskMode": {
+                     "label": "Disk Mode",
+                     "dependent": "Dependent",
+                     "independentPersistent": "Independent - persistent",
+                     "independentNonpersistent" :"Independent - Non-persistent"
+                  },
+                  "provisioning": {
+                     "thin": "Thin provisioned",
+                     "thickEager": "Thick provisioned, eagerly zeroed",
+                     "thickLazy": "Thick provisioned, lazily zeroed"
+                  },
+                  "menu": {
+                     "new": {
+                        "label": "New hard disk",
+                        "tooltip": "Add new Hard Disk to virtual machine"
+                     },
+                     "existing": {
+                        "label": "Existing hard disk",
+                        "tooltip": "Add existing Hard Disk to virtual machine"
+                     }
+                  },
+                  "validation": {
+                     "numDisks": "This virtual machine configuration only supports {{size}} hard disk(s).",
+                     "invalidHD": "Invalid HD value.",
+                     "lowCapacity": "Enter disk capacity which is larger than its original capacity.",
+                     "highCapacity": "The disk capacity specified is greater than the amount available in the datastore. Disk space overcommitment can consume all space in the virtual disk and block the virtual machine. Increase the datastore capacity before proceeding or enter a smaller disk size.",
+                     "invalidShares": "Invalid disk shares value.",
+                     "invalidReadCache": "Invalid read cache value.",
+                     "badReservation": "Reservation must be between {{min}} and {{max}}. Enter 0 to disable vitual Flash Read Cache."
+                  }
+               },
+               "pci": {
+                  "title": "PCI device {{size}}",
+                  "new": "New PCI device",
+                  "physical": {
+                     "label": "Physical PCI/PCIe device",
+                     "warning": "Warning: The VM will not power on until its memory reservation equals its memory size.",
+                     "button": "Reserve all memory",
+                     "note": "Note: Some virtual machine operations are unavailable when PCI/PCIe passthrough devices are present. You cannot suspend, migrate with vMotion, or take or restore snapshots of such virtual machines."
+                  }
+               },
+               "scsi": {
+                  "title": "SCSI Controller {{size}}",
+                  "new": "New SCSI Controller",
+                  "type": "SCSI Type",
+                  "busSharing": {
+                     "label": "SCSI Bus Sharing",
+                     "none": "None",
+                     "virtual": "Virtual",
+                     "physical": "Physical"
+                  }
+               },
+               "sata": {
+                  "title": "SATA Controller {{size}}",
+                  "new": "New SATA Controller"
+               },
+               "usbController": {
+                  "title": "USB Controller {{size}}",
+                  "new": "New USB Controller",
+                  "settings": "Settings",
+                  "validation": {
+                     "numUSBs": "This virtual machine configuration only supports {{size}} USB device(s).",
+                     "maxUSB2Devices": "This virtual machine configuration only supports {{max}} USB 2.0 device(s).",
+                     "maxUSB3Devices": "This virtual machine configuration only supports {{max}} USB 3.0 device(s)."
+                  }
+               },
+               "serialPort": {
+                  "title": "Serial Port {{size}}",
+                  "new": "New Serial Port",
+                  "status": "Status",
+                  "connect": "Connect",
+                  "connectAt": "Connect at power on",
+                  "connection": "Connection",
+                  "physicalType": "Physical serial port type",
+                  "browse": "Browse...",
+                  "pipeName": "Pipe name",
+                  "portURI": {
+                     "label": "Port URI:",
+                     "desc": "Use Virtual Serial Port Concentrator"
+                  },
+                  "vSPCURI": "vSPC URI:",
+                  "deviceType": {
+                     "file": "Use output file",
+                     "physical": "Use physical serial port",
+                     "pipe": "Use named pipe",
+                     "network": "Use network"
+                  },
+                  "nearEnd": {
+                     "label": "Near End",
+                     "client": "Client",
+                     "server": "Server"
+                  },
+                  "farEnd": {
+                     "label": "Far End",
+                     "vm": "A virtual machine",
+                     "process": "A process"
+                  },
+                  "direction": {
+                     "label": "Direction",
+                     "client": "Client",
+                     "server": "Server"
+                  },
+                  "validation": {
+                     "missingOutputFile": "Please enter a name for the serial port's output file",
+                     "invalidOutputFile": "Invalid output file format.",
+                     "invalidPipeName": "Invalid pipe name.",
+                     "invalidPortUri": "Invalid Port URI.",
+                     "invalidVSPC": "Invalid Virtual Serial Port Concentrator."
+                  }
+               },
+               "parallelPort": {
+                  "title": "Parallel Port {{size}}",
+                  "new": "New Parallel Port",
+                  "status": "Status",
+                  "connect": "Connect",
+                  "connectAt": "Connect at power on",
+                  "connection": "Connection",
+                  "browse": "Browse...",
+                  "deviceType": {
+                     "file": "Use output file"
+                  },
+                  "validation": {
+                     "invalidOutputFile": "Invalid output file format.",
+                     "missingOutputFile": "Please enter a name for the parallel port's output file"
+                  }
+               },
+               "network": {
+                  "title": "Network Adapter {{size}}",
+                  "new": "New Network Adapter",
+                  "status": "Status",
+                  "connect": "Connect",
+                  "connectAt": "Connect at power on",
+                  "adapterType": "Adapter Type",
+                  "physicalFunction": "Physical function",
+                  "guestOSMTUChange": {
+                     "label": "Guest OS MTU Change",
+                     "allow": "Allow",
+                     "disallow": "Disallow"
+                  },
+                  "macAddress": "MAC Address",
+                  "macAddressType": {
+                     "label": "MAC Address type",
+                     "auto": "Automatic",
+                     "manual": "Manual"
+                  },
+                  "validation": {
+                     "missingMACAddress": "MAC address is mandatory",
+                     "invalidMACAddress": "Invalid MAC address",
+                     "missingPortgroup": "The portgroup for Network adapter {{index}}, {{missing}}, could not be found. It has been assigned to {{assigned}} ."
+                  }
+               },
+               "floppy": {
+                  "title": "Floppy Drive {{size}}",
+                  "new": "New Floppy Drive",
+                  "status": "Status",
+                  "connect": "Connect",
+                  "connectAt": "Connect at power on",
+                  "browse": "Browse...",
+                  "media": {
+                     "label": "Floppy Media",
+                     "desc": "To connect, power on the VM and select the media from the VM Hardware panel on the Summary tab."
+                  },
+                  "deviceType": {
+                     "client": "Client Device",
+                     "floppy": "Use existing floppy image"
+                  },
+                  "validation": {
+                     "numFloppy": "This virtual machine configuration only supports {{size}} floppy drive(s).",
+                     "missingImage": "Please select an image for the floppy drive"
+                  }
+               },
+               "cdrom": {
+                  "title": "CD/DVD Drive {{size}}",
+                  "new": "New CD/DVD Drive",
+                  "status": "Status",
+                  "connect": "Connect",
+                  "connectAt": "Connect at power on",
+                  "browse": "Browse...",
+                  "type": "Type",
+                  "media": {
+                     "label": "CD/DVD Media",
+                     "desc": "To connect, power on the VM and select the media from the VM Hardware panel on Summary tab."
+                  },
+                  "deviceType": {
+                     "client": "Client Device",
+                     "iso": "Datastore ISO File"
+                  },
+                  "deviceMode": {
+                     "label": "Device Mode",
+                     "controller": "Device Mode Controller",
+                     "location": "Device Mode Location",
+                     "emulate": "Emulate CD-ROM",
+                     "passthrough": "Passthrough CD-ROM"
+                  },
+                  "deviceNode": {
+                     "sata": "SATA Controller"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "Virtual Device Node"
+                  },
+                  "validation": {
+                     "missingISO": "Please select an ISO image for the CDROM"
+                  }
+               },
+               "actionBar": {
+                  "addHD": {
+                     "label": "Add hard disk",
+                     "tooltip": "Add a hard disk to virtual machine"
+                  },
+                  "addNetwork": {
+                     "label": "Add network adapter",
+                     "tooltip": "Add a network adapter to the virtual machine"
+                  },
+                  "newHD": {
+                     "label": "New hard disk",
+                     "tooltip": "Add new hard disk to virtual machine"
+                  },
+                  "existingHD": {
+                     "label": "Existing hard disk",
+                     "tooltip": "Add existing hard disk to virtual machine"
+                  },
+                  "network": {
+                     "label": "Network adapter",
+                     "tooltip": "Add new network adapter"
+                  },
+                  "cdrom": {
+                     "label": "CD/DVD Drive",
+                     "tooltip": "Add new CD/DVD Drive"
+                  },
+                  "floppy": {
+                     "label": "Floppy Drive",
+                     "tooltip": "Add new floppy drive"
+                  },
+                  "serial": {
+                     "label": "Serial Port",
+                     "tooltip": "Add new serial port"
+                  },
+                  "parallel": {
+                     "label": "Parallel Port",
+                     "tooltip": "Add new parallel port"
+                  },
+                  "usb": {
+                     "label": "USB Controller",
+                     "tooltip": "Add new usb controller"
+                  },
+                  "scsi": {
+                     "label": "SCSI Controller",
+                     "tooltip": "Add new SCSI controller"
+                  },
+                  "pci": {
+                     "label": "PCI Device",
+                     "tooltip": "Add new PCI device"
+                  },
+                  "sata": {
+                     "label": "SATA Controller",
+                     "tooltip": "Add new SATA controller"
+                  },
+                  "other": {
+                     "label": "Add other device",
+                     "tooltip": "Add other hardware to this virtual machine"
+                  }
+               }
+            },
+            "hdlocation": {
+               "title": "The following datastores are accessible from the destination resource that you selected. Select the destination datastore for the virtual machine configuration files and all of the virtual disks.",
+               "storagePolicy": {
+                  "default": "Datastore Default",
+                  "vvol": "VVol No Requirements Policy",
+                  "vsan": "Virtual SAN Default Storage Policy"
+               },
+               "grid": {
+                  "name": "Name",
+                  "capacity": "Capacity",
+                  "freeSpace": "Free",
+                  "type": "Type",
+                  "thinProvisioning": "Thin Provisioning",
+                  "access": "Access"
+               },
+               "dialog": {
+                  "ok": "OK",
+                  "select": "Select a datastore"
+               }
+            },
+            "vmoptions": {
+               "general": {
+                  "title": "General Options",
+                  "vmname": "VM Name:",
+                  "vmconfigfile": "VM Config File",
+                  "vmworkinglocation": "VM Working Location",
+                  "guestOS": "Guest OS",
+                  "guestOSVersion": "Guest OS Version",
+                  "remoteConsole": "VMware Remote Console Options",
+                  "guestOSLock": {
+                     "label": "Guest OS lock",
+                     "desc": "Lock the guest operating system when the last remote user disconnects"
+                  },
+                  "maxNumSessions": {
+                     "label": "Maximum number of sessions",
+                     "desc": "Limit the number of simultaneous connections to this virtual machine"
+                  },
+                  "vmwareTools": {
+                     "label": "VMware Tools",
+                     "desc": "Expand for VMware Tools settings"
+                  },
+                  "powerOperations": {
+                     "label": "Power Operations",
+                     "stop": "Stop",
+                     "pause": "Pause",
+                     "restart": "Restart",
+                     "desc": "Power On / Resume VM"
+                  },
+                  "vmwareToolsScript": {
+                     "label": "Run VMware Tools Scripts",
+                     "afterPoweringOn": "After powering on",
+                     "afterResuming": "After resuming",
+                     "beforeSuspending": "Before suspending",
+                     "beforeShuttingDown": "Before shutting down guest"
+                  },
+                  "toolsUpgrades": {
+                     "label": "Tools Upgrades",
+                     "desc": "Check and upgrade VMware Tools before each power on"
+                  },
+                  "time": {
+                     "label": "Time",
+                     "desc": "Synchronize guest time with host"
+                  },
+                  "powerManagement": {
+                     "label": "Power management",
+                     "desc": "Expand for power management settings",
+                     "standbyResponse": {
+                        "label": "Standby response",
+                        "desc": "How should the virtual machine respond when the guest OS is placed on standby?",
+                        "suspend": "Suspend the virtual machine.",
+                        "standby": "Put the guest OS into standby mode and leave the virtual machine powered on."
+                     },
+                     "wakeOnLan": {
+                        "label": "Wake on LAN",
+                        "desc": "Wake on LAN for virtual machine traffic on:",
+                        "network": "New Network (VM Network)"
+                     }
+                  },
+                  "bootOptions": {
+                     "label": "Boot Options",
+                     "desc": "Expand for boot options",
+                     "firmware": {
+                        "label": "Firmware",
+                        "desc": "Choose which firmware should be used to boot the virtual machine:"
+                     },
+                     "bootDelay": {
+                        "label": "Boot Delay",
+                        "desc": "Whenever the virtual machine is powered on or reset, delay the boot order for:",
+                        "ms": "milliseconds"
+                     },
+                     "forceBiosSetup": {
+                        "label": "Force BIOS setup",
+                        "desc": "The next time the virtual machine boots, force entry into the BIOS setup screen."
+                     },
+                     "failedBootRecovery": {
+                        "label": "Failed Boot Recovery",
+                        "desc": "When the virtual machine fails to find a boot device, automatically retry boot after:",
+                        "sec": "seconds"
+                     }
+                  },
+                  "advanced": {
+                     "label": "Advanced",
+                     "settings": {
+                        "label": "Settings",
+                        "desc": "Expand for advanced settings",
+                        "acceleration": "Disable acceleration",
+                        "logging": "Enable logging"
+                     },
+                     "debuggingStats": {
+                        "label": "Debugging and statistics",
+                        "release": "Run normally",
+                        "debug": "Record debugging information",
+                        "stats": "Record statistics"
+                     },
+                     "swapFileLocation": {
+                        "label": "Swap file location",
+                        "default": {
+                           "label": "Default",
+                           "desc": "Use the settings of the cluster or host containing the virtual machine."
+                        },
+                        "vmDirectory": {
+                           "label": "Virtual machine directory",
+                           "desc": "Store the swap file in the same directory as the virtual machine."
+                        },
+                        "datastore": {
+                           "label": "Datastore specified by host",
+                           "desc": "Store the swap files in the datastore specified by the host to be used for swap files. If not possible, store the swap files in the same directory as the virtual machine. Using a datastore that is not visible to both hosts during vMotion might affect the vMotion performance for the affected virtual machines."
+                        }
+                     },
+                     "configParams": {
+                        "label": "Configuration Parameters",
+                        "ok": "Edit Configuration...",
+                        "tooltip": "Edit Virtual Machine configuration parameters",
+                        "dialog": {
+                           "title": "Configuration Parameters",
+                           "header": "Modify or add configuration parameters as needed for experimental features or as instructed by technical support. Entries cannot be removed.",
+                           "ok": "OK",
+                           "cancel": "Cancel",
+                           "add": {
+                              "title": "Add Configuration Parameter",
+                              "ok": "Add",
+                              "cancel": "Cancel",
+                              "notNull": "Configuration parameter key is mandatory.",
+                              "existing": "Duplicate configuration parameter."
+                           },
+                           "edit": {
+                              "title": "Edit Configuration Parameter",
+                              "ok": "Save",
+                              "cancel": "Cancel"
+                           },
+                           "actionBar": {
+                              "add": {
+                                 "label": "Add parameter",
+                                 "tooltip": "Add parameter"
+                              },
+                              "edit": {
+                                 "label": "Edit parameter",
+                                 "tooltip": "Edit parameter"
+                              },
+                              "delete": {
+                                 "label": "Delete parameter",
+                                 "tooltip": "Delete parameter"
+                              },
+                              "refresh": {
+                                 "label": "Refresh",
+                                 "tooltip": "Refresh configuration parameters"
+                              },
+                              "actions": {
+                                 "label": "Actions",
+                                 "tooltip": "Actions for the selected configuration parameter"
+                              }
+                           },
+                           "grid": {
+                              "key": "Key",
+                              "value": "Value"
+                           }
+                        }
+                     },
+                     "latencySensitivity": {
+                        "label": "Latency Sensitivity"
+                     }
+                  },
+                  "fiberChannel": {
+                     "label": "Fiber Channel NPIV",
+                     "desc": "Expand for fibre channel NPIV",
+                     "wwns": {
+                        "label": "Fiber Channel Virtual WWNs",
+                        "desc": "Virtual machines running on hosts with Fibre Channel hardware that supports NPIV can be assigned virtual WWNs for advanced features. These WWNs are normally assigned by the host or by vCenter Server.",
+                        "disable": "Temporarily disable NPIV for this virtual machine",
+                        "noWWNs": {
+                           "label": "No WWNs are currently assigned.",
+                           "unchanged": "Leave unchanged",
+                           "generate": {
+                              "label": "Generate new WWNs",
+                              "WWNNs": "Number of WWNNs:",
+                              "WWPNs": "Number of WWPNs:"
+                           }
+                        },
+                        "assignments": "WWN Assignments:"
+                     }
+                  }
+               },
+               "firmware": {
+                  "bios": "BIOS (Recommended)",
+                  "efi": "EFI"
+               },
+               "latency": {
+                  "low": "Low",
+                  "medium": "Medium",
+                  "normal": "Normal",
+                  "high": "High  "
+               },
+               "validation": {
+                  "numberWWNNs": "The number of NPIV WorldWideNode names must be between {{min}} and {{max}}.",
+                  "numberWWPNs": "The number of NPIV WorldWidePort names must be between {{min}} and {{max}}."
+               }
+            }
+         },
+         "deploy": {
+            "expand": "Click to expand",
+            "refreshWarning": "Do not refresh your browser while this VM is being deployed.",
+            "start": {
+               "title": "Select OVF and VMDK files",
+               "description": "Select the OVF and VMDK files or OVA for the VM you would like to deploy",
+               "validation": {
+                  "name": "Enter a valid name for this virtual machine.",
+                  "vmdk": "You need to select a VMDK",
+                  "vmdk-ova": "There is no need to provide VMDK files with OVA",
+                  "ovf-ova": "You need to select an OVF or OVA"
+               }
+            },
+            "eula": {
+               "title": "License agreements",
+               "description": "Read and accept the license agreements",
+               "agree": "I agree",
+               "notAgreed": "You must agree to all licenses before continuing"
+            },
+            "options": {
+               "title": "Deployment options",
+               "description": "Select deployment options",
+               "deploymentOption": "Deployment type",
+               "networkMappings": "Network mappings",
+               "diskProvisioning": "Disk provisioning",
+               "thin": "Thin",
+               "thick": "Thick"
+            },
+            "properties": {
+               "title": "Additional settings",
+               "description": "Additional properties for the VM"
+            },
+            "summary": {
+               "product": "Product",
+               "vmName": "VM Name",
+               "disks": "Disks",
+               "diskType": {
+                  "label": "Provisioning type",
+                  "thin": "Thin",
+                  "thick": "Thick"
+               },
+               "networkMappings": "Network mappings",
+               "datastore": "Datastore",
+               "guestOSName": "Guest OS Name",
+               "cpus": "CPUs",
+               "memory": "Memory",
+               "expand": "Click to expand",
+               "properties": "Properties",
+               "validation": {
+                  "extraDisk": "At least one extra disk image was provided that will be ignored",
+                  "diskMissing": "A required disk image was missing",
+                  "error": "There was an error creating the import specification from the OVF file in the provided OVA."
+               },
+               "notification": {
+                  "success": "VM {{name}} successfully imported",
+                  "error": "Failed to deploy VM: {{message}}"
+               }
+            },
+            "name": {
+               "label": "Enter a name for the virtual machine.",
+               "placeholder": "Name",
+               "desc": "Virtual machine names can contain up to 80 characters and they must be unique within each ESXi instance."
+            },
+            "select": {
+               "click": "Click to select files",
+               "drag": " or drag/drop"
+            },
+            "notification": {
+               "match": "Field {{name}} does not match",
+               "required": "Field {{name}} is required"
+            }
+         },
+         "register": {
+            "select": "Select a virtual machine",
+            "title": "Select VMs for registration",
+            "description": "Select one or more virtual machines you wish to register",
+            "summary": {
+               "provisionType": "Provisioning type",
+               "vm": "Virtual machines"
+            },
+            "notification": {
+               "success": "VM {{name}} successfully registered",
+               "register": "Registered {{count}} VMs",
+               "error": "Failed to register VM {{name}}. {{message}}"
+            }
+         },
+         "clone": {
+            "summary": {
+               "vm": "VM to clone",
+               "clone": "Cloning to",
+               "datastore": "Datastore:"
+            },
+            "notification": {
+               "sucess": "VM {{name}} successfully cloned",
+               "error": "Failed to clone VM {{name}}"
+            }
+         },
+         "summary": {
+            "title": "Ready to complete",
+            "description": "Review your settings selection before finishing the wizard",
+            "provisionType": "Provisioning type",
+            "vmName": "Name",
+            "datastore": "Datastore",
+            "guestOS": "Guest OS name",
+            "cpu": "vCPUs",
+            "memory": "Memory",
+            "nic": "Network adapters",
+            "nicNetwork": "Network adapter {{size}} network",
+            "nicType": "Network adapter {{size}} type",
+            "scsiController": "SCSI Controller {{size}}",
+            "sataController": "SATA Controller {{size}}",
+            "newSataController": "New SATA controller",
+            "createHardDisk": "Hard disk {{size}}",
+            "capacity": "Capacity",
+            "datastore": "Datastore",
+            "mode": "Mode",
+            "serialPort": "Serial Port {{size}}",
+            "newSerialPort": "New serial port",
+            "parallelPort": "Parallel Port {{size}}",
+            "newParallelPort": "New parallel port",
+            "usbController": "USB Controller {{size}}",
+            "createCdrom": "CD/DVD drive {{size}}",
+            "backing": "Backing",
+            "client": "Remote device Cdrom",
+            "connected": "Connected",
+            "notification": {
+               "success": "Virtual machine {{name}} was successfully created."
+            }
+         }
+      },
+      "unregister": {
+         "title": "Unregister virtual machines",
+         "title-single": "Unregister virtual machine - {{name}}",
+         "title-multiple": "Unregister {{count}} virtual machines",
+         "content":" Are you sure you want to unregister the following virtual machines?",
+         "rejectLabel": "Cancel"
+      },
+      "context": {
+         "title": "Virtual machines",
+         "newWindow": {
+            "label": "Open in new window",
+            "tooltip": "Open the VM list in a new window"
+         },
+         "autostart": {
+            "autostart": {
+               "label": "Autostart",
+               "tooltip": "Configure auto start options"
+            },
+            "increasePriority": {
+               "label": "Increase priority",
+               "tooltip": "Increase the start priority of this VM so it starts before other VMs"
+            },
+            "decreasePriority": {
+               "label": "Decrease priority",
+               "tooltip": "Decrease the start priority of this VM so it starts after other VMs"
+            }
+         },
+         "export": {
+            "label": "Export",
+            "tooltip": "Export this VM as an OVF template"
+         },
+         "unregister": {
+            "label": "Unregister",
+            "tooltip": "Unregister this virtual machine",
+            "tooltipMultiple": "Unregister these virtual machines",
+            "tooltipDisabled": "Unregister a virtual machine or machines",
+            "tooltipWarnPoweredOn": " - at least one VM is still powered on. You cannot unregister VMs that are powered on"
+         },
+         "delete": {
+            "label": "Delete",
+            "tooltip": "Delete this virtual machine",
+            "tooltipMultiple": "Delete these virtual machines",
+            "tooltipDisabled": "Delete a virtual machine",
+            "tooltipWarnPoweredOn": " - at least one VM is still powered on. You cannot delete VMs that are powered on"
+         },
+         "help": {
+            "label": "Help",
+            "tooltip": "Help topics on virtual machines"
+         },
+         "openInNewWindow": {
+            "label": "Open in a new window",
+            "tooltip": "Open this virtual machine in a new window"
+         },
+         "answerQuestion": {
+            "label": "Answer question",
+            "tooltip": "Answer a pending question for this virtual machine",
+            "tooltipMultipleVMs": "You can answer questions for only a single VM at a time"
+         },
+         "power": {
+            "label": "Power",
+            "tooltip": "Power operations for virtual machine(s)",
+            "powerOn": {
+               "label": "Power on",
+               "tooltip": "Power on this virtual machine"
+            },
+            "powerOff": {
+               "label": "Power off",
+               "tooltip": "Power off this virtual machine",
+               "warnSuspendedOrOn": "At least one VM is suspended or powered on, powering off a suspended virtual machine may cause data loss in the guest.",
+               "warnSuspended": "This VM is currently suspended. Powering it off may cause data loss in the guest.",
+               "warnOn": "This VM is currently powered on. Powering it off may cause data loss in the guest."
+            },
+            "suspend": {
+               "label": "Suspend",
+               "tooltip": "Suspend this virtual machine"
+            },
+            "reset": {
+               "label": "Reset",
+               "tooltip": "Reset this virtual machine"
+            }
+         },
+         "create": {
+            "label": "Create/Register VM",
+            "tooltip": "Create or register a virtual machine using a wizard"
+         },
+         "snapshotsMenu": {
+            "label": "Snapshots",
+            "tooltip": "Snapshot operations for this virtual machine"
+         },
+         "console": {
+            "console": {
+               "label": "Console",
+               "tooltip": "Console options for this virtual machine"
+            },
+            "browser": {
+               "label": "Open browser console",
+               "tooltip": "Open an in-browser console for this virtual machine"
+            },
+            "browserNewWindow": {
+               "label": "Open console in new window",
+               "tooltip": "Open an in-browser console for this virtual machine in a new window"
+            },
+            "browserNewTab": {
+               "label": "Open console in new tab",
+               "tooltip": "Open an in-browser console for this virtual machine in a new tab"
+            },
+            "vmrc": {
+               "label": "Launch remote console",
+               "tooltip": "Launch a console using stand-alone VMRC application"
+            },
+            "downloadVMRC": {
+               "label": "Download VMRC",
+               "tooltip": "Go to VMware.com to download stand-alone VMRC application"
+            }
+         },
+         "guest": {
+            "guestOS": {
+               "label": "Guest OS",
+               "tooltip": "Operations for the guest operating system"
+            },
+            "shutDown": {
+               "label": "Shut down",
+               "tooltip": "Shut down this guest"
+            },
+            "restart": {
+               "label": "Restart",
+               "tooltip": "Restart this guest"
+            },
+            "sendCtrlAltDelete": {
+               "title": "Send Ctrl-Alt-Delete",
+               "toolTip": "Send Ctrl-Alt-Delete to the guest",
+               "toolTipNoWebMKS": "Send Ctrl-Alt-Delete to the guest - only available when a WebMKS console session is active for this guest"
+            },
+            "installTools": {
+               "label": "Install VMware Tools",
+               "tooltip": "Mount the VMware Tools installer CDROM in this guest OS"
+            },
+            "upgradeTools": {
+               "label": "Upgrade VMware Tools",
+               "tooltip": "Upgrade VMware Tools in this guest OS"
+            }
+         },
+         "editSettingsMenu": {
+            "label": "Edit settings",
+            "tooltip": "Edit the settings for this virtual machine"
+         },
+         "editNotes": {
+            "label": "Edit notes",
+            "tooltip": "Edit this virtual machine's notes"
+         },
+         "rename": {
+            "label": "Rename",
+            "tooltip": "Rename this virtual machine",
+            "tooltipSingle": "Only a single VM can be renamed"
+         }
+      },
+      "error": {
+         "unknown": "Sorry, the VM '{{moid}}' was not found."
+      },
+      "logs": {
+         "dropdown": {
+            "default": "Select a log"
+         },
+         "actionBar": {
+            "refresh": {
+               "label": "Refresh",
+               "tooltip": "Refresh the log"
+            },
+            "close": {
+               "label": "Close",
+               "tooltip": "Close this window"
+            }
+         }
+      },
+      "rename": {
+         "current": "Current name",
+         "new": "New name",
+         "title": "Rename virtual machine - {{name}}",
+         "ok": "Rename",
+         "error": "Please provide a name",
+         "rejectLabel": "Cancel",
+         "notification": {
+            "success": "VM {{name}} successfully renamed",
+            "error": "Failed to rename {{name}}"
+         }
+      },
+      "help": {
+         "content": "<p>The following are descriptions for virtual machine parameters:</p><dl><dt>State</dt><dd>The state column shows the current state of the virtual machine: powered on, powered off, suspended.</dd><dt>Status</dt><dd>The status column shows a high level status of the virtual machine based on any notifications that are currently pending for the VM. For example, if VMware tools is not installed, the status will be <strong>Info</strong>.<br /><br /> An <strong>Invalid</strong> state means that the VM doesn't appear to be accessible on the datastore. The files may have been removed. The only operation available for an Invalid VM is Unregister.<br /><br /> An <strong>Inconsistent</strong> state means that the VM's state is unknown. Power cycling a VM will usually resolve this issue. </dd><dt>Provisioned Space</dt><dd>The provisioned space column shows the amount of storage that the VM was provided with (cumulatively across all virtual disks).</dd><dt>Used space</dt><dd>The used space column shows the amount of storage that the VM is currently consuming. This includes data storage on the VMs virtual disks, suspended state, snapshots and swap file consumption.</dd><dt>Hostname</dt><dd>The hostname column shows the hostname of the guest operating system.</dd><dt>Host CPU</dt><dd>The host CPU column shows how much CPU resource the virtual machine's VCPUs are currently consuming on the host's CPUs.</dd><dt>Host Memory</dt><dd>The host memory column shows how much memory the virtual machine is consuming on the host system.</dd></dl>",
+         "title": "Help"
+      }
+   }
+}

@@ -1,0 +1,1704 @@
+{
+   "host": {
+      "defaultWelcomeMessage": "{{hostname}} 시작",
+      "about": {
+         "version": "클라이언트 버전:",
+         "buildNumber": "클라이언트 빌드 번호:",
+         "buildType": "빌드 유형:",
+         "branch": "분기:",
+         "changeSet": "변경 집합:",
+         "esxiVersion": "ESXi 버전:",
+         "esxiBuildNumber": "ESXi 빌드 번호:",
+         "openSourceLicenses": "소스 라이센스 열기"
+      },
+      "error": {
+         "cause": "원인:",
+         "version": "버전:",
+         "build": "빌드:",
+         "esxi": "ESXi:",
+         "browser": "브라우저:",
+         "title": "처리되지 않은 예외({{num}})",
+         "details": "세부 정보",
+         "close": "닫기",
+         "reload": "다시 로드",
+         "lostConnection": "호스트와 연결이 끊어진 것 같습니다. 브라우저를 새로 고쳐보십시오.",
+         "communication": "죄송합니다. 호스트와 통신하는 데 문제가 발생했습니다.",
+         "unhandledException": "예상치 못한 오류가 발생했습니다.\n\n클라이언트는 계속 작동할 수 있지만, 이 시점에 브라우저를 새로 고치고 버그 보고서를 제출하는 것이 좋습니다.\n\n이 대화 상자를 숨기고 새로 고침 없이 계속하려면 Esc 키를 누르십시오.",
+         "stack": "예외 스택:"
+      },
+      "feedback": {
+         "title": "피드백 제공 중...",
+         "content": "피드백을 제공해 주십시오. 해결법이 있거나 문제점 또는 누락된 항목이 있다면 알려 주십시오.",
+         "developers": "<p><ul><li><a href='mailto:esxui@vmware.com'>esxui@vmware.com</a>으로 이메일을 보내거나,</li><li>당사 SocialCast <a href='https://vmware-com.socialcast.com/groups/122886-esxihostclient' target='_blank'>그룹</a>에 게시하거나,</li><li>VMware.com 커뮤니티 포럼(예정)에 게시할 수 있습니다.</li></ul></p>",
+         "release": "<p>VMware.com <a href='https://communities.vmware.com/community/vmtn/vsphere/hostclient' target='_blank'>커뮤니티 포럼</a>에 게시하십시오.</p>"
+      },
+      "shutdown": {
+         "title": "종료 - {{hostname}}",
+         "logoutMessage": "호스트 종료 중...",
+         "log": "이 종료 작업에 대한 이유 기록:",
+         "log-placeholder": "여기에 이유 입력",
+         "not-maintenance": "이 호스트가 유지 보수 모드가 아닙니다.",
+         "message": "유지 보수 모드에 있지 않은 호스트를 종료하거나 재부팅하면 이 호스트에서 실행 중인 가상 시스템이 안전하게 중지되지 않습니다. 호스트가 Virtual SAN 클러스터의 일부인 경우 호스트에서 Virtual SAN 데이터에 액세스하지 못할 수 있습니다. 호스트를 재부팅하거나 종료하기 전에 호스트를 유지 보수 모드로 설정하십시오.",
+         "confirmation": "선택한 호스트를 종료하시겠습니까?",
+         "shutdown": "종료",
+         "rejectLabel": "취소"
+      },
+      "reboot": {
+         "title": "호스트 재부팅",
+         "logoutMessage": "호스트 재부팅 중...",
+         "ok": "재부팅",
+         "log": "이 재부팅 작업에 대한 이유 기록:",
+         "log-placeholder": "여기에 이유 입력",
+         "not-maintenance": "이 호스트가 유지 보수 모드가 아닙니다.",
+         "message": "유지 보수 모드에 있지 않은 호스트를 종료하거나 재부팅하면 이 호스트에서 실행 중인 가상 시스템이 안전하게 중지되지 않습니다. 호스트가 Virtual SAN 클러스터의 일부인 경우 호스트에서 Virtual SAN 데이터에 액세스하지 못할 수 있습니다. 호스트를 재부팅하거나 종료하기 전에 호스트를 유지 보수 모드로 설정하십시오.",
+         "confirmation": "호스트를 재부팅하시겠습니까?",
+         "rejectLabel": "취소"
+      },
+      "permissions": {
+         "manage": {
+            "menu": "사용 권한",
+            "title": "사용 권한을 관리합니다.",
+            "close": "닫기",
+            "cancel": "취소",
+            "noUsers": "사용자 없음",
+            "addUser": {
+               "label": "사용자 추가",
+               "toolTip": "사용자를 추가합니다."
+            },
+            "removeUser": {
+               "label": "사용자 제거",
+               "toolTip": "사용자를 제거합니다."
+            },
+            "assignRole": {
+               "label": "역할 할당",
+               "toolTip": "사용자에게 역할을 할당합니다."
+            },
+            "updatePermissions": {
+               "successNotification": "사용 권한 업데이트 성공",
+               "failureNotification": "사용 권한을 업데이트하지 못했습니다. {{error}}"
+            },
+            "columns": {
+               "user": "사용자",
+               "role": "역할"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "사용자 선택"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "역할 선택"
+            },
+            "propagateLabel": "모든 하위 항목으로 전파"
+         }
+      },
+      "context": {
+         "title": "호스트",
+         "services": {
+            "label": "서비스",
+            "tooltip": "이 호스트의 서비스 관리",
+            "ssh": {
+               "labelEnable": "SSH(Secure Shell) 사용",
+               "labelDisable": "SSH(Secure Shell) 사용 안 함",
+               "tooltip": "이 호스트에서 SSH(Secure Shell) 서비스를 전환합니다."
+            },
+            "shell": {
+               "labelEnable": "콘솔 셸 사용",
+               "labelDisable": "콘솔 셸 사용 안 함",
+               "tooltip": "이 호스트에서 콘솔 셸 서비스를 전환합니다."
+            }
+         },
+         "service": {
+            "restart": {
+               "label": "다시 시작",
+               "tooltip": "이 서비스를 다시 시작합니다."
+            },
+            "start": {
+               "label": "시작",
+               "tooltip": "이 서비스를 시작합니다."
+            },
+            "stop": {
+               "label": "중지",
+               "tooltip": "이 서비스를 중지합니다."
+            },
+            "policy": {
+               "label": "정책",
+               "tooltip": "이 서비스에 대한 정책 옵션입니다."
+            },
+            "firewallPolicy": {
+               "label": "방화벽 포트와 함께 시작 및 중지",
+               "tooltip": "방화벽 포트가 열려 있거나 닫혀 있을 때 이 서비스를 시작 및 중지합니다."
+            },
+            "hostPolicy": {
+               "label": "호스트와 함께 시작 및 중지",
+               "tooltip": "호스트가 시작 및 중지될 때 이 서비스를 시작 및 중지합니다."
+            },
+            "manualPolicy": {
+               "label": "수동으로 시작 및 중지",
+               "tooltip": "이 서비스를 수동으로 시작 및 중지합니다."
+            }
+         },
+         "manageWithVC": {
+            "label": "vCenter Server를 사용하여 관리",
+            "tooltip": "VMware vCenter Server를 사용하여 이 호스트를 관리합니다."
+         },
+         "disconnectFromVC": {
+            "label": "vCenter Server와 연결 끊기",
+            "tooltip": "VMware vCenter Server와 이 호스트의 연결을 해제합니다."
+         },
+         "createVM": {
+            "label": "VM 생성/등록",
+            "tooltip": "이 호스트에서 VM을 생성 또는 등록합니다."
+         },
+         "shutDown": {
+            "label": "종료",
+            "tooltip": "이 호스트를 종료합니다."
+         },
+         "reboot": {
+            "label": "재부팅",
+            "tooltip": "이 호스트를 재부팅합니다."
+         },
+         "maintenanceMode": {
+            "labelEnter": "유지 보수 모드 시작",
+            "labelExit": "유지 보수 모드 종료",
+            "tooltipEnter": "이 호스트를 유지 보수 모드로 전환합니다.",
+            "tooltipExit": "이 호스트를 유지 보수 모드에서 해제합니다."
+         },
+         "lockdownMode": {
+            "label": "잠금 모드",
+            "tooltip": "이 호스트에 대한 잠금 모드 관리",
+            "enterNormalLockdown": {
+               "label": "정상 잠금 시작",
+               "tooltip": "이 호스트를 정상 잠금 모드로 전환합니다."
+            },
+            "enterStrictLockdown": {
+               "label": "엄격 잠금 시작",
+               "tooltip": "이 호스트를 엄격 잠금 모드로 전환합니다."
+            },
+            "exitLockdown": {
+               "label": "잠금 종료",
+               "tooltip": "이 호스트를 잠금 모드에서 해제합니다."
+            },
+            "dialog": {
+               "title": "잠금 모드 주의",
+               "confirmStrictLabel": "엄격 잠금 시작",
+               "confirmNormalLabel": "정상 잠금 시작",
+               "rejectLabel": "취소"
+            }
+         }
+      },
+      "summary": {
+         "host": "호스트",
+         "version": "버전:",
+         "state": "상태:",
+         "uptime": "가동 시간:",
+         "days": "일",
+         "cpus": "CPU",
+         "metrics": {
+            "cpu": "CPU",
+            "storage": "스토리지",
+            "memory": "메모리"
+         },
+         "actionBar": {
+            "manageWithVC": {
+               "label": "vCenter Server를 사용하여 관리",
+               "tooltip": "VMware vCenter Server를 사용하여 이 호스트를 관리합니다."
+            },
+            "getVC": {
+               "label": "vCenter Server 가져오기",
+               "tooltip": "vCenter Server 다운로드 및 설치 방법 알아보기"
+            },
+            "createRegisterVM": {
+               "label": "VM 생성/등록",
+               "tooltip": "가상 시스템을 생성 또는 등록합니다."
+            },
+            "shutdown": {
+               "label": "종료",
+               "tooltip": "이 호스트를 종료합니다."
+            },
+            "reboot": {
+               "label": "재부팅",
+               "tooltip": "이 호스트를 재부팅합니다."
+            },
+            "refresh": {
+               "label": "새로 고침",
+               "tooltip": "이 페이지의 데이터를 새로 고칩니다."
+            },
+            "enterMaintenanceMode": {
+               "label": "유지 보수 모드 시작",
+               "tooltip": "이 호스트를 유지 보수 모드로 전환합니다."
+            },
+            "exitMaintenanceMode": {
+               "label": "유지 보수 모드 종료",
+               "tooltip": "이 호스트를 유지 보수 모드에서 해제합니다."
+            },
+            "actions": {
+               "label": "작업",
+               "tooltip": "이 호스트에 대한 작업입니다."
+            }
+         },
+         "portlets": {
+            "hardware": {
+               "title": "하드웨어",
+               "manufacturer": "제조업체",
+               "model": "모델",
+               "cpu": {
+                  "title": "CPU",
+                  "logicalProcessors": "논리적 프로세서",
+                  "processorType": "프로세서 유형",
+                  "sockets": "소켓",
+                  "coresPerSocket": "소켓당 코어 수",
+                  "hyperthreading": "하이퍼스레딩",
+                  "yesEnabled": "예, 사용함",
+                  "yesDisabled": "예, 사용 안 함",
+                  "no": "아니요"
+               },
+               "memory": "메모리",
+               "virtualFlash": {
+                  "title": "가상 플래시",
+                  "capacity": "용량",
+                  "value": {
+                     "used": "사용됨",
+                     "capacity": "용량"
+                  },
+                  "used": "사용됨",
+                  "free": "사용 가능"
+               },
+               "networking": {
+                  "title": "네트워킹",
+                  "hostname": "호스트 이름",
+                  "ips": "IP 주소",
+                  "dns": "DNS 서버",
+                  "defaultGateway": "기본 게이트웨이",
+                  "ipv6Enabled": {
+                     "title": "IPv6 사용",
+                     "yes": "예",
+                     "no": "아니요"
+                  },
+                  "physicalAdapters": "호스트 어댑터",
+                  "networks": "네트워크",
+                  "list": {
+                     "columns": {
+                        "name": "이름",
+                        "vms": "VM"
+                     }
+                  }
+               },
+               "storage": {
+                  "title": "스토리지",
+                  "physicalAdapters": "물리적 어댑터",
+                  "datastores": "데이터스토어",
+                  "list": {
+                     "columns": {
+                        "name": "이름",
+                        "type": "유형",
+                        "capacity": "용량",
+                        "free": "사용 가능"
+                     }
+                  }
+               }
+            },
+            "configuration": {
+               "title": "구성",
+               "haState": {
+                  "title": "vSphere HA 상태",
+                  "agentRunning": "에이전트 실행 중",
+                  "notConfigured": "구성되지 않음"
+               },
+               "imageProfile": "이미지 프로파일",
+               "vMotion": {
+                  "title": "vMotion",
+                  "supported": "지원됨",
+                  "notSupported": "지원되지 않음",
+                  "vmknic": "vMotion을 위한 가상 NIC",
+                  "yes": "예",
+                  "no": "아니요",
+                  "none": "없음"
+               }
+            },
+            "systemInformation": {
+               "title": "시스템 정보",
+               "currentDateTime": "호스트의 날짜/시간",
+               "inception": "설치 날짜",
+               "assetTag": "자산 태그",
+               "serviceTag": "서비스 태그",
+               "biosVersion": "BIOS 버전",
+               "biosReleaseDate": "BIOS 릴리스 날짜"
+            },
+            "perf": {
+               "label": "최근 1시간 성능 요약",
+               "title": "성능 요약, 최근 1시간",
+               "loading": "로드 중...",
+               "noData": "사용 가능한 성능 데이터가 없음",
+               "xAxisLabel": "시간",
+               "y1AxisLabel": "사용된 호스트 CPU(%) ",
+               "y2AxisLabel": "사용된 호스트 메모리(GB)",
+               "rightAxis": " (오른쪽 축)",
+               "cpuUsage": "사용된 호스트 CPU",
+               "memoryUsage": "사용된 호스트 메모리"
+            }
+         }
+      },
+      "manage": {
+         "title": "관리",
+         "system": {
+            "settings": "설정",
+            "tabTitle": "시스템",
+            "tabTooltip": "시스템 설정 구성",
+            "advancedSettings": {
+               "tabTitle": "고급 설정",
+               "tabTooltip": "이 호스트에 대한 고급 설정을 구성합니다.",
+               "context": {
+                  "resetToDefault": {
+                     "label": "기본값으로 재설정",
+                     "tooltip": "기본값으로 재설정합니다."
+                  }
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "이 목록의 선택된 개체에 대한 작업입니다."
+               },
+               "resetToDefault": {
+                  "successNotification": "{{name}}을(를) 기본값 {{value}}(으)로 재설정했습니다.",
+                  "failureNotification": "{{name}}을(를) 기본값 {{value}}(으)로 재설정하지 못했습니다."
+               },
+               "change": {
+                  "title": "옵션 편집 - {{key}}",
+                  "confirm": "저장",
+                  "rejectLabel": "취소",
+                  "successMessage": "{{key}}을(를) 변경했습니다.",
+                  "failureMessage": "{{key}}을(를) 변경하지 못했습니다."
+               },
+               "edit": {
+                  "label": "옵션 편집",
+                  "tooltip": "이 옵션을 편집합니다."
+               },
+               "quickFilters": {
+                  "overridden": "재정의된 설정",
+                  "hostClient": "Host Client 설정"
+               },
+               "name": "이름",
+               "key": "키",
+               "description": "설명",
+               "value": "값",
+               "default": "기본값",
+               "overridden": "재정의됨",
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "고급 설정 그리드를 새로 고칩니다."
+               },
+               "readOnly": "읽기 전용",
+               "range": "범위",
+               "currentValue": "현재 값",
+               "newValue": "새 값",
+               "type": {
+                  "string": "(문자열)",
+                  "integer": "(정수)",
+                  "longInteger": "(긴 정수)",
+                  "float": "(부동 소수점 수)"
+               },
+               "true": "True",
+               "false": "False"
+            },
+            "autostart": {
+               "tabTitle": "자동 시작",
+               "tabTooltip": "이 호스트에 대한 자동 시작 설정 구성",
+               "edit": {
+                  "label": "설정 편집",
+                  "tooltip": "자동 시작 설정 편집"
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "자동 시작 구성 새로 고침"
+               },
+               "enabled": {
+                  "label": "사용",
+                  "true": "예",
+                  "false": "아니요"
+               },
+               "startDelay": {
+                  "label": "시작 지연"
+               },
+               "stopDelay": {
+                  "label": "중지 지연"
+               },
+               "stopAction": {
+                  "label": "작업 중지",
+                  "systemDefault": "시스템 기본값",
+                  "powerOff": "전원 끄기",
+                  "suspend": "일시 중단",
+                  "Suspend": "일시 중단",
+                  "guestShutdown": "종료"
+               },
+               "waitForHeartbeat": {
+                  "label": "하트비트 대기",
+                  "true": "예",
+                  "false": "아니요"
+               },
+               "change": {
+                  "title": "자동 시작 구성 변경",
+                  "rejectLabel": "취소",
+                  "confirmLabel": "저장",
+                  "enabled": {
+                     "label": "사용",
+                     "yes": "예",
+                     "no": "아니요"
+                  },
+                  "waitForHeartbeat": {
+                     "label": "하트비트 대기",
+                     "yes": "예",
+                     "no": "아니요"
+                  },
+                  "startDelay": {
+                     "label": "시작 지연",
+                     "seconds": "초"
+                  },
+                  "stopDelay": {
+                     "label": "중지 지연",
+                     "seconds": "초"
+                  },
+                  "stopAction": {
+                     "label": "작업 중지",
+                     "systemDefault": "시스템 기본값",
+                     "PowerOff": "전원 끄기",
+                     "Suspend": "일시 중단",
+                     "ShutDown": "종료"
+                  },
+                  "successNotification": "호스트 자동 시작 구성이 업데이트되었습니다.",
+                  "failureNotification": "호스트 자동 시작 구성을 업데이트하지 못했습니다."
+               }
+            },
+            "hardware": {
+               "tabTitle": "하드웨어",
+               "tabTooltip": "이 호스트에 대한 하드웨어를 구성합니다.",
+               "powerManagement": {
+                  "tabTitle": "전원 관리",
+                  "tabTooltip": "전원 관리",
+                  "editSettings": {
+                     "label": "정책 변경",
+                     "tooltip": "전원 관리 정책을 변경합니다."
+                  },
+                  "refresh": "새로 고침",
+                  "refreshTooltip": "전원 관리 새로 고침",
+                  "technology": {
+                     "label": "기술"
+                  },
+                  "activePolicy": {
+                     "label": "활성 정책"
+                  },
+                  "dialog": {
+                     "title": "전원 정책 변경",
+                     "confirmLabel": "확인",
+                     "cancelLabel": "취소"
+                  },
+                  "PowerPolicy": {
+                     "off": {
+                        "name": "지원되지 않음",
+                        "shortName": "지원되지 않음",
+                        "description": "호스트 전원 관리가 감지되지 않음"
+                     },
+                     "static": {
+                        "name": "고성능",
+                        "shortName": "고성능",
+                        "description": "전원 관리 기능 사용 안 함"
+                     },
+                     "dynamic": {
+                        "name": "균형 조정",
+                        "shortName": "균형 조정",
+                        "description": "성능 손실을 최소화하면서 에너지 소비 줄임"
+                     },
+                     "low": {
+                        "name": "저전력",
+                        "shortName": "저전력",
+                        "description": "성능 저하의 위험을 감수하고 에너지 소비 줄임"
+                     },
+                     "custom": {
+                        "name": "사용자 지정",
+                        "shortName": "사용자 지정",
+                        "description": "사용자가 정의한 전원 관리 정책입니다. 고급 구성을 사용할 수 있습니다."
+                     }
+                  },
+                  "columns": {
+                     "key": "키",
+                     "name": "이름",
+                     "value": "값",
+                     "default": "기본값",
+                     "overridden": "재정의됨"
+                  }
+               },
+               "pciDevices": {
+                  "tabTitle": "PCI 디바이스",
+                  "tabTooltip": "PCI 디바이스",
+                  "tooltip": "PCI 디바이스",
+                  "active": "활성",
+                  "enabled": "사용",
+                  "disabled": "사용 안 함",
+                  "notCapable": "사용할 수 없음",
+                  "reboot": "재부팅 필요",
+                  "sriov": {
+                     "title": "{{name}}에 대한 SR-IOV 구성",
+                     "onConfirm": "저장",
+                     "onReject": "취소",
+                     "enabled": {
+                        "label": "사용",
+                        "yes": "예",
+                        "no": "아니요"
+                     },
+                     "virtualFunctions": {
+                        "label": "가상 기능",
+                        "maximum": "최대 {{maxVirtualFunctionSupported}}"
+                     }
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "새로 고침",
+                        "tooltip": "고급 설정 그리드를 새로 고칩니다."
+                     },
+                     "passthrough": {
+                        "label": "패스스루 전환",
+                        "tooltip": "선택된 디바이스에 대해 패스스루 전환을 수행합니다."
+                     },
+                     "sriov": {
+                        "label": "SR-IOV 구성",
+                        "tooltip": "선택된 디바이스에 대해 SR-IOV 구성을 수행합니다."
+                     },
+                     "reboot": {
+                        "label": "호스트 재부팅",
+                        "tooltip": "호스트를 재부팅합니다."
+                     }
+                  },
+                  "datagrid": {
+                     "quickFilters": {
+                        "sriovCapable": "SR-IOV 가능",
+                        "passthroughCapable": "패스스루 가능",
+                        "sriovActive": "SR-IOV 활성",
+                        "passthroughActive": "패스스루 활성"
+                     },
+                     "columns": {
+                        "address": "주소",
+                        "description": "설명",
+                        "passthrough": "패스스루",
+                        "sriov": "SR-IOV"
+                     }
+                  },
+                  "summary": {
+                     "notSupported": "이 디바이스는 패스스루를 사용할 수 없습니다.",
+                     "notRunning": "이 디바이스는 패스스루를 사용할 수 있지만 패스스루 모드로 실행되고 있지 않습니다.",
+                     "needReboot": "이 디바이스에서 패스스루 모드로 실행을 시작하려면 호스트를 재부팅해야 합니다.",
+                     "deviceName": "디바이스 이름",
+                     "id": "ID",
+                     "deviceID": "디바이스 ID",
+                     "vendorID": "벤더 ID",
+                     "function": "기능",
+                     "bus": "버스",
+                     "vendorName": "벤더 이름",
+                     "classID": "클래스 ID",
+                     "subdeviceID": "하위 디바이스 ID",
+                     "subvendorID": "하위 벤더 ID",
+                     "slot": "슬롯"
+                  },
+                  "notifications": {
+                     "successSriov": "디바이스 {{deviceName}}에 대해 SR-IOV를 구성했습니다. 변경 내용은 호스트를 다시 시작해야 적용됩니다.",
+                     "failureSriov": "디바이스 {{deviceName}}에 대해 SR-IOV를 구성하지 못했습니다. 자세한 내용은 최근 작업을 참조하십시오.",
+                     "successSingular": "디바이스 {{deviceName}}에 대해 패스스루를 전환했습니다. 변경 내용은 호스트를 다시 시작해야 적용됩니다.",
+                     "successMultiple": "디바이스에 대해 패스스루를 전환했습니다. 변경 내용은 호스트를 다시 시작해야 적용됩니다.",
+                     "error": "패스스루 디바이스 구성 실패"
+                  }
+               }
+            },
+            "licensing": {
+               "context": {
+                  "assignLicense": {
+                     "label": "라이센스 할당",
+                     "tooltip": "이 호스트에 라이센스를 할당합니다."
+                  },
+                  "removeLicense": {
+                     "label": "라이센스 제거",
+                     "tooltip": "호스트에서 이 라이센스를 제거합니다."
+                  }
+               },
+               "tabTitle": "라이센싱",
+               "tabTooltip": "이 호스트에 대한 라이센스를 구성합니다.",
+               "name": "이름",
+               "key": "키",
+               "license": "라이센스 키",
+               "valid": "라이센스 키가 <strong>{{name}}</strong>에 유효합니다.",
+               "managedByVC": "이 호스트에 대한 라이센스는 vCenter Server에서 관리하고 있습니다.",
+               "expiration": "만료 날짜",
+               "expireNever": "없음",
+               "features": "기능",
+               "refresh": "새로 고침",
+               "refreshToolTip": "라이센스를 새로 고칩니다.",
+               "actions": "작업",
+               "actionsToolTip": "이 목록의 선택된 라이센스에 대한 작업입니다.",
+               "assign": {
+                  "title": "라이센스 할당",
+                  "hostManagedByVC": {
+                     "title": "호스트를 vCenter Server에서 관리하고 있습니다.",
+                     "confirmLabel": "닫기"
+                  },
+                  "toolTip": "이 호스트에 라이센스를 할당합니다.",
+                  "checkLicense": "라이센스 검사",
+                  "provideValidLicense": "올바른 라이센스 키를 제공하십시오.",
+                  "failedToDecode": "제공된 라이센스를 디코딩하지 못했습니다.",
+                  "assignLicense": "라이센스 할당",
+                  "invalidLicense": "올바른 라이센스 키를 제공하십시오.",
+                  "notEnoughCores": "이 호스트에는 제공된 라이센스에 유효한 개수({{licenseCores}})보다 더 많은 소켓({{cores}})이 있습니다. 다른 라이센스를 제공하십시오.",
+                  "expired": "라이센스가 만료되었습니다.",
+                  "successMessage": "라이센스 {{name}}이(가) 할당되었습니다.",
+                  "failureMessage": "라이센스 {{name}}을(를) 할당하지 못했습니다.",
+                  "rejectLabel": "취소"
+               },
+               "remove": {
+                  "title": "라이센스 제거",
+                  "remove": "제거",
+                  "removeLicense": "라이센스 제거",
+                  "toolTip": "선택한 라이센스를 제거합니다.",
+                  "content": "라이센스 <strong>{{name}}</strong>을(를) \n제거하시겠습니까?",
+                  "successMessage": "라이센스 {{key}}이(가) 제거되었습니다.",
+                  "failureMessage": "라이센스 {{key}}을(를) 제거하지 못했습니다.",
+                  "rejectLabel": "취소"
+               }
+            },
+            "packages": {
+               "tabTitle": "패키지",
+               "tabTooltip": "이 호스트에 설치된 소프트웨어를 구성합니다.",
+               "error": "사용 가능한 패키지 데이터가 없음",
+               "list": {
+                  "columns": {
+                     "name": "이름",
+                     "version": "버전",
+                     "description": "설명",
+                     "vendor": "벤더",
+                     "installDate": "설치 날짜"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "새로 고침",
+                        "tooltip": "패키지 목록을 새로 고칩니다."
+                     },
+                     "update": {
+                        "label": "업데이트 설치",
+                        "tooltip": "이 호스트에 업데이트를 설치합니다."
+                     }
+                  }
+               }
+            },
+            "services": {
+               "tabTitle": "서비스",
+               "tabTooltip": "이 호스트에서 실행 중인 서비스를 구성합니다.",
+               "name": "이름:",
+               "restart": "다시 시작",
+               "stop": "중지",
+               "start": "시작",
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "이벤트 테이블을 새로 고칩니다."
+               },
+               "actions": "작업",
+               "actionsToolTip": "선택된 서비스에 대한 작업입니다.",
+               "name": "이름",
+               "description": "설명",
+               "base": "기준 시스템",
+               "firewallRules": "방화벽 규칙",
+               "status": {
+                  "label": "상태",
+                  "running": "실행 중",
+                  "stopped": "중지됨"
+               },
+               "source": "소스",
+               "startSuccess": "서비스 {{name}}이(가) 시작되었습니다.",
+               "startFailure": "서비스 {{name}}을(를) 시작하지 못했습니다.",
+               "restartSuccess": "서비스 {{name}}이(가) 다시 시작되었습니다.",
+               "restartFailure": "서비스 {{name}}을(를) 다시 시작하지 못했습니다.",
+               "stopSuccess": "서비스 {{name}}이(가) 중지되었습니다.",
+               "stopFailure": "서비스 {{name}}을(를) 중지하지 못했습니다."
+            },
+            "timeAndDate": {
+               "context": {
+                  "ntpService": {
+                     "label": "NTP 서비스",
+                     "tooltip": "호스트의 NTP 서비스를 관리합니다."
+                  }
+               },
+               "tabTitle": "시간 및 날짜",
+               "tabTooltip": "이 호스트에 대한 시간 및 날짜를 구성합니다.",
+               "unknown": "알 수 없음",
+               "none": "없음",
+               "ntpd": {
+                  "running": "실행 중",
+                  "stopped": "중지됨",
+                  "enabled": "사용",
+                  "disabled": "사용 안 함"
+               },
+               "actions": "작업",
+               "actionsTooltip": "시간 구성에 대한 작업입니다.",
+               "servers": "NTP 서버",
+               "clientStatus": "NTP 클라이언트 상태",
+               "serviceStatus": "NTP 서비스 상태",
+               "currentDateTime": "현재 날짜 및 시간",
+               "editSettings": "설정 편집",
+               "editSettingsTooltip": "구성 설정을 편집합니다.",
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "시간 및 날짜 구성을 새로 고칩니다."
+               },
+               "dialog": {
+                  "confirmLabel": "저장",
+                  "rejectLabel": "취소",
+                  "title": "시간 구성 편집",
+                  "header": "이 호스트의 날짜 및 시간을 설정할 방법을 지정합니다.",
+                  "manual": "이 호스트에서 날짜 및 시간 수동 구성",
+                  "ntpdStartPolicy": {
+                     "on": {
+                        "description": "호스트 시스템과 함께 시작 및 중지",
+                        "label": "호스트와 함께 시작 및 중지"
+                     },
+                     "off": {
+                        "description": "사용자가 서비스를 수동으로 시작 및 중지",
+                        "label": "수동으로 시작 및 중지"
+                     },
+                     "auto": {
+                        "description": "포트가 열려 있는 경우 시작하고, 모든 포트가 닫혀 있는 경우 중지",
+                        "label": "포트 사용과 함께 시작 및 중지"
+                     }
+                  },
+                  "ntp": "네트워크 시간 프로토콜 사용(NTP 클라이언트 사용)",
+                  "ntpPolicy": "NTP 서비스 시작 정책",
+                  "ntpServers": "NTP 서버",
+                  "ntpServersLabel": "쉼표로 서버 구분(예: 10.31.21.2, fe00::2800)",
+                  "validation": {
+                     "emptyDate": "날짜 및 시간을 입력하십시오."
+                  }
+               }
+            },
+            "security": {
+               "tabTitle": "보안 및 사용자",
+               "tabTooltip": "이 호스트의 보안 설정 및 사용자 권한을 구성합니다.",
+               "acceptance": {
+                  "tabTitle": "수락 수준",
+                  "tabTooltip": "이 호스트의 수락 수준을 구성합니다.",
+                  "levels": {
+                     "partner": {
+                        "name": "파트너",
+                        "description": "파트너 및 VMware의 서명 및 인증이 있는 VIB만 수락합니다."
+                     },
+                     "community": {
+                        "name": "커뮤니티",
+                        "description": "서명되지 않은 VIB를 포함하여 모든 VIB를 수락합니다."
+                     },
+                     "vmware_accepted": {
+                        "name": "VMware 수락",
+                        "description": "VMware에서 수락한 VIB를 수락합니다."
+                     },
+                     "vmware_certified": {
+                        "name": "VMware 인증",
+                        "description": "VMware에서 서명하고 인증한 VIB만 수락합니다."
+                     }
+                  },
+                  "editSettings": {
+                     "title": "수락 수준 설정 편집",
+                     "confirmLabel": "저장",
+                     "rejectLabel": "취소",
+                     "failureNotification": "수락 수준을 {{level}}(으)로 설정하지 못했습니다.",
+                     "successNotification": "호스트의 수락 수준이 {{level}}(으)로 변경되었습니다."
+                  },
+                  "stack": {
+                     "acceptanceLevel": {
+                        "label": "수락 수준",
+                        "partner": "파트너",
+                        "community": "커뮤니티",
+                        "vmware_accepted": "VMware 수락",
+                        "vmware_certified": "VMware 인증"
+                     }
+                  },
+                  "actions": {
+                     "editSettings": {
+                        "label": "설정 편집",
+                        "tooltip": "이 호스트의 수락 수준을 변경합니다."
+                     },
+                     "refresh": {
+                        "label": "새로 고침",
+                        "tooltip": "이 호스트의 수락 수준 정보를 새로 고칩니다."
+                     }
+                  }
+               },
+               "authentication": {
+                  "tabTitle": "인증",
+                  "tabTooltip": "이 호스트에 대한 인증을 구성합니다.",
+                  "leaveDomain": {
+                     "title": "도메인 탈퇴",
+                     "content": "이 호스트를 도메인 <strong>{{domain}}</strong>에서 제거하시겠습니까?",
+                     "confirmLabel": "예",
+                     "rejectLabel": "취소",
+                     "failureMessage": "도메인 {{domain}}에서 탈퇴하지 못했습니다. {{reason}}",
+                     "successMessage": "호스트가 도메인 {{domain}}에서 탈퇴했습니다."
+                  },
+                  "joinDomain": {
+                     "title": "도메인 가입",
+                     "confirmLabel": "도메인 가입",
+                     "rejectLabel": "취소",
+                     "domainLabel": "도메인 이름",
+                     "usernameLabel": "사용자 이름",
+                     "passwordLabel": "암호",
+                     "confirmPasswordLabel": "암호 확인",
+                     "username": "사용자 이름",
+                     "password": "암호",
+                     "useAuthProxyLabel": "인증 프록시 사용",
+                     "authProxyLabel": "인증 프록시",
+                     "successMessage": "호스트가 도메인 {{domain}}에 가입되었습니다.",
+                     "failureMessage": "호스트가 도메인 {{domain}}에 가입하지 못했습니다. {{reason}}",
+                     "errorNoDomain": "이 호스트를 가입할 도메인 서버를 지정하십시오.",
+                     "errorAuthProxy": "사용할 인증 프록시를 지정하십시오.",
+                     "errorNoPassword": "도메인 컨트롤러 계정 암호를 지정하십시오.",
+                     "errorNoUsername": "도메인 컨트롤러 계정 사용자 이름을 지정하십시오.",
+                     "errorPasswordsDontMatch": "지정한 도메인 컨트롤러 암호가 일치하지 않습니다."
+                  },
+                  "stack": {
+                     "activeDirectoryEnabled": {
+                        "label": "Active Directory 사용",
+                        "true": "예",
+                        "false": "아니요"
+                     },
+                     "smartCardAuthenticationEnabled": {
+                        "label": "스마트 카드 인증 사용",
+                        "true": "예",
+                        "false": "아니요"
+                     },
+                     "joinedDomain": {
+                        "label": "도메인 가입"
+                     },
+                     "domainMembershipStatus": {
+                        "label": "도메인 멤버 자격 상태",
+                        "ok": "확인",
+                        "clientTrustBroken": "클라이언트 트러스트 손상됨",
+                        "inconsistentTrust": "일치하지 않는 트러스트",
+                        "noServers": "서버 없음",
+                        "otherProblem": "기타 문제",
+                        "serverTrustBroken": "서버 트러스트 손상됨",
+                        "unknown": "알 수 없음"
+                     },
+                     "trustedDomain": {
+                        "label": "트러스트된 도메인"
+                     }
+                  },
+                  "actions": {
+                     "join": {
+                        "label": "도메인 가입",
+                        "tooltip": "Active Directory 도메인에 가입합니다."
+                     },
+                     "leave": {
+                        "label": "도메인 탈퇴",
+                        "tooltip": "이 호스트를 도메인에서 제거합니다."
+                     },
+                     "refresh": {
+                        "label": "새로 고침",
+                        "tooltip": "이 호스트의 인증 정보를 새로 고칩니다."
+                     }
+                  }
+               },
+               "lockdown": {
+                  "tabTitle": "잠금 모드",
+                  "tabTooltip": "이 호스트의 잠금 모드를 구성합니다.",
+                  "lockdownStrict": {
+                     "name": "엄격 잠금",
+                     "description": "사용자가 vCenter Server에서만 로그인하도록 제한합니다."
+                  },
+                  "lockdownNormal": {
+                     "name": "정상 잠금",
+                     "description": "사용자가 DCUI 및 vCenter Server를 통해 로그인할 수 있습니다."
+                  },
+                  "lockdownDisabled": {
+                     "name": "사용 안 함",
+                     "description": "잠금 모드를 사용하지 않도록 설정합니다."
+                  },
+                  "changeDialog": {
+                     "title": "잠금 모드 변경",
+                     "confirmLabel": "변경",
+                     "rejectLabel": "취소"
+                  },
+                  "userDialog": {
+                     "title": "예외 사용자 추가",
+                     "confirmLabel": "예외 추가",
+                     "rejectLabel": "취소",
+                     "invalidUser": "올바른 사용자 이름을 입력하십시오.",
+                     "userName": "사용자 이름",
+                     "successNotification": "잠금 모드 예외 사용자 목록에 {{user}}을(를) 추가했습니다.",
+                     "failureNotification": "잠금 모드 예외 사용자 목록에 {{user}}을(를) 추가하지 못했습니다."
+                  },
+                  "removeExceptionUser": {
+                     "title": "확인하십시오.",
+                     "content": "잠금 모드 예외 목록에서 사용자 {{name}}을(를) 제거하시겠습니까?",
+                     "confirmLabel": "예",
+                     "rejectLabel": "취소",
+                     "successNotification": "예외 사용자 {{name}}을(를) 제거했습니다.",
+                     "failureNotification": "예외 사용자 {{name}}을(를) 제거하지 못했습니다."
+                  },
+                  "failureNotification": "잠금 모드로 전환하지 못했습니다. {{message}}",
+                  "successNotification": "잠금 모드로 전환되었습니다.",
+                  "stack": {
+                     "lockdownMode": {
+                        "label": "잠금 모드",
+                        "lockdownStrict": "엄격 잠금 사용",
+                        "lockdownNormal": "정상 잠금 사용",
+                        "lockdownDisabled": "사용 안 함"
+                     },
+                     "exceptionUsers": {
+                        "label": "예외 사용자"
+                     }
+                  },
+                  "userList": {
+                     "noUsers": "예외 사용자 없음",
+                     "columns": {
+                        "name": "이름"
+                     }
+                  },
+                  "actions": {
+                     "refresh": {
+                        "label": "새로 고침",
+                        "tooltip": "이 호스트의 인증서 정보를 새로 고칩니다."
+                     },
+                     "removeUser": {
+                        "label": "사용자 예외 제거",
+                        "tooltip": "잠금 모드에 대한 예외 목록에서 사용자를 제거합니다."
+                     },
+                     "addUser": {
+                        "label": "예외 사용자 추가",
+                        "tooltip": "잠금 모드에 대한 예외 목록에 사용자를 추가합니다."
+                     },
+                     "configureLockdown": {
+                        "label": "설정 편집",
+                        "tooltip": "이 호스트의 잠금 모드를 구성합니다."
+                     }
+                  }
+               },
+               "users": {
+                 "tabTitle": "사용자",
+                 "tabTooltip": "시스템 사용자를 관리합니다.",
+                 "noUsers": "사용자 없음",
+                 "actions": {
+                   "refresh": {
+                      "label": "새로 고침",
+                      "tooltip": "사용자 목록을 새로 고칩니다."
+                   },
+                   "removeUser": {
+                      "label": "사용자 제거",
+                      "tooltip": "사용자를 제거합니다."
+                   },
+                   "addUser": {
+                      "label": "사용자 추가",
+                      "tooltip": "사용자를 추가합니다."
+                   },
+                   "updateUser": {
+                      "label": "사용자 편집",
+                      "tooltip": "사용자 정보 수정"
+                   }
+                 },
+                 "grid": {
+                    "username": "사용자 이름",
+                    "description": "설명"
+                 },
+                 "addUser": {
+                    "title": "사용자를 추가합니다.",
+                    "userNameBlockLabel": "사용자 이름(필수)",
+                    "userDescriptionBlockLabel": "설명",
+                    "userPasswordBlockLabel": "암호(필수)",
+                    "userConfirmPasswordBlockLabel": "암호 확인(필수)",
+                    "confirmLabel": "추가",
+                    "rejectLabel": "취소",
+                    "failureNotification": "사용자를 추가하지 못했습니다. {{error}}",
+                    "successNotification": "사용자 {{user}}이(가) 추가되었습니다."
+                 },
+                 "updateUser": {
+                    "title": "사용자 편집",
+                    "userNameBlockLabel": "사용자 이름",
+                    "userDescriptionBlockLabel": "설명",
+                    "userPasswordBlockLabel": "암호",
+                    "userConfirmPasswordBlockLabel": "암호 확인",
+                    "confirmLabel": "저장",
+                    "rejectLabel": "취소",
+                    "failureNotification": "사용자를 업데이트하지 못했습니다. {{error}}",
+                    "successNotification": "사용자 {{user}}이(가) 업데이트되었습니다."
+                 },
+                 "removeUser": {
+                    "title": "주의",
+                    "content": "사용자 <strong>{{user}}</strong>을(를) 제거하시겠습니까?",
+                    "confirmLabel": "예",
+                    "rejectLabel": "취소",
+                    "failureNotification": "사용자 {{user}}을(를) 제거하지 못했습니다.",
+                    "successNotification": "사용자 {{user}}을(를) 제거했습니다."
+                 }
+               },
+               "roles": {
+                 "tabTitle": "역할",
+                 "tabTooltip": "역할을 관리합니다.",
+                 "actions": {
+                   "refresh": {
+                      "label": "새로 고침",
+                      "tooltip": "역할 목록을 새로 고칩니다."
+                   },
+                   "removeRole": {
+                      "label": "역할 제거",
+                      "tooltip": "권한 부여 역할을 제거합니다."
+                   },
+                   "addRole": {
+                      "label": "역할 추가",
+                      "tooltip": "권한 부여 역할을 추가합니다."
+                   },
+                   "updateRole": {
+                      "label": "역할 편집",
+                      "tooltip": "권한 부여 역할을 수정합니다."
+                   }
+                 },
+                 "grid": {
+                    "name": "이름",
+                    "summary": "요약"
+                 },
+                 "addRole": {
+                    "title": "역할 추가",
+                    "roleNameBlockLabel": "역할 이름(필수)",
+                    "rolePrivilegesBlockLabel": "권한",
+                    "confirmLabel": "추가",
+                    "rejectLabel": "취소",
+                    "validation": {
+                       "nameExists": "이름이 {{name}}인 역할이 이미 있습니다. 다른 이름을 선택하십시오."
+                    },
+                    "failureNotification": "역할을 추가하지 못했습니다. {{error}}",
+                    "successNotification": "역할 {{role}}이(가) 추가되었습니다."
+                 },
+                 "updateRole": {
+                    "title": "역할 편집",
+                    "roleNameBlockLabel": "역할 이름(필수)",
+                    "rolePrivilegesBlockLabel": "권한",
+                    "confirmLabel": "저장",
+                    "rejectLabel": "취소",
+                    "failureNotification": "역할을 업데이트하지 못했습니다. {{error}}",
+                    "successNotification": "역할 {{role}}이(가) 업데이트되었습니다."
+                 },
+                 "removeRole": {
+                    "title": "주의",
+                    "content": "역할 <strong>{{roleName}}</strong>을(를) 제거하시겠습니까?",
+                    "option": "사용되지 않은 경우에만 제거",
+                    "confirmLabel": "예",
+                    "rejectLabel": "취소",
+                    "failureNotification": "역할 {{role}}을(를) 제거하지 못했습니다.",
+                    "successNotification": "역할 {{role}}이(가) 제거되었습니다."
+                 }
+               },
+               "certificates": {
+                  "tabTitle": "인증서",
+                  "tabTooltip": "이 호스트의 SSL 인증서를 구성합니다.",
+                  "warningVC": "이 호스트의 인증서는 vCenter Server에서 관리하고 있으므로 Host Client를 사용하여 구성할 수 없습니다.",
+                  "import": {
+                     "title": "인증서 가져오기",
+                     "confirmLabel": "가져오기",
+                     "rejectLabel": "취소",
+                     "invalidCert": "제공한 인증서가 PEM 형식이 아닙니다. 전체 인증서를 붙여넣으십시오.",
+                     "certLabel": "인증서",
+                     "certTitle": "PEM 형식의 인증서를 여기에 붙여넣으십시오.",
+                     "successMessage": "인증서가 업데이트되었습니다. 브라우저를 새로 고치십시오.",
+                     "failureMessage": "새 SSL 인증서를 가져오지 못했습니다.",
+                     "reboot": {
+                        "title": "재부팅 필요",
+                        "content": "새 인증서를 로드하려면 호스트를 재부팅해야 합니다. 지금 재부팅하시겠습니까?",
+                        "confirmLabel": "재부팅",
+                        "rejectLabel": "나중에"
+                     }
+                  },
+                  "stack": {
+                     "notAfter": {
+                        "label": "다음 날짜까지 유효:"
+                     },
+                     "notBefore": {
+                        "label": "다음 날짜부터 유효"
+                     },
+                     "subject": {
+                        "label": "제목"
+                     },
+                     "issuer": {
+                        "label": "발급자"
+                     },
+                     "unknown": "알 수 없음"
+                  },
+                  "actions": {
+                     "import": {
+                        "label": "새 인증서 가져오기",
+                        "tooltip": "이 호스트의 새 SSL 인증서를 가져옵니다."
+                     },
+                     "genCSR": {
+                        "copyToClipboard": "클립보드에 복사",
+                        "title": "인증서 서명 요청 결과",
+                        "close": "닫기",
+                        "labelIPBased": "IP 서명 요청 생성",
+                        "labelHostnameBased": "FQDN 서명 요청 생성",
+                        "tooltip": "인증서 서명 요청 생성"
+                     },
+                     "refresh": {
+                        "label": "새로 고침",
+                        "tooltip": "이 호스트의 인증서 정보를 새로 고칩니다."
+                     }
+                  }
+               }
+            },
+            "swap": {
+               "tabTitle": "스왑",
+               "tabTooltip": "이 호스트의 시스템 스왑을 구성합니다.",
+               "localSwap": "로컬 스왑",
+               "localSwapEnabled": "로컬 스왑 사용",
+               "hostCache": "호스트 캐시",
+               "hostCacheEnabled": "호스트 캐시 사용",
+               "datastore": "데이터스토어",
+               "enabled": "사용",
+               "true": "예",
+               "false": "아니요",
+               "none": "없음",
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "스왑 구성을 새로 고칩니다."
+               },
+               "editSettings": {
+                  "label": "설정 편집",
+                  "tooltip": "시스템 스왑 구성을 변경합니다."
+               },
+               "dialog": {
+                  "title": "스왑 구성 편집",
+                  "rejectLabel": "취소",
+                  "confirmLabel": "저장",
+                  "successNotification": "호스트 스왑 구성이 업데이트되었습니다.",
+                  "failureNotification": "호스트 스왑 구성을 업데이트하지 못했습니다.",
+                  "mustSelect": "스왑 디바이스를 하나 이상 사용하도록 설정해야 합니다."
+               }
+            }
+         },
+         "changeUsername": {
+            "dialog": {
+               "nonAscii": "사용자 이름에 잘못된 문자가 있습니다. 하위 ASCII 문자만 사용하십시오.",
+               "badCharacters": "사용자 이름에 잘못된 문자가 있습니다. 영숫자 문자만 사용하십시오."
+            }
+         },
+         "changePassword": {
+            "menu": {
+               "label": "암호 변경"
+            },
+            "dialog": {
+               "title": "암호 변경",
+               "newPassword": "새 암호",
+               "newPasswordAgain": "새 암호 다시 입력",
+               "confirmLabel": "암호 변경",
+               "rejectLabel": "취소",
+               "noMatch": "암호가 일치하지 않습니다.",
+               "nonAscii": "암호에 잘못된 문자가 있습니다. 소문자 ASCII 문자만 사용하십시오.",
+               "success": "{{username}}의 암호가 변경되었습니다.",
+               "blank": "암호가 입력되지 않았습니다.",
+               "failed": "암호를 변경하지 못했습니다."
+            }
+         }
+      },
+      "sshConsole": {
+         "menu": {
+            "label": "SSH 콘솔",
+            "tooltip": "이 호스트에 대한 SSH 콘솔 열기",
+            "labelGetChrome": "Chrome에 대한 SSH 가져오기"
+         }
+      },
+      "scriptingConsole": {
+         "menu": {
+            "label": "스크립팅 콘솔",
+            "tooltip": "이 호스트에 대해 수행할 스크립팅 작업을 수행할 콘솔을 엽니다."
+         },
+         "actionBar": {
+            "runButton": {
+               "label": "실행",
+               "tooltip": "스크립트 실행"
+            },
+            "clearButton": {
+               "label": "지우기",
+               "tooltip": "로그 창 지우기"
+            }
+         }
+      },
+      "supportBundle": {
+         "successNotification": "지원 번들 생성이 완료되었습니다. {{url}}에서 번들을 다운로드할 수 있습니다.",
+         "failureNotification": "지원 번들을 생성하지 못했습니다. {{error}}",
+         "dialog": {
+            "title": "지원 번들 완료",
+            "content": "지원 번들 생성이 완료되었습니다. <a href='{{url}}'>여기</a>에서 지원 번들을 다운로드할 수 있습니다.\n\n지원 번들 생성 작업에서 해당 지원 번들의 다운로드 URL을 확인할 수 있습니다.\n\n15분 후 해당 번들은 호스트에서 자동으로 제거됩니다.",
+            "confirmLabel": "다운로드",
+            "rejectLabel": "해제"
+         },
+         "menu": {
+            "label": "지원 번들 생성",
+            "tooltip": "이 호스트에서 지원 번들을 생성합니다."
+         }
+      },
+      "monitor": {
+         "title": "{{hostname}} - 모니터",
+         "performance": {
+            "tabTitle": "성능",
+            "tabTooltip": "시스템의 성능을 모니터링합니다.",
+            "refresh": {
+               "label": "새로 고침",
+               "tooltip": "성능 차트 새로 고침"
+            },
+            "configure": {
+               "action": {
+                  "label": "VM 선택",
+                  "tooltip": "성능 차트에 데이터를 표시할 VM을 구성합니다."
+               },
+               "dialog": {
+                  "title": "VM 선택",
+                  "rejectLabel": "취소",
+                  "confirmLabel": "저장"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "데이터 가용성",
+                  "message": "사용할 수 있는 데이터 범위가 왜 '최근 1시간'뿐입니까? ESXi 호스트는 최근 1시간 동안의 기록 데이터만 저장합니다. 더 넓은 범위의 데이터를 보려면 vCenter Server를 사용해야 합니다."
+               }
+            },
+            "grid": {
+               "name": "이름",
+               "unit": "단위",
+               "average": "평균",
+               "maximum": "최대",
+               "minimum": "최소",
+               "latest": "최신"
+            },
+            "noMatches": "필터 '{{search}}'과(와) 일치하는 데이터 계열이 없습니다.",
+            "colors": {
+               "vmware": "기본 색상",
+               "highContrast": "고대비 색상"
+            },
+            "filter": {
+               "type": "필터 유형",
+               "cpuFilter": "CPU 필터",
+               "time": "시간"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "모두",
+                     "hostDropdownTitle": "호스트",
+                     "allCoresDropdownTitle": "모든 PCPU",
+                     "allPackagesDropdownTitle": "모든 패키지",
+                     "packageDropdownTitle": "패키지 {{pkg}} 코어",
+                     "custom": "사용자 지정",
+                     "seriesLabel": "PCPU {{core}}",
+                     "vmSeriesLabel": "VM - {{name}}",
+                     "packageSeriesLabel": "패키지 {{pkg}}",
+                     "y1AxisLabel": "사용된 호스트 CPU(%) ",
+                     "xAxisLabel": "시간"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "메모리",
+                     "seriesLabel": "사용된 호스트 메모리",
+                     "vmSeriesLabel": "VM - {{name}}",
+                     "y1AxisLabel": "사용된 호스트 메모리(GB)",
+                     "xAxisLabel": "시간"
+                  }
+               },
+               "cpuAndMemory": {
+                  "dropdownTitle": "CPU + 메모리 복합"
+               },
+               "network": {
+                  "dropdownTitle": "네트워크",
+                  "usageSeriesLabel": "총 네트워크 사용량",
+                  "vmUsageSeriesLabel": "총 네트워크 사용량 - {{name}}",
+                  "transmitSeriesLabel": "총 전송 속도",
+                  "receiveSeriesLabel": "총 수신 속도",
+                  "nicTransmitRateSeriesLabel": "전송 속도 - {{nic}}",
+                  "nicReceiveRateSeriesLabel": "수신 속도 - {{nic}",
+                  "y1AxisLabel": "전송/수신 속도(Mbps)",
+                  "y2AxisLabel": "수량",
+                  "xAxisLabel": "시간"
+               },
+               "disk": {
+                  "dropdownTitle": "디스크",
+                  "usageSeriesLabel": "총 디스크 사용량",
+                  "readRateSeriesLabel": "총 읽기 속도",
+                  "writeRateSeriesLabel": "총 쓰기 속도",
+                  "diskReadRateSeriesLabel": "읽기 속도 - {{disk}}",
+                  "diskWriteRateSeriesLabel": "쓰기 속도 - {{disk}}",
+                  "vmRateSeriesLabel": "총 디스크 사용량 - {{name}}",
+                  "maxLatencySeriesLabel": "최대 지연 시간",
+                  "y1AxisLabel": "데이터 속도(MB/s)",
+                  "y2AxisLabel": "지연 시간(ms)",
+                  "xAxisLabel": "시간"
+               },
+               "scale": {
+                  "lastHour": "최근 1시간"
+               }
+            }
+         },
+         "logs": {
+            "context": {
+               "openInNewWindow": {
+                  "label": "새 창에 열기",
+                  "tooltip": "이 로그를 새 창에서 엽니다."
+               }
+            },
+            "descriptions": {
+               "vmkernel": "VMkernel 하위 시스템 정보",
+               "vpxa": "vCenter 에이전트 로그",
+               "hostd": "호스트 에이전트 로그",
+               "dhclient": "DHCP 클라이언트 로그",
+               "esxupdate": "ESX 업데이트 로그 파일",
+               "vmauthd": "vMotion 인증 데몬 로그",
+               "sysboot": "시스템 부트 로그",
+               "vmkeventd": "VMkernel 이벤트 데몬 로그",
+               "vobd": "VMware 관찰 데몬 로그",
+               "auth": "인증 하위 시스템 로그",
+               "fdm": "Fault Tolerance 관리 에이전트 로그",
+               "syslog": "일반 시스템 로그",
+               "vmkwarning": "VMkernel 주의 로그",
+               "vmkdevmgr": "VMkernel 디바이스 관리자 로그",
+               "shell": "ESXi Shell 작업 로그"
+            },
+            "tabTitle": "로그",
+            "tabTooltip": "시스템 로그 보기",
+            "noLogSelected": "선택된 로그 없음",
+            "actionBar": {
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택된 로그 파일에 대한 작업입니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "선택한 로그 파일을 새로 고칩니다."
+               },
+               "close": {
+                  "label": "닫기",
+                  "tooltip": "이 창을 닫습니다."
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "로그",
+                  "description": "설명"
+               }
+            }
+         },
+         "hardware": {
+            "tabTitle": "하드웨어",
+            "tabTooltip": "시스템의 하드웨어를 모니터링합니다.",
+            "sensors": {
+               "alt": "시스템 센서",
+               "tabTitle": "시스템 센서",
+               "tabTooltip": "시스템 센서",
+               "type": "범주",
+               "health": "상태",
+               "fru": "필드 대체 가능한 단위",
+               "lastUpdated": "마지막 업데이트",
+               "noSensors": "사용 가능한 센서 데이터가 없음",
+               "currentReading": "현재 수치",
+               "eventLogEntries": "이벤트 로그 항목",
+               "notifications": {
+                  "noIPMI": "이 시스템에 IPMI 기능이 없습니다. 센서 데이터가 검색될 수 있도록 드라이버를 설치해야 할 수 있습니다."
+               },
+               "discreteSensorStates": {
+                  "DMI-discrete": {
+                     "0": "유휴 상태로 전환",
+                     "1": "활성 상태로 전환",
+                     "2": "사용 중 상태로 전환"
+                  },
+                  "assert-discrete": {
+                     "0": "상태 비활성화됨",
+                     "1": "상태 활성화됨"
+                  },
+                  "predictive-discrete": {
+                     "0": "예측 오류 비활성화됨",
+                     "1": "예측 오류 활성화됨"
+                  },
+                  "limit-discrete": {
+                     "0": "제한을 초과하지 않았습니다.",
+                     "1": "제한을 초과했습니다."
+                  },
+                  "performance-discrete": {
+                     "0": "성능 충족",
+                     "1": "성능 저하"
+                  },
+                  "severity-discrete": {
+                     "0": "양호 상태로 전환",
+                     "1": "양호 상태에서 위험하지 않음 상태로 전환",
+                     "2": "덜 심각함 상태에서 위험 상태로 전환",
+                     "3": "덜 심각함 상태에서 복구할 수 없음 상태로 전환",
+                     "4": "더 심각함 상태에서 위험하지 않음 상태로 전환",
+                     "5": "복구할 수 없음 상태에서 위험 상태로 전환",
+                     "6": "복구할 수 없음 상태로 전환",
+                     "7": "모니터",
+                     "8": "정보"
+                  },
+                  "present-discrete": {
+                     "0": "디바이스 제거됨",
+                     "1": "디바이스 삽입됨"
+                  },
+                  "enabled-discrete": {
+                     "0": "디바이스 사용되지 않도록 설정됨",
+                     "1": "디바이스 사용되도록 설정됨"
+                  },
+                  "availability-discrete": {
+                     "0": "실행 중 상태로 전환",
+                     "1": "테스트 중 상태로 전환",
+                     "2": "전원 꺼짐 상태로 전환",
+                     "3": "온라인 상태로 전환",
+                     "4": "오프라인 상태로 전환",
+                     "5": "사용 안 함 상태로 전환",
+                     "6": "저하됨 상태로 전환",
+                     "7": "절전 상태로 전환",
+                     "8": "설치 오류"
+                  },
+                  "redundancy-discrete": {
+                     "0": "완전 중복됨",
+                     "1": "중복성 손실됨",
+                     "2": "중복성 저하됨",
+                     "3": "중복에서 중복되지 않은 충분한 리소스로 전환",
+                     "4": "부족에서 중복되지 않은 충분한 리소스로 전환",
+                     "5": "중복되지 않은 부족한 리소스",
+                     "6": "완전 중복됨에서 중복성 저하됨으로 전환",
+                     "7": "중복되지 않음에서 중복성 저하됨으로 전환"
+                  },
+                  "ACPI-discrete": {
+                     "0": "D0 전원 상태",
+                     "1": "D1 전원 상태",
+                     "2": "D2 전원 상태",
+                     "3": "D3 전원 상태",
+                     "157": "알 수 없는 상태"
+                  },
+                  "watchdog": {
+                     "0": "타이머 만료됨",
+                     "1": "재부팅됨",
+                     "2": "전원 끄기",
+                     "3": "전원 주기"
+                  },
+                  "int-drive": {
+                     "0": "있음",
+                     "1": "드라이브 장애",
+                     "2": "예측 오류",
+                     "3": "핫 스패어",
+                     "4": "일관성 검사 진행 중",
+                     "5": "위험한 어레이",
+                     "6": "실패한 어레이",
+                     "7": "다시 빌드 진행 중",
+                     "8": "다시 빌드 중단됨"
+                  },
+                  "cable": {
+                     "0": "있음/연결됨",
+                     "1": "없음/구성 오류"
+                  },
+                  "available-discrete": {
+                     "0": "디바이스 없음",
+                     "1": "디바이스 있음"
+                  }
+               },
+               "state": {
+                  "green": "녹색",
+                  "red": "빨간색",
+                  "yellow": "노란색",
+                  "unknown": "알 수 없음"
+               },
+               "list": {
+                  "columns": {
+                     "sensor": "센서",
+                     "id": "ID",
+                     "category": "범주",
+                     "health": "상태",
+                     "current": "현재 수치",
+                     "selEntries": "SEL 항목",
+                     "updated": "마지막 업데이트",
+                     "hasFRU": "FRU 데이터",
+                     "type": "유형/단위"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "새로 고침",
+                        "tooltip": "센서 테이블을 새로 고칩니다. 참고: 실제 업데이트 속도는 호스트의 내부 시스템에 의해 제한되므로, 여기서 새로 고칠 경우 업데이트된 데이터가 생성되지 않을 수도 있습니다."
+                     },
+                     "clearSEL": {
+                        "label": "이벤트 로그 지우기",
+                        "tooltip": "시스템 이벤트 로그 지우기"
+                     }
+                  }
+               }
+            },
+            "storage": {
+               "alt": "스토리지",
+               "tabTitle": "스토리지",
+               "tabTooltip": "스토리지 상태 데이터",
+               "operationalInfo": "추가 정보",
+               "noData": "사용 가능한 데이터가 없음",
+               "statusTitle": "상태",
+               "status": {
+                  "Green": "녹색",
+                  "Red": "빨간색",
+                  "Yellow": "노란색",
+                  "Unknown": "알 수 없음"
+               },
+               "notifications": {
+                  "noSFCBD": "SFCBD(Small Footprint CIM Broker Daemon)가 실행 중이 아닙니다. 스토리지 상태 데이터가 이 데몬에 의해 보고되었습니다. 이 서비스 사용에 관한 정보는 <a href=\"http://kb.vmware.com/kb/1025757\" target=\"_blank\">이 KB 문서</a>를 참조하십시오.",
+                  "noReportedData": "SFCBD(Small Footprint CIM Broker Daemon)가 실행 중이나 데이터가 보고되지 않았습니다. 스토리지 어댑터에 대해 CIM 제공자를 설치해야 할 수 있습니다."
+               },
+               "list": {
+                  "columns": {
+                     "name": "이름",
+                     "status": "상태",
+                     "description": "설명"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "새로 고침",
+                        "tooltip": "센서 테이블을 새로 고칩니다. 참고: 실제 업데이트 속도는 호스트의 내부 시스템에 의해 제한되므로, 여기서 새로 고칠 경우 업데이트된 데이터가 생성되지 않을 수도 있습니다."
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "tabTitle": "이벤트",
+            "tabTooltip": "시스템 이벤트",
+            "type": "유형",
+            "time": "시간",
+            "virtualMachine": "가상 시스템",
+            "searchKB": "기술 자료",
+            "searchKBLink": "이 이벤트에 대한 VMware.com 온라인 기술 자료를 검색하려면 여기를 클릭하십시오.",
+            "event": "이벤트",
+            "time": "시간",
+            "type": "유형",
+            "previousPage": "이전 페이지",
+            "nextPage": "다음 페이지",
+            "refresh": "새로 고침",
+            "perPage": "페이지당 {{num}}개",
+            "none": "없음",
+            "actions": {
+               "label": "작업",
+               "tooltip": "선택된 이벤트와 연결된 개체 작업"
+            },
+            "refresh": {
+               "label": "새로 고침",
+               "tooltip": "이벤트 테이블을 새로 고칩니다."
+            }
+         },
+         "notifications": {
+            "tabTitle": "알림",
+            "tabTooltip": "시스템 알림",
+            "suggestedAction": "제안된 작업",
+            "actionBar": {
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "알림 새로 고침"
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택한 알림에 대한 작업"
+               }
+            },
+            "grid": {
+               "notification": "알림",
+               "type": "유형"
+            }
+         },
+         "tasks": {
+            "alt": "작업",
+            "tabTitle": "작업",
+            "tabTooltip": "작업",
+            "noTasks": "작업 없음",
+            "key": "키",
+            "description": "설명",
+            "state": "상태",
+            "errors": "오류",
+            "result": "결과"
+         }
+      },
+      "state": {
+         "inMaintenanceMode": "유지 보수 모드",
+         "normal": "보통",
+         "connected": "다음에서 vCenter Server에 연결됨",
+         "disconnected": "vCenter Server에 연결되지 않음",
+         "lockdownStrict": "잠금, 엄격",
+         "lockdownNormal": "잠금, 정상",
+         "lockdownDisabled": "잠기지 않음"
+      },
+      "disconnectFromVC": {
+         "title": "vCenter Server와 연결 끊기",
+         "confirmLabel": "연결 끊기",
+         "rejectLabel": "취소",
+         "warning": "이 호스트를 연결 끊으면 vCenter Server에서 호스트가 응답하지 않는 것으로 인식합니다.\n\nVC에 오류가 발생하고 호스트에서 긴급 작업을 수행해야 할 경우에만 이 방법을 사용하십시오. vCenter Server가 실행 중인 상태에서 이 작업을 수행하면 경보가 해제됩니다.\n\n이 호스트를 재부팅하면 호스트가 vCenter Server에 다시 연결될 수도 있습니다.",
+         "success": "vCenter Server에 대한 이 호스트의 연결이 끊어졌습니다."
+      },
+      "maintenanceMode": {
+         "title": "유지 보수 모드 변경 확인",
+         "rejectLabel": "취소",
+         "confirmLabel": "예",
+         "vsan": "Virtual SAN 데이터가 Virtual SAN 클러스터의 호스트에 있을 수 있습니다. 호스트가 유지 보수 모드로 전환되기 전에 적용되는 Virtual SAN 데이터 마이그레이션 메커니즘을 설정하는 옵션을 선택하십시오.",
+         "vsanLabel": "vSAN 데이터 마이그레이션",
+         "vsanDataMigration": {
+            "noAction": {
+               "label": " 데이터 마이그레이션 없음",
+               "help": " Virtual SAN이 이 호스트에서 데이터를 전혀 제거하지 않습니다. 호스트의 전원을 끄거나 호스트를 클러스터에서 제거하면 일부 가상 시스템에 액세스하지 못하게 될 수도 있습니다."
+            },
+            "ensureObjectAccessibility": {
+               "label": " 액세스 지원 보장",
+               "help": "이는 기본 옵션입니다. 호스트의 전원을 끄거나 호스트를 클러스터에서 제거할 때 Virtual SAN은 이 호스트의 액세스할 수 있는 모든 가상 시스템이 액세스 가능한 상태를 계속 유지하도록 합니다. 일반적으로 부분적 데이터 제거만 필요합니다. \n\n업그레이드 설치와 같이 호스트를 클러스터에서 일시적으로 제외하고 나중에 클러스터에 다시 포함하려는 경우 이 옵션을 선택합니다. 호스트를 클러스터에서 영구적으로 제거하는 경우에는 이 옵션이 적합하지 않습니다."
+            },
+            "evacuateAllData":{
+               "label": "모든 데이터 제거",
+               "help": " Virtual SAN이 모든 데이터를 클러스터의 다른 호스트로 전송하고 클러스터에서 영향을 받는 구성 요소에 대한 가용성 준수 상태를 유지하거나 수정합니다. 이 옵션을 선택하면 가장 많은 양의 데이터가 전송되며 시간과 리소스가 가장 많이 소모됩니다. 호스트를 영구적으로 마이그레이션하려는 경우 이 옵션을 선택합니다. 클러스터의 마지막 호스트에서 데이터를 전송하는 경우 가상 시스템을 다른 데이터스토어로 마이그레이션한 후 호스트를 유지 보수 모드로 설정해야 합니다. 호스트에 데이터를 보유한 가상 시스템 개체가 액세스할 수 없는 상태이고 해당 개체를 완전히 제거할 수 없는 경우에는 호스트가 유지 보수 모드로 전환되지 않습니다."
+            }
+         },
+         "vmsPoweredOn": "VM의 전원이 켜져 있습니다. 모든 VM이 마이그레이션되거나 전원이 꺼지고 일시 중단될 때까지 유지 보수 모드로 전환되지 않습니다.",
+         "vmsPoweredOnTitle": "유지 보수 모드 전환이 지연됨",
+         "warning": "유지 보수 모드에서는 VM을 생성하거나, 전원을 켜거나, 구성할 수 없습니다. 그리고 호스트가 유지 보수 모드인 상태에서는 VMware vCenter Server가 VM을 이 호스트에 마이그레이션하지 않습니다.\n\n이 호스트에서 수동으로 가상 시스템의 전원을 끄거나 가상 시스템을 마이그레이션해야 할 수 있습니다.\n\n언제든지 유지 보수 모드 전환 작업을 취소할 수 있습니다.",
+         "confirmEnter": "이 호스트를 유지 보수 모드로 전환하시겠습니까?",
+         "notifications": {
+            "failure": "유지 보수 모드로 전환하지 못했습니다. {{message}}",
+            "failureUnknown": "유지 보수 모드로 전환하지 못했습니다. 알 수 없는 오류입니다."
+         }
+      },
+      "lockdownMode": {
+         "warning": "현재 사용자에 대한 예외가 없는 경우 잠금 모드로 전환하면 이 세션이 응답하지 않을 수 있습니다. 예외가 없는 경우 이 클라이언트 애플리케이션에 다시 연결하지 못할 수 있습니다."
+      },
+      "notifications": {
+         "freeLicense": {
+            "message": "이 호스트에 할당된 라이센스에는 VM 전원 작업 같은 일부 작업을 수행할 수 없게 만드는 제한 사항이 있습니다.",
+            "suggested-action": "평가판 라이센스로 복구하여 이 문제를 해결할 수 있습니다."
+         },
+         "licenseExpired": {
+            "message": "ESXi 라이센스가 만료되었습니다."
+         },
+         "evalLicenseValid": {
+            "message": "현재 평가 모드에서 ESXi를 사용하고 있습니다. 이 라이센스는 {{days}}일 후에 만료됩니다."
+         },
+         "evalLicenseExpired": {
+            "message": "ESXi 평가 라이센스가 만료되었습니다."
+         },
+         "certNotValidBefore": {
+            "message": "이 호스트에 할당된 인증서가 아직 유효하지 않습니다.",
+            "suggested-action": "유효한 인증서를 설치해야 합니다."
+         },
+         "certExpired": {
+            "message": "이 호스트에 할당된 인증서가 만료되었습니다.",
+            "suggested-action": "유효한 인증서를 설치해야 합니다."
+         },
+         "rebootRequired": {
+            "message": "구성을 완료하려면 이 호스트를 재부팅해야 합니다."
+         },
+         "ssh": {
+            "message": "이 호스트에서 SSH가 사용되도록 설정되어 있습니다.",
+            "suggested-action": "관리상 필요하지 않은 경우 SSH를 사용하지 않도록 설정해야 합니다."
+         },
+         "shell": {
+            "message": "이 호스트에서 ESXi Shell이 사용되도록 설정되어 있습니다.",
+            "suggested-action": "관리상 필요하지 않은 경우 Shell을 사용하지 않도록 설정해야 합니다."
+         },
+         "vc": {
+            "message": "이 호스트는 vCenter Server에서 관리됩니다.",
+            "suggested-action": "사용자의 인지 없이 vCenter Server에 의해 자동으로 작업이 수행될 수 있습니다."
+         },
+         "maxRegisteredVMs": {
+            "message": "이 호스트는 등록된 VM의 최대수에 도달했습니다.",
+            "suggested-action": "이 호스트에 메모리를 추가하여 지원된 VM의 최대수가 늘어납니다."
+         }
+      }
+   }
+}

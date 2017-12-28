@@ -1,0 +1,1704 @@
+{
+   "host": {
+      "defaultWelcomeMessage": "Bienvenue sur {{hostname}}",
+      "about": {
+         "version": "Version du client :",
+         "buildNumber": "Numéro de build du client :",
+         "buildType": "Type de build :",
+         "branch": "Branche :",
+         "changeSet": "Ensemble de modifications :",
+         "esxiVersion": "Version d'ESXi :",
+         "esxiBuildNumber": "Numéro de build d'ESXi :",
+         "openSourceLicenses": "Licences Open Source"
+      },
+      "error": {
+         "cause": "Cause :",
+         "version": "Version :",
+         "build": "Build :",
+         "esxi": "ESXi :",
+         "browser": "Navigateur :",
+         "title": "Exception non gérée ({{num}})",
+         "details": "Détails",
+         "close": "Fermer",
+         "reload": "Recharger",
+         "lostConnection": "Il semble que nous avons perdu la connexion à l'hôte ; essayez d'actualiser votre navigateur.",
+         "communication": "Désolé, un problème de communication s'est produit avec l'hôte.",
+         "unhandledException": "Malheureusement, une erreur inattendue s'est produite.\n\nLe client peut continuer de fonctionner, mais nous vous recommandons plutôt d'actualiser votre navigateur et d'envoyer un rapport de bogue.\n\nAppuyez sur la touche Échap pour masquer cette boîte de dialogue et continuer sans l'actualiser.",
+         "stack": "Pile d'exception :"
+      },
+      "feedback": {
+         "title": "Envoi de commentaires en cours...",
+         "content": "Envoyez-nous vos commentaires ! Qu'est-ce qui marche ? Quelque chose s'est-il cassé ? Qu'est-ce qui manque dont vous auriez vraiment besoin ?",
+         "developers": "<p>Vous pouvez<ul><li>envoyer un e-mail à <a href='mailto:esxui@vmware.com'>esxui@vmware.com</a>,</li><li>publier un message sur notre <a href='https://vmware-com.socialcast.com/groups/122886-esxihostclient' target='_blank'>groupe</a> SocialCast,</li><li>ou sur les forums communautaires (disponibles prochainement) à l'adresse VMware.com.</li></ul></p>",
+         "release": "<p>Publiez un message sur les forums communautaires à l'adresse VMware.com <a href='https://communities.vmware.com/community/vmtn/vsphere/hostclient' target='_blank'></a>.</p>"
+      },
+      "shutdown": {
+         "title": "Arrêt - {{hostname}}",
+         "logoutMessage": "L'arrêt de l'hôte est en cours...",
+         "log": "Consigner un motif dans le journal pour cette opération d'arrêt :",
+         "log-placeholder": "Entrez un motif ici",
+         "not-maintenance": "Cet hôte n'est pas en mode de maintenance.",
+         "message": "L'arrêt ou le redémarrage d'un hôte qui n'est pas en mode de maintenance n'arrêtera pas en toute sécurité les machines virtuelles en cours d'exécution sur cet hôte. Si l'hôte fait partie d'un cluster Virtual SAN, vous pouvez perdre l'accès aux données Virtual SAN stockées sur cet hôte. Mettez l'hôte en mode de maintenance avant de tenter de le redémarrer ou de l'arrêter.",
+         "confirmation": "Arrêter l'hôte sélectionné ?",
+         "shutdown": "Arrêter",
+         "rejectLabel": "Annuler"
+      },
+      "reboot": {
+         "title": "Redémarrer l'hôte",
+         "logoutMessage": "Le redémarrage de l'hôte est en cours...",
+         "ok": "Redémarrer",
+         "log": "Consigner un motif dans le journal pour cette opération de redémarrage :",
+         "log-placeholder": "Entrez un motif ici",
+         "not-maintenance": "Cet hôte n'est pas en mode de maintenance.",
+         "message": "L'arrêt ou le redémarrage d'un hôte qui n'est pas en mode de maintenance n'arrêtera pas en toute sécurité les machines virtuelles en cours d'exécution sur cet hôte. Si l'hôte fait partie d'un cluster Virtual SAN, vous pouvez perdre l'accès aux données Virtual SAN stockées sur cet hôte. Mettez l'hôte en mode de maintenance avant de tenter de le redémarrer ou de l'arrêter.",
+         "confirmation": "Redémarrer l'hôte ?",
+         "rejectLabel": "Annuler"
+      },
+      "permissions": {
+         "manage": {
+            "menu": "Autorisations",
+            "title": "Gérer les autorisations",
+            "close": "Fermer",
+            "cancel": "Annuler",
+            "noUsers": "Aucun utilisateur",
+            "addUser": {
+               "label": "Ajouter utilisateur",
+               "toolTip": "Ajouter un utilisateur"
+            },
+            "removeUser": {
+               "label": "Supprimer utilisateur",
+               "toolTip": "Supprimer un utilisateur"
+            },
+            "assignRole": {
+               "label": "Affecter rôle",
+               "toolTip": "Affecter un rôle à un utilisateur"
+            },
+            "updatePermissions": {
+               "successNotification": "Autorisations mises à jour",
+               "failureNotification": "Échec de la mise à jour des autorisations : {{error}}"
+            },
+            "columns": {
+               "user": "Utilisateur",
+               "role": "Rôle"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "Sélectionner un utilisateur"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "Sélectionner un rôle"
+            },
+            "propagateLabel": "Propager vers tous les enfants"
+         }
+      },
+      "context": {
+         "title": "Hôte",
+         "services": {
+            "label": "Services",
+            "tooltip": "Gérer les services sur cet hôte",
+            "ssh": {
+               "labelEnable": "Activer Secure Shell (SSH)",
+               "labelDisable": "Désactiver Secure Shell (SSH)",
+               "tooltip": "Basculer le service Secure Shell sur cet hôte"
+            },
+            "shell": {
+               "labelEnable": "Activer le shell de la console",
+               "labelDisable": "Désactiver le shell de la console",
+               "tooltip": "Basculer le service du shell de la console sur cet hôte"
+            }
+         },
+         "service": {
+            "restart": {
+               "label": "Redémarrer",
+               "tooltip": "Redémarrer ce service"
+            },
+            "start": {
+               "label": "Démarrer",
+               "tooltip": "Démarrer ce service"
+            },
+            "stop": {
+               "label": "Arrêter",
+               "tooltip": "Arrêter ce service"
+            },
+            "policy": {
+               "label": "Stratégie",
+               "tooltip": "Options de stratégie pour ce service"
+            },
+            "firewallPolicy": {
+               "label": "Démarrer et arrêter avec les ports du pare-feu",
+               "tooltip": "Démarrer et arrêter ce service lorsque les ports du pare-feu sont ouverts ou fermés"
+            },
+            "hostPolicy": {
+               "label": "Démarrer et arrêter avec l'hôte",
+               "tooltip": "Démarrer et arrêter ce service lorsque l'hôte est démarré et arrêté"
+            },
+            "manualPolicy": {
+               "label": "Démarrer et arrêter manuellement",
+               "tooltip": "Démarrer et arrêter ce service manuellement"
+            }
+         },
+         "manageWithVC": {
+            "label": "Gérer avec vCenter Server",
+            "tooltip": "Gérer cet hôte avec VMware vCenter Server"
+         },
+         "disconnectFromVC": {
+            "label": "Déconnecter de vCenter Server",
+            "tooltip": "Déconnecter cet hôte de VMware vCenter Server"
+         },
+         "createVM": {
+            "label": "Créer/Enregistrer une VM",
+            "tooltip": "Créer ou enregistrer une VM sur cet hôte"
+         },
+         "shutDown": {
+            "label": "Arrêter",
+            "tooltip": "Arrêter cet hôte"
+         },
+         "reboot": {
+            "label": "Redémarrer",
+            "tooltip": "Redémarrer cet hôte"
+         },
+         "maintenanceMode": {
+            "labelEnter": "Entrer en mode maintenance",
+            "labelExit": "Quitter le mode maintenance",
+            "tooltipEnter": "Mettre cet hôte en mode de maintenance",
+            "tooltipExit": "Retirer cet hôte du mode de maintenance"
+         },
+         "lockdownMode": {
+            "label": "Mode de verrouillage",
+            "tooltip": "Gérer le mode de verrouillage pour cet hôte",
+            "enterNormalLockdown": {
+               "label": "Entrer en mode de verrouillage normal",
+               "tooltip": "Mettre cet hôte en mode de verrouillage normal"
+            },
+            "enterStrictLockdown": {
+               "label": "Entrer en mode de verrouillage strict",
+               "tooltip": "Mettre cet hôte en mode de verrouillage strict"
+            },
+            "exitLockdown": {
+               "label": "Quitter le mode de verrouillage",
+               "tooltip": "Retirer cet hôte du mode de verrouillage"
+            },
+            "dialog": {
+               "title": "Avertissement de mode de verrouillage ",
+               "confirmStrictLabel": "Entrer en mode de verrouillage strict",
+               "confirmNormalLabel": "Entrer en mode de verrouillage normal",
+               "rejectLabel": "Annuler"
+            }
+         }
+      },
+      "summary": {
+         "host": "Hôte",
+         "version": "Version :",
+         "state": "État :",
+         "uptime": "Temps de fonctionnement :",
+         "days": "jours",
+         "cpus": "CPU",
+         "metrics": {
+            "cpu": "CPU",
+            "storage": "STOCKAGE",
+            "memory": "MÉMOIRE"
+         },
+         "actionBar": {
+            "manageWithVC": {
+               "label": "Gérer avec vCenter Server",
+               "tooltip": "Gérer cet hôte avec VMware vCenter Server"
+            },
+            "getVC": {
+               "label": "Obtenir vCenter Server",
+               "tooltip": "En savoir plus sur le téléchargement et l'installation de vCenter Server"
+            },
+            "createRegisterVM": {
+               "label": "Créer/Enregistrer une VM",
+               "tooltip": "Créer ou enregistrer une machine virtuelle"
+            },
+            "shutdown": {
+               "label": "Arrêter",
+               "tooltip": "Arrêter cet hôte"
+            },
+            "reboot": {
+               "label": "Redémarrer",
+               "tooltip": "Redémarrer cet hôte"
+            },
+            "refresh": {
+               "label": "Actualiser",
+               "tooltip": "Actualiser les données de cette page"
+            },
+            "enterMaintenanceMode": {
+               "label": "Entrer en mode maintenance",
+               "tooltip": "Mettre cet hôte en mode de maintenance"
+            },
+            "exitMaintenanceMode": {
+               "label": "Quitter le mode maintenance",
+               "tooltip": "Retirer cet hôte du mode de maintenance"
+            },
+            "actions": {
+               "label": "Actions",
+               "tooltip": "Actions pour cet hôte"
+            }
+         },
+         "portlets": {
+            "hardware": {
+               "title": "Matériel",
+               "manufacturer": "Fabricant",
+               "model": "Modèle",
+               "cpu": {
+                  "title": "CPU",
+                  "logicalProcessors": "Processeurs logiques",
+                  "processorType": "Type de processeur",
+                  "sockets": "Sockets",
+                  "coresPerSocket": "Cœurs par socket",
+                  "hyperthreading": "Hyperthreading",
+                  "yesEnabled": "Oui, activé",
+                  "yesDisabled": "Oui, désactivé",
+                  "no": "Non"
+               },
+               "memory": "Mémoire",
+               "virtualFlash": {
+                  "title": "Virtual Flash",
+                  "capacity": "Capacité",
+                  "value": {
+                     "used": "utilisée",
+                     "capacity": "capacité"
+                  },
+                  "used": "Utilisée",
+                  "free": "Libre"
+               },
+               "networking": {
+                  "title": "Mise en réseau",
+                  "hostname": "Nom d'hôte",
+                  "ips": "Adresses IP",
+                  "dns": "Serveur DNS",
+                  "defaultGateway": "Passerelle par défaut",
+                  "ipv6Enabled": {
+                     "title": "IPv6 activé",
+                     "yes": "Oui",
+                     "no": "Non"
+                  },
+                  "physicalAdapters": "Adaptateurs hôtes",
+                  "networks": "Réseaux",
+                  "list": {
+                     "columns": {
+                        "name": "Nom",
+                        "vms": "VM"
+                     }
+                  }
+               },
+               "storage": {
+                  "title": "Stockage",
+                  "physicalAdapters": "Adaptateurs physiques",
+                  "datastores": "Banques de données",
+                  "list": {
+                     "columns": {
+                        "name": "Nom",
+                        "type": "Type",
+                        "capacity": "Capacité",
+                        "free": "Libre"
+                     }
+                  }
+               }
+            },
+            "configuration": {
+               "title": "Configuration",
+               "haState": {
+                  "title": "État de vSphere HA",
+                  "agentRunning": "Agent en cours d'exécution",
+                  "notConfigured": "Non configurés"
+               },
+               "imageProfile": "Profil d'image",
+               "vMotion": {
+                  "title": "vMotion",
+                  "supported": "Pris en charge",
+                  "notSupported": "Non pris en charge",
+                  "vmknic": "Carte réseau virtuelle pour vMotion",
+                  "yes": "Oui",
+                  "no": "Non",
+                  "none": "Aucun"
+               }
+            },
+            "systemInformation": {
+               "title": "Informations sur le système",
+               "currentDateTime": "Date/Heure sur l'hôte",
+               "inception": "Date d'installation",
+               "assetTag": "Balise de ressource",
+               "serviceTag": "Balise de service",
+               "biosVersion": "Version BIOS",
+               "biosReleaseDate": "Date de publication du BIOS"
+            },
+            "perf": {
+               "label": "Résumé de performances de la dernière heure",
+               "title": "Résumé de performances de la dernière heure",
+               "loading": "Chargement en cours...",
+               "noData": "Aucune donnée de performances disponible",
+               "xAxisLabel": "Heure",
+               "y1AxisLabel": "CPU hôte utilisé (%)",
+               "y2AxisLabel": "Mémoire hôte utilisée (Go)",
+               "rightAxis": " (axe droit)",
+               "cpuUsage": "CPU hôte utilisé",
+               "memoryUsage": "Mémoire hôte utilisée"
+            }
+         }
+      },
+      "manage": {
+         "title": "Gérer",
+         "system": {
+            "settings": "Paramètres",
+            "tabTitle": "Système",
+            "tabTooltip": "Configurer les paramètres système",
+            "advancedSettings": {
+               "tabTitle": "Paramètres avancés",
+               "tabTooltip": "Configurer les paramètres avancés pour cet hôte",
+               "context": {
+                  "resetToDefault": {
+                     "label": "Réinitialiser sur les paramètres par défaut",
+                     "tooltip": "Réinitialiser sur la valeur par défaut"
+                  }
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions pour les objets sélectionnés dans cette liste."
+               },
+               "resetToDefault": {
+                  "successNotification": "{{name}} a été réinitialisé sur la valeur par défaut {{value}}.",
+                  "failureNotification": "Échec de la réinitialisation de {{name}} sur la valeur par défaut {{value}}"
+               },
+               "change": {
+                  "title": "Modifier l'option - {{key}}",
+                  "confirm": "Enregistrer",
+                  "rejectLabel": "Annuler",
+                  "successMessage": "{{key}} a été modifié.",
+                  "failureMessage": "Échec de la modification de {{key}}"
+               },
+               "edit": {
+                  "label": "Modifier l'option",
+                  "tooltip": "Modifier cette option"
+               },
+               "quickFilters": {
+                  "overridden": "Paramètres remplacés",
+                  "hostClient": "Paramètres d'Host Client"
+               },
+               "name": "Nom",
+               "key": "Clé",
+               "description": "Description",
+               "value": "Valeur",
+               "default": "Par défaut",
+               "overridden": "Remplacé",
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser la grille des paramètres avancés"
+               },
+               "readOnly": "Lecture uniquement",
+               "range": "Plage",
+               "currentValue": "Valeur actuelle",
+               "newValue": "Nouvelle valeur",
+               "type": {
+                  "string": "(chaîne)",
+                  "integer": "(valeur entière)",
+                  "longInteger": "(valeur longue entière)",
+                  "float": "(flottant)"
+               },
+               "true": "True",
+               "false": "False"
+            },
+            "autostart": {
+               "tabTitle": "démarrage automatique",
+               "tabTooltip": "Configurer les paramètres de démarrage automatique pour cet hôte",
+               "edit": {
+                  "label": "Modifier les paramètres",
+                  "tooltip": "Modifier les paramètres de démarrage automatique"
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser la configuration de démarrage automatique"
+               },
+               "enabled": {
+                  "label": "Activé",
+                  "true": "Oui",
+                  "false": "Non"
+               },
+               "startDelay": {
+                  "label": "Délai de démarrage"
+               },
+               "stopDelay": {
+                  "label": "Délai d'arrêt"
+               },
+               "stopAction": {
+                  "label": "Arrêter l'action",
+                  "systemDefault": "Système par défaut",
+                  "powerOff": "Mettre hors tension",
+                  "suspend": "Interrompre",
+                  "Suspend": "Interrompre",
+                  "guestShutdown": "Arrêter"
+               },
+               "waitForHeartbeat": {
+                  "label": "Attendre le signal de pulsation",
+                  "true": "Oui",
+                  "false": "Non"
+               },
+               "change": {
+                  "title": "Modifier la configuration de démarrage automatique",
+                  "rejectLabel": "Annuler",
+                  "confirmLabel": "Enregistrer",
+                  "enabled": {
+                     "label": "Activé",
+                     "yes": "Oui",
+                     "no": "Non"
+                  },
+                  "waitForHeartbeat": {
+                     "label": "Attendre le signal de pulsation",
+                     "yes": "Oui",
+                     "no": "Non"
+                  },
+                  "startDelay": {
+                     "label": "Délai de démarrage",
+                     "seconds": "secondes"
+                  },
+                  "stopDelay": {
+                     "label": "Délai d'arrêt",
+                     "seconds": "secondes"
+                  },
+                  "stopAction": {
+                     "label": "Arrêter l'action",
+                     "systemDefault": "Système par défaut",
+                     "PowerOff": "Mettre hors tension",
+                     "Suspend": "Interrompre",
+                     "ShutDown": "Arrêter"
+                  },
+                  "successNotification": "La configuration de démarrage automatique de l'hôte a été mise à jour",
+                  "failureNotification": "Échec de la mise à jour de la configuration de démarrage automatique de l'hôte"
+               }
+            },
+            "hardware": {
+               "tabTitle": "Matériel",
+               "tabTooltip": "Configurer le matériel pour cet hôte",
+               "powerManagement": {
+                  "tabTitle": "Gestion de l'alimentation",
+                  "tabTooltip": "Gestion de l'alimentation",
+                  "editSettings": {
+                     "label": "Modifier la stratégie",
+                     "tooltip": "Modifier la stratégie de gestion de l'alimentation"
+                  },
+                  "refresh": "Actualiser",
+                  "refreshTooltip": "Actualiser la gestion de l'alimentation",
+                  "technology": {
+                     "label": "Technologie"
+                  },
+                  "activePolicy": {
+                     "label": "Stratégie active"
+                  },
+                  "dialog": {
+                     "title": "Modifier la stratégie d'alimentation",
+                     "confirmLabel": "OK",
+                     "cancelLabel": "Annuler"
+                  },
+                  "PowerPolicy": {
+                     "off": {
+                        "name": "Non pris en charge",
+                        "shortName": "Non pris en charge",
+                        "description": "La gestion de l'alimentation de l'hôte n'a pas été détectée"
+                     },
+                     "static": {
+                        "name": "Haute performance",
+                        "shortName": "Haute performance",
+                        "description": "Ne pas utiliser les fonctions de gestion de l'alimentation"
+                     },
+                     "dynamic": {
+                        "name": "Équilibré",
+                        "shortName": "Équilibré",
+                        "description": "Réduire la consommation énergétique en faisant le moins de compromis sur la performance"
+                     },
+                     "low": {
+                        "name": "Faible alimentation",
+                        "shortName": "Faible alimentation",
+                        "description": "Réduire la consommation d'énergie et risquer de diminuer les performances"
+                     },
+                     "custom": {
+                        "name": "Personnalisé",
+                        "shortName": "Personnalisé",
+                        "description": "Stratégie de gestion de l'alimentation définie par l'utilisateur. La configuration avancée deviendra disponible."
+                     }
+                  },
+                  "columns": {
+                     "key": "Clé",
+                     "name": "Nom",
+                     "value": "Valeur",
+                     "default": "Par défaut",
+                     "overridden": "Remplacé"
+                  }
+               },
+               "pciDevices": {
+                  "tabTitle": "Périphériques PCI",
+                  "tabTooltip": "Périphériques PCI",
+                  "tooltip": "Périphérique PCI",
+                  "active": "Actif",
+                  "enabled": "Activé",
+                  "disabled": "Désactivé",
+                  "notCapable": "Incompatible",
+                  "reboot": "Nécessite un redémarrage",
+                  "sriov": {
+                     "title": "Configurer SR-IOV pour {{name}}",
+                     "onConfirm": "Enregistrer",
+                     "onReject": "Annuler",
+                     "enabled": {
+                        "label": "Activé",
+                        "yes": "Oui",
+                        "no": "Non"
+                     },
+                     "virtualFunctions": {
+                        "label": "Fonctions virtuelles",
+                        "maximum": "{{maxVirtualFunctionSupported}} maximum"
+                     }
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "Actualiser",
+                        "tooltip": "Actualiser la grille des paramètres avancés"
+                     },
+                     "passthrough": {
+                        "label": "Basculer le relais",
+                        "tooltip": "Basculer le relais pour les périphériques sélectionnés"
+                     },
+                     "sriov": {
+                        "label": "Configurer SR-IOV",
+                        "tooltip": "Configurer SR-IOV pour le périphérique sélectionné"
+                     },
+                     "reboot": {
+                        "label": "Redémarrer l'hôte",
+                        "tooltip": "Redémarrer l'hôte"
+                     }
+                  },
+                  "datagrid": {
+                     "quickFilters": {
+                        "sriovCapable": "Compatible SR-IOV",
+                        "passthroughCapable": "Compatible relais",
+                        "sriovActive": "SR-IOV activé",
+                        "passthroughActive": "Relais activé"
+                     },
+                     "columns": {
+                        "address": "Adresse",
+                        "description": "Description",
+                        "passthrough": "Relais",
+                        "sriov": "SR-IOV"
+                     }
+                  },
+                  "summary": {
+                     "notSupported": "Ce périphérique ne permet pas le relais",
+                     "notRunning": "Ce périphérique permet le relais mais n'est pas en mode relais",
+                     "needReboot": "Ce périphérique nécessite la réinitialisation d'hôte pour démarrer en mode relais",
+                     "deviceName": "Nom du périphérique",
+                     "id": "ID",
+                     "deviceID": "ID du périphérique",
+                     "vendorID": "ID du fournisseur",
+                     "function": "Function",
+                     "bus": "Bus",
+                     "vendorName": "Nom du fournisseur",
+                     "classID": "ID de la classe",
+                     "subdeviceID": "ID du sous-périphérique",
+                     "subvendorID": "ID du sous-fournisseur",
+                     "slot": "Emplacement"
+                  },
+                  "notifications": {
+                     "successSriov": "SR-IOV a été configuré pour le périphérique {{deviceName}}. Les modifications prendront effet uniquement après le redémarrage de l'hôte.",
+                     "failureSriov": "Échec de la configuration de SR-IOV pour le périphérique {{deviceName}}. Consultez les tâches récentes pour plus d'informations.",
+                     "successSingular": "Le relais a été basculé pour le périphérique {{deviceName}}. Les modifications prendront effet uniquement après le redémarrage de l'hôte.",
+                     "successMultiple": "Le relais a été basculé pour les périphériques. Les modifications prendront effet uniquement après le redémarrage de l'hôte.",
+                     "error": "Échec de la configuration des périphériques relais"
+                  }
+               }
+            },
+            "licensing": {
+               "context": {
+                  "assignLicense": {
+                     "label": "Attribuer une licence",
+                     "tooltip": "Attribuer une licence à cet hôte"
+                  },
+                  "removeLicense": {
+                     "label": "Supprimer la licence",
+                     "tooltip": "Supprimer cette licence de l'hôte"
+                  }
+               },
+               "tabTitle": "Attribution de licence",
+               "tabTooltip": "Configurer la licence pour cet hôte",
+               "name": "Nom",
+               "key": "Clé",
+               "license": "Clé de licence",
+               "valid": "La clé de licence est valide pour <strong>{{name}}</strong>.",
+               "managedByVC": "La licence pour cet hôte est géré par vCenter Server",
+               "expiration": "Date d'expiration",
+               "expireNever": "Jamais",
+               "features": "Fonctions",
+               "refresh": "Actualiser",
+               "refreshToolTip": "Actualiser les licences",
+               "actions": "Actions",
+               "actionsToolTip": "Actions pour les licences sélectionnées dans cette liste",
+               "assign": {
+                  "title": "Attribuer une licence",
+                  "hostManagedByVC": {
+                     "title": "L'hôte est géré par vCenter Server",
+                     "confirmLabel": "Fermer"
+                  },
+                  "toolTip": "Attribuer une licence à cet hôte",
+                  "checkLicense": "Vérifier la licence",
+                  "provideValidLicense": "Donnez une clé de licence valide",
+                  "failedToDecode": "Échec du décodage de la licence fournie",
+                  "assignLicense": "Attribuer une licence",
+                  "invalidLicense": "Donnez une clé de licence valide",
+                  "notEnoughCores": "Le nombre de sockets ({{cores}}) de cet hôte est supérieur au nombre ({{licenseCores}}) autorisé pour la licence fournie. Indiquez une autre licence.",
+                  "expired": "La licence a expiré.",
+                  "successMessage": "La licence {{name}} a été attribuée.",
+                  "failureMessage": "Échec de l'attribution de la licence {{name}}",
+                  "rejectLabel": "Annuler"
+               },
+               "remove": {
+                  "title": "Supprimer la licence",
+                  "remove": "Supprimer",
+                  "removeLicense": "Supprimer la licence",
+                  "toolTip": "Supprimer la licence sélectionnée",
+                  "content": "Voulez-vous vraiment supprimer la licence \n<strong>{{name}}</strong> ?",
+                  "successMessage": "La licence {{key}} a été supprimée.",
+                  "failureMessage": "Échec de la suppression de la licence {{key}}",
+                  "rejectLabel": "Annuler"
+               }
+            },
+            "packages": {
+               "tabTitle": "Modules",
+               "tabTooltip": "Configurer les logiciels installés sur cet hôte",
+               "error": "Aucune donnée de module disponible",
+               "list": {
+                  "columns": {
+                     "name": "Nom",
+                     "version": "Version",
+                     "description": "Description",
+                     "vendor": "Fournisseur",
+                     "installDate": "Installé le"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "Actualiser",
+                        "tooltip": "Actualiser la liste des modules"
+                     },
+                     "update": {
+                        "label": "Installer la mise à jour",
+                        "tooltip": "Installer une mise à jour sur cet hôte"
+                     }
+                  }
+               }
+            },
+            "services": {
+               "tabTitle": "Services",
+               "tabTooltip": "Configurer les services qui s'exécutent sur cet hôte",
+               "name": "Nom :",
+               "restart": "Redémarrer",
+               "stop": "Arrêter",
+               "start": "Démarrer",
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser le tableau des événements"
+               },
+               "actions": "Actions",
+               "actionsToolTip": "Actions pour les services sélectionnés",
+               "name": "Nom",
+               "description": "Description",
+               "base": "Système de base",
+               "firewallRules": "Règles du pare-feu",
+               "status": {
+                  "label": "État",
+                  "running": "En cours d'exécution",
+                  "stopped": "Arrêté"
+               },
+               "source": "Source",
+               "startSuccess": "Le service {{name}} a été démarré.",
+               "startFailure": "Échec du démarrage du service {{name}}",
+               "restartSuccess": "Le service {{name}} a été redémarré.",
+               "restartFailure": "Échec du redémarrage du service {{name}}",
+               "stopSuccess": "Le service {{name}} a été arrêté.",
+               "stopFailure": "Échec de l'arrêt du service {{name}}"
+            },
+            "timeAndDate": {
+               "context": {
+                  "ntpService": {
+                     "label": "Service NTP",
+                     "tooltip": "Gérer le service NTP de l'hôte"
+                  }
+               },
+               "tabTitle": "Date et heure",
+               "tabTooltip": "Configurer la date et l'heure pour cet hôte",
+               "unknown": "Inconnu",
+               "none": "Aucun",
+               "ntpd": {
+                  "running": "En cours d'exécution",
+                  "stopped": "Arrêté",
+                  "enabled": "Activé",
+                  "disabled": "Désactivé"
+               },
+               "actions": "Actions",
+               "actionsTooltip": "Actions pour la configuration de l'heure",
+               "servers": "Serveurs NTP",
+               "clientStatus": "État du client NTP",
+               "serviceStatus": "État du service NTP",
+               "currentDateTime": "Date et heure actuelles",
+               "editSettings": "Modifier les paramètres",
+               "editSettingsTooltip": "Modifier les paramètres de configuration de l'heure",
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser la configuration de la date et de l'heure"
+               },
+               "dialog": {
+                  "confirmLabel": "Enregistrer",
+                  "rejectLabel": "Annuler",
+                  "title": "Modifier la configuration de l'heure",
+                  "header": "Indiquez comment régler la date et l'heure de cet hôte.",
+                  "manual": "Définir manuellement la date et l'heure de cet hôte",
+                  "ntpdStartPolicy": {
+                     "on": {
+                        "description": "Démarrer et arrêter avec le système hôte",
+                        "label": "Démarrer et arrêter avec l'hôte"
+                     },
+                     "off": {
+                        "description": "L'utilisateur démarre et arrête le service manuellement.",
+                        "label": "Démarrer et arrêter manuellement"
+                     },
+                     "auto": {
+                        "description": "Démarrer si des ports sont ouverts et arrêter si tous les ports sont fermés",
+                        "label": "Démarrer et arrêter avec l'utilisation de port"
+                     }
+                  },
+                  "ntp": "Utiliser le protocole NTP (activer le client NTP)",
+                  "ntpPolicy": "Stratégie de démarrage du service NTP",
+                  "ntpServers": "Serveurs NTP",
+                  "ntpServersLabel": "Séparer les serveurs par des virgules, p. ex. : 10.31.21.2, fe00::2800",
+                  "validation": {
+                     "emptyDate": "Indiquez une date et une heure."
+                  }
+               }
+            },
+            "security": {
+               "tabTitle": "Sécurité et utilisateurs",
+               "tabTooltip": "Configurer les paramètres de sécurité et les autorisations utilisateur de cet hôte",
+               "acceptance": {
+                  "tabTitle": "Niveau d'acceptation",
+                  "tabTooltip": "Configurer le niveau d'acceptation de cet hôte",
+                  "levels": {
+                     "partner": {
+                        "name": "Partenaire",
+                        "description": "Accepter uniquement les VIB signés et certifiés par le partenaire et par VMware"
+                     },
+                     "community": {
+                        "name": "Communauté",
+                        "description": "Accepter tous les VIB, même ceux qui ne sont pas signés"
+                     },
+                     "vmware_accepted": {
+                        "name": "Accepté par VMware",
+                        "description": "Accepter les VIB acceptés par VMware"
+                     },
+                     "vmware_certified": {
+                        "name": "Certifié par VMware",
+                        "description": "Accepter uniquement les VIB signés et certifiés par VMware"
+                     }
+                  },
+                  "editSettings": {
+                     "title": "Modifier les paramètres du niveau d'acceptation",
+                     "confirmLabel": "Enregistrer",
+                     "rejectLabel": "Annuler",
+                     "failureNotification": "Échec de la définition du niveau d'acceptation sur {{level}}",
+                     "successNotification": "Le niveau d'acceptation de l'hôte a été remplacé par {{level}}."
+                  },
+                  "stack": {
+                     "acceptanceLevel": {
+                        "label": "Niveau d'acceptation",
+                        "partner": "Partenaire",
+                        "community": "Communauté",
+                        "vmware_accepted": "Accepté par VMware",
+                        "vmware_certified": "Certifié par VMware"
+                     }
+                  },
+                  "actions": {
+                     "editSettings": {
+                        "label": "Modifier les paramètres",
+                        "tooltip": "Modifier le niveau d'acceptation de cet hôte"
+                     },
+                     "refresh": {
+                        "label": "Actualiser",
+                        "tooltip": "Actualiser les informations du niveau d'acceptation de cet hôte"
+                     }
+                  }
+               },
+               "authentication": {
+                  "tabTitle": "Authentification",
+                  "tabTooltip": "Configurer l'authentification de cet hôte",
+                  "leaveDomain": {
+                     "title": "Quitter le domaine",
+                     "content": "Voulez-vous vraiment supprimer cet hôte du domaine <strong>{{domain}}</strong> ?",
+                     "confirmLabel": "Oui",
+                     "rejectLabel": "Annuler",
+                     "failureMessage": "Échec de la sortie du domaine {{domain}} : {{reason}}",
+                     "successMessage": "L'hôte a quitté le domaine {{domain}}."
+                  },
+                  "joinDomain": {
+                     "title": "Joindre le domaine",
+                     "confirmLabel": "Joindre le domaine",
+                     "rejectLabel": "Annuler",
+                     "domainLabel": "Nom de domaine",
+                     "usernameLabel": "Nom d'utilisateur",
+                     "passwordLabel": "Mot de passe",
+                     "confirmPasswordLabel": "Confirmer mot de passe",
+                     "username": "Nom d'utilisateur",
+                     "password": "Mot de passe",
+                     "useAuthProxyLabel": "Utiliser le proxy d'authentification",
+                     "authProxyLabel": "Proxy d'authentification",
+                     "successMessage": "L'hôte a été joint au domaine {{domain}}.",
+                     "failureMessage": "L'hôte n'a pas pu être joint au domaine {{domain}} : {{reason}}",
+                     "errorNoDomain": "Indiquez le serveur de domaine auquel vous voulez lier cet hôte.",
+                     "errorAuthProxy": "Indiquez le proxy d'authentification à utiliser.",
+                     "errorNoPassword": "Indiquez le mot de passe du compte du contrôleur de domaine.",
+                     "errorNoUsername": "Indiquez le nom d'utilisateur du compte du contrôleur de domaine.",
+                     "errorPasswordsDontMatch": "Les mots de passe indiqués pour le contrôleur de domaine ne correspondent pas."
+                  },
+                  "stack": {
+                     "activeDirectoryEnabled": {
+                        "label": "Active Directory activé",
+                        "true": "Oui",
+                        "false": "Non"
+                     },
+                     "smartCardAuthenticationEnabled": {
+                        "label": "Authentification par carte à puce activée",
+                        "true": "Oui",
+                        "false": "Non"
+                     },
+                     "joinedDomain": {
+                        "label": "Domaine joint"
+                     },
+                     "domainMembershipStatus": {
+                        "label": "Statut d'appartenance au domaine",
+                        "ok": "OK",
+                        "clientTrustBroken": "Approbation client rompue",
+                        "inconsistentTrust": "Approbation incohérente",
+                        "noServers": "Aucun serveur",
+                        "otherProblem": "Autre problème",
+                        "serverTrustBroken": "Approbation serveur rompue",
+                        "unknown": "Inconnu"
+                     },
+                     "trustedDomain": {
+                        "label": "Domaines approuvés"
+                     }
+                  },
+                  "actions": {
+                     "join": {
+                        "label": "Joindre le domaine",
+                        "tooltip": "Joindre un domaine Active Directory"
+                     },
+                     "leave": {
+                        "label": "Quitter le domaine",
+                        "tooltip": "Supprimer cet hôte du domaine"
+                     },
+                     "refresh": {
+                        "label": "Actualiser",
+                        "tooltip": "Actualiser les informations d'authentification de cet hôte"
+                     }
+                  }
+               },
+               "lockdown": {
+                  "tabTitle": "Mode de verrouillage",
+                  "tabTooltip": "Configurer le mode de verrouillage de cet hôte",
+                  "lockdownStrict": {
+                     "name": "Verrouillage strict",
+                     "description": "Les utilisateurs peuvent se connecter uniquement à partir de vCenter Server."
+                  },
+                  "lockdownNormal": {
+                     "name": "Verrouillage normal",
+                     "description": "Les utilisateurs peuvent se connecter via la DCUI et vCenter Server."
+                  },
+                  "lockdownDisabled": {
+                     "name": "Désactivé",
+                     "description": "Le mode de verrouillage est désactivé."
+                  },
+                  "changeDialog": {
+                     "title": "Modifier le mode de verrouillage",
+                     "confirmLabel": "Modifier",
+                     "rejectLabel": "Annuler"
+                  },
+                  "userDialog": {
+                     "title": "Ajouter un utilisateur exceptionnel",
+                     "confirmLabel": "Ajouter une exception",
+                     "rejectLabel": "Annuler",
+                     "invalidUser": "Entrez un nom d'utilisateur valide.",
+                     "userName": "Nom d'utilisateur",
+                     "successNotification": "{{user}} a été ajouté à la liste des utilisateurs avec exceptions du mode de verrouillage.",
+                     "failureNotification": "Échec de l'ajout de {{user}} à la liste des utilisateurs avec exceptions du mode de verrouillage"
+                  },
+                  "removeExceptionUser": {
+                     "title": "Confirmez",
+                     "content": "Voulez-vous vraiment supprimer l'utilisateur {{name}} de la liste des utilisateurs avec exceptions du mode verrouillage ?",
+                     "confirmLabel": "Oui",
+                     "rejectLabel": "Annuler",
+                     "successNotification": "L'utilisateur avec exceptions {{name}} a été supprimé.",
+                     "failureNotification": "Échec de la suppression de l'utilisateur avec exceptions {{name}}"
+                  },
+                  "failureNotification": "Échec de l'activation du mode de verrouillage : {{message}}",
+                  "successNotification": "Mode de verrouillage activé",
+                  "stack": {
+                     "lockdownMode": {
+                        "label": "Mode de verrouillage",
+                        "lockdownStrict": "Verrouillage strict activé",
+                        "lockdownNormal": "Verrouillage normal activé",
+                        "lockdownDisabled": "Désactivé"
+                     },
+                     "exceptionUsers": {
+                        "label": "Utilisateurs exceptionnels"
+                     }
+                  },
+                  "userList": {
+                     "noUsers": "Aucun utilisateur exceptionnel",
+                     "columns": {
+                        "name": "Nom"
+                     }
+                  },
+                  "actions": {
+                     "refresh": {
+                        "label": "Actualiser",
+                        "tooltip": "Actualiser les informations du certificat de cet hôte"
+                     },
+                     "removeUser": {
+                        "label": "Supprimer l'exception utilisateur",
+                        "tooltip": "Supprimer un utilisateur de la liste d'exceptions pour le mode de verrouillage"
+                     },
+                     "addUser": {
+                        "label": "Ajouter une exception d'utilisateur",
+                        "tooltip": "Ajouter un utilisateur à la liste d'exceptions pour le mode de verrouillage"
+                     },
+                     "configureLockdown": {
+                        "label": "Modifier les paramètres",
+                        "tooltip": "Configurer le mode de verrouillage de cet hôte"
+                     }
+                  }
+               },
+               "users": {
+                 "tabTitle": "Utilisateurs",
+                 "tabTooltip": "Gérer les utilisateurs du système",
+                 "noUsers": "Aucun utilisateur",
+                 "actions": {
+                   "refresh": {
+                      "label": "Actualiser",
+                      "tooltip": "Actualiser la liste des utilisateurs"
+                   },
+                   "removeUser": {
+                      "label": "Supprimer utilisateur",
+                      "tooltip": "Supprimer un utilisateur"
+                   },
+                   "addUser": {
+                      "label": "Ajouter utilisateur",
+                      "tooltip": "Ajouter un utilisateur"
+                   },
+                   "updateUser": {
+                      "label": "Modifier l'utilisateur",
+                      "tooltip": "Modifier les informations de l'utilisateur"
+                   }
+                 },
+                 "grid": {
+                    "username": "Nom d'utilisateur",
+                    "description": "Description"
+                 },
+                 "addUser": {
+                    "title": "Ajouter un utilisateur",
+                    "userNameBlockLabel": "Nom d'utilisateur (requis)",
+                    "userDescriptionBlockLabel": "Description",
+                    "userPasswordBlockLabel": "Mot de passe (requis)",
+                    "userConfirmPasswordBlockLabel": "Confirmer le mot de passe (requis)",
+                    "confirmLabel": "Ajouter",
+                    "rejectLabel": "Annuler",
+                    "failureNotification": "Échec de l'ajout de l'utilisateur : {{error}}",
+                    "successNotification": "L'utilisateur {{user}} a été ajouté."
+                 },
+                 "updateUser": {
+                    "title": "Modifier l'utilisateur",
+                    "userNameBlockLabel": "Nom d'utilisateur",
+                    "userDescriptionBlockLabel": "Description",
+                    "userPasswordBlockLabel": "Mot de passe",
+                    "userConfirmPasswordBlockLabel": "Confirmer mot de passe",
+                    "confirmLabel": "Enregistrer",
+                    "rejectLabel": "Annuler",
+                    "failureNotification": "Échec de la mise à jour de l'utilisateur : {{error}}",
+                    "successNotification": "L'utilisateur {{user}} a été mis à jour."
+                 },
+                 "removeUser": {
+                    "title": "Avertissement",
+                    "content": "Voulez-vous vraiment supprimer l'utilisateur <strong>{{user}}</strong> ?",
+                    "confirmLabel": "Oui",
+                    "rejectLabel": "Annuler",
+                    "failureNotification": "Échec de la suppression de l'utilisateur {{user}}",
+                    "successNotification": "L'utilisateur {{user}} a été supprimé."
+                 }
+               },
+               "roles": {
+                 "tabTitle": "Rôles",
+                 "tabTooltip": "Gérer les rôles",
+                 "actions": {
+                   "refresh": {
+                      "label": "Actualiser",
+                      "tooltip": "Actualiser la liste des rôles"
+                   },
+                   "removeRole": {
+                      "label": "Supprimer rôle",
+                      "tooltip": "Supprimer un rôle d'autorisation"
+                   },
+                   "addRole": {
+                      "label": "Ajouter rôle",
+                      "tooltip": "Ajouter un rôle d'autorisation"
+                   },
+                   "updateRole": {
+                      "label": "Modifier le rôle",
+                      "tooltip": "Modifier un rôle d'autorisation"
+                   }
+                 },
+                 "grid": {
+                    "name": "Nom",
+                    "summary": "Résumé"
+                 },
+                 "addRole": {
+                    "title": "Ajouter un rôle",
+                    "roleNameBlockLabel": "Nom du rôle (requis)",
+                    "rolePrivilegesBlockLabel": "Privilèges",
+                    "confirmLabel": "Ajouter",
+                    "rejectLabel": "Annuler",
+                    "validation": {
+                       "nameExists": "Un rôle nommé {{name}} existe déjà. Choisissez un autre nom."
+                    },
+                    "failureNotification": "Échec de l'ajout du rôle : {{error}}",
+                    "successNotification": "Le rôle {{role}} a été ajouté."
+                 },
+                 "updateRole": {
+                    "title": "Modifier le rôle",
+                    "roleNameBlockLabel": "Nom du rôle (requis)",
+                    "rolePrivilegesBlockLabel": "Privilèges",
+                    "confirmLabel": "Enregistrer",
+                    "rejectLabel": "Annuler",
+                    "failureNotification": "Échec de la mise à jour du rôle : {{error}}",
+                    "successNotification": "Le rôle {{role}} a été mis à jour."
+                 },
+                 "removeRole": {
+                    "title": "Avertissement",
+                    "content": "Voulez-vous vraiment supprimer le rôle <strong>{{roleName}}</strong> ?",
+                    "option": "Supprimer uniquement si non utilisé",
+                    "confirmLabel": "Oui",
+                    "rejectLabel": "Annuler",
+                    "failureNotification": "Échec de la suppression du rôle {{role}}",
+                    "successNotification": "Le rôle {{role}} a été supprimé."
+                 }
+               },
+               "certificates": {
+                  "tabTitle": "Certificats",
+                  "tabTooltip": "Configurer les certificats SSL de cet hôte",
+                  "warningVC": "Les certificats de l'hôte sont gérés par vCenter Server. Vous ne pouvez pas les configurer à l'aide d'Host Client.",
+                  "import": {
+                     "title": "Importer un certificat",
+                     "confirmLabel": "Importer",
+                     "rejectLabel": "Annuler",
+                     "invalidCert": "Le certificat fourni n'était pas au format PEM. Collez l'intégralité du certificat.",
+                     "certLabel": "Certificat",
+                     "certTitle": "Collez le certificat PEM formaté ici.",
+                     "successMessage": "Le certificat a été mis à jour. Actualisez votre navigateur.",
+                     "failureMessage": "Échec de l'importation du nouveau certificat SSL",
+                     "reboot": {
+                        "title": "Redémarrage nécessaire",
+                        "content": "Redémarrez l'hôte pour charger le nouveau certificat. Voulez-vous redémarrer maintenant ?",
+                        "confirmLabel": "Redémarrer",
+                        "rejectLabel": "Ultérieurement"
+                     }
+                  },
+                  "stack": {
+                     "notAfter": {
+                        "label": "Non valide après"
+                     },
+                     "notBefore": {
+                        "label": "Non valide avant"
+                     },
+                     "subject": {
+                        "label": "Objet"
+                     },
+                     "issuer": {
+                        "label": "Émetteur"
+                     },
+                     "unknown": "Inconnu"
+                  },
+                  "actions": {
+                     "import": {
+                        "label": "Importer un nouveau certificat",
+                        "tooltip": "Importer un nouveau certificat SSL pour cet hôte"
+                     },
+                     "genCSR": {
+                        "copyToClipboard": "Copier dans le presse-papiers",
+                        "title": "Résultat de la demande de signature de certificat",
+                        "close": "Fermer",
+                        "labelIPBased": "Générer une demande de signature d'IP",
+                        "labelHostnameBased": "Générer une demande de signature de nom de domaine complet",
+                        "tooltip": "Générer une demande de signature de certificat"
+                     },
+                     "refresh": {
+                        "label": "Actualiser",
+                        "tooltip": "Actualiser les informations du certificat de cet hôte"
+                     }
+                  }
+               }
+            },
+            "swap": {
+               "tabTitle": "Échange",
+               "tabTooltip": "Configurer l'échange système pour cet hôte",
+               "localSwap": "Échange local",
+               "localSwapEnabled": "Échange local activé",
+               "hostCache": "Cache de l'hôte",
+               "hostCacheEnabled": "Cache de l'hôte activé",
+               "datastore": "Banque de données",
+               "enabled": "Activé",
+               "true": "Oui",
+               "false": "Non",
+               "none": "Aucun",
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser la configuration de l'échange"
+               },
+               "editSettings": {
+                  "label": "Modifier les paramètres",
+                  "tooltip": "Modifier la configuration de l'échange système"
+               },
+               "dialog": {
+                  "title": "Modifier la configuration de l'échange",
+                  "rejectLabel": "Annuler",
+                  "confirmLabel": "Enregistrer",
+                  "successNotification": "La configuration de l'échange d'hôte a été mise à jour.",
+                  "failureNotification": "Échec de la mise à jour de la configuration d'échange d'hôte",
+                  "mustSelect": "Activez au moins un type de périphérique d'échange."
+               }
+            }
+         },
+         "changeUsername": {
+            "dialog": {
+               "nonAscii": "Le nom d'utilisateur contient des caractères non valides. Utilisez uniquement des caractères ASCII minuscules.",
+               "badCharacters": "Le nom d'utilisateur contient des caractères non valides. Utilisez uniquement des caractères alphanumériques."
+            }
+         },
+         "changePassword": {
+            "menu": {
+               "label": "Modifier le mot de passe"
+            },
+            "dialog": {
+               "title": "Modifier le mot de passe",
+               "newPassword": "Nouveau mot de passe",
+               "newPasswordAgain": "Confirmer le nouveau mot de passe",
+               "confirmLabel": "Modifier le mot de passe",
+               "rejectLabel": "Annuler",
+               "noMatch": "Les mots de passe ne correspondent pas.",
+               "nonAscii": "Le mot de passe contient des caractères non valides. Utilisez uniquement des caractères ASCII minuscules.",
+               "success": "Le mot de passe de {{username}} a été modifié.",
+               "blank": "Aucun mot de passe n'a été saisi.",
+               "failed": "Échec de la modification du mot de passe"
+            }
+         }
+      },
+      "sshConsole": {
+         "menu": {
+            "label": "Console SSH",
+            "tooltip": "Ouvrir une console SSH dans cet hôte",
+            "labelGetChrome": "Obtenir SSH pour Chrome"
+         }
+      },
+      "scriptingConsole": {
+         "menu": {
+            "label": "Console de script",
+            "tooltip": "Ouvrir une console pour des actions de script à réaliser par rapport à cet hôte"
+         },
+         "actionBar": {
+            "runButton": {
+               "label": "Exécuter",
+               "tooltip": "Exécuter le script"
+            },
+            "clearButton": {
+               "label": "Effacer",
+               "tooltip": "Effacer la fenêtre du journal"
+            }
+         }
+      },
+      "supportBundle": {
+         "successNotification": "La création du bundle de support est terminée. Vous pouvez télécharger ce bundle sur {{url}}.",
+         "failureNotification": "Échec de la création du bundle de support : {{error}}",
+         "dialog": {
+            "title": "Bundle de support terminé",
+            "content": "La création du bundle de support est terminée. Vous pouvez télécharger ce bundle <a href='{{url}}'>ici</a>.\n\nL'URL de téléchargement de ce bundle de support est accessible à partir de la tâche Générer un bundle de support.\n\nLe bundle sera automatiquement supprimé de l'hôte après 15 minutes.",
+            "confirmLabel": "Télécharger",
+            "rejectLabel": "Ignorer"
+         },
+         "menu": {
+            "label": "Générer un bundle de support",
+            "tooltip": "Générer un bundle de support à partir de cet hôte"
+         }
+      },
+      "monitor": {
+         "title": "{{hostname}} - Surveiller",
+         "performance": {
+            "tabTitle": "Performance",
+            "tabTooltip": "Surveiller les performances du système",
+            "refresh": {
+               "label": "Actualiser",
+               "tooltip": "Actualiser le diagramme de performances"
+            },
+            "configure": {
+               "action": {
+                  "label": "Sélectionner les VM",
+                  "tooltip": "Configurez les VM dont vous souhaitez afficher les données dans le diagramme de performances."
+               },
+               "dialog": {
+                  "title": "Sélectionner les VM",
+                  "rejectLabel": "Annuler",
+                  "confirmLabel": "Enregistrer"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "Disponibilité des données",
+                  "message": "Pourquoi la plage de données Dernière heure est-elle la seule disponible ? Les hôtes ESXi stockent des données historiques uniquement pour la dernière heure. Pour afficher une plus grande plage de données, vous devez utiliser vCenter Server."
+               }
+            },
+            "grid": {
+               "name": "Nom",
+               "unit": "Unité",
+               "average": "Moyen",
+               "maximum": "Maximum",
+               "minimum": "Minimum",
+               "latest": "Dernière"
+            },
+            "noMatches": "Aucune série de données ne correspond au filtre « {{search}} ».",
+            "colors": {
+               "vmware": "Couleurs par défaut",
+               "highContrast": "Couleurs de contraste élevé"
+            },
+            "filter": {
+               "type": "Type de filtre",
+               "cpuFilter": "Filtre CPU",
+               "time": "Heure"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "Tous",
+                     "hostDropdownTitle": "Hôte",
+                     "allCoresDropdownTitle": "Tous les PCPU",
+                     "allPackagesDropdownTitle": "Tous les modules",
+                     "packageDropdownTitle": "Cœurs du module {{pkg}}",
+                     "custom": "Personnalisé",
+                     "seriesLabel": "PCPU {{core}}",
+                     "vmSeriesLabel": "VM - {{name}}",
+                     "packageSeriesLabel": "Module {{pkg}}",
+                     "y1AxisLabel": "CPU hôte utilisé (%)",
+                     "xAxisLabel": "Heure"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "Mémoire",
+                     "seriesLabel": "Mémoire hôte utilisée",
+                     "vmSeriesLabel": "VM - {{name}}",
+                     "y1AxisLabel": "Mémoire hôte utilisée (Go)",
+                     "xAxisLabel": "Heure"
+                  }
+               },
+               "cpuAndMemory": {
+                  "dropdownTitle": "CPU + mémoire composite"
+               },
+               "network": {
+                  "dropdownTitle": "Réseau",
+                  "usageSeriesLabel": "Utilisation totale du réseau",
+                  "vmUsageSeriesLabel": "Utilisation totale du réseau - {{name}}",
+                  "transmitSeriesLabel": "Taux de transmission total",
+                  "receiveSeriesLabel": "Taux de réception total",
+                  "nicTransmitRateSeriesLabel": "Taux de transmission - {{nic}}",
+                  "nicReceiveRateSeriesLabel": "Taux de réception - {{nic}",
+                  "y1AxisLabel": "Taux de transmission/réception (Mbit/s)",
+                  "y2AxisLabel": "Nombre",
+                  "xAxisLabel": "Heure"
+               },
+               "disk": {
+                  "dropdownTitle": "Disque",
+                  "usageSeriesLabel": "Utilisation totale du disque",
+                  "readRateSeriesLabel": "Taux de lecture total",
+                  "writeRateSeriesLabel": "Taux d'écriture total",
+                  "diskReadRateSeriesLabel": "Taux de lecture - {{disk}}",
+                  "diskWriteRateSeriesLabel": "Taux d'écriture - {{disk}}",
+                  "vmRateSeriesLabel": "Utilisation totale du disque - {{name}}",
+                  "maxLatencySeriesLabel": "Latence maximale",
+                  "y1AxisLabel": "Taux de données (Mo/s)",
+                  "y2AxisLabel": "Latence (ms)",
+                  "xAxisLabel": "Heure"
+               },
+               "scale": {
+                  "lastHour": "Dernière heure"
+               }
+            }
+         },
+         "logs": {
+            "context": {
+               "openInNewWindow": {
+                  "label": "Ouvrir dans une nouvelle fenêtre",
+                  "tooltip": "Ouvrir ce journal dans une nouvelle fenêtre"
+               }
+            },
+            "descriptions": {
+               "vmkernel": "Informations du sous-système VMkernel",
+               "vpxa": "Journal de l'agent vCenter",
+               "hostd": "Journal de l'agent hôte",
+               "dhclient": "Journal du client DHCP",
+               "esxupdate": "Fichier journal de mise à jour d'ESX",
+               "vmauthd": "Journal du démon d'authentification de vMotion",
+               "sysboot": "Journal de démarrage du système",
+               "vmkeventd": "Journal du démon d'événements VMkernel",
+               "vobd": "Journal du démon de l'observateur VMware",
+               "auth": "Journal du sous-système d'authentification",
+               "fdm": "Journal de l'agent de gestion de Fault Tolerance",
+               "syslog": "Journal du système général",
+               "vmkwarning": "Journal d'avertissements VMkernel",
+               "vmkdevmgr": "Journal du gestionnaire des périphériques VMkernel",
+               "shell": "Journal des activités d'ESXi Shell"
+            },
+            "tabTitle": "Journaux",
+            "tabTooltip": "Afficher les journaux système",
+            "noLogSelected": "Aucun journal sélectionné",
+            "actionBar": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions pour le fichier journal sélectionné"
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser le fichier journal sélectionné"
+               },
+               "close": {
+                  "label": "Fermer",
+                  "tooltip": "Fermer cette fenêtre"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "Journal",
+                  "description": "Description"
+               }
+            }
+         },
+         "hardware": {
+            "tabTitle": "Matériel",
+            "tabTooltip": "Surveiller le matériel du système",
+            "sensors": {
+               "alt": "Capteurs du système",
+               "tabTitle": "Capteurs du système",
+               "tabTooltip": "Capteurs du système",
+               "type": "Catégorie",
+               "health": "Santé",
+               "fru": "Unité remplaçable sur site",
+               "lastUpdated": "Dernière mise à jour",
+               "noSensors": "Aucune donnée capteur disponible",
+               "currentReading": "Lecture actuelle",
+               "eventLogEntries": "Entrées du journal des événements",
+               "notifications": {
+                  "noIPMI": "Ce système ne dispose pas de fonctionnalités IPMI. Vous devrez peut-être installer un pilote pour pouvoir récupérer les données du capteur."
+               },
+               "discreteSensorStates": {
+                  "DMI-discrete": {
+                     "0": "Transition vers inactif",
+                     "1": "Transition vers actif",
+                     "2": "Transition vers occupé"
+                  },
+                  "assert-discrete": {
+                     "0": "État invalidé",
+                     "1": "État validé"
+                  },
+                  "predictive-discrete": {
+                     "0": "Échec conditionnel invalidé",
+                     "1": "Échec conditionnel validé"
+                  },
+                  "limit-discrete": {
+                     "0": "Limite non dépassée",
+                     "1": "Limite dépassée"
+                  },
+                  "performance-discrete": {
+                     "0": "Performances atteintes",
+                     "1": "Décalage au niveau des performances"
+                  },
+                  "severity-discrete": {
+                     "0": "Transition vers OK",
+                     "1": "Transition vers non critique (depuis OK)",
+                     "2": "Transition vers critique (depuis moins grave)",
+                     "3": "Transition vers irrécupérable (depuis moins grave)",
+                     "4": "Transition vers non critique (depuis plus grave)",
+                     "5": "Transition vers critique (depuis irrécupérable)",
+                     "6": "Transition vers irrécupérable",
+                     "7": "Surveiller",
+                     "8": "Informatif"
+                  },
+                  "present-discrete": {
+                     "0": "Périphérique retiré",
+                     "1": "Périphérique inséré"
+                  },
+                  "enabled-discrete": {
+                     "0": "Périphérique désactivé",
+                     "1": "Périphérique activé"
+                  },
+                  "availability-discrete": {
+                     "0": "transition vers exécution en cours",
+                     "1": "transition vers mode test",
+                     "2": "transition vers mise hors tension",
+                     "3": "transition vers mise en ligne",
+                     "4": "transition vers mise hors ligne",
+                     "5": "transition vers mise hors service",
+                     "6": "transition vers dégradé",
+                     "7": "transition vers économie d'énergie",
+                     "8": "erreur d'installation"
+                  },
+                  "redundancy-discrete": {
+                     "0": "Entièrement redondant",
+                     "1": "Redondance perdue",
+                     "2": "Redondance dégradée",
+                     "3": "Ressources suffisantes non redondantes (depuis : redondantes)",
+                     "4": "Ressource suffisante non redondante (depuis : insuffisante)",
+                     "5": "Ressources suffisantes non redondantes",
+                     "6": "Redondance dégradée (depuis : totalement redondant)",
+                     "7": "Redondance dégradée (depuis : non redondant)"
+                  },
+                  "ACPI-discrete": {
+                     "0": "État d'alimentation D0",
+                     "1": "État d'alimentation D1",
+                     "2": "État d'alimentation D2",
+                     "3": "État d'alimentation D3",
+                     "157": "État inconnu"
+                  },
+                  "watchdog": {
+                     "0": "Expiration du temporisateur",
+                     "1": "Redémarré",
+                     "2": "Mettre hors tension",
+                     "3": "Cycle d'alimentation"
+                  },
+                  "int-drive": {
+                     "0": "Présent",
+                     "1": "Erreur de lecteur",
+                     "2": "Échec conditionnel",
+                     "3": "Échange à chaud",
+                     "4": "Vérification de cohérence en cours",
+                     "5": "Baie dans un état critique",
+                     "6": "Baie dans un état d'échec",
+                     "7": "Recréation en cours",
+                     "8": "Arrêt de la recréation"
+                  },
+                  "cable": {
+                     "0": "Présence/connecté",
+                     "1": "Absent/erreur de configuration"
+                  },
+                  "available-discrete": {
+                     "0": "Périphérique absent",
+                     "1": "Périphérique présent"
+                  }
+               },
+               "state": {
+                  "green": "Vert",
+                  "red": "Rouge",
+                  "yellow": "Jaune",
+                  "unknown": "Inconnu"
+               },
+               "list": {
+                  "columns": {
+                     "sensor": "Capteur",
+                     "id": "ID",
+                     "category": "Catégorie",
+                     "health": "Santé",
+                     "current": "Lecture actuelle",
+                     "selEntries": "Entrées du journal des événements système",
+                     "updated": "Dernière mise à jour",
+                     "hasFRU": "Données de l'unité remplaçable sur site",
+                     "type": "Type/Unité"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "Actualiser",
+                        "tooltip": "Actualisez la table des capteurs. Remarque : le taux de mise à jour actuel est limité par les systèmes internes de l'hôte. Par conséquent, l'actualisation peut ne pas produire de données mises à jour."
+                     },
+                     "clearSEL": {
+                        "label": "Effacer le journal des événements",
+                        "tooltip": "Effacer le journal des événements système"
+                     }
+                  }
+               }
+            },
+            "storage": {
+               "alt": "Stockage",
+               "tabTitle": "Stockage",
+               "tabTooltip": "Données de santé du stockage",
+               "operationalInfo": "Informations supplémentaires",
+               "noData": "Aucune donnée n'est disponible.",
+               "statusTitle": "État",
+               "status": {
+                  "Green": "Vert",
+                  "Red": "Rouge",
+                  "Yellow": "Jaune",
+                  "Unknown": "Inconnu"
+               },
+               "notifications": {
+                  "noSFCBD": "Le démon Small Footprint CIM Broker Daemon (SFCBD) n'est pas en cours d'exécution. Or, c'est ce démon qui signale les données de santé du stockage. Reportez-vous à <a href=\"http://kb.vmware.com/kb/1025757\" target=\"_blank\">cet article de la base de connaissances</a> pour plus d'informations sur l'activation de ce service.",
+                  "noReportedData": "Le démon Small Footprint CIM Broker Daemon (SFCBD) est en cours d'exécution, mais aucune donnée n'a été signalée. Vous devrez peut-être installer un fournisseur CIM pour votre adaptateur de stockage."
+               },
+               "list": {
+                  "columns": {
+                     "name": "Nom",
+                     "status": "Santé",
+                     "description": "Description"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "Actualiser",
+                        "tooltip": "Actualisez la table des capteurs. Remarque : le taux de mise à jour actuel est limité par les systèmes internes de l'hôte. Par conséquent, l'actualisation peut ne pas produire de données mises à jour."
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "tabTitle": "Événements",
+            "tabTooltip": "Événements système",
+            "type": "Type",
+            "time": "Heure",
+            "virtualMachine": "Machine virtuelle",
+            "searchKB": "Base de connaissances",
+            "searchKBLink": "Cliquez ici pour rechercher cet événement dans la base de connaissances en ligne de VMware.com.",
+            "event": "Événement",
+            "time": "Heure",
+            "type": "Type",
+            "previousPage": "Page précédente",
+            "nextPage": "Page suivante",
+            "refresh": "Actualiser",
+            "perPage": "{{num}} par page",
+            "none": "Aucun",
+            "actions": {
+               "label": "Actions",
+               "tooltip": "Actions pour l'objet associé à l'événement sélectionné"
+            },
+            "refresh": {
+               "label": "Actualiser",
+               "tooltip": "Actualiser le tableau des événements"
+            }
+         },
+         "notifications": {
+            "tabTitle": "Notifications",
+            "tabTooltip": "Notifications système",
+            "suggestedAction": "Action suggérée",
+            "actionBar": {
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser les notifications"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions pour la notification sélectionnée"
+               }
+            },
+            "grid": {
+               "notification": "Notification",
+               "type": "Type"
+            }
+         },
+         "tasks": {
+            "alt": "Tâche",
+            "tabTitle": "Tâches",
+            "tabTooltip": "Tâches",
+            "noTasks": "Aucune tâche",
+            "key": "Clé",
+            "description": "Description",
+            "state": "État",
+            "errors": "Erreurs",
+            "result": "Résultat"
+         }
+      },
+      "state": {
+         "inMaintenanceMode": "Mode de maintenance",
+         "normal": "Normale",
+         "connected": "connecté à vCenter Server sur",
+         "disconnected": "non connecté à vCenter Server",
+         "lockdownStrict": "verrouillé, strict",
+         "lockdownNormal": "verrouillé, normal",
+         "lockdownDisabled": "non verrouillé"
+      },
+      "disconnectFromVC": {
+         "title": "Déconnecter de vCenter Server",
+         "confirmLabel": "Déconnecter",
+         "rejectLabel": "Annuler",
+         "warning": "Si vous déconnectez cet hôte, vCenter Server peut se comporter comme si l'hôte ne répondait pas.\n\nUtilisez cette méthode uniquement si votre VC a échoué et que vous devez réaliser des opérations d'urgence sur l'hôte. Si vCenter Server est en cours de fonctionnement, cette opération entraîne l'extinction des alarmes.\n\nLe redémarrage de cet hôte peut aussi lui permettre de se connecter de nouveau à vCenter Server.",
+         "success": "Cet hôte a été déconnecté de vCenter Server."
+      },
+      "maintenanceMode": {
+         "title": "Confirmer la modification du mode de maintenance",
+         "rejectLabel": "Annuler",
+         "confirmLabel": "Oui",
+         "vsan": "Les données de Virtual SAN peuvent résider sur un hôte du cluster Virtual SAN. Sélectionnez une option pour définir le mécanisme de migration des données Virtual SAN applicable avant que l'hôte n'entre en mode de maintenance.",
+         "vsanLabel": "Migration des données vSAN",
+         "vsanDataMigration": {
+            "noAction": {
+               "label": "Aucune migration de données",
+               "help": "Virtual SAN n'évacue aucune donnée de l'hôte. Si vous mettez l'hôte hors tension ou que vous le supprimez du cluster, certaines machines virtuelles peuvent devenir inaccessibles."
+            },
+            "ensureObjectAccessibility": {
+               "label": "Assurer l'accessibilité",
+               "help": "Il s'agit de l'option par défaut. Lorsque vous mettez l'hôte hors tension ou que vous le supprimez du cluster, Virtual SAN veille à ce que toutes les machines virtuelles accessibles sur cet hôte le restent. En général, seule l'évacuation partielle des données est requise.\n\nSélectionnez cette option si vous retirez l'hôte du cluster de manière provisoire (par exemple, pour installer des mises à niveau) et que vous prévoyez de l'intégrer de nouveau au cluster. Cette option n'est pas appropriée si vous supprimez définitivement l'hôte du cluster."
+            },
+            "evacuateAllData":{
+               "label": "Évacuer toutes les données",
+               "help": "Virtual SAN évacue toutes les données vers les autres hôtes du cluster et maintient ou résout la conformité de disponibilité pour les composants du cluster affectés. Cette option est celle qui entraîne le plus gros transfert de données, qui est la plus longue et qui utilise le plus de ressources. Sélectionnez-la si vous prévoyez de migrer l'hôte définitivement. Lorsque vous évacuez des données depuis le dernier hôte du cluster, assurez-vous de migrer les machines virtuelles vers une autre banque de données, puis placez l'hôte en mode de maintenance. L'hôte ne passe pas en mode de maintenance si un objet de machine virtuelle disposant de données sur l'hôte en question est inaccessible et ne peut pas être intégralement évacué."
+            }
+         },
+         "vmsPoweredOn": "Des VM sont toujours sous tension. Pour activer le mode de maintenance, vous devez migrer, mettre sous tension ou suspendre toutes les VM.",
+         "vmsPoweredOnTitle": "Passage en mode de maintenance retardé",
+         "warning": "Lorsque le mode de maintenance est activé, vous ne pouvez pas créer, mettre sous tension ni configurer de VM. De plus, VMware vCenter Server ne migrera aucune VM sur cet hôte tant qu'il sera en mode de maintenance.\n\nVous devrez peut-être mettre hors tension ou migrer manuellement les machines virtuelles à partir de l'hôte.\n\nVous pouvez annuler la tâche d'activation du mode de maintenance à tout moment.",
+         "confirmEnter": "Voulez-vous vraiment mettre cet hôte en mode de maintenance ?",
+         "notifications": {
+            "failure": "Échec de l'activation du mode de maintenance : {{message}}",
+            "failureUnknown": "Échec de l'activation du mode de maintenance ; erreur inconnue."
+         }
+      },
+      "lockdownMode": {
+         "warning": "Si vous activez le mode de verrouillage, cette session peut ne plus répondre sauf s'il existe une exception pour l'utilisateur actuel. En l'absence d'exception, vous ne pourrez pas vous connecter de nouveau à cette application cliente."
+      },
+      "notifications": {
+         "freeLicense": {
+            "message": "La licence attribuée à cet hôte contient des restrictions qui entraînent l'impossibilité d'exécuter certaines opérations, dont les opérations d'alimentation de la VM.",
+            "suggested-action": "Pour résoudre ce problème, revenez à la licence d'évaluation."
+         },
+         "licenseExpired": {
+            "message": "Votre licence ESXi a expiré."
+         },
+         "evalLicenseValid": {
+            "message": "Vous utilisez actuellement ESXi en mode d'évaluation. Cette licence expirera dans {{days}} jours."
+         },
+         "evalLicenseExpired": {
+            "message": "Votre licence d'évaluation d'ESXi a expiré."
+         },
+         "certNotValidBefore": {
+            "message": "Le certificat attribué à cet hôte n'est pas encore valide.",
+            "suggested-action": "Vous devez installer un certificat valide."
+         },
+         "certExpired": {
+            "message": "Le certificat attribué à cet hôte a expiré.",
+            "suggested-action": "Vous devez installer un certificat valide."
+         },
+         "rebootRequired": {
+            "message": "Redémarrez l'hôte pour terminer la configuration."
+         },
+         "ssh": {
+            "message": "SSH est activé sur cet hôte.",
+            "suggested-action": "Vous devez désactiver SSH, sauf s'il est requis à des fins d'administration."
+         },
+         "shell": {
+            "message": "Le shell ESXi est activé sur cet hôte.",
+            "suggested-action": "Vous devez désactiver le shell, sauf s'il est requis à des fins d'administration."
+         },
+         "vc": {
+            "message": "Cet hôte est géré par vCenter Server.",
+            "suggested-action": "vCenter Server peut effectuer automatiquement des actions sans que vous en soyez informé."
+         },
+         "maxRegisteredVMs": {
+            "message": "Cet hôte a atteint le nombre maximal de VM enregistrées.",
+            "suggested-action": "L'ajout de mémoire supplémentaire à l'hôte augmentera le nombre maximal de VM prises en charge."
+         }
+      }
+   }
+}

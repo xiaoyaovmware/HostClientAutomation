@@ -1,0 +1,20 @@
+{
+     "title": "Comentarios",
+     "text": "Apreciamos sus comentarios acerca de VMware Host Client. Utilice el siguiente formulario para enviar comentarios o sugerencias. También puede crear una captura de pantalla e incluir en ella los comentarios visuales que desee. Utilice el editor para eliminar cualquier dato que no desee compartir.",
+     "experience": "En general, ¿cómo fue su experiencia?",
+     "tellMore": "Cuéntenos más (quedan $1 caracteres)",
+     "privacyPolicy": "Directiva de privacidad",
+     "privacyPolicyContent": "Puede que VMware utilice cualquiera de sus comentarios para mejorar los productos y los servicios de VMware, solucionar problemas y aconsejar a los clientes sobre la mejor manera de implementar y utilizar los productos y los servicios de VMware. Usted es el responsable de ocultar o quitar la información confidencial o personal de todas las capturas de pantalla que ofrezca a VMware, y debe asegurarse de no incluir información de este tipo en los comentarios. Su dirección de correo electrónico se utilizará para ponerse en contacto con usted en relación con los comentarios.",
+     "emailPlaceholder": "Dirección de correo electrónico",
+     "screenshotTitle": "",
+     "penTooltip": "Anotar",
+     "eraserTooltip": "Redactar",
+     "undoTooltip": "Deshacer",
+     "zoomInTooltip": "Acercar",
+     "zoomOutTooltip": "Alejar",
+     "takeScreenshotButton": "Crear captura de pantalla",
+     "removeScreenshotButton": "Eliminar captura de pantalla",
+     "sendButton": "Enviar",
+     "cancelButton": "Cancelar"
+}
+

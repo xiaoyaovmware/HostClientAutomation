@@ -1,0 +1,923 @@
+{
+   "storage": {
+      "title": "Stockage",
+      "tabs": {
+         "datastores": {
+            "label": "Banques de données",
+            "tooltip": "Banques de données"
+         },
+         "adapters": {
+            "label": "Adaptateurs",
+            "tooltip": "Adaptateurs"
+         },
+         "devices": {
+            "label": "Périphériques",
+            "tooltip": "Périphériques"
+         }
+      },
+      "wizard": {
+         "partitionType": "Type de partition",
+         "vmfsVersion": "Version VMFS",
+         "error": {
+            "scheme": "Sélectionnez un schéma de partitionnement",
+            "size": "Sélectionnez une taille de partition comprise entre {{min}} et {{max}}.",
+            "partition": "Aucune partition n'a été sélectionnée. Sélectionnez-en une sur le diagramme de gauche."
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "Autorisations",
+            "title": "Gérer les autorisations",
+            "close": "Fermer",
+            "cancel": "Annuler",
+            "noUsers": "Aucun utilisateur",
+            "addUser": {
+               "label": "Ajouter utilisateur",
+               "toolTip": "Ajouter un utilisateur"
+            },
+            "removeUser": {
+               "label": "Supprimer utilisateur",
+               "toolTip": "Supprimer un utilisateur"
+            },
+            "assignRole": {
+               "label": "Affecter rôle",
+               "toolTip": "Affecter un rôle à un utilisateur"
+            },
+            "updatePermissions": {
+               "successNotification": "Autorisations mises à jour",
+               "failureNotification": "Échec de la mise à jour des autorisations : {{error}}"
+            },
+            "columns": {
+               "user": "Utilisateur",
+               "role": "Rôle"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "Sélectionner un utilisateur"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "Sélectionner un rôle"
+            },
+            "propagateLabel": "Propager vers tous les enfants"
+         }
+      },
+      "devices": {
+        "browser": {
+          "dialog": {
+            "title": "Sélectionner un périphérique de stockage",
+            "reject": "Annuler",
+            "confirm": "Sélectionner"
+          },
+          "datagrid": {
+            "name": "Nom",
+            "capacity": "Capacité"
+          }
+        }
+      },
+      "device": {
+         "context": {
+            "disk": {
+               "clear": {
+                  "label": "Effacer la table de partition",
+                  "tooltip": "Effacer la table de partition de ce disque"
+               },
+               "editPartitions": {
+                  "label": "Modifier les partitions",
+                  "tooltip": "Modifier la table de partition de ce disque"
+               },
+               "rescan": {
+                  "title": "Réanalyser",
+                  "tooltip": "Réanalyser tous les périphériques de stockage des banques de données"
+               }
+            }
+         },
+         "editPartitions": {
+            "title": "Modifier les partitions - {{disk}}",
+            "rejectLabel": "Annuler",
+            "confirmLabel": "Enregistrer les partitions",
+            "before": "Avant",
+            "after": "Après, sélectionnez une partition",
+            "actions": {
+               "delete": {
+                  "label": "Supprimer la partition",
+                  "tooltip": "Supprimer la partition sélectionnée"
+               },
+               "reset": {
+                  "label": "Réinitialiser",
+                  "tooltip": "Réinitialiser les partitions sur leur état d'origine"
+               }
+            },
+            "warning": {
+               "title": "Confirmer les modifications de la table de partition de {{disk}}",
+               "content": "Vous êtes sur le point de modifier la table de partition de <strong>{{disk}}</strong>. Cette action est irréversible et risque d'entraîner une perte de données. Voulez-vous vraiement continuer ?",
+               "confirmLabel": "Oui",
+               "rejectLabel": "Non"
+            },
+            "successNotification": "La table de partition de {{disk}} a été mise à jour.",
+            "failureNotification": "Échec de la mise à jour de la table de partition de {{disk}}"
+         },
+         "clear": {
+            "title": "Confirmer l'effacement de la table de partition - {{disk}}",
+            "content": "Vous êtes sur le point d'effacer la table de partition de <strong>{{disk}}</strong>. Cette action est irréversible et risque d'entraîner une perte de données. Voulez-vous vraiment continuer ?",
+            "confirmLabel": "Oui",
+            "rejectLabel": "Non",
+            "failureNotification": "Échec de l'effacement du disque {{disk}}",
+            "successNotification": "Le disque {{disk}} a été effacé."
+         },
+         "type": {
+            "disk": "Disque",
+            "cdrom": "CDROM"
+         },
+         "summary": {
+            "alt": "Périphérique",
+            "uuid": "UUID :",
+            "notApplicable": "S/O",
+            "type": "Type :",
+            "model": "Modèle :",
+            "path": "Chemin :",
+            "capacity": "Capacité :",
+            "partitionFormat": "Format de partition :",
+            "partitions": "Partitions",
+            "partitionDiagram": "Diagramme de partitions",
+            "blocks": "blocs",
+            "portlet": {
+               "type": "Type",
+               "startBlock": "Début du bloc",
+               "endBlock": "Fin du bloc",
+               "blockSize": "Taille du bloc",
+               "size": "Taille"
+            },
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions à effectuer pour les objets sélectionnés dans cette liste."
+               },
+               "increaseCapacity": {
+                  "label": "Augmenter la capacité de la banque de données sur ce disque",
+                  "tooltip": "Augmenter la capacité de la banque de données sur ce périphérique"
+               },
+               "newDatastore": {
+                  "label": "Nouvelle banque de données",
+                  "tooltip": "Créer une banque de données VMFS sur ce périphérique"
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser les informations sur ce périphérique"
+               }
+            }
+         },
+         "list": {
+            "ok": "Normale",
+            "error": "Erreur",
+            "timeout": "Délai d'expiration",
+            "degraded": "Dégradé",
+            "disk": "Disque",
+            "cdrom": "CDROM",
+            "unknown": "Inconnu",
+            "notApplicable": "S/O",
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions à effectuer pour les objets sélectionnés dans cette liste."
+               },
+               "increaseCapacity": {
+                  "label": "Augmenter la capacité de la banque de données sur ce disque",
+                  "tooltip": "Augmenter la capacité de la banque de données sur ce périphérique"
+               },
+               "rescan": {
+                  "label": "Réanalyser",
+                  "tooltip": "Réanalyser tous les périphériques de stockage des banques de données"
+               },
+               "newDatastore": {
+                  "label": "Nouvelle banque de données",
+                  "tooltip": "Créer une banque de données VMFS sur ce périphérique"
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser les informations sur ce périphérique"
+               }
+            },
+            "datagrid": {
+               "name": "Nom",
+               "status": "État",
+               "type": "Type",
+               "capacity": "Capacité",
+               "queue": "Profondeur de file d'attente",
+               "free": "Espace libre",
+               "vendor": "Fournisseur"
+            }
+         }
+      },
+      "partitionTypes": {
+         "C12A7328F81F11D2BA4B00A0C93EC93B": "Système EFI",
+         "EBD0A0A2B9E5443387C068B6B72699C7": "Données de base",
+         "AA31E02A400F11DB9590000C2911D1B8": "VMFS",
+         "9D27538040AD11DBBF97000C2911D1B8": "Diagnostic de VMware",
+         "381CFCCC728811E092EE000C2911D0B2": "vSAN",
+         "77719A0CA4A011E3A47E000C29745A24": "vSAN",
+         "free": "Espace libre",
+         "extended": "Étendu",
+         "linuxNative": "Linux natif",
+         "linuxSwap": "Permutation Linux",
+         "none": "Aucun",
+         "ntfs": "NTFS",
+         "vffs": "VFFS",
+         "vmfs": "VMFS",
+         "vmkDiagnostic": "Diagnostic de VMware",
+         "undefined": "Inconnu",
+         "unknown": "Inconnu",
+         "0xde": "Diagnostic Dell",
+         "0x0b": "FAT 32",
+         "0x07": "NTFS"
+      },
+      "datastore": {
+         "create": {
+            "title": "Nouvelle banque de données",
+            "titleExtend": "Augmenter la capacité de la banque de données",
+            "pages": {
+               "creationType": {
+                  "title": "Sélectionner un type de création",
+                  "description": "Comment voulez-vous créer une banque de données ?"
+               },
+               "name": {
+                  "title": "Nom de la banque de données",
+                  "description": "Fournir un nom pour la nouvelle banque de données"
+               },
+               "device": {
+                  "title": "Sélectionner un périphérique",
+                  "description": "Sélectionner un périphérique sur lequel créer une partition VMFS",
+                  "noDevice": "Sélectionnez un périphérique"
+               },
+               "nfs": {
+                  "title": "Fournir les détails du montage NFS",
+                  "description": "Fournissez les détails du partage NFS que vous souhaitez monter."
+               },
+               "partitioning": {
+                  "title": "Sélectionner les options de partitionnement",
+                  "description": "Sélectionnez la manière dont vous voulez partitionner le périphérique.",
+                  "before": "Avant la modification d'une partition",
+                  "after": "Ensuite",
+                  "selectScheme": "Sélectionner un schéma de partitionnement",
+                  "full": "Utiliser tout l'espace disque",
+                  "custom": "Personnalisé"
+               },
+               "datastore": {
+                  "title": "Sélectionner une banque de données",
+                  "description": "Sélectionnez la banque de données dont vous souhaitez augmenter la capacité."
+               },
+               "summary": {
+                  "title": "Prêt à terminer",
+                  "description": "Résumé",
+                  "type": "Type de banque de données",
+                  "name": "Nom",
+                  "datastore": "Banque de données",
+                  "disk": "Disque",
+                  "partitioning": "Partitionnement",
+                  "vmfsVersion": "Version VMFS"
+               }
+            },
+            "device": {
+               "desc": "Les périphériques suivants ne sont pas réclamés et peuvent être utilisés pour créer une banque de données VMFS.",
+               "noFree": "Aucun périphérique disposant d'espace libre"
+            },
+            "vmfs": {
+               "label": "Créer une banque de données VMFS",
+               "description": "Créer une banque de données VMFS sur un périphérique de disque local",
+               "notificationSuccess": "La banque de données VMFS {{name}} a été créée.",
+               "notificationFailure": "Échec de la création de la banque de données VMFS {{name}} - {{message}}",
+               "unknown": "Raison inconnue",
+               "validation": {
+                  "name" : {
+                     "empty" : "Indiquez un nom pour la nouvelle banque de données",
+                     "length": "Le nom de la banque de données doit contenir entre {{min}} et {{max}} caractères. La longueur actuelle est de {{length}}. Vérifiez le nom.",
+                     "exists": "Une banque de données portant le nom {{name}} existe déjà."
+                  }
+               }
+            },
+            "mountVmfs": {
+               "label": "Monter une banque de données VMFS existante",
+               "description": "Monter un volume VMFS existant",
+               "notificationSuccess": "La banque de données VMFS {{name}} a été montée.",
+               "notificationFailure": "Échec du montage de la banque de données VMFS {{name}} - {{message}}"
+            },
+            "extendVmfs": {
+               "label": "Ajouter une extension à une banque de données VMFS existante",
+               "description": "Augmenter la taille d'une banque de données existante en ajoutant une nouvelle extension sur un autre disque",
+               "notificationSuccess": "La banque de données VMFS {{name}} a été étendue.",
+               "notificationFailure": "Échec de l'extension de la banque de données VMFS {{name}} - {{message}}",
+               "unknown": "Raison inconnue"
+            },
+            "expandVmfs": {
+               "label": "Développer une extension de banque de données VMFS existante",
+               "description": "Augmenter la taille d'une banque de données existante en développant une extension existante dans l'espace libre adjacent",
+               "notificationSuccess": "La banque de données VMFS {{name}} a été développée",
+               "notificationFailure": "Échec du développement de la banque de données VMFS {{name}} - {{message}}",
+               "unknown": "Raison inconnue"
+            },
+            "nfs": {
+               "label": "Monter une banque de données NFS",
+               "description": "Créer une banque de données en montant un volume NFS distant",
+               "notificationSuccess": "La banque de données NFS {{name}} a été montée.",
+               "notificationFailure": "Échec du montage de la banque de données NFS {{name}} - {{message}}",
+               "server": "Serveur NFS",
+               "share": "Partage NFS",
+               "version": "Version NFS",
+               "user": "Nom d'utilisateur",
+               "password": "Mot de passe",
+               "validation": {
+                  "name": "Indiquez un nom pour la nouvelle banque de données",
+                  "server": "Indiquez un serveur NFS",
+                  "share": "Indiquez un partage NFS"
+               }
+            },
+            "warnFull": {
+               "title": "Avertissement",
+               "content": "L'intégralité du contenu de ce disque est sur le point d'être effacé et remplacé par la configuration spécifique. Voulez-vous continuer ?",
+               "confirmLabel": "Oui",
+               "rejectLabel": "Non"
+            }
+         },
+         "registerVM": {
+            "title": "Enregistrer la VM",
+            "confirmLabel": "Enregistrer",
+            "successNotification": "La VM {{path}} a été enregistrée.",
+            "failureNotification": "Échec de l'enregistrement de la VM {{path}}. {{message}}",
+            "failureReasonUnknown": "Raison inconnue",
+            "vmAlreadyRegistered": {
+               "title": "La VM est déjà enregistrée.",
+               "content": "est déjà enregistrée",
+               "confirmLabel": "Fermer",
+               "cancelLabel": "Annuler"
+            }
+         },
+         "unmountVMFS": {
+            "title": "Confirmer le démontage de la banque de données - {{name}}",
+            "confirmLabel": "Oui",
+            "rejectLabel": "Annuler",
+            "content": "Voulez-vous vraiment démonter <strong>{{name}}</strong> ?",
+            "successNotification": "La banque de données {{name}} a été démontée.",
+            "failureNotification": "Échec du démontage de la banque de données {{name}}"
+         },
+         "mountVMFS": {
+            "successNotification": "La banque de données {{name}} a été montée.",
+            "failureNotification": "Échec du montage de la banque de données {{name}}"
+         },
+         "upgradeVMFS": {
+            "successNotification": "La banque de données {{name}} a été mise à niveau à partir de la version {{oldVersion}} vers la version {{version}}.",
+            "failureNotification": "Échec de la mise à niveau de la banque de données VMFS {{name}}."
+         },
+         "nonSSD": "Non-SSD",
+         "SSD": "SSD",
+         "summary": {
+            "alt": "Banque de données",
+            "type": "Type :",
+            "location": "Emplacement :",
+            "hosts": "Hôtes :",
+            "uuid": "UUID :",
+            "virtualMachines": "Machines virtuelles :",
+            "metrics": {
+               "storage": "STOCKAGE"
+            },
+            "portlets": {
+               "vmfs": {
+                  "title": "Détails VMFS",
+                  "local": {
+                     "label": "Local",
+                     "true": "Oui",
+                     "false": "Non"
+                  },
+                  "blockSize": "Taille du bloc",
+                  "version": "Version",
+                  "uuid": "UUID",
+                  "extent": "Extension {{index}}",
+                  "extentValue": "{{disk}}, partition {{partition}}"
+               }
+            },
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions à effectuer pour les objets sélectionnés dans cette liste."
+               },
+               "increaseCapacity": {
+                  "label": "Augmenter la capacité",
+                  "tooltip": "Augmenter la capacité d'une banque de données"
+               },
+               "register": {
+                  "label": "Enregistrer une VM",
+                  "tooltip": "Enregistrez une machine virtuelle existante dans l'inventaire."
+               },
+               "fileBrowser": {
+                  "label": "Navigateur de banque de données",
+                  "tooltip": "Accédez à l'explorateur de fichiers de la banque de données."
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser les informations sur cette banque de données"
+               }
+            }
+         },
+         "list": {
+            "actions": {
+               "upgradeVMFSDatastore": {
+                  "label": "Mise à niveau",
+                  "tooltip": "Mettez à niveau cette banque de données vers la dernière version."
+               },
+               "mountVMFSDatastore": {
+                  "label": "Monter",
+                  "tooltip": "Monter un volume VMFS existant en tant que banque de données"
+               },
+               "unmountVMFSDatastore": {
+                  "label": "Démonter",
+                  "tooltip": "Démonter cette banque de données VMFS"
+               },
+               "mountNFSDatastore": {
+                  "label": "Monter une banque de données NFS",
+                  "tooltip": "Monter un partage NFS distant en tant que banque de données"
+               },
+               "createDatastore": {
+                  "label": "Nouvelle banque de données",
+                  "tooltip": "Créer une banque de données"
+               },
+               "increaseCapacity": {
+                  "label": "Augmenter la capacité",
+                  "tooltip": "Augmenter la capacité d'une banque de données"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions à effectuer pour les objets sélectionnés dans cette liste."
+               },
+               "fileBrowser": {
+                  "label": "Navigateur de banque de données",
+                  "tooltip": "Accédez à l'explorateur de fichiers de la banque de données."
+               },
+               "register": {
+                  "label": "Enregistrer une VM",
+                  "tooltip": "Enregistrez une machine virtuelle existante dans l'inventaire."
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualisez les informations du tableau."
+               }
+            },
+            "datagrid": {
+               "name": "Nom",
+               "driveType": "Type de lecteur",
+               "capacity": "Capacité",
+               "provisioned": "Provisionné",
+               "free": "Libre",
+               "type": "Type",
+               "thin": "Provisionnement dynamique",
+               "access": "Accès"
+            },
+            "thinProvisioning": {
+               "supported": "Pris en charge",
+               "notSupported": "Non pris en charge"
+            },
+            "access": {
+               "multiple": "Multiple",
+               "single": "Simple"
+            }
+         },
+         "manage": {
+            "title": "Gérer"
+         },
+         "browser": {
+            "nfs": {
+               "noBrowse": "Impossible d'explorer les banques de données NFS"
+            },
+            "contextMenu": {
+               "deleteFile": {
+                  "label": "Supprimer",
+                  "toolTip": "Supprimer ce fichier ou répertoire"
+               }
+            },
+            "actions": {
+               "inflateDisk": {
+                  "label": "Gonfler le disque",
+                  "tooltip": "Convertir le disque à provisionnement dynamique en un disque à provisionnement statique",
+                  "successNotification": "Le disque {{disk}} a été gonflé.",
+                  "errorNotification": "Échec du gonflement du disque {{disk}} : {{reason}}",
+                  "datastoreCapacity": "Désolé, la taille du disque gonflé est supérieure à l'espace disponible sur la banque de données. Libérez de l'espace sur {{datastoreName}} et réessayez."
+               },
+               "delete": {
+                  "label": "Supprimer",
+                  "tooltip": "Supprimer le fichier ou le répertoire sélectionné"
+               },
+               "copy": {
+                  "label": "Copier",
+                  "tooltip": "Copier ce fichier ou répertoire"
+               },
+               "move": {
+                  "label": "Déplacer",
+                  "tooltip": "Déplacer ce fichier ou répertoire"
+               },
+               "download": {
+                  "label": "Télécharger",
+                  "tooltip": "Télécharger le fichier sélectionné"
+               },
+               "directory": {
+                  "label": "Créer un répertoire",
+                  "tooltip": "Créer un répertoire"
+               },
+               "upload": {
+                  "label": "Télécharger",
+                  "tooltip": "Télécharger un fichier dans la banque de données sélectionnée"
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser la vue"
+               }
+            },
+            "dialog": {
+               "defaultTitle": "Navigateur de banque de données",
+               "noDatastore": {
+                  "title": "Aucune banque de données ne peut être explorée",
+                  "content": "Aucune banque de données ne peut être explorée. Actuellement, vous ne pouvez explorer que les banques de données vSAN et VMFS locales."
+               },
+               "select": {
+                  "title": "Sélectionner une destination",
+                  "titleFor": "Sélectionner une destination pour {{name}}",
+                  "move": "Déplacer",
+                  "copy": "Copier"
+               },
+               "selectDatastore": {
+                  "title": "Sélectionner une banque de données",
+                  "rejectLabel": "Annuler"
+               },
+               "directory": {
+                  "title": "Nouveau répertoire",
+                  "create": "Créer un répertoire",
+                  "invalidDirectory": "Indiquez un nom de répertoire valide",
+                  "cancel": "Annuler",
+                  "placeholder": "Nom du répertoire",
+                  "createdIn": "Emplacement de création du répertoire : {{location}}/"
+               },
+               "delete": {
+                  "title": "Confirmer la suppression",
+                  "content": "Voulez-vous vraiment supprimer ce fichier ou répertoire ?",
+                  "delete": "Supprimer",
+                  "cancel": "Annuler"
+               },
+               "upload": {
+                  "inProgress": "{{num}} fichier(s)",
+                  "notEnoughSpace": {
+                     "title": "Espace insuffisant dans la banque de données",
+                     "confirmLabel": "OK",
+                     "content": "L'espace libre sur {{datastore}} est insuffisant pour télécharger ce fichier. Vous devez libérer au moins {{needed}}."
+                  },
+                  "ielimit": {
+                     "title": "Dépasse la limite de taille de fichier d'IE",
+                     "confirmLabel": "OK",
+                     "content": "La taille d'un fichier sélectionné dépasse la limite de téléchargement de fichier de 4 Go d'Internet Explorer"
+                  }
+               },
+               "close": "Fermer",
+               "cancel": "Annuler"
+            }
+         },
+         "monitor": {
+            "title": "Surveiller",
+            "event": {
+               "datagrid": {
+                  "event": {
+                     "label": "Événement"
+                  },
+                  "time": {
+                     "label": "Heure"
+                  }
+               }
+            },
+            "general": {
+               "title": "Général",
+               "desc": "Général",
+               "settings": {
+                  "enabled": "vSAN",
+                  "claimingMode": "Mode de réclamation",
+                  "deduplication": "Déduplication",
+                  "encryption": "Chiffrement",
+                  "iscsi": "Service iSCSI",
+                  "health": {
+                     "service": "Service de santé",
+                     "intervalChecks": "Intervalle de contrôle de santé"
+                  },
+                  "performance": {
+                     "status": "Service de performance",
+                     "statsObjectHealth": "Santé de l'objet de base de données Stats",
+                     "statsObjectUuid": "UUID de l'objet de base de données Stats",
+                     "storagePolicy": "Stratégie de stockage",
+                     "complianceStatus": "Statut de conformité"
+                  },
+                  "faultDomain": "Domaine de pannes"
+               },
+               "edit": {
+                  "title": "Modifier les paramètres",
+                  "warning": "La modification de ces options peut entraîner une configuration incorrecte du cluster vSAN."
+               }
+            },
+            "health": {
+               "noResultsFound": "Aucun résultat trouvé",
+               "info": "Info"
+            },
+            "actions": {
+               "edit":{
+                  "label": "Modifier les paramètres",
+                  "tooltip": "Modifier les paramètres vSAN"
+               },
+               "enableVsan":{
+                  "label": "Activer",
+                  "tooltip": "Activer"
+               },
+               "refresh":{
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser"
+               }
+            },
+            "task": {
+               "UpdateVsan_Task": {
+                  "success": "La configuration vSAN de l'hôte a été mise à jour",
+                  "error": "Échec de la mise à jour de la configuration vSAN de l'hôte"
+               }
+            },
+            "common": {
+               "enabled": "Activé",
+               "disabled": "Désactivé",
+               "yes": "Oui",
+               "no": "Non",
+               "ok": "OK",
+               "cancel": "Annuler",
+               "auto": "Automatique",
+               "manual": "Manuel",
+               "save": "Enregistrer",
+               "seconds": "secondes"
+            },
+            "policyStatus": {
+               "compliant" : "Conforme",
+               "nonCompliant" : "Non conforme",
+               "notApplicable" : "Non applicable",
+               "unknow" : "Inconnu"
+            },
+            "healthStatus": {
+               "inaccessible": "Inaccessible",
+               "reducedAvailabilityWithNoRebuild": "Disponibilité réduite sans reconstruction",
+               "reducedAvailabilityWithNoRebuildDelayTimer": "Disponibilité réduite sans minuteur du délai de reconstruction",
+               "reducedAvailabilityWithActiveRebuild": "Disponibilité réduite avec reconstruction active",
+               "dataMove": "Déplacement de données",
+               "nonAvailabilityRelatedReconfig": "Reconfiguration non liée à la disponibilité",
+               "nonAvailabilityRelatedIncompliance": "Non-conformité non liée à la disponibilité",
+               "healthy": "Intègre",
+               "unknown": "Inconnu"
+            },
+            "tabs": {
+               "events": {
+                  "label": "Événements",
+                  "tooltip": "Événements"
+               },
+               "tasks": {
+                  "label": "Tâches",
+                  "tooltip": "Tâches"
+               },
+               "general": {
+                  "label": "vSAN",
+                  "tooltip": "Paramètres généraux vSAN"
+               },
+               "hosts": {
+                  "label": "Hôtes",
+                  "tooltip": "Hôtes participant au cluster vSAN"
+               },
+               "health": {
+                  "label": "Santé",
+                  "tooltip": "Santé"
+               }
+            }
+         },
+         "delete": {
+            "label": "Supprimer",
+            "tooltip": "Supprimer cette banque de données",
+            "confirm": {
+               "title": "Supprimer la banque de données - {{name}}",
+               "content": "Voulez-vous vraiment supprimer la banque de données suivante ?"
+            },
+            "rejectLabel": "Annuler",
+            "confirmLabel": "Confirmer",
+            "successNotification": "La banque de données {{name}} a été supprimée.",
+            "failureNotification": "Échec de la suppression de la banque de données {{name}}"
+         },
+         "rename": {
+            "dialog": {
+               "title": "Renommer la banque de données",
+               "rejectLabel": "Annuler",
+               "save": "Enregistrer",
+               "emptyName": "Nom vide",
+               "lengthValidation" : "Le nom de la banque de données doit comporter entre {{min}} et {{max}} caractères. La longueur actuelle est de {{actual}}.",
+               "notification": {
+                  "info": "La banque de données {{oldName}} a été renommée comme suit : {{newName}}.",
+                  "error": "Impossible de renommer la banque de données {{oldName}} : {{localizedMessage}}."
+               }
+            }
+         },
+         "contextMenu": {
+            "rename": {
+               "label": "Renommer",
+               "tooltip": "Renommer cette banque de données",
+               "tooltipVC": "Vous ne pouvez pas renommer des banques de données sur des hôtes gérés par vCenter Server."
+            },
+            "browse": {
+               "label": "Parcourir",
+               "toolTip": "Parcourir cette banque de données",
+               "browseDatastores": "Parcourir les banques de données"
+            },
+            "registerSingle": {
+               "label": "Enregistrer la VM",
+               "toolTip": "Enregistrer cette machine virtuelle"
+            },
+            "register": {
+               "label": "Enregistrer une VM",
+               "toolTip": "Enregistrer une machine virtuelle existante à partir d'une banque de données de l'inventaire de l'hôte"
+            }
+         }
+      },
+      "adapter": {
+         "status": {
+            "online": "En ligne",
+            "offline": "Déconnecté",
+            "unbound": "Non lié",
+            "unknown": "Inconnu"
+         },
+         "list": {
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions à effectuer pour les objets sélectionnés dans cette liste."
+               },
+               "refresh": {
+                  "label": "Actualiser",
+                  "tooltip": "Actualiser la table des adaptateurs"
+               },
+               "rescan": {
+                  "label": "Réanalyser",
+                  "tooltipAll": "Analyser de nouveau tous les adaptateurs basés sur l'hôte pour les nouveaux LUN",
+                  "tooltipOne": "Analyser de nouveau l'adaptateur basé sur l'hôte sélectionné pour les nouveaux LUN"
+               },
+               "iscsi": {
+                  "label": "Configurer iSCSI",
+                  "tooltip": "Configurer iSCSI pour cet hôte"
+               }
+            },
+            "datagrid": {
+               "name": "Nom",
+               "model": "Modèle",
+               "status": "État",
+               "driver": "Pilote"
+            }
+         },
+         "iscsi": {
+            "title": "Configurer iSCSI - {{adapter}}",
+            "titleNoDevice": "Configurer iSCSI",
+            "confirmLabel": "Enregistrer la configuration",
+            "rejectLabel": "Annuler",
+            "close": "Fermer",
+            "loading": "Chargement",
+            "configuring": "Configuration",
+            "iscsiEnabled": "iSCSI activé",
+            "nameAndAlias": "Nom et alias",
+            "alias": "Alias",
+            "enabled": "Activé",
+            "disabled": "Désactivé",
+            "networkPortBindings": "Liaisons de port réseau",
+            "staticTargets": "Cibles statiques",
+            "dynamicTargets": "Cibles dynamiques",
+            "authentication": {
+               "chapAuthentication": "Authentification CHAP",
+               "mutualChapAuthentication": "Authentification CHAP mutuelle",
+               "name": "Nom",
+               "secret": "Secret"
+            },
+            "warnReboot": "Un redémarrage est requis pour supprimer l'adaptateur iSCSI et le module de noyau.",
+            "warnNoDevice": "Aucun adaptateur iSCSI détecté, essayez de fermer et de rouvrir la boîte de dialogue de configuration.",
+            "resetAdvancedOption": "Réinitialiser sur les paramètres par défaut",
+            "isInherited": "Hériter du parent",
+            "chapDisabled": "Ne pas utiliser CHAP",
+            "chapRequired": "Ne pas utiliser CHAP sauf si la cible le demande",
+            "chapProhibited": "Utiliser CHAP sauf si interdit par la cible",
+            "chapPreferred": "Utiliser CHAP",
+            "noStaticTargets": "Aucune cible statique",
+            "noDynamicTargets": "Aucune cible dynamique",
+            "noPortBindings": "Aucune liaison de port",
+            "advancedBlock": {
+               "label": "Paramètres avancés",
+               "expand": "Cliquer pour développer",
+               "maximum": "Maximum",
+               "minimum": "Minimum",
+               "default": "Par défaut"
+            },
+            "boundPortsGrid": {
+               "vmknic": "NIC VMkernel",
+               "portgroup": "Groupe de ports",
+               "ipv4Address": "Adresse IPv4"
+            },
+            "addPort": {
+               "label": "Ajouter une liaison de port",
+               "tooltip": "Ajouter une nouvelle liaison de port",
+               "alreadyBound": {
+                  "title": "Erreur",
+                  "content": "La NIC VMKernel {{vmknic}} est déjà liée à cet adaptateur iSCSI."
+               }
+            },
+            "removePort": {
+               "label": "Supprimer une liaison de port",
+               "tooltip": "Supprime la liaison de port sélectionnée",
+               "inUse": {
+                  "title": "Port utilisé",
+                  "content": "Le port {{port}} est actuellement utilisé. Supprimez d'abord les cibles qui utilisent ce chemin.",
+                  "forceRemove": "Forcer la suppression",
+                  "ok": "OK"
+               }
+            },
+            "staticTargetGrid": {
+               "target": "Cible",
+               "address": "Adresse",
+               "port": "Port"
+            },
+            "addStaticTarget": {
+               "label": "Ajouter une cible statique",
+               "tooltip": "Ajouter une cible iSCSI statique",
+               "addName": "Cliquer pour ajouter le nom",
+               "addAddress": "Cliquer pour ajouter l'adresse"
+            },
+            "editStaticTarget": {
+               "label": "Modifier les paramètres",
+               "tooltip": "Modifier les paramètres pour cette cible statique"
+            },
+            "removeStaticTarget": {
+               "label": "Supprimer la cible statique",
+               "tooltip": "Supprimer la cible statique iSCSI sélectionnée"
+            },
+            "dynamicTargetGrid": {
+               "address": "Adresse",
+               "port": "Port"
+            },
+            "addDynamicTarget": {
+               "label": "Ajouter une cible dynamique",
+               "tooltip": "Ajouter une cible iSCSI dynamique",
+               "addAddress": "Cliquer pour ajouter l'adresse"
+            },
+            "editDynamicTarget": {
+               "label": "Modifier les paramètres",
+               "tooltip": "Modifier les paramètres pour cette cible dynamique"
+            },
+            "removeDynamicTarget": {
+               "label": "Supprimer la cible dynamique",
+               "tooltip": "Supprimer la cible dynamique iSCSI sélectionnée"
+            },
+            "notification": {
+               "success": "iSCSI configuré",
+               "failure": "Échec de la configuration d'iSCSI"
+            }
+         },
+         "iscsi-target": {
+            "title": "Configurer la cible iSCSI - {{target}}",
+            "confirmLabel": "Enregistrer",
+            "rejectLabel": "Annuler"
+         },
+         "context": {
+            "rescan": {
+               "title": "Réanalyser",
+               "tooltip": "Analyser de nouveau cet adaptateur basé sur l'hôte pour les nouveaux LUN"
+            }
+         },
+         "summary": {
+            "alt": "Adaptateur",
+            "model": "Modèle",
+            "driver": "Pilote",
+            "actions": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions à effectuer pour les objets sélectionnés dans cette liste."
+               },
+               "fileBrowser": {
+                  "label": "Explorateur de fichiers",
+                  "tooltip": "Accédez à l'explorateur de fichiers de l'adaptateur."
+               },
+               "recalculate": {
+                  "label": "Recalculer",
+                  "tooltip": "Calcule de nouveau les informations d'utilisation de l'adaptateur, y compris la capacité et l'espace libre."
+               },
+               "increaseCapacity": {
+                  "label": "Augmenter la capacité",
+                  "tooltip": "Augmentez la capacité de l'adaptateur."
+               },
+               "manageProviders": {
+                  "label": "Gérer les fournisseurs",
+                  "tooltip": "Gérez les fournisseurs de stockage."
+               }
+            }
+         }
+      },
+      "list": {
+         "title": "Les banques de données suivantes sont accessibles depuis la ressource de destination que vous avez sélectionnée. Sélectionnez la banque de données de destination des fichiers de configuration de machine virtuelle et de tous les disques virtuels."
+      },
+      "rename": {
+         "current": "Nom actuel",
+         "new": "Nouveau nom"
+      }
+   }
+}

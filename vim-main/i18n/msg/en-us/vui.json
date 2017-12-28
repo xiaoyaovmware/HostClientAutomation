@@ -1,0 +1,41 @@
+{
+   "vui": {
+      "ok": "OK",
+      "back": "Back",
+      "next": "Next",
+      "finish": "Finish",
+      "cancel": "Cancel",
+      "filter": "Filter",
+      "of": "of",
+      "item": "item",
+      "items": "items",
+      "actionsMenu" : {
+         "empty": "No Actions Available"
+      },
+      "datagrid" : {
+         "emptyTable": "No items to display",
+         "zeroRecords": "No matching records found",
+         "colFilterInfo": "Show items with value that",
+         "colFilterBooleanInfo": "Show items with value that is",
+         "filter": "Filter",
+         "clear": "Clear",
+         "isTrue": "True",
+         "isFalse": "False",
+         "and": "And",
+         "or": "Or",
+         "contains": "Contains",
+         "eq": "Is equal to",
+         "neq": "Is not equal to",
+         "gte": "Greater than or equal",
+         "gt": "Greater than",
+         "lte": "Less than or equal",
+         "lt": "Less than",
+         "item": "item",
+         "items": "items",
+         "save": "Apply changes"
+      },
+      "notification" : {
+         "defaultTitle" : "Notification"
+      }
+   }
+}

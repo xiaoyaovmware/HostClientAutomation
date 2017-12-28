@@ -1,0 +1,10 @@
+{
+   "event": {
+      "type": {
+         "1": "Info",
+         "2": "Fehler",
+         "3": "Warnung",
+         "4": "Unbekannt"
+      }
+   }
+}

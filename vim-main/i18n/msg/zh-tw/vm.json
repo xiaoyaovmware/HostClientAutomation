@@ -1,0 +1,2288 @@
+{
+   "vm": {
+      "answer": {
+         "dialog": {
+            "title": "回答問題 - {{name}}",
+            "ok": "回答",
+            "rejectLabel": "取消"
+         }
+      },
+      "autostart": {
+         "unset": "取消設定",
+         "change": {
+            "title": "設定自動啟動 - {{name}}",
+            "rejectLabel": "取消",
+            "confirmLabel": "儲存",
+            "waitForHeartbeat": {
+               "label": "等待活動訊號",
+               "yes": "是",
+               "no": "否",
+               "systemDefault": "系統預設值"
+            },
+            "startDelay": {
+               "label": "開始延遲",
+               "seconds": "秒"
+            },
+            "stopDelay": {
+               "label": "停止延遲",
+               "seconds": "秒"
+            },
+            "stopAction": {
+               "label": "停止動作",
+               "systemDefault": "系統預設值",
+               "PowerOff": "關閉電源",
+               "Suspend": "暫停",
+               "ShutDown": "關閉"
+            },
+            "successNotification": "已成功更新 {{name}} 的自動啟動組態",
+            "failureNotification": "無法更新 {{name}} 的自動啟動組態"
+         }
+      },
+      "console": {
+         "close": "關閉",
+         "actions": "動作",
+         "showKeyboard": "顯示鍵盤",
+         "keyboardLayout": "鍵盤配置",
+         "maximize": "最大化",
+         "fullscreen": "全螢幕",
+         "minimize": " 最小化",
+         "shrink": "縮小",
+         "failedToConnect": "無法連線",
+         "resolutionChangeDialog": {
+            "title": "解析度未變更",
+            "content": "此虛擬機器已安裝 VMware Tools，但尚未變更解析度。是否要調整此主控台?",
+            "confirmLabel": "是",
+            "rejectLabel": "否"
+         },
+         "multipleConnectionsNotificationSingle": "另一使用者有對此虛擬機器開啟的主控台工作階段",
+         "multipleConnectionsNotificationMultiple": "另 {{name}} 名使用者有對此虛擬機器開啟的主控台工作階段"
+      },
+      "power": {
+         "powerOffWarning": {
+            "title": "警告",
+            "content": "關閉此虛擬機器的電源可能會造成資料遺失。是否確定要關閉此虛擬機器的電源?",
+            "contentMulti": "關閉所選一或多個虛擬機器的電源可能會造成資料遺失。是否確定要繼續?",
+            "rejectLabel": "取消",
+            "confirmLabel": "是"
+         },
+         "resetWarning": {
+            "title": "警告",
+            "content": "重設此虛擬機器可能會造成資料遺失。是否確定要重設此虛擬機器?",
+            "contentMulti": "重設所選一或多個虛擬機器可能會造成資料遺失。是否確定要繼續?",
+            "rejectLabel": "取消",
+            "confirmLabel": "是"
+         }
+      },
+      "list": {
+         "title": "{{hostname}} - 虛擬機器",
+         "empty": "無虛擬機器",
+         "columns": {
+            "name": "虛擬機器",
+            "state": "狀態",
+            "status": "狀況",
+            "provisionedSpace": "佈建的空間",
+            "usedSpace": "已使用空間",
+            "guest": "客體作業系統",
+            "toolsInstalled": "已安裝 Tools",
+            "toolsVersion": "Tools 版本",
+            "ipAddress": "IP 位址",
+            "datastore": "資料存放區",
+            "hostName": "主機名稱",
+            "hostCPU": "主機 CPU",
+            "hostMemory": "主機記憶體",
+            "autostartStartOrder": "自動啟動順序",
+            "autostartStartDelay": "開始延遲",
+            "autostartStopDelay": "停止延遲",
+            "notes": "附註"
+         },
+         "quickFilters": {
+            "vmsWithoutTools": "不含 VMware Tools 的虛擬機器",
+            "poweredOnVMs": "已開啟電源的虛擬機器",
+            "poweredOffVMs": "已關閉電源的虛擬機器",
+            "suspendedVMs": "已暫停的虛擬機器",
+            "vmsParticipatingInAutostart": "參與自動啟動的虛擬機器"
+         },
+         "status": {
+            "normal": "正常",
+            "warning": "警告",
+            "inconsistent": "不一致",
+            "question": "問題擱置中",
+            "invalid": "無效"
+         },
+         "actionBar": {
+            "createRegister": {
+               "label": "建立/登錄虛擬機器",
+               "tooltip": "建立或登錄虛擬機器"
+            },
+            "columns": {
+               "label": "資料行",
+               "tooltip": "選擇要在此資料表中顯示的資料行",
+               "contextTitle": "選取資料行"
+            },
+            "console": {
+               "label": "主控台",
+               "tooltip": "開啟所選虛擬機器的主控台"
+            },
+            "powerOn": {
+               "label": "開啟電源",
+               "tooltip": "開啟所選虛擬機器的電源或繼續執行所選虛擬機器"
+            },
+            "powerOff": {
+               "label": "關閉電源",
+               "tooltip": "關閉所選虛擬機器的電源"
+            },
+            "shutDown": {
+               "label": "關閉",
+               "tooltip": "在所選虛擬機器中執行正常關閉"
+            },
+            "shutDownSuspended": {
+               "label": "關閉/關閉電源",
+               "tooltip": "關閉所選虛擬機器或關閉所選虛擬機器的電源"
+            },
+            "suspend": {
+               "label": "暫停",
+               "tooltip": "暫停所選虛擬機器"
+            },
+            "restart": {
+               "label": "重新啟動",
+               "tooltip": "重新啟動所選虛擬機器"
+            },
+            "edit": {
+               "label": "編輯設定",
+               "tooltip": "編輯所選虛擬機器的設定"
+            },
+            "refresh": {
+               "label": "重新整理",
+               "tooltip": "重新整理虛擬機器資料表"
+            },
+            "actions": {
+               "label": "動作",
+               "tooltip": "對所選虛擬機器執行的動作"
+            }
+         }
+      },
+      "attachISO": {
+         "button": {
+            "label": "選取光碟映像",
+            "tooltip": "瀏覽光碟映像"
+         },
+         "dialog": {
+            "title": "選取 CD/DVD 光碟映像",
+            "confirmLabel": "選取"
+         },
+         "failureNotification": "無法連結光碟映像: {{message}}",
+         "successNotification": "已成功將光碟映像 {{file}} 連結至 CD/DVD 裝置"
+      },
+      "delete": {
+         "title": "刪除虛擬機器 - {{name}}",
+         "titleMultiple": "刪除虛擬機器",
+         "confirmLabel": "刪除",
+         "rejectLabel": "取消",
+         "failedAtLeastOne": "至少一個虛擬機器無法刪除",
+         "ok": "確定"
+      },
+      "supportBundle": {
+         "menu": {
+            "label": "產生支援服務包",
+            "tooltip": "從此虛擬機器產生支援服務包"
+         }
+      },
+      "template": {
+         "label": "範本",
+         "convert": {
+            "title": "轉換成範本",
+            "label": "轉換成範本",
+            "tooltip": "將虛擬機器轉換成範本",
+            "message": "將虛擬機器「{{name}}」轉換成範本?",
+            "ok": "轉換",
+            "rejectLabel": "取消"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "權限",
+            "title": "管理權限",
+            "header": "為以下項目指派使用者和角色: ",
+            "close": "關閉",
+            "cancel": "取消",
+            "noUsers": "無使用者",
+            "addUser": {
+               "label": "新增使用者",
+               "toolTip": "新增使用者",
+               "header": "為以下項目新增使用者: "
+            },
+            "removeUser": {
+               "label": "移除使用者",
+               "toolTip": "移除使用者"
+            },
+            "assignRole": {
+               "label": "指派角色",
+               "toolTip": "指派角色給使用者",
+               "header": "為以下項目設定權限: "
+            },
+            "updatePermissions": {
+               "successNotification": "已成功更新權限",
+               "failureNotification": "無法更新權限: {{error}}"
+            },
+            "columns": {
+               "user": "使用者",
+               "role": "角色"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "選取使用者"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "選取角色"
+            },
+            "propagateLabel": "散佈到所有子系",
+            "groupLabel": "新增為群組"
+         }
+      },
+      "snapshot": {
+         "consolidate": {
+            "menu": "整併磁碟",
+            "consolidationComplete": "虛擬機器 {{name}} 的磁碟整併已完成",
+            "consolidationFailed": "虛擬機器 {{name}} 的磁碟整併失敗: {{reason}}"
+         },
+         "take": {
+            "menu": "建立快照",
+            "title": "為 {{name}} 建立快照",
+            "takeSnapshot": "建立快照",
+            "name": "名稱",
+            "description": "說明",
+            "memory": "建立虛擬機器記憶體快照。",
+            "quiesce": "靜止客體檔案系統 (需已安裝 VMware Tools)。",
+            "ok": "確定",
+            "cancel": "取消",
+            "notification": {
+               "success": "已在虛擬機器 {{vmName}} 上成功建立快照「{{title}}」",
+               "error": "無法在虛擬機器 {{vmName}} 上建立快照「{{title}}」"
+            }
+         },
+         "edit": {
+            "notification": {
+               "error": "無法儲存快照「{{name}}」上的變更。"
+            }
+         },
+         "revertLatest": {
+            "menu": "還原最新快照",
+            "title": "還原最新快照",
+            "content": "除非將虛擬機器的目前狀態儲存在快照中，否則將遺失該狀態。還原為最新 (最近) 快照?",
+            "revert": "還原",
+            "cancel": "取消",
+            "notification": {
+               "success": "虛擬機器 {{name}} 已成功還原為最新快照",
+               "error": "無法將虛擬機器 {{name}} 還原為最新快照"
+            }
+         },
+         "revert": {
+            "menu": "還原快照",
+            "title": "還原快照",
+            "content": "除非將虛擬機器的目前狀態儲存在快照中，否則將遺失該狀態。還原快照「{{title}}」?",
+            "revert": "還原",
+            "cancel": "取消",
+            "notification": {
+               "success": "虛擬機器 {{name}} 已成功還原為快照「{{title}}」",
+               "error": "無法將虛擬機器 {{name}} 還原為快照「{{title}}」"
+            }
+         },
+         "delete": {
+            "menu": "刪除快照",
+            "title": "刪除快照",
+            "content": "確定要刪除快照「{{title}}」嗎?",
+            "ok": "移除",
+            "removeChildren": "移除所有子快照。",
+            "cancel": "取消",
+            "notification": {
+               "success": "已成功刪除快照「{{title}}」。",
+               "error": "無法刪除快照「{{title}}」。"
+            }
+         },
+         "deleteAll": {
+            "menu": "刪除所有快照",
+            "title": "刪除所有快照",
+            "content": "此作業將整併並移除此虛擬機器的所有快照。快照將整併到單一磁碟中。要繼續嗎?",
+            "ok": "移除",
+            "cancel": "取消",
+            "notification": {
+               "success": "來自虛擬機器「{{name}}」的所有快照已成功刪除。",
+               "error": "無法刪除來自虛擬機器「{{name}}」的所有快照。"
+            }
+         },
+         "manage": {
+            "menu": "管理快照",
+            "notitle": "管理快照",
+            "title": "管理快照 - {{name}}",
+            "name": "名稱",
+            "description": "說明",
+            "created": "已建立",
+            "diskUsage": "磁碟使用量",
+            "console": "主控台",
+            "here": "您在此處",
+            "edit": "編輯",
+            "take": {
+               "label": "建立快照",
+               "tooltip": "儲存虛擬機器的確切狀態，以便稍後進行還原。"
+            },
+            "restore": {
+               "label": "還原快照",
+               "tooltip": "將虛擬機器還原為所選快照的狀態。"
+            },
+            "delete": {
+               "label": "刪除快照",
+               "tooltip": "刪除所選快照。"
+            },
+            "deleteAll": {
+               "label": "全部刪除",
+               "tooltip": "刪除所有快照。"
+            },
+            "edit": {
+               "label": "編輯快照",
+               "tooltip": "編輯所選快照。"
+            },
+            "refresh": {
+               "label": "重新整理",
+               "tooltip": "重新整理"
+            },
+            "save": "儲存",
+            "cancel": "取消",
+            "close": "關閉"
+         }
+      },
+      "compatibility": {
+         "upgrade": {
+            "label": "升級虛擬機器相容性",
+            "tooltip": "升級虛擬機器相容性",
+            "rejectLabel": "取消",
+            "configure": {
+               "title": "設定虛擬機器相容性",
+               "header": "選取 <em>{{name}}</em> 升級的相容性。",
+               "label": "將虛擬機器硬體升級到所選版本",
+               "message": "{{version}}。",
+               "ok": "升級"
+            },
+            "notifications": {
+               "success": "成功升級虛擬機器 {{name}}",
+               "failure": "無法升級虛擬機器 {{name}}。{{reason}}"
+            },
+            "confirm": {
+               "title": "確認虛擬機器相容性升級",
+               "message": "此作業將變更虛擬機器的相容性。該作業無法還原，並會使虛擬機器無法與舊版 VMware 軟體產品相容。請備份虛擬機器檔案後再繼續。升級相容性?",
+               "ok": "是",
+               "cancel": "否"
+            }
+         }
+      },
+      "notes": {
+         "dialog": {
+            "title": "編輯附註 - {{name}}。",
+            "titleNoVM": "編輯附註",
+            "ok": "儲存",
+            "rejectLabel": "取消"
+         },
+         "title": "編輯 <em>{{name}}</em> 的附註。",
+         "more": "更多",
+         "less": "更少",
+         "edit": "編輯附註",
+         "save": "儲存附註",
+         "cancel": "取消"
+      },
+      "summary": {
+         "dialog": {
+            "unknown": {
+               "title": "未知虛擬機器",
+               "ok": "確定"
+            }
+         },
+         "screen": {
+            "refresh": "重新整理主控台螢幕快照"
+         },
+         "unknown": "未知",
+         "general": {
+            "label": "一般資訊",
+            "title": "一般資訊",
+            "vmScreen": "按一下以開啟此虛擬機器的瀏覽器主控台",
+            "vmTemplateScreen": "虛擬機器螢幕標誌",
+            "cpu": {
+               "name": "CPU"
+            },
+            "networking": {
+               "name": "網路",
+               "ipAddresses": "IP 位址",
+               "hostName": "主機名稱"
+            },
+            "notes": "附註",
+            "vmwareTools": {
+               "name": "VMware Tools",
+               "info": {
+                  "installed": "已安裝",
+                  "notInstalled": "未安裝",
+                  "guestManaged": "受管理的客體",
+                  "version": "版本",
+                  "running": "執行中"
+               },
+               "actionBar": {
+                  "action": {
+                     "label": "動作",
+                     "tooltip": "對此清單中所選物件執行的動作"
+                  }
+               }
+            },
+            "storage": {
+               "name": "儲存區",
+               "disk": "磁碟",
+               "disks": "磁碟",
+               "info": {
+                  "guestDisks": "客體磁碟",
+                  "noGuestDisks": "未提供客體磁碟資訊",
+                  "diskPath": "磁碟路徑",
+                  "capacity": "容量",
+                  "free": "可用"
+               }
+            }
+         },
+         "perf": {
+            "label": "過去一小時的效能摘要",
+            "title": "效能摘要, 過去一小時",
+            "loading": "正在載入...",
+            "noData": "沒有效能資料可用",
+            "chart": {
+               "xAxis": "時間",
+               "y1Axis": "已耗用的主機 CPU/就緒的時間 (%)",
+               "y2Axis": "已耗用的主機記憶體 (GB)",
+               "cpu": "已耗用的主機 CPU",
+               "ready": "就緒的時間",
+               "rightAxis": " (右軸)",
+               "memory": "已耗用的主機記憶體"
+            }
+         },
+         "noNetworkInfo": "無網路資訊",
+         "hardware": {
+            "label": "硬體組態",
+            "title": "硬體組態",
+            "cpu": {
+               "cpu": "CPU",
+               "cores": "CPU 核心",
+               "sockets": "通訊端",
+               "coreSocket": "每個通訊端的核心",
+               "memory": "記憶體"
+            },
+            "disk": {
+               "backing": "支援",
+               "capacity": "容量",
+               "thinProvisioned": "精簡佈建",
+               "controller": "控制器",
+               "deviceName": "裝置 UUID",
+               "compatibility": {
+                  "label": "相容模式",
+                  "virtualMode": "虛擬",
+                  "physicalMode": "實體"
+               },
+               "mode": {
+                  "label": "模式",
+                  "persistent": "相依",
+                  "independent_nonpersistent": "獨立非持續性",
+                  "independent_persistent": "獨立持續性"
+               }
+            },
+            "cdrom": {
+               "backing": "支援",
+               "connected": "已連線",
+               "controller": "控制器"
+            },
+            "serial": {
+               "backing": "支援",
+               "connected": "已連線",
+               "concentrator": "集訊器"
+            },
+            "parallel": {
+               "backing": "支援",
+               "connected": "已連線"
+            },
+            "usb": {
+               "controller": "USB 控制器"
+            },
+            "usbDevice": {
+               "label": "USB 裝置",
+               "connected": "已連線",
+               "disconnected": "已中斷連線"
+            },
+            "sound": {
+               "label": "音效卡",
+               "ensoniq1371": "Ensoniq 1371",
+               "soundBlaster16": "Sound Blaster 16"
+            },
+            "floppy": {
+               "connected": "已連線",
+               "notConnected": "未連線"
+            },
+            "video": {
+               "totalMemory":"視訊記憶體總計",
+               "numDisplays":"顯示器數目",
+               "3dGraphics":"3D 圖形",
+               "3dRenderer":"3D 轉譯器",
+               "3dMemory":"3D 記憶體",
+               "automatic": "自動",
+               "software": "軟體",
+               "hardware": "硬體",
+               "enabled": "已啟用",
+               "disabled": "已停用"
+            },
+            "network": {
+               "networkAdapter": "網路介面卡",
+               "connected": "已連線",
+               "disconnected": "已中斷連線",
+               "network": "網路",
+               "macAddress": "MAC 位址",
+               "passThrough": "傳遞 (Direct-path I/O)"
+            },
+            "others": {
+               "others": "其他",
+               "additionalHw": "其他硬體",
+               "scsiAdapters": "SCSI 介面卡",
+               "nvmeAdapters": "NVMe 介面卡",
+               "controllers": "控制器",
+               "inputDevices": "輸入裝置"
+            }
+         },
+         "resource": {
+            "label": "資源耗用",
+            "title": "資源耗用",
+            "activeGuestMemory": "作用中客體記憶體",
+            "consumedHostMemory": "已耗用的主機記憶體",
+            "consumedHostCPU": "已耗用的主機 CPU",
+            "storage": "儲存區",
+            "uncommitted": "未認可",
+            "provisioned": "已佈建",
+            "notShared": "未共用",
+            "used": "已使用"
+         },
+         "actionBar": {
+            "console": {
+               "label": "主控台",
+               "tooltip": "開啟此虛擬機器的主控台"
+            },
+            "monitor": {
+               "label": "監控",
+               "tooltip": "監控此虛擬機器"
+            },
+            "powerOn": {
+               "label": "開啟電源",
+               "tooltip": "開啟此虛擬機器的電源"
+            },
+            "powerOff": {
+               "label": "關閉電源",
+               "tooltip": "關閉此虛擬機器的電源",
+               "tooltipWarnSuspended": "此虛擬機器目前已暫停。關閉其電源可能會導致客體中的資料遺失",
+               "tooltipWarnPoweredOn": "此虛擬機器目前已開啟電源。關閉其電源可能會導致客體中的資料遺失"
+            },
+            "reset": {
+               "label": "重設",
+               "tooltip": "重設此虛擬機器",
+               "tooltipWarnSuspended": "此虛擬機器目前已暫停。重設可能會導致客體中的資料遺失",
+               "tooltipWarnPoweredOn": "此虛擬機器目前已開啟電源。重設可能會導致客體中的資料遺失"
+            },
+            "shutDown": {
+               "label": "關閉",
+               "tooltip": "在此虛擬機器的客體作業系統內執行正常關閉"
+            },
+            "suspend": {
+               "label": "暫停",
+               "tooltip": "暫停此虛擬機器"
+            },
+            "resume": {
+               "label": "繼續",
+               "tooltip": "繼續執行此虛擬機器"
+            },
+            "restart": {
+               "label": "重新啟動",
+               "tooltip": "重新啟動此虛擬機器"
+            },
+            "editSettings": {
+               "label": "編輯",
+               "tooltip": "編輯此虛擬機器的設定"
+            },
+            "refresh": {
+               "label": "重新整理",
+               "tooltip": "重新整理此虛擬機器的摘要"
+            },
+            "actions": {
+               "label": "動作",
+               "tooltip": "對此虛擬機器執行的動作"
+            }
+         }
+      },
+      "manage": {
+         "title": "{{name}} - 管理"
+      },
+      "monitor": {
+         "tabs": {
+            "performance": {
+               "label": "效能",
+               "tooltip": "效能"
+            },
+            "events": {
+               "label": "事件",
+               "tooltip": "事件"
+            },
+            "tasks": {
+               "label": "工作",
+               "tooltip": "工作"
+            },
+            "logs": {
+               "label": "記錄",
+               "tooltip": "記錄"
+            },
+            "notifications": {
+               "label": "通知",
+               "tooltip": "通知"
+            }
+         },
+         "title": "{{name}} - 監控",
+         "logs": {
+            "tabTitle": "記錄",
+            "tabTooltip": "檢視系統記錄",
+            "failedToLoad": "無法載入記錄 {{log}}",
+            "noLogSelected": "未選取任何記錄",
+            "actionBar": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選記錄檔執行的動作"
+               },
+               "openInNewWindow": {
+                  "label": "在新視窗中開啟",
+                  "tooltip":"在新視窗中開啟此記錄"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理所選記錄檔"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "記錄",
+                  "size": "大小"
+               }
+            }
+         },
+         "performance": {
+            "tabTitle": "效能",
+            "tabTooltip": "監控系統的效能",
+            "poweredOff": "虛擬機器的電源已關閉",
+            "grid": {
+               "name": "名稱",
+               "unit": "單位",
+               "average": "平均值",
+               "maximum": "上限",
+               "minimum": "下限",
+               "latest": "最新"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理圖表"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選虛擬機器執行的動作"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "資料可用性",
+                  "message": "為何僅提供「過去一小時」這一資料範圍? ESXi 主機僅儲存過去一小時的歷史資料。若要查看更大範圍的資料，您需要使用 vCenter Server。"
+               }
+            },
+            "filter": {
+               "type": "篩選器類型",
+               "cpuFilter": "CPU 篩選器",
+               "time": "時間"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "全部",
+                     "hostDropdownTitle": "主機",
+                     "allCoresDropdownTitle": "所有 PCPU",
+                     "allPackagesDropdownTitle": "所有套件",
+                     "seriesLabel": "PCPU {{core}}",
+                     "packageSeriesLabel": "套件 {{pkg}}",
+                     "y1AxisLabel": "已耗用的主機 CPU/就緒的時間 (%)",
+                     "x1AxisLabel": "時間",
+                     "x2AxisLabel": "時間",
+                     "ready": "就緒的時間"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "記憶體",
+                     "seriesLabel": "已耗用的主機記憶體",
+                     "y1AxisLabel": "已耗用的主機記憶體 (GB)",
+                     "x1AxisLabel": "時間",
+                     "x2AxisLabel": "時間"
+                  }
+               },
+               "disk": {
+                  "usage": {
+                     "dropdownTitle": "磁碟",
+                     "y1AxisLabel": "磁碟讀取/寫入速率 (MB/s)",
+                     "y2AxisLabel": "延遲時間 (毫秒)",
+                     "aggregateSeriesLabel": "磁碟 I/O 速率 (彙總)",
+                     "readRateSeriesLabel": "總讀取速率",
+                     "writeRateSeriesLabel": "總寫入速率",
+                     "maxLatencySeriesLabel": "最大延遲時間",
+                     "x1AxisLabel": "時間"
+                  }
+               },
+               "network": {
+                  "usage": {
+                     "dropdownTitle": "網路",
+                     "usageSeriesLabel": "總網路使用量",
+                     "transmitSeriesLabel": "總傳輸速率",
+                     "receiveSeriesLabel": "總接收速率",
+                     "y1AxisLabel": "傳輸/接收速率 (mbps)",
+                     "y2AxisLabel": "數字",
+                     "xAxisLabel": "時間"
+                  }
+               },
+               "scale": {
+                  "lastHour": "過去一小時"
+               }
+            }
+         },
+         "events": {
+            "type": "類型",
+            "time": "時間",
+            "virtualmachine": "虛擬機器",
+            "noEvents": "無事件"
+         },
+         "tasks": {
+            "alt": "工作",
+            "key": "金鑰",
+            "noTasks": "無工作",
+            "description": "說明",
+            "host": "此主機",
+            "state": "狀態"
+         },
+         "notifications": {
+            "suggested": "建議動作:",
+            "noNotification": "無通知",
+            "unknownState": {
+               "message": "此虛擬機器處於不明狀態。",
+               "suggested-action": "重新開啟虛擬機器的電源或重新啟動 ESXi 主機上的 hostd 代理程式可能有所幫助。"
+            },
+            "guestOther": {
+               "message": "此虛擬機器的客體作業系統目前設定為 [其他]。",
+               "suggested-action": "您應當指定正確的客體作業系統以允許客體特定的最佳化，以及允許安裝 VMware Tools。"
+            },
+            "guestMismatch": {
+               "message": "針對此虛擬機器設定的客體作業系統 ({{assigned}}) 與目前正執行的客體 ({{reported}}) 不相符。",
+               "suggested-action": "您應指定正確的客體作業系統以允許客體特定的最佳化。"
+            },
+            "VmDiskConsolidationNeeded": {
+               "message": "此虛擬機器需要將其磁碟整併。",
+               "suggested-action": "您應整併磁碟以提升效能並最佳化磁碟使用率。"
+            },
+            "questionPending": {
+               "message": "此虛擬機器有一個待解決的問題需要回答。",
+               "suggested-action": "回答問題以完成開啟電源作業。"
+            },
+            "orphanedNetwork": {
+               "message": "此虛擬機器已連結至不存在的網路連接埠群組 <em>{{name}}</em>。",
+               "suggested-action": "編輯此虛擬機器並將其連結至其他網路。"
+            },
+            "toolsNotInstalled": {
+               "message": "此虛擬機器上未安裝 VMware Tools。",
+               "suggested-action": "VMware Tools 允許顯示詳細客體資訊，並且可讓您針對客體作業系統執行作業，例如正常關閉、重新開機等等。您應當安裝 VMware Tools。"
+            },
+            "toolsOld": {
+               "message": "此虛擬機器上的 VMware Tools 已過期。",
+               "suggested-action": "升級 VMware Tools 可以提供改善的功能和更好的穩定性。"
+            },
+            "ftSecondary": {
+               "message": "此虛擬機器正在容錯配對中用作次要虛擬機器。您將無法對此虛擬機器執行任何設定。",
+               "suggested-action": ""
+            }
+         }
+      },
+      "operations": {
+         "notifications": {
+            "failedToPowerOn": "無法開啟虛擬機器 {{name}} 的電源。{{reason}} 如需更多詳細資料，請按一下此處。",
+            "failedToPowerOff": "無法關閉虛擬機器 {{name}} 的電源。{{reason}}",
+            "failedToRestart": "無法重設虛擬機器 {{name}}。{{reason}}",
+            "failedToRename": "無法重新命名虛擬機器 {{name}}。{{reason}}",
+            "failedToCreate": "無法建立虛擬機器 {{name}}。{{reason}}",
+            "failedToDelete": "無法刪除虛擬機器 {{name}}。{{reason}}",
+            "failedToSaveNotes": "無法儲存虛擬機器 {{name}} 的附註。{{reason}}",
+            "failedToReconfig": "無法重新設定虛擬機器 {{name}}。{{reason}}",
+            "failedToSuspend": "無法暫停虛擬機器 {{name}}。{{reason}}"
+         }
+      },
+      "banner": {
+         "guestOS": "客體作業系統",
+         "compatibility": "相容性",
+         "vmwaretools": "VMware Tools",
+         "hostName": "主機名稱",
+         "cpus": "CPU",
+         "cpuUsage": "CPU 使用率",
+         "memory": "記憶體",
+         "memoryUsage": "記憶體使用量",
+         "diskUsage": "磁碟使用量",
+         "metrics": {
+            "cpu": "CPU",
+            "memory": "記憶體",
+            "storage": "儲存區"
+         }
+      },
+      "edit": {
+         "title": "編輯設定",
+         "titleWithName": "編輯設定 - {{name}}",
+         "rejectLabel": "取消",
+         "tabs": {
+            "hardware": {
+               "label": "虛擬硬體",
+               "tooltip": "虛擬硬體"
+            },
+            "options": {
+               "label": "虛擬機器選項",
+               "tooltip": "虛擬機器選項"
+            }
+         },
+         "compatibility": "相容性:",
+         "save": "儲存",
+         "notification": {
+            "info": "已成功重新設定虛擬機器 {{name}}"
+         },
+         "powerOptions": {
+            "stop": {
+               "hard": "關閉電源",
+               "soft": "關閉客體",
+               "preset": "系統預設值"
+            },
+            "pause": {
+               "hard": "暫停",
+               "soft": "將客體置於待命狀態",
+               "preset": "系統預設值"
+            },
+            "restart": {
+               "hard": "重設",
+               "soft": "重新啟動客體",
+               "preset": "系統預設值"
+            }
+         }
+      },
+      "create": {
+         "new": {
+            "label": "建立新的虛擬機器",
+            "description": "此選項將引導您建立新的虛擬機器。您可以自訂處理器、記憶體、網路連線和儲存區。建立之後將需要安裝客體作業系統。"
+         },
+         "clone": {
+            "label": "複製現有虛擬機器",
+            "description": "建立現有虛擬機器的複製品"
+         },
+         "ovf": {
+            "label": "從 OVF 或 OVA 檔案部署虛擬機器",
+            "description": "此選項可引導您完成從 OVF 與 VMDK 檔案建立虛擬機器的程序。"
+         },
+         "register": {
+            "label": "登錄現有虛擬機器",
+            "description": "此選項引導您完成登錄資料存放區上已存在的虛擬機器"
+         }
+      },
+      "deleteVMConfirmation": "是否確定要刪除下列虛擬機器?",
+      "state": {
+         "poweredOn": "已開啟電源",
+         "poweredOff": "已關閉電源",
+         "suspended": "已暫止",
+         "undefined": "未知"
+      },
+      "tools": {
+         "state": {
+            "toolsOk": "已安裝並執行",
+            "toolsNotRunning": "已安裝但未執行",
+            "toolsNotInstalled": "未安裝",
+            "toolsOld": "工具已過期 - 應升級此客體內的工具"
+         },
+         "installed": {
+            "true": "是",
+            "false": "否"
+         },
+         "running": {
+            "guestToolsRunning": "是",
+            "guestToolsNotRunning": "否"
+         }
+      },
+      "hardwareVersion": {
+         "vmx-02": {
+            "label":"ESX 2.0.2 及更新版本 (虛擬機器第 2 版)",
+            "desc": ""
+         },
+         "vmx-03": {
+            "label":"ESX 2.x 及更新版本 (虛擬機器第 3 版)",
+            "desc": ""
+         },
+         "vmx-04": {
+            "label":"ESX/ESXi 3.5 及更新版本 (虛擬機器第 4 版)",
+            "desc": "此虛擬機器使用硬體第 4 版，還與 ESXi 4.x、ESXi 5.0、ESXi 5.1 和 ESXi 5.5 相容。部分虛擬機器硬體功能無法搭配此選項使用。"
+         },
+         "vmx-06": {
+            "label":"Workstation 6 (虛擬機器第 6 版)",
+            "desc": ""
+         },
+         "vmx-07": {
+            "label":"ESX/ESXi 4.0 及更新版本 (虛擬機器第 7 版)",
+            "desc": "此虛擬機器使用硬體第 7 版，還與 ESXi 5.0、ESXi 5.1、ESXi 5.5 和 ESXi 6.0 相容。部分虛擬機器硬體功能無法搭配此選項使用。"
+         },
+         "vmx-08": {
+            "label":"ESXi 5.0 及更新版本 (虛擬機器第 8 版)",
+            "desc": "此虛擬機器使用硬體第 8 版，還與 ESXi 5.1、ESXi 5.5 和 ESXi 6.0 相容。部分虛擬機器硬體功能無法搭配此選項使用。"
+         },
+         "vmx-09": {
+            "label":"ESXi 5.1 及更新版本 (虛擬機器第 9 版)",
+            "desc": "此虛擬機器使用硬體第 9 版，還與 ESXi 5.5 和 ESXi 6.0 相容。"
+         },
+         "vmx-10": {
+            "label":"ESXi 5.5 及更新版本 (虛擬機器第 10 版)",
+            "desc": "此虛擬機器使用硬體第 10 版，還與 ESXi 6.0 相容。"
+         },
+         "vmx-11": {
+            "label":"ESXi 6.0 及更新版本 (虛擬機器第 11 版)",
+            "desc": "此虛擬機器使用硬體版本 11，在 ESXi 6.0 中可提供最佳效能和最新功能。"
+         },
+         "vmx-12": {
+            "label":"Workstation 12 (虛擬機器第 12 版)",
+            "desc": "此虛擬機器使用硬體版本 12，並提供 Workstation 12 中可用的最佳效能和最新功能。"
+         },
+         "vmx-13": {
+            "label":"ESXi 6.5 及更新版本 (虛擬機器第 13 版)",
+            "desc": "此虛擬機器使用硬體版本 13，在 ESXi 6.5 中可提供最佳效能和最新功能。"
+         },
+         "vmx-14": {
+            "label":"ESXi 6.x 及更新版本 (虛擬機器第 14 版)",
+            "desc": "此虛擬機器使用硬體第 14 版，並可在 ESXi 6.x 中提供最佳效能和最新功能。"
+         }
+      },
+      "wizard": {
+         "title": "新增虛擬機器",
+         "registerTitle": "登錄虛擬機器",
+         "cloneTitle": "複製虛擬機器",
+         "compatibility": "相容性",
+         "creationType": {
+            "title": "選取建立類型",
+            "description": "您希望如何建立虛擬機器?",
+            "select": "選取建立類型",
+            "warnNestedESXi": "VMware 不支援在生產環境中執行巢狀 ESXi/ESX 伺服器。請參閱<a href=\"{{kbURL}}\" target=\"_blank\">此</a>知識庫文章，以取得更多詳細資料。"
+         },
+         "basics": {
+            "title": "選取名稱和客體作業系統",
+            "description": "指定唯一名稱和作業系統",
+            "name": {
+               "label": "輸入虛擬機器的名稱。",
+               "placeholder": "名稱",
+               "desc": "虛擬機器名稱最多可包含 80 個字元，且在每個 ESXi 執行個體中必須是唯一的。"
+            },
+            "desc": "在此處識別客體作業系統可讓精靈為作業系統安裝提供適當的預設值。",
+            "compatibility": "相容性",
+            "selectOSFamily": "選取客體作業系統系列",
+            "guestOSFamily": "客體作業系統系列",
+            "selectOSVersion": "選取客體作業系統版本",
+            "guestOSVersion": "客體作業系統版本",
+            "osVersion": {
+               "windowsGuest": "Windows",
+               "linuxGuest": "Linux",
+               "darwinGuestFamily": "Mac OS",
+               "solarisGuest": "Solaris",
+               "netwareGuest": "Novel Netware",
+               "otherGuestFamily": "其他"
+            },
+            "validation": {
+               "emptyName": "請提供虛擬機器的名稱。",
+               "invalidName": "虛擬機器的名稱不可包含雙引號、冒號或斜線字元",
+               "nameSize": "虛擬機器的名稱應介於 {{min}} 和 {{max}} 個字元之間。目前的長度為 {{length}} 個字元。請修改名稱。",
+               "guestOSFamily": "選取客體作業系統系列。",
+               "guestOSVersion": "選取客體作業系統版本。",
+               "existingName": "此主機中存在具有相同名稱的虛擬機器或範本。請輸入新名稱。"
+            }
+         },
+         "storage": {
+            "title": "選取儲存區",
+            "description": "選取要在其中儲存組態和磁碟檔案的資料存放區。",
+            "desc": "下列資料存放區可從您選取的目的地資源存取。請為虛擬機器組態檔和所有虛擬磁碟選取目的地資料存放區。",
+            "policy": {
+               "default": "資料存放區預設值",
+               "vvol": "VVol 無需求原則",
+               "vsan": "Virtual SAN 預設儲存區原則"
+            },
+            "grid": {
+               "name": "名稱",
+               "capacity": "容量",
+               "free": "可用",
+               "type": "類型",
+               "thinProvisioning": "精簡佈建",
+               "access": "存取"
+            },
+            "validation": {
+               "datastore": "選取儲存虛擬機器檔案的資料存放區。"
+            },
+            "status": {
+               "ova": "正在擷取 OVA，這可能需要一些時間...",
+               "ovf": "正在讀取 OVF 資料...",
+               "ovfHasCompressedDisks": "您正在嘗試部署的虛擬機器包含了壓縮的磁碟映像。Host Client 目前無法部署內含壓縮磁碟映像的虛擬機器。請考慮使用 OVFTool 或 vCenter Server 來部署此虛擬機器。"
+            }
+         },
+         "hardware": {
+            "title": "自訂設定",
+            "description": "設定虛擬機器硬體和虛擬機器其他選項",
+            "tabs": {
+               "virtualhardware": {
+                  "label": "虛擬硬體",
+                  "tooltip": "虛擬硬體"
+               },
+               "vmoptions": {
+                  "label": "虛擬機器選項",
+                  "tooltip": "虛擬機器選項"
+               }
+            },
+            "virtualhardware": {
+               "managedVC": "由於此主機的資源由 vCenter Server 進行管理，某些組態選項已停用。如果您想要變更此虛擬機器的資源設定，請從 vCenter Server 執行此操作。",
+               "signpost": "虛擬機器可用的虛擬 CPU 取決於主機上授權的 CPU 數目和客體作業系統支援的 CPU 數目。若要使用 VMware 多核心虛擬 CPU 功能，必須符合客體作業系統使用者授權合約的要求。",
+               "virtualizationSignpost": "透過向此客體作業系統公開基礎處理器的硬體協助虛擬化功能，啟用完整的 CPU 虛擬化。",
+               "schedulingAffinitySignPost": "<p>選取此虛擬機器的邏輯處理器相似性。</p><p>使用「-」表示範圍，並使用「,」分隔值。例如，「0, 2, 4-7」將指示處理器 0、2、4、5、6 和 7。</p><p>清除字串以移除相似性設定。</p>",
+               "cpuMMUSignPost": "<p>ESXi 可根據處理器類型和虛擬機器狀況，自動判定虛擬機器是否應使用硬體支援來進行虛擬化。但對於部分工作負載，覆寫自動選取項目可提供更佳效能。</p><p>附註: 如果選取的設定不受主機支援或與現有的虛擬機器設定發生衝突，系統將略過該設定，並使用「自動」選項。</p>",
+               "cpu": {
+                  "label": "CPU",
+                  "cores": {
+                     "label": "每個通訊端的核心數",
+                     "desc": "通訊端:"
+                  },
+                  "hotPlug": {
+                     "label": "CPU 熱插拔",
+                     "desc": "啟用 CPU 熱新增"
+                  },
+                  "reservation": {
+                     "label": "保留",
+                     "unit": "保留單位"
+                  },
+                  "limit": {
+                     "label": "限制",
+                     "unit": "限制單位"
+                  },
+                  "shares": {
+                     "label": "共用率",
+                     "unit": "共用率單位",
+                     "low": "低",
+                     "normal": "正常",
+                     "high": "高",
+                     "custom": "自訂"
+                  },
+                  "hardwareVirtualization": {
+                     "label": "硬體虛擬化",
+                     "desc": "向客體作業系統公開硬體協助虛擬化"
+                  },
+                  "performanceCounters": {
+                     "label": "效能計數器",
+                     "desc": "啟用虛擬化 CPU 效能計數器"
+                  },
+                  "schedulingAffinity": {
+                     "label": "排程相似性",
+                     "value": "排程相似性值",
+                     "hyper": "超執行緒狀態:",
+                     "available": "可用 CPU:",
+                     "logical": "(邏輯 CPU)"
+                  },
+                  "cpuMmuVirtualization": {
+                     "label": "CPU/MMU 虛擬化",
+                     "auto": "自動",
+                     "software": "軟體 CPU 和 MMU",
+                     "hardwareCPU": "硬體 CPU，軟體 MMU",
+                     "hardwareBoth": "硬體 CPU 和 MMU"
+                  },
+                  "validation": {
+                     "invalidReservation": "CPU 保留值無效。",
+                     "badReservation": "CPU 保留必須介於 0 MHz 和 {{maxMhz}} MHz 之間。",
+                     "NaNReservation": "CPU 保留值必須為數字",
+                     "negativeReservation": "CPU 保留值不可為負值",
+                     "nonIntegerReservation": "CPU 保留值必須為整數值",
+                     "NaNLimit": "CPU 限制必須為數字",
+                     "negativeLimit": "CPU 限制不可為負值",
+                     "invalidLimit": "CPU 限制必須大於或等於保留。",
+                     "invalidShares": "CPU 共用率值無效。",
+                     "invalidAffinity": "CPU 相似性值無效。"
+                  }
+               },
+               "memory": {
+                  "label": "記憶體",
+                  "unit": "記憶體單位",
+                  "ram": {
+                     "label" :"RAM",
+                     "unit": "RAM 單位"
+                  },
+                  "reservation": {
+                     "label": "保留",
+                     "unit": "保留單位",
+                     "desc": "保留所有客體記憶體 (全部鎖定)",
+                     "validation" : {
+                        "emptyValue" : "記憶體保留區不應空白",
+                        "NaN" : "記憶體保留區只接受數字值",
+                        "negativeValue" : "記憶體保留區不接受負值 {{value}}",
+                        "floatValue" : "記憶體保留區只能是整數值"
+                     }
+                  },
+                  "limit": {
+                     "label": "限制",
+                     "unit": "限制單位",
+                     "validation" : {
+                        "emptyValue" : "記憶體限制不應空白",
+                        "NaN" : "記憶體限制只接受數字值",
+                        "negativeValue" : "記憶體限制不接受負值 {{value}}",
+                        "limitLow" : "記憶體限制必須大於或等於保留區。",
+                        "floatValue" : "記憶體限制只能是整數值"
+                     }
+                  },
+                  "shares": {
+                     "label": "共用率",
+                     "unit": "共用率單位"
+                  },
+                  "hotPlug": {
+                     "label": "記憶體熱插拔",
+                     "desc": "已啟用"
+                  },
+                  "validation": {
+                     "invalidRAM": "RAM 值無效。",
+                     "badRAM": "記憶體值必須是 4 的倍數。",
+                     "lowCapacity": "輸入大於記憶體原始值的記憶體值。",
+                     "highRAM": "指定的記憶體數量大於主機中可用的數量。記憶體過度認可可能會影響虛擬機器的效能。",
+                     "lowRAM": "針對此客體建議的記憶體下限為 {{min}}。提供的數量較少可能會造成不穩定性或開機失敗。",
+                     "maxRAM": "記憶體必須小於或等於 {{max}} 。",
+                     "invalidReservation": "記憶體保留區值無效。",
+                     "reservationHigh": "記憶體保留區必須小於或等於 {{max}}。輸入的數字 ({{value}}) 太大。",
+                     "invalidLimit": "記憶體限制無效",
+                     "limitLow": "記憶體限制必須大於或等於保留區。",
+                     "invalidShares": "記憶體共用率值無效。"
+                  }
+               },
+               "sound": {
+                  "VirtualHdAudioCard": "HD 音訊",
+                  "VirtualSoundBlaster16": "Sound Blaster 16",
+                  "VirtualEnsoniq1371": "Ensoniq 1371",
+                  "type": "類型",
+                  "title": "音效卡"
+               },
+               "video":{
+                  "label": "視訊卡",
+                  "settings": {
+                     "custom": "指定自訂設定",
+                     "auto": "自動偵測設定"
+                  },
+                  "display": "顯示器數目",
+                  "memory": {
+                     "label" :"視訊記憶體總計",
+                     "unit": "MB",
+                     "calculator":"視訊記憶體計算器",
+                     "dialog": {
+                        "title": "視訊記憶體計算器",
+                        "desc": "根據客體需要支援的顯示器數目上限和解析度，計算所需的視訊記憶體。",
+                        "display": "顯示器數目:",
+                        "resolution": "解析度:",
+                        "total": "視訊記憶體總計:",
+                        "ok": "確定",
+                        "cancel": "取消"
+                     }
+                  },
+                  "3d": {
+                     "graphics": {
+                        "label":"3D 圖形",
+                        "desc": "啟用 3D 支援"
+                     },
+                     "renderer": {
+                        "label": "3D 轉譯器",
+                        "automatic": "自動",
+                        "software": "軟體",
+                        "hardware": "硬體"
+                     },
+                     "memory":{
+                        "label": "3D 記憶體",
+                        "unit": "MB"
+                     }
+                  }
+               },
+               "hd": {
+                  "title": "硬碟 {{size}}",
+                  "label": "硬碟",
+                  "size": "硬碟大小",
+                  "new": "新增硬碟",
+                  "unit": "硬碟單位",
+                  "delete": "從資料存放區刪除檔案",
+                  "device": "裝置路徑",
+                  "maximumsize": "大小上限",
+                  "location": "位置",
+                  "selectDirectory": "選取目錄",
+                  "browse": "瀏覽...",
+                  "diskProvisioning": "磁碟佈建",
+                  "thin": "精簡佈建",
+                  "thick": "完整佈建, 消極式歸零",
+                  "eager": "完整佈建, 積極式歸零",
+                  "type": "類型",
+                  "diskFile": "磁碟檔案",
+                  "shares": {
+                     "label": "共用率",
+                     "type": "共用率類型",
+                     "value": "共用率值",
+                     "unit": "共用率單位"
+                  },
+                  "limitIOP": "限制 - IOPs",
+                  "virtualFlash": {
+                     "label": "虛擬 Flash Read Cache",
+                     "unit": "虛擬 Flash Read Cache 單位"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "虛擬裝置節點",
+                     "unit": "虛擬裝置節點單位"
+                  },
+                  "diskCompatibility": {
+                    "label": "磁碟相容性",
+                    "physical": "實體",
+                    "virtual": "虛擬"
+                  },
+                  "diskSharing": {
+                     "label": "共用",
+                     "sharingMultiWriter": "多重寫入器共用",
+                     "sharingNone": "無",
+                     "info": "僅積極式歸零的完整的佈建磁碟可實施磁碟共用。"
+                  },
+                  "diskMode": {
+                     "label": "磁碟模式",
+                     "dependent": "相依",
+                     "independentPersistent": "獨立 - 持續性",
+                     "independentNonpersistent" :"獨立 - 非持續性"
+                  },
+                  "provisioning": {
+                     "thin": "精簡佈建",
+                     "thickEager": "完整佈建, 積極式歸零",
+                     "thickLazy": "完整佈建, 消極式歸零"
+                  },
+                  "menu": {
+                     "new": {
+                        "label": "新增硬碟",
+                        "tooltip": "將新硬碟新增到虛擬機器"
+                     },
+                     "existing": {
+                        "label": "現有硬碟",
+                        "tooltip": "將現有硬碟新增到虛擬機器"
+                     },
+                     "rdm": {
+                        "label": "新增 RDM",
+                        "tooltip": "將 RDM 新增到虛擬機器"
+                     }
+                  },
+                  "validation": {
+                     "numDisks": "此虛擬機器組態僅支援 {{size}} 硬碟。",
+                     "missingDatastore": "找不到 {{disk}} 的資料存放區。除非對此磁碟的組態進行修改，否則將略過此磁碟。",
+                     "invalidHD": "磁碟大小值無效。",
+                     "lowCapacity": "請輸入大於磁碟原始容量的磁碟大小。",
+                     "highCapacity": "指定的磁碟大小大於資料存放區中可用的數量。磁碟空間過度認可可能會耗用資料存放區中的所有空間，造成虛擬機器無法執行。您應該先增加資料存放區容量，或是減少磁碟大小，然後再繼續。",
+                     "highCapacityThick": "指定的磁碟大小大於資料存放區中可用的數量。使用完整佈建磁碟時，不可過度認可磁碟空間。您必須先增加資料存放區容量，或是減少磁碟大小，然後再繼續。",
+                     "invalidController": "請為磁碟選取有效的控制器",
+                     "invalidShares": "磁碟共用率值無效。",
+                     "limitIOPsEmpty" : "磁碟限制 IOPs 不可空白",
+                     "limitIOPsNaN" : "磁碟限制 IOPs 無效",
+                     "limitIOPsNegative" : "磁碟限制 IOPs 不可為負值",
+                     "limitIOPsNonInteger" : "磁碟限制 IOPs 只接受整數值",
+                     "invalidReadCache": "讀取快取值無效。",
+                     "badReservation": "保留必須介於 {{min}} 和 {{max}} 之間。輸入 0 可停用虛擬 Flash Read Cache。",
+                     "noAvailableLocation": "所選控制器上無可用位置。請選擇另一個控制器。",
+                     "locationInUse": "此位置正由其他裝置使用，請獲取下一個可用位置。"
+                  }
+               },
+               "pci": {
+                  "title": "PCI 裝置 {{size}}",
+                  "new": "新增 PCI 裝置",
+                  "physical": {
+                     "label": "實體 PCI/PCIe 裝置",
+                     "warning": "虛擬機器要到其記憶體保留區等於其記憶體大小時，才會開啟電源。",
+                     "button": "保留所有記憶體",
+                     "note": "如果存在 PCI/PCIe 傳遞裝置，部分虛擬機器作業將無法使用。您無法暫停或透過 vMotion 移轉此類虛擬機器，亦無法建立或還原其快照。"
+                  }
+               },
+               "ide": {
+                  "label": "IDE 控制器 {{index}}",
+                  "master": "主要",
+                  "slave": "從屬"
+               },
+               "scsi": {
+                  "title": "SCSI 控制器 {{size}}",
+                  "new": "新增 SCSI 控制器",
+                  "type": "SCSI 類型",
+                  "label": "SCSI 控制器 {{index}}",
+                  "busSharing": {
+                     "label": "SCSI 匯流排共用",
+                     "none": "無",
+                     "virtual": "虛擬",
+                     "physical": "實體"
+                  },
+                  "validation": {
+                     "diskAttached": "硬碟仍連結至此控制器，請先對其進行重新指派。",
+                     "maxControllersReached": "已達到 SCSI 控制器的數目上限 ({{max}})。"
+                  }
+               },
+               "nvme": {
+                  "title": "NVMe 控制器 {{size}}",
+                  "new": "新增 NVMe 控制器",
+                  "label": "NVMe 控制器 {{index}}",
+                  "validation": {
+                     "diskAttached": "硬碟仍連結至此控制器，請先對其進行重新指派。",
+                     "maxControllersReached": "已達到 NVMe 控制器的數目上限 ({{max}})。"
+                  }
+               },
+               "sata": {
+                  "title": "SATA 控制器 {{size}}",
+                  "new": "新增 SATA 控制器",
+                  "label": "SATA 控制器 {{index}}",
+                  "validation": {
+                     "diskAttached": "硬碟仍連結至此控制器，請先對其進行重新指派。",
+                     "cdromAttached": "CD/DVD 光碟機仍連結至此控制器，請先對其進行重新指派。",
+                     "maxControllersReached": "已達到 SATA 控制器的數目上限 ({{max}})。"
+                  }
+               },
+               "usbController": {
+                  "title": "USB 控制器 {{size}}",
+                  "new": "新增 USB 控制器",
+                  "settings": "設定",
+                  "warnUnsupported": "此客體作業系統不支援所選 USB 控制器。",
+                  "validation": {
+                     "numUSBs": "此虛擬機器組態僅支援 {size}} USB 裝置。",
+                     "maxUSB2Devices": "此虛擬機器組態僅支援 {{max}} 個 USB 2.0 裝置。",
+                     "maxUSB3Devices": "此虛擬機器組態僅支援 {{max}} 個 USB 3.0 裝置。"
+                  }
+               },
+               "usbDevice": {
+                  "title": "USB 裝置 {{size}}",
+                  "new": "新增 USB 裝置",
+                  "deviceNotFound": "找不到裝置",
+                  "connect": "連線",
+                  "validation": {
+                     "duplicateUsb": "不能多次新增同一個 USB 裝置。",
+                     "tooMany": "沒有更多可供新增的 USB 裝置",
+                     "maxDevices": "USB 裝置的最大數量為 20"
+                  }
+               },
+               "serialPort": {
+                  "title": "序列埠 {{size}}",
+                  "new": "新增序列埠",
+                  "status": "狀況",
+                  "connect": "連線",
+                  "connectAt": "開啟電源時連線",
+                  "connection": "連線",
+                  "physicalType": "實體序列埠類型",
+                  "browse": "瀏覽...",
+                  "pipeName": "管道名稱",
+                  "portURI": {
+                     "label": "連接埠 URI:",
+                     "desc": "使用虛擬序列埠集訊器"
+                  },
+                  "vSPCURI": "vSPC URI:",
+                  "deviceType": {
+                     "file": "使用輸出檔案",
+                     "physical": "使用實體序列埠",
+                     "pipe": "使用具名管道",
+                     "network": "使用網路",
+                     "thinprint": "Thinprint"
+                  },
+                  "nearEnd": {
+                     "label": "近端",
+                     "client": "用戶端",
+                     "server": "伺服器"
+                  },
+                  "farEnd": {
+                     "label": "遠端",
+                     "vm": "虛擬機器",
+                     "process": "程序"
+                  },
+                  "direction": {
+                     "label": "方向",
+                     "client": "用戶端",
+                     "server": "伺服器"
+                  },
+                  "validation": {
+                     "missingOutputFile": "請輸入序列埠的輸出檔案名稱。",
+                     "invalidOutputFile": "請提供有效的輸出檔案格式。",
+                     "invalidPipeName": "請提供有效的管道檔案名稱。",
+                     "invalidPortUri": "請以 &lt;通訊協定&gt;://&lt;ip 或主機名稱&gt;:&lt;連接埠&gt; 的形式提供有效的連接埠 URI。",
+                     "invalidVSPC": "請以 &lt;通訊協定&gt;://&lt;ip 或主機名稱&gt;:&lt;連接埠&gt; 的形式提供有效的虛擬序列埠集訊器。"
+                  }
+               },
+               "parallelPort": {
+                  "title": "平行埠 {{size}}",
+                  "new": "新增平行埠",
+                  "status": "狀況",
+                  "connect": "連線",
+                  "connectAt": "開啟電源時連線",
+                  "connection": "連線",
+                  "browse": "瀏覽...",
+                  "deviceType": {
+                     "file": "使用輸出檔案"
+                  },
+                  "validation": {
+                     "invalidOutputFile": "輸出檔案的格式無效。",
+                     "missingOutputFile": "請輸入平行埠的輸出檔案名稱"
+                  }
+               },
+               "network": {
+                  "title": "網路介面卡 {{size}}",
+                  "new": "新增網路介面卡",
+                  "status": "狀況",
+                  "connect": "連線",
+                  "connectAt": "開啟電源時連線",
+                  "adapterType": "介面卡類型",
+                  "physicalFunction": "實體功能",
+                  "virtualFunction": "虛擬功能",
+                  "sriovPassthrough": "SR-IOV 傳遞",
+                  "sriovMemReserved": "記憶體保留區",
+                  "passthroughAllMemReserved": "為了啟用 PCI 傳遞或 SR-IOV，將會保留虛擬機器的記憶體。",
+                  "vmxnet2Enhanced": "VMXNET 2 (增強版)",
+                  "guestOSMTUChange": {
+                     "label": "客體作業系統 MTU 變更",
+                     "allow": "允許",
+                     "disallow": "禁止"
+                  },
+                  "macAddress": "MAC 位址",
+                  "macAddressType": {
+                     "label": "MAC 位址類型",
+                     "auto": "自動",
+                     "assigned": "已指派",
+                     "manual": "手動"
+                  },
+                  "validation": {
+                     "missingMACAddress": "MAC 位址為必填",
+                     "invalidMACAddress": "MAC 位址無效",
+                     "missingPortgroup": "找不到網路介面卡 {{index}} 的連接埠群組 {{missing}}。它已指派給 {{assigned}}。",
+                     "cantAssign": "不支援新增或重新設定連結至非臨時分散式虛擬連接埠群組 ({{name}}) 的網路介面卡。"
+                  }
+               },
+               "floppy": {
+                  "title": "軟碟機 {{size}}",
+                  "new": "新增軟碟機",
+                  "status": "狀況",
+                  "connect": "連線",
+                  "connectAt": "開啟電源時連線",
+                  "browse": "瀏覽...",
+                  "unsupportedLabel": "不受支援",
+                  "unsupported": "使用 VMware Host Client 時不支援用戶端磁碟片裝置。如果您要使用用戶端裝置，請使用 vSphere Web Client。\n\n系統將忽略此裝置。",
+                  "media": {
+                     "label": "磁碟片媒體",
+                     "desc": "若要連線，請開啟虛擬機器電源，然後從 [摘要] 索引標籤的 [虛擬機器硬體] 面板中選取媒體。"
+                  },
+                  "deviceType": {
+                     "client": "用戶端裝置",
+                     "floppy": "使用現有的磁碟片映像"
+                  },
+                  "validation": {
+                     "numFloppy": "此虛擬機器組態僅支援 {{size}} 軟碟機。",
+                     "missingImage": "請選取軟碟機的映像"
+                  }
+               },
+               "cdrom": {
+                  "title": "CD/DVD 光碟機 {{size}}",
+                  "new": "新增 CD/DVD 光碟機",
+                  "status": "狀況",
+                  "connect": "連線",
+                  "connectAt": "開啟電源時連線",
+                  "browse": "瀏覽...",
+                  "type": "類型",
+                  "atapiDevice": "主機裝置",
+                  "unsupportedLabel": "不受支援",
+                  "unsupported": "使用 VMware Host Client 時不支援用戶端 CD/DVD 裝置。如果您要使用用戶端裝置，請使用 vSphere Web Client。\n\n系統將忽略此裝置。",
+                  "media": {
+                     "label": "CD/DVD 媒體",
+                     "desc": "若要連線，請開啟虛擬機器電源，然後從 [摘要] 索引標籤的 [虛擬機器硬體] 面板中選取媒體。"
+                  },
+                  "deviceType": {
+                     "client": "用戶端裝置",
+                     "host": "主機裝置",
+                     "iso": "資料存放區 ISO 檔案"
+                  },
+                  "deviceMode": {
+                     "label": "裝置模式",
+                     "controller": "裝置模式控制器",
+                     "location": "裝置模式位置",
+                     "emulate": "模擬 CD-ROM",
+                     "passthrough": "傳遞 CD-ROM"
+                  },
+                  "deviceNode": {
+                     "sata": "SATA 控制器"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "虛擬裝置節點",
+                     "location": "控制器位置",
+                     "controller": "控制器類型"
+                  },
+                  "validation": {
+                     "missingISO": "請選取 CDROM 的 ISO 映像",
+                     "missingDevice": "主機 CD/DVD 裝置無法使用，請選擇不同的 CD/DVD 支援，例如資料存放區 ISO，或是移除 CD/DVD 光碟機",
+                     "invalidController": "請為 CD/DVD 選取有效的控制器",
+                     "noAvailableLocation": "所選控制器上無可用位置。請選擇另一個控制器。",
+                     "locationInUse": "此位置正由其他裝置使用，請獲取下一個可用位置。"
+                  }
+               },
+               "actionBar": {
+                  "addHD": {
+                     "label": "新增硬碟",
+                     "tooltip": "將硬碟新增到虛擬機器"
+                  },
+                  "addNetwork": {
+                     "label": "新增網路介面卡",
+                     "tooltip": "將網路介面卡新增到虛擬機器"
+                  },
+                  "newHD": {
+                     "label": "新增硬碟",
+                     "tooltip": "將新硬碟新增到虛擬機器"
+                  },
+                  "existingHD": {
+                     "label": "現有硬碟",
+                     "tooltip": "將現有硬碟新增到虛擬機器"
+                  },
+                  "rdm": {
+                     "label": "新增 RDM 磁碟",
+                     "tooltip": "將新的原始裝置對應磁碟新增到虛擬機器"
+                  },
+                  "network": {
+                     "label": "網路介面卡",
+                     "tooltip": "新增網路介面卡"
+                  },
+                  "cdrom": {
+                     "label": "CD/DVD 光碟機",
+                     "tooltip": "新增 CD/DVD 光碟機"
+                  },
+                  "floppy": {
+                     "label": "軟碟機",
+                     "tooltip": "新增軟碟機"
+                  },
+                  "serial": {
+                     "label": "序列埠",
+                     "tooltip": "新增序列埠"
+                  },
+                  "parallel": {
+                     "label": "平行埠",
+                     "tooltip": "新增平行埠"
+                  },
+                  "usb": {
+                     "label": "USB 控制器",
+                     "tooltip": "新增 USB 控制器"
+                  },
+                  "usbDevice": {
+                     "label": "USB 裝置",
+                     "tooltip": "新增 USB 裝置"
+                  },
+                  "scsi": {
+                     "label": "SCSI 控制器",
+                     "tooltip": "新增 SCSI 控制器"
+                  },
+                  "pci": {
+                     "label": "PCI 裝置",
+                     "tooltip": "新增 PCI 裝置"
+                  },
+                  "sata": {
+                     "label": "SATA 控制器",
+                     "tooltip": "新增 SATA 控制器"
+                  },
+                  "nvme": {
+                     "label": "NVMe 控制器",
+                     "tooltip": "新增新 NVMe 控制器"
+                  },
+                  "sound": {
+                     "label": "音效控制器",
+                     "tooltip": "新增音效控制器"
+                  },
+                  "other": {
+                     "label": "新增其他裝置",
+                     "tooltip": "將其他硬體新增到此虛擬機器"
+                  }
+               }
+            },
+            "hdlocation": {
+               "title": "下列資料存放區可從您選取的目的地資源存取。請為虛擬機器組態檔和所有虛擬磁碟選取目的地資料存放區。",
+               "storagePolicy": {
+                  "default": "資料存放區預設值",
+                  "vvol": "VVol 無需求原則",
+                  "vsan": "Virtual SAN 預設儲存區原則"
+               },
+               "grid": {
+                  "name": "名稱",
+                  "capacity": "容量",
+                  "freeSpace": "可用",
+                  "type": "類型",
+                  "thinProvisioning": "精簡佈建",
+                  "access": "存取"
+               },
+               "dialog": {
+                  "ok": "確定",
+                  "select": "選取資料存放區"
+               }
+            },
+            "vmoptions": {
+               "general": {
+                  "title": "一般選項",
+                  "vmname": "虛擬機器名稱:",
+                  "vmconfigfile": "虛擬機器組態檔",
+                  "vmworkinglocation": "虛擬機器工作位置",
+                  "guestOS": "客體作業系統",
+                  "guestOSVersion": "客體作業系統版本",
+                  "remoteConsole": "VMware Remote Console 選項",
+                  "guestOSLock": {
+                     "label": "客體作業系統鎖定",
+                     "desc": "在最後一個遠端使用者中斷連線後鎖定客體作業系統"
+                  },
+                  "maxNumSessions": {
+                     "label": "工作階段數目上限",
+                     "desc": "限制與此虛擬機器之間的同時連線數目",
+                     "validation" : {
+                        "invalid" : "請指定有效的主控台工作階段數目上限。允許的數目上限是 {{num}}。"
+                     }
+                  },
+                  "vmwareTools": {
+                     "label": "VMware Tools",
+                     "desc": "展開以檢視 VMware Tools 設定"
+                  },
+                  "powerOperations": {
+                     "label": "電源作業",
+                     "stop": "停止",
+                     "pause": "暫停",
+                     "restart": "重新啟動",
+                     "desc": "開啟虛擬機器電源/繼續執行虛擬機器"
+                  },
+                  "vmwareToolsScript": {
+                     "label": "執行 VMware Tools 指令碼",
+                     "afterPoweringOn": "開啟電源後",
+                     "afterResuming": "繼續執行後",
+                     "beforeSuspending": "暫停前",
+                     "beforeShuttingDown": "關閉客體前"
+                  },
+                  "toolsUpgrades": {
+                     "label": "工具升級",
+                     "desc": "每次開啟電源前檢查並升級 VMware Tools"
+                  },
+                  "time": {
+                     "label": "時間",
+                     "desc": "將客體時間與主機同步"
+                  },
+                  "powerManagement": {
+                     "label": "電源管理",
+                     "desc": "展開以檢視電源管理設定",
+                     "standbyResponse": {
+                        "label": "待命回應",
+                        "desc": "將客體作業系統置於待命模式時，虛擬機器應如何回應?",
+                        "suspend": "暫停虛擬機器。",
+                        "standby": "將客體作業系統置於待命模式，並讓虛擬機器的電源保持開啟狀態。"
+                     },
+                     "wakeOnLan": {
+                        "label": "網路喚醒",
+                        "desc": "虛擬機器流量的網路喚醒於:",
+                        "network": "新增網路 (虛擬機器網路)"
+                     }
+                  },
+                  "bootOptions": {
+                     "label": "開機選項",
+                     "desc": "展開以檢視開機選項",
+                     "firmware": {
+                        "label": "韌體",
+                        "desc": "選擇應用來將虛擬機器開機的韌體:"
+                     },
+                     "enableUEFISecureBoot": {
+                        "label": "啟用 UEFI 安全開機",
+                        "desc": "是否對此虛擬機器啟用 UEFI 安全開機"
+                     },
+                     "bootDelay": {
+                        "label": "開機延遲",
+                        "desc": "每當開啟虛擬機器電源或重設虛擬機器時，開機將延遲",
+                        "ms": "毫秒"
+                     },
+                     "forceBiosSetup": {
+                        "label": "強制執行 BIOS 設定",
+                        "desc": "在虛擬機器下次開機時，強制進入 BIOS 設定畫面。"
+                     },
+                     "failedBootRecovery": {
+                        "label": "開機失敗後復原",
+                        "desc": "虛擬機器找不到開機裝置時，在經過以下時間後自動重試開機:",
+                        "sec": "秒"
+                     }
+                  },
+                  "advanced": {
+                     "label": "進階",
+                     "settings": {
+                        "label": "設定",
+                        "desc": "展開以檢視進階設定",
+                        "acceleration": "停用加速",
+                        "logging": "啟用記錄"
+                     },
+                     "debuggingStats": {
+                        "label": "偵錯和統計資料",
+                        "release": "正常執行",
+                        "debug": "記錄偵錯資訊",
+                        "stats": "記錄統計資料"
+                     },
+                     "swapFileLocation": {
+                        "label": "分頁檔位置",
+                        "default": {
+                           "label": "預設值",
+                           "desc": "使用包含虛擬機器之叢集或主機的設定。"
+                        },
+                        "vmDirectory": {
+                           "label": "虛擬機器目錄",
+                           "desc": "將分頁檔儲存在與虛擬機器相同的目錄中。"
+                        },
+                        "datastore": {
+                           "label": "主機指定的資料存放區",
+                           "desc": "將分頁檔儲存在主機指定用於分頁檔的資料存放區中。如果無法儲存在該位置，請將分頁檔儲存在與虛擬機器相同的目錄中。在 vMotion 執行期間使用對兩台主機皆不顯示的資料存放區，可能會影響相關虛擬機器的 vMotion 效能。"
+                        }
+                     },
+                     "configParams": {
+                        "label": "組態參數",
+                        "ok": "編輯組態...",
+                        "tooltip": "編輯虛擬機器組態參數",
+                        "dialog": {
+                           "title": "組態參數",
+                           "header": "根據實驗性功能的需要或根據技術支援的指示，修改或新增組態參數。無法移除項目。",
+                           "ok": "確定",
+                           "cancel": "取消",
+                           "remove": {
+                              "warning": {
+                                 "title": "警告",
+                                 "content": "是否確定要刪除組態參數 <strong>{{key}}</strong>?",
+                                 "confirmLabel": "刪除",
+                                 "rejectLabel": "取消"
+                              }
+                           },
+                           "add": {
+                              "title": "新增組態參數",
+                              "ok": "新增",
+                              "cancel": "取消",
+                              "notNull": "組態參數機碼為必填。",
+                              "existing": "組態參數重複。"
+                           },
+                           "edit": {
+                              "title": "編輯組態參數",
+                              "ok": "儲存",
+                              "cancel": "取消"
+                           },
+                           "actionBar": {
+                              "add": {
+                                 "label": "新增參數",
+                                 "tooltip": "新增參數"
+                              },
+                              "edit": {
+                                 "label": "編輯參數",
+                                 "tooltip": "編輯參數"
+                              },
+                              "delete": {
+                                 "label": "刪除參數",
+                                 "tooltip": "刪除參數"
+                              },
+                              "refresh": {
+                                 "label": "重新整理",
+                                 "tooltip": "重新整理組態參數"
+                              },
+                              "actions": {
+                                 "label": "動作",
+                                 "tooltip": "對所選組態參數執行的動作"
+                              }
+                           },
+                           "grid": {
+                              "key": "金鑰",
+                              "value": "值",
+                              "placeholder": {
+                                 "key": "按一下以編輯金鑰",
+                                 "value": "按一下以編輯值"
+                              }
+                           }
+                        }
+                     },
+                     "latencySensitivity": {
+                        "label": "延遲敏感度"
+                     }
+                  },
+                  "fiberChannel": {
+                     "label": "光纖通道 NPIV",
+                     "desc": "展開以檢視光纖通道 NPIV",
+                     "wwns": {
+                        "label": "光纖通道虛擬 WWN",
+                        "desc": "如果主機使用支援 NPIV 的光纖通道硬體，則可以為這些主機上執行的虛擬機器指派虛擬 WWN 以使用進階功能。這些 WWN 一般由主機或 vCenter Server 指派。",
+                        "disable": "暫時停用此虛擬機器的 NPIV",
+                        "noWWNs": {
+                           "label": "目前未指派任何 WWN。",
+                           "unchanged": "保留不變",
+                           "generate": {
+                              "label": "產生新的 WWN",
+                              "WWNNs": "WWNN 數目",
+                              "WWPNs": "WWPN 數目"
+                           }
+                        },
+                        "assignments": "WWN 指派"
+                     },
+                     "wwps": {
+                        "assignments": "WWP 指派"
+                     }
+                  }
+               },
+               "firmware": {
+                  "bios": "BIOS (建議)",
+                  "efi": "EFI"
+               },
+               "latency": {
+                  "low": "低",
+                  "medium": "中等",
+                  "normal": "正常",
+                  "high": "高  "
+               },
+               "validation": {
+                  "numberWWNNs": "NPIV WorldWideNode 名稱的數目必須介於 {{min}} 和 {{max}} 之間。",
+                  "numberWWPNs": "NPIV WorldWidePort 名稱的數目必須介於 {{min}} 和 {{max}} 之間。"
+               }
+            }
+         },
+         "deploy": {
+            "expand": "按一下以展開",
+            "refreshWarning": "部署虛擬機器時請勿重新整理瀏覽器。",
+            "start": {
+               "title": "選取 OVF 和 VMDK 檔案",
+               "description": "針對您要部署的虛擬機器選取 OVF 和 VMDK 檔案或 OVA",
+               "validation": {
+                  "name": "輸入此虛擬機器的有效名稱。",
+                  "vmdk": "您需要選取 VMDK",
+                  "vmdk-ova": "在具有 OVA 的情況下無需提供 VMDK 檔案",
+                  "ovf-ova": "您需要選取 OVF 或 OVA"
+               }
+            },
+            "eula": {
+               "title": "授權合約",
+               "description": "閱讀並接受授權合約",
+               "agree": "我同意",
+               "notAgreed": "您必須同意所有授權才能繼續"
+            },
+            "options": {
+               "title": "部署選項",
+               "description": "選取部署選項",
+               "deploymentOption": "部署類型",
+               "networkMappings": "網路對應",
+               "diskProvisioning": "磁碟佈建",
+               "powerOnAutomatically": "自動開啟電源",
+               "thin": "精簡",
+               "thick": "完整"
+            },
+            "properties": {
+               "title": "其他設定",
+               "description": "虛擬機器的其他內容"
+            },
+            "summary": {
+               "loading": "正在驗證虛擬機器組態...",
+               "product": "產品",
+               "vmName": "虛擬機器名稱",
+               "disks": "磁碟",
+               "diskType": {
+                  "label": "佈建類型",
+                  "thin": "精簡",
+                  "thick": "完整"
+               },
+               "networkMappings": "網路對應",
+               "datastore": "資料存放區",
+               "guestOSName": "客體作業系統名稱",
+               "cpus": "CPU",
+               "memory": "記憶體",
+               "expand": "按一下以展開",
+               "properties": "內容",
+               "validation": {
+                  "extraDisk": "至少一個所提供的額外磁碟映像將被略過。",
+                  "diskMissing": "所需的磁碟映像遺失。",
+                  "error": "從 OVF 檔案建立匯入規格時發生錯誤。"
+               },
+               "notification": {
+                  "success": "已成功匯入虛擬機器 {{name}}",
+                  "error": "無法部署虛擬機器: {{message}}"
+               }
+            },
+            "name": {
+               "label": "輸入虛擬機器的名稱。",
+               "placeholder": "名稱",
+               "desc": "虛擬機器名稱最多可包含 80 個字元，且在每個 ESXi 執行個體中必須是唯一的。"
+            },
+            "select": {
+               "click": "按一下以選取",
+               "drag": "或拖放檔案"
+            },
+            "notification": {
+               "match": "欄位 {{name}} 不相符",
+               "required": "欄位 {{name}} 為必填"
+            }
+         },
+         "register": {
+            "select": "選取一或多台虛擬機器、一個資料存放區或一個目錄",
+            "noVMsFound": "{{folder}} 中找不到任何虛擬機器",
+            "title": "選取要進行登錄的虛擬機器",
+            "description": "選取要登錄的一或多台虛擬機器。透過選取資料存放區或目錄，在該資料存放區或目錄內找到的所有虛擬機器將予以登錄。",
+            "list": {
+               "columns": {
+                  "vmx": "VMX 檔案",
+                  "remove": "移除"
+               },
+               "actions": {
+                  "removeSelected": {
+                     "label": "移除選取項目",
+                     "tooltip": "從登錄清單移除所選虛擬機器"
+                  },
+                  "removeAll": {
+                     "label": "全部移除",
+                     "tooltip": "從登錄清單移除所有虛擬機器"
+                  }
+               },
+               "none": "無"
+            },
+            "summary": {
+               "provisionType": "佈建類型",
+               "vm": "虛擬機器"
+            },
+            "notification": {
+               "success": "已成功登錄虛擬機器 {{name}}",
+               "register": "已登錄 {{count}} 台虛擬機器",
+               "error": "無法登錄虛擬機器 {{name}}。{{message}}"
+            }
+         },
+         "clone": {
+            "summary": {
+               "vm": "要複製的虛擬機器",
+               "clone": "複製到",
+               "datastore": "資料存放區:"
+            },
+            "notification": {
+               "sucess": "已成功複製虛擬機器 {{name}}",
+               "error": "無法複製虛擬機器 {{name}}"
+            }
+         },
+         "summary": {
+            "title": "即將完成",
+            "description": "請檢閱設定選擇後再完成精靈",
+            "provisionType": "佈建類型",
+            "vmName": "名稱",
+            "datastore": "資料存放區",
+            "guestOS": "客體作業系統名稱",
+            "cpu": "vCPU",
+            "memory": "記憶體",
+            "nic": "網路介面卡",
+            "nicNetwork": "網路介面卡 {{size}} 網路",
+            "nicType": "網路介面卡 {{size}} 類型",
+            "ideController": "IDE 控制器 {{size}}",
+            "scsiController": "SCSI 控制器 {{size}}",
+            "nvmeController": "NVMe 控制器 {{size}}",
+            "sataController": "SATA 控制器 {{size}}",
+            "newSataController": "新增 SATA 控制器",
+            "newNVMEController": "新增 NVMe 控制器",
+            "createHardDisk": "硬碟 {{size}}",
+            "capacity": "容量",
+            "datastore": "資料存放區",
+            "diskProvisioning": "佈建",
+            "thin": "精簡佈建",
+            "lazy": "完整佈建, 消極式歸零",
+            "eager": "完整佈建, 積極式歸零",
+            "mode": "模式",
+            "controller": "控制器",
+            "serialPort": "序列埠 {{size}}",
+            "newSerialPort": "新增序列埠",
+            "parallelPort": "平行埠 {{size}}",
+            "newParallelPort": "新增平行埠",
+            "usbController": "USB 控制器 {{size}}",
+            "usbDevice": "USB 裝置 {{size}}",
+            "createCdrom": "CD/DVD 光碟機 {{size}}",
+            "createFloppy": "軟碟機 {{size}}",
+            "backing": "支援",
+            "client": "遠端裝置 CDROM",
+            "connected": "已連線",
+            "sound": {
+               "label": "音效控制器",
+               "VirtualHdAudioCard": "HD 音訊",
+               "VirtualSoundBlaster16": "Sound Blaster 16",
+               "VirtualEnsoniq1371": "Ensoniq 1371"
+            },
+            "notification": {
+               "success": "已成功建立虛擬機器 {{name}}",
+               "error": {
+                  "title": "虛擬機器組態錯誤",
+                  "message": "虛擬機器組態遭拒絕，請查看瀏覽器主控台"
+               }
+            }
+         }
+      },
+      "unregister": {
+         "title": "解除登錄虛擬機器",
+         "title-single": "解除登錄虛擬機器 - {{name}}",
+         "title-multiple": "解除登錄 {{count}} 台虛擬機器",
+         "content": "是否確定要解除登錄下列虛擬機器?",
+         "success": "解除登錄 {{num}} 台虛擬機器",
+         "failure": "至少一台虛擬機器無法解除登錄",
+         "rejectLabel": "取消"
+      },
+      "context": {
+         "title": "虛擬機器",
+         "newWindow": {
+            "label": "在新視窗中開啟",
+            "tooltip": "在新視窗中開啟虛擬機器清單"
+         },
+         "closeConsole": {
+            "label": "關閉主控台",
+            "tooltip": "關閉此主控台視窗"
+         },
+         "exitFullScreenConsole": {
+            "label": "結束全螢幕",
+            "tooltip": "結束全螢幕"
+         },
+         "autostart": {
+            "autostart": {
+               "label": "自動啟動",
+               "tooltip": "設定自動啟動選項"
+            },
+            "enable": {
+               "label": "啟用",
+               "tooltip": "為此虛擬機器啟用自動啟動"
+            },
+            "increasePriority": {
+               "label": "延遲啟動",
+               "tooltip": "調高此虛擬機器的啟動順序，以便其在其他虛擬機器之後啟動"
+            },
+            "decreasePriority": {
+               "label": "提前啟動",
+               "tooltip": "調低此虛擬機器的啟動順序，以便其在其他虛擬機器之前啟動"
+            },
+            "disable": {
+               "label": "停用",
+               "tooltip": "從自動啟動組態中移除此虛擬機器"
+            },
+            "configure": {
+               "label": "設定",
+               "tooltip": "設定此虛擬機器的自動啟動設定"
+            }
+         },
+         "export": {
+            "label": "匯出",
+            "tooltip": "將此虛擬機器匯出為 OVF 範本",
+            "download": {
+               "title": "下載檔案",
+               "contentSize": "您即將下載此虛擬機器的 {{fileIndex}} 個檔案 (共 {{numFiles}} 個)。此檔案為 {{size}}。\n\n請確保您允許此主機的 IP 或 FQDN 的快顯。",
+               "contentNoSize": "您即將下載此虛擬機器的 {{fileIndex}} 個檔案 (共 {{numFiles}} 個)。\n\n請確保您允許此主機的 IP 或 FQDN 的快顯。",
+               "confirmLabel": "確定",
+               "rejectLabel": "取消"
+            }
+         },
+         "unregister": {
+            "label": "解除登錄",
+            "tooltip": "解除登錄此虛擬機器",
+            "tooltipMultiple": "解除登錄這些虛擬機器",
+            "tooltipDisabled": "解除登錄一或多個虛擬機器",
+            "tooltipWarnPoweredOn": " - 至少一個虛擬機器仍處於開啟電源狀態。您無法解除登錄已開啟電源的虛擬機器"
+         },
+         "delete": {
+            "label": "刪除",
+            "tooltip": "刪除此虛擬機器",
+            "tooltipMultiple": "刪除這些虛擬機器",
+            "tooltipDisabled": "刪除虛擬機器",
+            "tooltipWarnPoweredOn": " - 至少一個虛擬機器仍處於開啟電源狀態。您無法刪除已開啟電源的虛擬機器"
+         },
+         "help": {
+            "label": "說明",
+            "tooltip": "虛擬機器的說明主題"
+         },
+         "openInNewWindow": {
+            "label": "在新視窗中開啟",
+            "tooltip": "在新視窗中開啟此虛擬機器"
+         },
+         "answerQuestion": {
+            "label": "回答問題",
+            "tooltip": "回答此虛擬機器的待解決問題",
+            "tooltipMultipleVMs": "您一次只能回答單一虛擬機器的問題"
+         },
+         "power": {
+            "label": "電源",
+            "tooltip": "虛擬機器的電源作業",
+            "powerOn": {
+               "label": "開啟電源",
+               "tooltip": "開啟此虛擬機器的電源"
+            },
+            "powerOff": {
+               "label": "關閉電源",
+               "tooltip": "關閉此虛擬機器的電源",
+               "warnSuspendedOrOn": "至少一個虛擬機器已暫停或已開啟電源，關閉已暫停虛擬機器的電源可能會導致客體中的資料遺失。",
+               "warnSuspended": "此虛擬機器目前已暫停。關閉其電源可能會導致客體中的資料遺失。",
+               "warnOn": "此虛擬機器目前已開啟電源。關閉其電源可能會導致客體中的資料遺失。"
+            },
+            "suspend": {
+               "label": "暫停",
+               "tooltip": "暫停此虛擬機器"
+            },
+            "reset": {
+               "label": "重設",
+               "tooltip": "重設此虛擬機器"
+            }
+         },
+         "create": {
+            "label": "建立/登錄虛擬機器",
+            "tooltip": "使用精靈建立或登錄虛擬機器"
+         },
+         "snapshots": {
+            "label": "快照",
+            "tooltip": "此虛擬機器的快照作業"
+         },
+         "console": {
+            "console": {
+               "label": "主控台",
+               "tooltip": "此虛擬機器的主控台選項"
+            },
+            "browser": {
+               "label": "開啟瀏覽器主控台",
+               "tooltip": "開啟此虛擬機器的瀏覽器內主控台"
+            },
+            "browserNewWindow": {
+               "label": "在新視窗中開啟主控台",
+               "tooltip": "在新視窗中開啟此虛擬機器的瀏覽器內主控台"
+            },
+            "browserNewTab": {
+               "label": "在新索引標籤中開啟主控台",
+               "tooltip": "在新索引標籤中開啟此虛擬機器的瀏覽器內主控台"
+            },
+            "showMousePad": {
+               "label": "顯示相對滑鼠墊",
+               "tooltip": "為此虛擬機器顯示相對滑鼠墊，當虛擬機器在瀏覽器主控台內有滑鼠控制問題時，這會很有用。"
+            },
+            "resetSize": {
+               "label": "重設為原生解析度",
+               "tooltip": "將主控台重設為虛擬機器的原生解析度"
+            },
+            "vmrc": {
+               "label": "啟動遠端主控台",
+               "tooltip": "使用獨立 VMRC 應用程式啟動主控台"
+            },
+            "downloadVMRC": {
+               "label": "下載 VMRC",
+               "tooltip": "前往 VMware.com 下載獨立 VMRC 應用程式"
+            }
+         },
+         "guest": {
+            "guestOS": {
+               "label": "客體作業系統",
+               "tooltip": "客體作業系統的作業"
+            },
+            "shutDown": {
+               "label": "關閉",
+               "tooltip": "關閉此客體"
+            },
+            "restart": {
+               "label": "重新啟動",
+               "tooltip": "重新啟動此客體"
+            },
+            "sendKeys": {
+               "title": "傳送按鍵",
+               "toolTip": "將按鍵傳送至客體",
+               "toolTipKeys": "將 {{description}} 傳送至客體",
+               "toolTipNoWebMKS": "需要有作用中的瀏覽器內主控台工作階段，才能傳送按鍵"
+            },
+            "keyCombinations": {
+               "ctrlAltDelete": {
+                  "title": "Ctrl-Alt-Delete",
+                  "toolTip": "將 Ctrl-Alt-Delete 傳送至客體"
+               },
+               "ctrlC": {
+                  "title": "Ctrl-c",
+                  "toolTip": "將 Ctrl-c 傳送至客體"
+               },
+               "escape": {
+                  "title": "ESC 鍵",
+                  "toolTip": "將 ESC 鍵傳送至客體"
+               },
+               "functionKey": {
+                  "title": "{{description}}",
+                  "toolTip": "將 {{description}} 傳送至客體"
+               }
+            },
+            "installTools": {
+               "label": "安裝 VMware Tools",
+               "tooltip": "在此客體作業系統中掛接 VMware Tools 安裝程式 CDROM"
+            },
+            "upgradeTools": {
+               "label": "升級 VMware Tools",
+               "tooltip": "在此客體作業系統中升級 VMware Tools",
+               "notification": {
+                  "successSingle": "已成功升級 {{vmName}} 的 VMware Tools",
+                  "failedSingle": "無法升級 {{vmName}} 的 VMware Tools: {{reason}}",
+                  "successMultiple": "已成功升級 {{num}} 台虛擬機器的 VMware Tools。",
+                  "failedMultiple": "無法升級至少 1 台虛擬機器的 VMware Tools: {{reason}}"
+               }
+            }
+         },
+         "editSettings": {
+            "label": "編輯設定",
+            "tooltip": "編輯此虛擬機器的設定"
+         },
+         "editNotes": {
+            "label": "編輯附註",
+            "tooltip": "編輯此虛擬機器的附註"
+         },
+         "rename": {
+            "label": "重新命名",
+            "tooltip": "重新命名此虛擬機器",
+            "tooltipSingle": "只能重新命名單一虛擬機器"
+         }
+      },
+      "error": {
+         "unknown": "抱歉，找不到虛擬機器「{{moid}}」。"
+      },
+      "warning": {
+         "multiThreshold": {
+            "title": "警告",
+            "confirmLabel": "是",
+            "rejectLabel": "否",
+            "content": "在所選虛擬機器 ({{num}}) 上執行此作業可能會導致網頁瀏覽器凍結一段時間或不穩定。我們建議您將所選虛擬機器數減少為少於 {{threshold}}。是否要繼續?"
+         },
+         "shutDown": {
+            "title": "確認客體關閉",
+            "confirmLabel": "是",
+            "rejectLabel": "取消",
+            "content": "是否確定要關閉 {{name}}?",
+            "contentMultiple": "是否確定要關閉 {{num}} 個虛擬機器?"
+         },
+         "restart": {
+            "title": "確認客體重新啟動",
+            "confirmLabel": "是",
+            "rejectLabel": "取消",
+            "content": "是否確定要重新啟動 {{name}}?",
+            "contentMultiple": "是否確定要重新啟動 {{num}} 個虛擬機器?"
+         }
+      },
+      "logs": {
+         "dropdown": {
+            "default": "選取記錄"
+         },
+         "actionBar": {
+            "refresh": {
+               "label": "重新整理",
+               "tooltip": "重新整理記錄"
+            },
+            "close": {
+               "label": "關閉",
+               "tooltip": "關閉此視窗"
+            }
+         }
+      },
+      "rename": {
+         "current": "目前名稱",
+         "new": "新的名稱",
+         "title": "重新命名虛擬機器 - {{name}}",
+         "ok": "重新命名",
+         "error": "請提供名稱",
+         "rejectLabel": "取消",
+         "notification": {
+            "success": "已成功重新命名虛擬機器 {{name}}",
+            "error": "無法重新命名 {{name}}"
+         }
+      },
+      "help": {
+         "content": "<p>下列是虛擬機器參數的相關說明:</p><dl><dt>狀態</dt><dd>[狀態] 資料行顯示虛擬機器的目前狀態: 已開啟電源、已關閉電源、已暫停。</dd><dt>狀態</dt><dd>[狀態] 資料行根據虛擬機器目前擱置中的任何通知，顯示虛擬機器的高層級狀態。例如，如果未安裝 VMware Tools，狀態將為<strong>資訊</strong>。<br /><br /> <strong>無效</strong>狀態表示虛擬機器在資料存放區上似乎不能存取。檔案可能已移除。無效虛擬機器的唯一可用作業是「解除登錄」。<br /><br /> <strong>不一致</strong>狀態表示虛擬機器的狀態不明。重新啟動虛擬機器的電源通常會解決此問題。</dd><dt>佈建的空間</dt><dd>[佈建的空間] 資料行顯示為虛擬機器提供的儲存空間量 (所有虛擬磁碟之間的累計數量)。</dd><dt>已使用空間</dt><dd>[已使用空間] 資料行顯示虛擬機器目前耗用的儲存空間量。這包括虛擬機器和虛擬磁碟的資料儲存空間、已暫停狀態、快照和分頁檔耗用量。</dd><dt>主機名稱</dt><dd>[主機名稱] 資料行顯示客體作業系統的主機名稱。</dd><dt>主機 CPU</dt><dd>[主機 CPU] 資料行顯示虛擬機器的 VCPU 目前在主機 CPU 上耗用的 CPU 資源數量。</dd><dt>主機記憶體</dt><dd>[主機記憶體] 資料行顯示虛擬機器在主機系統上耗用的記憶體數量。</dd></dl>",
+         "title": "說明"
+      }
+   }
+}

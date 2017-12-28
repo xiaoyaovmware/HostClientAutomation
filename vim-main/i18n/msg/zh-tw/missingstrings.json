@@ -1,0 +1,6 @@
+{
+  "gosWin1032": "Microsoft Windows 10 (32-bit)",
+  "loginError": "無法完成登入，因為使用者名稱或密碼錯誤。",
+  "diskTypeSSD": "磁碟 (SSD)",
+  "taskFailureHostConfig": "失敗 - 主機設定期間發生錯誤。"
+}

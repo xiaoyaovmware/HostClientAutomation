@@ -1,0 +1,1361 @@
+{
+   "network": {
+      "title": "{{hostname}} - 网络",
+      "context": {
+         "title": "网络",
+         "addPortgroup": {
+            "title": "添加端口组",
+            "tooltip": "添加新端口组"
+         },
+         "addVSwitch": {
+            "title": "添加标准 vSwitch",
+            "tooltip": "添加标准虚拟交换机"
+         },
+         "addVMKNIC": {
+            "title": "添加 VMkernel 网卡",
+            "tooltip": "添加 VMkernel 接口"
+         }
+      },
+      "tabs": {
+         "vswitches": {
+            "title": "虚拟交换机",
+            "toolTip": "管理主机的虚拟交换机"
+         },
+         "portgroups": {
+            "title": "端口组",
+            "toolTip": "管理主机的交换机端口组"
+         },
+         "pnics": {
+            "title": "物理网卡",
+            "toolTip": "管理主机的物理网卡"
+         },
+         "vmknics": {
+            "title": "VMkernel 网卡",
+            "toolTip": "管理主机的 VMkernel 网卡"
+         },
+         "netstacks": {
+            "title": "TCP/IP 堆栈",
+            "toolTip": "管理主机的 TCP/IP 堆栈"
+         },
+         "firewall": {
+            "title": "防火墙规则",
+            "toolTip": "管理防火墙规则"
+         }
+      },
+      "monitor": {
+         "events": {
+            "tabTitle": "事件",
+            "tabTooltip": "系统事件"
+         },
+         "tasks": {
+            "tabTitle": "任务",
+            "tabTooltip": "任务"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "权限",
+            "title": "管理权限",
+            "close": "关闭",
+            "cancel": "取消",
+            "noUsers": "无用户",
+            "addUser": {
+               "label": "添加用户",
+               "toolTip": "添加用户"
+            },
+            "removeUser": {
+               "label": "移除用户",
+               "toolTip": "移除用户"
+            },
+            "assignRole": {
+               "label": "分配角色",
+               "toolTip": "将角色分配给用户"
+            },
+            "updatePermissions": {
+               "successNotification": "已成功更新权限",
+               "failureNotification": "无法更新权限: {{error}}"
+            },
+            "columns": {
+               "user": "用户",
+               "role": "角色"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "选择用户"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "选择角色"
+            },
+            "propagateLabel": "传播到所有子对象"
+         }
+      },
+      "firewall": {
+         "alt": "防火墙",
+         "list": {
+            "columns": {
+               "name": "名称",
+               "key": "键",
+               "incoming": "入站端口",
+               "outgoing": "出站端口",
+               "protocols": "协议",
+               "daemon": "守护进程",
+               "service": "服务"
+            },
+            "actionBar": {
+               "edit": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑此规则集的设置"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定防火墙规则集执行的操作"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新防火墙规则"
+               }
+            },
+            "unknownRule": "未知防火墙规则",
+            "rule": "规则",
+            "direction": "方向",
+            "port": "端口",
+            "protocol": "协议",
+            "notification": {
+               "enable": {
+                  "success": "已成功启用 {{name}} 规则集。",
+                  "error": "无法启用 {{}} 规则集。"
+               },
+               "disable": {
+                  "success": "已成功禁用 {{name}} 规则集。",
+                  "error": "无法禁用 {{}} 规则集。"
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "编辑设置",
+               "tooltip": "编辑此防火墙规则"
+            },
+            "enable": {
+               "label": "启用",
+               "tooltip": "启用此防火墙规则"
+            },
+            "disable": {
+               "label": "禁用",
+               "tooltip": "禁用此防火墙规则"
+            },
+            "service": {
+               "label": "服务",
+               "tooltip": "修改与此防火墙规则相关联的服务的设置"
+            },
+            "policy": {
+               "label": "策略",
+               "tooltip": "与此防火墙规则相关联的服务的策略选项"
+            }
+         },
+         "summary": {
+            "key": "键",
+            "enabled": "已启用",
+            "true": "是",
+            "false": "否",
+            "required": "必需",
+            "rules": "规则",
+            "package": "软件包信息",
+            "allowedIP": "允许的 IP 地址",
+            "all": "全部",
+            "service": "服务",
+            "portlets": {
+               "rules": {
+                  "title": "防火墙规则",
+                  "tooltip": "防火墙规则"
+               }
+            }
+         },
+         "edit": {
+            "title": "防火墙设置",
+            "header": "允许的 IP 地址",
+            "allIP": "来自所有 IP 地址的全部连接",
+            "selectedIP": "仅允许从以下网络连接:",
+            "selectedIPInfo": "使用逗号选择每个网络。<br/>示例:<br/>192.168.0.0/24, 192.168.1.2, 2001::1/64, fd3e:29a6:0a81:e478::/64",
+            "ok": "确定",
+            "rejectLabel": "取消",
+            "invalidIP": "请提供有效的 IP 地址"
+         }
+      },
+      "vmknic": {
+         "alt": "VMkernel 网卡",
+         "select": {
+            "title": "选择 VMkernel 接口",
+            "rejectLabel": "取消",
+            "confirmLabel": "选择",
+            "loading": "正在加载..."
+         },
+         "summary": {
+            "virtualSwitch": "虚拟交换机:",
+            "portGroup": "端口组:",
+            "tcpIpConfiguration": "TCP/IP 配置",
+            "vswitchTopology": "vSwitch 拓扑",
+            "services": "服务",
+            "unknownVMKNIC": "未知 VMkernel 网卡",
+            "ok": "确定",
+            "portlets": {
+               "tcpip": {
+                  "netstack": "TCP/IP 堆栈",
+                  "ipv4DHCP": {
+                     "title": "IPv4 DHCP",
+                     "enabled": "已启用",
+                     "disabled": "已禁用"
+                  },
+                  "ipv4Address": "IPv4 地址",
+                  "ipv4Subnet": "IPv4 子网",
+                  "ipv6DHCP": {
+                     "title": "IPv6 DHCP",
+                     "enabled": "已启用",
+                     "disabled": "已禁用"
+                  },
+                  "ipv6AutoConfig": {
+                     "title": "IPv6 自动配置",
+                     "enabled": "已启用",
+                     "disabled": "已禁用"
+                  },
+                  "ipv6Addresses": "IPv6 地址",
+                  "none": "无"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新此 VMkernel 网卡的数据"
+               },
+               "editSettings": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑此 VMkernel 网卡的设置"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对此 VMkernel 网卡执行的操作"
+               }
+            }
+         },
+         "events": {
+            "type": "类型:",
+            "time": "时间:",
+            "virtualMachine": "虚拟机:"
+         },
+         "list": {
+            "grid": {
+               "name": "名称",
+               "portgroup": "端口组",
+               "tcpip": "TCP/IP 堆栈",
+               "services": "服务",
+               "ipv4": "IPv4 地址",
+               "ipv6": "IPv6 地址",
+               "none": "无"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新适配器表"
+               },
+               "add": {
+                  "label": "添加 VMkernel 网卡",
+                  "tooltip": "添加 VMkernel 网卡 - 构建中"
+               },
+               "editSettings": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑此虚拟交换机的设置"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对此 VMkernel 网卡执行的操作"
+               }
+            }
+         },
+         "monitor": {
+            "title": "监控",
+            "tabs": {
+               "events": {
+                  "label": "事件",
+                  "tooltip": "事件"
+               },
+               "tasks": {
+                  "label": "任务",
+                  "tooltip": "任务"
+               }
+            }
+         },
+         "add": {
+            "loading": "正在加载...",
+            "title": "添加 VMkernel 网卡",
+            "rejectLabel": "取消",
+            "ip": {
+               "ipv4": "仅 IPv4",
+               "ipv6": "仅 IPv6",
+               "both": "IPv4 和 IPv6"
+            },
+            "vswitch": {
+               "label": "选择虚拟交换机"
+            },
+            "dialog": {
+               "create": "创建",
+               "validation": {
+                  "nic": "请为新端口组提供名称",
+                  "vswitch": "请为端口组选择虚拟交换机",
+                  "vlanId": "请提供 VLAN ID，该值必须介于 {{min}} 和 {{max}} 之间",
+                  "ipv4": "请提供一个 IPv4 地址和子网",
+                  "portgroupExists": "已存在名为 {{name}} 的端口组，请选择其他名称"
+               },
+               "notification": {
+                  "success": "已成功创建 VMkernel 网卡 {{name}}",
+                  "error": "无法创建新的 VMkernel 网卡"
+               }
+            }
+         },
+         "edit": {
+            "title": "编辑设置 - {{name}}",
+            "rejectLabel": "取消",
+            "confirmLabel": "保存",
+            "loading": "正在加载...",
+            "ip": {
+               "ipv4": "仅 IPv4",
+               "ipv6": "仅 IPv6",
+               "both": "IPv4 和 IPv6"
+            },
+            "vswitch": {
+               "label": "选择虚拟交换机"
+            },
+            "dialog": {
+               "create": "创建",
+               "validation": {
+                  "portgroup": "不存在与此 VMkernel 网卡关联的端口组",
+                  "vswitch": "请为端口组选择虚拟交换机",
+                  "ipv4": "请提供一个 IPv4 地址和子网"
+               },
+               "notification": {
+                  "success": "已保存 VMkernel 网卡 {{name}} 的配置",
+                  "error": "无法保存 VMkernel 网卡 {{name}} 的配置"
+               }
+            }
+         },
+         "context": {
+            "remove": {
+               "label": "移除",
+               "tooltip": "移除此 VMkernel 网卡"
+            },
+            "edit": {
+               "label": "编辑设置",
+               "tooltip": "编辑此 VMkernel 网卡的设置",
+               "tooltipDVS": "无法编辑附加到分布式端口组的 VMkernel 网卡"
+            }
+         },
+         "remove": {
+            "title": "移除 VMKNIC - {{name}}",
+            "confirmLabel": "确认",
+            "rejectLabel": "取消",
+            "successNotification": "已成功移除 VMkernel 网卡 {{name}}",
+            "failureNotification": "无法移除 VMkernel 网卡 {{name}}",
+            "confirmation": "移除 VMkernel 网卡会导致使用该网卡的所有服务均不可用。\n\n是否移除 {{name}}?"
+         },
+         "settings": {
+            "services": {
+               "vSphereProvisioning": {
+                  "label": "置备"
+               },
+               "vMotion": {
+                  "label": "vMotion"
+               },
+               "vmotion": {
+                  "label": "vMotion"
+               },
+               "faultToleranceLogging": {
+                  "label": "Fault Tolerance 日志记录"
+               },
+               "management": {
+                  "label": "管理"
+               },
+               "vSphereReplication": {
+                  "label": "复制"
+               },
+               "vSphereReplicationNFC": {
+                  "label": "NFC 复制"
+               },
+               "vsan": {
+                  "label": "vSAN"
+               },
+               "vsanWitness": {
+                  "label": "vSAN 见证"
+               }
+            },
+            "portGroup": {
+               "label": "端口组",
+               "newPortGroup": "新建端口组",
+               "vlandId": "VLAN ID",
+               "ipVersion": {
+                  "label": "IP 版本"
+               },
+               "ipv4": {
+                  "label": "IPv4 设置",
+                  "dhcp": {
+                     "label": "配置",
+                     "dhcp": "DHCP",
+                     "static": "静态"
+                  },
+                  "address": "地址",
+                  "subnetMask": "子网掩码"
+               },
+               "ipv6": {
+                  "label": "IPv6 设置",
+                  "clickExpand": "单击以展开",
+                  "dhcpv6": {
+                     "label": "DHCPv6",
+                     "enabled": "已启用",
+                     "disabled": "已禁用"
+                  },
+                  "autoConfig": {
+                     "label": "自动配置",
+                     "yes": "是",
+                     "no": "否"
+                  },
+                  "staticAddresses": {
+                     "label": "静态地址",
+                     "addAddress": "添加地址",
+                     "placeholder": {
+                        "address": "地址",
+                        "prefix": "前缀"
+                     }
+                  },
+                  "vSwitch": {
+                     "label": "虚拟交换机"
+                  },
+                  "tcpip": {
+                     "label": "TCP/IP 堆栈"
+                  },
+                  "services": {
+                     "label": "服务",
+                     "vMotion": "vMotion"
+                  }
+               }
+            }
+         }
+      },
+      "vswitch": {
+         "alt": "虚拟交换机",
+         "context": {
+            "addUplink": {
+               "title": "添加上行链路",
+               "tooltip": "将上行链路添加到此虚拟交换机"
+            },
+            "editSettings": {
+               "title": "编辑设置",
+               "tooltip": "编辑此虚拟交换机的设置"
+            },
+            "remove": {
+               "title": "移除",
+               "tooltip": "移除虚拟交换机",
+               "tooltipDVS": "仅可以从 vCenter Server 中移除分布式交换机"
+            }
+         },
+         "summary": {
+            "type": "类型:",
+            "virtualSwitch": "虚拟交换机:",
+            "portGroups": "端口组:",
+            "uplinks": "上行链路:",
+            "vswitchDetails": "vSwitch 详细信息",
+            "vswitchTopology": "vSwitch 拓扑",
+            "portlet": {
+               "mtu": "MTU",
+               "ports": "端口",
+               "link": "链路发现",
+               "attached": "附加的虚拟机",
+               "beacon": "信标时间间隔",
+               "available": "可用",
+               "active": "活动",
+               "linkDiscovery": {
+                  "mode": {
+                     "listen": "侦听",
+                     "advertise": "播发",
+                     "both": "二者",
+                     "none": "无"
+                  },
+                  "protocol": {
+                     "label": "协议",
+                     "lldp": "Link Layer Discovery Protocol (LLDP)",
+                     "cdp": "Cisco Discovery Protocol (CDP)"
+                  }
+               }
+            },
+            "dialog": {
+               "title": "未知 vSwitch"
+            },
+            "actionBar": {
+               "addUplink": {
+                  "label": "添加上行链路",
+                  "tooltip": "将新的物理上行链路添加到虚拟交换机"
+               },
+               "edit": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑此虚拟交换机的设置"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新适配器表"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对此列表中的选定对象执行的操作"
+               }
+            }
+         },
+         "list": {
+            "grid": {
+               "name": "名称",
+               "portgroups": "端口组",
+               "uplinks": "上行链路",
+               "type": "类型"
+            },
+            "actionBar": {
+               "addStandard": {
+                  "label": "添加标准虚拟交换机",
+                  "tooltip": "添加新的标准虚拟交换机"
+               },
+               "addUplink": {
+                  "label": "添加上行链路",
+                  "tooltip": "将上行链路 (物理网卡) 添加到此虚拟交换机"
+               },
+               "edit": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑此虚拟交换机的设置"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新虚拟交换机列表"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定虚拟交换机执行的操作"
+               }
+            }
+         },
+         "events": {
+            "type": "类型:",
+            "time": "时间:",
+            "virtualMachine": "虚拟机:"
+         },
+         "diagram": {
+            "loading": "正在加载 vSwitch 拓扑...",
+            "noPortgroups": "无端口组",
+            "vlanId": "VLAN ID:",
+            "virtualMachines": "虚拟机",
+            "macAddress": "MAC 地址",
+            "vmKernelPorts": "VMkernel 端口",
+            "noPhysicalAdapters": "无物理适配器",
+            "physicalAdapters": "物理适配器"
+         },
+         "monitor": {
+            "title": "监控",
+            "tabs": {
+               "events": {
+                  "label": "事件",
+                  "tooltip": "事件"
+               },
+               "tasks": {
+                  "label": "任务",
+                  "tooltip": "任务"
+               }
+            }
+         },
+         "noAdapters": "没有可附加到此虚拟交换机的可用物理适配器。",
+         "remove": {
+            "title": "移除虚拟交换机 - {{name}}",
+            "confirmation": "是否确定要移除以下 vSwitch?",
+            "confirmLabel": "是",
+            "rejectLabel": "否",
+            "portgroups": "端口组",
+            "failureNotification": "无法移除虚拟交换机 {{name}}",
+            "successNotification": "已成功移除虚拟交换机 {{name}}"
+         },
+         "type": {
+            "dvs": "分布式 vSwitch",
+            "standard": "标准 vSwitch"
+         },
+         "add": {
+            "loading": "正在加载...",
+            "title": "添加标准虚拟交换机 - {{name}}",
+            "titleNoName": "添加标准虚拟交换机",
+            "newSwitch": "新建交换机",
+            "confirmLabel": "添加",
+            "rejectLabel": "取消",
+            "security": "安全",
+            "clickToExpand": "单击以展开",
+            "promiscuousMode": "混杂模式",
+            "accept": "接受",
+            "reject": "拒绝",
+            "useVswitch": "从 vSwitch 继承",
+            "macChanges": "MAC 地址更改",
+            "forgedTransmits": "伪传输",
+            "linkDiscovery": "链路发现",
+            "mode": {
+               "label": "模式",
+               "listen": "侦听",
+               "advertise": "播发",
+               "both": "二者",
+               "none": "无"
+            },
+            "protocol": {
+               "label": "协议",
+               "lldp": "Link Layer Discovery Protocol (LLDP)",
+               "cdp": "Cisco Discovery Protocol (CDP)"
+            },
+            "dialog": {
+               "title": "无法添加上行链路",
+               "ok": "确定",
+               "create": "添加"
+            },
+            "error": {
+               "name": "请为虚拟交换机提供有效的名称",
+               "mtu": "请提供 MTU 的有效数值。允许的最大数值为 {{max}}，允许的最小数值为 {{min}}"
+            },
+            "notification": {
+               "success": "已成功创建虚拟交换机 {{name}}",
+               "error": "无法创建新的虚拟交换机 {{name}}"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对此 TCP/IP 堆栈执行的操作"
+               },
+               "add": {
+                  "label": "添加上行链路",
+                  "tooltip": "将新的物理上行链路添加到虚拟交换机"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新此 TCP/IP 堆栈"
+               }
+            }
+         },
+         "edit": {
+            "loading": "正在加载...",
+            "title": "编辑标准虚拟交换机 - {{name}}",
+            "titleNoName": "编辑标准虚拟交换机",
+            "confirmLabel": "保存",
+            "rejectLabel": "取消",
+            "dialog": {
+               "title": "无法添加上行链路",
+               "ok": "确定",
+               "create": "创建虚拟交换机"
+            },
+            "error": {
+               "name": "请提供虚拟交换机名称",
+               "duplicate": "请选择唯一的上行链路值。"
+            },
+            "notification": {
+               "success": "已成功保存虚拟交换机 {{name}}",
+               "error": "无法保存虚拟交换机 {{name}}"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对此 TCP/IP 堆栈执行的操作"
+               },
+               "add": {
+                  "label": "添加上行链路",
+                  "tooltip": "将新的物理上行链路添加到虚拟交换机"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新此 TCP/IP 堆栈"
+               }
+            }
+         },
+         "notifications": {
+            "uplink": {
+               "message": "此虚拟交换机没有上行链路冗余。",
+               "suggested-action": "您应添加其他上行链路适配器。"
+            }
+         },
+         "settings": {
+            "vSwitchName": "vSwitch 名称",
+            "mtu": "MTU",
+            "uplink": "上行链路"
+         }
+      },
+      "netstack": {
+         "alt": "TCP/IP 堆栈",
+         "names": {
+            "defaultTcpipStack": "默认 TCP/IP 堆栈",
+            "vSphereProvisioning": "置备堆栈",
+            "vmotion": "vMotion 堆栈",
+            "vxlan": "VXLAN"
+         },
+         "summary": {
+            "unknownNetstack": {
+               "title": "未知 TCP/IP 堆栈"
+            },
+            "key": "密钥:",
+            "configuration": "配置",
+            "dnsConfiguration": "DNS 配置",
+            "routing": "路由",
+            "actionBar": {
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对此 TCP/IP 堆栈执行的操作"
+               },
+               "edit": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑此 TCP/IP 堆栈的配置"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新此 TCP/IP 堆栈"
+               }
+            },
+            "portlets": {
+               "configuration": {
+                  "ipv6": {
+                     "name": "IPv6"
+                  },
+                  "cca": {
+                     "name": "拥堵控制算法"
+                  },
+                  "maxConnections": {
+                     "name": "最大连接数"
+                  },
+                  "vmknics": {
+                     "name": "VMKernel 网卡"
+                  },
+                  "dhcp": {
+                     "name": "DHCP"
+                  }
+               },
+               "dns": {
+                  "loadingMessage": "正在加载 DNS 配置...",
+                  "hostName": {
+                     "name": "主机名称"
+                  },
+                  "address": {
+                     "name": "地址"
+                  },
+                  "domainName": {
+                     "name": "域名"
+                  },
+                  "searchDomains": {
+                     "name": "搜索域"
+                  }
+               },
+               "routing": {
+                  "loadingMessage": "正在加载路由表...",
+                  "ipv4": {
+                     "name": "IPv4",
+                     "value": "单击标签以展开",
+                     "routeTable": {
+                        "name": "路由表",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "网络地址"
+                              },
+                              "prefixLength": {
+                                 "label": "前缀长度"
+                              },
+                              "gateway": {
+                                 "label": "网关"
+                              },
+                              "device": {
+                                 "label": "设备"
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "ipv6": {
+                     "name": "IPv6",
+                     "value": "单击标签以展开",
+                     "routeTable": {
+                        "name": "IPv6",
+                        "localSubnet": "本地子网",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "网络地址"
+                              },
+                              "prefixLength": {
+                                 "label": "前缀长度"
+                              },
+                              "gateway": {
+                                 "label": "网关"
+                              },
+                              "device": {
+                                 "label": "设备"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "type": "类型:",
+            "time": "时间:",
+            "virtualMachine": "虚拟机:"
+         },
+         "ipv6": {
+            "true": "已启用",
+            "false": "已禁用"
+         },
+         "dhcp": {
+            "true": "已启用",
+            "false": "已禁用"
+         },
+         "list": {
+            "columns": {
+               "name": {
+                  "label": "名称"
+               },
+               "ipv4Gateway": {
+                  "label": "IPv4 网关"
+               },
+               "ipv6Gateway": {
+                  "label": "IPv6 网关"
+               },
+               "preferredDNS": {
+                  "label": "首选 DNS"
+               },
+               "alternateDNS": {
+                  "label": "备用 DNS"
+               }
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定 TCP/IP 堆栈执行的操作"
+               },
+               "edit": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑此 TCP/IP 堆栈的设置"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新 TCP/IP 堆栈表"
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "编辑设置",
+               "tooltip": "编辑此 TCP/IP 堆栈的设置"
+            }
+         },
+         "edit": {
+            "title": "编辑 TCP/IP 配置 - {{displayName}}",
+            "confirmLabel": "保存",
+            "rejectLabel": "取消",
+            "basicConfig": {
+               "label": "基本 DNS 配置",
+               "title":"指定主机应如何获取此 TCP/IP 堆栈的设置。",
+               "useDHCP": {
+                  "label": "使用以下适配器的 DHCP DNS 服务"
+               },
+               "adapter": "适配器",
+               "manual": {
+                  "label": "手动配置此 TCP/IP 堆栈的设置",
+                  "hostName": "主机名称",
+                  "domainName": "域名",
+                  "primaryDNS": "主 DNS 服务器",
+                  "secondaryDNS": "辅助 DNS 服务器",
+                  "searchDomains": "搜索域",
+                  "searchDomainsOnePerLine": "每行一个搜索域"
+               }
+            },
+            "routing": {
+               "title": "路由",
+               "ipv4": "IPv4 网关",
+               "ipv6": "IPv6 网关"
+            },
+            "congestionControl": {
+               "newReno": "NewReno",
+               "cubic": "CUBIC",
+               "CUBIC": "CUBIC"
+            },
+            "advancedSettings": {
+               "title": "高级设置",
+               "congestionControl": "拥堵控制算法",
+               "maxNumberConnections": "最大连接数"
+            },
+            "notification": {
+               "success": "已成功更新 {{netstack}} 的配置",
+               "failure": "无法更新 {{netstack}} 的配置"
+            },
+            "error": {
+               "hostName": "请提供有效的主机名，长度必须小于或等于 {{max}}",
+               "domainName": "请提供有效的域名，长度必须小于或等于 {{max}}",
+               "primaryDNS": "请提供有效的主 DNS 服务器，长度必须小于或等于 {{max}}",
+               "secondaryDNS": "请提供有效的辅助 DNS 服务器，长度必须小于或等于 {{max}}",
+               "searchDomains": "请提供有效的搜索域，每行一个，无逗号。",
+               "ipv4Gateway": "请提供有效的 IPv4 网关",
+               "ipv6Gateway": "请提供有效的 IPv6 网关",
+               "maxConnections": "请为最大连接数提供一个介于 {{min}} 和 {{max}} 之间的数值"
+            }
+         }
+      },
+      "tcp": {
+         "congestionControl": {
+            "newreno": "NewReno",
+            "cubic": "CUBIC"
+         }
+      },
+      "portgroup": {
+         "alt": "端口组",
+         "type": {
+            "Network": "标准端口组",
+            "DistributedVirtualPortgroup": "分布式虚拟端口组",
+            "Opaque": "Opaque 网络端口组"
+         },
+         "summary": {
+            "accessible": "可访问:",
+            "virtualMachines": "虚拟机:",
+            "virtualSwitch": "虚拟交换机:",
+            "vlanId": "VLAN ID:",
+            "activePorts": "活动端口:",
+            "vswitchTopology": "vSwitch 拓扑",
+            "nicTeamingPolicy": "网卡绑定策略",
+            "offloadPolicy": "卸载策略",
+            "securityPolicy": "安全策略",
+            "shapingPolicy": "调整策略",
+            "actions": {
+               "editSettings": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑此虚拟交换机的设置"
+               },
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新适配器表"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定端口组执行的操作"
+               }
+            }
+         },
+         "events": {
+            "type": "类型:",
+            "time": "时间:",
+            "virtualMachine": "虚拟机:"
+         },
+         "accessible": {
+            "true": "是",
+            "false": "否"
+         },
+         "add": {
+            "title": "添加端口组 - {{name}}",
+            "titleNoName": "添加端口组",
+            "newPortgroup": "新建端口组",
+            "confirmLabel": "添加",
+            "rejectLabel": "取消",
+            "loading": "正在加载...",
+            "toolTip": "添加端口组",
+            "selectVSwitch": "选择虚拟交换机",
+            "missingName": "请提供端口组名称",
+            "missingVSwitch": "请为端口组选择虚拟交换机",
+            "badVLANIDRange": "VLAN ID 必须介于 0 到 4095 之间",
+            "success": "已成功创建端口组 {{name}}",
+            "failure": "无法创建新的端口组 {{name}}"
+         },
+         "edit": {
+            "title": "编辑端口组 - {{name}}",
+            "titleNoName": "编辑端口组",
+            "confirmLabel": "保存",
+            "rejectLabel": "取消",
+            "loading": "正在加载...",
+            "missingName": "请提供端口组名称",
+            "missingVSwitch": "请为端口组选择虚拟交换机",
+            "badVLANIDRange": "VLAN ID 必须介于 0 到 4095 之间",
+            "success": "已成功保存端口组 {{name}}",
+            "failure": "无法保存端口组 {{name}}",
+            "trafficShaping": {
+               "title": "流量调整",
+               "policyExceptions": "策略异常",
+               "status": "状态",
+               "disabled": "禁用",
+               "enabled": "已启用",
+               "averageBandwidth": "平均带宽",
+               "peakBandwidth": "峰值带宽",
+               "burstSize": "突发大小",
+               "kbps": "Kb/s",
+               "kb": "KB",
+               "clickToExpand": "单击以展开",
+               "note": {
+                  "title": "注意",
+                  "content": "流量调整策略已应用到附加到虚拟交换机的每个虚拟网络适配器的流量。"
+               },
+               "inherit": "从 vSwitch 继承"
+            },
+            "nicTeaming": {
+               "title": "网卡绑定",
+               "clickToExpand": "单击以展开",
+               "loadBalancing": {
+                  "title": "负载平衡",
+                  "loadbalance_ip": "基于 IP 哈希的路由",
+                  "loadbalance_srcmac": "基于源 MAC 哈希的路由",
+                  "loadbalance_srcid": "基于源端口 ID 的路由",
+                  "failover_explicit": "使用明确故障切换顺序"
+               },
+               "failoverDetection": {
+                  "title": "网络故障切换检测",
+                  "linkStatus": "仅链路状态",
+                  "beaconOnly": "仅信标"
+               },
+               "notifySwitches": {
+                  "title": "通知交换机",
+                  "yes": "是",
+                  "no": "否"
+               },
+               "failBack": {
+                  "title": "故障恢复",
+                  "yes": "是",
+                  "no": "否"
+               },
+               "overrideFailoverOrder": {
+                  "title": "替代故障切换顺序",
+                  "yes": "是",
+                  "no": "否"
+               },
+               "failoverOrder": {
+                  "title": "故障切换顺序",
+                  "override": "替代交换机故障切换顺序",
+                  "usedAs": "状态",
+                  "standby": "待机",
+                  "active": "活动",
+                  "unused": "未使用",
+                  "name": "名称",
+                  "speed": "速度",
+                  "networks": "网络",
+                  "markAsStandby": {
+                     "label": "标记为待机",
+                     "tooltip": "将此物理网卡标记为待机"
+                  },
+                  "markAsActive": {
+                     "label": "标记为活动",
+                     "tooltip": "将此物理网卡标记为活动"
+                  },
+                  "markAsUnused": {
+                     "label": "标记未使用",
+                     "tooltip": "将此物理网卡标记为未使用"
+                  },
+                  "moveUp": {
+                     "label": "上移",
+                     "tooltip": "在故障切换顺序中上移此适配器"
+                  },
+                  "moveDown": {
+                     "label": "下移",
+                     "tooltip": "在故障切换顺序中下移此适配器"
+                  }
+               },
+               "inherit": "从 vSwitch 继承"
+            }
+         },
+         "remove": {
+            "title": "移除端口组",
+            "loading": "正在加载...",
+            "close": "关闭",
+            "confirm": "移除",
+            "rejectLabel": "取消",
+            "notification": {
+               "success": "已移除端口组 {{name}}",
+               "error": "无法移除端口组 {{name}}"
+            },
+            "confirmation": "是否移除以下端口组?",
+            "cantRemove": "无法移除一个或多个端口组，因为这些端口组仍附加有虚拟机或 VMkernel 网卡。"
+         },
+         "settings": {
+            "name": {
+               "title": "名称",
+               "change": "更改此端口组的名称将使 <strong>{{length}}</strong> 个虚拟机孤立。",
+               "rename": "无法重命名此端口组，因为其具有 <strong>{{length}}</strong> 个活动端口"
+            },
+            "vlanId": "VLAN ID",
+            "vSwitch": {
+               "label": "虚拟交换机",
+               "change": "存在活动端口 ({{length}}) 时无法更改此端口组的 vSwitch。"
+            }
+         },
+         "actions": {
+            "editSettings": {
+               "label": "编辑设置",
+               "tooltip": "编辑此端口组"
+            },
+            "refresh": {
+               "label": "刷新",
+               "tooltip": "刷新端口组列表"
+            },
+            "actions": {
+               "label": "操作",
+               "tooltip": "对选定端口组执行的操作"
+            },
+            "remove": {
+               "label": "移除",
+               "tooltip": "移除此端口组"
+            }
+         },
+         "list": {
+            "unknownVLANID": "未知",
+            "columns": {
+               "name": "名称",
+               "activePorts": "活动端口",
+               "vlanId": "VLAN ID",
+               "type": "类型",
+               "vswitch": "vSwitch",
+               "vms": "虚拟机"
+            }
+         },
+         "portlets": {
+            "summary": {
+               "loading": "正在加载摘要...",
+               "shaping": {
+                  "true": "是",
+                  "false": "否"
+               }
+            },
+            "teaming": {
+               "loading": "正在加载绑定策略...",
+               "notify": {
+                  "label": "通知交换机",
+                  "true": "是",
+                  "false": "否"
+               },
+               "policy": {
+                  "label": "策略",
+                  "loadbalance_ip": "基于 IP 哈希的路由",
+                  "loadbalance_srcmac": "基于源 MAC 哈希的路由",
+                  "loadbalance_srcid": "基于源端口 ID 的路由",
+                  "failover_explicit": "使用明确故障切换顺序"
+               },
+               "reverse": {
+                  "label": "反向策略",
+                  "true": "是",
+                  "false": "否"
+               },
+               "rolling": {
+                  "label": "故障恢复",
+                  "true": "否",
+                  "false": "是"
+               }
+            },
+            "shaping": {
+               "averageBandwidth": "平均带宽",
+               "peakBandwidth": "峰值带宽",
+               "burstSize": "突发大小",
+               "enabled": {
+                  "label": "已启用",
+                  "true": "是",
+                  "false": "否"
+               }
+            },
+            "offload": {
+               "loading": "正在加载卸载策略...",
+               "checksum": {
+                  "label": "校验和卸载",
+                  "true": "是",
+                  "false": "否"
+               },
+               "tcpSegmentation": {
+                  "label": "TCP 分段",
+                  "true": "是",
+                  "false": "否"
+               },
+               "zeroCopy": {
+                  "label": "零复制传输",
+                  "true": "是",
+                  "false": "否"
+               }
+            },
+            "security": {
+               "loading": "正在加载安全策略...",
+               "allowPromiscuous": {
+                  "label": "允许混杂模式",
+                  "true": "是",
+                  "false": "否"
+               },
+               "forgedTransmits": {
+                  "label": "允许伪传输",
+                  "true": "是",
+                  "false": "否"
+               },
+               "macChanges": {
+                  "label": "允许 MAC 更改",
+                  "true": "是",
+                  "false": "否"
+               }
+            }
+         },
+         "monitor": {
+            "title": "监控"
+         }
+      },
+      "pnic": {
+         "alt": "物理网卡",
+         "summary": {
+            "linkSpeed": "链路速度:",
+            "driver": "驱动程序:",
+            "macAddress": "MAC 地址:",
+            "adapterDetails": "适配器详细信息",
+            "halfduplex": "半双工",
+            "fullduplex": "全双工",
+            "up": "启动",
+            "down": "关机",
+            "dialog": {
+               "unknown": {
+                  "title": "未知 PNIC"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新物理适配器表"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定物理适配器执行的操作"
+               },
+               "editSettings": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑选定物理适配器的设置"
+               }
+            },
+            "portlets": {
+               "details": {
+                  "pciAddress": "PCI 地址",
+                  "autoNegotiateSupport": "自动协商支持",
+                  "autoNegotiateEnabled": "已启用自动协商",
+                  "directPathIOSupport": "直接路径 IO 支持",
+                  "wakeOnLANSupport": "LAN 唤醒支持",
+                  "supportedSpeeds": "支持的速度",
+                  "yes": "是",
+                  "no": "否",
+                  "enabled": "已启用",
+                  "disabled": "已禁用"
+               },
+               "subnets": {
+                  "title": "发现的子网",
+                  "subnet": "子网 {{x}}"
+               },
+               "lldp": {
+                  "title": "链路层发现协议详细信息",
+                  "chassisId": "底盘 ID",
+                  "portId": "端口 ID",
+                  "timeToLive": "活动时间",
+                  "parameters": "参数"
+               },
+               "cdp": {
+                  "title": "Cisco 发现协议详细信息",
+                  "address": "IP 地址",
+                  "cdpVersion": "CDP 版本",
+                  "peerDeviceCapability": {
+                     "label": "对等设备功能",
+                     "host": "主机",
+                     "igmpEnabled": "IGMP",
+                     "networkSwitch": "网络交换机",
+                     "repeater": "中继器",
+                     "router": "路由器",
+                     "sourceRouteBridge": "源路由网桥",
+                     "transparentBridge": "透明网桥"
+                  },
+                  "devId": "设备 ID",
+                  "fullDuplex": "全双工",
+                  "hardwarePlatform": "硬件平台",
+                  "ipPrefix": "IP 前缀",
+                  "ipPrefixLen": "IP 前缀长度",
+                  "location": "位置",
+                  "mgmtAddr": "管理地址",
+                  "mtu": "MTU",
+                  "portId": "端口 ID",
+                  "samples": "示例",
+                  "softwareVersion": "软件版本",
+                  "systemName": "系统名称",
+                  "systemOID": "系统 OID",
+                  "timeout": "超时",
+                  "ttl": "活动时间",
+                  "vlan": "VLAN ID"
+               }
+            }
+         },
+         "edit": {
+            "confirmLabel": "保存",
+            "rejectLabel": "取消",
+            "title": "编辑物理网卡 - {{nic}}",
+            "titleNoName": "编辑物理网卡",
+            "notification": {
+               "error": "无法设置 {{nic}} 的物理网卡速度",
+               "success": "已成功更新物理网卡 {{nic}} 的速度"
+            },
+            "speed": {
+               "label": "速度",
+               "auto": "自动协商"
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "编辑设置",
+               "tooltip": "编辑此物理网卡的设置"
+            }
+         },
+         "list": {
+            "columns": {
+               "name": "名称",
+               "driver": "驱动程序",
+               "macAddress": "MAC 地址",
+               "linkSpeed": "链路速度",
+               "auto": "自动协商"
+            },
+            "auto": {
+               "yes": "已启用",
+               "no": "已禁用"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新物理适配器表"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "对选定物理适配器执行的操作"
+               },
+               "editSettings": {
+                  "label": "编辑设置",
+                  "tooltip": "编辑选定物理适配器的设置"
+               }
+            }
+         },
+         "monitor": {
+            "title": "监控",
+            "events": {
+               "title": "事件",
+               "tooltip": "事件"
+            },
+            "tasks": {
+               "title": "任务",
+               "tooltip": "任务"
+            }
+         },
+         "events": {
+            "type": "类型:",
+            "time": "时间:",
+            "virtualMachine": "虚拟机:"
+         },
+         "duplex": {
+            "half": "半双工",
+            "full": "全双工",
+            "true": "全双工",
+            "false": "半双工"
+         },
+         "mbps": "Mbps",
+         "linkDown": "链路已断开"
+      },
+      "error": {
+         "unknownNetwork": "抱歉，未找到网络“{{moid}}”。",
+         "unknownPortgroup": "抱歉，未找到端口组“{{moid}}”。",
+         "unknownVMknic": "抱歉，未找到 VMkernel 网卡“{{moid}}”。",
+         "unknownVSwitch": "抱歉，未找到 vSwitch“{{moid}}”。"
+      }
+   }
+}

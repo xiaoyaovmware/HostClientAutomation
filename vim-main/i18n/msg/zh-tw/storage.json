@@ -1,0 +1,923 @@
+{
+   "storage": {
+      "title": "儲存區",
+      "tabs": {
+         "datastores": {
+            "label": "資料存放區",
+            "tooltip": "資料存放區"
+         },
+         "adapters": {
+            "label": "介面卡",
+            "tooltip": "介面卡"
+         },
+         "devices": {
+            "label": "裝置",
+            "tooltip": "裝置"
+         }
+      },
+      "wizard": {
+         "partitionType": "磁碟分割類型",
+         "vmfsVersion": "VMFS 版本",
+         "error": {
+            "scheme": "請選取磁碟分割配置",
+            "size": "請選取介於 {{min}} 和 {{max}} 之間的磁碟分割大小",
+            "partition": "未選取任何磁碟分割。請選取左側圖中的磁碟分割。"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "權限",
+            "title": "管理權限",
+            "close": "關閉",
+            "cancel": "取消",
+            "noUsers": "無使用者",
+            "addUser": {
+               "label": "新增使用者",
+               "toolTip": "新增使用者"
+            },
+            "removeUser": {
+               "label": "移除使用者",
+               "toolTip": "移除使用者"
+            },
+            "assignRole": {
+               "label": "指派角色",
+               "toolTip": "指派角色給使用者"
+            },
+            "updatePermissions": {
+               "successNotification": "已成功更新權限",
+               "failureNotification": "無法更新權限: {{error}}"
+            },
+            "columns": {
+               "user": "使用者",
+               "role": "角色"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "選取使用者"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "選取角色"
+            },
+            "propagateLabel": "散佈到所有子系"
+         }
+      },
+      "devices": {
+        "browser": {
+          "dialog": {
+            "title": "選取儲存裝置",
+            "reject": "取消",
+            "confirm": "選取"
+          },
+          "datagrid": {
+            "name": "名稱",
+            "capacity": "容量"
+          }
+        }
+      },
+      "device": {
+         "context": {
+            "disk": {
+               "clear": {
+                  "label": "清除磁碟分割資料表",
+                  "tooltip": "清除此磁碟的磁碟分割資料表"
+               },
+               "editPartitions": {
+                  "label": "編輯磁碟分割",
+                  "tooltip": "編輯此磁碟的磁碟分割資料表"
+               },
+               "rescan": {
+                  "title": "重新掃描",
+                  "tooltip": "重新掃描資料存放區的所有儲存裝置"
+               }
+            }
+         },
+         "editPartitions": {
+            "title": "編輯磁碟分割 - {{disk}}",
+            "rejectLabel": "取消",
+            "confirmLabel": "儲存磁碟分割",
+            "before": "之前",
+            "after": "編輯磁碟分割之後",
+            "actions": {
+               "delete": {
+                  "label": "刪除磁碟分割",
+                  "tooltip": "刪除所選磁碟分割"
+               },
+               "reset": {
+                  "label": "重設",
+                  "tooltip": "將磁碟分割重設為原始狀態"
+               }
+            },
+            "warning": {
+               "title": "確認對 {{disk}} 的磁碟分割資料表變更",
+               "content": "您即將變更 <strong>{{disk}}</strong> 的磁碟分割資料表。這是一個破壞性動作，可能導致資料遺失。是否確定要繼續?",
+               "confirmLabel": "是",
+               "rejectLabel": "否"
+            },
+            "successNotification": "{{disk}} 的磁碟分割資料表已成功更新",
+            "failureNotification": "無法更新 {{disk}} 的磁碟分割資料表"
+         },
+         "clear": {
+            "title": "確認清除磁碟分割資料表 - {{disk}}",
+            "content": "您即將清除 <strong>{{disk}}</strong> 的磁碟分割資料表。這是一個破壞性動作，可能導致資料遺失。是否確定要繼續?",
+            "confirmLabel": "是",
+            "rejectLabel": "否",
+            "failureNotification": "無法清除磁碟 {{disk}}",
+            "successNotification": "已成功清除磁碟 {{disk}}"
+         },
+         "type": {
+            "disk": "磁碟",
+            "cdrom": "CDROM"
+         },
+         "summary": {
+            "alt": "裝置",
+            "uuid": "UUID:",
+            "notApplicable": "不適用",
+            "type": "類型:",
+            "model": "型號:",
+            "path": "路徑:",
+            "capacity": "容量:",
+            "partitionFormat": "磁碟分割格式:",
+            "partitions": "磁碟分割",
+            "partitionDiagram": "磁碟分割圖表",
+            "blocks": "區塊",
+            "portlet": {
+               "type": "類型",
+               "startBlock": "開始區塊",
+               "endBlock": "結束區塊",
+               "blockSize": "區塊大小",
+               "size": "大小"
+            },
+            "actions": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此清單中所選物件執行的動作。"
+               },
+               "increaseCapacity": {
+                  "label": "增加此磁碟的資料存放區容量",
+                  "tooltip": "增加此裝置的資料存放區容量"
+               },
+               "newDatastore": {
+                  "label": "新增資料存放區",
+                  "tooltip": "在此裝置上建立新的 VMFS 資料存放區"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理此裝置的資訊"
+               }
+            }
+         },
+         "list": {
+            "ok": "正常",
+            "error": "錯誤",
+            "timeout": "逾時",
+            "degraded": "已降級",
+            "disk": "磁碟",
+            "cdrom": "CDROM",
+            "unknown": "未知",
+            "notApplicable": "不適用",
+            "actions": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此清單中所選物件執行的動作。"
+               },
+               "increaseCapacity": {
+                  "label": "增加此磁碟的資料存放區容量",
+                  "tooltip": "增加此裝置的資料存放區容量"
+               },
+               "rescan": {
+                  "label": "重新掃描",
+                  "tooltip": "重新掃描資料存放區的所有儲存裝置"
+               },
+               "newDatastore": {
+                  "label": "新增資料存放區",
+                  "tooltip": "在此裝置上建立新的 VMFS 資料存放區"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理此裝置的資訊"
+               }
+            },
+            "datagrid": {
+               "name": "名稱",
+               "status": "狀況",
+               "type": "類型",
+               "capacity": "容量",
+               "queue": "佇列深度",
+               "free": "可用空間",
+               "vendor": "廠商"
+            }
+         }
+      },
+      "partitionTypes": {
+         "C12A7328F81F11D2BA4B00A0C93EC93B": "EFI 系統",
+         "EBD0A0A2B9E5443387C068B6B72699C7": "基本資料",
+         "AA31E02A400F11DB9590000C2911D1B8": "VMFS",
+         "9D27538040AD11DBBF97000C2911D1B8": "VMware 診斷",
+         "381CFCCC728811E092EE000C2911D0B2": "vSAN",
+         "77719A0CA4A011E3A47E000C29745A24": "vSAN",
+         "free": "可用空間",
+         "extended": "已延伸",
+         "linuxNative": "Linux 原生",
+         "linuxSwap": "Linux 交換",
+         "none": "無",
+         "ntfs": "NTFS",
+         "vffs": "VFFS",
+         "vmfs": "VMFS",
+         "vmkDiagnostic": "VMware 診斷",
+         "undefined": "不明",
+         "unknown": "不明",
+         "0xde": "Dell 診斷",
+         "0x0b": "FAT 32",
+         "0x07": "NTFS"
+      },
+      "datastore": {
+         "create": {
+            "title": "新增資料存放區",
+            "titleExtend": "增加資料存放區容量",
+            "pages": {
+               "creationType": {
+                  "title": "選取建立類型",
+                  "description": "您希望如何建立資料存放區?"
+               },
+               "name": {
+                  "title": "資料存放區名稱",
+                  "description": "提供新資料存放區的名稱"
+               },
+               "device": {
+                  "title": "選取裝置",
+                  "description": "選取要在其上建立新 VMFS 磁碟分割的裝置",
+                  "noDevice": "請選取裝置"
+               },
+               "nfs": {
+                  "title": "提供 NFS 掛接詳細資料",
+                  "description": "提供您要掛接的 NFS 共用的詳細資料"
+               },
+               "partitioning": {
+                  "title": "選取磁碟分割選項",
+                  "description": "選取希望如何對裝置進行磁碟分割",
+                  "before": "編輯磁碟分割之前",
+                  "after": "之後",
+                  "selectScheme": "選取磁碟分割配置",
+                  "full": "使用全部磁碟空間",
+                  "custom": "自訂"
+               },
+               "datastore": {
+                  "title": "選取資料存放區",
+                  "description": "選取要增加容量的資料存放區"
+               },
+               "summary": {
+                  "title": "即將完成",
+                  "description": "摘要",
+                  "type": "資料存放區類型",
+                  "name": "名稱",
+                  "datastore": "資料存放區",
+                  "disk": "磁碟",
+                  "partitioning": "磁碟分割",
+                  "vmfsVersion": "VMFS 版本"
+               }
+            },
+            "device": {
+               "desc": "下列裝置未宣告，可用於建立新的 VMFS 資料存放區",
+               "noFree": "無裝置有可用空間"
+            },
+            "vmfs": {
+               "label": "建立新的 VMFS 資料存放區",
+               "description": "在本機磁碟裝置上建立新的 VMFS 資料存放區",
+               "notificationSuccess": "VMFS 資料存放區 {{name}} 已成功建立",
+               "notificationFailure": "無法建立 VMFS 資料存放區 {{name}} - {{message}}",
+               "unknown": "未知原因",
+               "validation": {
+                  "name" : {
+                     "empty" : "請提供新資料存放區的名稱",
+                     "length": "資料存放區名稱應介於 {{min}} 和 {{max}} 個字元之間。目前的長度為 {{length}} 個字元。請修改名稱。",
+                     "exists": "已存在名為 {{name}} 的資料存放區。"
+                  }
+               }
+            },
+            "mountVmfs": {
+               "label": "掛接現有 VMFS 資料存放區",
+               "description": "掛接現有 VMFS 磁碟區",
+               "notificationSuccess": "VMFS 資料存放區 {{name}} 已成功掛接",
+               "notificationFailure": "無法掛接 VMFS 資料存放區 {{name}} - {{message}}"
+            },
+            "extendVmfs": {
+               "label": "為現有 VMFS 資料存放區新增一個範圍",
+               "description": "透過在其他磁碟上新增範圍來增加現有資料存放區的大小",
+               "notificationSuccess": "VMFS 資料存放區 {{name}} 已成功延伸",
+               "notificationFailure": "無法延伸 VMFS 資料存放區 {{name}} - {{message}}",
+               "unknown": "未知原因"
+            },
+            "expandVmfs": {
+               "label": "擴充現有 VMFS 資料存放區範圍",
+               "description": "透過將現有範圍擴充到相鄰的可用空間，增加現有資料存放區的大小",
+               "notificationSuccess": "已成功擴充 VMFS 資料存放區 {{name}}",
+               "notificationFailure": "無法擴充 VMFS 資料存放區 {{name}} - {{message}}",
+               "unknown": "未知原因"
+            },
+            "nfs": {
+               "label": "掛接 NFS 資料存放區",
+               "description": "透過掛接遠端 NFS 磁碟區來建立新的資料存放區",
+               "notificationSuccess": "NFS 資料存放區 {{name}} 已成功掛接",
+               "notificationFailure": "無法掛接 NFS 資料存放區 {{name}} - {{message}}",
+               "server": "NFS 伺服器",
+               "share": "NFS 共用",
+               "version": "NFS 版本",
+               "user": "使用者名稱",
+               "password": "密碼",
+               "validation": {
+                  "name": "請提供新資料存放區的名稱",
+                  "server": "請提供 NFS 伺服器",
+                  "share": "請提供 NFS 共用"
+               }
+            },
+            "warnFull": {
+               "title": "警告",
+               "content": "即將清除此磁碟的整個內容，並使用指定的組態取代，是否確定?",
+               "confirmLabel": "是",
+               "rejectLabel": "否"
+            }
+         },
+         "registerVM": {
+            "title": "登錄虛擬機器",
+            "confirmLabel": "登錄",
+            "successNotification": "已成功登錄虛擬機器 {{path}}",
+            "failureNotification": "無法登錄虛擬機器 {{path}}。{{message}}",
+            "failureReasonUnknown": "原因未知",
+            "vmAlreadyRegistered": {
+               "title": "已登錄虛擬機器",
+               "content": "已登錄",
+               "confirmLabel": "關閉",
+               "cancelLabel": "取消"
+            }
+         },
+         "unmountVMFS": {
+            "title": "確認卸載資料存放區 - {{name}}",
+            "confirmLabel": "是",
+            "rejectLabel": "取消",
+            "content": "是否確定要卸載 <strong>{{name}}</strong>?",
+            "successNotification": "資料存放區 {{name}} 已成功卸載",
+            "failureNotification": "無法卸載資料存放區 {{name}}"
+         },
+         "mountVMFS": {
+            "successNotification": "資料存放區 {{name}} 已掛接",
+            "failureNotification": "資料存放區 {{name}} 無法掛接"
+         },
+         "upgradeVMFS": {
+            "successNotification": "資料存放區 {{name}} 已成功從 {{oldVersion}} 升級到 {{version}}",
+            "failureNotification": "無法升級 VMFS 資料存放區 {{name}}"
+         },
+         "nonSSD": "非 SSD",
+         "SSD": "SSD",
+         "summary": {
+            "alt": "資料存放區",
+            "type": "類型:",
+            "location": "位置:",
+            "hosts": "主機:",
+            "uuid": "UUID:",
+            "virtualMachines": "虛擬機器:",
+            "metrics": {
+               "storage": "儲存區"
+            },
+            "portlets": {
+               "vmfs": {
+                  "title": "VMFS 詳細資料",
+                  "local": {
+                     "label": "本機",
+                     "true": "是",
+                     "false": "否"
+                  },
+                  "blockSize": "區塊大小",
+                  "version": "版本",
+                  "uuid": "UUID",
+                  "extent": "範圍 {{index}}",
+                  "extentValue": "{{disk}}，磁碟分割 {{partition}}"
+               }
+            },
+            "actions": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此清單中所選物件執行的動作。"
+               },
+               "increaseCapacity": {
+                  "label": "增加容量",
+                  "tooltip": "增加資料存放區的容量"
+               },
+               "register": {
+                  "label": "登錄虛擬機器",
+                  "tooltip": "登錄詳細目錄中的現有虛擬機器。"
+               },
+               "fileBrowser": {
+                  "label": "資料存放區瀏覽器",
+                  "tooltip": "導覽至資料存放區檔案瀏覽器。"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理此資料存放區的資訊"
+               }
+            }
+         },
+         "list": {
+            "actions": {
+               "upgradeVMFSDatastore": {
+                  "label": "升級",
+                  "tooltip": "將此資料存放區升級到最新版本"
+               },
+               "mountVMFSDatastore": {
+                  "label": "掛接",
+                  "tooltip": "將現有 VMFS 磁碟區掛接為資料存放區"
+               },
+               "unmountVMFSDatastore": {
+                  "label": "卸載",
+                  "tooltip": "卸載此 VMFS 資料存放區"
+               },
+               "mountNFSDatastore": {
+                  "label": "掛接 NFS 資料存放區",
+                  "tooltip": "將遠端 NFS 共用掛接為資料存放區"
+               },
+               "createDatastore": {
+                  "label": "新增資料存放區",
+                  "tooltip": "建立新的資料存放區"
+               },
+               "increaseCapacity": {
+                  "label": "增加容量",
+                  "tooltip": "增加資料存放區的容量"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此清單中所選物件執行的動作。"
+               },
+               "fileBrowser": {
+                  "label": "資料存放區瀏覽器",
+                  "tooltip": "導覽至資料存放區檔案瀏覽器。"
+               },
+               "register": {
+                  "label": "登錄虛擬機器",
+                  "tooltip": "登錄詳細目錄中的現有虛擬機器。"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理資料表中的資訊。"
+               }
+            },
+            "datagrid": {
+               "name": "名稱",
+               "driveType": "磁碟機類型",
+               "capacity": "容量",
+               "provisioned": "已佈建",
+               "free": "可用",
+               "type": "類型",
+               "thin": "精簡佈建",
+               "access": "存取"
+            },
+            "thinProvisioning": {
+               "supported": "受支援",
+               "notSupported": "不受支援"
+            },
+            "access": {
+               "multiple": "倍數",
+               "single": "單一"
+            }
+         },
+         "manage": {
+            "title": "管理"
+         },
+         "browser": {
+            "nfs": {
+               "noBrowse": "無法瀏覽 NFS 資料存放區"
+            },
+            "contextMenu": {
+               "deleteFile": {
+                  "label": "刪除",
+                  "toolTip": "刪除此檔案或目錄"
+               }
+            },
+            "actions": {
+               "inflateDisk": {
+                  "label": "擴充磁碟",
+                  "tooltip": "將此精簡佈建的磁碟轉換為完整佈建的磁碟",
+                  "successNotification": "已成功擴充磁碟 {{disk}}",
+                  "errorNotification": "無法擴充磁碟 {{disk}}: {{reason}}",
+                  "datastoreCapacity": "抱歉，擴充的磁碟大小超過此資料存放區上的可用空間。請釋放 {{datastoreName}} 上的一些空間，然後再試一次。"
+               },
+               "delete": {
+                  "label": "刪除",
+                  "tooltip": "刪除目前所選的檔案或目錄"
+               },
+               "copy": {
+                  "label": "複製",
+                  "tooltip": "複製此檔案或目錄"
+               },
+               "move": {
+                  "label": "移動",
+                  "tooltip": "移動此檔案或目錄"
+               },
+               "download": {
+                  "label": "下載",
+                  "tooltip": "下載所選檔案"
+               },
+               "directory": {
+                  "label": "建立目錄",
+                  "tooltip": "建立新目錄"
+               },
+               "upload": {
+                  "label": "上傳",
+                  "tooltip": "將檔案上傳至所選資料存放區"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理檢視"
+               }
+            },
+            "dialog": {
+               "defaultTitle": "資料存放區瀏覽器",
+               "noDatastore": {
+                  "title": "沒有可瀏覽的資料存放區",
+                  "content": "不存在可瀏覽的資料存放區。目前僅可瀏覽 vSAN 和本機 VMFS 資料存放區。"
+               },
+               "select": {
+                  "title": "選取目的地",
+                  "titleFor": "選取 {{name}} 的目的地",
+                  "move": "移動",
+                  "copy": "複製"
+               },
+               "selectDatastore": {
+                  "title": "選取資料存放區",
+                  "rejectLabel": "取消"
+               },
+               "directory": {
+                  "title": "新建目錄",
+                  "create": "建立目錄",
+                  "invalidDirectory": "請提供有效的目錄名稱",
+                  "cancel": "取消",
+                  "placeholder": "目錄名稱",
+                  "createdIn": "此目錄將建立於 {{location}}/"
+               },
+               "delete": {
+                  "title": "確認刪除",
+                  "content": "是否確定要刪除下列檔案或目錄?",
+                  "delete": "刪除",
+                  "cancel": "取消"
+               },
+               "upload": {
+                  "inProgress": "{{num}} 個檔案",
+                  "notEnoughSpace": {
+                     "title": "資料存放區空間不足",
+                     "confirmLabel": "確定",
+                     "content": "{{datastore}} 上沒有足夠的可用空間來上傳此檔案。您需要釋放至少 {{needed}}。"
+                  },
+                  "ielimit": {
+                     "title": "超過 IE 檔案大小限制",
+                     "confirmLabel": "確定",
+                     "content": "已選取的檔案超過 Internet Explorer 4 GB 的檔案上傳限制"
+                  }
+               },
+               "close": "關閉",
+               "cancel": "取消"
+            }
+         },
+         "monitor": {
+            "title": "監控",
+            "event": {
+               "datagrid": {
+                  "event": {
+                     "label": "事件"
+                  },
+                  "time": {
+                     "label": "時間"
+                  }
+               }
+            },
+            "general": {
+               "title": "一般",
+               "desc": "一般",
+               "settings": {
+                  "enabled": "vSAN",
+                  "claimingMode": "宣告模式",
+                  "deduplication": "重複資料刪除",
+                  "encryption": "加密",
+                  "iscsi": "ISCSI 服務",
+                  "health": {
+                     "service": "健全狀況服務",
+                     "intervalChecks": "健全狀況檢查時間間隔"
+                  },
+                  "performance": {
+                     "status": "效能服務",
+                     "statsObjectHealth": "統計資料物件健全狀況",
+                     "statsObjectUuid": "統計資料物件 UUID",
+                     "storagePolicy": "儲存區原則",
+                     "complianceStatus": "符合性狀態"
+                  },
+                  "faultDomain": "容錯網域"
+               },
+               "edit": {
+                  "title": "編輯設定",
+                  "warning": "變更這些選項可能會使 vSAN 叢集處於設定錯誤狀態。"
+               }
+            },
+            "health": {
+               "noResultsFound": "找不到任何結果",
+               "info": "資訊"
+            },
+            "actions": {
+               "edit":{
+                  "label": "編輯設定",
+                  "tooltip": "編輯 vSAN 設定"
+               },
+               "enableVsan":{
+                  "label": "啟用",
+                  "tooltip": "啟用"
+               },
+               "refresh":{
+                  "label": "重新整理",
+                  "tooltip": "重新整理"
+               }
+            },
+            "task": {
+               "UpdateVsan_Task": {
+                  "success": "已更新成功主機的 vSAN 組態",
+                  "error": "無法更新主機的 vSAN 組態"
+               }
+            },
+            "common": {
+               "enabled": "已啟用",
+               "disabled": "已停用",
+               "yes": "是",
+               "no": "否",
+               "ok": "確定",
+               "cancel": "取消",
+               "auto": "自動",
+               "manual": "手動",
+               "save": "儲存",
+               "seconds": "秒"
+            },
+            "policyStatus": {
+               "compliant" : "符合標準",
+               "nonCompliant" : "不符合標準",
+               "notApplicable" : "不適用",
+               "unknow" : "不明"
+            },
+            "healthStatus": {
+               "inaccessible": "無法存取",
+               "reducedAvailabilityWithNoRebuild": "可用性降低 (不含重建)",
+               "reducedAvailabilityWithNoRebuildDelayTimer": "可用性降低 (不含重建) 延遲計時器",
+               "reducedAvailabilityWithActiveRebuild": "可用性降低 (含作用中重建)",
+               "dataMove": "資料移動",
+               "nonAvailabilityRelatedReconfig": "非可用性相關的重新設定",
+               "nonAvailabilityRelatedIncompliance": "非可用性相關的不符合性",
+               "healthy": "狀況良好",
+               "unknown": "不明"
+            },
+            "tabs": {
+               "events": {
+                  "label": "事件",
+                  "tooltip": "事件"
+               },
+               "tasks": {
+                  "label": "工作",
+                  "tooltip": "工作"
+               },
+               "general": {
+                  "label": "vSAN",
+                  "tooltip": "vSAN 一般設定"
+               },
+               "hosts": {
+                  "label": "主機",
+                  "tooltip": "參與 vSAN 叢集的主機"
+               },
+               "health": {
+                  "label": "健全狀況",
+                  "tooltip": "健全狀況"
+               }
+            }
+         },
+         "delete": {
+            "label": "刪除",
+            "tooltip": "刪除此資料存放區",
+            "confirm": {
+               "title": "刪除資料存放區 - {{name}}",
+               "content": "是否確定要刪除下列資料存放區?"
+            },
+            "rejectLabel": "取消",
+            "confirmLabel": "確認",
+            "successNotification": "資料存放區 {{name}} 已成功刪除",
+            "failureNotification": "無法刪除資料存放區 {{name}}"
+         },
+         "rename": {
+            "dialog": {
+               "title": "重新命名資料存放區",
+               "rejectLabel": "取消",
+               "save": "儲存",
+               "emptyName": "空白名稱",
+               "lengthValidation" : "資料存放區名稱的長度應介於 {{min}} 和 {{max}} 個字元之間，目前長度為 {{actual}} 個字元",
+               "notification": {
+                  "info": "已將資料存放區 {{oldName}} 重新命名為 {{newName}}。",
+                  "error": "無法重新命名資料存放區 {{oldName}}: {{localizedMessage}}。"
+               }
+            }
+         },
+         "contextMenu": {
+            "rename": {
+               "label": "重新命名",
+               "tooltip": "重新命名此資料存放區",
+               "tooltipVC": "無法在受 vCenter Server 管理的主機上重新命名資料存放區"
+            },
+            "browse": {
+               "label": "瀏覽",
+               "toolTip": "瀏覽此資料存放區",
+               "browseDatastores": "瀏覽資料存放區"
+            },
+            "registerSingle": {
+               "label": "登錄虛擬機器",
+               "toolTip": "登錄此虛擬機器"
+            },
+            "register": {
+               "label": "登錄虛擬機器",
+               "toolTip": "將現有虛擬機器從資料存放區登錄至主機詳細目錄"
+            }
+         }
+      },
+      "adapter": {
+         "status": {
+            "online": "線上",
+            "offline": "離線",
+            "unbound": "未繫結",
+            "unknown": "未知"
+         },
+         "list": {
+            "actions": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此清單中所選物件執行的動作。"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理介面卡資料表"
+               },
+               "rescan": {
+                  "label": "重新掃描",
+                  "tooltipAll": "為新 LUN 重新掃描所有主機型介面卡",
+                  "tooltipOne": "為新 LUN 重新掃描所選的主機型介面卡"
+               },
+               "iscsi": {
+                  "label": "設定 iSCSI",
+                  "tooltip": "設定此主機的 iSCSI"
+               }
+            },
+            "datagrid": {
+               "name": "名稱",
+               "model": "型號",
+               "status": "狀況",
+               "driver": "驅動程式"
+            }
+         },
+         "iscsi": {
+            "title": "設定 iSCSI - {{adapter}}",
+            "titleNoDevice": "設定 iSCSI",
+            "confirmLabel": "儲存組態",
+            "rejectLabel": "取消",
+            "close": "關閉",
+            "loading": "正在載入",
+            "configuring": "正在設定",
+            "iscsiEnabled": "已啟用 iSCSI",
+            "nameAndAlias": "名稱與別名",
+            "alias": "別名",
+            "enabled": "已啟用",
+            "disabled": "已停用",
+            "networkPortBindings": "網路連接埠繫結",
+            "staticTargets": "靜態目標",
+            "dynamicTargets": "動態目標",
+            "authentication": {
+               "chapAuthentication": "CHAP 驗證",
+               "mutualChapAuthentication": "相互 CHAP 驗證",
+               "name": "名稱",
+               "secret": "密碼"
+            },
+            "warnReboot": "需要重新開機，才能移除 iSCSI 介面卡和核心模組。",
+            "warnNoDevice": "找不到 iSCSI 介面卡，請嘗試關閉再重新開啟組態對話方塊。",
+            "resetAdvancedOption": "重設為預設值",
+            "isInherited": "從父系繼承",
+            "chapDisabled": "不使用 CHAP",
+            "chapRequired": "不使用 CHAP，除非目標需要",
+            "chapProhibited": "使用 CHAP，除非目標禁止",
+            "chapPreferred": "使用 CHAP",
+            "noStaticTargets": "無靜態目標",
+            "noDynamicTargets": "無動態目標",
+            "noPortBindings": "無連接埠繫結",
+            "advancedBlock": {
+               "label": "進階設定",
+               "expand": "按一下以展開",
+               "maximum": "上限",
+               "minimum": "下限",
+               "default": "預設值"
+            },
+            "boundPortsGrid": {
+               "vmknic": "VMkernel NIC",
+               "portgroup": "連接埠群組",
+               "ipv4Address": "IPv4 位址"
+            },
+            "addPort": {
+               "label": "新增連接埠繫結",
+               "tooltip": "新增連接埠繫結",
+               "alreadyBound": {
+                  "title": "錯誤",
+                  "content": "VMKernel NIC {{vmknic}} 已繫結至此 iSCSI 介面卡"
+               }
+            },
+            "removePort": {
+               "label": "移除連接埠繫結",
+               "tooltip": "移除選取的連接埠繫結",
+               "inUse": {
+                  "title": "連接埠使用中",
+                  "content": "連接埠 {{port}} 目前使用中，請先移除正在使用此路徑的目標。",
+                  "forceRemove": "強制移除",
+                  "ok": "確定"
+               }
+            },
+            "staticTargetGrid": {
+               "target": "目標",
+               "address": "位址",
+               "port": "連接埠"
+            },
+            "addStaticTarget": {
+               "label": "新增靜態目標",
+               "tooltip": "新增靜態 iSCSI 目標",
+               "addName": "按一下以新增名稱",
+               "addAddress": "按一下以新增位址"
+            },
+            "editStaticTarget": {
+               "label": "編輯設定",
+               "tooltip": "編輯此靜態目標的設定"
+            },
+            "removeStaticTarget": {
+               "label": "移除靜態目標",
+               "tooltip": "移除選取的靜態 iSCSI 目標"
+            },
+            "dynamicTargetGrid": {
+               "address": "位址",
+               "port": "連接埠"
+            },
+            "addDynamicTarget": {
+               "label": "新增動態目標",
+               "tooltip": "新增動態 iSCSI 目標",
+               "addAddress": "按一下以新增位址"
+            },
+            "editDynamicTarget": {
+               "label": "編輯設定",
+               "tooltip": "編輯此動態目標的設定"
+            },
+            "removeDynamicTarget": {
+               "label": "移除動態目標",
+               "tooltip": "移除選取的動態 iSCSI 目標"
+            },
+            "notification": {
+               "success": "已成功設定 iSCSI",
+               "failure": "無法設定 iSCSI"
+            }
+         },
+         "iscsi-target": {
+            "title": "設定 iSCSI 目標 - {{target}}",
+            "confirmLabel": "儲存",
+            "rejectLabel": "取消"
+         },
+         "context": {
+            "rescan": {
+               "title": "重新掃描",
+               "tooltip": "為新 LUN 重新掃描該主機型介面卡"
+            }
+         },
+         "summary": {
+            "alt": "介面卡",
+            "model": "型號",
+            "driver": "驅動程式",
+            "actions": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此清單中所選物件執行的動作。"
+               },
+               "fileBrowser": {
+                  "label": "檔案瀏覽器",
+                  "tooltip": "導覽至介面卡檔案瀏覽器。"
+               },
+               "recalculate": {
+                  "label": "重新計算",
+                  "tooltip": "重新計算介面卡使用量資訊，包括容量和可用空間。"
+               },
+               "increaseCapacity": {
+                  "label": "增加容量",
+                  "tooltip": "增加介面卡容量。"
+               },
+               "manageProviders": {
+                  "label": "管理提供者",
+                  "tooltip": "管理儲存區提供者。"
+               }
+            }
+         }
+      },
+      "list": {
+         "title": "下列資料存放區可從您選取的目的地資源存取。請為虛擬機器組態檔和所有虛擬磁碟選取目的地資料存放區。"
+      },
+      "rename": {
+         "current": "目前名稱",
+         "new": "新的名稱"
+      }
+   }
+}

@@ -1,0 +1,537 @@
+{
+   "number": {
+      "format": {
+         "separator": ".",
+         "delimiter": ",",
+         "strip_insignificant_zeros": "1"
+      }
+   },
+   "date": {
+      "day_names": [
+         "일요일",
+         "월요일",
+         "화요일",
+         "수요일",
+         "목요일",
+         "금요일",
+         "토요일"
+      ],
+      "abbr_day_names": [
+         "일",
+         "월",
+         "화",
+         "수",
+         "목",
+         "금",
+         "토"
+      ],
+      "month_names": [
+         "null",
+         "1월",
+         "2월",
+         "3월",
+         "4월",
+         "5월",
+         "6월",
+         "7월",
+         "8월",
+         "9월",
+         "10월",
+         "11월",
+         "12월"
+      ],
+      "abbr_month_names": [
+         "null",
+         "1월",
+         "2월",
+         "3월",
+         "4월",
+         "5월",
+         "6월",
+         "7월",
+         "8월",
+         "9월",
+         "10월",
+         "11월",
+         "12월"
+      ],
+      "format": {
+         "iso": "%Y/%m/%d %H:%M:%S",
+         "long": "%Y년 %B %d일 %A %H:%M:%S %z",
+         "utc": "%Y년 %B %d일 %A %H:%M:%S UTC",
+         "short": "%Y/%m/%d %H:%M:%S",
+         "short_utc": "%m/%d/%Y %H:%M:%S UTC",
+         "date": "%Y/%m/%d",
+         "time": "%H:%M:%S"
+      }
+   },
+   "units": {
+      "TB": "TB",
+      "GB": "GB",
+      "MB": "MB",
+      "KB": "KB",
+      "B": "B",
+      "MHz": "MHz",
+      "GHz": "GHz",
+      "mbps": "Mbps"
+   },
+   "grid": {
+      "quickFilters": "빠른 필터...",
+      "noItems": "항목 없음",
+      "sortAscending": "오름차순 정렬",
+      "sortDescending": "내림차순 정렬",
+      "filter": "필터",
+      "filterHeader": "다음 값의 항목 표시",
+      "clear": "지우기",
+      "columns": "열 선택",
+      "isTrue": "True",
+      "isFalse": "False",
+      "and": "및",
+      "or": "또는",
+      "startswith": "다음으로 시작",
+      "contains": "포함",
+      "endswith": "끝 문자",
+      "eq": "같음",
+      "neq": "같지 않음",
+      "gte": "크거나 같음",
+      "gt": "보다 큼",
+      "lte": "작거나 같음",
+      "lt": "보다 작음"
+   },
+   "general": {
+      "yes": "예",
+      "no": "아니요",
+      "ok": "확인",
+      "cancel": "취소",
+      "default": "기본값",
+      "enabled": "사용",
+      "disabled": "사용 안 함",
+      "none": "없음",
+      "select": "선택",
+      "na": {
+         "label": "없음",
+         "title": "해당 없음"
+      },
+      "or": "또는",
+      "openDocumentation": "VMware Host Client 문서 열기",
+      "loading": {
+         "label": "로드 중...",
+         "title": "로드 중",
+         "error": "오류가 발생했습니다. 다시 시도하십시오."
+      },
+      "unknown": "알 수 없음",
+      "unlimited": "제한 없음",
+      "active": "활성",
+      "automatic": "자동",
+      "notActive": "활성 상태 아님",
+      "help": "도움말",
+      "time": {
+         "minutes": "분",
+         "seconds": "초"
+      }
+   },
+   "performance": {
+      "dataAt": "다음의 데이터"
+   },
+   "wizard": {
+      "back": "뒤로",
+      "next": "다음",
+      "finish": "완료"
+   },
+   "localeOverride": {
+      "title": "로케일 재정의 주의",
+      "content": "URL 로케일 재정의(예: ?locale=fr-fr) 및 설정 로케일 재정의가 모두 설정되었습니다. URL에 지정된 로케일을 사용합니다."
+   },
+   "missingTunnel": {
+      "title": "잘못된 호스트 프록시 구성",
+      "contentAdded": "필요한 호스트 프록시 구성이 누락되어서 자동으로 수정되었습니다. <strong>그러나, 변경 내용을 적용하려면 호스트를 재부팅해야 합니다.</strong>자세한 내용은 <a href=\"http://pubs.vmware.com/Release_Notes/kr/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">알려진 문제</a>를 참조하십시오.",
+      "contentNotAdded": "필요한 호스트 프록시 구성이 누락되었습니다. 이 경우 브라우저 내 콘솔에 연결할 수 없습니다. 독립형 VMRC 애플리케이션은 여전히 사용할 수 있습니다. <a href=\"http://pubs.vmware.com/Release_Notes/en/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">여기</a>에서 알려진 문제를 검토하여 이 문제를 해결하는 방법을 알아보십시오."
+   },
+   "client": {
+      "about": {
+         "title": "정보",
+         "close": "닫기",
+         "warnVersionMismatch": "ESXi에 설치된 Host Client의 버전이 실행 중인 버전과 일치하지 않습니다. 브라우저를 새로 고치거나 브라우저의 캐시를 지우십시오.",
+         "fullOSSDisclosure": "전체 ESXi 오픈 소스 라이센스 공표는 <a href=\"{{url}}\" target=\"_blank\">여기</a>에서 확인하십시오."
+      },
+      "context": {
+         "about": {
+            "label": "정보",
+            "tooltip": "VMware Host Client에 대한 정보 표시"
+         },
+         "vmrc": {
+            "label": "VMware Remote Console",
+            "tooltip": "독립형 VMware Remote Console 애플리케이션을 가져옵니다."
+         },
+         "help": {
+            "label": "도움말",
+            "tooltip": "새 창에서 공식 VMware 호스트 설명서 열기"
+         },
+         "tools": {
+            "label": "도구 및 링크",
+            "tooltip": "이 호스트에서 사용할 수 있는 도구"
+         },
+         "getVC": {
+            "label": "vCenter Server 가져오기",
+            "tooltip": "VMware vCenter Server 다운로드 및 평가"
+         },
+         "mob": {
+            "label": "관리 개체 브라우저 사용",
+            "tooltip": "관리 개체 브라우저 사용을 엽니다.",
+            "tooltipDisabled": "관리 개체 브라우저 사용이 사용되지 않도록 설정되었습니다. 고급 옵션인 Config.HostAgent.plugins.solo.enableMob를 true로 설정하여 MOB를 사용하도록 설정할 수 있습니다.",
+            "dialog": {
+               "title": "관리 개체 브라우저 사용",
+               "content": "관리 개체 브라우저가 현재 사용 안 함으로 설정되어 있습니다. 사용하도록 설정하고 여시겠습니까?",
+               "cancel": "취소",
+               "confirmLabel": "사용"
+            }
+         },
+         "feedback": {
+            "label": "피드백",
+            "tooltip": "VMware Host Client에 대한 피드백 제출 방법을 확인합니다."
+         },
+         "sdk": {
+            "label": "SDK 설명서",
+            "tooltip": "VMware의 웹 서비스 SDK 사용 방법을 확인합니다."
+         },
+         "vcli": {
+            "label": "원격 명령줄 도구",
+            "tooltip": "VMware의 원격 명령줄 도구 사용 방법을 확인합니다."
+         },
+         "vmware": {
+            "label": "VMware.com",
+            "tooltip": "VMware의 웹 사이트를 방문합니다."
+         },
+         "clientSettings": {
+            "label": "설정",
+            "tooltip": "VMware Host Client에 대한 설정을 관리합니다.",
+            "sendTelemetry": {
+               "label": "사용량 통계 보내기",
+               "tooltip": "사용량 통계를 VMware.com으로 보내 VMware Host Client의 문제를 식별할 수 있도록 지원합니다."
+            },
+            "visualEffects": {
+               "label": "시각적 효과 사용",
+               "tooltip": "시각적 효과(예: 컨텍스트 메뉴의 페이드 인/아웃)를 사용합니다."
+            },
+            "recentItems": {
+               "label": "최근 개체만 표시",
+               "tooltip": "개체 탐색기에서 최근에 선택한 개체만 표시합니다."
+            },
+            "showWelcome": {
+               "label": "시작 메시지 표시",
+               "tooltip": "로그인 시 시작 메시지 알림을 표시할지 여부"
+            },
+            "consoleSettings": {
+               "label": "콘솔",
+               "tooltip":" 콘솔 설정",
+               "defaultConsole": {
+                  "label": "기본 콘솔",
+                  "tooltip": "스크린샷 클릭 시 기본 콘솔",
+                  "vmrc": {
+                     "label": "VMware Remote Console",
+                     "tooltip": "VM 콘솔을 열 때 VMware Remote Console 사용"
+                  },
+                  "webmks": {
+                     "label": "브라우저 내부",
+                     "tooltip": "VM 콘솔을 열 때 브라우저 내부 HTML5 콘솔 사용"
+                  }
+               }
+            },
+            "keyboardSettings": {
+               "label": "키보드 레이아웃",
+               "tooltip": "Host Client의 키보드 설정을 구성합니다.",
+               "en-US": "영어",
+               "fr-FR": "프랑스어",
+               "fr-CH": "프랑스어(스위스)",
+               "de-DE": "독일어",
+               "de-CH": "독일어(스위스)",
+               "pt-BR": "포르투갈어(브라질)",
+               "pt-PT": "포르투갈어(포르투갈)",
+               "it-IT": "이탈리아어",
+               "es-ES": "스페인어",
+               "ja-JP_106/109": "일본어"
+            },
+            "languageSettings": {
+               "label": "언어",
+               "tooltip": "Host Client의 언어 설정을 구성합니다.",
+               "en-us": {
+                  "label": "영어",
+                  "tooltip": "영어"
+               },
+               "fr-fr": {
+                  "label": "프랑스어",
+                  "tooltip": "프랑스어"
+               },
+               "es-es": {
+                  "label": "스페인어",
+                  "tooltip": "스페인어"
+               },
+               "de-de": {
+                  "label": "독일어",
+                  "tooltip": "독일어"
+               },
+               "ko-kr": {
+                  "label": "한국어",
+                  "tooltip": "한국어"
+               },
+               "zh-cn": {
+                  "label": "중국어(간체)",
+                  "tooltip": "중국어(간체)"
+               },
+               "zh-tw": {
+                  "label": "중국어(번체)",
+                  "tooltip": "중국어(번체)"
+               },
+               "ja-jp": {
+                  "label": "일본어",
+                  "tooltip": "일본어"
+               },
+               "browserDefault": {
+                  "label": "브라우저 기본값",
+                  "tooltip": "브라우저 설정을 Host Client에 적용합니다."
+               }
+            },
+            "applicationTimeout": {
+               "label": "애플리케이션 시간 초과",
+               "tooltip": "Host Client가 자동으로 로그아웃되기 전의 유휴 시간입니다.",
+               "xMinutes": "{{x}}분",
+               "xHour": "{{x}}시간",
+               "xHours": "{{x}}시간",
+               "off": "꺼짐",
+               "warning": {
+                  "confirmLabel": "예",
+                  "rejectLabel": "취소",
+                  "title": "주의",
+                  "content": "세션 시간 초과를 사용하지 않도록 설정하면 ESXi 호스트가 악성 작업에 취약해질 수 있습니다. 세션 시간 초과를 사용하지 않도록 설정하시겠습니까?"
+               }
+            },
+            "reset": {
+               "label": "기본값으로 재설정",
+               "tooltip": "Host Client의 설정을 기본값으로 재설정합니다."
+            }
+         },
+         "autorefresh": {
+            "label": "자동 새로 고침",
+            "tooltip": "지정된 기간에 호스트의 데이터를 자동으로 새로 고치도록 Host Client에 지정합니다.",
+            "off": {
+               "label": "꺼짐",
+               "tooltip": "자동 새로 고침을 사용 안 합니다."
+            },
+            "xSeconds": "{{x}}초"
+         }
+      },
+      "feedback": {
+         "title": "피드백",
+         "close": "닫기"
+      }
+   },
+   "scriptingConsole": {
+      "title": "스크립팅 콘솔",
+      "close": "닫기"
+   },
+   "upload": {
+      "inProgress": "파일 업로드가 진행 중입니다."
+   },
+   "hypervisorLicense": {
+      "title": "제한된 라이센스",
+      "closeAndDismiss": "닫기 및 무시",
+      "content": "이 호스트에 할당된 라이센스로 인해 수행할 수 있는 작업이 제한될 수 있습니다.",
+      "close": "닫기"
+   },
+   "restrictedVersion": {
+      "title": "제한된 버전",
+      "close": "닫기",
+      "content": "할당된 라이센스에서 이 작업을 허용하지 않습니다."
+   },
+   "update": {
+      "check": {
+         "checkForUpdates": "업데이트 확인",
+         "title": "최신",
+         "content": "VMware Host Client가 최신 상태입니다.",
+         "ok": "확인"
+      },
+      "notify": {
+         "dialog": {
+            "title": "클라이언트 업데이트 사용 가능",
+            "content": "새 버전의 VMware Host Client, {{version}}을(를) 사용할 수 있습니다.",
+            "current": "현재 버전 {{current}}을(를) 실행 중입니다.",
+            "whatsNew": "새로운 기능",
+            "never": "앞으로 업데이트를 자동으로 확인 안 함",
+            "updateNow": "업데이트",
+            "ok": "지금 안 함"
+         }
+      },
+      "perform": {
+         "update": "업데이트",
+         "success": "호스트가 업데이트되었습니다.",
+         "successWithMessage": "호스트가 업데이트되었습니다. {{message}}",
+         "failure": "업데이트를 적용하지 못했습니다. - {{reason}}",
+         "badFormat": "업데이트의 형식은 예상 형식이 아닙니다. VIB 파일의 경로 또는 URL을 제공하십시오.",
+         "vumWarning": {
+            "title": "주의",
+            "content": "VMware Update Manager에서 이 호스트를 관리하는 경우, 업데이트를 수행하면 호스트가 호환되지 않을 수 있습니다. 계속하시겠습니까?",
+            "rejectLabel": "취소",
+            "confirmLabel": "계속"
+         },
+         "dialog": {
+            "title": "업데이트 설치",
+            "content": "아래에 VIB의 URL 또는 데이터스토어 경로 입력",
+            "missingVIBURL": "업데이트할 VIB에 대한 URL 또는 데이터스토어 경로를 입력하십시오.",
+            "missingProxy": "프록시 서버 주소를 입력하십시오.",
+            "malformedPath": "URL은 <em>http://</em> 또는 <em>https://</em>로 시작되어야 합니다.<br>로컬 경로는 <em>/</em>로 시작되어야 합니다.",
+            "rejectLabel": "취소",
+            "proxy": {
+               "use": "프록시 서버 사용",
+               "server": "프록시 서버",
+               "username": "사용자 이름",
+               "password": "암호",
+               "port": "포트"
+            }
+         }
+      }
+   },
+   "anonymous": {
+      "dialog": {
+         "title": "VMware Host Client를 개선할 수 있도록 도와주십시오.",
+         "ok": "확인",
+         "content": "이 제품은 VMware의 “CEIP”(고객 환경 향상 프로그램)에 참여하고 있습니다. CEIP는 VMware에 제품 및 서비스를 개선하고, 문제를 해결하고, 제품을 배포하고 사용하는 최적의 방법을 사용자에게 알려주기 위한 정보를 제공합니다. CEIP의 일부로, VMware는 사용자 조직의 VMware 제품 및 서비스 사용에 대한 기술 정보를 사용자 조직의 VMware 라이센스 키와 함께 정기적으로 수집합니다. 이 정보는 사용자를 개인적으로 식별하지 않습니다. CEIP에 대한 자세한 내용은 <a href=\"http://www.vmware.com/trustvmware/ceip.html\" target=\"_blank\">VMware.com</a>에서 신뢰 및 보증 센터를 참조하십시오. 참여 기본 설정은 아래에서 선택하거나 Host Client의 설정 메뉴에서 선택할 수 있습니다.",
+         "checkbox": {
+            "label": "VMware 고객 환경 향상 프로그램에 참여"
+         }
+      }
+   },
+   "settings": {
+      "reset": {
+         "dialog": {
+            "title": "설정 재설정",
+            "ok": "확인",
+            "cancel": "취소",
+            "content": "모든 애플리케이션 설정이 공장 기본값으로 재설정됩니다. 이 작업은 되돌릴 수 없습니다. 재설정 작업이 완료되면 애플리케이션이 다시 로드됩니다."
+         }
+      }
+   },
+   "root": {
+      "client": "ESXi",
+      "title": "VMware ESXi",
+      "titleWithMessage": "{{message}} - VMware ESXi",
+      "logIn": "로그인",
+      "logViewer": "로그 뷰어",
+      "console": "콘솔",
+      "recent_tasks": "최근 작업",
+      "minimize": " 최소화",
+      "about": "Copyright © 1998-{{copyrightYear}} VMware, Inc. All rights reserved. 이 제품은 미국 및 국제 저작권법과 지적 재산권법의 보호를 받습니다. VMware 제품은 <a href=\"http://www.vmware.com/go/patents-kr\" target=\"_blank\">http://www.vmware.com/go/patents-kr</a>에 나열된 하나 이상의 특허권의 보호를 받습니다.",
+      "navigator": "탐색기",
+      "loading": "로드 중",
+      "backgroundImage": "배경 이미지",
+      "resize": "창 크기 조정",
+      "progressBar": "진행률 표시줄",
+      "lostConnection": "연결이 끊김"
+   },
+   "notification": {
+      "type": {
+         "info": "정보",
+         "warning": "주의",
+         "error": "오류",
+         "question": "질문"
+      },
+      "ok": "확인",
+      "dismiss": "해제",
+      "dismissNotification": "알림 해제",
+      "actions": {
+         "label": "작업",
+         "tooltip": "이 알림과 관련된 작업"
+      }
+   },
+   "entity": {
+      "type": {
+         "VirtualMachine": "가상 시스템",
+         "HostSystem": "호스트",
+         "Datastore": "데이터스토어",
+         "Folder": "폴더",
+         "ResourcePool": "리소스 풀"
+      }
+   },
+   "menu": {
+      "host": {
+         "title": "호스트",
+         "summary": "요약",
+         "manage": "관리",
+         "monitor": "모니터",
+         "permissions": "사용 권한",
+         "licensing": "라이센싱"
+      },
+      "vm": {
+         "title": "가상 시스템",
+         "summary": "요약",
+         "manage": "관리",
+         "monitor": "모니터",
+         "more": "추가 VM..."
+      },
+      "storage": {
+         "title": "스토리지",
+         "summary": "요약",
+         "manage": "관리",
+         "monitor": "모니터",
+         "more": "추가 스토리지..."
+      },
+      "network": {
+         "title": "네트워킹",
+         "summary": "요약",
+         "manage": "관리",
+         "monitor": "모니터",
+         "more": "추가 네트워크..."
+      },
+      "rp": {
+         "title": "리소스 풀",
+         "summary": "요약",
+         "manage": "관리",
+         "monitor": "모니터"
+      },
+      "monitor": {
+         "title": "모니터",
+         "events": "이벤트",
+         "tasks": "작업",
+         "logs": "로그"
+      }
+   },
+   "session": {
+      "start": "세션이 {{time}} 후에 만료됩니다.",
+      "timeout": "아무런 작업이 없어서 로그아웃되었습니다.",
+      "appTitleIdle": "세션이 시간 초과될 때까지",
+      "appTitleTimedOut": "세션이 시간 초과됨"
+   },
+   "logout": {
+      "error": "로그아웃 시 알 수 없는 오류",
+      "menu": {
+         "label": "로그아웃",
+         "tooltip": "이 호스트와 연결된 세션을 종료합니다."
+      }
+   },
+   "login": {
+      "host": "호스트 이름",
+      "username": "사용자 이름",
+      "password": "암호",
+      "timeout": "ESXi 호스트에 대한 연결이 시간 초과되었습니다.",
+      "logging": "ESXi 호스트에 로그인 중..."
+   },
+   "search": {
+      "placeholder": "검색",
+      "filterSeries": "필터 시리즈"
+   },
+   "directives": {
+      "progressChart": {
+         "free": "사용 가능:",
+         "used": "사용됨:",
+         "capacity": "용량:"
+      },
+      "search": {
+         "noResults": "결과 없음"
+      },
+      "notification": {
+         "close": "닫기"
+      }
+   },
+   "links": {
+      "language": "kr"
+   }
+}

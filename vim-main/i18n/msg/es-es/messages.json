@@ -1,0 +1,537 @@
+{
+   "number": {
+      "format": {
+         "separator": ",",
+         "delimiter": ".",
+         "strip_insignificant_zeros": "1"
+      }
+   },
+   "date": {
+      "day_names": [
+         "Domingo",
+         "Lunes",
+         "Martes",
+         "Miércoles",
+         "Jueves",
+         "Viernes",
+         "Sábado"
+      ],
+      "abbr_day_names": [
+         "Do",
+         "Lu",
+         "Ma",
+         "Mi",
+         "Ju",
+         "Vi",
+         "Sa"
+      ],
+      "month_names": [
+         "nulo",
+         "enero",
+         "febrero",
+         "marzo",
+         "abril",
+         "mayo",
+         "junio",
+         "julio",
+         "agosto",
+         "septiembre",
+         "octubre",
+         "noviembre",
+         "diciembre"
+      ],
+      "abbr_month_names": [
+         "nulo",
+         "Ene",
+         "Feb",
+         "Mar",
+         "Abr",
+         "mayo",
+         "Jun",
+         "Jul",
+         "Ago",
+         "Sep",
+         "Oct",
+         "Nov",
+         "Dic"
+      ],
+      "format": {
+         "iso": "%d/%m/%Y %H:%M:%S",
+         "long": "%A, %d de %B de %Y, %H:%M:%S %z",
+         "utc": "%A, %d de %B de %Y, %H:%M:%S UTC",
+         "short": "%d/%m/%Y %H:%M:%S",
+         "short_utc": "%m/%d/%Y %H:%M:%S UTC",
+         "date": "%d/%m/%Y",
+         "time": "%H:%M:%S"
+      }
+   },
+   "units": {
+      "TB": "TB",
+      "GB": "GB",
+      "MB": "MB",
+      "KB": "KB",
+      "B": "B",
+      "MHz": "MHz",
+      "GHz": "GHz",
+      "mbps": "Mbps"
+   },
+   "grid": {
+      "quickFilters": "Filtros rápidos...",
+      "noItems": "No hay elementos",
+      "sortAscending": "Orden ascendente",
+      "sortDescending": "Orden descendente",
+      "filter": "Filtrar",
+      "filterHeader": "Mostrar elementos con un valor que",
+      "clear": "Borrar",
+      "columns": "Seleccionar columnas",
+      "isTrue": "sea true",
+      "isFalse": "sea false",
+      "and": "y",
+      "or": "o",
+      "startswith": "comience con",
+      "contains": "contenga",
+      "endswith": "termine con",
+      "eq": "sea igual que",
+      "neq": "no sea igual que",
+      "gte": "sea mayor o igual que",
+      "gt": "sea mayor que",
+      "lte": "sea menor o igual que",
+      "lt": "sea menor que"
+   },
+   "general": {
+      "yes": "Sí",
+      "no": "No",
+      "ok": "Aceptar",
+      "cancel": "Cancelar",
+      "default": "Predeterminado",
+      "enabled": "Habilitado",
+      "disabled": "Deshabilitado",
+      "none": "Ninguno",
+      "select": "Seleccionar",
+      "na": {
+         "label": "N/D",
+         "title": "No aplicable"
+      },
+      "or": "o",
+      "openDocumentation": "Abrir la documentación de VMware Host Client",
+      "loading": {
+         "label": "Cargando...",
+         "title": "Cargando",
+         "error": "Se produjo un error; inténtelo de nuevo"
+      },
+      "unknown": "Desconocido",
+      "unlimited": "Sin límite",
+      "active": "Activo",
+      "automatic": "Automático",
+      "notActive": "No activo",
+      "help": "Ayuda",
+      "time": {
+         "minutes": "minutos",
+         "seconds": "segundos"
+      }
+   },
+   "performance": {
+      "dataAt": "Datos en"
+   },
+   "wizard": {
+      "back": "Atrás",
+      "next": "Siguiente",
+      "finish": "Finalizar"
+   },
+   "localeOverride": {
+      "title": "Advertencia de anulación de configuración regional",
+      "content": "Se estableció la anulación de la configuración regional tanto de la URL (p. ej., ?locale=fr-fr) como de la configuración mediante la configuración regional especificada de la URL."
+   },
+   "missingTunnel": {
+      "title": "Configuración incorrecta del proxy de host.",
+      "contentAdded": "Falta una configuración obligatoria de proxy de host, pero se corrigió automáticamente. <strong>No obstante, debe reiniciar el host para que los cambios surtan efecto.</strong> Consulte los <a href=\"http://pubs.vmware.com/Release_Notes/es/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">problemas conocidos </a> para obtener más información.",
+      "contentNotAdded": "Falta una configuración obligatoria de proxy de host. Esto provocará errores en las conexiones de la consola en el explorador. Aun así, podrá seguir utilizando la aplicación de VMRC independiente. Consulte los problemas conocidos <a href=\"http://pubs.vmware.com/Release_Notes/en/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">aquí</a> para obtener instrucciones sobre cómo solucionar el problema."
+   },
+   "client": {
+      "about": {
+         "title": "Acerca de",
+         "close": "Cerrar",
+         "warnVersionMismatch": "La versión de Host Client instalada en ESXi no coincide con la que se está ejecutando. Actualice el explorador, o borre la caché del explorador.",
+         "fullOSSDisclosure": "Para obtener información sobre la licencia de código abierto de ESXi, vaya <a href=\"{{url}}\" target=\"_blank\">aquí</a>."
+      },
+      "context": {
+         "about": {
+            "label": "Acerca de",
+            "tooltip": "Mostrar información sobre VMware Host Client"
+         },
+         "vmrc": {
+            "label": "VMware Remote Console",
+            "tooltip": "Obtener la aplicación VMware Remote Console independiente"
+         },
+         "help": {
+            "label": "Ayuda",
+            "tooltip": "Abrir la documentación de host de VMware oficial en una nueva ventana"
+         },
+         "tools": {
+            "label": "Herramientas y vínculos",
+            "tooltip": "Herramientas disponibles en este host"
+         },
+         "getVC": {
+            "label": "Obtener vCenter Server",
+            "tooltip": "Descargar y evaluar VMware vCenter Server"
+         },
+         "mob": {
+            "label": "Explorador de objetos administrados",
+            "tooltip": "Abrir el explorador de objetos administrados",
+            "tooltipDisabled": "El explorador de objetos administrados está deshabilitado. Para habilitarlo, establezca la opción avanzada Config.HostAgent.plugins.solo.enableMob como true",
+            "dialog": {
+               "title": "Habilitar explorador de objetos administrados",
+               "content": "El explorador de objetos administrados está deshabilitado en este momento. ¿Desea habilitarlo y abrirlo?",
+               "cancel": "Cancelar",
+               "confirmLabel": "Habilitar"
+            }
+         },
+         "feedback": {
+            "label": "Comentarios",
+            "tooltip": "Sepa cómo enviar comentarios sobre el cliente de host de VMware"
+         },
+         "sdk": {
+            "label": "Documentación de SDK",
+            "tooltip": "Averigüe cómo usar el SDK de servicios web de VMware"
+         },
+         "vcli": {
+            "label": "Herramientas remotas de la línea de comandos",
+            "tooltip": "Averigüe cómo usar las herramientas remotas de la línea de comandos de VMware"
+         },
+         "vmware": {
+            "label": "VMware.com",
+            "tooltip": "Visitar sitio web de VMware"
+         },
+         "clientSettings": {
+            "label": "Configuración",
+            "tooltip": "Administrar configuración del cliente de host de VMware",
+            "sendTelemetry": {
+               "label": "Enviar estadísticas de uso",
+               "tooltip": "Envíe estadísticas de uso a VMware.com para ayudarnos a identificar problemas con el cliente de host de VMware"
+            },
+            "visualEffects": {
+               "label": "Habilitar efectos visuales",
+               "tooltip": "Habilite los efectos visuales, como la intensificación o la atenuación de menús contextuales."
+            },
+            "recentItems": {
+               "label": "Mostrar solo objetos recientes",
+               "tooltip": "Muestra solo los objetos seleccionados recientemente en el navegador de objetos."
+            },
+            "showWelcome": {
+               "label": "Mostrar mensaje de bienvenida",
+               "tooltip": "Indica si se muestra la notificación del mensaje de bienvenida al iniciar sesión"
+            },
+            "consoleSettings": {
+               "label": "Consola",
+               "tooltip":" Configuración de la consola",
+               "defaultConsole": {
+                  "label": "Consola predeterminada",
+                  "tooltip": "Consola predeterminada al hacer clic en captura de pantalla",
+                  "vmrc": {
+                     "label": "VMware Remote Console",
+                     "tooltip": "Utilizar VMware Remote Console al abrir una consola de VM"
+                  },
+                  "webmks": {
+                     "label": "En el explorador",
+                     "tooltip": "Utilizar consola HTML5 en el explorador al abrir una consola de VM"
+                  }
+               }
+            },
+            "keyboardSettings": {
+               "label": "Distribución del teclado",
+               "tooltip": "Configurar los ajustes del teclado para el cliente de host",
+               "en-US": "Inglés",
+               "fr-FR": "Francés",
+               "fr-CH": "Francés (Suiza)",
+               "de-DE": "Alemán",
+               "de-CH": "Alemán (Suiza)",
+               "pt-BR": "Portugués (Brasil)",
+               "pt-PT": "Portugués (Portugal)",
+               "it-IT": "Italiano",
+               "es-ES": "Español",
+               "ja-JP_106/109": "Japonés"
+            },
+            "languageSettings": {
+               "label": "Idioma",
+               "tooltip": "Configurar los ajustes de idioma para el cliente de host",
+               "en-us": {
+                  "label": "Inglés",
+                  "tooltip": "Inglés"
+               },
+               "fr-fr": {
+                  "label": "Francés",
+                  "tooltip": "Francés"
+               },
+               "es-es": {
+                  "label": "Español",
+                  "tooltip": "Español"
+               },
+               "de-de": {
+                  "label": "Alemán",
+                  "tooltip": "Alemán"
+               },
+               "ko-kr": {
+                  "label": "Coreano",
+                  "tooltip": "Coreano"
+               },
+               "zh-cn": {
+                  "label": "Chino (Simplificado)",
+                  "tooltip": "Chino (Simplificado)"
+               },
+               "zh-tw": {
+                  "label": "Chino (Tradicional)",
+                  "tooltip": "Chino (Tradicional)"
+               },
+               "ja-jp": {
+                  "label": "Japonés",
+                  "tooltip": "Japonés"
+               },
+               "browserDefault": {
+                  "label": "Explorador predeterminado",
+                  "tooltip": "Permite al cliente de host usar la configuración del explorador"
+               }
+            },
+            "applicationTimeout": {
+               "label": "Tiempo de espera de la aplicación",
+               "tooltip": "Cantidad de tiempo de inactividad que debe transcurrir antes de que el cliente de host cierre sesión automáticamente",
+               "xMinutes": "{{x}} minutos",
+               "xHour": "{{x}} hora",
+               "xHours": "{{x}} horas",
+               "off": "Desactivado",
+               "warning": {
+                  "confirmLabel": "Sí",
+                  "rejectLabel": "Cancelar",
+                  "title": "Advertencia",
+                  "content": "Si deshabilita el tiempo de espera de la sesión, el host ESXi podría quedar vulnerable ante actividad malintencionada. ¿Está seguro de que desea deshabilitar el tiempo de espera de la sesión?"
+               }
+            },
+            "reset": {
+               "label": "Restablecer a valores predeterminados",
+               "tooltip": "Restablecer la configuración del cliente de host a los valores predeterminados"
+            }
+         },
+         "autorefresh": {
+            "label": "Actualizar automáticamente",
+            "tooltip": "Indica al cliente de host que actualice automáticamente los datos del host en el período especificado",
+            "off": {
+               "label": "Desactivado",
+               "tooltip": "No actualizar automáticamente"
+            },
+            "xSeconds": "{{x}} segundos"
+         }
+      },
+      "feedback": {
+         "title": "Comentarios",
+         "close": "Cerrar"
+      }
+   },
+   "scriptingConsole": {
+      "title": "Consola de scripting",
+      "close": "Cerrar"
+   },
+   "upload": {
+      "inProgress": "Hay una carga de archivo en curso"
+   },
+   "hypervisorLicense": {
+      "title": "Licencia restringida",
+      "closeAndDismiss": "Cerrar y descartar",
+      "content": "La licencia asignada al host restringe operaciones que podrían realizarse.",
+      "close": "Cerrar"
+   },
+   "restrictedVersion": {
+      "title": "Versión restringida",
+      "close": "Cerrar",
+      "content": "La licencia asignada no permite esta operación"
+   },
+   "update": {
+      "check": {
+         "checkForUpdates": "Buscar actualizaciones",
+         "title": "Actualizado",
+         "content": "La instancia de VMware Host Client está actualizada.",
+         "ok": "Aceptar"
+      },
+      "notify": {
+         "dialog": {
+            "title": "Actualización de cliente disponible",
+            "content": "Hay disponible una nueva versión de VMware Host Client: {{version}}.",
+            "current": "Actualmente ejecuta la versión {{current}}.",
+            "whatsNew": "Novedades",
+            "never": "No comprobar automáticamente si hay actualizaciones en el futuro",
+            "updateNow": "Actualizar",
+            "ok": "Ahora no"
+         }
+      },
+      "perform": {
+         "update": "Actualizar",
+         "success": "Host actualizado correctamente",
+         "successWithMessage": "Host actualizado correctamente: {{message}}",
+         "failure": "Error al aplicar la actualización: {{reason}}",
+         "badFormat": "La actualización no tenía el formato esperado. Proporcione una ruta o una URL a un archivo VIB.",
+         "vumWarning": {
+            "title": "Advertencia",
+            "content": "Si este host va a ser administrado por VMware Update Manager, si se realiza una actualización tal vez el host ya no sea compatible. ¿Desea continuar?",
+            "rejectLabel": "Cancelar",
+            "confirmLabel": "Continuar"
+         },
+         "dialog": {
+            "title": "Instalar actualización",
+            "content": "Escriba la URL o la ruta del almacén de datos del archivo VIB a continuación.",
+            "missingVIBURL": "Escriba la URL o la ruta del almacén de datos del archivo VIB que desee actualizar.",
+            "missingProxy": "Escriba la dirección del servidor proxy",
+            "malformedPath": "Las URL deben comenzar por <em>http://</em> o <em>https://</em><br>Las rutas locales deben comenzar por <em>/</em>",
+            "rejectLabel": "Cancelar",
+            "proxy": {
+               "use": "Usar servidor proxy",
+               "server": "Servidor proxy",
+               "username": "Nombre de usuario",
+               "password": "Contraseña",
+               "port": "Puerto"
+            }
+         }
+      }
+   },
+   "anonymous": {
+      "dialog": {
+         "title": "Ayúdenos a mejorar el cliente de host de VMware",
+         "ok": "Aceptar",
+         "content": "Este producto participa en el Programa de mejora de la experiencia del cliente de VMware (“CEIP”). El CEIP proporciona a VMware información que le permite mejorar sus productos y servicios, a fin de corregir problemas y asesorarle para implementar y utilizar nuestros productos de la mejor manera posible. En el marco del CEIP, VMware recopila periódicamente información técnica sobre el uso que hace su organización de los productos y servicios de VMware asociada a las claves de licencia de VMware de su organización. Esta información no identifica personalmente a ninguna persona. Para obtener más información acerca del CEIP, visite el Centro de confianza y garantía en <a href=\"http://www.vmware.com/trustvmware/ceip.html\" target=\"_blank\">VMware.com</a>. Puede seleccionar sus preferencias de participación más abajo y en el menú de configuración del cliente host.",
+         "checkbox": {
+            "label": "Únase al Programa de mejora de la experiencia del cliente de VMware"
+         }
+      }
+   },
+   "settings": {
+      "reset": {
+         "dialog": {
+            "title": "Restablecer configuración",
+            "ok": "Aceptar",
+            "cancel": "Cancelar",
+            "content": "La configuración completa de la aplicación se restablecerá a los valores predeterminados de fábrica. Esta operación no se puede revertir. Cuando finalice el restablecimiento, la aplicación se volverá a cargar."
+         }
+      }
+   },
+   "root": {
+      "client": "ESXi",
+      "title": "VMware ESXi",
+      "titleWithMessage": "{{message}} - VMware ESXi",
+      "logIn": "Iniciar sesión",
+      "logViewer": "Visor de registros",
+      "console": "Consola",
+      "recent_tasks": "Tareas recientes",
+      "minimize": " Minimizar",
+      "about": "Copyright © 1998-{{copyrightYear}} VMware, Inc. Reservados todos los derechos. Este producto está protegido por las leyes de derechos de autor y propiedad intelectual internacionales y de los EE. UU. Los productos de VMware están cubiertos por una o varias patentes que figuran en <a href=\"http://www.vmware.com/go/patents-es\" target=\"_blank\">http://www.vmware.com/go/patents-es</a>.",
+      "navigator": "Navegador",
+      "loading": "Cargando",
+      "backgroundImage": "Imagen de fondo",
+      "resize": "Cambiar tamaño de ventana",
+      "progressBar": "Barra de progreso",
+      "lostConnection": "Conexión perdida"
+   },
+   "notification": {
+      "type": {
+         "info": "Información",
+         "warning": "Advertencia",
+         "error": "Error",
+         "question": "Pregunta"
+      },
+      "ok": "Aceptar",
+      "dismiss": "descartar",
+      "dismissNotification": "Descartar notificación",
+      "actions": {
+         "label": "Acciones",
+         "tooltip": "Acciones relacionadas con la notificación"
+      }
+   },
+   "entity": {
+      "type": {
+         "VirtualMachine": "Máquina virtual",
+         "HostSystem": "Host",
+         "Datastore": "Almacén de datos",
+         "Folder": "Carpeta",
+         "ResourcePool": "Grupo de recursos"
+      }
+   },
+   "menu": {
+      "host": {
+         "title": "Host",
+         "summary": "Resumen.",
+         "manage": "Administrar",
+         "monitor": "Supervisar",
+         "permissions": "Permisos",
+         "licensing": "Licencias"
+      },
+      "vm": {
+         "title": "Máquinas virtuales",
+         "summary": "Resumen.",
+         "manage": "Administrar",
+         "monitor": "Supervisar",
+         "more": "Más máquinas virtuales..."
+      },
+      "storage": {
+         "title": "Almacenamiento",
+         "summary": "Resumen.",
+         "manage": "Administrar",
+         "monitor": "Supervisar",
+         "more": "Más almacenamiento..."
+      },
+      "network": {
+         "title": "Redes",
+         "summary": "Resumen",
+         "manage": "Administrar",
+         "monitor": "Supervisar",
+         "more": "Más redes..."
+      },
+      "rp": {
+         "title": "Grupos de recursos",
+         "summary": "Resumen",
+         "manage": "Administrar",
+         "monitor": "Supervisar"
+      },
+      "monitor": {
+         "title": "Supervisar",
+         "events": "Eventos",
+         "tasks": "Tareas",
+         "logs": "Registros"
+      }
+   },
+   "session": {
+      "start": "La sesión expirará en {{time}}.",
+      "timeout": "Se cerró la sesión por inactividad",
+      "appTitleIdle": "Hasta que se agote el tiempo de espera de la sesión",
+      "appTitleTimedOut": "Se agotó el tiempo de espera de la sesión"
+   },
+   "logout": {
+      "error": "Error desconocido al cerrar sesión",
+      "menu": {
+         "label": "Cierra la sesión",
+         "tooltip": "Cerrar la sesión asociada al host"
+      }
+   },
+   "login": {
+      "host": "Nombre de host",
+      "username": "Nombre de usuario",
+      "password": "Contraseña",
+      "timeout": "Se agotó el tiempo de espera de la conexión al host ESXi",
+      "logging": "Iniciando sesión en el host ESXi..."
+   },
+   "search": {
+      "placeholder": "Buscar",
+      "filterSeries": "Filtrar series"
+   },
+   "directives": {
+      "progressChart": {
+         "free": "LIBRE:",
+         "used": "Usado:",
+         "capacity": "CAPACIDAD:"
+      },
+      "search": {
+         "noResults": "No se encontraron resultados"
+      },
+      "notification": {
+         "close": "Cerrar"
+      }
+   },
+   "links": {
+      "language": "es"
+   }
+}

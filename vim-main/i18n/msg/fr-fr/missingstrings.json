@@ -1,0 +1,6 @@
+{
+  "gosWin1032": "Microsoft Windows&nbsp;10 (32&nbsp;bits)",
+  "loginError": "Impossible d'effectuer une connexion, car le nom d'utilisateur ou le mot de passe est incorrect.",
+  "diskTypeSSD": "Disque (SSD)",
+  "taskFailureHostConfig": "Échec - Une erreur est survenue lors de la configuration de l'hôte."
+}

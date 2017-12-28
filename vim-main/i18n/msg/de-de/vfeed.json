@@ -1,0 +1,20 @@
+{
+     "title": "Feedback",
+     "text": "Wir freuen uns über Ihr Feedback zum VMware Host Client. Verwenden Sie das folgende Formular für Kommentare oder Vorschläge. Sie können auch einen Screenshot erstellen und diesen mit beliebigen Anmerkungen versehen. Verwenden Sie die Bearbeitungsfunktion zum Entfernen aller Daten, die nicht freigegeben werden sollen.",
+     "experience": "Welche Erfahrungen haben Sie gemacht?",
+     "tellMore": "Schreiben Sie uns ($1 Zeichen verbleiben)",
+     "privacyPolicy": "Datenschutzrichtlinie",
+     "privacyPolicyContent": "Jegliches von Ihnen bereitgestellte Feedback kann von VMware zur Verbesserung von VMware-Produkten und -Diensten, zur Fehlerbehebung und zu Empfehlungen für die optimale Bereitstellung und Verwendung von VMware-Produkten und -Diensten verwendet werden. Sie sind dafür verantwortlich, vertrauliche, sensible oder private Informationen aus VMware bereitgestellten Screenshots zu verschleiern oder zu entfernen und solche Informationen nicht in Ihr Feedback einzuschließen. Ihre E-Mail-Adresse wird verwendet, um Sie in Bezug auf Ihr Feedback zu kontaktieren.",
+     "emailPlaceholder": "E-Mail-Adresse",
+     "screenshotTitle": "",
+     "penTooltip": "Anmerken",
+     "eraserTooltip": "Überarbeiten",
+     "undoTooltip": "Rückgängig machen",
+     "zoomInTooltip": "Vergrößern",
+     "zoomOutTooltip": "Verkleinern",
+     "takeScreenshotButton": "Screenshot erstellen",
+     "removeScreenshotButton": "Screenshot entfernen",
+     "sendButton": "Senden",
+     "cancelButton": "Abbrechen"
+}
+

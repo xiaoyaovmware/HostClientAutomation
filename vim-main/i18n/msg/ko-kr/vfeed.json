@@ -1,0 +1,20 @@
+{
+     "title": "피드백",
+     "text": "VMware는 VMware Host Client에 대한 여러분의 피드백을 기다리고 있습니다. 의견이나 제안 사항이 있으면 아래 양식을 사용해 주십시오. 스크린샷을 작성하고 시각적 피드백을 추가하여 보내 주셔도 좋습니다. 공유하고 싶지 않은 데이터가 있으면 편집기를 사용하여 제거하십시오.",
+     "experience": "전반적인 성능이 어떠했습니까?",
+     "tellMore": "자세한 설명($1자 입력 가능)",
+     "privacyPolicy": "개인 정보 보호 정책",
+     "privacyPolicyContent": "사용자가 제공한 피드백은 VMware가 VMware 제품과 서비스를 개선하고, 문제를 해결하며, VMware 제품과 서비스를 배포하고 사용하는 최상의 방법을 고객에게 알리는 데 사용될 수 있습니다. VMware에 제공하는 모든 스크린샷에서 모든 기밀, 중요 또는 개인 정보를 난독 처리하거나 제거해야 할 책임은 사용자에게 있으며, 그러한 정보를 피드백에 포함해서도 안 됩니다. 사용자의 이메일 주소는 피드백과 관련하여 사용자에게 연락하는 데 사용됩니다.",
+     "emailPlaceholder": "이메일 주소",
+     "screenshotTitle": "",
+     "penTooltip": "주석 달기",
+     "eraserTooltip": "편집",
+     "undoTooltip": "실행 취소",
+     "zoomInTooltip": "확대",
+     "zoomOutTooltip": "축소",
+     "takeScreenshotButton": "스크린샷 작성",
+     "removeScreenshotButton": "스크린샷 제거",
+     "sendButton": "보내기",
+     "cancelButton": "취소"
+}
+

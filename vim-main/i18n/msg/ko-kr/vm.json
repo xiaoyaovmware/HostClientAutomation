@@ -1,0 +1,2288 @@
+{
+   "vm": {
+      "answer": {
+         "dialog": {
+            "title": "질문에 응답 - {{name}}",
+            "ok": "질문",
+            "rejectLabel": "취소"
+         }
+      },
+      "autostart": {
+         "unset": "설정하지 않음",
+         "change": {
+            "title": "자동 시작 구성 - {{name}}",
+            "rejectLabel": "취소",
+            "confirmLabel": "저장",
+            "waitForHeartbeat": {
+               "label": "하트비트 대기",
+               "yes": "예",
+               "no": "아니요",
+               "systemDefault": "시스템 기본값"
+            },
+            "startDelay": {
+               "label": "시작 지연",
+               "seconds": "초"
+            },
+            "stopDelay": {
+               "label": "중지 지연",
+               "seconds": "초"
+            },
+            "stopAction": {
+               "label": "작업 중지",
+               "systemDefault": "시스템 기본값",
+               "PowerOff": "전원 끄기",
+               "Suspend": "일시 중단",
+               "ShutDown": "종료"
+            },
+            "successNotification": "{{name}}의 자동 시작 구성이 업데이트되었습니다.",
+            "failureNotification": "{{name}}의 자동 시작 구성을 업데이트하지 못했습니다."
+         }
+      },
+      "console": {
+         "close": "닫기",
+         "actions": "작업",
+         "showKeyboard": "키보드 표시",
+         "keyboardLayout": "키보드 레이아웃",
+         "maximize": "최대화",
+         "fullscreen": "전체 화면",
+         "minimize": " 최소화",
+         "shrink": "축소",
+         "failedToConnect": "연결하지 못함",
+         "resolutionChangeDialog": {
+            "title": "해상도 변경되지 않음",
+            "content": "이 가상 시스템에는 VMware Tools가 설치되어 있지만 해상도가 변경되지 않았습니다. 이 콘솔의 크기를 조정하시겠습니까?",
+            "confirmLabel": "예",
+            "rejectLabel": "아니요"
+         },
+         "multipleConnectionsNotificationSingle": "다른 사용자가 이 가상 시스템에 대해 열린 콘솔 세션을 가지고 있습니다.",
+         "multipleConnectionsNotificationMultiple": "{{num}}명의 다른 사용자가 이 가상 시스템에 대해 열린 콘솔 세션을 가지고 있습니다."
+      },
+      "power": {
+         "powerOffWarning": {
+            "title": "주의",
+            "content": "이 가상 시스템의 전원을 끄면 데이터가 손실될 수 있습니다. 이 가상 시스템의 전원을 끄시겠습니까?",
+            "contentMulti": "선택한 가상 시스템 중 하나 이상의 전원을 끄면 데이터가 손실될 수 있습니다. 계속하시겠습니까?",
+            "rejectLabel": "취소",
+            "confirmLabel": "예"
+         },
+         "resetWarning": {
+            "title": "주의",
+            "content": "이 가상 시스템을 재설정하면 데이터가 손실될 수 있습니다. 이 가상 시스템을 재설정하시겠습니까?",
+            "contentMulti": "선택한 가상 시스템 중 하나 이상을 재설정하면 데이터가 손실될 수 있습니다. 계속하시겠습니까?",
+            "rejectLabel": "취소",
+            "confirmLabel": "예"
+         }
+      },
+      "list": {
+         "title": "{{hostname}} - 가상 시스템",
+         "empty": "가상 시스템 없음",
+         "columns": {
+            "name": "가상 시스템",
+            "state": "상태",
+            "status": "상태",
+            "provisionedSpace": "프로비저닝된 공간",
+            "usedSpace": "사용된 공간",
+            "guest": "게스트 OS",
+            "toolsInstalled": "설치된 Tools",
+            "toolsVersion": "Tools 버전",
+            "ipAddress": "IP 주소",
+            "datastore": "데이터스토어",
+            "hostName": "호스트 이름",
+            "hostCPU": "호스트 CPU",
+            "hostMemory": "호스트 메모리",
+            "autostartStartOrder": "자동 시작 순서",
+            "autostartStartDelay": "시작 지연",
+            "autostartStopDelay": "중지 지연",
+            "notes": "노트"
+         },
+         "quickFilters": {
+            "vmsWithoutTools": "VMware Tools가 없는 VM",
+            "poweredOnVMs": "전원이 켜진 VM",
+            "poweredOffVMs": "전원이 꺼진 VM",
+            "suspendedVMs": "일시 중단된 VM",
+            "vmsParticipatingInAutostart": "자동 시작에 참여하는 VM"
+         },
+         "status": {
+            "normal": "보통",
+            "warning": "주의",
+            "inconsistent": "일치하지 않음",
+            "question": "질문 보류 중",
+            "invalid": "잘못됨"
+         },
+         "actionBar": {
+            "createRegister": {
+               "label": "VM 생성/등록",
+               "tooltip": "가상 시스템을 생성 또는 등록합니다."
+            },
+            "columns": {
+               "label": "열",
+               "tooltip": "이 테이블에 표시할 열을 선택합니다.",
+               "contextTitle": "열 선택"
+            },
+            "console": {
+               "label": "콘솔",
+               "tooltip": "선택한 가상 시스템에 대한 콘솔을 엽니다."
+            },
+            "powerOn": {
+               "label": "전원 켜기",
+               "tooltip": "선택한 가상 시스템의 전원을 켜거나 재개합니다."
+            },
+            "powerOff": {
+               "label": "전원 끄기",
+               "tooltip": "선택한 가상 시스템의 전원을 끕니다."
+            },
+            "shutDown": {
+               "label": "종료",
+               "tooltip": "선택한 가상 시스템에서 정상 종료를 수행합니다."
+            },
+            "shutDownSuspended": {
+               "label": "종료/전원 끄기",
+               "tooltip": "선택한 가상 시스템을 종료하거나 전원을 끕니다."
+            },
+            "suspend": {
+               "label": "일시 중단",
+               "tooltip": "선택한 가상 시스템을 일시 중단합니다."
+            },
+            "restart": {
+               "label": "다시 시작",
+               "tooltip": "선택한 가상 시스템을 다시 시작합니다."
+            },
+            "edit": {
+               "label": "설정 편집",
+               "tooltip": "선택한 가상 시스템에 대한 설정을 편집합니다."
+            },
+            "refresh": {
+               "label": "새로 고침",
+               "tooltip": "가상 시스템 테이블을 새로 고칩니다."
+            },
+            "actions": {
+               "label": "작업",
+               "tooltip": "선택한 가상 시스템에 대한 작업입니다."
+            }
+         }
+      },
+      "attachISO": {
+         "button": {
+            "label": "디스크 이미지 선택",
+            "tooltip": "디스크 이미지 검색"
+         },
+         "dialog": {
+            "title": "CD/DVD 디스크 이미지 선택",
+            "confirmLabel": "선택"
+         },
+         "failureNotification": "디스크 이미지를 연결하지 못했습니다. {{message}}",
+         "successNotification": "디스크 이미지 {{file}}을(를) CD/DVD 디바이스에 연결했습니다."
+      },
+      "delete": {
+         "title": "VM 삭제 - {{name}}",
+         "titleMultiple": "VM을 삭제합니다.",
+         "confirmLabel": "삭제",
+         "rejectLabel": "취소",
+         "failedAtLeastOne": "VM을 하나 이상 삭제하지 못했습니다.",
+         "ok": "확인"
+      },
+      "supportBundle": {
+         "menu": {
+            "label": "지원 번들 생성",
+            "tooltip": "이 VM에서 지원 번들을 생성합니다."
+         }
+      },
+      "template": {
+         "label": "템플릿",
+         "convert": {
+            "title": "템플릿으로 변환",
+            "label": "템플릿으로 변환",
+            "tooltip": "가상 시스템을 템플릿으로 변환",
+            "message": "가상 시스템 '{{name}}'을(를) 템플릿으로 변환하시겠습니까?",
+            "ok": "변환",
+            "rejectLabel": "취소"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "사용 권한",
+            "title": "사용 권한을 관리합니다.",
+            "header": "사용자 및 역할 할당 대상 ",
+            "close": "닫기",
+            "cancel": "취소",
+            "noUsers": "사용자 없음",
+            "addUser": {
+               "label": "사용자 추가",
+               "toolTip": "사용자를 추가합니다.",
+               "header": "사용자 추가 대상 "
+            },
+            "removeUser": {
+               "label": "사용자 제거",
+               "toolTip": "사용자를 제거합니다."
+            },
+            "assignRole": {
+               "label": "역할 할당",
+               "toolTip": "사용자에게 역할을 할당합니다.",
+               "header": "사용 권한 설정 대상 "
+            },
+            "updatePermissions": {
+               "successNotification": "사용 권한 업데이트 성공",
+               "failureNotification": "사용 권한을 업데이트하지 못했습니다. {{error}}"
+            },
+            "columns": {
+               "user": "사용자",
+               "role": "역할"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "사용자 선택"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "역할 선택"
+            },
+            "propagateLabel": "모든 하위 항목으로 전파",
+            "groupLabel": "그룹으로 추가"
+         }
+      },
+      "snapshot": {
+         "consolidate": {
+            "menu": "디스크 통합",
+            "consolidationComplete": "VM {{name}}에 대한 디스크 통합이 완료되었습니다.",
+            "consolidationFailed": "VM {{name}}에 대한 디스크 통합이 실패했습니다. {{reason}}"
+         },
+         "take": {
+            "menu": "스냅샷 생성",
+            "title": "{{name}}에 대한 스냅샷을 생성합니다.",
+            "takeSnapshot": "스냅샷 생성",
+            "name": "이름",
+            "description": "설명",
+            "memory": "가상 시스템 메모리에 대한 스냅샷을 생성합니다.",
+            "quiesce": "게스트 파일 시스템 일시 정지(VMware Tools가 설치되어 있어야 함)",
+            "ok": "확인",
+            "cancel": "취소",
+            "notification": {
+               "success": "스냅샷 '{{title}}'이(가) 가상 시스템 {{vmName}}에 생성되었습니다.",
+               "error": "스냅샷 '{{title}}'을(를) 가상 시스템 {{vmName}}에 생성하지 못했습니다."
+            }
+         },
+         "edit": {
+            "notification": {
+               "error": "스냅샷 '{{name}}'에 변경 내용을 저장하지 못했습니다."
+            }
+         },
+         "revertLatest": {
+            "menu": "최신 스냅샷 복원",
+            "title": "최신 스냅샷 복원",
+            "content": "스냅샷으로 저장하지 않으면 가상 시스템의 현재 상태가 손실됩니다. 현재(최신) 스냅샷으로 되돌리시겠습니까?",
+            "revert": "복원",
+            "cancel": "취소",
+            "notification": {
+               "success": "가상 시스템 {{name}}이(가) 최신 스냅샷으로 복원되었습니다.",
+               "error": "가상 시스템 {{name}}을(를) 최신 스냅샷으로 복원하지 못했습니다."
+            }
+         },
+         "revert": {
+            "menu": "스냅샷 복원",
+            "title": "스냅샷 복원",
+            "content": "스냅샷으로 저장하지 않으면 가상 시스템의 현재 상태가 손실됩니다. 스냅샷 '{{title}}'을(를) 복원하시겠습니까?",
+            "revert": "복원",
+            "cancel": "취소",
+            "notification": {
+               "success": "가상 시스템 {{name}}이(가) 스냅샷 '{{title}}'(으)로 복원되었습니다.",
+               "error": "가상 시스템 {{name}}을(를) 스냅샷 '{{title}}'(으)로 복원하지 못했습니다."
+            }
+         },
+         "delete": {
+            "menu": "스냅샷 삭제",
+            "title": "스냅샷 삭제",
+            "content": "스냅샷 '{{title}}'을(를) 삭제하시겠습니까?",
+            "ok": "제거",
+            "removeChildren": "모든 하위 스냅샷을 제거합니다.",
+            "cancel": "취소",
+            "notification": {
+               "success": "스냅샷 '{{title}}'이(가) 삭제되었습니다.",
+               "error": "스냅샷 '{{title}}'을(를) 삭제하지 못했습니다."
+            }
+         },
+         "deleteAll": {
+            "menu": "모든 스냅샷 삭제",
+            "title": "모든 스냅샷 삭제",
+            "content": "그러면 이 가상 시스템에 대한 모든 스냅샷이 통합되고 제거됩니다. 스냅샷이 단일 디스크로 통합됩니다. 계속하시겠습니까?",
+            "ok": "제거",
+            "cancel": "취소",
+            "notification": {
+               "success": "가상 시스템 '{{name}}'의 모든 스냅샷이 삭제되었습니다.",
+               "error": "가상 시스템 '{{name}}'의 모든 스냅샷을 삭제하지 못했습니다."
+            }
+         },
+         "manage": {
+            "menu": "스냅샷 관리",
+            "notitle": "스냅샷 관리",
+            "title": "스냅샷 관리 - {{name}}",
+            "name": "이름",
+            "description": "설명",
+            "created": "생성일",
+            "diskUsage": "디스크 사용량",
+            "console": "콘솔",
+            "here": "현재 위치",
+            "edit": "편집",
+            "take": {
+               "label": "스냅샷 생성",
+               "tooltip": "나중에 복원할 수 있도록 가상 시스템의 정확한 상태를 저장합니다."
+            },
+            "restore": {
+               "label": "스냅샷 복원",
+               "tooltip": "선택한 스냅샷의 상태로 가상 시스템을 복원합니다."
+            },
+            "delete": {
+               "label": "스냅샷 삭제",
+               "tooltip": "선택한 스냅샷을 삭제합니다."
+            },
+            "deleteAll": {
+               "label": "모두 삭제",
+               "tooltip": "스냅샷을 모두 삭제합니다."
+            },
+            "edit": {
+               "label": "스냅샷 편집",
+               "tooltip": "선택한 스냅샷을 편집합니다."
+            },
+            "refresh": {
+               "label": "새로 고침",
+               "tooltip": "새로 고침"
+            },
+            "save": "저장",
+            "cancel": "취소",
+            "close": "닫기"
+         }
+      },
+      "compatibility": {
+         "upgrade": {
+            "label": "VM 호환성 업그레이드",
+            "tooltip": "가상 시스템 호환성 업그레이드",
+            "rejectLabel": "취소",
+            "configure": {
+               "title": "VM 호환성 구성",
+               "header": "<em>{{name}}</em> 업그레이드에 대한 호환성을 선택합니다.",
+               "label": "VM 하드웨어를 선택한 버전",
+               "message": "{{version}}(으)로 업그레이드합니다.",
+               "ok": "업그레이드"
+            },
+            "notifications": {
+               "success": "가상 시스템 {{name}}을(를) 업그레이드했습니다.",
+               "failure": "가상 시스템 {{name}}을(를) 업그레이드하지 못했습니다. {{reason}}"
+            },
+            "confirm": {
+               "title": "VM 호환성 업그레이드 확인",
+               "message": "이 작업을 수행하면 가상 시스템의 호환성이 변경됩니다. 이 작업은 취소할 수 없으며, 가상 시스템이 이전 버전의 VMware 소프트웨어 제품과 호환되지 않게 됩니다. 계속하기 전에 가상 시스템 파일의 백업 복사본을 만드십시오. 호환성을 업그레이드하시겠습니까?",
+               "ok": "예",
+               "cancel": "아니요"
+            }
+         }
+      },
+      "notes": {
+         "dialog": {
+            "title": "노트 편집 - {{name}}.",
+            "titleNoVM": "노트 편집",
+            "ok": "저장",
+            "rejectLabel": "취소"
+         },
+         "title": "<em>{{name}}</em>에 대한 노트를 편집합니다.",
+         "more": "더 보기",
+         "less": "간단히",
+         "edit": "노트 편집",
+         "save": "노트 저장",
+         "cancel": "취소"
+      },
+      "summary": {
+         "dialog": {
+            "unknown": {
+               "title": "알 수 없는 VM",
+               "ok": "확인"
+            }
+         },
+         "screen": {
+            "refresh": "콘솔 스크린샷 새로 고침"
+         },
+         "unknown": "알 수 없음",
+         "general": {
+            "label": "일반 정보",
+            "title": "일반 정보",
+            "vmScreen": "이 가상 시스템에 대한 브라우저 콘솔을 열려면 클릭",
+            "vmTemplateScreen": "가상 시스템 화면 로고",
+            "cpu": {
+               "name": "CPU"
+            },
+            "networking": {
+               "name": "네트워킹",
+               "ipAddresses": "IP 주소",
+               "hostName": "호스트 이름"
+            },
+            "notes": "노트",
+            "vmwareTools": {
+               "name": "VMware Tools",
+               "info": {
+                  "installed": "설치됨",
+                  "notInstalled": "설치 안 됨",
+                  "guestManaged": "관리되는 게스트",
+                  "version": "버전",
+                  "running": "실행 중"
+               },
+               "actionBar": {
+                  "action": {
+                     "label": "작업",
+                     "tooltip": "이 목록의 선택된 개체에 대한 작업입니다."
+                  }
+               }
+            },
+            "storage": {
+               "name": "스토리지",
+               "disk": "디스크",
+               "disks": "디스크",
+               "info": {
+                  "guestDisks": "게스트 디스크",
+                  "noGuestDisks": "게스트 디스크 정보를 사용할 수 없음",
+                  "diskPath": "디스크 경로",
+                  "capacity": "용량",
+                  "free": "사용 가능"
+               }
+            }
+         },
+         "perf": {
+            "label": "최근 1시간 성능 요약",
+            "title": "성능 요약, 최근 1시간",
+            "loading": "로드 중...",
+            "noData": "사용 가능한 성능 데이터가 없음",
+            "chart": {
+               "xAxis": "시간",
+               "y1Axis": "사용된 호스트 CPU/준비된 시간(%)",
+               "y2Axis": "사용된 호스트 메모리(GB)",
+               "cpu": "사용된 호스트 CPU",
+               "ready": "준비 완료",
+               "rightAxis": " (오른쪽 축)",
+               "memory": "사용된 호스트 메모리"
+            }
+         },
+         "noNetworkInfo": "네트워크 정보 없음",
+         "hardware": {
+            "label": "하드웨어 구성",
+            "title": "하드웨어 구성",
+            "cpu": {
+               "cpu": "CPU",
+               "cores": "CPU 코어",
+               "sockets": "소켓",
+               "coreSocket": "소켓당 코어 수",
+               "memory": "메모리"
+            },
+            "disk": {
+               "backing": "백업",
+               "capacity": "용량",
+               "thinProvisioned": "씬 프로비저닝됨",
+               "controller": "컨트롤러",
+               "deviceName": "디바이스 UUID",
+               "compatibility": {
+                  "label": "호환성 모드",
+                  "virtualMode": "가상",
+                  "physicalMode": "물리적"
+               },
+               "mode": {
+                  "label": "모드",
+                  "persistent": "종속",
+                  "independent_nonpersistent": "독립 비영구",
+                  "independent_persistent": "독립 영구"
+               }
+            },
+            "cdrom": {
+               "backing": "백업",
+               "connected": "연결됨",
+               "controller": "컨트롤러"
+            },
+            "serial": {
+               "backing": "백업",
+               "connected": "연결됨",
+               "concentrator": "집중 장치"
+            },
+            "parallel": {
+               "backing": "백업",
+               "connected": "연결됨"
+            },
+            "usb": {
+               "controller": "USB 컨트롤러"
+            },
+            "usbDevice": {
+               "label": "USB 디바이스",
+               "connected": "연결됨",
+               "disconnected": "연결 끊김"
+            },
+            "sound": {
+               "label": "사운드 카드",
+               "ensoniq1371": "Ensoniq 1371",
+               "soundBlaster16": "Sound Blaster 16"
+            },
+            "floppy": {
+               "connected": "연결됨",
+               "notConnected": "연결되지 않음"
+            },
+            "video": {
+               "totalMemory":"총 비디오 메모리",
+               "numDisplays":"디스플레이 수",
+               "3dGraphics":"3D 그래픽",
+               "3dRenderer":"3D 렌더러",
+               "3dMemory":"3D 메모리",
+               "automatic": "자동",
+               "software": "소프트웨어",
+               "hardware": "하드웨어",
+               "enabled": "사용",
+               "disabled": "사용 안 함"
+            },
+            "network": {
+               "networkAdapter": "네트워크 어댑터",
+               "connected": "연결됨",
+               "disconnected": "연결 끊김",
+               "network": "네트워크",
+               "macAddress": "MAC 주소",
+               "passThrough": "패스스루(Direct-path I/O)"
+            },
+            "others": {
+               "others": "기타",
+               "additionalHw": "추가 하드웨어",
+               "scsiAdapters": "SCSI 어댑터",
+               "nvmeAdapters": "NVMe 어댑터",
+               "controllers": "컨트롤러",
+               "inputDevices": "입력 디바이스"
+            }
+         },
+         "resource": {
+            "label": "리소스 사용",
+            "title": "리소스 사용",
+            "activeGuestMemory": "활성 게스트 메모리",
+            "consumedHostMemory": "사용된 호스트 메모리",
+            "consumedHostCPU": "사용된 호스트 CPU",
+            "storage": "스토리지",
+            "uncommitted": "커밋되지 않음",
+            "provisioned": "프로비저닝됨",
+            "notShared": "공유되지 않음",
+            "used": "사용됨"
+         },
+         "actionBar": {
+            "console": {
+               "label": "콘솔",
+               "tooltip": "이 가상 시스템에 대한 콘솔을 엽니다."
+            },
+            "monitor": {
+               "label": "모니터",
+               "tooltip": "이 가상 시스템 모니터링"
+            },
+            "powerOn": {
+               "label": "전원 켜기",
+               "tooltip": "이 가상 시스템의 전원을 켭니다."
+            },
+            "powerOff": {
+               "label": "전원 끄기",
+               "tooltip": "이 가상 시스템의 전원을 끕니다.",
+               "tooltipWarnSuspended": "이 가상 시스템은 현재 일시 중단되었습니다. 전원을 끄면 게스트의 데이터가 손실될 수 있습니다.",
+               "tooltipWarnPoweredOn": "가상 시스템의 전원이 현재 켜져 있습니다. 전원을 끄면 게스트의 데이터가 손실될 수 있습니다."
+            },
+            "reset": {
+               "label": "재설정",
+               "tooltip": "이 가상 시스템을 재설정합니다.",
+               "tooltipWarnSuspended": "이 가상 시스템은 현재 일시 중단되어 있습니다. 이 가상 시스템을 재설정하면 게스트의 데이터가 손실될 수 있습니다.",
+               "tooltipWarnPoweredOn": "이 가상 시스템은 현재 전원이 켜져 있습니다. 이 가상 시스템을 재설정하면 게스트의 데이터가 손실될 수 있습니다."
+            },
+            "shutDown": {
+               "label": "종료",
+               "tooltip": "이 가상 시스템의 게스트 OS 내에서 정상 종료를 수행합니다."
+            },
+            "suspend": {
+               "label": "일시 중단",
+               "tooltip": "이 가상 시스템을 일시 중단합니다."
+            },
+            "resume": {
+               "label": "재개",
+               "tooltip": "이 가상 시스템을 재개합니다."
+            },
+            "restart": {
+               "label": "다시 시작",
+               "tooltip": "이 가상 시스템을 다시 시작합니다."
+            },
+            "editSettings": {
+               "label": "편집",
+               "tooltip": "이 가상 시스템의 설정을 편집합니다."
+            },
+            "refresh": {
+               "label": "새로 고침",
+               "tooltip": "이 가상 시스템의 요약을 새로 고칩니다."
+            },
+            "actions": {
+               "label": "작업",
+               "tooltip": "이 가상 시스템에 대한 작업입니다."
+            }
+         }
+      },
+      "manage": {
+         "title": "{{name}} - 관리"
+      },
+      "monitor": {
+         "tabs": {
+            "performance": {
+               "label": "성능",
+               "tooltip": "성능"
+            },
+            "events": {
+               "label": "이벤트",
+               "tooltip": "이벤트"
+            },
+            "tasks": {
+               "label": "작업",
+               "tooltip": "작업"
+            },
+            "logs": {
+               "label": "로그",
+               "tooltip": "로그"
+            },
+            "notifications": {
+               "label": "알림",
+               "tooltip": "알림"
+            }
+         },
+         "title": "{{name}} - 모니터",
+         "logs": {
+            "tabTitle": "로그",
+            "tabTooltip": "시스템 로그 보기",
+            "failedToLoad": "로그 {{log}} 로드 실패",
+            "noLogSelected": "선택된 로그 없음",
+            "actionBar": {
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택된 로그 파일에 대한 작업입니다."
+               },
+               "openInNewWindow": {
+                  "label": "새 창에 열기",
+                  "tooltip":"이 로그를 새 창에서 엽니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "선택한 로그 파일을 새로 고칩니다."
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "로그",
+                  "size": "크기"
+               }
+            }
+         },
+         "performance": {
+            "tabTitle": "성능",
+            "tabTooltip": "시스템의 성능을 모니터링합니다.",
+            "poweredOff": "VM의 전원 꺼짐",
+            "grid": {
+               "name": "이름",
+               "unit": "단위",
+               "average": "평균",
+               "maximum": "최대",
+               "minimum": "최소",
+               "latest": "최신"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "차트 새로 고침"
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택한 가상 시스템에 대한 작업입니다."
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "데이터 가용성",
+                  "message": "사용할 수 있는 데이터 범위가 왜 '최근 1시간'뿐입니까? ESXi 호스트는 최근 1시간 동안의 기록 데이터만 저장합니다. 더 넓은 범위의 데이터를 보려면 vCenter Server를 사용해야 합니다."
+               }
+            },
+            "filter": {
+               "type": "필터 유형",
+               "cpuFilter": "CPU 필터",
+               "time": "시간"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "모두",
+                     "hostDropdownTitle": "호스트",
+                     "allCoresDropdownTitle": "모든 PCPU",
+                     "allPackagesDropdownTitle": "모든 패키지",
+                     "seriesLabel": "PCPU {{core}}",
+                     "packageSeriesLabel": "패키지 {{pkg}}",
+                     "y1AxisLabel": "사용된 호스트 CPU/준비된 시간(%)",
+                     "x1AxisLabel": "시간",
+                     "x2AxisLabel": "시간",
+                     "ready": "준비 완료"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "메모리",
+                     "seriesLabel": "사용된 호스트 메모리",
+                     "y1AxisLabel": "사용된 호스트 메모리(GB)",
+                     "x1AxisLabel": "시간",
+                     "x2AxisLabel": "시간"
+                  }
+               },
+               "disk": {
+                  "usage": {
+                     "dropdownTitle": "디스크",
+                     "y1AxisLabel": "디스크 읽기/쓰기 속도(MB/s)",
+                     "y2AxisLabel": "지연 시간(ms)",
+                     "aggregateSeriesLabel": "Disk I/O 속도(집계)",
+                     "readRateSeriesLabel": "총 읽기 속도",
+                     "writeRateSeriesLabel": "총 쓰기 속도",
+                     "maxLatencySeriesLabel": "최대 지연 시간",
+                     "x1AxisLabel": "시간"
+                  }
+               },
+               "network": {
+                  "usage": {
+                     "dropdownTitle": "네트워크",
+                     "usageSeriesLabel": "총 네트워크 사용량",
+                     "transmitSeriesLabel": "총 전송 속도",
+                     "receiveSeriesLabel": "총 수신 속도",
+                     "y1AxisLabel": "전송/수신 속도(Mbps)",
+                     "y2AxisLabel": "수량",
+                     "xAxisLabel": "시간"
+                  }
+               },
+               "scale": {
+                  "lastHour": "최근 1시간"
+               }
+            }
+         },
+         "events": {
+            "type": "유형",
+            "time": "시간",
+            "virtualmachine": "가상 시스템",
+            "noEvents": "이벤트 없음"
+         },
+         "tasks": {
+            "alt": "작업",
+            "key": "키",
+            "noTasks": "작업 없음",
+            "description": "설명",
+            "host": "이 호스트",
+            "state": "상태"
+         },
+         "notifications": {
+            "suggested": "제안된 작업:",
+            "noNotification": "알림 없음",
+            "unknownState": {
+               "message": "가상 시스템이 알 수 없는 상태에 있습니다.",
+               "suggested-action": "VM 전원 주기를 적용하거나 ESXi 호스트에서 호스팅된 에이전트를 다시 시작하면 도움이 될 수 있습니다."
+            },
+            "guestOther": {
+               "message": "이 가상 시스템의 게스트 OS가 현재 '기타'로 설정되어 있습니다.",
+               "suggested-action": "게스트별 최적화를 허용하고 VMware Tools를 설치할 수 있게 하려면 올바른 게스트 OS를 지정해야 합니다."
+            },
+            "guestMismatch": {
+               "message": "이 가상 시스템에 대해 구성된 게스트 운영 체제({{assigned}})가 현재 실행 중인 게스트({{reported}})와 일치하지 않습니다.",
+               "suggested-action": "게스트별 최적화를 허용하려면 올바른 게스트 OS 지정해야 합니다."
+            },
+            "VmDiskConsolidationNeeded": {
+               "message": "이 가상 시스템에 대해 디스크를 통합해야 합니다.",
+               "suggested-action": "성능을 높이고 디스크 활용도를 최적화하기 위해 디스크를 통합해야 합니다."
+            },
+            "questionPending": {
+               "message": "이 VM에는 응답이 필요한 보류 중인 질문이 있습니다.",
+               "suggested-action": "전원 켜기 작업을 완료하려면 질문에 응답하십시오."
+            },
+            "orphanedNetwork": {
+               "message": "이 VM은 존재하지 않는 네트워크 포트 그룹 <em>{{name}}</em>에 연결되어 있습니다.",
+               "suggested-action": "이 VM을 편집하고 다른 네트워크에 연결하십시오."
+            },
+            "toolsNotInstalled": {
+               "message": "이 가상 시스템에 VMware Tools가 설치되어 있지 않습니다.",
+               "suggested-action": "VMware Tools를 사용하면 자세한 게스트 정보를 표시할 수 있을 뿐만 아니라 게스트 OS에서 정상 종료, 재부팅 같은 작업을 수행할 수 있습니다. VMware Tools를 설치해야 합니다."
+            },
+            "toolsOld": {
+               "message": "이 가상 시스템의 VMware Tools가 오래되었습니다.",
+               "suggested-action": "VMware Tools를 업그레이드하면 개선된 기능과 안정성을 제공할 수 있습니다."
+            },
+            "ftSecondary": {
+               "message": "이 가상 시스템은 무장애 쌍의 보조 VM으로 작동합니다. 이 VM에서 구성을 수행할 수 없습니다.",
+               "suggested-action": ""
+            }
+         }
+      },
+      "operations": {
+         "notifications": {
+            "failedToPowerOn": "가상 시스템 {{name}}의 전원을 켜지 못했습니다. {{reason}} 자세한 정보를 보려면 여기를 클릭하십시오.",
+            "failedToPowerOff": "가상 시스템 {{name}}의 전원을 끄지 못했습니다. {{reason}}",
+            "failedToRestart": "가상 시스템 {{name}}을(를) 재설정하지 못했습니다. {{reason}}",
+            "failedToRename": "가상 시스템 {{name}}의 이름을 변경하지 못했습니다. {{reason}}",
+            "failedToCreate": "가상 시스템 {{name}}을(를) 생성하지 못했습니다. {{reason}}",
+            "failedToDelete": "가상 시스템 {{name}}을(를) 삭제하지 못했습니다. {{reason}}",
+            "failedToSaveNotes": "가상 시스템 {{name}}에 대한 노트를 저장하지 못했습니다. {{reason}}",
+            "failedToReconfig": "가상 시스템 {{name}}을(를) 재구성하지 못했습니다. {{reason}}",
+            "failedToSuspend": "가상 시스템 {{name}}을(를) 일시 중단하지 못했습니다. {{reason}}"
+         }
+      },
+      "banner": {
+         "guestOS": "게스트 OS",
+         "compatibility": "호환성",
+         "vmwaretools": "VMware Tools",
+         "hostName": "호스트 이름",
+         "cpus": "CPU",
+         "cpuUsage": "CPU 활용도",
+         "memory": "메모리",
+         "memoryUsage": "메모리 사용량",
+         "diskUsage": "디스크 사용량",
+         "metrics": {
+            "cpu": "CPU",
+            "memory": "메모리",
+            "storage": "스토리지"
+         }
+      },
+      "edit": {
+         "title": "설정 편집",
+         "titleWithName": "설정 편집 - {{name}}",
+         "rejectLabel": "취소",
+         "tabs": {
+            "hardware": {
+               "label": "가상 하드웨어",
+               "tooltip": "가상 하드웨어"
+            },
+            "options": {
+               "label": "VM 옵션",
+               "tooltip": "VM 옵션"
+            }
+         },
+         "compatibility": "호환성:",
+         "save": "저장",
+         "notification": {
+            "info": "가상 시스템 {{name}}이(가) 재구성되었습니다."
+         },
+         "powerOptions": {
+            "stop": {
+               "hard": "전원 끄기",
+               "soft": "게스트 종료",
+               "preset": "시스템 기본값"
+            },
+            "pause": {
+               "hard": "일시 중단",
+               "soft": "대기 모드로 게스트 전환",
+               "preset": "시스템 기본값"
+            },
+            "restart": {
+               "hard": "재설정",
+               "soft": "게스트 다시 시작",
+               "preset": "시스템 기본값"
+            }
+         }
+      },
+      "create": {
+         "new": {
+            "label": "새 가상 시스템 생성",
+            "description": "이 옵션은 새 가상 시스템을 생성하는 과정을 안내합니다. 프로세서, 메모리, 네트워크 연결 및 스토리지를 사용자 지정할 수 있습니다. 생성 후에는 게스트 운영 체제를 설치해야 합니다."
+         },
+         "clone": {
+            "label": "기존 VM 복제",
+            "description": "기존 가상 시스템의 복제를 생성합니다."
+         },
+         "ovf": {
+            "label": "OVF 또는 OVA 파일에서 가상 시스템 배포",
+            "description": "이 옵션은 OVF 및 VMDK 파일에서 가상 시스템을 생성하는 프로세스를 안내합니다."
+         },
+         "register": {
+            "label": "기존 가상 시스템 등록",
+            "description": "이 옵션은 데이터스토어에 이미 있는 가상 시스템을 등록하는 과정을 안내합니다."
+         }
+      },
+      "deleteVMConfirmation": "다음 가상 시스템을 삭제하시겠습니까?",
+      "state": {
+         "poweredOn": "전원 켜짐",
+         "poweredOff": "전원 꺼짐",
+         "suspended": "일시 중단됨",
+         "undefined": "알 수 없음"
+      },
+      "tools": {
+         "state": {
+            "toolsOk": "설치되었으며 실행 중임",
+            "toolsNotRunning": "설치되었지만 실행 중이 아님",
+            "toolsNotInstalled": "설치 안 됨",
+            "toolsOld": "Tools가 오래됨 - 이 게스트 내에서 Tools를 업그레이드해야 함"
+         },
+         "installed": {
+            "true": "예",
+            "false": "아니요"
+         },
+         "running": {
+            "guestToolsRunning": "예",
+            "guestToolsNotRunning": "아니요"
+         }
+      },
+      "hardwareVersion": {
+         "vmx-02": {
+            "label":"ESX 2.0.2 이상(VM 버전 2)",
+            "desc": ""
+         },
+         "vmx-03": {
+            "label":"ESX 2.x 이상(VM 버전 3)",
+            "desc": ""
+         },
+         "vmx-04": {
+            "label":"ESX/ESXi 3.5 이상(VM 버전 4)",
+            "desc": "이 가상 시스템은 ESXi 4.x, ESXi 5.0, ESXi 5.1 및 ESXi 5.5와도 호환되는 하드웨어 버전 4를 사용합니다. 이 옵션을 선택할 경우 일부 가상 시스템 하드웨어 기능을 사용할 수 없습니다."
+         },
+         "vmx-06": {
+            "label":"Workstation 6(VM 버전 6)",
+            "desc": ""
+         },
+         "vmx-07": {
+            "label":"ESX/ESXi 4.0 이상(VM 버전 7)",
+            "desc": "이 가상 시스템은 ESXi 5.0, ESXi 5.1, ESXi 5.5 및 ESXi 6.0과도 호환되는 하드웨어 버전 7을 사용합니다. 이 옵션을 선택할 경우 일부 가상 시스템 하드웨어 기능을 사용할 수 없습니다."
+         },
+         "vmx-08": {
+            "label":"ESXi 5.0 이상(VM 버전 8)",
+            "desc": "이 가상 시스템은 ESXi 5.1, ESXi 5.5 및 ESXi 6.0과도 호환되는 하드웨어 버전 8을 사용합니다. 이 옵션을 선택할 경우 일부 가상 시스템 하드웨어 기능을 사용할 수 없습니다."
+         },
+         "vmx-09": {
+            "label":"ESXi 5.1 이상(VM 버전 9)",
+            "desc": "이 가상 시스템은 ESXi 5.5 및 ESXi 6.0과도 호환되는 하드웨어 버전 9를 사용합니다."
+         },
+         "vmx-10": {
+            "label":"ESXi 5.5 이상(VM 버전 10)",
+            "desc": "이 가상 시스템은 ESXi 6.0과도 호환되는 하드웨어 버전 10을 사용합니다."
+         },
+         "vmx-11": {
+            "label":"ESXi 6.0 이상(VM 버전 11)",
+            "desc": "이 가상 시스템은 하드웨어 버전 11을 사용하며 ESXi 6.0에서 사용 가능한 최신 기능과 최상의 성능을 제공합니다."
+         },
+         "vmx-12": {
+            "label":"Workstation 12(VM 버전 12)",
+            "desc": "이 가상 시스템은 하드웨어 버전 12를 사용하며 Workstation 12에서 사용 가능한 최신 기능과 최상의 성능을 제공합니다."
+         },
+         "vmx-13": {
+            "label":"ESXi 6.5 이상(VM 버전 13)",
+            "desc": "이 가상 시스템은 하드웨어 버전 13을 사용하며 ESXi 6.5에서 사용 가능한 최신 기능과 최상의 성능을 제공합니다."
+         },
+         "vmx-14": {
+            "label":"ESXi 6.x 이상(VM 버전 14)",
+            "desc": "이 가상 시스템은 하드웨어 버전 14를 사용하며 ESXi 6.x에서 사용 가능한 최신 기능과 최상의 성능을 제공합니다."
+         }
+      },
+      "wizard": {
+         "title": "새 가상 시스템",
+         "registerTitle": "가상 시스템 등록",
+         "cloneTitle": "가상 시스템 복제",
+         "compatibility": "호환성",
+         "creationType": {
+            "title": "생성 유형 선택",
+            "description": "가상 시스템을 어떻게 생성하시겠습니까?",
+            "select": "생성 유형 선택",
+            "warnNestedESXi": "VMware는 운영 환경에서 중첩된 ESXi/ESX 서버의 실행을 지원하지 않습니다. 자세한 내용은 <a href=\"{{kbURL}}\" target=\"_blank\">이</a> KB 문서를 참조하십시오."
+         },
+         "basics": {
+            "title": "이름 및 게스트 OS 선택",
+            "description": "고유한 이름 및 OS 지정",
+            "name": {
+               "label": "가상 시스템의 이름을 입력하십시오.",
+               "placeholder": "이름",
+               "desc": "가상 시스템 이름에는 최대 80자를 포함할 수 있습니다. 이름은 각 ESXi 인스턴스 내에서 고유해야 합니다."
+            },
+            "desc": "여기서 게스트 운영 체제를 식별하면 마법사에서 해당 운영 체제 설치에 적합한 기본값을 제공할 수 있습니다.",
+            "compatibility": "호환성",
+            "selectOSFamily": "게스트 OS 제품군 선택",
+            "guestOSFamily": "게스트 OS 제품군",
+            "selectOSVersion": "게스트 OS 버전 선택",
+            "guestOSVersion": "게스트 OS 버전",
+            "osVersion": {
+               "windowsGuest": "Windows",
+               "linuxGuest": "Linux",
+               "darwinGuestFamily": "Mac OS",
+               "solarisGuest": "Solaris",
+               "netwareGuest": "Novel Netware",
+               "otherGuestFamily": "기타"
+            },
+            "validation": {
+               "emptyName": "가상 시스템의 이름을 입력하십시오.",
+               "invalidName": "가상 시스템의 이름에는 큰따옴표, 콜론 또는 슬래시 문자가 포함될 수 없습니다.",
+               "nameSize": "가상 시스템의 이름은 {{min}}자에서 {{max}}자 사이여야 합니다. 현재 길이는 {{length}}자입니다. 이름을 수정하십시오.",
+               "guestOSFamily": "게스트 OS 제품군을 선택하십시오.",
+               "guestOSVersion": "게스트 OS 버전을 선택하십시오.",
+               "existingName": "이 호스트에 동일한 이름을 가진 가상 시스템 또는 템플릿이 있습니다. 새 이름을 입력하십시오."
+            }
+         },
+         "storage": {
+            "title": "스토리지 선택",
+            "description": "구성 및 디스크 파일을 저장할 데이터스토어를 선택하십시오.",
+            "desc": "다음 데이터스토어는 선택한 대상 리소스에서 액세스할 수 있습니다. 가상 시스템 구성 파일 및 모든 가상 디스크에 대한 대상 데이터스토어를 선택하십시오.",
+            "policy": {
+               "default": "데이터스토어 기본값",
+               "vvol": "VVol 요구 사항 없음 정책",
+               "vsan": "Virtual SAN 기본 스토리지 정책"
+            },
+            "grid": {
+               "name": "이름",
+               "capacity": "용량",
+               "free": "사용 가능",
+               "type": "유형",
+               "thinProvisioning": "씬 프로비저닝",
+               "access": "액세스"
+            },
+            "validation": {
+               "datastore": "가상 시스템 파일을 저장할 데이터스토어를 선택합니다."
+            },
+            "status": {
+               "ova": "OVA를 추출하는 중입니다. 이 작업은 시간이 걸릴 수 있습니다.",
+               "ovf": "OVF 데이터를 읽는 중...",
+               "ovfHasCompressedDisks": "배포하려는 VM에 압축된 디스크 이미지가 포함되어 있습니다. Host Client에서 현재 압축된 디스크 이미지가 포함된 VM을 배포할 수 없습니다. OVFTool 또는 vCenter Server를 사용하여 이 VM을 배포해 보십시오."
+            }
+         },
+         "hardware": {
+            "title": "설정 사용자 지정",
+            "description": "가상 시스템 하드웨어 및 가상 시스템 추가 옵션을 구성합니다.",
+            "tabs": {
+               "virtualhardware": {
+                  "label": "가상 하드웨어",
+                  "tooltip": "가상 하드웨어"
+               },
+               "vmoptions": {
+                  "label": "VM 옵션",
+                  "tooltip": "VM 옵션"
+               }
+            },
+            "virtualhardware": {
+               "managedVC": "이 호스트의 리소스를 vCenter Server에서 관리하기 때문에 일부 구성 옵션이 사용되지 않도록 설정되어 있습니다. 이 VM의 리소스 설정을 변경하려면 vCenter Server에서 변경하십시오.",
+               "signpost": "가상 시스템에 사용할 수 있는 가상 CPU는 호스트에서 라이센스가 부여된 CPU의 수와 게스트 OS에서 지원되는 CPU 수에 따라 달라집니다. VMware 다중 코어 가상 CPU 기능을 사용하려면 게스트 운영 체제 EULA 요구 사항을 반드시 준수해야 합니다.",
+               "virtualizationSignpost": "기본 프로세서의 하드웨어 지원 가상화 기능을 이 게스트 운영 체제에 제공하여 CPU 가상화 기능을 최대로 활용합니다.",
+               "schedulingAffinitySignPost": "<p>이 가상 시스템에 대한 논리적 프로세서 선호도를 선택합니다.</p><p>\"-\"를 사용하여 범위를 지정하고 \",\"를 사용하여 값을 구분하십시오. 예를 들어 \"0, 2, 4-7\"은 프로세서 0, 2, 4, 5, 6 및 7을 나타냅니다.</p><p>선호도 설정을 제거하려면 해당 문자열을 지우십시오.</p>",
+               "cpuMMUSignPost": "<p>ESXi는 프로세서 유형 및 가상 시스템을 기준으로 가상 시스템에서 가상화에 대한 하드웨어 지원을 사용해야 하는지 여부를 자동으로 확인할 수 있습니다. 하지만 일부 작업 부하의 경우 자동 선택을 무시하면 성능이 향상될 수 있습니다.</p><p>참고: 선택한 설정이 호스트에서 지원되지 않거나 기존의 가상 시스템 설정과 충돌하는 경우 해당 설정이 무시되고 \"자동\" 옵션이 사용됩니다.</p>",
+               "cpu": {
+                  "label": "CPU",
+                  "cores": {
+                     "label": "소켓당 코어 수",
+                     "desc": "소켓 수:"
+                  },
+                  "hotPlug": {
+                     "label": "CPU 핫 플러그",
+                     "desc": "CPU 무중단 추가 사용"
+                  },
+                  "reservation": {
+                     "label": "예약",
+                     "unit": "예약 단위"
+                  },
+                  "limit": {
+                     "label": "제한",
+                     "unit": "제한 단위"
+                  },
+                  "shares": {
+                     "label": "공유",
+                     "unit": "공유 단위",
+                     "low": "낮음",
+                     "normal": "보통",
+                     "high": "높음",
+                     "custom": "사용자 지정"
+                  },
+                  "hardwareVirtualization": {
+                     "label": "하드웨어 가상화",
+                     "desc": "게스트 OS에 하드웨어 지원 가상화 표시"
+                  },
+                  "performanceCounters": {
+                     "label": "성능 카운터",
+                     "desc": "가상화된 CPU 성능 카운터 사용"
+                  },
+                  "schedulingAffinity": {
+                     "label": "스케줄링 선호도",
+                     "value": "스케줄링 선호도 값",
+                     "hyper": "하이퍼스레딩 상태:",
+                     "available": "사용 가능한 CPU 수:",
+                     "logical": "(논리적 CPU 수)"
+                  },
+                  "cpuMmuVirtualization": {
+                     "label": "CPU/MMU 가상화",
+                     "auto": "자동",
+                     "software": "소프트웨어 CPU 및 MMU",
+                     "hardwareCPU": "하드웨어 CPU, 소프트웨어 MMU",
+                     "hardwareBoth": "하드웨어 CPU 및 MMU"
+                  },
+                  "validation": {
+                     "invalidReservation": "잘못된 CPU 예약 값입니다.",
+                     "badReservation": "CPU 예약은 0MHz에서 {{maxMhz}}MHz 사이여야 합니다.",
+                     "NaNReservation": "CPU 예약에는 숫자 값만 사용할 수 있습니다.",
+                     "negativeReservation": "CPU 예약에는 음수 값을 사용할 수 없습니다.",
+                     "nonIntegerReservation": "CPU 예약에는 정수 값만 사용할 수 있습니다.",
+                     "NaNLimit": "CPU 제한에는 숫자 값만 사용할 수 있습니다.",
+                     "negativeLimit": "CPU 제한에는 음수 값을 사용할 수 없습니다.",
+                     "invalidLimit": "CPU 제한은 예약보다 크거나 같아야 합니다.",
+                     "invalidShares": "잘못된 [CPU 공유] 값입니다.",
+                     "invalidAffinity": "잘못된 CPU 선호도 값입니다."
+                  }
+               },
+               "memory": {
+                  "label": "메모리",
+                  "unit": "메모리 단위",
+                  "ram": {
+                     "label" :"RAM",
+                     "unit": "RAM 단위"
+                  },
+                  "reservation": {
+                     "label": "예약",
+                     "unit": "예약 단위",
+                     "desc": "모든 게스트 메모리 예약(모두 잠김)",
+                     "validation" : {
+                        "emptyValue" : "메모리 예약은 비워둘 수 없습니다.",
+                        "NaN" : "메모리 예약에는 숫자 값만 사용할 수 있습니다.",
+                        "negativeValue" : "메모리 예약에는 음수 값 {{value}}을(를) 사용할 수 없습니다.",
+                        "floatValue" : "메모리 예약에는 정수 값만 사용할 수 있습니다."
+                     }
+                  },
+                  "limit": {
+                     "label": "제한",
+                     "unit": "제한 단위",
+                     "validation" : {
+                        "emptyValue" : "메모리 제한은 비워둘 수 없습니다.",
+                        "NaN" : "메모리 제한에는 숫자 값만 사용할 수 있습니다.",
+                        "negativeValue" : "메모리 제한에는 음수 값 {{value}}을(를) 사용할 수 없습니다.",
+                        "limitLow" : "메모리 제한은 예약보다 크거나 같아야 합니다.",
+                        "floatValue" : "메모리 제한에는 정수 값만 사용할 수 있습니다."
+                     }
+                  },
+                  "shares": {
+                     "label": "공유",
+                     "unit": "공유 단위"
+                  },
+                  "hotPlug": {
+                     "label": "메모리 핫 플러그",
+                     "desc": "사용"
+                  },
+                  "validation": {
+                     "invalidRAM": "잘못된 RAM 값입니다.",
+                     "badRAM": "메모리 값은 4이 배수여야 합니다.",
+                     "lowCapacity": "원래 값보다 큰 메모리 값을 입력하십시오.",
+                     "highRAM": "지정된 메모리가 호스트에서 사용 가능한 양보다 큽니다. 메모리 오버 커밋으로 인해 가상 시스템의 성능에 영향을 미칠 수 있습니다.",
+                     "lowRAM": "이 게스트에 권장되는 최소 메모리는 {{min}}입니다. 양을 더 적게 지정하면 불안정해지거나 부팅되지 않을 수 있습니다.",
+                     "maxRAM": "메모리는 {{max}}보다 작거나 같아야 합니다.",
+                     "invalidReservation": "잘못된 메모리 예약 값입니다.",
+                     "reservationHigh": "메모리 예약은 {{max}}보다 작거나 같아야 합니다. 입력한 숫자({{value}})가 너무 큽니다.",
+                     "invalidLimit": "잘못된 메모리 제한",
+                     "limitLow": "메모리 제한은 예약보다 크거나 같아야 합니다.",
+                     "invalidShares": "잘못된 메모리 공유 값입니다."
+                  }
+               },
+               "sound": {
+                  "VirtualHdAudioCard": "HD 오디오",
+                  "VirtualSoundBlaster16": "Sound Blaster 16",
+                  "VirtualEnsoniq1371": "Ensoniq 1371",
+                  "type": "유형",
+                  "title": "사운드 카드"
+               },
+               "video":{
+                  "label": "비디오 카드",
+                  "settings": {
+                     "custom": "사용자 지정 설정 지정",
+                     "auto": "설정 자동 감지"
+                  },
+                  "display": "디스플레이 수",
+                  "memory": {
+                     "label" :"총 비디오 메모리",
+                     "unit": "MB",
+                     "calculator":"비디오 메모리 계산기",
+                     "dialog": {
+                        "title": "비디오 메모리 계산기",
+                        "desc": "게스트가 지원해야 하는 최대 디스플레이 수 및 해상도를 기준으로 필요한 비디오 메모리를 계산합니다.",
+                        "display": "디스플레이 수:",
+                        "resolution": "해상도:",
+                        "total": "총 비디오 메모리:",
+                        "ok": "확인",
+                        "cancel": "취소"
+                     }
+                  },
+                  "3d": {
+                     "graphics": {
+                        "label":"3D 그래픽",
+                        "desc": "3D 지원 사용"
+                     },
+                     "renderer": {
+                        "label": "3D 렌더러",
+                        "automatic": "자동",
+                        "software": "소프트웨어",
+                        "hardware": "하드웨어"
+                     },
+                     "memory":{
+                        "label": "3D 메모리",
+                        "unit": "MB"
+                     }
+                  }
+               },
+               "hd": {
+                  "title": "하드 디스크 {{size}}",
+                  "label": "하드 디스크",
+                  "size": "하드 디스크 크기",
+                  "new": "새 하드 디스크",
+                  "unit": "하드 디스크 단위",
+                  "delete": "데이터스토어에서 파일 삭제",
+                  "device": "디바이스 경로",
+                  "maximumsize": "최대 크기",
+                  "location": "위치",
+                  "selectDirectory": "디렉토리 선택",
+                  "browse": "찾아보기...",
+                  "diskProvisioning": "디스크 프로비저닝",
+                  "thin": "씬 프로비저닝됨",
+                  "thick": "씩 프로비저닝됨, 느리게 비워짐",
+                  "eager": "씩 프로비저닝됨, 빠르게 비워짐",
+                  "type": "유형",
+                  "diskFile": "디스크 파일",
+                  "shares": {
+                     "label": "공유",
+                     "type": "공유 유형",
+                     "value": "공유 값",
+                     "unit": "공유 단위"
+                  },
+                  "limitIOP": "제한 - IOPs",
+                  "virtualFlash": {
+                     "label": "가상 플래시 읽기 캐시",
+                     "unit": "가상 플래시 읽기 캐시 단위"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "가상 디바이스 노드",
+                     "unit": "가상 디바이스 노드 단위"
+                  },
+                  "diskCompatibility": {
+                    "label": "디스크 호환성",
+                    "physical": "물리적",
+                    "virtual": "가상"
+                  },
+                  "diskSharing": {
+                     "label": "공유",
+                     "sharingMultiWriter": "다중 기록기 공유",
+                     "sharingNone": "없음",
+                     "info": "디스크 공유는 빠르게 비워지는 씩 프로비저닝된 디스크에만 지원됩니다."
+                  },
+                  "diskMode": {
+                     "label": "디스크 모드",
+                     "dependent": "종속",
+                     "independentPersistent": "독립 - 영구",
+                     "independentNonpersistent" :"독립 - 비영구"
+                  },
+                  "provisioning": {
+                     "thin": "씬 프로비저닝됨",
+                     "thickEager": "씩 프로비저닝됨, 빠르게 비워짐",
+                     "thickLazy": "씩 프로비저닝됨, 느리게 비워짐"
+                  },
+                  "menu": {
+                     "new": {
+                        "label": "새 하드 디스크",
+                        "tooltip": "가상 시스템에 새 하드 디스크를 추가합니다."
+                     },
+                     "existing": {
+                        "label": "기존 하드 디스크",
+                        "tooltip": "가상 시스템에 기존 하드 디스크를 추가합니다."
+                     },
+                     "rdm": {
+                        "label": "새 RDM 추가",
+                        "tooltip": "가상 시스템에 RDM을 추가합니다."
+                     }
+                  },
+                  "validation": {
+                     "numDisks": "이 가상 시스템 구성에서는 {{size}} 하드 디스크만 지원합니다.",
+                     "missingDatastore": "{{disk}}에 대한 데이터스토어를 찾지 못했습니다. 해당 구성을 수정하지 않으면 이 디스크는 무시됩니다.",
+                     "invalidHD": "잘못된 디스크 크기 값입니다.",
+                     "lowCapacity": "원래 용량보다 큰 디스크 크기를 입력하십시오.",
+                     "highCapacity": "지정한 디스크 크기가 데이터스토어에서 사용 가능한 양보다 큽니다. 디스크 공간 오버 커밋으로 인해 데이터스토어의 모든 공간이 사용되어 가상 시스템이 차단될 수 있습니다. 계속하기 전에 데이터스토어 용량을 늘리거나 디스크 크기를 줄여야 합니다.",
+                     "highCapacityThick": "지정한 디스크 크기가 데이터스토어에서 사용 가능한 양보다 큽니다. 씩 프로비저닝된 디스크를 사용하는 경우에는 디스크 공간을 오버 커밋할 수 없습니다. 계속하기 전에 데이터스토어 용량을 늘리거나 디스크 크기를 줄여야 합니다.",
+                     "invalidController": "디스크에 대해 올바른 컨트롤러를 선택하십시오.",
+                     "invalidShares": "잘못된 디스크 공유 값입니다.",
+                     "limitIOPsEmpty" : "디스크 제한 IOPs는 비워둘 수 없습니다.",
+                     "limitIOPsNaN" : "잘못된 디스크 제한 IOPs",
+                     "limitIOPsNegative" : "디스크 제한 IOPs에는 음수 값을 사용할 수 없습니다.",
+                     "limitIOPsNonInteger" : "디스크 제한 IOPs에는 정수 값만 사용할 수 있습니다.",
+                     "invalidReadCache": "잘못된 읽기 캐시 값입니다.",
+                     "badReservation": "예약은 {{min}}에서 {{max}} 사이여야 합니다. 가상 Flash Read Cache를 사용하지 않도록 설정하려면 0을 입력하십시오.",
+                     "noAvailableLocation": "선택한 컨트롤러에 사용 가능한 위치가 없습니다. 다른 컨트롤러를 선택하십시오.",
+                     "locationInUse": "다른 디바이스에서 이 위치를 사용하고 있습니다. 사용 가능한 다음 위치를 선택하십시오."
+                  }
+               },
+               "pci": {
+                  "title": "PCI 디바이스 {{size}}",
+                  "new": "새 PCI 디바이스",
+                  "physical": {
+                     "label": "물리적 PCI/PCIe 디바이스",
+                     "warning": "메모리 예약이 메모리 크기와 같아져야 VM의 전원이 켜집니다.",
+                     "button": "모든 메모리 예약",
+                     "note": "PCI/PCIe 패스스루 디바이스가 있으면 일부 가상 시스템의 작업을 사용할 수 없습니다. 이런 가상 시스템에 대해 일시 중단, vMotion으로 마이그레이션, 스냅샷 생성 또는 복원을 실행할 수 없습니다."
+                  }
+               },
+               "ide": {
+                  "label": "IDE 컨트롤러 {{index}}",
+                  "master": "마스터",
+                  "slave": "슬레이브"
+               },
+               "scsi": {
+                  "title": "SCSI 컨트롤러 {{size}}",
+                  "new": "새 SCSI 컨트롤러",
+                  "type": "SCSI 유형",
+                  "label": "SCSI 컨트롤러 {{index}}",
+                  "busSharing": {
+                     "label": "SCSI 버스 공유",
+                     "none": "없음",
+                     "virtual": "가상",
+                     "physical": "물리적"
+                  },
+                  "validation": {
+                     "diskAttached": "하드 디스크가 이 컨트롤러에 아직도 연결되어 있습니다. 먼저 다시 할당하십시오.",
+                     "maxControllersReached": "최대 SCSI 컨트롤러 수({{max}})에 도달했습니다."
+                  }
+               },
+               "nvme": {
+                  "title": "NVMe 컨트롤러 {{size}}",
+                  "new": "새 NVMe 컨트롤러",
+                  "label": "NVMe 컨트롤러 {{index}}",
+                  "validation": {
+                     "diskAttached": "하드 디스크가 이 컨트롤러에 아직도 연결되어 있습니다. 먼저 다시 할당하십시오.",
+                     "maxControllersReached": "최대 NVMe 컨트롤러 수({{max}})에 도달했습니다."
+                  }
+               },
+               "sata": {
+                  "title": "SATA 컨트롤러 {{size}}",
+                  "new": "새 SATA 컨트롤러",
+                  "label": "SATA 컨트롤러 {{index}}",
+                  "validation": {
+                     "diskAttached": "하드 디스크가 이 컨트롤러에 아직도 연결되어 있습니다. 먼저 다시 할당하십시오.",
+                     "cdromAttached": "CD/DVD 드라이브가 이 컨트롤러에 아직도 연결되어 있습니다. 먼저 다시 할당하십시오.",
+                     "maxControllersReached": "최대 SATA 컨트롤러 수({{max}})에 도달했습니다."
+                  }
+               },
+               "usbController": {
+                  "title": "USB 컨트롤러 {{size}}",
+                  "new": "새 USB 컨트롤러",
+                  "settings": "설정",
+                  "warnUnsupported": "선택한 USB 컨트롤러는 이 게스트 운영 체제에서 지원되지 않습니다.",
+                  "validation": {
+                     "numUSBs": "이 가상 시스템 구성에서는 {{size}} USB 디바이스만 지원합니다.",
+                     "maxUSB2Devices": "이 가상 시스템 구성에서는 {{max}} USB 2.0 디바이스만 지원합니다.",
+                     "maxUSB3Devices": "이 가상 시스템 구성에서는 {{max}} USB 3.0 디바이스만 지원합니다."
+                  }
+               },
+               "usbDevice": {
+                  "title": "USB 디바이스 {{size}}",
+                  "new": "새 USB 디바이스",
+                  "deviceNotFound": "디바이스를 찾을 수 없음",
+                  "connect": "연결",
+                  "validation": {
+                     "duplicateUsb": "하나의 USB 디바이스를 두 번 이상 추가할 수 없습니다.",
+                     "tooMany": "추가할 수 있는 USB 디바이스가 더 이상 없습니다.",
+                     "maxDevices": "USB 디바이스의 최대 수는 20입니다."
+                  }
+               },
+               "serialPort": {
+                  "title": "직렬 포트 {{size}}",
+                  "new": "새 직렬 포트",
+                  "status": "상태",
+                  "connect": "연결",
+                  "connectAt": "전원을 켤 때 연결",
+                  "connection": "연결",
+                  "physicalType": "물리적 직렬 포트 유형",
+                  "browse": "찾아보기...",
+                  "pipeName": "파이프 이름",
+                  "portURI": {
+                     "label": "포트 URI:",
+                     "desc": "가상 직렬 포트 집중 장치 사용"
+                  },
+                  "vSPCURI": "vSPC URI:",
+                  "deviceType": {
+                     "file": "출력 파일 사용",
+                     "physical": "물리적 직렬 포트 사용",
+                     "pipe": "이름이 지정된 파이프 사용",
+                     "network": "네트워크 사용",
+                     "thinprint": "ThinPrint"
+                  },
+                  "nearEnd": {
+                     "label": "근단",
+                     "client": "클라이언트",
+                     "server": "서버"
+                  },
+                  "farEnd": {
+                     "label": "원단",
+                     "vm": "가상 시스템",
+                     "process": "프로세스"
+                  },
+                  "direction": {
+                     "label": "방향",
+                     "client": "클라이언트",
+                     "server": "서버"
+                  },
+                  "validation": {
+                     "missingOutputFile": "직렬 포트의 출력 파일 이름을 입력하십시오.",
+                     "invalidOutputFile": "올바른 출력 파일 형식을 입력하십시오.",
+                     "invalidPipeName": "올바른 파이프 파일 이름을 입력하십시오.",
+                     "invalidPortUri": "&lt;protocol&gt;://&lt;ip 또는 hostname&gt;:&lt;port&gt; 형식의 올바른 포트 URI를 입력하십시오.",
+                     "invalidVSPC": "lt;protocol&gt;://&lt;ip 또는 hostname&gt;:&lt;port&gt; 형식의 올바른 가상 직렬 포트 집중 장치를 입력하십시오."
+                  }
+               },
+               "parallelPort": {
+                  "title": "병렬 포트 {{size}}",
+                  "new": "새 병렬 포트",
+                  "status": "상태",
+                  "connect": "연결",
+                  "connectAt": "전원을 켤 때 연결",
+                  "connection": "연결",
+                  "browse": "찾아보기...",
+                  "deviceType": {
+                     "file": "출력 파일 사용"
+                  },
+                  "validation": {
+                     "invalidOutputFile": "잘못된 출력 파일 형식입니다.",
+                     "missingOutputFile": "병렬 포트의 출력 파일 이름을 입력하십시오."
+                  }
+               },
+               "network": {
+                  "title": "네트워크 어댑터 {{size}}",
+                  "new": "새 네트워크 어댑터",
+                  "status": "상태",
+                  "connect": "연결",
+                  "connectAt": "전원을 켤 때 연결",
+                  "adapterType": "어댑터 유형",
+                  "physicalFunction": "물리적 기능",
+                  "virtualFunction": "가상 기능",
+                  "sriovPassthrough": "SR-IOV 패스스루",
+                  "sriovMemReserved": "메모리 예약",
+                  "passthroughAllMemReserved": "PCI 패스스루 또는 SR-IOV를 사용하도록 설정하기 위해 VM의 메모리가 예약됩니다.",
+                  "vmxnet2Enhanced": "VMXNET 2(고급)",
+                  "guestOSMTUChange": {
+                     "label": "게스트 OS MTU 변경",
+                     "allow": "허용",
+                     "disallow": "허용 안 함"
+                  },
+                  "macAddress": "MAC 주소",
+                  "macAddressType": {
+                     "label": "MAC 주소 유형",
+                     "auto": "자동",
+                     "assigned": "할당됨",
+                     "manual": "수동"
+                  },
+                  "validation": {
+                     "missingMACAddress": "MAC 주소는 필수입니다.",
+                     "invalidMACAddress": "잘못된 MAC 주소",
+                     "missingPortgroup": "네트워크 어댑터 {{index}}의 포트 그룹 {{missing}}을(를) 찾을 수 없습니다. {{assigned}}에 할당되었습니다.",
+                     "cantAssign": "사용 후 삭제되지 않는 분산 가상 포트 그룹({{name}})에 연결된 네트워크 어댑터를 추가하거나 재구성하는 작업은 지원되지 않습니다."
+                  }
+               },
+               "floppy": {
+                  "title": "플로피 드라이브 {{size}}",
+                  "new": "새 플로피 드라이브",
+                  "status": "상태",
+                  "connect": "연결",
+                  "connectAt": "전원을 켤 때 연결",
+                  "browse": "찾아보기...",
+                  "unsupportedLabel": "지원되지 않음",
+                  "unsupported": "VMware Host Client를 사용하는 경우 클라이언트 플로피 디바이스는 지원되지 않습니다. 클라이언트 디바이스를 사용하려면 vSphere Web Client를 사용하십시오.\n\n이 디바이스는 무시됩니다.",
+                  "media": {
+                     "label": "플로피 미디어",
+                     "desc": "연결하려면 VM의 전원을 켜고 [요약] 탭의 [VM 하드웨어] 패널에서 미디어를 선택하십시오."
+                  },
+                  "deviceType": {
+                     "client": "클라이언트 디바이스",
+                     "floppy": "기존 플로피 이미지 사용"
+                  },
+                  "validation": {
+                     "numFloppy": "이 가상 시스템 구성에서는 {{size}} 플로피 드라이브만 지원합니다.",
+                     "missingImage": "플로피 드라이브의 이미지를 선택하십시오."
+                  }
+               },
+               "cdrom": {
+                  "title": "CD/DVD 드라이브 {{size}}",
+                  "new": "새 CD/DVD 드라이브",
+                  "status": "상태",
+                  "connect": "연결",
+                  "connectAt": "전원을 켤 때 연결",
+                  "browse": "찾아보기...",
+                  "type": "유형",
+                  "atapiDevice": "호스트 디바이스",
+                  "unsupportedLabel": "지원되지 않음",
+                  "unsupported": "VMware Host Client를 사용하는 경우 클라이언트 CD/DVD 디바이스는 지원되지 않습니다. 클라이언트 디바이스를 사용하려면 vSphere Web Client를 사용하십시오.\n\n이 디바이스는 무시됩니다.",
+                  "media": {
+                     "label": "CD/DVD 미디어",
+                     "desc": "연결하려면 VM의 전원을 켜고 [요약] 탭의 [VM 하드웨어] 패널에서 미디어를 선택하십시오."
+                  },
+                  "deviceType": {
+                     "client": "클라이언트 디바이스",
+                     "host": "호스트 디바이스",
+                     "iso": "데이터스토어 ISO 파일"
+                  },
+                  "deviceMode": {
+                     "label": "디바이스 모드",
+                     "controller": "디바이스 모드 컨트롤러",
+                     "location": "디바이스 모드 위치",
+                     "emulate": "CD-ROM 에뮬레이션",
+                     "passthrough": "CD-ROM 패스스루"
+                  },
+                  "deviceNode": {
+                     "sata": "SATA 컨트롤러"
+                  },
+                  "virtualDeviceNode": {
+                     "label": "가상 디바이스 노드",
+                     "location": "컨트롤러 위치",
+                     "controller": "컨트롤러 유형"
+                  },
+                  "validation": {
+                     "missingISO": "CDROM의 ISO 이미지를 선택하십시오.",
+                     "missingDevice": "호스트 CD/DVD 디바이스를 사용할 수 없습니다. 데이터스토어 ISO와 같은 다른 CD/DVD 백업을 선택하거나 CD/DVD 드라이브를 제거하십시오.",
+                     "invalidController": "CD/DVD에 대해 올바른 컨트롤러를 선택하십시오.",
+                     "noAvailableLocation": "선택한 컨트롤러에 사용 가능한 위치가 없습니다. 다른 컨트롤러를 선택하십시오.",
+                     "locationInUse": "다른 디바이스에서 이 위치를 사용하고 있습니다. 사용 가능한 다음 위치를 선택하십시오."
+                  }
+               },
+               "actionBar": {
+                  "addHD": {
+                     "label": "하드 디스크 추가",
+                     "tooltip": "가상 시스템에 하드 디스크를 추가합니다."
+                  },
+                  "addNetwork": {
+                     "label": "네트워크 어댑터 추가",
+                     "tooltip": "가상 시스템에 네트워크 어댑터를 추가합니다."
+                  },
+                  "newHD": {
+                     "label": "새 하드 디스크",
+                     "tooltip": "가상 시스템에 새 하드 디스크를 추가합니다."
+                  },
+                  "existingHD": {
+                     "label": "기존 하드 디스크",
+                     "tooltip": "가상 시스템에 기존 하드 디스크를 추가합니다."
+                  },
+                  "rdm": {
+                     "label": "새 RDM 디스크 추가",
+                     "tooltip": "가상 시스템에 새 RDM(원시 디바이스 매핑) 디스크를 추가합니다."
+                  },
+                  "network": {
+                     "label": "네트워크 어댑터",
+                     "tooltip": "새 네트워크 어댑터를 추가합니다."
+                  },
+                  "cdrom": {
+                     "label": "CD/DVD 드라이브",
+                     "tooltip": "새 CD/DVD 드라이브 추가"
+                  },
+                  "floppy": {
+                     "label": "플로피 드라이브",
+                     "tooltip": "새 플로피 드라이브를 추가합니다."
+                  },
+                  "serial": {
+                     "label": "직렬 포트",
+                     "tooltip": "새 직렬 포트를 추가합니다."
+                  },
+                  "parallel": {
+                     "label": "병렬 포트",
+                     "tooltip": "새 병렬 포트를 추가합니다."
+                  },
+                  "usb": {
+                     "label": "USB 컨트롤러",
+                     "tooltip": "새 USB 컨트롤러 추가"
+                  },
+                  "usbDevice": {
+                     "label": "USB 디바이스",
+                     "tooltip": "새 USB 디바이스 추가"
+                  },
+                  "scsi": {
+                     "label": "SCSI 컨트롤러",
+                     "tooltip": "새 SCSI 컨트롤러를 추가합니다."
+                  },
+                  "pci": {
+                     "label": "PCI 디바이스",
+                     "tooltip": "새 PCI 디바이스 추가"
+                  },
+                  "sata": {
+                     "label": "SATA 컨트롤러",
+                     "tooltip": "새 SATA 컨트롤러를 추가합니다."
+                  },
+                  "nvme": {
+                     "label": "NVMe 컨트롤러",
+                     "tooltip": "새 NVMe 컨트롤러를 추가합니다."
+                  },
+                  "sound": {
+                     "label": "사운드 컨트롤러",
+                     "tooltip": "사운드 컨트롤러 추가"
+                  },
+                  "other": {
+                     "label": "기타 디바이스 추가",
+                     "tooltip": "이 가상 시스템에 기타 하드웨어를 추가합니다."
+                  }
+               }
+            },
+            "hdlocation": {
+               "title": "다음 데이터스토어는 선택한 대상 리소스에서 액세스할 수 있습니다. 가상 시스템 구성 파일 및 모든 가상 디스크에 대한 대상 데이터스토어를 선택하십시오.",
+               "storagePolicy": {
+                  "default": "데이터스토어 기본값",
+                  "vvol": "VVol 요구 사항 없음 정책",
+                  "vsan": "Virtual SAN 기본 스토리지 정책"
+               },
+               "grid": {
+                  "name": "이름",
+                  "capacity": "용량",
+                  "freeSpace": "사용 가능",
+                  "type": "유형",
+                  "thinProvisioning": "씬 프로비저닝",
+                  "access": "액세스"
+               },
+               "dialog": {
+                  "ok": "확인",
+                  "select": "데이터스토어 선택"
+               }
+            },
+            "vmoptions": {
+               "general": {
+                  "title": "일반 옵션",
+                  "vmname": "VM 이름:",
+                  "vmconfigfile": "VM 구성 파일",
+                  "vmworkinglocation": "VM 작동 위치",
+                  "guestOS": "게스트 OS",
+                  "guestOSVersion": "게스트 OS 버전",
+                  "remoteConsole": "VMware Remote Console 옵션",
+                  "guestOSLock": {
+                     "label": "게스트 OS 잠금",
+                     "desc": "마지막 원격 사용자가 연결을 끊으면 게스트 운영 체제 잠금"
+                  },
+                  "maxNumSessions": {
+                     "label": "최대 세션 수",
+                     "desc": "이 가상 시스템에 대한 동시 연결 수 제한",
+                     "validation" : {
+                        "invalid" : "올바른 최대 콘솔 세션 수를 지정하십시오. 사용 가능한 최대 수는 {{num}}입니다."
+                     }
+                  },
+                  "vmwareTools": {
+                     "label": "VMware Tools",
+                     "desc": "VMware Tools 설정을 보려면 확장"
+                  },
+                  "powerOperations": {
+                     "label": "전원 작업",
+                     "stop": "중지",
+                     "pause": "일시 중지",
+                     "restart": "다시 시작",
+                     "desc": "전원 켜기/VM 재개"
+                  },
+                  "vmwareToolsScript": {
+                     "label": "VMware Tools 스크립트 실행",
+                     "afterPoweringOn": "전원을 켠 후",
+                     "afterResuming": "재개 후",
+                     "beforeSuspending": "일시 중단 전",
+                     "beforeShuttingDown": "게스트 종료 전"
+                  },
+                  "toolsUpgrades": {
+                     "label": "Tools 업그레이드",
+                     "desc": "매번 전원을 켜기 전에 VMware Tools 확인 및 업그레이드"
+                  },
+                  "time": {
+                     "label": "시간",
+                     "desc": "호스트와 게스트 시간 동기화"
+                  },
+                  "powerManagement": {
+                     "label": "전원 관리",
+                     "desc": "전원 관리 설정을 보려면 확장",
+                     "standbyResponse": {
+                        "label": "대기 응답",
+                        "desc": "게스트 OS가 대기 모드로 설정될 때 가상 시스템의 응답 방법을 선택하십시오.",
+                        "suspend": "가상 시스템을 일시 중단합니다.",
+                        "standby": "게스트 OS를 대기 모드로 설정하고 가상 시스템의 전원을 켜둡니다."
+                     },
+                     "wakeOnLan": {
+                        "label": "WOL(Wake on LAN)",
+                        "desc": "가상 시스템 트래픽에 대한 WOL(Wake on LAN):",
+                        "network": "새 네트워크(VM 네트워크)"
+                     }
+                  },
+                  "bootOptions": {
+                     "label": "부팅 옵션",
+                     "desc": "부팅 옵션을 보려면 확장",
+                     "firmware": {
+                        "label": "펌웨어",
+                        "desc": "가상 시스템 부팅에 사용할 펌웨어 선택:"
+                     },
+                     "enableUEFISecureBoot": {
+                        "label": "UEFI 보안 부팅 사용",
+                        "desc": "이 VM에 대해 UEFI 보안 부팅을 사용할지 여부"
+                     },
+                     "bootDelay": {
+                        "label": "부팅 지연",
+                        "desc": "가상 시스템의 전원을 켜거나 재설정할 때마다 다음에 따라 부팅 지연:",
+                        "ms": "밀리초"
+                     },
+                     "forceBiosSetup": {
+                        "label": "BIOS 강제 설정",
+                        "desc": "다음에 가상 시스템을 부팅할 때 BIOS 설정 화면으로 강제로 이동합니다."
+                     },
+                     "failedBootRecovery": {
+                        "label": "부팅 복구 실패",
+                        "desc": "가상 시스템이 부팅 디바이스를 찾지 못할 경우 다음 시간 후에 자동으로 부팅 재시도:",
+                        "sec": "초"
+                     }
+                  },
+                  "advanced": {
+                     "label": "고급",
+                     "settings": {
+                        "label": "설정",
+                        "desc": "고급 설정을 보려면 확장",
+                        "acceleration": "가속 사용 안 함",
+                        "logging": "로깅 사용"
+                     },
+                     "debuggingStats": {
+                        "label": "디버깅 및 통계",
+                        "release": "정상 실행",
+                        "debug": "디버깅 정보 기록",
+                        "stats": "통계 기록"
+                     },
+                     "swapFileLocation": {
+                        "label": "스왑 파일 위치",
+                        "default": {
+                           "label": "기본값",
+                           "desc": " 가상 시스템이 포함된 클러스터 또는 호스트의 설정을 사용합니다."
+                        },
+                        "vmDirectory": {
+                           "label": "가상 시스템 디렉토리",
+                           "desc": "가상 시스템과 동일한 디렉토리에 스왑 파일을 저장합니다."
+                        },
+                        "datastore": {
+                           "label": "호스트에서 지정한 데이터스토어",
+                           "desc": "호스트에서 스왑 파일에 사용하도록 지정한 데이터스토어에 스왑 파일을 저장합니다. 해당 데이터스토어에 스왑 파일을 저장할 수 없는 경우, 가상 시스템과 동일한 디렉토리에 스왑 파일을 저장합니다. vMotion 중에 두 호스트 모두에 표시되지 않는 데이터스토어를 사용하면 영향 받는 가상 시스템의 vMotion 성능에 영향을 줄 수 있습니다."
+                        }
+                     },
+                     "configParams": {
+                        "label": "구성 매개 변수",
+                        "ok": "구성 편집...",
+                        "tooltip": "가상 시스템 구성 매개 변수 편집",
+                        "dialog": {
+                           "title": "구성 매개 변수",
+                           "header": "실험 버전 기능에 필요한 대로 또는 기술 지원에서 설명한 대로 구성 매개 변수를 수정하거나 추가하십시오. 항목을 제거할 수는 없습니다.",
+                           "ok": "확인",
+                           "cancel": "취소",
+                           "remove": {
+                              "warning": {
+                                 "title": "주의",
+                                 "content": "구성 매개 변수 <strong>{{key}}</strong>을(를) 삭제하시겠습니까?",
+                                 "confirmLabel": "삭제",
+                                 "rejectLabel": "취소"
+                              }
+                           },
+                           "add": {
+                              "title": "구성 매개 변수 추가",
+                              "ok": "추가",
+                              "cancel": "취소",
+                              "notNull": "구성 매개 변수 키는 필수입니다.",
+                              "existing": "구성 매개 변수를 복제합니다."
+                           },
+                           "edit": {
+                              "title": "구성 매개 변수 편집",
+                              "ok": "저장",
+                              "cancel": "취소"
+                           },
+                           "actionBar": {
+                              "add": {
+                                 "label": "매개 변수 추가",
+                                 "tooltip": "매개 변수 추가"
+                              },
+                              "edit": {
+                                 "label": "매개 변수 편집",
+                                 "tooltip": "매개 변수 편집"
+                              },
+                              "delete": {
+                                 "label": "매개 변수 삭제",
+                                 "tooltip": "매개 변수 삭제"
+                              },
+                              "refresh": {
+                                 "label": "새로 고침",
+                                 "tooltip": "구성 매개 변수 새로 고침"
+                              },
+                              "actions": {
+                                 "label": "작업",
+                                 "tooltip": "선택된 구성 매개 변수에 대한 작업입니다."
+                              }
+                           },
+                           "grid": {
+                              "key": "키",
+                              "value": "값",
+                              "placeholder": {
+                                 "key": "키를 편집하려면 클릭",
+                                 "value": "값을 편집하려면 클릭"
+                              }
+                           }
+                        }
+                     },
+                     "latencySensitivity": {
+                        "label": "지연 시간 감도"
+                     }
+                  },
+                  "fiberChannel": {
+                     "label": "파이버 채널 NPIV",
+                     "desc": "파이버 채널 NPIV를 보려면 확장",
+                     "wwns": {
+                        "label": "파이버 채널 가상 WWN",
+                        "desc": "NPIV를 지원하는 파이버 채널 하드웨어가 포함된 호스트에서 실행 중인 가상 시스템에는 고급 기능을 사용할 수 있도록 가상 WWN을 할당할 수 있습니다. 이러한 WWN은 호스트나 vCenter Server에 의해 정상적으로 할당됩니다.",
+                        "disable": "이 가상 시스템에 대해 일시적으로 NPIV 사용 안 함",
+                        "noWWNs": {
+                           "label": "현재 할당된 WWN이 없습니다.",
+                           "unchanged": "변경 없이 그대로 유지",
+                           "generate": {
+                              "label": "새 WWN 생성",
+                              "WWNNs": "WWNN 수",
+                              "WWPNs": "WWPN 수"
+                           }
+                        },
+                        "assignments": "WWN 할당"
+                     },
+                     "wwps": {
+                        "assignments": "WWP 할당"
+                     }
+                  }
+               },
+               "firmware": {
+                  "bios": "BIOS(권장)",
+                  "efi": "EFI"
+               },
+               "latency": {
+                  "low": "낮음",
+                  "medium": "중간",
+                  "normal": "보통",
+                  "high": "높음  "
+               },
+               "validation": {
+                  "numberWWNNs": "NPIV WorldWideNode 이름 수는 {{min}}에서 {{max}} 사이여야 합니다.",
+                  "numberWWPNs": "NPIV WorldWidePort 이름 수는 {{min}}에서 {{max}} 사이여야 합니다."
+               }
+            }
+         },
+         "deploy": {
+            "expand": "확장하려면 클릭",
+            "refreshWarning": "이 VM이 배포되는 동안 브라우저를 새로 고치지 마십시오.",
+            "start": {
+               "title": "OVF 및 VMDK 파일 선택",
+               "description": "배포할 VM에 대한 OVF 및 VMDK 파일 또는 OVA를 선택하십시오.",
+               "validation": {
+                  "name": "이 가상 시스템의 올바른 이름을 입력하십시오.",
+                  "vmdk": "VMDK를 선택해야 합니다.",
+                  "vmdk-ova": "OVA와 함께 VMDK 파일을 제공할 필요는 없습니다.",
+                  "ovf-ova": "OVF 또는 OVA를 선택해야 합니다."
+               }
+            },
+            "eula": {
+               "title": "라이센스 계약",
+               "description": "라이센스 계약을 읽고 동의하십시오.",
+               "agree": "동의함",
+               "notAgreed": "계속하려면 모든 라이센스에 동의해야 합니다."
+            },
+            "options": {
+               "title": "배포 옵션",
+               "description": "배포 옵션 선택",
+               "deploymentOption": "배포 유형",
+               "networkMappings": "네트워크 매핑",
+               "diskProvisioning": "디스크 프로비저닝",
+               "powerOnAutomatically": "자동으로 전원 켜기",
+               "thin": "씬",
+               "thick": "씩"
+            },
+            "properties": {
+               "title": "추가 설정",
+               "description": "VM에 대한 추가 속성"
+            },
+            "summary": {
+               "loading": "VM 구성 유효성 검사 중...",
+               "product": "제품",
+               "vmName": "VM 이름",
+               "disks": "디스크",
+               "diskType": {
+                  "label": "프로비저닝 유형",
+                  "thin": "씬",
+                  "thick": "씩"
+               },
+               "networkMappings": "네트워크 매핑",
+               "datastore": "데이터스토어",
+               "guestOSName": "게스트 OS 이름",
+               "cpus": "CPU",
+               "memory": "메모리",
+               "expand": "확장하려면 클릭",
+               "properties": "속성",
+               "validation": {
+                  "extraDisk": "하나 이상의 추가 디스크 이미지를 제공했습니다. 해당 이미지는 무시됩니다.",
+                  "diskMissing": "필수 디스크 이미지가 누락되었습니다.",
+                  "error": "OVF 파일에서 가져오기 규격을 생성하는 동안 오류가 발생했습니다."
+               },
+               "notification": {
+                  "success": "VM {{name}}을(를) 가져왔습니다.",
+                  "error": "VM을 배포하지 못했습니다. {{message}}"
+               }
+            },
+            "name": {
+               "label": "가상 시스템의 이름을 입력하십시오.",
+               "placeholder": "이름",
+               "desc": "가상 시스템 이름에는 최대 80자를 포함할 수 있습니다. 이름은 각 ESXi 인스턴스 내에서 고유해야 합니다."
+            },
+            "select": {
+               "click": "파일을 선택하려면 클릭",
+               "drag": " 끌어서 놓으려면 클릭"
+            },
+            "notification": {
+               "match": "필드 {{name}}이(가) 일치하지 않습니다.",
+               "required": "필드 {{name}}이(가) 필요합니다."
+            }
+         },
+         "register": {
+            "select": "하나 이상의 가상 시스템, 데이터스토어 또는 디렉토리를 선택합니다.",
+            "noVMsFound": "{{folder}}에 VM이 없습니다.",
+            "title": "등록할 VM 선택",
+            "description": "등록할 VM을 하나 이상 선택합니다. 데이터스토어나 디렉토리를 선택하면 해당 데이터스토어나 디렉토리에 있는 모든 VM이 등록됩니다. ",
+            "list": {
+               "columns": {
+                  "vmx": "VMX 파일",
+                  "remove": "제거"
+               },
+               "actions": {
+                  "removeSelected": {
+                     "label": "선택 항목 제거",
+                     "tooltip": "등록 목록에서 선택한 VM을 제거합니다."
+                  },
+                  "removeAll": {
+                     "label": "모두 제거",
+                     "tooltip": "등록 목록에서 모든 VM을 제거합니다."
+                  }
+               },
+               "none": "없음"
+            },
+            "summary": {
+               "provisionType": "프로비저닝 유형",
+               "vm": "가상 시스템"
+            },
+            "notification": {
+               "success": "VM {{name}}이(가) 등록되었습니다.",
+               "register": "{{count}}개의 VM을 등록했습니다.",
+               "error": "VM {{name}}을(를) 등록하지 못했습니다. {{message}}"
+            }
+         },
+         "clone": {
+            "summary": {
+               "vm": "복제할 VM",
+               "clone": "복제할 위치",
+               "datastore": "데이터스토어:"
+            },
+            "notification": {
+               "sucess": "VM {{name}}이(가) 복제되었습니다.",
+               "error": "VM {{name}}을(를) 복제하지 못했습니다."
+            }
+         },
+         "summary": {
+            "title": "완료할 준비가 됨",
+            "description": "마법사를 완료하기 전에 설정 선택 항목을 검토하십시오.",
+            "provisionType": "프로비저닝 유형",
+            "vmName": "이름",
+            "datastore": "데이터스토어",
+            "guestOS": "게스트 OS 이름",
+            "cpu": "vCPU",
+            "memory": "메모리",
+            "nic": "네트워크 어댑터",
+            "nicNetwork": "네트워크 어댑터 {{size}} 네트워크",
+            "nicType": "네트워크 어댑터 {{size}} 유형",
+            "ideController": "IDE 컨트롤러 {{size}}",
+            "scsiController": "SCSI 컨트롤러 {{size}}",
+            "nvmeController": "NVMe 컨트롤러 {{size}}",
+            "sataController": "SATA 컨트롤러 {{size}}",
+            "newSataController": "새 SATA 컨트롤러",
+            "newNVMEController": "새 NVMe 컨트롤러",
+            "createHardDisk": "하드 디스크 {{size}}",
+            "capacity": "용량",
+            "datastore": "데이터스토어",
+            "diskProvisioning": "프로비저닝",
+            "thin": "씬 프로비저닝됨",
+            "lazy": "씩 프로비저닝됨, 느리게 비워짐",
+            "eager": "씩 프로비저닝됨, 빠르게 비워짐",
+            "mode": "모드",
+            "controller": "컨트롤러",
+            "serialPort": "직렬 포트 {{size}}",
+            "newSerialPort": "새 직렬 포트",
+            "parallelPort": "병렬 포트 {{size}}",
+            "newParallelPort": "새 병렬 포트",
+            "usbController": "USB 컨트롤러 {{size}}",
+            "usbDevice": "USB 디바이스 {{size}}",
+            "createCdrom": "CD/DVD 드라이브 {{size}}",
+            "createFloppy": "플로피 드라이브 {{size}}",
+            "backing": "백업",
+            "client": "원격 디바이스 CDROM",
+            "connected": "연결됨",
+            "sound": {
+               "label": "사운드 컨트롤러",
+               "VirtualHdAudioCard": "HD 오디오",
+               "VirtualSoundBlaster16": "Sound Blaster 16",
+               "VirtualEnsoniq1371": "Ensoniq 1371"
+            },
+            "notification": {
+               "success": "가상 시스템 {{name}}이(가) 생성되었습니다.",
+               "error": {
+                  "title": "VM 구성 오류",
+                  "message": "VM 구성이 거부되었습니다. 브라우저 콘솔을 참조하십시오."
+               }
+            }
+         }
+      },
+      "unregister": {
+         "title": "가상 시스템 등록 취소",
+         "title-single": "가상 시스템 등록 취소 - {{name}}",
+         "title-multiple": "{{count}}개의 가상 시스템 등록 취소",
+         "content": "다음 가상 시스템을 등록 취소하시겠습니까?",
+         "success": "{{num}}개의 가상 시스템이 등록 취소되었습니다.",
+         "failure": "하나 이상의 가상 시스템을 등록 취소하지 못했습니다.",
+         "rejectLabel": "취소"
+      },
+      "context": {
+         "title": "가상 시스템",
+         "newWindow": {
+            "label": "새 창에 열기",
+            "tooltip": "VM 목록을 새 창에서 엽니다."
+         },
+         "closeConsole": {
+            "label": "콘솔 닫기",
+            "tooltip": "이 콘솔 창을 닫습니다."
+         },
+         "exitFullScreenConsole": {
+            "label": "전체 화면 모드 종료",
+            "tooltip": "전체 화면 모드 종료"
+         },
+         "autostart": {
+            "autostart": {
+               "label": "자동 시작",
+               "tooltip": "자동 시작 옵션을 구성합니다."
+            },
+            "enable": {
+               "label": "사용",
+               "tooltip": "이 가상 시스템에 대해 자동 시작을 사용합니다."
+            },
+            "increasePriority": {
+               "label": "나중에 시작",
+               "tooltip": "이 가상 시스템이 다른 VM보다 나중에 시작되도록 시작 우선 순위를 낮춥니다."
+            },
+            "decreasePriority": {
+               "label": "먼저 시작",
+               "tooltip": "이 가상 시스템이 다른 VM보다 먼저 시작되도록 시작 우선 순위를 높입니다."
+            },
+            "disable": {
+               "label": "사용 안 함",
+               "tooltip": "이 가상 시스템을 자동 시작 구성에서 제거합니다."
+            },
+            "configure": {
+               "label": "구성",
+               "tooltip": "이 가상 시스템의 자동 시작 설정을 구성합니다."
+            }
+         },
+         "export": {
+            "label": "내보내기",
+            "tooltip": "이 VM을 OVF 템플릿으로 내보내기",
+            "download": {
+               "title": "파일 다운로드",
+               "contentSize": "이 가상 시스템에 대한 {{numFiles}}개 파일 중에서 {{fileIndex}}을(를) 다운로드하려고 합니다. 이 파일은 {{size}}입니다.\n\n이 호스트의 IP 또는 FQDN으로부터의 팝업을 허용하는지 확인하십시오.",
+               "contentNoSize": "이 가상 시스템에 대한 {{numFiles}} 개 파일 중에서 {{fileIndex}}을(를) 다운로드하려고 합니다.\n\n이 호스트의 IP 또는 FQDN으로부터의 팝업을 허용하는지 확인하십시오.",
+               "confirmLabel": "확인",
+               "rejectLabel": "취소"
+            }
+         },
+         "unregister": {
+            "label": "등록 취소",
+            "tooltip": "이 가상 시스템의 등록을 취소합니다.",
+            "tooltipMultiple": "이러한 가상 시스템 등록 취소",
+            "tooltipDisabled": "가상 시스템 하나 이상의 등록을 취소합니다.",
+            "tooltipWarnPoweredOn": " - VM 하나 이상의 전원이 아직 켜져 있습니다. 전원이 켜져 있는 VM은 등록을 취소할 수 없습니다."
+         },
+         "delete": {
+            "label": "삭제",
+            "tooltip": "이 가상 시스템을 삭제합니다.",
+            "tooltipMultiple": "이러한 가상 시스템 삭제",
+            "tooltipDisabled": "가상 시스템을 삭제합니다.",
+            "tooltipWarnPoweredOn": " - VM 하나 이상의 전원이 아직 켜져 있습니다. 전원이 켜져 있는 VM은 삭제할 수 없습니다."
+         },
+         "help": {
+            "label": "도움말",
+            "tooltip": "가상 시스템에 대한 도움말 항목"
+         },
+         "openInNewWindow": {
+            "label": "새 창에서 열기",
+            "tooltip": "이 가상 시스템을 새 창에서 엽니다."
+         },
+         "answerQuestion": {
+            "label": "질문에 응답",
+            "tooltip": "이 가상 시스템에 대한 보류 중인 질문에 응답합니다.",
+            "tooltipMultipleVMs": "한 번에 하나의 VM에 대한 질문에만 응답할 수 있습니다."
+         },
+         "power": {
+            "label": "전원",
+            "tooltip": "가상 시스템에 대한 전원 작업",
+            "powerOn": {
+               "label": "전원 켜기",
+               "tooltip": "이 가상 시스템의 전원을 켭니다."
+            },
+            "powerOff": {
+               "label": "전원 끄기",
+               "tooltip": "이 가상 시스템의 전원을 끕니다.",
+               "warnSuspendedOrOn": "하나 이상의 VM이 일시 중단되거나 전원이 켜져 있습니다. 일시 중단된 가상 시스템의 전원을 끄면 게스트에서 데이터가 손실될 수 있습니다.",
+               "warnSuspended": "이 VM은 현재 일시 중단되어 있습니다. 전원을 끄면 게스트의 데이터가 손실될 수 있습니다.",
+               "warnOn": "이 VM은 현재 전원이 켜져 있습니다. 전원을 끄면 게스트의 데이터가 손실될 수 있습니다."
+            },
+            "suspend": {
+               "label": "일시 중단",
+               "tooltip": "이 가상 시스템을 일시 중단합니다."
+            },
+            "reset": {
+               "label": "재설정",
+               "tooltip": "이 가상 시스템을 재설정합니다."
+            }
+         },
+         "create": {
+            "label": "VM 생성/등록",
+            "tooltip": "마법사를 사용하여 가상 시스템을 생성 또는 등록합니다."
+         },
+         "snapshots": {
+            "label": "스냅샷",
+            "tooltip": "이 가상 시스템에 대한 스냅샷 작업입니다."
+         },
+         "console": {
+            "console": {
+               "label": "콘솔",
+               "tooltip": "이 가상 시스템에 대한 콘솔 옵션입니다."
+            },
+            "browser": {
+               "label": "브라우저 콘솔 열기",
+               "tooltip": "이 가상 시스템에 대한 브라우저 내 콘솔을 엽니다."
+            },
+            "browserNewWindow": {
+               "label": "새 창에 콘솔 열기",
+               "tooltip": "이 가상 시스템에 대한 브라우저 내 콘솔을 새 창에서 엽니다."
+            },
+            "browserNewTab": {
+               "label": "새 탭에서 콘솔 열기",
+               "tooltip": "이 가상 시스템에 대한 브라우저 내 콘솔을 새 탭에서 엽니다."
+            },
+            "showMousePad": {
+               "label": "상대적 마우스 패드 표시",
+               "tooltip": "이 VM에 대해 상대적 마우스 패드를 표시합니다. 이는 브라우저 콘솔에서 마우스 컨트롤에 문제가 있는 VM에 유용합니다."
+            },
+            "resetSize": {
+               "label": "기본 해상도로 재설정",
+               "tooltip": "콘솔을 VM의 기본 해상도로 재설정합니다."
+            },
+            "vmrc": {
+               "label": "원격 콘솔 시작",
+               "tooltip": "독립형 VMRC 애플리케이션을 사용하여 콘솔을 시작합니다."
+            },
+            "downloadVMRC": {
+               "label": "VMRC 다운로드",
+               "tooltip": "VMware.com으로 이동하여 독립형 VMRC 애플리케이션을 다운로드합니다."
+            }
+         },
+         "guest": {
+            "guestOS": {
+               "label": "게스트 OS",
+               "tooltip": "게스트 운영 체제에 대한 작업입니다."
+            },
+            "shutDown": {
+               "label": "종료",
+               "tooltip": "이 게스트를 종료합니다."
+            },
+            "restart": {
+               "label": "다시 시작",
+               "tooltip": "이 게스트를 다시 시작합니다."
+            },
+            "sendKeys": {
+               "title": "키 전송",
+               "toolTip": "키를 게스트에 전송합니다.",
+               "toolTipKeys": "{{description}}을(를) 게스트에 전송합니다.",
+               "toolTipNoWebMKS": "키를 전송하려면 활성 브라우저 내 콘솔 세션이 필요합니다."
+            },
+            "keyCombinations": {
+               "ctrlAltDelete": {
+                  "title": "Ctrl-Alt-Delete",
+                  "toolTip": "게스트에 Ctrl-Alt-Delete를 전송합니다."
+               },
+               "ctrlC": {
+                  "title": "Ctrl-c",
+                  "toolTip": "Ctrl-c를 게스트에 전송합니다."
+               },
+               "escape": {
+                  "title": "이스케이프",
+                  "toolTip": "이스케이프를 게스트에 전송합니다."
+               },
+               "functionKey": {
+                  "title": "{{description}}",
+                  "toolTip": "{{description}}을(를) 게스트에 전송합니다."
+               }
+            },
+            "installTools": {
+               "label": "VMware Tools 설치",
+               "tooltip": "이 게스트 OS에 VMware Tools 설치 관리자 CDROM을 마운트합니다."
+            },
+            "upgradeTools": {
+               "label": "VMware Tools 업그레이드",
+               "tooltip": "이 게스트 OS에서 VMware Tools를 업그레이드합니다.",
+               "notification": {
+                  "successSingle": "{{vmName}}에 대해 VMware Tools가 업그레이드되었습니다.",
+                  "failedSingle": "{{vmName}}에 대해 VMware Tools를 업그레이드하지 못했습니다. {{reason}}",
+                  "successMultiple": "{{num}}개의 가상 시스템에 대해 VMware Tools가 업그레이드되었습니다.",
+                  "failedMultiple": "1개 이상의 가상 시스템에 대해 VMware Tools를 업그레이드하지 못했습니다. {{reason}}"
+               }
+            }
+         },
+         "editSettings": {
+            "label": "설정 편집",
+            "tooltip": "이 가상 시스템에 대한 설정을 편집합니다."
+         },
+         "editNotes": {
+            "label": "노트 편집",
+            "tooltip": "이 가상 시스템의 노트를 편집합니다."
+         },
+         "rename": {
+            "label": "이름 변경",
+            "tooltip": "이 가상 시스템의 이름을 변경합니다.",
+            "tooltipSingle": "단일 VM의 이름만 변경할 수 있습니다."
+         }
+      },
+      "error": {
+         "unknown": "죄송합니다. VM '{{moid}}'을(를) 찾지 못했습니다."
+      },
+      "warning": {
+         "multiThreshold": {
+            "title": "주의",
+            "confirmLabel": "예",
+            "rejectLabel": "아니요",
+            "content": "선택한 VM({{num}})에서 이 작업을 수행하면 웹 브라우저가 잠깐 중지되거나 불안정해질 수 있습니다. 선택한 VM 수를 {{threshold}} 미만으로 줄이는 것이 좋습니다. 계속하시겠습니까?"
+         },
+         "shutDown": {
+            "title": "게스트 종료 확인",
+            "confirmLabel": "예",
+            "rejectLabel": "취소",
+            "content": "{{name}}을(를) 종료하시겠습니까?",
+            "contentMultiple": "{{num}}개의 가상 시스템을 종료하시겠습니까?"
+         },
+         "restart": {
+            "title": "게스트 다시 시작 확인",
+            "confirmLabel": "예",
+            "rejectLabel": "취소",
+            "content": "{{name}}을(를) 다시 시작하시겠습니까?",
+            "contentMultiple": "{{num}}개의 가상 시스템을 다시 시작하시겠습니까?"
+         }
+      },
+      "logs": {
+         "dropdown": {
+            "default": "로그 선택"
+         },
+         "actionBar": {
+            "refresh": {
+               "label": "새로 고침",
+               "tooltip": "로그를 새로 고칩니다."
+            },
+            "close": {
+               "label": "닫기",
+               "tooltip": "이 창을 닫습니다."
+            }
+         }
+      },
+      "rename": {
+         "current": "현재 이름",
+         "new": "새 이름",
+         "title": "가상 시스템 이름 변경 - {{name}}",
+         "ok": "이름 변경",
+         "error": "암호를 입력하십시오.",
+         "rejectLabel": "취소",
+         "notification": {
+            "success": "VM {{name}}의 이름이 변경되었습니다.",
+            "error": "{{name}}의 이름을 변경하지 못했습니다."
+         }
+      },
+      "help": {
+         "content": "<p>다음은 가상 시스템 매개 변수에 대한 설명입니다.</p><dl><dt>상태</dt><dd>상태 열에는 가상 시스템의 현재 상태(전원 켜짐, 전원 꺼짐, 일시 중단됨)가 표시됩니다.</dd><dt>상태</dt><dd>상태 열에는 VM에 대해 현재 보류 중인 알림을 기반으로 가상 시스템에 대한 높은 수준의 상태가 표시됩니다. 예를 들어, VMware Tools가 설치되지 않은 경우 상태는 <strong>정보</strong>입니다.<br /><br /> <strong>잘못됨</strong> 상태는 VM이 데이터스토어에서 액세스 가능하게 표시되지 않음을 의미합니다. 파일이 제거되었을 수 있습니다. 잘못됨 상태의 VM에서 사용 가능한 유일한 작업은 등록 취소입니다.<br /><br /> <strong>일치하지 않음</strong> 상태는 VM 상태를 알 수 없음을 의미합니다. 일반적으로 VM을 껐다가 켜면 이 문제가 해결됩니다. </dd><dt>프로비저닝 공간</dt><dd>프로비저닝 공간 열에는 VM에 제공된 스토리지 양이 표시됩니다(모든 가상 디스크에서 누적됨).</dd><dt>사용된 공간</dt><dd>사용된 공간 열에는 VM이 현재 사용하고 있는 스토리지 양이 표시됩니다. 여기에는 VM 가상 디스크, 일시 중단 상태, 스냅샷 및 스왑 파일 사용량에 대한 데이터 스토리지가 포함됩니다.</dd><dt>호스트 이름</dt><dd>호스트 이름 열에는 게스트 운영 체제의 호스트 이름이 표시됩니다.</dd><dt>호스트 CPU</dt><dd>호스트 CPU 열에는 가상 시스템의 VCPU가 현재 호스트의 CPU에서 사용하고 있는 CPU 리소스 양이 표시됩니다.</dd><dt>호스트 메모리</dt><dd>호스트 메모리 열에는 가상 시스템이 호스트 시스템에서 사용하고 있는 메모리 양이 표시됩니다.</dd></dl>",
+         "title": "도움말"
+      }
+   }
+}

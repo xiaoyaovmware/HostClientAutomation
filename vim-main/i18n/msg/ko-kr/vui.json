@@ -1,0 +1,41 @@
+{
+   "vui": {
+      "ok": "확인",
+      "back": "뒤로",
+      "next": "다음",
+      "finish": "완료",
+      "cancel": "취소",
+      "filter": "필터",
+      "of": "/",
+      "item": "항목",
+      "items": "항목",
+      "actionsMenu" : {
+         "empty": "사용 가능한 작업 없음"
+      },
+      "datagrid" : {
+         "emptyTable": "표시할 항목 없음",
+         "zeroRecords": "일치하는 기록 없음",
+         "colFilterInfo": "다음 값의 항목 표시",
+         "colFilterBooleanInfo": "값이 다음과 같은 항목 표시",
+         "filter": "필터",
+         "clear": "지우기",
+         "isTrue": "True",
+         "isFalse": "False",
+         "and": "및",
+         "or": "또는",
+         "contains": "포함",
+         "eq": "같음",
+         "neq": "같지 않음",
+         "gte": "보다 크거나 같음",
+         "gt": "보다 큼",
+         "lte": "보다 작거나 같음",
+         "lt": "보다 작음",
+         "item": "항목",
+         "items": "항목",
+         "save": "변경 내용 적용"
+      },
+      "notification" : {
+         "defaultTitle" : "알림"
+      }
+   }
+}

@@ -1,0 +1,537 @@
+{
+   "number": {
+      "format": {
+         "separator": ".",
+         "delimiter": ",",
+         "strip_insignificant_zeros": "1"
+      }
+   },
+   "date": {
+      "day_names": [
+         "日曜日",
+         "月曜日",
+         "火曜日",
+         "水曜日",
+         "木曜日",
+         "金曜日",
+         "土曜日"
+      ],
+      "abbr_day_names": [
+         "日",
+         "月",
+         "火",
+         "水",
+         "木",
+         "金",
+         "土"
+      ],
+      "month_names": [
+         "null",
+         "1 月",
+         "2 月",
+         "3 月",
+         "4 月",
+         "5 月",
+         "6 月",
+         "7 月",
+         "8 月",
+         "9 月",
+         "10 月",
+         "11 月",
+         "12 月"
+      ],
+      "abbr_month_names": [
+         "null",
+         "1 月",
+         "2 月",
+         "3 月",
+         "4 月",
+         "5 月",
+         "6 月",
+         "7 月",
+         "8 月",
+         "9 月",
+         "10 月",
+         "11 月",
+         "12 月"
+      ],
+      "format": {
+         "iso": "%Y/%m/%d %H:%M:%S",
+         "long": "%Y 年 %B %d 日 %A %H:%M:%S %z",
+         "utc": "%Y 年 %B %d 日 %A %H:%M:%S UTC",
+         "short": "%Y/%m/%d %H:%M:%S",
+         "short_utc": "%m/%d/%Y %H:%M:%S UTC",
+         "date": "%Y/%m/%d",
+         "time": "%H:%M:%S"
+      }
+   },
+   "units": {
+      "TB": "TB",
+      "GB": "GB",
+      "MB": "MB",
+      "KB": "KB",
+      "B": "B",
+      "MHz": "MHz",
+      "GHz": "GHz",
+      "mbps": "mbps"
+   },
+   "grid": {
+      "quickFilters": "クイック フィルタ...",
+      "noItems": "アイテムなし",
+      "sortAscending": "昇順に並べ替え",
+      "sortDescending": "降順に並べ替え",
+      "filter": "フィルタ",
+      "filterHeader": "以下の値をもつアイテムを表示",
+      "clear": "クリア",
+      "columns": "列の選択",
+      "isTrue": "は、True です。",
+      "isFalse": "は、False です。",
+      "and": "および",
+      "or": "または",
+      "startswith": "次の値で始まる",
+      "contains": "に含む内容は",
+      "endswith": "末尾が",
+      "eq": " 次の値と等しい",
+      "neq": " 次の値に等しくない",
+      "gte": "は、次の値以上です: ",
+      "gt": "より大きい",
+      "lte": "は、次の値以下です: ",
+      "lt": "より小さい"
+   },
+   "general": {
+      "yes": "はい",
+      "no": "いいえ",
+      "ok": "OK",
+      "cancel": "キャンセル",
+      "default": "デフォルト",
+      "enabled": "有効",
+      "disabled": "無効",
+      "none": "なし",
+      "select": "選択",
+      "na": {
+         "label": "該当なし",
+         "title": "該当なし"
+      },
+      "or": "または",
+      "openDocumentation": "VMware Host Client のドキュメントを開きます",
+      "loading": {
+         "label": "ロードしています...",
+         "title": "ロードしています",
+         "error": "エラーが発生しました。再試行してください。"
+      },
+      "unknown": "不明",
+      "unlimited": "制限なし",
+      "active": "有効",
+      "automatic": "自動",
+      "notActive": "無効",
+      "help": "ヘルプ",
+      "time": {
+         "minutes": "分",
+         "seconds": "秒"
+      }
+   },
+   "performance": {
+      "dataAt": "以下のデータ"
+   },
+   "wizard": {
+      "back": "戻る",
+      "next": "次へ",
+      "finish": "完了"
+   },
+   "localeOverride": {
+      "title": "ロケール オーバーライドに関する警告",
+      "content": "URL 指定のロケールを使用して、URL ロケール オーバーライド (?locale=fr-fr など) および設定ロケール オーバーライドが両方設定されています。"
+   },
+   "missingTunnel": {
+      "title": "ホスト プロキシの設定に誤りがあります",
+      "contentAdded": "必要なホスト プロキシ構成が見つからなかったため、自動的に修正されました。<strong>変更を有効にするには、ホストを再起動する必要があります。</strong>詳細については、<a href=\"http://pubs.vmware.com/Release_Notes/jp/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">既知の問題</a> を参照してください。",
+      "contentNotAdded": "必要なホスト プロキシ構成が見つからないため、ブラウザ コンソールへの接続に失敗します。スタンドアロンの VMware Remote Console (VMRC) アプリケーションは引き続き使用できます。この問題を解決するための手順については、<a href=\"http://pubs.vmware.com/Release_Notes/jp/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">既知の問題</a> を参照してください。"
+   },
+   "client": {
+      "about": {
+         "title": "バージョン情報",
+         "close": "閉じる",
+         "warnVersionMismatch": "ESXi にインストールされている Host Client のバージョンが、実行中のバージョンと一致しません。ブラウザを更新するか、ブラウザのキャッシュをクリアしてください。",
+         "fullOSSDisclosure": "ESXi オープン ソース ライセンスをすべて公開するには、<a href=\"{{url}}\" target=\"_blank\">ここ</a>を参照してください。"
+      },
+      "context": {
+         "about": {
+            "label": "バージョン情報",
+            "tooltip": "VMware Host Client に関する情報を表示します"
+         },
+         "vmrc": {
+            "label": "VMware Remote Console",
+            "tooltip": "スタンドアロンの VMware Remote Console アプリケーションの取得"
+         },
+         "help": {
+            "label": "ヘルプ",
+            "tooltip": "公式の VMware ホスト ドキュメントを新しいウィンドウで開く"
+         },
+         "tools": {
+            "label": "ツールとリンク",
+            "tooltip": "このホストから利用可能なツール"
+         },
+         "getVC": {
+            "label": "vCenter Server の取得",
+            "tooltip": "VMware vCenter Server をダウンロードして評価"
+         },
+         "mob": {
+            "label": "管理対象オブジェクト ブラウザ",
+            "tooltip": "管理対象オブジェクト ブラウザを開く",
+            "tooltipDisabled": "管理対象オブジェクトブラウザが無効になりました。詳細オプション Config.HostAgent.plugins.solo.enableMob を true に設定することで有効にできます",
+            "dialog": {
+               "title": "管理対象オブジェクト ブラウザを有効化",
+               "content": "管理対象オブジェクト ブラウザが無効です。有効にして開きますか?",
+               "cancel": "キャンセル",
+               "confirmLabel": "有効"
+            }
+         },
+         "feedback": {
+            "label": "フィードバック",
+            "tooltip": "VMware Host Client に関するフィードバックの送信方法を確認できます"
+         },
+         "sdk": {
+            "label": "SDK ドキュメント",
+            "tooltip": "VMware の Web Services SDK の使用方法を確認できます"
+         },
+         "vcli": {
+            "label": "リモート コマンド ライン ツール",
+            "tooltip": "VMware のリモート コマンド ライン ツールの使用方法を確認できます"
+         },
+         "vmware": {
+            "label": "VMware.com",
+            "tooltip": "VMware の Web サイトにアクセスします"
+         },
+         "clientSettings": {
+            "label": "設定",
+            "tooltip": "VMware Host Client の設定を管理します",
+            "sendTelemetry": {
+               "label": "使用統計の送信",
+               "tooltip": "VMware Host Client の問題を特定できるように、VMware.com に使用統計を送信します"
+            },
+            "visualEffects": {
+               "label": "視覚効果の有効化",
+               "tooltip": "コンテキスト メニュー上でのフェードインおよびフェードアウトなどの視覚効果を有効にします"
+            },
+            "recentItems": {
+               "label": "最近のオブジェクトのみ表示",
+               "tooltip": "オブジェクト ナビゲータで最近選択されたオブジェクトのみを表示します"
+            },
+            "showWelcome": {
+               "label": "ウェルカム メッセージの表示",
+               "tooltip": "ログオン時にウェルカム メッセージ通知を表示するかどうかを指定します"
+            },
+            "consoleSettings": {
+               "label": "コンソール",
+               "tooltip":" コンソール設定",
+               "defaultConsole": {
+                  "label": "デフォルトのコンソール",
+                  "tooltip": "スクリーンショットをクリックしたときのデフォルトのコンソール",
+                  "vmrc": {
+                     "label": "VMware Remote Console",
+                     "tooltip": "仮想マシンのコンソールを開くときに VMware Remote Console を使用"
+                  },
+                  "webmks": {
+                     "label": "ブラウザ内",
+                     "tooltip": "仮想マシンのコンソールを開くときにブラウザ内の HTML5 コンソールを使用"
+                  }
+               }
+            },
+            "keyboardSettings": {
+               "label": "キーボード レイアウト",
+               "tooltip": "Host Client のキーボード設定を行います",
+               "en-US": "英語",
+               "fr-FR": "フランス語",
+               "fr-CH": "フランス語 (スイス)",
+               "de-DE": "ドイツ語",
+               "de-CH": "ドイツ語 (スイス)",
+               "pt-BR": "ポルトガル語 (ブラジル)",
+               "pt-PT": "ポルトガル語 (ポルトガル)",
+               "it-IT": "イタリア語",
+               "es-ES": "スペイン語",
+               "ja-JP_106/109": "日本語"
+            },
+            "languageSettings": {
+               "label": "言語",
+               "tooltip": "Host Client の表示言語を設定します",
+               "en-us": {
+                  "label": "英語",
+                  "tooltip": "英語"
+               },
+               "fr-fr": {
+                  "label": "フランス語",
+                  "tooltip": "フランス語"
+               },
+               "es-es": {
+                  "label": "スペイン語",
+                  "tooltip": "スペイン語"
+               },
+               "de-de": {
+                  "label": "ドイツ語",
+                  "tooltip": "ドイツ語"
+               },
+               "ko-kr": {
+                  "label": "韓国語",
+                  "tooltip": "韓国語"
+               },
+               "zh-cn": {
+                  "label": "中国語 （簡体字）",
+                  "tooltip": "中国語 （簡体字）"
+               },
+               "zh-tw": {
+                  "label": "中国語 （繁体字）",
+                  "tooltip": "中国語 （繁体字）"
+               },
+               "ja-jp": {
+                  "label": "日本語",
+                  "tooltip": "日本語"
+               },
+               "browserDefault": {
+                  "label": "ブラウザのデフォルト設定",
+                  "tooltip": "Host Client でブラウザ設定を使用できるようにします"
+               }
+            },
+            "applicationTimeout": {
+               "label": "アプリケーションのタイムアウト",
+               "tooltip": "Host Client が自動的にログアウトするまでのアイドル期間です",
+               "xMinutes": "{{x}} 分",
+               "xHour": "{{x}} 時間",
+               "xHours": "{{x}} 時間",
+               "off": "オフ",
+               "warning": {
+                  "confirmLabel": "はい",
+                  "rejectLabel": "キャンセル",
+                  "title": "警告",
+                  "content": "セッションのタイムアウトを無効にすると、悪意のあるアクティビティに対する ESXi ホストの脆弱性が高まります。セッションのタイムアウトを無効にしますか?"
+               }
+            },
+            "reset": {
+               "label": "デフォルトにリセット",
+               "tooltip": "Host Client の設定をデフォルト値にリセットします"
+            }
+         },
+         "autorefresh": {
+            "label": "自動更新",
+            "tooltip": "指定期間内に、Host Client がホストからのデータを自動更新します",
+            "off": {
+               "label": "オフ",
+               "tooltip": "自動更新しない"
+            },
+            "xSeconds": "{{x}} 秒"
+         }
+      },
+      "feedback": {
+         "title": "フィードバック",
+         "close": "閉じる"
+      }
+   },
+   "scriptingConsole": {
+      "title": "スクリプト コンソール",
+      "close": "閉じる"
+   },
+   "upload": {
+      "inProgress": "ファイルのアップロードが進行中です"
+   },
+   "hypervisorLicense": {
+      "title": "制限付きライセンス",
+      "closeAndDismiss": "閉じて破棄",
+      "content": "このホストに割り当てられたライセンスには制限があるため、一部の操作が実行できない場合があります。",
+      "close": "閉じる"
+   },
+   "restrictedVersion": {
+      "title": "制限付きバージョン",
+      "close": "閉じる",
+      "content": "割り当てられたライセンスではこの操作を実行できません"
+   },
+   "update": {
+      "check": {
+         "checkForUpdates": "アップデートの確認",
+         "title": "最新の情報に更新",
+         "content": "VMware Host Client は最新の状態です。",
+         "ok": "OK"
+      },
+      "notify": {
+         "dialog": {
+            "title": "クライアントのアップデートが利用可能です。",
+            "content": "VMware Host Client の新しいバージョン {{version}} が利用可能です。",
+            "current": "現在バージョン {{current}} を実行しています。",
+            "whatsNew": "新機能",
+            "never": "今後は更新を自動的に確認しない",
+            "updateNow": "更新",
+            "ok": "今は保存しない"
+         }
+      },
+      "perform": {
+         "update": "更新",
+         "success": "ホストは正常に更新されました",
+         "successWithMessage": "ホストは更新されました: {{message}}",
+         "failure": "アップデートを適用できませんでした: {{reason}}",
+         "badFormat": "アップデートが想定された形式ではありません。VIB ファイルへのパスまたは URL を指定してください。",
+         "vumWarning": {
+            "title": "警告",
+            "content": "このホストが VMware Update Manager によって管理されている場合、更新を実行するとホストが非準拠になる場合があります。続行しますか?",
+            "rejectLabel": "キャンセル",
+            "confirmLabel": "続行"
+         },
+         "dialog": {
+            "title": "アップデートのインストール",
+            "content": "VIB の URL またはデータストアのパスを以下に入力します。",
+            "missingVIBURL": "更新したい VIB への URL またはデータストアのパスを入力してください。",
+            "missingProxy": "プロキシ サーバのアドレスを入力してください",
+            "malformedPath": "URL は <em>http://</em> または <em>https://</em> で始まる必要があります<br>ローカル パスは <em>/</em> で始まる必要があります。",
+            "rejectLabel": "キャンセル",
+            "proxy": {
+               "use": "プロキシ サーバの使用",
+               "server": "プロキシ サーバ",
+               "username": "ユーザー名",
+               "password": "パスワード",
+               "port": "ポート"
+            }
+         }
+      }
+   },
+   "anonymous": {
+      "dialog": {
+         "title": "VMware Host Client の品質向上にご協力ください",
+         "ok": "OK",
+         "content": "本製品は、VMware カスタマ エクスペリエンス改善プログラム (CEIP) に参加しています。CEIP は、VMware が製品とサービスを改良し、問題を修正し、VMware 製品の最善のデプロイおよび使用方法をお客様に提案するための情報を VMware に提供します。CEIP の一環として、VMware は、お客様の組織の VMware ライセンス キーに関連付けて、VMware の製品とサービスの使用方法に関する情報を定期的に収集します。この情報は個人を特定するものではありません。CEIP に関する詳細については、<a href=\"http://www.vmware.com/trustvmware/ceip.html\" target=\"_blank\">VMware.com</a> にある信頼と保証センターを参照してください。参加に関する環境設定は以下から、またはホスト クライアントの設定メニューから選択できます。",
+         "checkbox": {
+            "label": "VMware カスタマ エクスペリエンス改善プログラムに参加"
+         }
+      }
+   },
+   "settings": {
+      "reset": {
+         "dialog": {
+            "title": "設定のリセット",
+            "ok": "OK",
+            "cancel": "キャンセル",
+            "content": "すべてのアプリケーション設定が出荷時のデフォルトにリセットされます。この操作は元に戻すことはできません。リセットが完了すると、アプリケーションは再ロードされます。"
+         }
+      }
+   },
+   "root": {
+      "client": "ESXi",
+      "title": "VMware ESXi",
+      "titleWithMessage": "{{message}}: VMware ESXi",
+      "logIn": "ログイン",
+      "logViewer": "ログ ビューア",
+      "console": "コンソール",
+      "recent_tasks": "最近のタスク",
+      "minimize": " 最小化",
+      "about": "Copyright © 1998-{{copyrightYear}} VMware, Inc. All rights reserved. 本製品は、米国および国際的著作権法および知的財産法によって保護されています。VMware 製品は、<a href=\"http://www.vmware.com/go/patents-jp\" target=\"_blank\">http://www.vmware.com/go/patents-jp</a> のリストに表示されている 1 件または複数の特許対象です。",
+      "navigator": "ナビゲータ",
+      "loading": "ロードしています",
+      "backgroundImage": "バックグラウンド イメージ",
+      "resize": "ウィンドウのサイズ変更",
+      "progressBar": "進行状況バー",
+      "lostConnection": "接続が失われました"
+   },
+   "notification": {
+      "type": {
+         "info": "情報",
+         "warning": "警告",
+         "error": "エラー",
+         "question": "質問"
+      },
+      "ok": "OK",
+      "dismiss": "閉じる",
+      "dismissNotification": "通知を破棄",
+      "actions": {
+         "label": "アクション",
+         "tooltip": "この通知に関連するアクション"
+      }
+   },
+   "entity": {
+      "type": {
+         "VirtualMachine": "仮想マシン",
+         "HostSystem": "ホスト",
+         "Datastore": "データストア",
+         "Folder": "フォルダ",
+         "ResourcePool": "リソース プール"
+      }
+   },
+   "menu": {
+      "host": {
+         "title": "ホスト",
+         "summary": "サマリ",
+         "manage": "管理",
+         "monitor": "監視",
+         "permissions": "権限",
+         "licensing": "ライセンス"
+      },
+      "vm": {
+         "title": "仮想マシン",
+         "summary": "サマリ",
+         "manage": "管理",
+         "monitor": "監視",
+         "more": "その他の仮想マシン..."
+      },
+      "storage": {
+         "title": "ストレージ",
+         "summary": "サマリ",
+         "manage": "管理",
+         "monitor": "監視",
+         "more": "その他のストレージ..."
+      },
+      "network": {
+         "title": "ネットワーク",
+         "summary": "サマリ",
+         "manage": "管理",
+         "monitor": "監視",
+         "more": "その他のネットワーク..."
+      },
+      "rp": {
+         "title": "リソース プール",
+         "summary": "サマリ",
+         "manage": "管理",
+         "monitor": "監視"
+      },
+      "monitor": {
+         "title": "監視",
+         "events": "イベント",
+         "tasks": "タスク",
+         "logs": "ログ"
+      }
+   },
+   "session": {
+      "start": "セッションは {{time}} 分後に期限が切れます。",
+      "timeout": "無効だったためログアウトしました",
+      "appTitleIdle": "セッションがタイムアウトするまで",
+      "appTitleTimedOut": "セッションがタイムアウトしました"
+   },
+   "logout": {
+      "error": "ログアウト時に不明なエラーが発生しました",
+      "menu": {
+         "label": "ログアウトします",
+         "tooltip": "このホストに関連付けられたセッションを終了します"
+      }
+   },
+   "login": {
+      "host": "ホスト名",
+      "username": "ユーザー名",
+      "password": "パスワード",
+      "timeout": "ESXi ホストとの接続がタイムアウトしました",
+      "logging": "ESXi ホストにログインしています..."
+   },
+   "search": {
+      "placeholder": "検索",
+      "filterSeries": "フィルタ シリーズ"
+   },
+   "directives": {
+      "progressChart": {
+         "free": "空き容量:",
+         "used": "使用済み:",
+         "capacity": "容量:"
+      },
+      "search": {
+         "noResults": "検索結果がありません"
+      },
+      "notification": {
+         "close": "閉じる"
+      }
+   },
+   "links": {
+      "language": "ja"
+   }
+}

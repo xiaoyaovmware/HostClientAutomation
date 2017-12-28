@@ -1,0 +1,923 @@
+{
+   "storage": {
+      "title": "ストレージ",
+      "tabs": {
+         "datastores": {
+            "label": "データストア",
+            "tooltip": "データストア"
+         },
+         "adapters": {
+            "label": "アダプタ",
+            "tooltip": "アダプタ"
+         },
+         "devices": {
+            "label": "デバイス",
+            "tooltip": "デバイス"
+         }
+      },
+      "wizard": {
+         "partitionType": "パーティション タイプ",
+         "vmfsVersion": "VMFS バージョン",
+         "error": {
+            "scheme": "パーティションの分割方法を選択してください",
+            "size": "{{min}} ～ {{max}} のパーティション サイズを選択してください",
+            "partition": "パーティションが選択されていません。左側の図でパーティションを選択してください。"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "権限",
+            "title": "権限を管理します",
+            "close": "閉じる",
+            "cancel": "キャンセル",
+            "noUsers": "ユーザーなし",
+            "addUser": {
+               "label": "ユーザーの追加",
+               "toolTip": "ユーザーを追加します"
+            },
+            "removeUser": {
+               "label": "ユーザーの削除",
+               "toolTip": "ユーザーを削除します"
+            },
+            "assignRole": {
+               "label": "ロールの割り当て",
+               "toolTip": "ユーザーにロールを割り当てます"
+            },
+            "updatePermissions": {
+               "successNotification": "権限が正常に更新されました",
+               "failureNotification": "権限の更新に失敗しました: {{error}}"
+            },
+            "columns": {
+               "user": "ユーザー",
+               "role": "ロール"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "ユーザーを選択"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "ロールを選択"
+            },
+            "propagateLabel": "すべての子へ伝達"
+         }
+      },
+      "devices": {
+        "browser": {
+          "dialog": {
+            "title": "ストレージ デバイスを選択します",
+            "reject": "キャンセル",
+            "confirm": "選択"
+          },
+          "datagrid": {
+            "name": "名前",
+            "capacity": "キャパシティ"
+          }
+        }
+      },
+      "device": {
+         "context": {
+            "disk": {
+               "clear": {
+                  "label": "パーティション テーブルをクリア",
+                  "tooltip": "このディスクのパーティション テーブルをクリアします"
+               },
+               "editPartitions": {
+                  "label": "パーティションの編集",
+                  "tooltip": "このディスクのパーティション テーブルを編集します"
+               },
+               "rescan": {
+                  "title": "再スキャン",
+                  "tooltip": "データストアのすべてのストレージ デバイスを再スキャンします"
+               }
+            }
+         },
+         "editPartitions": {
+            "title": "パーティションの編集: {{disk}}",
+            "rejectLabel": "キャンセル",
+            "confirmLabel": "パーティションの保存",
+            "before": "パーティションの編集前",
+            "after": "パーティションの編集後",
+            "actions": {
+               "delete": {
+                  "label": "パーティションの削除",
+                  "tooltip": "選択したパーティションの削除"
+               },
+               "reset": {
+                  "label": "リセット",
+                  "tooltip": "パーティションを元の状態にリセットします"
+               }
+            },
+            "warning": {
+               "title": "{{disk}} のパーティション テーブルの変更を確認",
+               "content": "<strong>{{disk}}</strong> のパーティション テーブルを変更しようとしています。このアクションにより、データが消失する危険があります。続行しますか?",
+               "confirmLabel": "はい",
+               "rejectLabel": "いいえ"
+            },
+            "successNotification": "{{disk}} のパーティション テーブルが更新されました",
+            "failureNotification": "{{disk}} のパーティション テーブルの更新に失敗しました"
+         },
+         "clear": {
+            "title": "パーティション テーブルのクリアの確認: {{disk}}",
+            "content": "<strong>{{disk}}</strong> のパーティション テーブルをクリアしようとしています。このアクションにより、データが消失する危険があります。続行しますか?",
+            "confirmLabel": "はい",
+            "rejectLabel": "いいえ",
+            "failureNotification": " ディスク {{disk}} のクリアに失敗しました",
+            "successNotification": " ディスク {{disk}} がクリアされました"
+         },
+         "type": {
+            "disk": "ディスク",
+            "cdrom": "CDROM"
+         },
+         "summary": {
+            "alt": "デバイス",
+            "uuid": "UUID:",
+            "notApplicable": "該当なし",
+            "type": "タイプ:",
+            "model": "モデル: ",
+            "path": "パス:",
+            "capacity": "キャパシティ: ",
+            "partitionFormat": "パーティションのフォーマット: ",
+            "partitions": "パーティション",
+            "partitionDiagram": "パーティション図",
+            "blocks": "ブロック",
+            "portlet": {
+               "type": "タイプ",
+               "startBlock": "起動ブロック",
+               "endBlock": "終了ブロック",
+               "blockSize": "ブロック サイズ",
+               "size": "サイズ"
+            },
+            "actions": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "このリスト内で選択されたオブジェクトに対するアクションです。"
+               },
+               "increaseCapacity": {
+                  "label": "このディスクのデータストア容量の増加",
+                  "tooltip": "このデバイスのデータストア容量の増加"
+               },
+               "newDatastore": {
+                  "label": "新しいデータストア",
+                  "tooltip": "このデバイスに新しい VMFS データストアを作成します"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "このデバイスの情報を更新します"
+               }
+            }
+         },
+         "list": {
+            "ok": "正常",
+            "error": "エラー",
+            "timeout": "タイムアウト",
+            "degraded": "低下しました",
+            "disk": "ディスク",
+            "cdrom": "CDROM",
+            "unknown": "不明",
+            "notApplicable": "該当なし",
+            "actions": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "このリスト内で選択されたオブジェクトに対するアクションです。"
+               },
+               "increaseCapacity": {
+                  "label": "このディスクのデータストア容量の増加",
+                  "tooltip": "このデバイスのデータストア容量の増加"
+               },
+               "rescan": {
+                  "label": "再スキャン",
+                  "tooltip": "データストアのすべてのストレージ デバイスを再スキャンします"
+               },
+               "newDatastore": {
+                  "label": "新しいデータストア",
+                  "tooltip": "このデバイスに新しい VMFS データストアを作成します"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "このデバイスの情報を更新します"
+               }
+            },
+            "datagrid": {
+               "name": "名前",
+               "status": "ステータス",
+               "type": "タイプ",
+               "capacity": "キャパシティ",
+               "queue": "キュー深度",
+               "free": "空き容量",
+               "vendor": "ベンダー"
+            }
+         }
+      },
+      "partitionTypes": {
+         "C12A7328F81F11D2BA4B00A0C93EC93B": "EFI システム",
+         "EBD0A0A2B9E5443387C068B6B72699C7": "基本データ",
+         "AA31E02A400F11DB9590000C2911D1B8": "VMFS",
+         "9D27538040AD11DBBF97000C2911D1B8": "VMware 診断",
+         "381CFCCC728811E092EE000C2911D0B2": "vSAN",
+         "77719A0CA4A011E3A47E000C29745A24": "vSAN",
+         "free": "空き容量",
+         "extended": "拡張",
+         "linuxNative": "Linux ネイティブ",
+         "linuxSwap": "Linux スワップ",
+         "none": "なし",
+         "ntfs": "NTFS",
+         "vffs": "VFFS",
+         "vmfs": "VMFS",
+         "vmkDiagnostic": "VMware 診断",
+         "undefined": "不明",
+         "unknown": "不明",
+         "0xde": "Dell 診断",
+         "0x0b": "FAT 32",
+         "0x07": "NTFS"
+      },
+      "datastore": {
+         "create": {
+            "title": "新しいデータストア",
+            "titleExtend": "データストアの容量の増加",
+            "pages": {
+               "creationType": {
+                  "title": "作成タイプの選択",
+                  "description": "データストアの作成方法を指定します"
+               },
+               "name": {
+                  "title": "データストア名",
+                  "description": "新しいデータストアの名前を指定"
+               },
+               "device": {
+                  "title": "デバイスの選択",
+                  "description": "新しい VMFS パーティションを作成するデバイスを選択",
+                  "noDevice": "デバイスを選択してください"
+               },
+               "nfs": {
+                  "title": "NFS マウントの詳細の指定",
+                  "description": "マウントする NFS シェアの詳細を指定します"
+               },
+               "partitioning": {
+                  "title": "パーティション分割オプションの選択",
+                  "description": "デバイスのパーティション分割方法を選択します",
+                  "before": "パーティションの編集前",
+                  "after": "パーティションの編集後",
+                  "selectScheme": "パーティションの分割方法を選択",
+                  "full": "ディスク内のすべての容量を使用",
+                  "custom": "カスタム"
+               },
+               "datastore": {
+                  "title": "データストアの選択",
+                  "description": "容量を増やすデータストアを選択します"
+               },
+               "summary": {
+                  "title": "設定の確認",
+                  "description": "サマリ",
+                  "type": "データストア タイプ",
+                  "name": "名前",
+                  "datastore": "データストア",
+                  "disk": "ディスク",
+                  "partitioning": "パーティショニング",
+                  "vmfsVersion": "VMFS バージョン"
+               }
+            },
+            "device": {
+               "desc": "次のデバイスは要求対象ではないため、新しい VMFS データストアの作成に使用できます",
+               "noFree": "空き領域にデバイスがありません"
+            },
+            "vmfs": {
+               "label": "新しい VMFS データストアの作成",
+               "description": "ローカル ディスク デバイス上に新しい VMFS データストアを作成します",
+               "notificationSuccess": "VMFS データストア {{name}} が作成されました",
+               "notificationFailure": "VMFS データストア {{name}} の作成に失敗しました: {{message}}",
+               "unknown": "不明な原因",
+               "validation": {
+                  "name" : {
+                     "empty" : "新しいデータストアの名前を指定してください",
+                     "length": "データストアの名前は {{min}} ～ {{max}} 文字にする必要があります。現在の長さは {{length}} 文字です。名前を修正してください。",
+                     "exists": "名前が {{name}} のデータストアはすでにあります。"
+                  }
+               }
+            },
+            "mountVmfs": {
+               "label": "既存の VMFS データストアのマウント",
+               "description": "既存の VMFS ボリュームのマウント",
+               "notificationSuccess": "VMFS データストア {{name}} はマウントされました",
+               "notificationFailure": "VMFS データストア {{name}} のマウントに失敗しました: {{message}}"
+            },
+            "extendVmfs": {
+               "label": "既存の VMFS データストアにエクステントを追加します",
+               "description": "別のディスクに新しいエクステントを追加して既存データストアのサイズを増やします",
+               "notificationSuccess": "VMFS データストア {{name}} は拡張されました",
+               "notificationFailure": "VMFS データストア {{name}} の拡張に失敗しました: {{message}}",
+               "unknown": "不明な原因"
+            },
+            "expandVmfs": {
+               "label": "既存の VMFS データストアのエクステントを拡張します",
+               "description": "既存のエクステントを隣接する空き容量に拡張して、既存データストアのサイズを増やします",
+               "notificationSuccess": "VMFS データストア {{name}} は正常に拡張されました",
+               "notificationFailure": "VMFS データストア {{name}} の拡張に失敗しました: {{message}}",
+               "unknown": "不明な原因"
+            },
+            "nfs": {
+               "label": "NFS データストアのマウント",
+               "description": "リモート NFS ボリュームをマウントして新しいデータストアを作成します",
+               "notificationSuccess": "NFS データストア {{name}} はマウントされました",
+               "notificationFailure": "NFS データストア {{name}} のマウントに失敗しました: {{message}}",
+               "server": "NFS サーバ",
+               "share": "NFS シェア",
+               "version": "NFS バージョン",
+               "user": "ユーザー名",
+               "password": "パスワード",
+               "validation": {
+                  "name": "新しいデータストアの名前を指定してください",
+                  "server": "NFS サーバを指定してください",
+                  "share": "NFS シェアを指定してください"
+               }
+            },
+            "warnFull": {
+               "title": "警告",
+               "content": "このディスクの内容全体を消去して、指定した構成と置き換えようとしています。実行しますか?",
+               "confirmLabel": "はい",
+               "rejectLabel": "いいえ"
+            }
+         },
+         "registerVM": {
+            "title": "仮想マシンの登録",
+            "confirmLabel": "登録",
+            "successNotification": "仮想マシン {{path}} が登録されました",
+            "failureNotification": "仮想マシン {{path}} の登録に失敗しました。{{message}}",
+            "failureReasonUnknown": "理由は不明です",
+            "vmAlreadyRegistered": {
+               "title": "仮想マシンはすでに登録されています",
+               "content": "すでに登録されています",
+               "confirmLabel": "閉じる",
+               "cancelLabel": "キャンセル"
+            }
+         },
+         "unmountVMFS": {
+            "title": "データベースのアンマウントの確認: {{name}}",
+            "confirmLabel": "はい",
+            "rejectLabel": "キャンセル",
+            "content": "<strong>{{name}}</strong> をアンマウントしますか?",
+            "successNotification": "データストア {{name}} はアンマウントされました",
+            "failureNotification": "データストア {{name}} のアンマウントに失敗しました"
+         },
+         "mountVMFS": {
+            "successNotification": "データストア {{name}} はマウントされました",
+            "failureNotification": "データストア {{name}} のマウントに失敗しました"
+         },
+         "upgradeVMFS": {
+            "successNotification": "データストア {{name}} は {{oldVersion}} から {{version}} にアップグレードされました",
+            "failureNotification": "VMFS データストア {{name}} のアップグレードに失敗しました"
+         },
+         "nonSSD": "非 SSD",
+         "SSD": "SSD",
+         "summary": {
+            "alt": "データストア",
+            "type": "タイプ:",
+            "location": "場所:",
+            "hosts": "ホスト:",
+            "uuid": "UUID:",
+            "virtualMachines": "仮想マシン:",
+            "metrics": {
+               "storage": "ストレージ"
+            },
+            "portlets": {
+               "vmfs": {
+                  "title": "VMFS の詳細",
+                  "local": {
+                     "label": "ローカル",
+                     "true": "はい",
+                     "false": "いいえ"
+                  },
+                  "blockSize": "ブロック サイズ",
+                  "version": "バージョン",
+                  "uuid": "UUID",
+                  "extent": "エクステント {{index}}",
+                  "extentValue": "{{disk}}、パーティション {{partition}}"
+               }
+            },
+            "actions": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "このリスト内で選択されたオブジェクトに対するアクションです。"
+               },
+               "increaseCapacity": {
+                  "label": "容量の増加",
+                  "tooltip": "データストアの容量を増やします"
+               },
+               "register": {
+                  "label": "仮想マシンを登録",
+                  "tooltip": "既存の仮想マシンをインベントリに登録します。"
+               },
+               "fileBrowser": {
+                  "label": "データストア ブラウザ",
+                  "tooltip": "データストア ファイル ブラウザに移動します。"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "このデータストアの情報を更新します"
+               }
+            }
+         },
+         "list": {
+            "actions": {
+               "upgradeVMFSDatastore": {
+                  "label": "アップグレード",
+                  "tooltip": "このデータストアを最新バージョンにアップグレードします"
+               },
+               "mountVMFSDatastore": {
+                  "label": "マウント",
+                  "tooltip": "既存の VMFS ボリュームをデータストアとしてマウントします"
+               },
+               "unmountVMFSDatastore": {
+                  "label": "アンマウント",
+                  "tooltip": "この VMFS データストアをアンマウントします"
+               },
+               "mountNFSDatastore": {
+                  "label": "NFS データストアのマウント",
+                  "tooltip": "リモート NFS シェアをデータストアとしてマウントします"
+               },
+               "createDatastore": {
+                  "label": "新しいデータストア",
+                  "tooltip": "新しいデータストアを作成します"
+               },
+               "increaseCapacity": {
+                  "label": "容量の増加",
+                  "tooltip": "データストアの容量を増やします"
+               },
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "このリスト内で選択されたオブジェクトに対するアクションです。"
+               },
+               "fileBrowser": {
+                  "label": "データストア ブラウザ",
+                  "tooltip": "データストア ファイル ブラウザに移動します。"
+               },
+               "register": {
+                  "label": "仮想マシンを登録",
+                  "tooltip": "既存の仮想マシンをインベントリに登録します。"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "テーブル内の情報を更新します。"
+               }
+            },
+            "datagrid": {
+               "name": "名前",
+               "driveType": "ドライブのタイプ",
+               "capacity": "キャパシティ",
+               "provisioned": "プロビジョニング済み",
+               "free": "空き",
+               "type": "タイプ",
+               "thin": "シン プロビジョニング",
+               "access": "アクセス"
+            },
+            "thinProvisioning": {
+               "supported": "サポート対象",
+               "notSupported": "未サポート"
+            },
+            "access": {
+               "multiple": "複数",
+               "single": "単一"
+            }
+         },
+         "manage": {
+            "title": "管理"
+         },
+         "browser": {
+            "nfs": {
+               "noBrowse": "NFS データストアを参照できません"
+            },
+            "contextMenu": {
+               "deleteFile": {
+                  "label": "削除",
+                  "toolTip": "このファイルまたはディレクトリを削除します"
+               }
+            },
+            "actions": {
+               "inflateDisk": {
+                  "label": "ディスクの拡張",
+                  "tooltip": "このシン プロビジョニング ディスクをシック プロビジョニング ディスクに変換します",
+                  "successNotification": " ディスク {{disk}} が拡張されました",
+                  "errorNotification": "ディスク {{disk}} の拡張に失敗しました: {{reason}}",
+                  "datastoreCapacity": "拡張されたディスク サイズが、このデータストアの使用可能な容量のサイズを超えています。{{datastoreName}} の容量一部を解放してから、やり直してください。"
+               },
+               "delete": {
+                  "label": "削除",
+                  "tooltip": "現在選択されているファイルまたはディレクトリを削除します"
+               },
+               "copy": {
+                  "label": "コピー",
+                  "tooltip": "このファイルまたはディレクトリをコピーします"
+               },
+               "move": {
+                  "label": "移動",
+                  "tooltip": "このファイルまたはディレクトリを移動します"
+               },
+               "download": {
+                  "label": "ダウンロード",
+                  "tooltip": "選択したファイルをダウンロードします"
+               },
+               "directory": {
+                  "label": "ディレクトリの作成",
+                  "tooltip": "新しいディレクトリを作成します"
+               },
+               "upload": {
+                  "label": "アップロード",
+                  "tooltip": "選択したデータストアにファイルをアップロードします"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "ビューを更新します"
+               }
+            },
+            "dialog": {
+               "defaultTitle": "データストア ブラウザ",
+               "noDatastore": {
+                  "title": "参照可能なデータストアがありません",
+                  "content": "参照可能なデータストアがありません。現在参照できるのは、vSAN データストアおよびローカル VMFS データストアのみです。"
+               },
+               "select": {
+                  "title": "ターゲットの選択",
+                  "titleFor": "{{name}} のターゲットを選択します",
+                  "move": "移動",
+                  "copy": "コピー"
+               },
+               "selectDatastore": {
+                  "title": "データストアの選択",
+                  "rejectLabel": "キャンセル"
+               },
+               "directory": {
+                  "title": "新しいディレクトリ",
+                  "create": "ディレクトリの作成",
+                  "invalidDirectory": "有効なディレクトリ名を入力してください",
+                  "cancel": "キャンセル",
+                  "placeholder": "ディレクトリ名",
+                  "createdIn": "このディレクトリは {{location}}/ に作成されます"
+               },
+               "delete": {
+                  "title": "削除の確認",
+                  "content": "次のファイルまたはディレクトリを削除しますか?",
+                  "delete": "削除",
+                  "cancel": "キャンセル"
+               },
+               "upload": {
+                  "inProgress": "{{num}} 個のファイル",
+                  "notEnoughSpace": {
+                     "title": "データストアに十分な容量がありません",
+                     "confirmLabel": "OK",
+                     "content": "このファイルのアップロードに必要な空き容量が {{datastore}} にありません。少なくとも {{needed}} の容量を解放する必要があります。"
+                  },
+                  "ielimit": {
+                     "title": "IE のファイル サイズの制限を超えています",
+                     "confirmLabel": "OK",
+                     "content": "選択したファイルが Internet Explorer のファイルのアップロード制限の 4 GB を超えています"
+                  }
+               },
+               "close": "閉じる",
+               "cancel": "キャンセル"
+            }
+         },
+         "monitor": {
+            "title": "監視",
+            "event": {
+               "datagrid": {
+                  "event": {
+                     "label": "イベント"
+                  },
+                  "time": {
+                     "label": "時刻"
+                  }
+               }
+            },
+            "general": {
+               "title": "全般",
+               "desc": "全般",
+               "settings": {
+                  "enabled": "vSAN",
+                  "claimingMode": "要求モード",
+                  "deduplication": "重複解除",
+                  "encryption": "暗号化",
+                  "iscsi": "ISCSI サービス",
+                  "health": {
+                     "service": "健全性サービス",
+                     "intervalChecks": "健全性チェックの間隔"
+                  },
+                  "performance": {
+                     "status": "パフォーマンス サービス",
+                     "statsObjectHealth": "統計オブジェクトの健全性",
+                     "statsObjectUuid": "統計オブジェクトの UUID",
+                     "storagePolicy": "ストレージ ポリシー",
+                     "complianceStatus": "コンプライアンスの状態"
+                  },
+                  "faultDomain": "フォールト ドメイン"
+               },
+               "edit": {
+                  "title": "設定の編集",
+                  "warning": "これらのオプションを変更すると、vSAN クラスタが誤って構成された状態のままになります。"
+               }
+            },
+            "health": {
+               "noResultsFound": "検索結果がありません",
+               "info": "情報"
+            },
+            "actions": {
+               "edit":{
+                  "label": "設定の編集",
+                  "tooltip": "vSAN 設定の編集"
+               },
+               "enableVsan":{
+                  "label": "有効",
+                  "tooltip": "有効"
+               },
+               "refresh":{
+                  "label": "更新",
+                  "tooltip": "更新"
+               }
+            },
+            "task": {
+               "UpdateVsan_Task": {
+                  "success": "ホストの vSAN 設定が正常に更新されました",
+                  "error": "ホストの vSAN 設定を更新できませんでした"
+               }
+            },
+            "common": {
+               "enabled": "有効",
+               "disabled": "無効",
+               "yes": "はい",
+               "no": "いいえ",
+               "ok": "OK",
+               "cancel": "キャンセル",
+               "auto": "自動",
+               "manual": "手動",
+               "save": "保存",
+               "seconds": "秒"
+            },
+            "policyStatus": {
+               "compliant" : "準拠",
+               "nonCompliant" : "非準拠",
+               "notApplicable" : "該当なし",
+               "unknow" : "不明"
+            },
+            "healthStatus": {
+               "inaccessible": "アクセス不可",
+               "reducedAvailabilityWithNoRebuild": "再構築なしで可用性が低下",
+               "reducedAvailabilityWithNoRebuildDelayTimer": "再構築遅延タイマーなしで可用性が低下",
+               "reducedAvailabilityWithActiveRebuild": "再構築がアクティブな状態で可用性が低下",
+               "dataMove": "データの移動",
+               "nonAvailabilityRelatedReconfig": "可用性に関連しない再構成",
+               "nonAvailabilityRelatedIncompliance": "可用性に関連しない不整合",
+               "healthy": "健全",
+               "unknown": "不明"
+            },
+            "tabs": {
+               "events": {
+                  "label": "イベント",
+                  "tooltip": "イベント"
+               },
+               "tasks": {
+                  "label": "タスク",
+                  "tooltip": "タスク"
+               },
+               "general": {
+                  "label": "vSAN",
+                  "tooltip": "vSAN の全般設定"
+               },
+               "hosts": {
+                  "label": "ホスト",
+                  "tooltip": "vSAN クラスタに参加しているホスト"
+               },
+               "health": {
+                  "label": "健全性",
+                  "tooltip": "健全性"
+               }
+            }
+         },
+         "delete": {
+            "label": "削除",
+            "tooltip": "このデータストアを削除します",
+            "confirm": {
+               "title": "データストアの削除: {{name}}",
+               "content": "次のデータストアを削除しますか?"
+            },
+            "rejectLabel": "キャンセル",
+            "confirmLabel": "確認",
+            "successNotification": "データストア {{name}} が削除されました",
+            "failureNotification": "データストア {{name}} の削除に失敗しました"
+         },
+         "rename": {
+            "dialog": {
+               "title": "データストア名の変更",
+               "rejectLabel": "キャンセル",
+               "save": "保存",
+               "emptyName": "空の名前",
+               "lengthValidation" : "データストア名の文字数は {{min}} ～ {{max}} 文字である必要があります。現在の文字数は {{actual}} です",
+               "notification": {
+                  "info": "データストア {{oldName}} の名前が {{newName}} に変更されました。",
+                  "error": "データストア {{oldName}} の名前の変更に失敗しました: {{localizedMessage}}。"
+               }
+            }
+         },
+         "contextMenu": {
+            "rename": {
+               "label": "名前の変更",
+               "tooltip": "このデータベースの名前を変更します",
+               "tooltipVC": "vCenter Server で管理されているホスト上ではデータストア名を変更できません"
+            },
+            "browse": {
+               "label": "参照",
+               "toolTip": "このデータストアを参照する",
+               "browseDatastores": "データストアの参照"
+            },
+            "registerSingle": {
+               "label": "仮想マシンの登録",
+               "toolTip": "この仮想マシンを登録します"
+            },
+            "register": {
+               "label": "仮想マシンを登録",
+               "toolTip": "データストアから既存の仮想マシンをホストのインベントリに登録します"
+            }
+         }
+      },
+      "adapter": {
+         "status": {
+            "online": "オンライン",
+            "offline": "オフライン",
+            "unbound": "バインドなし",
+            "unknown": "不明"
+         },
+         "list": {
+            "actions": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "このリスト内で選択されたオブジェクトに対するアクションです。"
+               },
+               "refresh": {
+                  "label": "更新",
+                  "tooltip": "アダプタ テーブルを更新します"
+               },
+               "rescan": {
+                  "label": "再スキャン",
+                  "tooltipAll": "新しい LUN 用にすべてのホストベースのアダプタを再スキャンします",
+                  "tooltipOne": "新しい LUN 用に選択されたホストベースのアダプタを再スキャンします"
+               },
+               "iscsi": {
+                  "label": "iSCSI の設定",
+                  "tooltip": "このホストの iSCSI を設定します"
+               }
+            },
+            "datagrid": {
+               "name": "名前",
+               "model": "モデル",
+               "status": "ステータス",
+               "driver": "ドライバ"
+            }
+         },
+         "iscsi": {
+            "title": "iSCSI の設定: {{adapter}}",
+            "titleNoDevice": "iSCSI の設定",
+            "confirmLabel": "設定の保存",
+            "rejectLabel": "キャンセル",
+            "close": "閉じる",
+            "loading": "ロードしています",
+            "configuring": "設定中",
+            "iscsiEnabled": "iSCSI が有効です",
+            "nameAndAlias": "名前とエイリアス",
+            "alias": "エイリアス",
+            "enabled": "有効",
+            "disabled": "無効",
+            "networkPortBindings": "ネットワーク ポートのバインド",
+            "staticTargets": "固定ターゲット",
+            "dynamicTargets": "動的ターゲット",
+            "authentication": {
+               "chapAuthentication": "CHAP 認証",
+               "mutualChapAuthentication": "相互 CHAP 認証",
+               "name": "名前",
+               "secret": "シークレット"
+            },
+            "warnReboot": "iSCSI アダプタおよびカーネル モジュールを削除するには、再起動が必要です。",
+            "warnNoDevice": "iSCSI アダプタが見つかりませんでした。設定ダイアログを閉じて、開き直してください。",
+            "resetAdvancedOption": "デフォルトにリセット",
+            "isInherited": "親から継承",
+            "chapDisabled": "CHAP を使用しない",
+            "chapRequired": "ターゲットで要求されない場合は CHAP を使用しない",
+            "chapProhibited": "ターゲットで禁止されていない場合は CHAP を使用する",
+            "chapPreferred": "CHAP を使用する",
+            "noStaticTargets": "固定ターゲットがありません",
+            "noDynamicTargets": "動的ターゲットがありません",
+            "noPortBindings": "ポートのバインドがありません",
+            "advancedBlock": {
+               "label": "詳細設定",
+               "expand": "クリックして展開",
+               "maximum": "最大値",
+               "minimum": "最小値",
+               "default": "デフォルト"
+            },
+            "boundPortsGrid": {
+               "vmknic": "VMkernel NIC",
+               "portgroup": "ポート グループ",
+               "ipv4Address": "IPv4 アドレス"
+            },
+            "addPort": {
+               "label": "ポート バインドの追加",
+               "tooltip": "新しいポートのバインドを追加します",
+               "alreadyBound": {
+                  "title": "エラー",
+                  "content": "VMKernel NIC {{vmknic}} はすでにこの iSCSI アダプタにバインドされています"
+               }
+            },
+            "removePort": {
+               "label": "ポート バインドの削除",
+               "tooltip": "選択したポートのバインドを削除します",
+               "inUse": {
+                  "title": "使用中のポート",
+                  "content": "ポート {{port}} は現在使用中です。最初に、このパスを使用しているターゲットを削除してください。",
+                  "forceRemove": "強制的に削除",
+                  "ok": "OK"
+               }
+            },
+            "staticTargetGrid": {
+               "target": "ターゲット",
+               "address": "アドレス",
+               "port": "ポート"
+            },
+            "addStaticTarget": {
+               "label": "固定ターゲットの追加",
+               "tooltip": "固定 iSCSI ターゲットを追加します",
+               "addName": "クリックして名前を追加します",
+               "addAddress": "クリックしてアドレスを追加します"
+            },
+            "editStaticTarget": {
+               "label": "設定の編集",
+               "tooltip": "この固定ターゲットの設定を編集します"
+            },
+            "removeStaticTarget": {
+               "label": "固定ターゲットの削除",
+               "tooltip": "選択した固定 iSCSI ターゲットを削除します"
+            },
+            "dynamicTargetGrid": {
+               "address": "アドレス",
+               "port": "ポート"
+            },
+            "addDynamicTarget": {
+               "label": "動的ターゲットの追加",
+               "tooltip": "動的 iSCSI ターゲットを追加します",
+               "addAddress": "クリックしてアドレスを追加します"
+            },
+            "editDynamicTarget": {
+               "label": "設定の編集",
+               "tooltip": "この動的ターゲットの設定を編集します"
+            },
+            "removeDynamicTarget": {
+               "label": "動的ターゲットの削除",
+               "tooltip": "選択した動的 iSCSI ターゲットを削除します"
+            },
+            "notification": {
+               "success": "iSCSI を正常に構成しました",
+               "failure": "iSCSI の構成に失敗しました"
+            }
+         },
+         "iscsi-target": {
+            "title": "iSCSI ターゲットの構成: {{target}}",
+            "confirmLabel": "保存",
+            "rejectLabel": "キャンセル"
+         },
+         "context": {
+            "rescan": {
+               "title": "再スキャン",
+               "tooltip": "新しい LUN 用にこのホストベースのアダプタを再スキャンします"
+            }
+         },
+         "summary": {
+            "alt": "アダプタ",
+            "model": "モデル",
+            "driver": "ドライバ",
+            "actions": {
+               "actions": {
+                  "label": "アクション",
+                  "tooltip": "このリスト内で選択されたオブジェクトに対するアクションです。"
+               },
+               "fileBrowser": {
+                  "label": "ファイル ブラウザ",
+                  "tooltip": "アダプタ ファイルを参照できます。"
+               },
+               "recalculate": {
+                  "label": "再計算",
+                  "tooltip": "キャパシティや空き容量を含むアダプタの使用情報を再計算します。"
+               },
+               "increaseCapacity": {
+                  "label": "容量の増加",
+                  "tooltip": "アダプタのキャパシティを拡張します。"
+               },
+               "manageProviders": {
+                  "label": "プロバイダの管理",
+                  "tooltip": "ストレージ プロバイダを管理します。"
+               }
+            }
+         }
+      },
+      "list": {
+         "title": "次のデータストアには、選択したターゲット リソースからアクセスできます。仮想マシンの構成ファイルとすべての仮想ディスクのターゲット データストアを選択してください。"
+      },
+      "rename": {
+         "current": "現在の名前",
+         "new": "新規名前"
+      }
+   }
+}

@@ -1,0 +1,1704 @@
+{
+   "host": {
+      "defaultWelcomeMessage": "歡迎使用 {{hostname}}",
+      "about": {
+         "version": "用戶端版本:",
+         "buildNumber": "用戶端組建編號:",
+         "buildType": "組建類型:",
+         "branch": "分支:",
+         "changeSet": "變更集:",
+         "esxiVersion": "ESXi 版本:",
+         "esxiBuildNumber": "ESXi 組建編號:",
+         "openSourceLicenses": "開放原始碼授權"
+      },
+      "error": {
+         "cause": "原因:",
+         "version": "版本:",
+         "build": "組建版本:",
+         "esxi": "ESXi:",
+         "browser": "瀏覽器:",
+         "title": "未處理的例外狀況 ({{num}})",
+         "details": "詳細資訊",
+         "close": "關閉",
+         "reload": "重新載入",
+         "lostConnection": "與主機的連線可能已中斷，請嘗試重新整理您的瀏覽器。",
+         "communication": "抱歉，與主機通訊時出現問題。",
+         "unhandledException": "很遺憾，我們遇到了非預期的錯誤。\n\n用戶端可以繼續工作，但我們建議您現在重新整理瀏覽器並提交錯誤報告。\n\n按 Esc 鍵隱藏此對話方塊並繼續，而不進行重新整理。",
+         "stack": "例外狀況堆疊:"
+      },
+      "feedback": {
+         "title": "提供意見反應...",
+         "content": "歡迎您將任何意見反應提供給我們! 哪些功能有效? 哪些功能有問題? 哪些功能是您確實需要但我們沒有提供的?",
+         "developers": "<p>您可以<ul><li>傳送電子郵件至 <a href='mailto:esxui@vmware.com'>esxui@vmware.com</a>，</li><li>發文至我們的 SocialCast <a href='https://vmware-com.socialcast.com/groups/122886-esxihostclient' target='_blank'>群組</a>，或是</li><li>在 VMware.com 社群論壇 (即將推出) 中發文。</li></ul></p>",
+         "release": "<p>請在 VMware.com <a href='https://communities.vmware.com/community/vmtn/vsphere/hostclient' target='_blank'>社群論壇</a>中發文。</p>"
+      },
+      "shutdown": {
+         "title": "關閉 - {{hostname}}",
+         "logoutMessage": "主機正在關閉...",
+         "log": "記錄此關閉作業的原因:",
+         "log-placeholder": "在此處輸入原因",
+         "not-maintenance": "此主機未處於維護模式。",
+         "message": "將未處於維護模式的主機關閉或重新開機，將無法安全地停止在此主機上執行的虛擬機器。如果該主機屬於 Virtual SAN 叢集，則您可能無法存取此主機上的 Virtual SAN 資料。請先將主機置於維護模式，再將主機重新開機或關閉。",
+         "confirmation": "關閉選取的主機?",
+         "shutdown": "關閉",
+         "rejectLabel": "取消"
+      },
+      "reboot": {
+         "title": "主機重新開機",
+         "logoutMessage": "主機正在重新開機...",
+         "ok": "重新開機",
+         "log": "記錄此重新開機作業的原因:",
+         "log-placeholder": "在此處輸入原因",
+         "not-maintenance": "此主機未處於維護模式。",
+         "message": "將未處於維護模式的主機關閉或重新開機，將無法安全地停止在此主機上執行的虛擬機器。如果該主機屬於 Virtual SAN 叢集，則您可能無法存取此主機上的 Virtual SAN 資料。請先將主機置於維護模式，再將主機重新開機或關閉。",
+         "confirmation": "將主機重新開機?",
+         "rejectLabel": "取消"
+      },
+      "permissions": {
+         "manage": {
+            "menu": "權限",
+            "title": "管理權限",
+            "close": "關閉",
+            "cancel": "取消",
+            "noUsers": "無使用者",
+            "addUser": {
+               "label": "新增使用者",
+               "toolTip": "新增使用者"
+            },
+            "removeUser": {
+               "label": "移除使用者",
+               "toolTip": "移除使用者"
+            },
+            "assignRole": {
+               "label": "指派角色",
+               "toolTip": "指派角色給使用者"
+            },
+            "updatePermissions": {
+               "successNotification": "已成功更新權限",
+               "failureNotification": "無法更新權限: {{error}}"
+            },
+            "columns": {
+               "user": "使用者",
+               "role": "角色"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "選取使用者"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "選取角色"
+            },
+            "propagateLabel": "散佈到所有子系"
+         }
+      },
+      "context": {
+         "title": "主機",
+         "services": {
+            "label": "服務",
+            "tooltip": "管理此主機上的服務",
+            "ssh": {
+               "labelEnable": "啟用 Secure Shell (SSH)",
+               "labelDisable": "停用 Secure Shell (SSH)",
+               "tooltip": "切換此主機上的 Secure Shell 服務"
+            },
+            "shell": {
+               "labelEnable": "啟用主控台 Shell",
+               "labelDisable": "停用主控台 Shell",
+               "tooltip": "切換此主機上的主控台 Shell 服務"
+            }
+         },
+         "service": {
+            "restart": {
+               "label": "重新啟動",
+               "tooltip": "重新啟動此服務"
+            },
+            "start": {
+               "label": "啟動",
+               "tooltip": "啟動此服務"
+            },
+            "stop": {
+               "label": "停止",
+               "tooltip": "停止此服務"
+            },
+            "policy": {
+               "label": "原則",
+               "tooltip": "此服務的原則選項"
+            },
+            "firewallPolicy": {
+               "label": "隨防火牆連接埠一起啟動和停止",
+               "tooltip": "當防火牆連接埠開啟或關閉時啟動和停止此服務"
+            },
+            "hostPolicy": {
+               "label": "隨主機一起啟動和停止",
+               "tooltip": "當主機啟動和停止時啟動和停止此服務"
+            },
+            "manualPolicy": {
+               "label": "手動啟動和停止",
+               "tooltip": "手動啟動和停止此服務"
+            }
+         },
+         "manageWithVC": {
+            "label": "使用 vCenter Server 管理",
+            "tooltip": "使用 VMware vCenter Server 管理此主機"
+         },
+         "disconnectFromVC": {
+            "label": "中斷與 vCenter Server 的連線",
+            "tooltip": "中斷此主機與 VMware vCenter Server 的連線"
+         },
+         "createVM": {
+            "label": "建立/登錄虛擬機器",
+            "tooltip": "在此主機上建立或登錄虛擬機器"
+         },
+         "shutDown": {
+            "label": "關閉",
+            "tooltip": "關閉此主機"
+         },
+         "reboot": {
+            "label": "重新開機",
+            "tooltip": "將此主機重新開機"
+         },
+         "maintenanceMode": {
+            "labelEnter": "進入維護模式",
+            "labelExit": "結束維護模式",
+            "tooltipEnter": "將此主機置於維護模式",
+            "tooltipExit": "將此主機移出維護模式"
+         },
+         "lockdownMode": {
+            "label": "鎖定模式",
+            "tooltip": "管理此主機的鎖定模式",
+            "enterNormalLockdown": {
+               "label": "進入一般鎖定",
+               "tooltip": "將此主機置於一般鎖定模式"
+            },
+            "enterStrictLockdown": {
+               "label": "進入嚴格鎖定",
+               "tooltip": "將此主機置於嚴格鎖定模式"
+            },
+            "exitLockdown": {
+               "label": "結束鎖定",
+               "tooltip": "將此主機移出鎖定模式"
+            },
+            "dialog": {
+               "title": "鎖定模式警告",
+               "confirmStrictLabel": "進入嚴格鎖定",
+               "confirmNormalLabel": "進入一般鎖定",
+               "rejectLabel": "取消"
+            }
+         }
+      },
+      "summary": {
+         "host": "主機",
+         "version": "版本:",
+         "state": "狀態:",
+         "uptime": "運作時間:",
+         "days": "天",
+         "cpus": "CPU",
+         "metrics": {
+            "cpu": "CPU",
+            "storage": "儲存區",
+            "memory": "記憶體"
+         },
+         "actionBar": {
+            "manageWithVC": {
+               "label": "使用 vCenter Server 管理",
+               "tooltip": "使用 VMware vCenter Server 管理此主機"
+            },
+            "getVC": {
+               "label": "取得 vCenter Server",
+               "tooltip": "瞭解如何下載並安裝 vCenter Server"
+            },
+            "createRegisterVM": {
+               "label": "建立/登錄虛擬機器",
+               "tooltip": "建立或登錄虛擬機器"
+            },
+            "shutdown": {
+               "label": "關閉",
+               "tooltip": "關閉此主機"
+            },
+            "reboot": {
+               "label": "重新開機",
+               "tooltip": "將此主機重新開機"
+            },
+            "refresh": {
+               "label": "重新整理",
+               "tooltip": "重新整理此頁面上的資料"
+            },
+            "enterMaintenanceMode": {
+               "label": "進入維護模式",
+               "tooltip": "將此主機置於維護模式"
+            },
+            "exitMaintenanceMode": {
+               "label": "結束維護模式",
+               "tooltip": "將此主機移出維護模式"
+            },
+            "actions": {
+               "label": "動作",
+               "tooltip": "對此主機執行的動作"
+            }
+         },
+         "portlets": {
+            "hardware": {
+               "title": "硬體",
+               "manufacturer": "製造商",
+               "model": "型號",
+               "cpu": {
+                  "title": "CPU",
+                  "logicalProcessors": "邏輯處理器",
+                  "processorType": "處理器類型",
+                  "sockets": "通訊端",
+                  "coresPerSocket": "每個通訊端的核心數",
+                  "hyperthreading": "超執行緒",
+                  "yesEnabled": "是，已啟用",
+                  "yesDisabled": "是，已停用",
+                  "no": "否"
+               },
+               "memory": "記憶體",
+               "virtualFlash": {
+                  "title": "虛擬 Flash",
+                  "capacity": "容量",
+                  "value": {
+                     "used": "已使用",
+                     "capacity": "容量"
+                  },
+                  "used": "已使用",
+                  "free": "可用"
+               },
+               "networking": {
+                  "title": "網路",
+                  "hostname": "主機名稱",
+                  "ips": "IP 位址",
+                  "dns": "DNS 伺服器",
+                  "defaultGateway": "預設閘道",
+                  "ipv6Enabled": {
+                     "title": "已啟用 IPv6",
+                     "yes": "是",
+                     "no": "否"
+                  },
+                  "physicalAdapters": "主機介面卡",
+                  "networks": "網路",
+                  "list": {
+                     "columns": {
+                        "name": "名稱",
+                        "vms": "虛擬機器"
+                     }
+                  }
+               },
+               "storage": {
+                  "title": "儲存區",
+                  "physicalAdapters": "實體介面卡",
+                  "datastores": "資料存放區",
+                  "list": {
+                     "columns": {
+                        "name": "名稱",
+                        "type": "類型",
+                        "capacity": "容量",
+                        "free": "可用"
+                     }
+                  }
+               }
+            },
+            "configuration": {
+               "title": "組態",
+               "haState": {
+                  "title": "vSphere HA 狀態",
+                  "agentRunning": "代理程式執行中",
+                  "notConfigured": "未設定"
+               },
+               "imageProfile": "映像設定檔",
+               "vMotion": {
+                  "title": "vMotion",
+                  "supported": "受支援",
+                  "notSupported": "不受支援",
+                  "vmknic": "用於 vMotion 的虛擬 NIC",
+                  "yes": "是",
+                  "no": "否",
+                  "none": "無"
+               }
+            },
+            "systemInformation": {
+               "title": "系統資訊",
+               "currentDateTime": "主機上的日期/時間",
+               "inception": "安裝日期",
+               "assetTag": "資產標籤",
+               "serviceTag": "服務標籤",
+               "biosVersion": "BIOS 版本",
+               "biosReleaseDate": "BIOS 發行日期"
+            },
+            "perf": {
+               "label": "過去一小時的效能摘要",
+               "title": "效能摘要, 過去一小時",
+               "loading": "正在載入...",
+               "noData": "沒有效能資料可用",
+               "xAxisLabel": "時間",
+               "y1AxisLabel": "已耗用的主機 CPU (%)",
+               "y2AxisLabel": "已耗用的主機記憶體 (GB)",
+               "rightAxis": " (右軸)",
+               "cpuUsage": "已耗用的主機 CPU",
+               "memoryUsage": "已耗用的主機記憶體"
+            }
+         }
+      },
+      "manage": {
+         "title": "管理",
+         "system": {
+            "settings": "設定",
+            "tabTitle": "系統",
+            "tabTooltip": "設定系統設定",
+            "advancedSettings": {
+               "tabTitle": "進階設定",
+               "tabTooltip": "設定此主機的進階設定",
+               "context": {
+                  "resetToDefault": {
+                     "label": "重設為預設值",
+                     "tooltip": "重設為預設值"
+                  }
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對此清單中所選物件執行的動作"
+               },
+               "resetToDefault": {
+                  "successNotification": "已成功將 {{name}} 重設為預設值 {{value}}",
+                  "failureNotification": "無法將 {{name}} 重設為預設值 {{value}}"
+               },
+               "change": {
+                  "title": "編輯選項 - {{key}}",
+                  "confirm": "儲存",
+                  "rejectLabel": "取消",
+                  "successMessage": "已成功變更 {{key}}",
+                  "failureMessage": "無法變更 {{key}}"
+               },
+               "edit": {
+                  "label": "編輯選項",
+                  "tooltip": "編輯此選項"
+               },
+               "quickFilters": {
+                  "overridden": "覆寫的設定",
+                  "hostClient": "Host Client 設定"
+               },
+               "name": "名稱",
+               "key": "機碼",
+               "description": "說明",
+               "value": "值",
+               "default": "預設值",
+               "overridden": "已覆寫",
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理進階設定網格"
+               },
+               "readOnly": "唯讀",
+               "range": "範圍",
+               "currentValue": "目前值",
+               "newValue": "新值",
+               "type": {
+                  "string": "(字串)",
+                  "integer": "(整數)",
+                  "longInteger": "(長整數)",
+                  "float": "(浮點數)"
+               },
+               "true": "True",
+               "false": "False"
+            },
+            "autostart": {
+               "tabTitle": "自動啟動",
+               "tabTooltip": "設定此主機的自動啟動設定",
+               "edit": {
+                  "label": "編輯設定",
+                  "tooltip": "編輯自動啟動設定"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理自動啟動組態"
+               },
+               "enabled": {
+                  "label": "已啟用",
+                  "true": "是",
+                  "false": "否"
+               },
+               "startDelay": {
+                  "label": "開始延遲"
+               },
+               "stopDelay": {
+                  "label": "停止延遲"
+               },
+               "stopAction": {
+                  "label": "停止動作",
+                  "systemDefault": "系統預設值",
+                  "powerOff": "關閉電源",
+                  "suspend": "暫停",
+                  "Suspend": "暫停",
+                  "guestShutdown": "關閉"
+               },
+               "waitForHeartbeat": {
+                  "label": "等待活動訊號",
+                  "true": "是",
+                  "false": "否"
+               },
+               "change": {
+                  "title": "變更自動啟動組態",
+                  "rejectLabel": "取消",
+                  "confirmLabel": "儲存",
+                  "enabled": {
+                     "label": "已啟用",
+                     "yes": "是",
+                     "no": "否"
+                  },
+                  "waitForHeartbeat": {
+                     "label": "等待活動訊號",
+                     "yes": "是",
+                     "no": "否"
+                  },
+                  "startDelay": {
+                     "label": "開始延遲",
+                     "seconds": "秒"
+                  },
+                  "stopDelay": {
+                     "label": "停止延遲",
+                     "seconds": "秒"
+                  },
+                  "stopAction": {
+                     "label": "停止動作",
+                     "systemDefault": "系統預設值",
+                     "PowerOff": "關閉電源",
+                     "Suspend": "暫停",
+                     "ShutDown": "關閉"
+                  },
+                  "successNotification": "已成功更新主機自動啟動組態",
+                  "failureNotification": "無法更新主機自動啟動組態"
+               }
+            },
+            "hardware": {
+               "tabTitle": "硬體",
+               "tabTooltip": "設定此主機的硬體",
+               "powerManagement": {
+                  "tabTitle": "電源管理",
+                  "tabTooltip": "電源管理",
+                  "editSettings": {
+                     "label": "變更原則",
+                     "tooltip": "變更電源管理原則"
+                  },
+                  "refresh": "重新整理",
+                  "refreshTooltip": "重新整理電源管理",
+                  "technology": {
+                     "label": "技術"
+                  },
+                  "activePolicy": {
+                     "label": "作用中原則"
+                  },
+                  "dialog": {
+                     "title": "變更電源原則",
+                     "confirmLabel": "確定",
+                     "cancelLabel": "取消"
+                  },
+                  "PowerPolicy": {
+                     "off": {
+                        "name": "不受支援",
+                        "shortName": "不受支援",
+                        "description": "未偵測到主機電源管理"
+                     },
+                     "static": {
+                        "name": "高效能",
+                        "shortName": "高效能",
+                        "description": "不使用任何電源管理功能"
+                     },
+                     "dynamic": {
+                        "name": "平衡",
+                        "shortName": "平衡",
+                        "description": "在對效能影響最小的情況下減少能耗"
+                     },
+                     "low": {
+                        "name": "低功率",
+                        "shortName": "低功率",
+                        "description": "在效能可能會降低的風險下減少能耗"
+                     },
+                     "custom": {
+                        "name": "自訂",
+                        "shortName": "自訂",
+                        "description": "使用者定義的電源管理原則。進階組態將可供使用。"
+                     }
+                  },
+                  "columns": {
+                     "key": "金鑰",
+                     "name": "名稱",
+                     "value": "值",
+                     "default": "預設值",
+                     "overridden": "已覆寫"
+                  }
+               },
+               "pciDevices": {
+                  "tabTitle": "PCI 裝置",
+                  "tabTooltip": "PCI 裝置",
+                  "tooltip": "PCI 裝置",
+                  "active": "作用中",
+                  "enabled": "已啟用",
+                  "disabled": "已停用",
+                  "notCapable": "不可用",
+                  "reboot": "需要重新開機",
+                  "sriov": {
+                     "title": "為 {{name}} 設定 SR-IOV",
+                     "onConfirm": "儲存",
+                     "onReject": "取消",
+                     "enabled": {
+                        "label": "已啟用",
+                        "yes": "是",
+                        "no": "否"
+                     },
+                     "virtualFunctions": {
+                        "label": "虛擬功能",
+                        "maximum": "最大值 {{maxVirtualFunctionSupported}}"
+                     }
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "重新整理",
+                        "tooltip": "重新整理進階設定網格"
+                     },
+                     "passthrough": {
+                        "label": "切換傳遞",
+                        "tooltip": "為所選裝置切換傳遞"
+                     },
+                     "sriov": {
+                        "label": "設定 SR-IOV",
+                        "tooltip": "為所選裝置設定 SR-IOV"
+                     },
+                     "reboot": {
+                        "label": "主機重新開機",
+                        "tooltip": "將主機重新開機"
+                     }
+                  },
+                  "datagrid": {
+                     "quickFilters": {
+                        "sriovCapable": "具有 SR-IOV 功能",
+                        "passthroughCapable": "具有傳遞功能",
+                        "sriovActive": "SR-IOV 作用中",
+                        "passthroughActive": "傳遞作用中"
+                     },
+                     "columns": {
+                        "address": "位址",
+                        "description": "說明",
+                        "passthrough": "傳遞",
+                        "sriov": "SR-IOV"
+                     }
+                  },
+                  "summary": {
+                     "notSupported": "此裝置不能傳遞",
+                     "notRunning": "這是可傳遞的裝置，但未以傳遞模式執行",
+                     "needReboot": "此裝置需要主機重新開機才能開始在傳遞模式下執行",
+                     "deviceName": "裝置名稱",
+                     "id": "識別碼",
+                     "deviceID": "裝置識別碼",
+                     "vendorID": "廠商識別碼",
+                     "function": "功能",
+                     "bus": "匯流排",
+                     "vendorName": "廠商名稱",
+                     "classID": "類別識別碼",
+                     "subdeviceID": "子裝置識別碼",
+                     "subvendorID": "子廠商識別碼",
+                     "slot": "插槽"
+                  },
+                  "notifications": {
+                     "successSriov": "已成功為裝置 {{deviceName}} 設定 SR-IOV。所做的變更將在主機重新啟動後生效。",
+                     "failureSriov": "無法為裝置 {{deviceName}} 設定 SR-IOV。請查看最近的工作以取得更多詳細資料",
+                     "successSingular": "已成功為裝置 {{deviceName}} 切換傳遞。所做的變更將在主機重新啟動後生效",
+                     "successMultiple": "已成功為裝置切換傳遞。所做的變更將在主機重新啟動後生效",
+                     "error": "無法設定傳遞裝置"
+                  }
+               }
+            },
+            "licensing": {
+               "context": {
+                  "assignLicense": {
+                     "label": "指派授權",
+                     "tooltip": "將授權指派給此主機"
+                  },
+                  "removeLicense": {
+                     "label": "移除授權",
+                     "tooltip": "從主機移除此授權"
+                  }
+               },
+               "tabTitle": "授權",
+               "tabTooltip": "設定此主機的授權",
+               "name": "名稱",
+               "key": "金鑰",
+               "license": "授權金鑰",
+               "valid": "授權金鑰對於 <strong>{{name}}</strong> 有效",
+               "managedByVC": "此主機的授權正在由 vCenter Server 管理",
+               "expiration": "到期日期",
+               "expireNever": "永不",
+               "features": "功能",
+               "refresh": "重新整理",
+               "refreshToolTip": "重新整理授權",
+               "actions": "動作",
+               "actionsToolTip": "對此清單中所選授權執行的動作",
+               "assign": {
+                  "title": "指派授權",
+                  "hostManagedByVC": {
+                     "title": "主機正在由 vCenter Server 管理",
+                     "confirmLabel": "關閉"
+                  },
+                  "toolTip": "將授權指派給此主機",
+                  "checkLicense": "檢查授權",
+                  "provideValidLicense": "請提供有效的授權金鑰",
+                  "failedToDecode": "無法解碼提供的授權",
+                  "assignLicense": "指派授權",
+                  "invalidLicense": "請提供有效的授權金鑰",
+                  "notEnoughCores": "此主機的通訊端數 ({{cores}}) 超過所提供之授權對 ({{licenseCores}}) 的有效數量，請提供其他授權。",
+                  "expired": "授權已到期",
+                  "successMessage": "已成功指派授權 {{name}}",
+                  "failureMessage": "無法指派授權 {{name}}",
+                  "rejectLabel": "取消"
+               },
+               "remove": {
+                  "title": "移除授權",
+                  "remove": "移除",
+                  "removeLicense": "移除授權",
+                  "toolTip": "移除所選的授權",
+                  "content": "您確定要移除授權 \n<strong>{{name}}</strong> 嗎?",
+                  "successMessage": "已成功移除授權 {{key}}",
+                  "failureMessage": "無法移除授權 {{key}}",
+                  "rejectLabel": "取消"
+               }
+            },
+            "packages": {
+               "tabTitle": "套件",
+               "tabTooltip": "設定此主機上安裝的軟體",
+               "error": "沒有套件資料可用",
+               "list": {
+                  "columns": {
+                     "name": "名稱",
+                     "version": "版本",
+                     "description": "說明",
+                     "vendor": "廠商",
+                     "installDate": "安裝於"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "重新整理",
+                        "tooltip": "重新整理套件清單"
+                     },
+                     "update": {
+                        "label": "安裝更新",
+                        "tooltip": "在此主機上安裝更新"
+                     }
+                  }
+               }
+            },
+            "services": {
+               "tabTitle": "服務",
+               "tabTooltip": "設定此主機上執行的服務",
+               "name": "名稱:",
+               "restart": "重新啟動",
+               "stop": "停止",
+               "start": "啟動",
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理事件資料表"
+               },
+               "actions": "動作",
+               "actionsToolTip": "對所選服務執行的動作",
+               "name": "名稱",
+               "description": "說明",
+               "base": "基本系統",
+               "firewallRules": "防火牆規則",
+               "status": {
+                  "label": "狀況",
+                  "running": "執行中",
+                  "stopped": "已停止"
+               },
+               "source": "來源",
+               "startSuccess": "已成功啟動服務 {{name}}",
+               "startFailure": "無法啟動服務 {{name}}",
+               "restartSuccess": "已成功重新啟動服務 {{name}}",
+               "restartFailure": "無法重新啟動服務 {{name}}",
+               "stopSuccess": "已成功停止服務 {{name}}",
+               "stopFailure": "無法停止服務 {{name}}"
+            },
+            "timeAndDate": {
+               "context": {
+                  "ntpService": {
+                     "label": "NTP 服務",
+                     "tooltip": "管理主機的 NTP 服務"
+                  }
+               },
+               "tabTitle": "時間和日期",
+               "tabTooltip": "設定此主機的時間和日期",
+               "unknown": "未知",
+               "none": "無",
+               "ntpd": {
+                  "running": "執行中",
+                  "stopped": "已停止",
+                  "enabled": "已啟用",
+                  "disabled": "已停用"
+               },
+               "actions": "動作",
+               "actionsTooltip": "對時間組態執行的動作",
+               "servers": "NTP 伺服器",
+               "clientStatus": "NTP 用戶端狀態",
+               "serviceStatus": "NTP 服務狀態",
+               "currentDateTime": "目前的日期和時間",
+               "editSettings": "編輯設定",
+               "editSettingsTooltip": "編輯時間組態設定",
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理時間和日期組態"
+               },
+               "dialog": {
+                  "confirmLabel": "儲存",
+                  "rejectLabel": "取消",
+                  "title": "編輯時間組態",
+                  "header": "指定應如何設定此主機的日期和時間。",
+                  "manual": "手動設定主機上的日期和時間",
+                  "ntpdStartPolicy": {
+                     "on": {
+                        "description": "隨主機系統一起啟動和停止",
+                        "label": "隨主機一起啟動和停止"
+                     },
+                     "off": {
+                        "description": "使用者手動啟動和停止服務",
+                        "label": "手動啟動和停止"
+                     },
+                     "auto": {
+                        "description": "任一連接埠開啟時啟動，所有連接埠均關閉時停止",
+                        "label": "隨連接埠使用情況啟動和停止"
+                     }
+                  },
+                  "ntp": "使用網路時間通訊協定 (啟用 NTP 用戶端)",
+                  "ntpPolicy": "NTP 服務啟動原則",
+                  "ntpServers": "NTP 伺服器",
+                  "ntpServersLabel": "以逗點分隔伺服器，例如，10.31.21.2, fe00::2800",
+                  "validation": {
+                     "emptyDate": "請提供日期和時間。"
+                  }
+               }
+            },
+            "security": {
+               "tabTitle": "安全性和使用者",
+               "tabTooltip": "設定此主機的安全性設定和使用者權限",
+               "acceptance": {
+                  "tabTitle": "接受程度",
+                  "tabTooltip": "設定此主機的接受程度",
+                  "levels": {
+                     "partner": {
+                        "name": "合作夥伴",
+                        "description": "僅接受合作夥伴和 VMware 簽署和認證的 VIB"
+                     },
+                     "community": {
+                        "name": "社群",
+                        "description": "接受所有 VIB，甚至包括這些尚未簽署的 VIB"
+                     },
+                     "vmware_accepted": {
+                        "name": "VMware 已接受",
+                        "description": "接受 VMware 已接受的 VIB"
+                     },
+                     "vmware_certified": {
+                        "name": "VMware 已認證",
+                        "description": "僅接受 VMware 簽署和認證的 VIB"
+                     }
+                  },
+                  "editSettings": {
+                     "title": "編輯接受程度設定",
+                     "confirmLabel": "儲存",
+                     "rejectLabel": "取消",
+                     "failureNotification": "無法將接受程度設定為 {{level}}",
+                     "successNotification": "主機的接受程度已成功變更為 {{level}}"
+                  },
+                  "stack": {
+                     "acceptanceLevel": {
+                        "label": "接受程度",
+                        "partner": "合作夥伴",
+                        "community": "社群",
+                        "vmware_accepted": "VMware 已接受",
+                        "vmware_certified": "VMware 已認證"
+                     }
+                  },
+                  "actions": {
+                     "editSettings": {
+                        "label": "編輯設定",
+                        "tooltip": "變更此主機的接受程度"
+                     },
+                     "refresh": {
+                        "label": "重新整理",
+                        "tooltip": "重新整理此主機的接受程度資訊"
+                     }
+                  }
+               },
+               "authentication": {
+                  "tabTitle": "驗證",
+                  "tabTooltip": "設定此主機的驗證",
+                  "leaveDomain": {
+                     "title": "離開網域",
+                     "content": "您確定要將此主機從網域 <strong>{{domain}}</strong> 移除嗎?",
+                     "confirmLabel": "是",
+                     "rejectLabel": "取消",
+                     "failureMessage": "無法離開網域 {{domain}}: {{reason}}",
+                     "successMessage": "主機成功離開網域 {{domain}}"
+                  },
+                  "joinDomain": {
+                     "title": "加入網域",
+                     "confirmLabel": "加入網域",
+                     "rejectLabel": "取消",
+                     "domainLabel": "網域名稱",
+                     "usernameLabel": "使用者名稱",
+                     "passwordLabel": "密碼",
+                     "confirmPasswordLabel": "確認密碼",
+                     "username": "使用者名稱",
+                     "password": "密碼",
+                     "useAuthProxyLabel": "使用驗證代理",
+                     "authProxyLabel": "驗證代理",
+                     "successMessage": "主機已成功加入網域 {{domain}}",
+                     "failureMessage": "主機無法加入網域 {{domain}}: {{reason}}",
+                     "errorNoDomain": "請指定您要此主機加入的網域伺服器",
+                     "errorAuthProxy": "請指定要使用的驗證代理",
+                     "errorNoPassword": "請指定網域控制站帳戶密碼",
+                     "errorNoUsername": "請指定網域控制站帳戶使用者名稱",
+                     "errorPasswordsDontMatch": "指定的網域控制站密碼不相符"
+                  },
+                  "stack": {
+                     "activeDirectoryEnabled": {
+                        "label": "已啟用 Active Directory",
+                        "true": "是",
+                        "false": "否"
+                     },
+                     "smartCardAuthenticationEnabled": {
+                        "label": "已啟用智慧卡驗證",
+                        "true": "是",
+                        "false": "否"
+                     },
+                     "joinedDomain": {
+                        "label": "已加入網域"
+                     },
+                     "domainMembershipStatus": {
+                        "label": "網域成員資格狀態",
+                        "ok": "確定",
+                        "clientTrustBroken": "用戶端信任已中斷",
+                        "inconsistentTrust": "信任不一致",
+                        "noServers": "無伺服器",
+                        "otherProblem": "其他問題",
+                        "serverTrustBroken": "伺服器信任已中斷",
+                        "unknown": "未知"
+                     },
+                     "trustedDomain": {
+                        "label": "受信任的網域"
+                     }
+                  },
+                  "actions": {
+                     "join": {
+                        "label": "加入網域",
+                        "tooltip": "加入 Active Directory 網域"
+                     },
+                     "leave": {
+                        "label": "離開網域",
+                        "tooltip": "將此主機從網域移除"
+                     },
+                     "refresh": {
+                        "label": "重新整理",
+                        "tooltip": "重新整理此主機的驗證資訊"
+                     }
+                  }
+               },
+               "lockdown": {
+                  "tabTitle": "鎖定模式",
+                  "tabTooltip": "設定此主機的鎖定模式",
+                  "lockdownStrict": {
+                     "name": "嚴格鎖定",
+                     "description": "使用者限制為只能從 vCenter Server 登入"
+                  },
+                  "lockdownNormal": {
+                     "name": "一般鎖定",
+                     "description": "使用者可透過 DCUI 和 vCenter Server 登入"
+                  },
+                  "lockdownDisabled": {
+                     "name": "已停用",
+                     "description": "已停用鎖定模式"
+                  },
+                  "changeDialog": {
+                     "title": "變更鎖定模式",
+                     "confirmLabel": "變更",
+                     "rejectLabel": "取消"
+                  },
+                  "userDialog": {
+                     "title": "新增例外使用者",
+                     "confirmLabel": "新增例外",
+                     "rejectLabel": "取消",
+                     "invalidUser": "請輸入有效的使用者名稱",
+                     "userName": "使用者名稱",
+                     "successNotification": "已成功將使用者 {{user}} 新增至鎖定模式例外使用者清單",
+                     "failureNotification": "無法將使用者 {{user}} 新增至鎖定模式例外使用者清單"
+                  },
+                  "removeExceptionUser": {
+                     "title": "請確認",
+                     "content": "確定要將使用者 {{name}} 從鎖定模式例外使用者清單中移除嗎?",
+                     "confirmLabel": "是",
+                     "rejectLabel": "取消",
+                     "successNotification": "成功移除例外使用者 {{name}}",
+                     "failureNotification": "無法移除例外使用者 {{name}}"
+                  },
+                  "failureNotification": "無法進入鎖定模式: {{message}}",
+                  "successNotification": "已成功進入鎖定模式",
+                  "stack": {
+                     "lockdownMode": {
+                        "label": "鎖定模式",
+                        "lockdownStrict": "已啟用嚴格鎖定",
+                        "lockdownNormal": "已啟用一般鎖定",
+                        "lockdownDisabled": "已停用"
+                     },
+                     "exceptionUsers": {
+                        "label": "例外使用者"
+                     }
+                  },
+                  "userList": {
+                     "noUsers": "無例外使用者",
+                     "columns": {
+                        "name": "名稱"
+                     }
+                  },
+                  "actions": {
+                     "refresh": {
+                        "label": "重新整理",
+                        "tooltip": "重新整理此主機的憑證資訊"
+                     },
+                     "removeUser": {
+                        "label": "移除使用者例外",
+                        "tooltip": "將使用者從鎖定模式的例外清單中移除"
+                     },
+                     "addUser": {
+                        "label": "新增使用者例外",
+                        "tooltip": "將使用者新增至鎖定模式的例外清單"
+                     },
+                     "configureLockdown": {
+                        "label": "編輯設定",
+                        "tooltip": "設定此主機的鎖定模式"
+                     }
+                  }
+               },
+               "users": {
+                 "tabTitle": "使用者",
+                 "tabTooltip": "管理系統使用者",
+                 "noUsers": "無使用者",
+                 "actions": {
+                   "refresh": {
+                      "label": "重新整理",
+                      "tooltip": "重新整理使用者清單"
+                   },
+                   "removeUser": {
+                      "label": "移除使用者",
+                      "tooltip": "移除使用者"
+                   },
+                   "addUser": {
+                      "label": "新增使用者",
+                      "tooltip": "新增使用者"
+                   },
+                   "updateUser": {
+                      "label": "編輯使用者",
+                      "tooltip": "修改使用者資訊"
+                   }
+                 },
+                 "grid": {
+                    "username": "使用者名稱",
+                    "description": "說明"
+                 },
+                 "addUser": {
+                    "title": "新增使用者",
+                    "userNameBlockLabel": "使用者名稱 (必要)",
+                    "userDescriptionBlockLabel": "說明",
+                    "userPasswordBlockLabel": "密碼 (必要)",
+                    "userConfirmPasswordBlockLabel": "確認密碼 (必要)",
+                    "confirmLabel": "新增",
+                    "rejectLabel": "取消",
+                    "failureNotification": "無法新增使用者: {{error}}",
+                    "successNotification": "已成功新增使用者 {{user}}"
+                 },
+                 "updateUser": {
+                    "title": "編輯使用者",
+                    "userNameBlockLabel": "使用者名稱",
+                    "userDescriptionBlockLabel": "說明",
+                    "userPasswordBlockLabel": "密碼",
+                    "userConfirmPasswordBlockLabel": "確認密碼",
+                    "confirmLabel": "儲存",
+                    "rejectLabel": "取消",
+                    "failureNotification": "無法更新使用者: {{error}}",
+                    "successNotification": "已成功更新使用者 {{user}}"
+                 },
+                 "removeUser": {
+                    "title": "警告",
+                    "content": "是否確定要移除使用者: <strong>{{user}}</strong>?",
+                    "confirmLabel": "是",
+                    "rejectLabel": "取消",
+                    "failureNotification": "無法移除使用者 {{user}}",
+                    "successNotification": "已成功移除使用者 {{user}}"
+                 }
+               },
+               "roles": {
+                 "tabTitle": "角色",
+                 "tabTooltip": "管理角色",
+                 "actions": {
+                   "refresh": {
+                      "label": "重新整理",
+                      "tooltip": "重新整理角色清單"
+                   },
+                   "removeRole": {
+                      "label": "移除角色",
+                      "tooltip": "移除授權角色"
+                   },
+                   "addRole": {
+                      "label": "新增角色",
+                      "tooltip": "新增授權角色"
+                   },
+                   "updateRole": {
+                      "label": "編輯角色",
+                      "tooltip": "修改授權角色"
+                   }
+                 },
+                 "grid": {
+                    "name": "名稱",
+                    "summary": "摘要"
+                 },
+                 "addRole": {
+                    "title": "新增角色",
+                    "roleNameBlockLabel": "角色名稱 (必要)",
+                    "rolePrivilegesBlockLabel": "權限",
+                    "confirmLabel": "新增",
+                    "rejectLabel": "取消",
+                    "validation": {
+                       "nameExists": "名為 {{name}} 的角色已存在，請選擇不同名稱。"
+                    },
+                    "failureNotification": "無法新增角色: {{error}}",
+                    "successNotification": "已成功新增角色 {{role}}"
+                 },
+                 "updateRole": {
+                    "title": "編輯角色",
+                    "roleNameBlockLabel": "角色名稱 (必要)",
+                    "rolePrivilegesBlockLabel": "權限",
+                    "confirmLabel": "儲存",
+                    "rejectLabel": "取消",
+                    "failureNotification": "無法更新角色: {{error}}",
+                    "successNotification": "已成功更新角色: {{role}}"
+                 },
+                 "removeRole": {
+                    "title": "警告",
+                    "content": "是否確定要移除角色: <strong>{{roleName}}</strong>?",
+                    "option": "僅在未使用時移除",
+                    "confirmLabel": "是",
+                    "rejectLabel": "取消",
+                    "failureNotification": "無法移除角色{{role}}",
+                    "successNotification": "已成功移除角色 {{role}}"
+                 }
+               },
+               "certificates": {
+                  "tabTitle": "憑證",
+                  "tabTooltip": "設定此主機的 SSL 憑證",
+                  "warningVC": "此主機的憑證正在由 vCenter Server 管理，您無法使用 Host Client 進行設定。",
+                  "import": {
+                     "title": "匯入憑證",
+                     "confirmLabel": "匯入",
+                     "rejectLabel": "取消",
+                     "invalidCert": "所提供憑證的格式不是 PEM。請貼上整個憑證。",
+                     "certLabel": "憑證",
+                     "certTitle": "在此處貼上 PEM 格式的憑證。",
+                     "successMessage": "已成功更新憑證，您應該重新整理瀏覽器",
+                     "failureMessage": "無法匯入新的 SSL 憑證",
+                     "reboot": {
+                        "title": "需要重新開機",
+                        "content": "若要載入新憑證，必須將主機重新開機。立即重新開機?",
+                        "confirmLabel": "重新開機",
+                        "rejectLabel": "稍後"
+                     }
+                  },
+                  "stack": {
+                     "notAfter": {
+                        "label": "有效期至"
+                     },
+                     "notBefore": {
+                        "label": "有效期始於"
+                     },
+                     "subject": {
+                        "label": "主旨"
+                     },
+                     "issuer": {
+                        "label": "核發者"
+                     },
+                     "unknown": "未知"
+                  },
+                  "actions": {
+                     "import": {
+                        "label": "匯入新憑證",
+                        "tooltip": "匯入此主機的新 SSL 憑證"
+                     },
+                     "genCSR": {
+                        "copyToClipboard": "複製到剪貼簿",
+                        "title": "憑證簽署申請結果",
+                        "close": "關閉",
+                        "labelIPBased": "產生 IP 簽署申請",
+                        "labelHostnameBased": "產生 FQDN 簽署申請",
+                        "tooltip": "產生憑證簽署申請"
+                     },
+                     "refresh": {
+                        "label": "重新整理",
+                        "tooltip": "重新整理此主機的憑證資訊"
+                     }
+                  }
+               }
+            },
+            "swap": {
+               "tabTitle": "交換",
+               "tabTooltip": "設定此主機的系統交換",
+               "localSwap": "本機交換",
+               "localSwapEnabled": "本機交換已啟用",
+               "hostCache": "主機快取",
+               "hostCacheEnabled": "主機快取已啟用",
+               "datastore": "資料存放區",
+               "enabled": "已啟用",
+               "true": "是",
+               "false": "否",
+               "none": "無",
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理交換組態"
+               },
+               "editSettings": {
+                  "label": "編輯設定",
+                  "tooltip": "變更系統交換組態"
+               },
+               "dialog": {
+                  "title": "編輯交換組態",
+                  "rejectLabel": "取消",
+                  "confirmLabel": "儲存",
+                  "successNotification": "已成功更新主機交換組態",
+                  "failureNotification": "無法更新主機交換組態",
+                  "mustSelect": "您必須至少啟用一種交換裝置"
+               }
+            }
+         },
+         "changeUsername": {
+            "dialog": {
+               "nonAscii": "使用者名稱中存在無效字元。請僅使用低 ASCII 字元。",
+               "badCharacters": "使用者名稱中存在無效字元。請僅使用英數字元。"
+            }
+         },
+         "changePassword": {
+            "menu": {
+               "label": "變更密碼"
+            },
+            "dialog": {
+               "title": "變更密碼",
+               "newPassword": "新密碼",
+               "newPasswordAgain": "再次輸入新密碼",
+               "confirmLabel": "變更密碼",
+               "rejectLabel": "取消",
+               "noMatch": "密碼不相符",
+               "nonAscii": "密碼中存在無效字元。請僅使用低 ASCII 字元。",
+               "success": "已成功變更 {{username}} 的密碼",
+               "blank": "未輸入密碼。",
+               "failed": "無法變更密碼"
+            }
+         }
+      },
+      "sshConsole": {
+         "menu": {
+            "label": "SSH 主控台",
+            "tooltip": "開啟 SSH 主控台至此主機",
+            "labelGetChrome": "取得適用於 Chrome 的 SSH"
+         }
+      },
+      "scriptingConsole": {
+         "menu": {
+            "label": "指令碼主控台",
+            "tooltip": "開啟主控台以編寫要對此主機執行的動作指令碼"
+         },
+         "actionBar": {
+            "runButton": {
+               "label": "執行",
+               "tooltip": "執行指令碼"
+            },
+            "clearButton": {
+               "label": "清除",
+               "tooltip": "清除記錄視窗"
+            }
+         }
+      },
+      "supportBundle": {
+         "successNotification": "已建立支援服務包，您可以從 {{url}} 下載服務包",
+         "failureNotification": "無法建立支援服務包: {{error}}",
+         "dialog": {
+            "title": "支援服務包已完成",
+            "content": "建立支援服務包已完成。您可以從<a href='{{url}}'>此處</a>下載支援服務包。\n\n您可以從「產生支援服務包」工作找到此支援服務包的下載 URL\n\n服務包將在 15 分鐘後自動從主機中移除。",
+            "confirmLabel": "下載",
+            "rejectLabel": "關閉"
+         },
+         "menu": {
+            "label": "產生支援服務包",
+            "tooltip": "從此主機產生支援服務包"
+         }
+      },
+      "monitor": {
+         "title": "{{hostname}} - 監控",
+         "performance": {
+            "tabTitle": "效能",
+            "tabTooltip": "監控系統的效能",
+            "refresh": {
+               "label": "重新整理",
+               "tooltip": "重新整理效能圖"
+            },
+            "configure": {
+               "action": {
+                  "label": "選取虛擬機器",
+                  "tooltip": "設定您要在效能圖中顯示其資料的虛擬機器"
+               },
+               "dialog": {
+                  "title": "選取虛擬機器",
+                  "rejectLabel": "取消",
+                  "confirmLabel": "儲存"
+               }
+            },
+            "dataAvailability": {
+               "signpost": {
+                  "title": "資料可用性",
+                  "message": "為何僅提供「過去一小時」這一資料範圍? ESXi 主機僅儲存過去一小時的歷史資料。若要查看更大範圍的資料，您需要使用 vCenter Server。"
+               }
+            },
+            "grid": {
+               "name": "名稱",
+               "unit": "單位",
+               "average": "平均值",
+               "maximum": "上限",
+               "minimum": "下限",
+               "latest": "最新"
+            },
+            "noMatches": "沒有與篩選器「{{search}}」相符的資料系列",
+            "colors": {
+               "vmware": "預設色彩",
+               "highContrast": "高對比色彩"
+            },
+            "filter": {
+               "type": "篩選器類型",
+               "cpuFilter": "CPU 篩選器",
+               "time": "時間"
+            },
+            "charts": {
+               "cpu": {
+                  "usage": {
+                     "dropdownTitle": "CPU",
+                     "allDropdownTitle": "全部",
+                     "hostDropdownTitle": "主機",
+                     "allCoresDropdownTitle": "所有 PCPU",
+                     "allPackagesDropdownTitle": "所有套件",
+                     "packageDropdownTitle": "套件 {{pkg}} 核心",
+                     "custom": "自訂",
+                     "seriesLabel": "PCPU {{core}}",
+                     "vmSeriesLabel": "虛擬機器 - {{name}}",
+                     "packageSeriesLabel": "套件 {{pkg}}",
+                     "y1AxisLabel": "已耗用的主機 CPU (%)",
+                     "xAxisLabel": "時間"
+                  }
+               },
+               "memory": {
+                  "usage": {
+                     "dropdownTitle": "記憶體",
+                     "seriesLabel": "已耗用的主機記憶體",
+                     "vmSeriesLabel": "虛擬機器 - {{name}}",
+                     "y1AxisLabel": "已耗用的主機記憶體 (GB)",
+                     "xAxisLabel": "時間"
+                  }
+               },
+               "cpuAndMemory": {
+                  "dropdownTitle": "CPU + 記憶體複合"
+               },
+               "network": {
+                  "dropdownTitle": "網路",
+                  "usageSeriesLabel": "總網路使用量",
+                  "vmUsageSeriesLabel": "總網路使用量 - {{name}}",
+                  "transmitSeriesLabel": "總傳輸速率",
+                  "receiveSeriesLabel": "總接收速率",
+                  "nicTransmitRateSeriesLabel": "傳輸速率 - {{nic}}",
+                  "nicReceiveRateSeriesLabel": "接收速率 - {{nic}",
+                  "y1AxisLabel": "傳輸/接收速率 (mbps)",
+                  "y2AxisLabel": "數字",
+                  "xAxisLabel": "時間"
+               },
+               "disk": {
+                  "dropdownTitle": "磁碟",
+                  "usageSeriesLabel": "總磁碟使用量",
+                  "readRateSeriesLabel": "總讀取速率",
+                  "writeRateSeriesLabel": "總寫入速率",
+                  "diskReadRateSeriesLabel": "讀取速率 - {{disk}}",
+                  "diskWriteRateSeriesLabel": "寫入速率 - {{disk}}",
+                  "vmRateSeriesLabel": "總磁碟使用量 - {{name}}",
+                  "maxLatencySeriesLabel": "最大延遲時間",
+                  "y1AxisLabel": "資料速率 (MB/s)",
+                  "y2AxisLabel": "延遲時間 (毫秒)",
+                  "xAxisLabel": "時間"
+               },
+               "scale": {
+                  "lastHour": "過去一小時"
+               }
+            }
+         },
+         "logs": {
+            "context": {
+               "openInNewWindow": {
+                  "label": "在新視窗中開啟",
+                  "tooltip": "在新視窗中開啟此記錄"
+               }
+            },
+            "descriptions": {
+               "vmkernel": "來自 VMkernel 子系統的資訊",
+               "vpxa": "vCenter 代理程式記錄",
+               "hostd": "主機代理程式記錄",
+               "dhclient": "DHCP 用戶端記錄",
+               "esxupdate": "ESX 更新記錄檔",
+               "vmauthd": "vMotion 驗證精靈記錄",
+               "sysboot": "系統開機記錄",
+               "vmkeventd": "VMkernel 事件精靈記錄",
+               "vobd": "VMware 觀察精靈記錄",
+               "auth": "驗證子系統記錄",
+               "fdm": "Fault Tolerance 管理代理程式記錄",
+               "syslog": "一般系統記錄",
+               "vmkwarning": "VMkernel 警告記錄",
+               "vmkdevmgr": "VMkernel 裝置管理員記錄",
+               "shell": "ESXi Shell 活動記錄"
+            },
+            "tabTitle": "記錄",
+            "tabTooltip": "檢視系統記錄",
+            "noLogSelected": "未選取任何記錄",
+            "actionBar": {
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選記錄檔執行的動作"
+               },
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理所選記錄檔"
+               },
+               "close": {
+                  "label": "關閉",
+                  "tooltip": "關閉此視窗"
+               }
+            },
+            "list": {
+               "columns": {
+                  "log": "記錄",
+                  "description": "說明"
+               }
+            }
+         },
+         "hardware": {
+            "tabTitle": "硬體",
+            "tabTooltip": "監控系統的硬體",
+            "sensors": {
+               "alt": "系統感應器",
+               "tabTitle": "系統感應器",
+               "tabTooltip": "系統感應器",
+               "type": "類別",
+               "health": "健全狀況",
+               "fru": "FRU",
+               "lastUpdated": "上次更新",
+               "noSensors": "沒有感應器資料可用",
+               "currentReading": "目前讀取",
+               "eventLogEntries": "事件記錄項目",
+               "notifications": {
+                  "noIPMI": "此系統沒有 IPMI 功能，您可能需要安裝驅動程式，才能擷取感應器資料。"
+               },
+               "discreteSensorStates": {
+                  "DMI-discrete": {
+                     "0": "轉換為閒置",
+                     "1": "轉換為作用中",
+                     "2": "轉換為忙碌"
+                  },
+                  "assert-discrete": {
+                     "0": "已解除判斷提示狀態",
+                     "1": "已判斷提示狀態"
+                  },
+                  "predictive-discrete": {
+                     "0": "已解除判斷提示預測性失敗",
+                     "1": "已判斷提示預測性失敗"
+                  },
+                  "limit-discrete": {
+                     "0": "未超過限制",
+                     "1": "已超過限制"
+                  },
+                  "performance-discrete": {
+                     "0": "效能符合",
+                     "1": "效能落後"
+                  },
+                  "severity-discrete": {
+                     "0": "轉換為良好",
+                     "1": "從良好轉換為非嚴重",
+                     "2": "從低嚴重性轉換為嚴重",
+                     "3": "從低嚴重性轉換為無法復原",
+                     "4": "從高嚴重性轉換為非嚴重",
+                     "5": "從無法復原轉換為嚴重",
+                     "6": "轉換為無法復原",
+                     "7": "監控",
+                     "8": "資訊"
+                  },
+                  "present-discrete": {
+                     "0": "裝置已移除",
+                     "1": "裝置已插入"
+                  },
+                  "enabled-discrete": {
+                     "0": "裝置已停用",
+                     "1": "裝置已啟用"
+                  },
+                  "availability-discrete": {
+                     "0": "轉換為執行中",
+                     "1": "轉換為測試中",
+                     "2": "轉換為關閉電源",
+                     "3": "轉換為上線",
+                     "4": "轉換為離線",
+                     "5": "轉換為休息",
+                     "6": "轉換為已降級",
+                     "7": "轉換為省電",
+                     "8": "安裝錯誤"
+                  },
+                  "redundancy-discrete": {
+                     "0": "完全冗餘",
+                     "1": "冗餘遺失",
+                     "2": "冗餘已降級",
+                     "3": "從冗餘轉變為非冗餘足夠資源",
+                     "4": "從不足轉變為非冗餘足夠資源",
+                     "5": "非冗餘資源不足",
+                     "6": "冗餘已從完全冗餘降級",
+                     "7": "冗餘已從非冗餘降級"
+                  },
+                  "ACPI-discrete": {
+                     "0": "D0 電源狀態",
+                     "1": "D1 電源狀態",
+                     "2": "D2 電源狀態",
+                     "3": "D3 電源狀態",
+                     "157": "未知狀態"
+                  },
+                  "watchdog": {
+                     "0": "計時器已到期",
+                     "1": "已重新開機",
+                     "2": "關閉電源",
+                     "3": "重新啟動電源"
+                  },
+                  "int-drive": {
+                     "0": "存在",
+                     "1": "磁碟機故障",
+                     "2": "預測性失敗",
+                     "3": "熱備援",
+                     "4": "一致性檢查進行中",
+                     "5": "嚴重陣列",
+                     "6": "失敗陣列",
+                     "7": "重建進行中",
+                     "8": "重建已中止"
+                  },
+                  "cable": {
+                     "0": "存在/已連線",
+                     "1": "不存在/組態錯誤"
+                  },
+                  "available-discrete": {
+                     "0": "裝置不存在",
+                     "1": "裝置存在"
+                  }
+               },
+               "state": {
+                  "green": "綠色",
+                  "red": "紅色",
+                  "yellow": "黃色",
+                  "unknown": "未知"
+               },
+               "list": {
+                  "columns": {
+                     "sensor": "感應器",
+                     "id": "識別碼",
+                     "category": "類別",
+                     "health": "健全狀況",
+                     "current": "目前讀取",
+                     "selEntries": "SEL 項目",
+                     "updated": "上次更新",
+                     "hasFRU": "FRU 資料",
+                     "type": "類型/單位"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "重新整理",
+                        "tooltip": "重新整理感應器資料表。附註: 實際更新速率受限於主機的內部系統，因此，重新整理此資料表可能不會產生更新的資料"
+                     },
+                     "clearSEL": {
+                        "label": "清除事件記錄",
+                        "tooltip": "清除系統事件記錄"
+                     }
+                  }
+               }
+            },
+            "storage": {
+               "alt": "儲存區",
+               "tabTitle": "儲存區",
+               "tabTooltip": "儲存區健全狀況資料",
+               "operationalInfo": "其他資訊",
+               "noData": "沒有資料可用",
+               "statusTitle": "狀態",
+               "status": {
+                  "Green": "綠色",
+                  "Red": "紅色",
+                  "Yellow": "黃色",
+                  "Unknown": "未知"
+               },
+               "notifications": {
+                  "noSFCBD": "Small Footprint CIM Broker 精靈 (SFCBD) 不在執行中。儲存區健全狀況資料是由此精靈報告。如需啟用此服務的相關資訊，請參閱<a href=\"http://kb.vmware.com/kb/1025757\" target=\"_blank\">此知識庫文章</a>。",
+                  "noReportedData": "Small Footprint CIM Broker 精靈 (SFCBD) 正在執行中，但未報告任何資料。您可能需要為儲存裝置介面卡安裝 CIM 提供者。"
+               },
+               "list": {
+                  "columns": {
+                     "name": "名稱",
+                     "status": "健全狀況",
+                     "description": "說明"
+                  },
+                  "actionBar": {
+                     "refresh": {
+                        "label": "重新整理",
+                        "tooltip": "重新整理感應器資料表。附註: 實際更新速率受限於主機的內部系統，因此，重新整理此資料表可能不會產生更新的資料"
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "tabTitle": "事件",
+            "tabTooltip": "系統事件",
+            "type": "類型",
+            "time": "時間",
+            "virtualMachine": "虛擬機器",
+            "searchKB": "知識庫",
+            "searchKBLink": "按一下此處可在 VMware.com 線上知識庫中搜尋此事件的相關資訊",
+            "event": "事件",
+            "time": "時間",
+            "type": "類型",
+            "previousPage": "上一頁",
+            "nextPage": "下一頁",
+            "refresh": "重新整理",
+            "perPage": "每頁 {{num}} 個",
+            "none": "無",
+            "actions": {
+               "label": "動作",
+               "tooltip": "對與所選事件相關聯之物件執行的動作"
+            },
+            "refresh": {
+               "label": "重新整理",
+               "tooltip": "重新整理事件資料表"
+            }
+         },
+         "notifications": {
+            "tabTitle": "通知",
+            "tabTooltip": "系統通知",
+            "suggestedAction": "建議動作",
+            "actionBar": {
+               "refresh": {
+                  "label": "重新整理",
+                  "tooltip": "重新整理通知"
+               },
+               "actions": {
+                  "label": "動作",
+                  "tooltip": "對所選通知執行的動作"
+               }
+            },
+            "grid": {
+               "notification": "通知",
+               "type": "類型"
+            }
+         },
+         "tasks": {
+            "alt": "工作",
+            "tabTitle": "工作",
+            "tabTooltip": "工作",
+            "noTasks": "無工作",
+            "key": "金鑰",
+            "description": "說明",
+            "state": "狀態",
+            "errors": "錯誤",
+            "result": "結果"
+         }
+      },
+      "state": {
+         "inMaintenanceMode": "維護模式",
+         "normal": "正常",
+         "connected": "已連線到位於下列位置的 vCenter Server",
+         "disconnected": "未連線到任何 vCenter Server",
+         "lockdownStrict": "已鎖定、嚴格",
+         "lockdownNormal": "已鎖定、一般",
+         "lockdownDisabled": "未鎖定"
+      },
+      "disconnectFromVC": {
+         "title": "中斷與 vCenter Server 的連線",
+         "confirmLabel": "中斷連線",
+         "rejectLabel": "取消",
+         "warning": "中斷此主機的連線將導致 vCenter Server 認為主機沒有回應。\n\n僅應在 VC 出現故障且您需要在主機上執行緊急作業時，才使用此方法。如果 vCenter Server 仍在執行中，此作業將會導致發出警示。\n\n將此主機重新開機可能也會導致其重新連線至 vCenter Server。",
+         "success": "已成功中斷此主機與 vCenter Server 的連線"
+      },
+      "maintenanceMode": {
+         "title": "確認維護模式變更",
+         "rejectLabel": "取消",
+         "confirmLabel": "是",
+         "vsan": "Virtual SAN 資料可能存放在 Virtual SAN 叢集中的主機上。請選取一個選項來設定 Virtual SAN 資料的移轉機制，該機制將在主機進入維護模式之前強制執行。",
+         "vsanLabel": "vSAN 資料移轉",
+         "vsanDataMigration": {
+            "noAction": {
+               "label": " 不移轉資料",
+               "help": " Virtual SAN 不會從此主機中撤出任何資料。如果您關閉主機電源或將其從叢集中移除，部分虛擬主機可能會無法供存取。"
+            },
+            "ensureObjectAccessibility": {
+               "label": " 確保可存取性",
+               "help": "這是預設選項。當您關閉主機電源或將其從叢集中移除時，Virtual SAN 會確保此主機上所有可存取的虛擬機器都繼續維持可存取狀態。通常只需要撤出部分資料。\n\n如果您是要暫時讓主機脫離叢集 (例如，為了安裝升級)，並打算讓主機回到叢集，請選取此選項。當您要從叢集永久刪除主機時，此選項不適用。"
+            },
+            "evacuateAllData":{
+               "label": "撤出所有資料",
+               "help": " Virtual SAN 會將所有資料撤出到叢集中的其他主機，並同時維持叢集中受影響元件的應有可用性，或修正妨礙其達到應有可用性的問題。此選項產生的資料傳輸量最大，所耗費的時間與資源也最多。如果您打算永久移轉主機，請選取此選項。從叢集中最後一個主機撤出資料時，請務必將虛擬機器移轉至其他資料存放區，然後將主機置於維護模式。如果有虛擬機器物件在主機上有資料，但該虛擬機器物件無法供存取，造成系統無法完整撤出該虛擬機器物件，則主機就不會進入維護模式。"
+            }
+         },
+         "vmsPoweredOn": "虛擬機器仍處於電源開啟的狀態。在所有虛擬機器都已移轉或關閉電源/暫停之後，才會進入維護模式。",
+         "vmsPoweredOnTitle": "進入維護模式時延遲",
+         "warning": "處於維護模式時，無法建立虛擬機器，也無法開啟虛擬機器電源或對其進行設定。此外，VMware vCenter Server 不會將任何虛擬機器移轉至處於維護模式的主機。\n\n您可能需要關閉虛擬機器電源或手動從主機移轉虛擬機器。\n\n您可以隨時取消「進入維護模式」工作。",
+         "confirmEnter": "是否確定要將此主機置於維護模式?",
+         "notifications": {
+            "failure": "無法進入維護模式: {{message}}",
+            "failureUnknown": "無法進入維護模式，發生未知錯誤。"
+         }
+      },
+      "lockdownMode": {
+         "warning": "進入鎖定模式可能導致此工作階段沒有回應，除非為目前使用者設定了例外。如果沒有設定例外，則無法重新連線至此用戶端應用程式。"
+      },
+      "notifications": {
+         "freeLicense": {
+            "message": "指派給此主機的授權存在限制，因而導致無法執行某些作業，例如，虛擬機器電源作業。",
+            "suggested-action": "您可透過還原至評估授權來解決此問題。"
+         },
+         "licenseExpired": {
+            "message": "您的 ESXi 授權已到期。"
+         },
+         "evalLicenseValid": {
+            "message": "您目前在評估模式下使用 ESXi。此授權將於 {{days}} 天後到期。"
+         },
+         "evalLicenseExpired": {
+            "message": "您的 ESXi 評估授權已到期。"
+         },
+         "certNotValidBefore": {
+            "message": "指派給此主機的憑證無效。",
+            "suggested-action": "您應安裝有效憑證。"
+         },
+         "certExpired": {
+            "message": "指派給此主機的憑證已到期。",
+            "suggested-action": "您應安裝有效憑證。"
+         },
+         "rebootRequired": {
+            "message": "此主機需要重新開機才能完成設定。"
+         },
+         "ssh": {
+            "message": "此主機上已啟用 SSH。",
+            "suggested-action": "除非是系統管理用途所需，否則您應停用 SSH。"
+         },
+         "shell": {
+            "message": "此主機上已啟用 ESXi Shell。",
+            "suggested-action": "除非是系統管理用途所需，否則您應停用 Shell。"
+         },
+         "vc": {
+            "message": "此主機目前正由 vCenter Server 管理。",
+            "suggested-action": "vCenter Server 可能會在未告知您的情況下自動執行動作。"
+         },
+         "maxRegisteredVMs": {
+            "message": "此主機已達到已登錄虛擬機器的數目上限。",
+            "suggested-action": "向此主機新增更多記憶體會增加支援的虛擬機器數目上限。"
+         }
+      }
+   }
+}

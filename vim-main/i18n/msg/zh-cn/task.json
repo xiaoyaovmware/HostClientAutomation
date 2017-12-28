@@ -1,0 +1,55 @@
+{
+   "task": {
+      "task": "任务",
+      "entity": "目标",
+      "queued": "已排队",
+      "started": "已启动",
+      "completed": "已完成",
+      "initiator": "启动者",
+      "result": "结果",
+      "state": {
+         "running": "正在运行...",
+         "success": "成功完成",
+         "successful": "成功完成",
+         "error": "失败"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "刷新",
+            "tooltip": "刷新任务表"
+         },
+         "actions": {
+            "label": "操作",
+            "tooltip": "与所选任务相关的对象的操作"
+         }
+      },
+      "pseudo": {
+         "vmrc": {
+            "download": {
+               "label": "下载 VMRC",
+               "summary": "下载 VMware Remote Console 安装程序"
+            }
+         },
+         "certificate": {
+            "upload": {
+               "label": "替换主机证书",
+               "summary": "替换主机的 SSL 证书"
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "将文件上载至数据存储",
+               "summary": "将文件上载至数据存储",
+               "cancelled": "已取消上载文件"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "上载磁盘",
+               "summary": "为虚拟机上载磁盘",
+               "cancelled": "已取消上载磁盘"
+            }
+         }
+      }
+   }
+}

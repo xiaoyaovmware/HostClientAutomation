@@ -1,0 +1,537 @@
+{
+   "number": {
+      "format": {
+         "separator": ".",
+         "delimiter": ",",
+         "strip_insignificant_zeros": "1"
+      }
+   },
+   "date": {
+      "day_names": [
+         "星期日",
+         "星期一",
+         "星期二",
+         "星期三",
+         "星期四",
+         "星期五",
+         "星期六"
+      ],
+      "abbr_day_names": [
+         "星期日",
+         "星期一",
+         "星期二",
+         "星期三",
+         "星期四",
+         "星期五",
+         "星期六"
+      ],
+      "month_names": [
+         "null",
+         "1 月",
+         "2 月",
+         "3 月",
+         "4 月",
+         "5 月",
+         "6 月",
+         "7 月",
+         "8 月",
+         "9 月",
+         "10 月",
+         "11 月",
+         "12 月"
+      ],
+      "abbr_month_names": [
+         "null",
+         "1 月",
+         "2 月",
+         "3 月",
+         "4 月",
+         "5 月",
+         "6 月",
+         "7 月",
+         "8 月",
+         "9 月",
+         "10 月",
+         "11 月",
+         "12 月"
+      ],
+      "format": {
+         "iso": "%Y/%m/%d %H:%M:%S",
+         "long": "%Y 年 %B %d 日 %A %H:%M:%S %z",
+         "utc": "%Y 年 %B %d 日 %A %H:%M:%S UTC",
+         "short": "%Y/%m/%d %H:%M:%S",
+         "short_utc": "%m/%d/%Y %H:%M:%S UTC",
+         "date": "%Y/%m/%d",
+         "time": "%H:%M:%S"
+      }
+   },
+   "units": {
+      "TB": "TB",
+      "GB": "GB",
+      "MB": "MB",
+      "KB": "KB",
+      "B": "B",
+      "MHz": "MHz",
+      "GHz": "GHz",
+      "mbps": "mbps"
+   },
+   "grid": {
+      "quickFilters": "快速筛选器...",
+      "noItems": "无任何项",
+      "sortAscending": "按升序排序",
+      "sortDescending": "按降序排序",
+      "filter": "筛选",
+      "filterHeader": "显示值符合以下条件的项",
+      "clear": "清除",
+      "columns": "选择列",
+      "isTrue": "为 true",
+      "isFalse": "为 false",
+      "and": "与",
+      "or": "或",
+      "startswith": "开头为",
+      "contains": "包含",
+      "endswith": "结尾为",
+      "eq": "等于",
+      "neq": "不等于",
+      "gte": "大于或等于",
+      "gt": "大于",
+      "lte": "小于或等于",
+      "lt": "小于"
+   },
+   "general": {
+      "yes": "是",
+      "no": "否",
+      "ok": "确定",
+      "cancel": "取消",
+      "default": "默认",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "none": "无",
+      "select": "选择",
+      "na": {
+         "label": "不可用",
+         "title": "不适用"
+      },
+      "or": "或",
+      "openDocumentation": "打开 VMware Host Client 文档",
+      "loading": {
+         "label": "正在加载...",
+         "title": "正在加载",
+         "error": "出现错误，请重试"
+      },
+      "unknown": "未知",
+      "unlimited": "不受限制",
+      "active": "活动",
+      "automatic": "自动",
+      "notActive": "不活动",
+      "help": "帮助",
+      "time": {
+         "minutes": "分钟",
+         "seconds": "秒"
+      }
+   },
+   "performance": {
+      "dataAt": "数据位于"
+   },
+   "wizard": {
+      "back": "上一页",
+      "next": "下一页",
+      "finish": "完成"
+   },
+   "localeOverride": {
+      "title": "区域设置覆盖警告",
+      "content": "使用 URL 指定的区域设置同时设置了 URL 区域设置覆盖 (例如: ?locale=fr-fr) 和设置区域设置覆盖。"
+   },
+   "missingTunnel": {
+      "title": "主机代理配置错误",
+      "contentAdded": "发现所需主机代理配置缺失并已自动更正。<strong>但是，必须重新引导主机才能使更改生效。</strong>有关详细信息，请阅读<a href=\"http://pubs.vmware.com/Release_Notes/cn/vsphere/60/vmware-host-client-10-release-notes.html\" target=\"_blank\">已知问题</a>。",
+      "contentNotAdded": "所需主机代理配置缺失。这将导致浏览器内控制台连接失败。您仍可以使用独立 VMRC 应用程序。有关解决此问题的说明，请阅读<a href=\"http://pubs.vmware.com/Release_Notes/en/vsphere/60/vmware-host-client-10-release-notes.html#knownissues\" target=\"_blank\">此处</a>的已知问题。"
+   },
+   "client": {
+      "about": {
+         "title": "关于",
+         "close": "关闭",
+         "warnVersionMismatch": "ESXi 上安装的 Host Client 版本与正在运行的版本不匹配。请尝试刷新浏览器或清除浏览器的缓存。",
+         "fullOSSDisclosure": "有关完整 ESXi 开源许可证的披露信息，请参见<a href=\"{{url}}\" target=\"_blank\">此处</a>。"
+      },
+      "context": {
+         "about": {
+            "label": "关于",
+            "tooltip": "显示有关 VMware Host Client 的信息"
+         },
+         "vmrc": {
+            "label": "VMware Remote Console",
+            "tooltip": "获取独立的 VMware Remote Console 应用程序"
+         },
+         "help": {
+            "label": "帮助",
+            "tooltip": "在新窗口中打开正式的 VMware 主机文档"
+         },
+         "tools": {
+            "label": "工具和链接",
+            "tooltip": "可从此主机使用的工具"
+         },
+         "getVC": {
+            "label": "获取 vCenter Server",
+            "tooltip": "下载并评估 VMware vCenter Server"
+         },
+         "mob": {
+            "label": "受管对象浏览器",
+            "tooltip": "打开受管对象浏览器",
+            "tooltipDisabled": "已禁用受管对象浏览器。通过将高级选项 Config.HostAgent.plugins.solo.enableMob 设置为 true，可以启用它",
+            "dialog": {
+               "title": "启用受管对象浏览器",
+               "content": "受管对象浏览器当前已被禁用。是否启用并打开?",
+               "cancel": "取消",
+               "confirmLabel": "启用"
+            }
+         },
+         "feedback": {
+            "label": "反馈",
+            "tooltip": "了解如何提交有关 VMware Host Client 的反馈"
+         },
+         "sdk": {
+            "label": "SDK 文档",
+            "tooltip": "了解如何使用 VMware 的 Web 服务 SDK"
+         },
+         "vcli": {
+            "label": "远程命令行工具",
+            "tooltip": "了解如何使用 VMware 的远程命令行工具"
+         },
+         "vmware": {
+            "label": "VMware.com",
+            "tooltip": "访问 VMware 网站"
+         },
+         "clientSettings": {
+            "label": "设置",
+            "tooltip": "管理 VMware Host Client 的设置",
+            "sendTelemetry": {
+               "label": "发送使用情况统计信息",
+               "tooltip": "将使用情况统计信息发送回 VMware.com 以帮助我们确定 VMware Host Client 的问题"
+            },
+            "visualEffects": {
+               "label": "启用视觉效果",
+               "tooltip": "启用视觉效果，如淡入和淡出上下文菜单"
+            },
+            "recentItems": {
+               "label": "仅显示最近选择的对象",
+               "tooltip": "仅在对象导航器中显示最近选择的对象"
+            },
+            "showWelcome": {
+               "label": "显示欢迎消息",
+               "tooltip": "登录时是否显示欢迎消息通知"
+            },
+            "consoleSettings": {
+               "label": "控制台",
+               "tooltip":"控制台设置",
+               "defaultConsole": {
+                  "label": "默认控制台",
+                  "tooltip": "单击屏幕截图时的默认控制台",
+                  "vmrc": {
+                     "label": "VMware Remote Console",
+                     "tooltip": "打开虚拟机控制台时使用 VMware Remote Console"
+                  },
+                  "webmks": {
+                     "label": "浏览器内",
+                     "tooltip": "打开虚拟机控制台时使用浏览器内 HTML5 控制台"
+                  }
+               }
+            },
+            "keyboardSettings": {
+               "label": "键盘布局",
+               "tooltip": "配置 Host Client 的键盘设置",
+               "en-US": "英语",
+               "fr-FR": "法语",
+               "fr-CH": "法语 (瑞士)",
+               "de-DE": "德语",
+               "de-CH": "德语 (瑞士)",
+               "pt-BR": "葡萄牙语 (巴西)",
+               "pt-PT": "葡萄牙语 (葡萄牙)",
+               "it-IT": "意大利语",
+               "es-ES": "西班牙语",
+               "ja-JP_106/109": "日语"
+            },
+            "languageSettings": {
+               "label": "语言",
+               "tooltip": "配置 Host Client 的语言设置",
+               "en-us": {
+                  "label": "英语",
+                  "tooltip": "英语"
+               },
+               "fr-fr": {
+                  "label": "法语",
+                  "tooltip": "法语"
+               },
+               "es-es": {
+                  "label": "西班牙语",
+                  "tooltip": "西班牙语"
+               },
+               "de-de": {
+                  "label": "德语",
+                  "tooltip": "德语"
+               },
+               "ko-kr": {
+                  "label": "韩语",
+                  "tooltip": "韩语"
+               },
+               "zh-cn": {
+                  "label": "简体中文",
+                  "tooltip": "简体中文"
+               },
+               "zh-tw": {
+                  "label": "繁体中文",
+                  "tooltip": "繁体中文"
+               },
+               "ja-jp": {
+                  "label": "日语",
+                  "tooltip": "日语"
+               },
+               "browserDefault": {
+                  "label": "浏览器默认设置",
+                  "tooltip": "Host Client 将使用浏览器的设置"
+               }
+            },
+            "applicationTimeout": {
+               "label": "应用程序超时",
+               "tooltip": "Host Client 自动注销前的空闲时间",
+               "xMinutes": "{{x}} 分钟",
+               "xHour": "{{x}} 小时",
+               "xHours": "{{x}} 小时",
+               "off": "关闭",
+               "warning": {
+                  "confirmLabel": "确定",
+                  "rejectLabel": "取消",
+                  "title": "警告",
+                  "content": "如果禁用会话超时可能会使您的 ESXi 主机易受恶意活动的攻击。是否确定要禁用会话超时?"
+               }
+            },
+            "reset": {
+               "label": "重置为默认值",
+               "tooltip": "将 Host Client 的设置重置为默认值"
+            }
+         },
+         "autorefresh": {
+            "label": "自动刷新",
+            "tooltip": "通知 Host Client 在指定时间段从主机自动刷新数据",
+            "off": {
+               "label": "关闭",
+               "tooltip": "不自动刷新"
+            },
+            "xSeconds": "{{x}} 秒"
+         }
+      },
+      "feedback": {
+         "title": "反馈",
+         "close": "关闭"
+      }
+   },
+   "scriptingConsole": {
+      "title": "脚本处理控制台",
+      "close": "关闭"
+   },
+   "upload": {
+      "inProgress": "正在上载文件"
+   },
+   "hypervisorLicense": {
+      "title": "受限许可证",
+      "closeAndDismiss": "关闭",
+      "content": "分配给此主机的许可证将限制可以执行的操作。",
+      "close": "关闭"
+   },
+   "restrictedVersion": {
+      "title": "受限版本",
+      "close": "关闭",
+      "content": "分配的许可证不允许此操作"
+   },
+   "update": {
+      "check": {
+         "checkForUpdates": "检查更新",
+         "title": "最新版本",
+         "content": "VMware Host Client 已经是最新版本。",
+         "ok": "确定"
+      },
+      "notify": {
+         "dialog": {
+            "title": "有可用客户端更新",
+            "content": "已推出新版 VMware Host Client {{version}}。",
+            "current": "您当前运行的版本是 {{current}}。",
+            "whatsNew": "新增功能",
+            "never": "以后不自动检查更新",
+            "updateNow": "更新",
+            "ok": "稍后更新"
+         }
+      },
+      "perform": {
+         "update": "更新",
+         "success": "主机已成功更新",
+         "successWithMessage": "主机已成功更新: {{message}}",
+         "failure": "无法应用更新 - {{reason}}",
+         "badFormat": "更新未采用预期格式。请提供 VIB 文件的路径或 URL。",
+         "vumWarning": {
+            "title": "警告",
+            "content": "如果此主机正在由 VMware Update Manager 管理，则执行更新可能会导致主机变为不合规。是否继续?",
+            "rejectLabel": "取消",
+            "confirmLabel": "继续"
+         },
+         "dialog": {
+            "title": "安装更新",
+            "content": "在下方输入 VIB 的 URL 或数据存储路径",
+            "missingVIBURL": "请输入您要更新的 VIB 的 URL 或数据存储路径",
+            "missingProxy": "请输入代理服务器地址",
+            "malformedPath": "URL 必须以 <em>http://</em> 或 <em>https://</em> 开头<br>本地路径必须以 <em>/</em> 开头",
+            "rejectLabel": "取消",
+            "proxy": {
+               "use": "使用代理服务器",
+               "server": "代理服务器",
+               "username": "用户名",
+               "password": "密码",
+               "port": "端口"
+            }
+         }
+      }
+   },
+   "anonymous": {
+      "dialog": {
+         "title": "帮助我们改善 VMware Host Client",
+         "ok": "确定",
+         "content": "该产品加入了·VMware·客户体验改善计划·(CEIP)。CEIP 将向 VMware 提供相关信息，帮助 VMware 改进其产品和服务以及修复问题，并向您建议如何以最佳方式部署和使用我们的产品。作为 CEIP 的一部分，VMware 会结合您组织的 VMware 许可证密钥，定期收集有关您的组织如何使用 VMware 产品和服务的技术信息。此信息不作为任何个人身份标识。有关 CEIP 的其他信息，请参见位于 <a href=\"http://www.vmware.com/trustvmware/ceip.html\" target=\"_blank\">VMware.com</a> 的信任与保证中心。您可以在下面以及 Host Client 的设置菜单中选择参与首选项。",
+         "checkbox": {
+            "label": "加入 VMware 客户体验改善计划"
+         }
+      }
+   },
+   "settings": {
+      "reset": {
+         "dialog": {
+            "title": "重置设置",
+            "ok": "确定",
+            "cancel": "取消",
+            "content": "所有应用程序设置现将重置为出厂默认设置。该操作无法撤消。重置完成后，将重新加载应用程序。"
+         }
+      }
+   },
+   "root": {
+      "client": "ESXi",
+      "title": "VMware ESXi",
+      "titleWithMessage": "{{message}} - VMware ESXi",
+      "logIn": "登录",
+      "logViewer": "日志查看器",
+      "console": "控制台",
+      "recent_tasks": "近期任务",
+      "minimize": " 最小化",
+      "about": "版权所有 © 1998-{{copyrightYear}} VMware, Inc. 保留所有权利。此产品受美国和国际版权法及知识产权法保护。VMware 产品获得 <a href=\"http://www.vmware.com/go/patents-cn\" target=\"_blank\">http://www.vmware.com/go/patents-cn</a> 中列出的一项或多项专利。",
+      "navigator": "导航器",
+      "loading": "正在加载",
+      "backgroundImage": "背景图像",
+      "resize": "重新调整窗口大小",
+      "progressBar": "进度条",
+      "lostConnection": "失去连接"
+   },
+   "notification": {
+      "type": {
+         "info": "信息",
+         "warning": "警告",
+         "error": "错误",
+         "question": "问题"
+      },
+      "ok": "确定",
+      "dismiss": "关闭",
+      "dismissNotification": "关闭通知",
+      "actions": {
+         "label": "操作",
+         "tooltip": "与此通知相关的操作"
+      }
+   },
+   "entity": {
+      "type": {
+         "VirtualMachine": "虚拟机",
+         "HostSystem": "主机",
+         "Datastore": "数据存储",
+         "Folder": "文件夹",
+         "ResourcePool": "资源池"
+      }
+   },
+   "menu": {
+      "host": {
+         "title": "主机",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "监控",
+         "permissions": "权限",
+         "licensing": "许可"
+      },
+      "vm": {
+         "title": "虚拟机",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "监控",
+         "more": "更多虚拟机..."
+      },
+      "storage": {
+         "title": "存储",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "监控",
+         "more": "更多存储..."
+      },
+      "network": {
+         "title": "网络",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "监控",
+         "more": "更多网络..."
+      },
+      "rp": {
+         "title": "资源池",
+         "summary": "摘要",
+         "manage": "管理",
+         "monitor": "监控"
+      },
+      "monitor": {
+         "title": "监控",
+         "events": "事件",
+         "tasks": "任务",
+         "logs": "日志"
+      }
+   },
+   "session": {
+      "start": "您的会话将在 {{time}} 后过期。",
+      "timeout": "由于不活动超时，您已被注销",
+      "appTitleIdle": "直至您的会话超时",
+      "appTitleTimedOut": "会话超时"
+   },
+   "logout": {
+      "error": "注销时发生未知错误",
+      "menu": {
+         "label": "注销",
+         "tooltip": "结束与此主机关联的会话"
+      }
+   },
+   "login": {
+      "host": "主机名",
+      "username": "用户名",
+      "password": "密码",
+      "timeout": "与 ESXi 主机的连接超时",
+      "logging": "正在登录到 ESXi 主机..."
+   },
+   "search": {
+      "placeholder": "搜索",
+      "filterSeries": "筛选系列"
+   },
+   "directives": {
+      "progressChart": {
+         "free": "可用:",
+         "used": "已用:",
+         "capacity": "容量:"
+      },
+      "search": {
+         "noResults": "未找到结果"
+      },
+      "notification": {
+         "close": "关闭"
+      }
+   },
+   "links": {
+      "language": "cn"
+   }
+}

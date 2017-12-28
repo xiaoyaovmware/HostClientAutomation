@@ -1,0 +1,1361 @@
+{
+   "network": {
+      "title": "{{hostname}} - 네트워킹",
+      "context": {
+         "title": "네트워킹",
+         "addPortgroup": {
+            "title": "포트 그룹 추가",
+            "tooltip": "새 포트 그룹 추가"
+         },
+         "addVSwitch": {
+            "title": "표준 vSwitch 추가",
+            "tooltip": "표준 가상 스위치 추가"
+         },
+         "addVMKNIC": {
+            "title": "VMkernel NIC 추가",
+            "tooltip": "VMkernel 인터페이스 추가"
+         }
+      },
+      "tabs": {
+         "vswitches": {
+            "title": "가상 스위치",
+            "toolTip": "호스트의 가상 스위치 관리"
+         },
+         "portgroups": {
+            "title": "포트 그룹",
+            "toolTip": "호스트의 스위치 포트 그룹 관리"
+         },
+         "pnics": {
+            "title": "물리적 NIC",
+            "toolTip": "호스트의 물리적 NIC 관리"
+         },
+         "vmknics": {
+            "title": "VMkernel NIC",
+            "toolTip": "호스트의 VMkernel NIC 관리"
+         },
+         "netstacks": {
+            "title": "TCP/IP 스택",
+            "toolTip": "호스트의 TCP/IP 스택 관리"
+         },
+         "firewall": {
+            "title": "방화벽 규칙",
+            "toolTip": "방화벽 규칙 관리"
+         }
+      },
+      "monitor": {
+         "events": {
+            "tabTitle": "이벤트",
+            "tabTooltip": "시스템 이벤트"
+         },
+         "tasks": {
+            "tabTitle": "작업",
+            "tabTooltip": "작업"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "사용 권한",
+            "title": "사용 권한을 관리합니다.",
+            "close": "닫기",
+            "cancel": "취소",
+            "noUsers": "사용자 없음",
+            "addUser": {
+               "label": "사용자 추가",
+               "toolTip": "사용자를 추가합니다."
+            },
+            "removeUser": {
+               "label": "사용자 제거",
+               "toolTip": "사용자를 제거합니다."
+            },
+            "assignRole": {
+               "label": "역할 할당",
+               "toolTip": "사용자에게 역할을 할당합니다."
+            },
+            "updatePermissions": {
+               "successNotification": "사용 권한 업데이트 성공",
+               "failureNotification": "사용 권한을 업데이트하지 못했습니다. {{error}}"
+            },
+            "columns": {
+               "user": "사용자",
+               "role": "역할"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "사용자 선택"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "역할 선택"
+            },
+            "propagateLabel": "모든 하위 항목으로 전파"
+         }
+      },
+      "firewall": {
+         "alt": "방화벽",
+         "list": {
+            "columns": {
+               "name": "이름",
+               "key": "키",
+               "incoming": "수신 포트",
+               "outgoing": "송신 포트",
+               "protocols": "프로토콜",
+               "daemon": "데몬",
+               "service": "서비스"
+            },
+            "actionBar": {
+               "edit": {
+                  "label": "설정 편집",
+                  "tooltip": "이 규칙 집합에 대한 설정 편집"
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택된 방화벽 규칙 집합에 대한 작업"
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "방화벽 규칙 새로 고침"
+               }
+            },
+            "unknownRule": "알 수 없는 방화벽 규칙",
+            "rule": "규칙",
+            "direction": "방향",
+            "port": "포트",
+            "protocol": "프로토콜",
+            "notification": {
+               "enable": {
+                  "success": "{{name}} 규칙 집합을 사용하도록 설정했습니다.",
+                  "error": "{{}} 규칙 집합을 사용하도록 설정하지 못했습니다."
+               },
+               "disable": {
+                  "success": "{{name}} 규칙 집합을 사용하지 않도록 설정했습니다.",
+                  "error": "{{}} 규칙 집합을 사용하지 않도록 설정하지 못했습니다."
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "설정 편집",
+               "tooltip": "이 방화벽 규칙 편집"
+            },
+            "enable": {
+               "label": "사용",
+               "tooltip": "이 방화벽 규칙 사용"
+            },
+            "disable": {
+               "label": "사용 안 함",
+               "tooltip": "이 방화벽 규칙 사용 안 함"
+            },
+            "service": {
+               "label": "서비스",
+               "tooltip": "이 방화벽 규칙과 연결된 서비스의 설정 수정"
+            },
+            "policy": {
+               "label": "정책",
+               "tooltip": "이 방화벽 규칙과 연결된 서비스의 정책 옵션"
+            }
+         },
+         "summary": {
+            "key": "키",
+            "enabled": "사용",
+            "true": "예",
+            "false": "아니요",
+            "required": "필수 사항",
+            "rules": "규칙",
+            "package": "패키지 정보",
+            "allowedIP": "허용된 IP 주소",
+            "all": "모두",
+            "service": "서비스",
+            "portlets": {
+               "rules": {
+                  "title": "방화벽 규칙",
+                  "tooltip": "방화벽 규칙"
+               }
+            }
+         },
+         "edit": {
+            "title": "방화벽 설정",
+            "header": "허용된 IP 주소",
+            "allIP": "모든 IP 주소의 모든 연결",
+            "selectedIP": "다음 네트워크의 연결만 허용:",
+            "selectedIPInfo": "각 네트워크를 쉼표로 구분하십시오.<br/>예:<br/>192.168.0.0/24, 192.168.1.2, 2001::1/64, fd3e:29a6:0a81:e478::/64",
+            "ok": "확인",
+            "rejectLabel": "취소",
+            "invalidIP": "올바른 IP 주소를 입력하십시오."
+         }
+      },
+      "vmknic": {
+         "alt": "VMkernel NIC",
+         "select": {
+            "title": "VMkernel 인터페이스를 선택합니다.",
+            "rejectLabel": "취소",
+            "confirmLabel": "선택",
+            "loading": "로드 중..."
+         },
+         "summary": {
+            "virtualSwitch": "가상 스위치:",
+            "portGroup": "포트 그룹:",
+            "tcpIpConfiguration": "TCP/IP 구성",
+            "vswitchTopology": "vSwitch 토폴로지",
+            "services": "서비스",
+            "unknownVMKNIC": "알 수 없는 VMkernel NIC",
+            "ok": "확인",
+            "portlets": {
+               "tcpip": {
+                  "netstack": "TCP/IP 스택",
+                  "ipv4DHCP": {
+                     "title": "IPv4 DHCP",
+                     "enabled": "사용",
+                     "disabled": "사용 안 함"
+                  },
+                  "ipv4Address": "IPv4 주소",
+                  "ipv4Subnet": "IPv4 서브넷",
+                  "ipv6DHCP": {
+                     "title": "IPv6 DHCP",
+                     "enabled": "사용",
+                     "disabled": "사용 안 함"
+                  },
+                  "ipv6AutoConfig": {
+                     "title": "IPv6 자동 구성",
+                     "enabled": "사용",
+                     "disabled": "사용 안 함"
+                  },
+                  "ipv6Addresses": "IPv6 주소",
+                  "none": "없음"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "이 VMkernel NIC에 대한 데이터 새로 고침"
+               },
+               "editSettings": {
+                  "label": "설정 편집",
+                  "tooltip": "이 VMkernel NIC에 대한 설정 편집"
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "이 VMkernel NIC에 대한 작업"
+               }
+            }
+         },
+         "events": {
+            "type": "유형:",
+            "time": "시간:",
+            "virtualMachine": "가상 시스템:"
+         },
+         "list": {
+            "grid": {
+               "name": "이름",
+               "portgroup": "포트 그룹",
+               "tcpip": "TCP/IP 스택",
+               "services": "서비스",
+               "ipv4": "IPv4 주소",
+               "ipv6": "IPv6 주소",
+               "none": "없음"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "어댑터 테이블을 새로 고칩니다."
+               },
+               "add": {
+                  "label": "VMkernel NIC 추가",
+                  "tooltip": "VMkernel NIC 추가 - 구성 중"
+               },
+               "editSettings": {
+                  "label": "설정 편집",
+                  "tooltip": "이 가상 스위치에 대한 설정을 편집합니다."
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "이 VMkernel NIC에 대한 작업"
+               }
+            }
+         },
+         "monitor": {
+            "title": "모니터",
+            "tabs": {
+               "events": {
+                  "label": "이벤트",
+                  "tooltip": "이벤트"
+               },
+               "tasks": {
+                  "label": "작업",
+                  "tooltip": "작업"
+               }
+            }
+         },
+         "add": {
+            "loading": "로드 중...",
+            "title": "VMkernel NIC 추가",
+            "rejectLabel": "취소",
+            "ip": {
+               "ipv4": "IPv4 전용",
+               "ipv6": "IPv6 전용",
+               "both": "IPv4 및 IPv6"
+            },
+            "vswitch": {
+               "label": "가상 스위치 선택"
+            },
+            "dialog": {
+               "create": "생성",
+               "validation": {
+                  "nic": "새 포트 그룹의 이름을 입력하십시오.",
+                  "vswitch": "포트 그룹에 대한 가상 스위치를 선택하십시오.",
+                  "vlanId": "VLAN ID를 입력하십시오. 값은 {{min}}에서 {{max}} 사이여야 합니다.",
+                  "ipv4": "IPv4 주소 및 서브넷을 입력하십시오.",
+                  "portgroupExists": "이름이 {{name}}인 포트 그룹이 이미 있습니다. 다른 이름을 선택하십시오."
+               },
+               "notification": {
+                  "success": "VMkernel NIC {{name}}이(가) 생성되었습니다.",
+                  "error": "새 VMkernel NIC를 생성하지 못했습니다."
+               }
+            }
+         },
+         "edit": {
+            "title": "설정 편집 - {{name}}",
+            "rejectLabel": "취소",
+            "confirmLabel": "저장",
+            "loading": "로드 중...",
+            "ip": {
+               "ipv4": "IPv4 전용",
+               "ipv6": "IPv6 전용",
+               "both": "IPv4 및 IPv6"
+            },
+            "vswitch": {
+               "label": "가상 스위치 선택"
+            },
+            "dialog": {
+               "create": "생성",
+               "validation": {
+                  "portgroup": "이 VMkernel NIC와 연결된 포트 그룹이 없습니다.",
+                  "vswitch": "포트 그룹에 대한 가상 스위치를 선택하십시오.",
+                  "ipv4": "IPv4 주소 및 서브넷을 입력하십시오."
+               },
+               "notification": {
+                  "success": "VMkernel NIC {{name}}에 대한 구성이 저장되었습니다.",
+                  "error": "VMkernel NIC {{name}}에 대한 구성을 저장하지 못했습니다."
+               }
+            }
+         },
+         "context": {
+            "remove": {
+               "label": "제거",
+               "tooltip": "이 VMkernel NIC를 제거합니다."
+            },
+            "edit": {
+               "label": "설정 편집",
+               "tooltip": "이 VMkernel NIC의 설정을 편집합니다.",
+               "tooltipDVS": "분산 포트 그룹에 연결된 VMkernel NIC를 편집할 수 없습니다."
+            }
+         },
+         "remove": {
+            "title": "VMKNIC 제거 - {{name}}",
+            "confirmLabel": "확인",
+            "rejectLabel": "취소",
+            "successNotification": "VMkernel NIC {{name}}을(를) 제거했습니다.",
+            "failureNotification": "VMkernel NIC {{name}}을(를) 제거하지 못했습니다.",
+            "confirmation": "VMkernel NIC를 제거하면 이를 사용하는 모든 서비스를 사용할 수 없게 됩니다.\n\n{{name}}을(를) 제거하시겠습니까?"
+         },
+         "settings": {
+            "services": {
+               "vSphereProvisioning": {
+                  "label": "프로비저닝"
+               },
+               "vMotion": {
+                  "label": "vMotion"
+               },
+               "vmotion": {
+                  "label": "vMotion"
+               },
+               "faultToleranceLogging": {
+                  "label": "Fault Tolerance 로깅"
+               },
+               "management": {
+                  "label": "관리"
+               },
+               "vSphereReplication": {
+                  "label": "복제"
+               },
+               "vSphereReplicationNFC": {
+                  "label": "NFC 복제"
+               },
+               "vsan": {
+                  "label": "vSAN"
+               },
+               "vsanWitness": {
+                  "label": "vSAN 감시"
+               }
+            },
+            "portGroup": {
+               "label": "포트 그룹",
+               "newPortGroup": "새 포트 그룹",
+               "vlandId": "VLAN ID",
+               "ipVersion": {
+                  "label": "IP 버전"
+               },
+               "ipv4": {
+                  "label": "IPv4 설정",
+                  "dhcp": {
+                     "label": "구성",
+                     "dhcp": "DHCP",
+                     "static": "정적"
+                  },
+                  "address": "주소",
+                  "subnetMask": "서브넷 마스크"
+               },
+               "ipv6": {
+                  "label": "IPv6 설정",
+                  "clickExpand": "확장하려면 클릭",
+                  "dhcpv6": {
+                     "label": "DHCPv6",
+                     "enabled": "사용",
+                     "disabled": "사용 안 함"
+                  },
+                  "autoConfig": {
+                     "label": "자동 구성",
+                     "yes": "예",
+                     "no": "아니요"
+                  },
+                  "staticAddresses": {
+                     "label": "정적 주소",
+                     "addAddress": "주소 추가",
+                     "placeholder": {
+                        "address": "주소",
+                        "prefix": "접두사"
+                     }
+                  },
+                  "vSwitch": {
+                     "label": "가상 스위치"
+                  },
+                  "tcpip": {
+                     "label": "TCP/IP 스택"
+                  },
+                  "services": {
+                     "label": "서비스",
+                     "vMotion": "vMotion"
+                  }
+               }
+            }
+         }
+      },
+      "vswitch": {
+         "alt": "가상 스위치",
+         "context": {
+            "addUplink": {
+               "title": "업링크 추가",
+               "tooltip": "이 가상 스위치에 업링크 추가"
+            },
+            "editSettings": {
+               "title": "설정 편집",
+               "tooltip": "이 가상 스위치에 대한 설정 편집"
+            },
+            "remove": {
+               "title": "제거",
+               "tooltip": "가상 스위치 제거",
+               "tooltipDVS": "분산 스위치 제거는 vCenter Server에서만 수행할 수 있습니다."
+            }
+         },
+         "summary": {
+            "type": "유형:",
+            "virtualSwitch": "가상 스위치:",
+            "portGroups": "포트 그룹:",
+            "uplinks": "업링크:",
+            "vswitchDetails": "vSwitch 세부 정보",
+            "vswitchTopology": "vSwitch 토폴로지",
+            "portlet": {
+               "mtu": "MTU",
+               "ports": "포트",
+               "link": "링크 검색",
+               "attached": "연결된 VM",
+               "beacon": "신호 간격",
+               "available": "사용 가능",
+               "active": "활성",
+               "linkDiscovery": {
+                  "mode": {
+                     "listen": "수신",
+                     "advertise": "알림",
+                     "both": "둘 다",
+                     "none": "없음"
+                  },
+                  "protocol": {
+                     "label": "프로토콜",
+                     "lldp": "LLDP(Link Layer Discovery Protocol)",
+                     "cdp": "CDP(Cisco Discovery Protocol)"
+                  }
+               }
+            },
+            "dialog": {
+               "title": "알 수 없는 vSwitch"
+            },
+            "actionBar": {
+               "addUplink": {
+                  "label": "업링크 추가",
+                  "tooltip": "새 물리적 업링크를 가상 스위치에 추가합니다."
+               },
+               "edit": {
+                  "label": "설정 편집",
+                  "tooltip": "이 가상 스위치에 대한 설정을 편집합니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "어댑터 테이블을 새로 고칩니다."
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "이 목록의 선택된 개체에 대한 작업입니다."
+               }
+            }
+         },
+         "list": {
+            "grid": {
+               "name": "이름",
+               "portgroups": "포트 그룹",
+               "uplinks": "업링크",
+               "type": "유형"
+            },
+            "actionBar": {
+               "addStandard": {
+                  "label": "표준 가상 스위치 추가",
+                  "tooltip": "새 표준 가상 스위치 추가"
+               },
+               "addUplink": {
+                  "label": "업링크 추가",
+                  "tooltip": "이 가상 스위치에 업링크(물리적 NIC) 추가"
+               },
+               "edit": {
+                  "label": "설정 편집",
+                  "tooltip": "이 가상 스위치에 대한 설정을 편집합니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "가상 스위치 목록 새로 고침"
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택된 가상 스위치에 대한 작업"
+               }
+            }
+         },
+         "events": {
+            "type": "유형:",
+            "time": "시간:",
+            "virtualMachine": "가상 시스템:"
+         },
+         "diagram": {
+            "loading": "vSwitch 토폴로지 로드 중...",
+            "noPortgroups": "포트 그룹 없음",
+            "vlanId": "VLAN ID:",
+            "virtualMachines": "가상 시스템",
+            "macAddress": "MAC 주소",
+            "vmKernelPorts": "VMkernel 포트",
+            "noPhysicalAdapters": "물리적 어댑터 없음",
+            "physicalAdapters": "물리적 어댑터"
+         },
+         "monitor": {
+            "title": "모니터",
+            "tabs": {
+               "events": {
+                  "label": "이벤트",
+                  "tooltip": "이벤트"
+               },
+               "tasks": {
+                  "label": "작업",
+                  "tooltip": "작업"
+               }
+            }
+         },
+         "noAdapters": "이 가상 스위치에 연결할 사용 가능한 물리적 어댑터가 없습니다.",
+         "remove": {
+            "title": "가상 스위치 제거 - {{name}}",
+            "confirmation": "다음 vSwitch를 제거하시겠습니까?",
+            "confirmLabel": "예",
+            "rejectLabel": "아니요",
+            "portgroups": "포트 그룹",
+            "failureNotification": "가상 스위치 {{name}}을(를) 제거하지 못했습니다.",
+            "successNotification": "가상 스위치 {{name}}이(가) 제거되었습니다."
+         },
+         "type": {
+            "dvs": "분산 vSwitch",
+            "standard": "표준 vSwitch"
+         },
+         "add": {
+            "loading": "로드 중...",
+            "title": "표준 가상 스위치 추가 - {{name}}",
+            "titleNoName": "표준 가상 스위치 추가",
+            "newSwitch": "새 스위치",
+            "confirmLabel": "추가",
+            "rejectLabel": "취소",
+            "security": "보안",
+            "clickToExpand": "확장하려면 클릭",
+            "promiscuousMode": "비규칙 모드",
+            "accept": "동의",
+            "reject": "거부",
+            "useVswitch": "vSwitch에서 상속",
+            "macChanges": "MAC 주소 변경",
+            "forgedTransmits": "위조 전송",
+            "linkDiscovery": "링크 검색",
+            "mode": {
+               "label": "모드",
+               "listen": "수신",
+               "advertise": "알림",
+               "both": "둘 다",
+               "none": "없음"
+            },
+            "protocol": {
+               "label": "프로토콜",
+               "lldp": "LLDP(Link Layer Discovery Protocol)",
+               "cdp": "CDP(Cisco Discovery Protocol)"
+            },
+            "dialog": {
+               "title": "업링크를 추가할 수 없습니다.",
+               "ok": "확인",
+               "create": "추가"
+            },
+            "error": {
+               "name": "가상 스위치의 올바른 이름을 입력하십시오.",
+               "mtu": "MTU에 올바른 수를 입력하십시오. 사용 가능한 최대 수는 {{max}}이고 사용 가능한 최소 수는 {{min}}입니다."
+            },
+            "notification": {
+               "success": "가상 스위치 {{name}}이(가) 생성되었습니다.",
+               "error": "새 가상 스위치 {{name}}을(를) 생성하지 못했습니다."
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "이 TCP/IP 스택에 대한 작업입니다."
+               },
+               "add": {
+                  "label": "업링크 추가",
+                  "tooltip": "새 물리적 업링크를 가상 스위치에 추가합니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "이 TCP/IP 스택을 새로 고칩니다."
+               }
+            }
+         },
+         "edit": {
+            "loading": "로드 중...",
+            "title": "표준 가상 스위치 편집 - {{name}}",
+            "titleNoName": "표준 가상 스위치를 편집합니다.",
+            "confirmLabel": "저장",
+            "rejectLabel": "취소",
+            "dialog": {
+               "title": "업링크를 추가할 수 없습니다.",
+               "ok": "확인",
+               "create": "가상 스위치 생성"
+            },
+            "error": {
+               "name": "가상 스위치의 이름을 입력하십시오.",
+               "duplicate": "고유한 업링크 값을 선택하십시오."
+            },
+            "notification": {
+               "success": "가상 스위치 {{name}}이(가) 저장되었습니다.",
+               "error": "가상 스위치 {{name}}을(를) 저장하지 못했습니다."
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "이 TCP/IP 스택에 대한 작업입니다."
+               },
+               "add": {
+                  "label": "업링크 추가",
+                  "tooltip": "새 물리적 업링크를 가상 스위치에 추가합니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "이 TCP/IP 스택을 새로 고칩니다."
+               }
+            }
+         },
+         "notifications": {
+            "uplink": {
+               "message": "이 가상 스위치에 업링크 이중화가 없습니다.",
+               "suggested-action": "다른 업링크 어댑터를 추가해야 합니다."
+            }
+         },
+         "settings": {
+            "vSwitchName": "vSwitch 이름",
+            "mtu": "MTU",
+            "uplink": "업링크"
+         }
+      },
+      "netstack": {
+         "alt": "TCP/IP 스택",
+         "names": {
+            "defaultTcpipStack": "기본 TCP/IP 스택",
+            "vSphereProvisioning": "프로비저닝 스택",
+            "vmotion": "vMotion 스택",
+            "vxlan": "VXLAN"
+         },
+         "summary": {
+            "unknownNetstack": {
+               "title": "알 수 없는 TCP/IP 스택"
+            },
+            "key": "키:",
+            "configuration": "구성",
+            "dnsConfiguration": "DNS 구성",
+            "routing": "라우팅",
+            "actionBar": {
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "이 TCP/IP 스택에 대한 작업입니다."
+               },
+               "edit": {
+                  "label": "설정 편집",
+                  "tooltip": "이 TCP/IP 스택의 구성을 편집합니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "이 TCP/IP 스택을 새로 고칩니다."
+               }
+            },
+            "portlets": {
+               "configuration": {
+                  "ipv6": {
+                     "name": "IPv6"
+                  },
+                  "cca": {
+                     "name": "정체 제어 알고리즘"
+                  },
+                  "maxConnections": {
+                     "name": "최대 연결 수"
+                  },
+                  "vmknics": {
+                     "name": "VMKernel NIC"
+                  },
+                  "dhcp": {
+                     "name": "DHCP"
+                  }
+               },
+               "dns": {
+                  "loadingMessage": "DNS 구성 로드 중...",
+                  "hostName": {
+                     "name": "호스트 이름"
+                  },
+                  "address": {
+                     "name": "주소"
+                  },
+                  "domainName": {
+                     "name": "도메인 이름"
+                  },
+                  "searchDomains": {
+                     "name": "도메인 검색"
+                  }
+               },
+               "routing": {
+                  "loadingMessage": "라우팅 테이블 로드 중...",
+                  "ipv4": {
+                     "name": "IPv4",
+                     "value": "확장하려면 레이블 클릭",
+                     "routeTable": {
+                        "name": "라우팅 테이블",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "네트워크 주소"
+                              },
+                              "prefixLength": {
+                                 "label": "접두사 길이"
+                              },
+                              "gateway": {
+                                 "label": "게이트웨이"
+                              },
+                              "device": {
+                                 "label": "디바이스"
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "ipv6": {
+                     "name": "IPv6",
+                     "value": "확장하려면 레이블 클릭",
+                     "routeTable": {
+                        "name": "IPv6",
+                        "localSubnet": "로컬 서브넷",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "네트워크 주소"
+                              },
+                              "prefixLength": {
+                                 "label": "접두사 길이"
+                              },
+                              "gateway": {
+                                 "label": "게이트웨이"
+                              },
+                              "device": {
+                                 "label": "디바이스"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "type": "유형:",
+            "time": "시간:",
+            "virtualMachine": "가상 시스템:"
+         },
+         "ipv6": {
+            "true": "사용",
+            "false": "사용 안 함"
+         },
+         "dhcp": {
+            "true": "사용",
+            "false": "사용 안 함"
+         },
+         "list": {
+            "columns": {
+               "name": {
+                  "label": "이름"
+               },
+               "ipv4Gateway": {
+                  "label": "IPv4 게이트웨이"
+               },
+               "ipv6Gateway": {
+                  "label": "IPv6 게이트웨이"
+               },
+               "preferredDNS": {
+                  "label": "기본 DNS"
+               },
+               "alternateDNS": {
+                  "label": "대체 DNS"
+               }
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택한 TCP/IP 스택에 대한 작업입니다."
+               },
+               "edit": {
+                  "label": "설정 편집",
+                  "tooltip": "이 TCP/IP 스택에 대한 설정을 편집합니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "TCP/IP 스택 테이블을 새로 고칩니다."
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "설정 편집",
+               "tooltip": "이 TCP/IP 스택에 대한 설정을 편집합니다."
+            }
+         },
+         "edit": {
+            "title": "TCP/IP 구성 편집 - {{displayName}}",
+            "confirmLabel": "저장",
+            "rejectLabel": "취소",
+            "basicConfig": {
+               "label": "기본 DNS 구성",
+               "title":"호스트가 이 TCP/IP 스택에 대한 해당 설정을 가져오는 방법을 지정합니다.",
+               "useDHCP": {
+                  "label": "다음 어댑터에서 DHCP DNS 서비스를 사용합니다."
+               },
+               "adapter": "어댑터",
+               "manual": {
+                  "label": "이 TCP/IP 스택의 설정을 수동으로 구성합니다.",
+                  "hostName": "호스트 이름",
+                  "domainName": "도메인 이름",
+                  "primaryDNS": "기본 DNS 서버",
+                  "secondaryDNS": "보조 DNS 서버",
+                  "searchDomains": "도메인 검색",
+                  "searchDomainsOnePerLine": "행당 하나씩 도메인 검색"
+               }
+            },
+            "routing": {
+               "title": "라우팅",
+               "ipv4": "IPv4 게이트웨이",
+               "ipv6": "IPv6 게이트웨이"
+            },
+            "congestionControl": {
+               "newReno": "NewReno",
+               "cubic": "CUBIC",
+               "CUBIC": "CUBIC"
+            },
+            "advancedSettings": {
+               "title": "고급 설정",
+               "congestionControl": "정체 제어 알고리즘",
+               "maxNumberConnections": "최대 연결 수"
+            },
+            "notification": {
+               "success": "{{netstack}}에 대한 구성을 업데이트했습니다.",
+               "failure": "{{netstack}}에 대한 구성을 업데이트하지 못했습니다."
+            },
+            "error": {
+               "hostName": "올바른 호스트 이름을 입력하십시오. 호스트 이름 길이는 {{max}}보다 작거나 같아야 합니다.",
+               "domainName": "올바른 도메인 이름을 입력하십시오. 도메인 이름 길이는 {{max}}보다 작거나 같아야 합니다.",
+               "primaryDNS": "올바른 기본 DNS 서버를 입력하십시오. 기본 DNS 서버 길이는 {{max}}보다 작거나 같아야 합니다.",
+               "secondaryDNS": "올바른 보조 DNS 서버를 입력하십시오. 보조 DNS 서버 길이는 {{max}}보다 작거나 같아야 합니다.",
+               "searchDomains": "올바른 검색 도메인을 한 줄에 하나씩 쉼표 없이 입력하십시오.",
+               "ipv4Gateway": "올바른 IPv4 게이트웨이를 입력하십시오.",
+               "ipv6Gateway": "올바른 IPv6 게이트웨이를 입력하십시오. ",
+               "maxConnections": "최대 연결 수에 대해 {{min}}에서 {{max}} 사이의 숫자를 입력하십시오."
+            }
+         }
+      },
+      "tcp": {
+         "congestionControl": {
+            "newreno": "NewReno",
+            "cubic": "CUBIC"
+         }
+      },
+      "portgroup": {
+         "alt": "포트 그룹",
+         "type": {
+            "Network": "표준 포트 그룹",
+            "DistributedVirtualPortgroup": "분산 가상 포트 그룹",
+            "Opaque": "불투명 네트워크 포트 그룹"
+         },
+         "summary": {
+            "accessible": "액세스 가능:",
+            "virtualMachines": "가상 시스템:",
+            "virtualSwitch": "가상 스위치:",
+            "vlanId": "VLAN ID:",
+            "activePorts": "활성 포트:",
+            "vswitchTopology": "vSwitch 토폴로지",
+            "nicTeamingPolicy": "NIC 팀 구성 정책",
+            "offloadPolicy": "오프로드 정책",
+            "securityPolicy": "보안 정책",
+            "shapingPolicy": "조절 정책",
+            "actions": {
+               "editSettings": {
+                  "label": "설정 편집",
+                  "tooltip": "이 가상 스위치에 대한 설정을 편집합니다."
+               },
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "어댑터 테이블을 새로 고칩니다."
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택한 포트 그룹에 대한 작업입니다."
+               }
+            }
+         },
+         "events": {
+            "type": "유형:",
+            "time": "시간:",
+            "virtualMachine": "가상 시스템:"
+         },
+         "accessible": {
+            "true": "예",
+            "false": "아니요"
+         },
+         "add": {
+            "title": "포트 그룹 추가 - {{name}}",
+            "titleNoName": "포트 그룹 추가",
+            "newPortgroup": "새 포트 그룹",
+            "confirmLabel": "추가",
+            "rejectLabel": "취소",
+            "loading": "로드 중...",
+            "toolTip": "포트 그룹 추가",
+            "selectVSwitch": "가상 스위치 선택",
+            "missingName": "포트 그룹의 이름을 입력하십시오.",
+            "missingVSwitch": "포트 그룹에 대한 가상 스위치를 선택하십시오.",
+            "badVLANIDRange": "VLAN ID는 0 - 4095 사이여야 합니다.",
+            "success": "포트 그룹 {{name}}이(가) 생성되었습니다.",
+            "failure": "새 포트 그룹 {{name}}을(를) 생성하지 못했습니다."
+         },
+         "edit": {
+            "title": "포트 그룹 편집 - {{name}}",
+            "titleNoName": "포트 그룹 편집",
+            "confirmLabel": "저장",
+            "rejectLabel": "취소",
+            "loading": "로드 중...",
+            "missingName": "포트 그룹의 이름을 입력하십시오.",
+            "missingVSwitch": "포트 그룹에 대한 가상 스위치를 선택하십시오.",
+            "badVLANIDRange": "VLAN ID는 0 - 4095 사이여야 합니다.",
+            "success": "포트 그룹 {{name}}이(가) 저장되었습니다.",
+            "failure": "포트 그룹 {{name}}을(를) 저장하지 못했습니다.",
+            "trafficShaping": {
+               "title": "트래픽 조절",
+               "policyExceptions": "정책 예외",
+               "status": "상태",
+               "disabled": "사용 안 함",
+               "enabled": "사용",
+               "averageBandwidth": "평균 대역폭",
+               "peakBandwidth": "최대 대역폭",
+               "burstSize": "버스트 크기",
+               "kbps": "Kb/s",
+               "kb": "KB",
+               "clickToExpand": "확장하려면 클릭",
+               "note": {
+                  "title": "참고",
+                  "content": "트래픽 조절 정책은 가상 스위치에 연결된 각 가상 네트워크 어댑터의 트래픽에 적용됩니다."
+               },
+               "inherit": "vSwitch에서 상속"
+            },
+            "nicTeaming": {
+               "title": "NIC 팀 구성",
+               "clickToExpand": "확장하려면 클릭",
+               "loadBalancing": {
+                  "title": "로드 밸런싱",
+                  "loadbalance_ip": "IP 해시 기준 라우팅",
+                  "loadbalance_srcmac": "소스 MAC 해시 기준 라우팅",
+                  "loadbalance_srcid": "원시 포트 ID에 기반한 라우팅",
+                  "failover_explicit": "명시적 페일오버 명령 사용"
+               },
+               "failoverDetection": {
+                  "title": "네트워크 페일오버 감지",
+                  "linkStatus": "링크 상태만",
+                  "beaconOnly": "비콘만"
+               },
+               "notifySwitches": {
+                  "title": "알림 스위치",
+                  "yes": "예",
+                  "no": "아니요"
+               },
+               "failBack": {
+                  "title": "페일백",
+                  "yes": "예",
+                  "no": "아니요"
+               },
+               "overrideFailoverOrder": {
+                  "title": "페일오버 순서 재정의",
+                  "yes": "예",
+                  "no": "아니요"
+               },
+               "failoverOrder": {
+                  "title": "페일오버 순서",
+                  "override": "스위치 페일오버 순서 재정의",
+                  "usedAs": "상태",
+                  "standby": "대기",
+                  "active": "활성",
+                  "unused": "사용되지 않음",
+                  "name": "이름",
+                  "speed": "속도",
+                  "networks": "네트워크",
+                  "markAsStandby": {
+                     "label": "대기로 표시",
+                     "tooltip": "이 물리적 NIC를 대기로 표시합니다."
+                  },
+                  "markAsActive": {
+                     "label": "활성으로 표시",
+                     "tooltip": "이 물리적 NIC를 활성으로 표시합니다."
+                  },
+                  "markAsUnused": {
+                     "label": "사용되지 않음으로 표시",
+                     "tooltip": "이 물리적 NIC를 사용되지 않음으로 표시합니다."
+                  },
+                  "moveUp": {
+                     "label": "위로 이동",
+                     "tooltip": "페일오버 순서에서 이 어댑터를 위로 이동합니다."
+                  },
+                  "moveDown": {
+                     "label": "아래로 이동",
+                     "tooltip": "페일오버 순서에서 이 어댑터를 아래로 이동합니다."
+                  }
+               },
+               "inherit": "vSwitch에서 상속"
+            }
+         },
+         "remove": {
+            "title": "포트 그룹 제거",
+            "loading": "로드 중...",
+            "close": "닫기",
+            "confirm": "제거",
+            "rejectLabel": "취소",
+            "notification": {
+               "success": "포트 그룹 {{name}}이(가) 제거되었습니다.",
+               "error": "포트 그룹 {{name}}을(를) 제거하지 못했습니다."
+            },
+            "confirmation": "다음 포트 그룹을 제거하시겠습니까?",
+            "cantRemove": "연결된 VM 또는 VMkernel NIC가 아직 있기 때문에 하나 이상의 포트 그룹을 제거할 수 없습니다."
+         },
+         "settings": {
+            "name": {
+               "title": "이름",
+               "change": "이 포트 그룹의 이름을 변경하면 <strong>{{length}}</strong> VM이 분리됩니다.",
+               "rename": "<strong>{{length}}</strong> 활성 포트를 갖고 있으므로 이 포트 그룹의 이름을 변경할 수 없습니다."
+            },
+            "vlanId": "VLAN ID",
+            "vSwitch": {
+               "label": "가상 스위치",
+               "change": "활성 포트({{length}})가 있는 경우 이 포트 그룹의 vSwitch를 변경할 수 없습니다."
+            }
+         },
+         "actions": {
+            "editSettings": {
+               "label": "설정 편집",
+               "tooltip": "이 포트 그룹을 편집합니다."
+            },
+            "refresh": {
+               "label": "새로 고침",
+               "tooltip": "포트 그룹 목록을 새로 고칩니다."
+            },
+            "actions": {
+               "label": "작업",
+               "tooltip": "선택한 포트 그룹에 대한 작업입니다."
+            },
+            "remove": {
+               "label": "제거",
+               "tooltip": "이 포트 그룹을 제거합니다."
+            }
+         },
+         "list": {
+            "unknownVLANID": "알 수 없음",
+            "columns": {
+               "name": "이름",
+               "activePorts": "활성 포트",
+               "vlanId": "VLAN ID",
+               "type": "유형",
+               "vswitch": "vSwitch",
+               "vms": "VM"
+            }
+         },
+         "portlets": {
+            "summary": {
+               "loading": "요약 로드 중...",
+               "shaping": {
+                  "true": "예",
+                  "false": "아니요"
+               }
+            },
+            "teaming": {
+               "loading": "팀 구성 정책 로드 중...",
+               "notify": {
+                  "label": "알림 스위치",
+                  "true": "예",
+                  "false": "아니요"
+               },
+               "policy": {
+                  "label": "정책",
+                  "loadbalance_ip": "IP 해시 기준 라우팅",
+                  "loadbalance_srcmac": "소스 MAC 해시 기준 라우팅",
+                  "loadbalance_srcid": "원시 포트 ID에 기반한 라우팅",
+                  "failover_explicit": "명시적 페일오버 명령 사용"
+               },
+               "reverse": {
+                  "label": "되돌리기 정책",
+                  "true": "예",
+                  "false": "아니요"
+               },
+               "rolling": {
+                  "label": "페일백",
+                  "true": "아니요",
+                  "false": "예"
+               }
+            },
+            "shaping": {
+               "averageBandwidth": "평균 대역폭",
+               "peakBandwidth": "최대 대역폭",
+               "burstSize": "버스트 크기",
+               "enabled": {
+                  "label": "사용",
+                  "true": "예",
+                  "false": "아니요"
+               }
+            },
+            "offload": {
+               "loading": "오프로드 정책 로드 중...",
+               "checksum": {
+                  "label": "체크섬 오프로드",
+                  "true": "예",
+                  "false": "아니요"
+               },
+               "tcpSegmentation": {
+                  "label": "TCP 세분화",
+                  "true": "예",
+                  "false": "아니요"
+               },
+               "zeroCopy": {
+                  "label": "제로 복사 전송",
+                  "true": "예",
+                  "false": "아니요"
+               }
+            },
+            "security": {
+               "loading": "보안 정책 로드 중...",
+               "allowPromiscuous": {
+                  "label": "비규칙 모드 허용",
+                  "true": "예",
+                  "false": "아니요"
+               },
+               "forgedTransmits": {
+                  "label": "위조 전송 허용",
+                  "true": "예",
+                  "false": "아니요"
+               },
+               "macChanges": {
+                  "label": "MAC 변경 허용",
+                  "true": "예",
+                  "false": "아니요"
+               }
+            }
+         },
+         "monitor": {
+            "title": "모니터"
+         }
+      },
+      "pnic": {
+         "alt": "물리적 NIC",
+         "summary": {
+            "linkSpeed": "연결 속도:",
+            "driver": "드라이버:",
+            "macAddress": "MAC 주소:",
+            "adapterDetails": "어댑터 세부 정보",
+            "halfduplex": "반이중",
+            "fullduplex": "전이중",
+            "up": "위로",
+            "down": "아래로",
+            "dialog": {
+               "unknown": {
+                  "title": "알 수 없는 PNIC"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "물리적 어댑터 테이블을 새로 고칩니다."
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택한 물리적 어댑터에 대한 작업입니다."
+               },
+               "editSettings": {
+                  "label": "설정 편집",
+                  "tooltip": "선택한 물리적 어댑터에 대한 설정을 편집합니다."
+               }
+            },
+            "portlets": {
+               "details": {
+                  "pciAddress": "PCI 주소",
+                  "autoNegotiateSupport": "자동 협상 지원",
+                  "autoNegotiateEnabled": "자동 협상 사용",
+                  "directPathIOSupport": "Direct-path IO 지원",
+                  "wakeOnLANSupport": "WOL(Wake-On-LAN) 지원",
+                  "supportedSpeeds": "지원되는 속도",
+                  "yes": "예",
+                  "no": "아니요",
+                  "enabled": "사용",
+                  "disabled": "사용 안 함"
+               },
+               "subnets": {
+                  "title": "탐색된 서브넷",
+                  "subnet": "서브넷 {{x}}"
+               },
+               "lldp": {
+                  "title": "링크 계층 탐색 프로토콜 세부 정보",
+                  "chassisId": "섀시 ID",
+                  "portId": "포트 ID",
+                  "timeToLive": "TTL(Time to Live)",
+                  "parameters": "매개 변수"
+               },
+               "cdp": {
+                  "title": "Cisco Discovery Protocol 세부 정보",
+                  "address": "IP 주소",
+                  "cdpVersion": "CDP 버전",
+                  "peerDeviceCapability": {
+                     "label": "피어 디바이스 기능",
+                     "host": "호스트",
+                     "igmpEnabled": "IGMP",
+                     "networkSwitch": "네트워크 스위치",
+                     "repeater": "반복기",
+                     "router": "라우터",
+                     "sourceRouteBridge": "소스 라우팅 브리지",
+                     "transparentBridge": "투명 브리지"
+                  },
+                  "devId": "디바이스 ID",
+                  "fullDuplex": "전이중",
+                  "hardwarePlatform": "하드웨어 플랫폼",
+                  "ipPrefix": "IP 접두사",
+                  "ipPrefixLen": "IP 접두사 길이",
+                  "location": "위치",
+                  "mgmtAddr": "관리 주소",
+                  "mtu": "MTU",
+                  "portId": "포트 ID",
+                  "samples": "샘플",
+                  "softwareVersion": "소프트웨어 버전",
+                  "systemName": "시스템 이름",
+                  "systemOID": "시스템 OID",
+                  "timeout": "시간 초과",
+                  "ttl": "TTL(Time to Live)",
+                  "vlan": "VLAN ID"
+               }
+            }
+         },
+         "edit": {
+            "confirmLabel": "저장",
+            "rejectLabel": "취소",
+            "title": "물리적 NIC 편집 - {{nic}}",
+            "titleNoName": "물리적 NIC 편집",
+            "notification": {
+               "error": "{{nic}}에 대한 물리적 NIC 속도를 설정하지 못했습니다.",
+               "success": "물리적 NIC {{nic}}에 대한 속도를 업데이트했습니다."
+            },
+            "speed": {
+               "label": "속도",
+               "auto": "자동 협상"
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "설정 편집",
+               "tooltip": "이 물리적 NIC의 설정을 편집합니다."
+            }
+         },
+         "list": {
+            "columns": {
+               "name": "이름",
+               "driver": "드라이버",
+               "macAddress": "MAC 주소",
+               "linkSpeed": "연결 속도",
+               "auto": "자동 협상"
+            },
+            "auto": {
+               "yes": "사용",
+               "no": "사용 안 함"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "새로 고침",
+                  "tooltip": "물리적 어댑터 테이블을 새로 고칩니다."
+               },
+               "actions": {
+                  "label": "작업",
+                  "tooltip": "선택한 물리적 어댑터에 대한 작업입니다."
+               },
+               "editSettings": {
+                  "label": "설정 편집",
+                  "tooltip": "선택한 물리적 어댑터에 대한 설정을 편집합니다."
+               }
+            }
+         },
+         "monitor": {
+            "title": "모니터",
+            "events": {
+               "title": "이벤트",
+               "tooltip": "이벤트"
+            },
+            "tasks": {
+               "title": "작업",
+               "tooltip": "작업"
+            }
+         },
+         "events": {
+            "type": "유형:",
+            "time": "시간:",
+            "virtualMachine": "가상 시스템:"
+         },
+         "duplex": {
+            "half": "반이중",
+            "full": "전이중",
+            "true": "전체",
+            "false": "절반"
+         },
+         "mbps": "Mbps",
+         "linkDown": "연결 해제"
+      },
+      "error": {
+         "unknownNetwork": "죄송합니다. 네트워크 '{{moid}}'을(를) 찾지 못했습니다.",
+         "unknownPortgroup": "죄송합니다. 포트 그룹 '{{moid}}'을(를) 찾지 못했습니다.",
+         "unknownVMknic": "죄송합니다. VMkernel NIC '{{moid}}'을(를) 찾지 못했습니다.",
+         "unknownVSwitch": "죄송합니다. vSwitch '{{moid}}'을(를) 찾지 못했습니다."
+      }
+   }
+}

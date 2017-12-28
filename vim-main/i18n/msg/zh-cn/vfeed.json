@@ -1,0 +1,20 @@
+{
+     "title": "反馈",
+     "text": "欢迎向我们提供有关 VMware Host Client 的使用反馈。请通过下面的表单来提交您的任何意见或建议。您还可以生成屏幕截图并以您喜欢的任何可视形式对其进行注释。可以使用编辑器移除您不希望分享的任何数据。",
+     "experience": "您的整体体验如何?",
+     "tellMore": "更多反馈 (剩余 $1 个字符)",
+     "privacyPolicy": "隐私权政策",
+     "privacyPolicyContent": "您提供的任何反馈可能由 VMware 用于改进 VMware 产品和服务、修复问题以及针对如何以最佳方式部署和使用 VMware 产品和服务向客户提出建议。您负责模糊处理或移除您可能向 VMware 提供的任何屏幕截图中包含的任何机密、敏感或个人信息，并且不应在您的反馈中包含任何此类信息。您的电子邮件地址将用于就您的反馈与您进行联系。",
+     "emailPlaceholder": "电子邮件地址",
+     "screenshotTitle": "",
+     "penTooltip": "注释",
+     "eraserTooltip": "编辑",
+     "undoTooltip": "撤消",
+     "zoomInTooltip": "放大",
+     "zoomOutTooltip": "缩小",
+     "takeScreenshotButton": "生成屏幕截图",
+     "removeScreenshotButton": "移除屏幕截图",
+     "sendButton": "发送",
+     "cancelButton": "取消"
+}
+
