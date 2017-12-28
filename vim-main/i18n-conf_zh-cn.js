@@ -24,7 +24,8 @@ exports.config = {
          // 'i18n/testcases/P0/host/load-feedback.js',
         // 'i18n/testcases/P0/host/load-host-summary.js',
         //
-        //  'i18n/testcases/P0/create-vm/create-new-vm.js',                             //
+        //  'i18n/testcases/P0/create-vm/create-new-vm.js',
+        'i18n/testcases/P0/create-vm/create-new-vm-enable-VBS.js',
         //
         //  'i18n/testcases/P0/snapshot/take-vm-snapshot.js',                           // Visible
         //  'i18n/testcases/P0/snapshot/revert-vm-snapshot.js',                         // Visible

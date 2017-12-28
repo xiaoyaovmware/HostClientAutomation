@@ -71,6 +71,63 @@ var VirtualMachineUtil = function () {
         })
     };
 
+    //add
+    this.createVMenableVBS = function (newVMWizard, EsxuiPage, vmName, guestOSFamily, guestOSVersion, ramSize, hardDiskSize, customSettings, deviceNum, settingsOption1, settingsOption2) {
+        return globalUtil.waitForVisibility(newVMWizard.nextButton()).then(function () {
+            return racetrack.log("- - Select Create a new virtual machine and click Next button");
+        }).then(function () {
+            return newVMWizard.nextButton().click();
+        }).then(function () {
+            return self.enableVBSPage(newVMWizard, vmName, guestOSFamily, guestOSVersion);
+        }).then(function () {
+            return racetrack.log("- - Click Next button");
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.nextButton());
+        }).then(function () {
+            return newVMWizard.nextButton().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.storageDataTable());
+        }).then(function () {
+            return racetrack.log("- - Select default value for VM Storage and click Next");
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.nextButton());
+        }).then(function () {
+            return newVMWizard.nextButton().click();
+        }).then(function () {
+            return browser.sleep(10000);
+        }).then(function () {
+            return self.fillVMCustomHardware(newVMWizard, ramSize, hardDiskSize, customSettings, deviceNum, settingsOption1, settingsOption2);
+        }).then(function () {
+            return racetrack.log("- - Click Next button");
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.nextButton());
+        }).then(function () {
+            return newVMWizard.nextButton().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.vmNameSummary());
+        }).then(function () {
+            return racetrack.log("- - Click Finish button");
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.finishButton());
+        }).then(function () {
+            return newVMWizard.finishButton().click();
+        }).then(function () {
+            return esxuiUtil.dismissAlert(EsxuiPage);
+        }).then(function(){
+            // Wait for VM to be created
+            return browser.sleep(Timeout.WAIT_FOR_VM_CREATE);
+        }).then(function() {
+            return globalUtil.waitForVisibility(EsxuiPage.refreshButton());
+        }).then(function(){
+            return racetrack.log("- - Refresh Browser");
+        }).then(function () {
+            return globalUtil.refreshBrowser();
+        }).then(function(){
+            return browser.sleep(Timeout.WAIT_FOR_REFRESH);
+            // return globalUtil.waitForVisibility(EsxuiPage.navigator.vmMenu.self());
+        })
+    };
+
     this.fillVMNamePage = function (newVMWizard, vmName, guestOSFamily, guestOSVersion) {
 
         return globalUtil.waitForVisibility(newVMWizard.vmNameTextBox()).then(function(){
@@ -102,6 +159,44 @@ var VirtualMachineUtil = function () {
         }).then(function () {
             return newVMWizard.guestOSVersionDropDown.option(guestOSVersion).click();
         })
+    };
+
+    //add
+    this.enableVBSPage = function (newVMWizard, vmName, guestOSFamily, guestOSVersion) {
+        return globalUtil.waitForVisibility(newVMWizard.vmNameTextBox()).then(function(){
+            return racetrack.log("- - Enter Non-ASCII VM name: " + vmName);
+        }).then(function () {
+            return newVMWizard.vmNameTextBox().sendKeys('');
+        }).then(function () {
+            return newVMWizard.vmNameTextBox().clear();
+        }).then(function () {
+            return newVMWizard.vmNameTextBox().sendKeys(vmName);
+        }).then(function () {
+            return racetrack.log("- - Select OS from OS family drop down: " + guestOSFamily);
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.guestOSFamilyDropDown.self());
+        }).then(function () {
+            return newVMWizard.guestOSFamilyDropDown.self().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.guestOSFamilyDropDown.option(guestOSFamily));
+        }).then(function () {
+            return newVMWizard.guestOSFamilyDropDown.option(guestOSFamily).click();
+        }).then(function () {
+            return racetrack.log("- - Select GOS: " + guestOSVersion);
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.guestOSVersionDropDown.self());
+        }).then(function () {
+            return newVMWizard.guestOSVersionDropDown.self().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.guestOSVersionDropDown.option(guestOSVersion));
+        }).then(function () {
+            return newVMWizard.guestOSVersionDropDown.option(guestOSVersion).click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(newVMWizard.enableVBScheckbox());
+        }).then(function () {
+            return newVMWizard.enableVBScheckbox().click();
+        })
+
     };
 
     this.fillVMCustomHardware = function (newVMWizard, ramSize, hardDiskSize, customSettings, deviceNum, settingsOption1, settingsOption2) {
@@ -636,6 +731,20 @@ var VirtualMachineUtil = function () {
         })
 
     };
+
+    //add
+    this.createVMWithVBSSettings = function (VMPage, vmName, EsxuiPage) {
+
+        var newVMWizard = VMPage.createRegisterVMButton.newVMWizard;
+        // create-vm with default settings
+        return globalUtil.waitForVisibility(VMPage.createRegisterVMButton.self()).then(function(){
+            return VMPage.createRegisterVMButton.self().click();
+        }).then(function(){
+            var windows = browser.params.vmMsg.vm.wizard.basics.osVersion.windowsGuest;
+            return self.createVMenableVBS(newVMWizard, EsxuiPage, vmName, windows, 'Windows 10 64', 512, 8, 'Customize Provisioning', 0, 'thin');
+        })
+
+    }
 
     this.deleteVMFromGridByName = function (VMPage, vmName) {
 

@@ -40,6 +40,10 @@ var VirtualMachinesPage = {
                 }
             },
 
+            enableVBScheckbox: function () {
+                return element(by.model('wizardOptions.data.vm.vbsEnabled'));
+            },
+
             // Select register-vm page
             storageDataTable: function () {
                 return element.all(by.css('#vmStorageGrid tbody tr')).get(0);
