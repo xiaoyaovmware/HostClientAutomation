@@ -31,7 +31,7 @@ exports.config = {
         //
         //  'i18n/testcases/P0/edit-vm/edit-settings-for-vm.js',                        //
         //  'i18n/testcases/P0/edit-vm/edit-notes.js',                                  //
-        //
+        //  'i18n/testcases/P0/edit-vm/edit-settings-for-vm-options-general-options.js',
         //
         // 'i18n/testcases/P0/power-ops/power-on-off-vm.js',                             // Visible
         // 'i18n/testcases/P0/power-ops/power-on-off-multiple-vm.js',
@@ -63,7 +63,7 @@ exports.config = {
         // // 'i18n/testcases/P0/storage/remove-partition.js',
         // 'i18n/testcases/P0/storage/create-vmfs-custom-partition.js',                //
         // 'i18n/testcases/P0/storage/create-nfs-datastore.js',
-        'i18n/testcases/P0/storage/create-negative-directory.js',
+        // 'i18n/testcases/P0/storage/create-negative-directory.js',
         
         // //P1 test cases -----------------------------------------------------------
         //
