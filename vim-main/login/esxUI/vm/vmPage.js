@@ -368,6 +368,25 @@ var VirtualMachinesPage = {
                 self:function () {
                     return element.all(by.css('button[ng-click="clickAction($event,tab)"]')).get(1);
                 },
+
+                generalOptionSlideDown: {
+                    self: function () {
+                        return element(by.css('[vui-stack-block="vmOptionsStackView.generalBlock"] > div:nth-child(1) > div:nth-child(1)'));
+                    },
+
+                    guestOSDropDown:{
+                        self: function () {
+                            return element(by.css('[vui-dropdown="wizardOptions.data.general.OSFamilyOptions"] .k-select'));
+                        },
+
+                        guestOSvalue: function (num) {
+                            return element.all(by.css('div[data-role=popup][style*=block] li')).get(num);
+                        }
+                    }
+
+
+                },
+
                 remoteConsoleSlideDown:{
                     self:function () {
                         return element(by.css('[vui-stack-block="vmOptionsStackView.vmRemoteBlock"] > div:nth-child(1) > div:nth-child(1)'))

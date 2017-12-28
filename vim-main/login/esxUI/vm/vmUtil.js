@@ -430,6 +430,32 @@ var VirtualMachineUtil = function () {
         })
     };
 
+    this.changeVMOptionsGeneral = function (settingsPage) {
+        var generalOptionSlideDown;
+
+        return racetrack.log("- - Click VM Options tab.").then(function() {
+            return globalUtil.waitForVisibility(settingsPage.vmOptionsTab.self());
+        }).then(function() {
+            return settingsPage.vmOptionsTab.self().click();
+        }).then(function(){
+            generalOptionSlideDown = settingsPage.vmOptionsTab.generalOptionSlideDown;
+            return globalUtil.waitForVisibility(generalOptionSlideDown.self());
+        }).then(function() {
+            return generalOptionSlideDown.self().click();
+        }).then(function() {
+            return racetrack.log("- - Change Guest OS to Linux");
+        }).then(function () {
+            return globalUtil.waitForVisibility(generalOptionSlideDown.guestOSDropDown.self());
+        }).then(function(){
+            return generalOptionSlideDown.guestOSDropDown.self().click();
+        }).then(function(){
+            return globalUtil.waitForVisibility(generalOptionSlideDown.guestOSDropDown.guestOSvalue(1));
+        }).then(function(){
+            return generalOptionSlideDown.guestOSDropDown.guestOSvalue(1).click();
+        });
+
+    };
+
     this.changeVMOptionsRemoteConsole = function (settingsPage, lockGOS, limitSession, sessionNum) {
 
         var remoteConsoleSlideDown;
