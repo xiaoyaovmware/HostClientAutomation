@@ -77,8 +77,7 @@ var securityAndUsersUtil = function () {
 
     this.removeuser = function (SecurityAndUsersPage, username) {
 
-        var userGrid = SecurityAndUsersPage.userGrid,
-            confirmDeleteButton;
+        var userGrid = SecurityAndUsersPage.userGrid, confirmDeleteButton;
 
         return globalUtil.waitForVisibility(SecurityAndUsersPage.refreshButton()).then(function(){
             return racetrack.log("- - Click Refresh button");
