@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 //
 //
 // var GlobalUtil = require('../../../../../common/globalUtil.js');
