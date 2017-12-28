@@ -167,6 +167,10 @@ var StoragePage = {
                 nameTextBox: function () {
                     // button "Create directory"
                     return element(by.id('directoryName'));
+                },
+
+                invalidDirectoryMessage: function () {
+                    return element(by.xpath("//span[@ng-bind-html='msg.text']"));
                 }
             },
             

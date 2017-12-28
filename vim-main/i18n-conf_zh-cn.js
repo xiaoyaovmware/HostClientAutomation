@@ -41,16 +41,16 @@ exports.config = {
         // 'i18n/testcases/P0/vswitch/add-standard-switch.js',                         //
         //
         // 'i18n/testcases/P0/port-group/add-port-group.js',                           //
-        // // 'i18n/testcases/P0/port-group/rename-port-group.js',                      // update
+        // 'i18n/testcases/P0/port-group/rename-port-group.js',                      // update
         //
         // 'i18n/testcases/P0/vmknic/create-vmknic.js',                                //
         //
-        // // 'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
-        // //
+        // 'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
+        //
         // 'i18n/testcases/P0/manage/change-advanced-settings.js',                                //
         // 'i18n/testcases/P0/manage/assign-license.js',                               //
         // 'i18n/testcases/P0/manage/assign-license-create-vm.js',
-        'i18n/testcases/P0/manage/config-negative-time-and-date.js',
+        // 'i18n/testcases/P0/manage/config-negative-time-and-date.js',
         // 'i18n/testcases/P0/manage/add-remove-user.js',
         // 'i18n/testcases/P0/search/search-item.js',                                  //
         //
@@ -63,6 +63,7 @@ exports.config = {
         // // 'i18n/testcases/P0/storage/remove-partition.js',
         // 'i18n/testcases/P0/storage/create-vmfs-custom-partition.js',                //
         // 'i18n/testcases/P0/storage/create-nfs-datastore.js',
+        'i18n/testcases/P0/storage/create-negative-directory.js',
         
         // //P1 test cases -----------------------------------------------------------
         //
