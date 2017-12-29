@@ -62,7 +62,7 @@ var PortGroupUtil = function () {
         }).then(function () {
             return globalUtil.waitForVisibility(PortGroupPage.portGroupGrid.getPortGroupLinkByName(portGroupName));
         }).then(function () {
-            return racetrack.log("- - Right click the non-ASCII Port Group.");
+            return racetrack.log("- - Right click the Port Group.");
         }).then(function () {
             return browser.actions().mouseMove(PortGroupPage.portGroupGrid.getPortGroupLinkByName(portGroupName)).perform();
         }).then(function () {
@@ -80,7 +80,7 @@ var PortGroupUtil = function () {
 		}).then(function () {
             return PortGroupPage.rightClickContextMenu.removMenu().click();
         }).then(function () {
-            return racetrack.log("- - Click Confirm to remove the non-ASCII Port Group.");
+            return racetrack.log("- - Click Confirm to remove the Port Group.");
         }).then(function () {
             confirmRemoveButton = PortGroupPage.popUpDialog.okButton();
             globalUtil.waitForVisibility(confirmRemoveButton);

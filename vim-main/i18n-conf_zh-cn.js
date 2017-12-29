@@ -25,7 +25,7 @@ exports.config = {
         // 'i18n/testcases/P0/host/load-host-summary.js',
         //
         //  'i18n/testcases/P0/create-vm/create-new-vm.js',
-        'i18n/testcases/P0/create-vm/create-new-vm-enable-VBS.js',
+        // 'i18n/testcases/P0/create-vm/create-new-vm-enable-VBS.js',
         //
         //  'i18n/testcases/P0/snapshot/take-vm-snapshot.js',                           // Visible
         //  'i18n/testcases/P0/snapshot/revert-vm-snapshot.js',                         // Visible
@@ -45,7 +45,8 @@ exports.config = {
         // 'i18n/testcases/P0/port-group/rename-port-group.js',                      // update
         //
         // 'i18n/testcases/P0/vmknic/create-vmknic.js',                                //
-        //
+        'i18n/testcases/P0/vmknic/create-vmknic-special-characters-for-portgroup.js'
+
         // 'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
         //
         // 'i18n/testcases/P0/manage/change-advanced-settings.js',                                //
