@@ -82,7 +82,9 @@ describe('Create New non-ASCII VM enable VBS', function () {
             var vmGrid = VMPage.vmGrid;
             return esxuiUtil.checkForRecentTask('Create VM', vmName, browser.params.taskMsg.task.state.success, 3);   //modify
         }).then(function () {
-            return vmUtil.deleteVMFromGridByName(VMPage, vmName);
+            return vmUtil.checkVBSenabled(VMPage,vmName);
+        }).then(function () {
+            return vmUtil.deleteVMFromSummaryPage(VMPage);
         }).then(function () {
             return browser.sleep(Timeout.WAIT_FOR_VM_DELETE);
         })

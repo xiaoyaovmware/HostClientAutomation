@@ -252,6 +252,7 @@
                   "no": "否"
                },
                "memory": "内存",
+               "non-volatile-memory": "永久内存",
                "virtualFlash": {
                   "title": "虚拟闪存",
                   "capacity": "容量",
@@ -308,7 +309,7 @@
                   "title": "vMotion",
                   "supported": "受支持",
                   "notSupported": "不受支持",
-                  "vmknic": "vMotion 的虚拟网卡",
+                  "vmknic": "用于 vMotion 的虚拟网卡",
                   "yes": "是",
                   "no": "否",
                   "none": "无"
@@ -319,7 +320,7 @@
                "currentDateTime": "主机上的日期/时间",
                "inception": "安装日期",
                "assetTag": "资产标记",
-               "serviceTag": "服务标记",
+               "serviceTag": "序列号",
                "biosVersion": "BIOS 版本",
                "biosReleaseDate": "BIOS 发布日期"
             },
@@ -423,10 +424,13 @@
                "stopAction": {
                   "label": "停止操作",
                   "systemDefault": "系统默认值",
+                  "SystemDefault": "系统默认值",
                   "powerOff": "关闭电源",
+                  "PowerOff": "关闭电源",
                   "suspend": "挂起",
                   "Suspend": "挂起",
-                  "guestShutdown": "关机"
+                  "guestShutdown": "关机",
+                  "GuestShutdown": "关机"
                },
                "waitForHeartbeat": {
                   "label": "等待检测信号",
@@ -530,7 +534,7 @@
                   "tooltip": "PCI 设备",
                   "active": "活动",
                   "enabled": "已启用",
-                  "disabled": "已禁用",
+                  "disabled": "禁用",
                   "notCapable": "不支持",
                   "reboot": "需要重新引导",
                   "sriov": {
@@ -580,9 +584,9 @@
                      }
                   },
                   "summary": {
-                     "notSupported": "此设备不能直通",
-                     "notRunning": "此设备是可直通的设备，但未以直通模式运行",
-                     "needReboot": "此设备需要主机重新引导以便以直通模式开始运行",
+                     "notSupported": "此设备不可直通",
+                     "notRunning": "此设备可直通，但未以直通模式运行",
+                     "needReboot": "此设备需要重新引导主机以便以直通模式开始运行",
                      "deviceName": "设备名称",
                      "id": "ID",
                      "deviceID": "设备 ID",
@@ -623,7 +627,7 @@
                "valid": "<strong>{{name}}</strong> 的许可证密钥有效",
                "managedByVC": "此主机的许可证正由 vCenter Server 管理",
                "expiration": "过期日期",
-               "expireNever": "从未",
+               "expireNever": "从不",
                "features": "功能",
                "refresh": "刷新",
                "refreshToolTip": "刷新许可证",
@@ -727,7 +731,7 @@
                   "running": "正在运行",
                   "stopped": "已停止",
                   "enabled": "已启用",
-                  "disabled": "已禁用"
+                  "disabled": "禁用"
                },
                "actions": "操作",
                "actionsTooltip": "用于时间配置的操作",
@@ -761,7 +765,7 @@
                         "label": "根据端口使用情况启动和停止"
                      }
                   },
-                  "ntp": "使用 Network Time Protocol (启用 NTP 客户端)",
+                  "ntp": "使用网络时间协议 (启用 NTP 客户端)",
                   "ntpPolicy": "NTP 服务启动策略",
                   "ntpServers": "NTP 服务器",
                   "ntpServersLabel": "以逗号分隔服务器，例如 10.31.21.2, fe00::2800",
@@ -807,7 +811,9 @@
                         "partner": "合作伙伴",
                         "community": "社区",
                         "vmware_accepted": "VMware 认可",
-                        "vmware_certified": "VMware 认证"
+                        "vmware_certified": "VMware 认证",
+                        "accepted": "VMware 认可",
+                        "certified": "VMware 认证"
                      }
                   },
                   "actions": {
@@ -907,7 +913,7 @@
                      "description": "用户可以通过 DCUI 和 vCenter Server 登录"
                   },
                   "lockdownDisabled": {
-                     "name": "已禁用",
+                     "name": "禁用",
                      "description": "已禁用锁定模式"
                   },
                   "changeDialog": {
@@ -927,7 +933,7 @@
                   "removeExceptionUser": {
                      "title": "请确认",
                      "content": "是否确定要从锁定模式例外列表中移除用户 {{name}}?",
-                     "confirmLabel": "确定",
+                     "confirmLabel": "是",
                      "rejectLabel": "取消",
                      "successNotification": "已成功移除例外用户 {{name}}",
                      "failureNotification": "无法移除例外用户 {{name}}"
@@ -939,7 +945,7 @@
                         "label": "锁定模式",
                         "lockdownStrict": "已启用严格锁定",
                         "lockdownNormal": "已启用正常锁定",
-                        "lockdownDisabled": "已禁用"
+                        "lockdownDisabled": "禁用"
                      },
                      "exceptionUsers": {
                         "label": "例外用户"
@@ -1164,7 +1170,7 @@
                   "confirmLabel": "保存",
                   "successNotification": "已成功更新主机交换配置",
                   "failureNotification": "无法更新主机交换配置",
-                  "mustSelect": "必须启用至少一种交换设备"
+                  "mustSelect": "必须至少启用一种交换设备"
                }
             }
          },
@@ -1216,11 +1222,11 @@
          }
       },
       "supportBundle": {
-         "successNotification": "已完成支持包创建，可以从 {{url}} 下载支持包",
+         "successNotification": "已完成支持包的创建，可从 {{url}} 下载支持包",
          "failureNotification": "无法创建支持包: {{error}}",
          "dialog": {
             "title": "支持包已完成",
-            "content": "支持包创建完成。您可以从<a href='{{url}}'>此处</a>下载此支持包。\n\n您可以从“生成支持包”任务找到此支持包的下载 URL\n\n 15 分钟后将自动从主机移除此支持包。",
+            "content": "支持包创建完成。您可以从<a href='{{url}}'>此处</a>下载此支持包。\n\n您可以从“生成支持包”任务找到此支持包的下载 URL\n\n15 分钟后将自动从主机移除此支持包。",
             "confirmLabel": "下载",
             "rejectLabel": "关闭"
          },
@@ -1653,6 +1659,10 @@
          "notifications": {
             "failure": "无法进入维护模式: {{message}}",
             "failureUnknown": "无法进入维护模式，未知错误。"
+         },
+         "required": {
+            "title": "需要维护模式",
+            "content": "要编辑命名空间，您需要将主机置于维护模式。要否要进入维护模式?"
          }
       },
       "lockdownMode": {

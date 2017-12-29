@@ -252,9 +252,9 @@ var VirtualMachineUtil = function () {
     };
 
     this.customizedProvisioning = function(settingsPage, deviceNum, provisionType) {
-        
+
         var hardDiskSlideDown = settingsPage.hardDiskSlideDown;
-        
+
         return globalUtil.waitForVisibility(hardDiskSlideDown.self(deviceNum)).then(function () {
             return racetrack.log("- - Click Hard Disk drop down");
         }).then(function () {
@@ -310,7 +310,7 @@ var VirtualMachineUtil = function () {
 
     this.customizedDiskMode = function(settingsPage, deviceNum, diskMode) {
         var hardDiskSlideDown = settingsPage.hardDiskSlideDown;
-        
+
         return globalUtil.waitForVisibility(settingsPage.hardDiskSlideDown.self(deviceNum)).then(function () {
             return racetrack.log("- - Click Hard Disk slide down");
         }).then(function () {
@@ -338,7 +338,7 @@ var VirtualMachineUtil = function () {
         //console.log("customizedSCSIController deviceNumber: " + deviceNum);
 
         var scsiControllerSlideDown = settingsPage.scsiControllerSlideDown;
-        
+
         return globalUtil.waitForVisibility(scsiControllerSlideDown.self(deviceNum)).then(function () {
             return browser.executeScript('arguments[0].scrollIntoView()', scsiControllerSlideDown.self(deviceNum).getWebElement());
         }).then(function () {
@@ -375,7 +375,7 @@ var VirtualMachineUtil = function () {
     this.customizedAdapter = function(settingsPage, deviceNum, adapterType) {
 
         var networkAdapterSlideDown = settingsPage.networkAdapterSlideDown;
-        
+
         return globalUtil.waitForVisibility(networkAdapterSlideDown.self(deviceNum)).then(function () {
             return racetrack.log("- - Click Network Adapter slide down");
         }).then(function () {
@@ -397,9 +397,9 @@ var VirtualMachineUtil = function () {
 
     this.addCDROM = function(settingsPage, deviceNum, controllerType, location) {
         //console.log("addCDROM deviceNum:" + deviceNum);
-        
+
         var cdromSlideDown = settingsPage.cdromSlideDown;
-        
+
         return globalUtil.waitForVisibility(settingsPage.addOtherDeviceButton.self()).then(function () {
             return racetrack.log("- - Click Add other device");
         }).then(function () {
@@ -449,7 +449,7 @@ var VirtualMachineUtil = function () {
         //console.log("addCDROM deviceNum:" + deviceNum);
 
         var cdromSlideDown = settingsPage.cdromSlideDown;
-        
+
         return globalUtil.waitForVisibility(cdromSlideDown.self(deviceNum)).then(function () {
             return racetrack.log("- - Click CD/DVD drive slide down");
         }).then(function () {
@@ -779,7 +779,31 @@ var VirtualMachineUtil = function () {
             return confirmDeleteButton.click();
         });
     };
-    
+
+    //add
+    this.deleteVMFromSummaryPage = function (VMPage) {
+        var confirmDeleteButton;
+
+        return globalUtil.waitForVisibility(VMPage.actionsButton.self()).then(function(){
+            return racetrack.log("- - Click Action button");
+        }).then(function () {
+            return VMPage.actionsButton.self().click();
+        }).then(function(){
+            return racetrack.log("- - Select Delete menu");
+        }).then(function () {
+            return globalUtil.waitForVisibility(VMPage.actionsButton.delete());
+        }).then(function(){
+            return VMPage.actionsButton.delete().click();
+        }).then(function(){
+            confirmDeleteButton = VMPage.popUpDialog.okButton(0);
+            return globalUtil.waitForVisibility(confirmDeleteButton);
+        }).then(function() {
+            //Click on Delete
+            return confirmDeleteButton.click();
+        });
+
+    }
+
     this.createVMSnapshot = function (VMPage, EsxuiPage, vmName, snapshotName) {
 
         var snapshotsMenu = VMPage.actionsButton.snapshotsMenu,
@@ -1202,6 +1226,30 @@ var VirtualMachineUtil = function () {
         }).then(function () {
             return globalUtil.waitForVisibility(VMPage.vmGrid.self());
         });
+    };
+
+    //add
+    this.checkVBSenabled = function (VMPage,vmName) {
+
+        var vmGrid = VMPage.vmGrid;
+
+        return racetrack.log("- - Click the VM name: " + vmName).then(function(){
+            return globalUtil.waitForVisibility(vmGrid.getVMLinkByName(vmName));
+        }).then(function(){
+            return browser.actions().mouseMove(vmGrid.getVMLinkByName(vmName)).perform();
+        }).then(function(){
+            return browser.actions().click().perform();
+        }).then(function(){
+            return browser.sleep(2000);
+        }).then(function(){
+            return globalUtil.waitForVisibility(VMPage.actionsButton.self());
+        }).then(function(){
+            return racetrack.log("- - Verify VBS enabled is displayed in "+ browser.params.i18n.lang + ': ' + browser.params.vmMsg.vm.banner.vbsEnabled);
+        }).then(function(){
+            return VMPage.vmsummary.vbsEnabledText().getText();
+        }).then(function (vbsEnabledText) {
+            return expect(vbsEnabledText).toBe(browser.params.vmMsg.vm.banner.vbsEnabled);
+        })
     };
 
 

@@ -203,19 +203,19 @@
                   "ipv4DHCP": {
                      "title": "IPv4 DHCP",
                      "enabled": "已启用",
-                     "disabled": "已禁用"
+                     "disabled": "禁用"
                   },
                   "ipv4Address": "IPv4 地址",
                   "ipv4Subnet": "IPv4 子网",
                   "ipv6DHCP": {
                      "title": "IPv6 DHCP",
                      "enabled": "已启用",
-                     "disabled": "已禁用"
+                     "disabled": "禁用"
                   },
                   "ipv6AutoConfig": {
                      "title": "IPv6 自动配置",
                      "enabled": "已启用",
-                     "disabled": "已禁用"
+                     "disabled": "禁用"
                   },
                   "ipv6Addresses": "IPv6 地址",
                   "none": "无"
@@ -408,7 +408,7 @@
                   "dhcpv6": {
                      "label": "DHCPv6",
                      "enabled": "已启用",
-                     "disabled": "已禁用"
+                     "disabled": "禁用"
                   },
                   "autoConfig": {
                      "label": "自动配置",
@@ -801,11 +801,11 @@
          },
          "ipv6": {
             "true": "已启用",
-            "false": "已禁用"
+            "false": "禁用"
          },
          "dhcp": {
             "true": "已启用",
-            "false": "已禁用"
+            "false": "禁用"
          },
          "list": {
             "columns": {
@@ -873,7 +873,7 @@
                "ipv6": "IPv6 网关"
             },
             "congestionControl": {
-               "newReno": "NewReno",
+               "newReno": "新建 Reno",
                "cubic": "CUBIC",
                "CUBIC": "CUBIC"
             },
@@ -900,7 +900,7 @@
       },
       "tcp": {
          "congestionControl": {
-            "newreno": "NewReno",
+            "newreno": "新建 Reno",
             "cubic": "CUBIC"
          }
       },
@@ -957,7 +957,7 @@
             "selectVSwitch": "选择虚拟交换机",
             "missingName": "请提供端口组名称",
             "missingVSwitch": "请为端口组选择虚拟交换机",
-            "badVLANIDRange": "VLAN ID 必须介于 0 到 4095 之间",
+            "badVLANIDRange": "VLAN ID 必须介于 0 和 4095 之间",
             "success": "已成功创建端口组 {{name}}",
             "failure": "无法创建新的端口组 {{name}}"
          },
@@ -969,7 +969,7 @@
             "loading": "正在加载...",
             "missingName": "请提供端口组名称",
             "missingVSwitch": "请为端口组选择虚拟交换机",
-            "badVLANIDRange": "VLAN ID 必须介于 0 到 4095 之间",
+            "badVLANIDRange": "VLAN ID 必须介于 0 和 4095 之间",
             "success": "已成功保存端口组 {{name}}",
             "failure": "无法保存端口组 {{name}}",
             "trafficShaping": {
@@ -1233,7 +1233,7 @@
                   "yes": "是",
                   "no": "否",
                   "enabled": "已启用",
-                  "disabled": "已禁用"
+                  "disabled": "禁用"
                },
                "subnets": {
                   "title": "发现的子网",
@@ -1309,7 +1309,7 @@
             },
             "auto": {
                "yes": "已启用",
-               "no": "已禁用"
+               "no": "禁用"
             },
             "actionBar": {
                "refresh": {

@@ -93,6 +93,7 @@
             "autostartStartOrder": "自动启动顺序",
             "autostartStartDelay": "启动延迟",
             "autostartStopDelay": "停止延迟",
+            "autostartStopAction": "关机行为",
             "notes": "备注"
          },
          "quickFilters": {
@@ -267,7 +268,7 @@
          "revertLatest": {
             "menu": "还原最新快照",
             "title": "还原最新快照",
-            "content": "除非将虚拟机的当前状态保存在快照中，否则该状态将丢失。是否恢复为最新 (最近) 的快照?",
+            "content": "除非将虚拟机的当前状态保存在快照中，否则该状态将丢失。是否要恢复为最新 (最近) 的快照?",
             "revert": "还原",
             "cancel": "取消",
             "notification": {
@@ -278,7 +279,7 @@
          "revert": {
             "menu": "还原快照",
             "title": "还原快照",
-            "content": "除非将虚拟机的当前状态保存到快照中，否则该状态将丢失。是否还原快照“{{title}}”?",
+            "content": "除非将虚拟机的当前状态保存在快照中，否则该状态将丢失。是否还原快照“{{title}}”?",
             "revert": "还原",
             "cancel": "取消",
             "notification": {
@@ -315,7 +316,7 @@
             "title": "管理快照 - {{name}}",
             "name": "名称",
             "description": "描述",
-            "created": "创建时间",
+            "created": "创建",
             "diskUsage": "磁盘使用情况",
             "console": "控制台",
             "here": "您在此处",
@@ -448,7 +449,7 @@
             "noData": "无可用性能数据",
             "chart": {
                "xAxis": "时间",
-               "y1Axis": "已消耗的主机 CPU/就绪时间 (%)",
+               "y1Axis": "已消耗的主机 CPU/就绪 (%)",
                "y2Axis": "已消耗的主机内存 (GB)",
                "cpu": "已消耗的主机 CPU",
                "ready": "就绪",
@@ -460,12 +461,15 @@
          "hardware": {
             "label": "硬件配置",
             "title": "硬件配置",
+            "vbsEnabled": "VBS",
+            "vvtdEnabled": "IOMMU",
             "cpu": {
                "cpu": "CPU",
                "cores": "CPU 内核数",
                "sockets": "插槽数",
                "coreSocket": "每个插槽内核数",
-               "memory": "内存"
+               "memory": "内存",
+               "vbs": "VBS"
             },
             "disk": {
                "backing": "备用",
@@ -526,7 +530,7 @@
                "software": "软件",
                "hardware": "硬件",
                "enabled": "已启用",
-               "disabled": "已禁用"
+               "disabled": "禁用"
             },
             "network": {
                "networkAdapter": "网络适配器",
@@ -552,7 +556,7 @@
             "consumedHostMemory": "已消耗的主机内存",
             "consumedHostCPU": "已消耗的主机 CPU",
             "storage": "存储",
-            "uncommitted": "未提交",
+            "uncommitted": "未使用",
             "provisioned": "已置备",
             "notShared": "未共享",
             "used": "已用"
@@ -708,7 +712,7 @@
                      "allPackagesDropdownTitle": "所有软件包",
                      "seriesLabel": "PCPU {{core}}",
                      "packageSeriesLabel": "软件包 {{pkg}}",
-                     "y1AxisLabel": "已消耗的主机 CPU/就绪时间 (%)",
+                     "y1AxisLabel": "已消耗的主机 CPU/就绪 (%)",
                      "x1AxisLabel": "时间",
                      "x2AxisLabel": "时间",
                      "ready": "就绪"
@@ -797,7 +801,7 @@
                "suggested-action": "VMware Tools 允许显示详细的客户机信息，并允许您在客户机操作系统上执行操作，例如正常关闭、重新引导等。您应安装 VMware Tools。"
             },
             "toolsOld": {
-               "message": "此虚拟机中的 VMware Tools 已过时。",
+               "message": "此虚拟机可使用更高版本的 VMware Tools。",
                "suggested-action": "升级 VMware Tools 可以提供改善的功能和更好的稳定性。"
             },
             "ftSecondary": {
@@ -814,7 +818,7 @@
             "failedToRename": "无法重命名虚拟机 {{name}}。{{reason}}",
             "failedToCreate": "无法创建虚拟机 {{name}}。{{reason}}",
             "failedToDelete": "无法删除虚拟机 {{name}}。{{reason}}",
-            "failedToSaveNotes": "无法保存虚拟机 {{name}} 的备注。{{reason}}",
+            "failedToSaveNotes": "无法保存虚拟机 {{name}} 的注释。{{reason}}",
             "failedToReconfig": "无法重新配置虚拟机 {{name}}。{{reason}}",
             "failedToSuspend": "无法挂起虚拟机 {{name}}。{{reason}}"
          }
@@ -833,7 +837,9 @@
             "cpu": "CPU",
             "memory": "内存",
             "storage": "存储"
-         }
+         },
+         "vbsEnabled": "VBS 已启用",
+         "vbsNotEnabled": "VBS 未启用"
       },
       "edit": {
          "title": "编辑设置",
@@ -959,8 +965,8 @@
             "desc": "此虚拟机使用硬件版本 13，提供最佳性能和 ESXi 6.5 中最新的可用功能。"
          },
          "vmx-14": {
-            "label":"ESXi 6.x 及更高版本 (虚拟机版本 14)",
-            "desc": "此虚拟机使用硬件版本 14，可提供最佳性能以及 ESXi 6.x 中的最新功能。"
+            "label":"ESXi 6.7 及更高版本 (虚拟机版本 14)",
+            "desc": "此虚拟机使用硬件版本 14，提供最佳性能和 ESXi 6.7 中最新的可用功能。"
          }
       },
       "wizard": {
@@ -996,6 +1002,13 @@
                "netwareGuest": "Novel Netware",
                "otherGuestFamily": "其他"
             },
+            "vbs": {
+               "label": "启用 Windows 基于虚拟化的安全性",
+               "signPost": {
+                  "title": "基于虚拟化的安全性",
+                  "message": "使硬件虚拟化、IOMMU、EFI 和安全引导可用于客户机操作系统。您还必须在此虚拟机的客户机操作系统内启用基于虚拟化的安全性。"
+               }
+            },
             "validation": {
                "emptyName": "请提供虚拟机名称。",
                "invalidName": "虚拟机名称不能包含双引号、冒号或斜线字符",
@@ -1007,8 +1020,16 @@
          },
          "storage": {
             "title": "选择存储",
-            "description": "选择要存储配置和磁盘文件的数据存储。",
-            "desc": "可从您选择的目标资源中访问以下数据存储。为虚拟机配置文件和所有虚拟磁盘选择目标数据存储。",
+            "description": "选择存储类型和数据存储",
+            "desc": "为虚拟机的配置文件及其所有虚拟磁盘选择数据存储。",
+            "pmemDesc": {
+               "warning": "此虚拟机的磁盘将位于永久内存中。",
+               "action": "请选择一个数据存储来存储虚拟机的配置文件。"
+            },
+            "tabs": {
+               "standard": "标准",
+               "pmem": "永久内存"
+            },
             "policy": {
                "default": "数据存储默认值",
                "vvol": "VVol 无要求策略",
@@ -1050,6 +1071,7 @@
                "virtualizationSignpost": "通过向客户机操作系统公开底层处理器的硬件辅助的虚拟化功能，启用完全 CPU 虚拟化。",
                "schedulingAffinitySignPost": "<p>为此虚拟机选择逻辑处理器关联性。</p><p>使用“-”表示范围，使用“,”来分隔值。例如，“0, 2, 4-7”表示处理器 0、2、4、5、6 和 7。</p><p>清除字符串可移除关联性设置。</p>",
                "cpuMMUSignPost": "<p>ESXi 可以根据处理器类型和虚拟机自动确定虚拟机是否应使用硬件支持进行虚拟化。但是，对于某些工作负载，覆盖自动选择可提供更好的性能。</p><p>注意: 如果选定的设置不受主机支持，或者与现有的虚拟机设置发生冲突，则该设置将被忽略，并使用“自动”选项。</p>",
+               "cpuMMUSignPost67": "<div><p>ESXi 可以根据处理器类型和虚拟机自动确定虚拟机是否应使用硬件支持进行虚拟化。但是，对于某些工作负载，覆盖自动选择可提供更好的性能。</p><p>注意: 如果选定的设置不受主机支持，或者与现有的虚拟机设置发生冲突，则该设置将被忽略，并使用“自动”选项。</p><ul><li><b>自动:</b> 自动</li><li><b>软件·CPU 和·MMU:</b> 使用软件进行指令集和 MMU 虚拟化</li><li><b>硬件·CPU、软件 MMU:</b> 使用 Intel&reg;VT-x/AMD-V&trade; 进行指令集虚拟化并使用软件进行 MMU 虚拟化</li><li><b>硬件·CPU 和·MMU:</b> 使用 Intel&reg; VT-x/AMD-V&trade; 进行指令集虚拟化并使用 Intel EPT/AMD RVI 进行 MMU 虚拟化</li></ul>",
                "cpu": {
                   "label": "CPU",
                   "cores": {
@@ -1088,7 +1110,7 @@
                      "label": "调度关联性",
                      "value": "调度关联性值",
                      "hyper": "超线程状态:",
-                     "available": "可用 CPU 数量:",
+                     "available": "可用 CPU:",
                      "logical": "(逻辑 CPU)"
                   },
                   "cpuMmuVirtualization": {
@@ -1097,6 +1119,10 @@
                      "software": "软件 CPU 和 MMU",
                      "hardwareCPU": "硬件 CPU，软件 MMU",
                      "hardwareBoth": "硬件 CPU 和 MMU"
+                  },
+                  "vvtd": {
+                     "label": "IOMMU",
+                     "desc": "向客户机操作系统公开 IOMMU"
                   },
                   "validation": {
                      "invalidReservation": "CPU 预留值无效。",
@@ -1162,12 +1188,26 @@
                      "invalidShares": "内存份额值无效。"
                   }
                },
+               "nvdimm": {
+                  "title": "NVDIMM",
+                  "new": "新 NVDIMM",
+                  "size": "大小",
+                  "location": "控制器位置",
+                  "controllerLabel": "NVDIMM 控制器 {{controller}}:{{index}}",
+                  "validation": {
+                     "invalidSize": "为 NVDIMM 指定的大小无效，请确保该大小可被 4 整除"
+                  }
+               },
                "sound": {
                   "VirtualHdAudioCard": "HD 音频",
                   "VirtualSoundBlaster16": "Sound Blaster 16",
                   "VirtualEnsoniq1371": "Ensoniq 1371",
                   "type": "类型",
                   "title": "声卡"
+               },
+               "tpm": {
+                  "title": "可信平台模块",
+                  "present": "存在"
                },
                "video":{
                   "label": "显卡",
@@ -1183,8 +1223,8 @@
                      "dialog": {
                         "title": "显存计算器",
                         "desc": "根据客户机需要支持的最大显示器数和最高分辨率，计算所需显存。",
-                        "display": "显示器数量:",
-                        "resolution": "屏幕分辨率:",
+                        "display": "显示器数目:",
+                        "resolution": "解决方案:",
                         "total": "总显存:",
                         "ok": "确定",
                         "cancel": "取消"
@@ -1231,13 +1271,19 @@
                      "value": "份额值",
                      "unit": "份额单位"
                   },
+                  "showMore": {
+                     "hardDisks": "硬盘",
+                     "showNext": "显示下一个",
+                     "go": "转到",
+                     "show": "显示"
+                  },
                   "limitIOP": "限制 - IOPs",
                   "virtualFlash": {
                      "label": "虚拟闪存读取缓存",
                      "unit": "虚拟闪存读取缓存单位"
                   },
                   "virtualDeviceNode": {
-                     "label": "虚拟设备节点",
+                     "label": "控制器位置",
                      "unit": "虚拟设备节点单位"
                   },
                   "diskCompatibility": {
@@ -1271,9 +1317,13 @@
                         "label": "现有硬盘",
                         "tooltip": "将现有硬盘添加到虚拟机"
                      },
+                     "pmem": {
+                        "label": "新永久内存磁盘",
+                        "tooltip": "将支持永久内存的新磁盘添加到虚拟机"
+                     },
                      "rdm": {
-                        "label": "添加新的 RDM",
-                        "tooltip": "将 RDM 添加到虚拟机"
+                        "label": "新裸磁盘",
+                        "tooltip": "将裸设备映射磁盘添加到虚拟机"
                      }
                   },
                   "validation": {
@@ -1290,7 +1340,7 @@
                      "limitIOPsNegative" : "磁盘限制 IOPs 不能为负值",
                      "limitIOPsNonInteger" : "磁盘限制 IOPs 只接受整数值",
                      "invalidReadCache": "读取缓存值无效。",
-                     "badReservation": "预留必须介于 {{min}} 和 {{max}} 之间。输入 0 可禁用虚拟 Flash Read Cache。",
+                     "badReservation": "预留必须介于 {{min}} 和 {{max}} 之间。输入 0 可禁用虚拟闪存读取缓存。",
                      "noAvailableLocation": "选定控制器上无可用位置。请选择其他控制器。",
                      "locationInUse": "此位置正由其他设备使用，请选择下一个可用位置。"
                   }
@@ -1328,7 +1378,7 @@
                },
                "nvme": {
                   "title": "NVMe 控制器 {{size}}",
-                  "new": "新的 NVMe 控制器",
+                  "new": "新建 NVMe 控制器",
                   "label": "NVMe 控制器 {{index}}",
                   "validation": {
                      "diskAttached": "硬盘仍连接到此控制器，请先进行重新分配。",
@@ -1337,7 +1387,7 @@
                },
                "sata": {
                   "title": "SATA 控制器 {{size}}",
-                  "new": "新的 SATA 控制器",
+                  "new": "新建 SATA 控制器",
                   "label": "SATA 控制器 {{index}}",
                   "validation": {
                      "diskAttached": "硬盘仍连接到此控制器，请先进行重新分配。",
@@ -1359,6 +1409,7 @@
                "usbDevice": {
                   "title": "USB 设备 {{size}}",
                   "new": "新的 USB 设备",
+                  "clientDevice": "客户端设备",
                   "deviceNotFound": "未找到设备",
                   "connect": "连接",
                   "validation": {
@@ -1430,7 +1481,7 @@
                },
                "network": {
                   "title": "网络适配器 {{size}}",
-                  "new": "新的网络适配器",
+                  "new": "新建网络适配器",
                   "status": "状态",
                   "connect": "连接",
                   "connectAt": "打开电源时连接",
@@ -1513,7 +1564,7 @@
                      "sata": "SATA 控制器"
                   },
                   "virtualDeviceNode": {
-                     "label": "虚拟设备节点",
+                     "label": "控制器位置",
                      "location": "控制器位置",
                      "controller": "控制器类型"
                   },
@@ -1535,16 +1586,20 @@
                      "tooltip": "将网络适配器添加到虚拟机"
                   },
                   "newHD": {
-                     "label": "新硬盘",
+                     "label": "新标准硬盘",
                      "tooltip": "将新硬盘添加到虚拟机"
                   },
                   "existingHD": {
                      "label": "现有硬盘",
                      "tooltip": "将现有硬盘添加到虚拟机"
                   },
+                  "pmem": {
+                     "label": "新永久内存磁盘",
+                     "tooltip": "将支持永久内存的新磁盘添加到虚拟机"
+                  },
                   "rdm": {
-                     "label": "添加新 RDM 磁盘",
-                     "tooltip": "将新的裸设备映射磁盘添加到虚拟机"
+                     "label": "新裸磁盘",
+                     "tooltip": "将裸设备映射磁盘添加到虚拟机"
                   },
                   "network": {
                      "label": "网络适配器",
@@ -1594,6 +1649,10 @@
                      "label": "声音控制器",
                      "tooltip": "添加声音控制器"
                   },
+                  "nvdimm": {
+                     "label": "NVDIMM",
+                     "tooltip": "添加非易失性内存模块"
+                  },
                   "other": {
                      "label": "添加其他设备",
                      "tooltip": "将其他硬件添加到此虚拟机"
@@ -1621,6 +1680,12 @@
                }
             },
             "vmoptions": {
+               "vbs": {
+                  "label": "VBS",
+                  "desc": "启用基于虚拟化的安全性",
+                  "requires": "EFI、安全引导、IOMMU 和硬件虚拟化将在重新引导时启用。",
+                  "disabled": "出现警告，必须在客户机操作系统中禁用 VBS。"
+               },
                "general": {
                   "title": "常规选项",
                   "vmname": "虚拟机名称:",
@@ -1836,7 +1901,8 @@
                },
                "validation": {
                   "numberWWNNs": "NPIV WorldWideNode 名称的数量必须介于 {{min}} 和 {{max}} 之间。",
-                  "numberWWPNs": "NPIV WorldWidePort 名称的数量必须介于 {{min}} 和 {{max}} 之间。"
+                  "numberWWPNs": "NPIV WorldWidePort 名称的数量必须介于 {{min}} 和 {{max}} 之间。",
+                  "unbootable": "更改固件可能会导致已安装的客户机操作系统无法引导。"
                }
             }
          },
@@ -1890,6 +1956,7 @@
                "memory": "内存",
                "expand": "单击以展开",
                "properties": "属性",
+               "profile": "配置文件",
                "validation": {
                   "extraDisk": "至少有一个提供的额外磁盘映像将被忽略。",
                   "diskMissing": "缺少所需的磁盘映像。",
@@ -1906,8 +1973,8 @@
                "desc": "虚拟机名称最多可包含 80 个字符，且名称在每个 ESXi 实例中必须是唯一的。"
             },
             "select": {
-               "click": "单击以选择",
-               "drag": "或拖放文件"
+               "click": "单击以选择文件",
+               "drag": "或拖放"
             },
             "notification": {
                "match": "字段 {{name}} 不匹配",
@@ -1974,7 +2041,9 @@
             "nvmeController": "NVMe 控制器 {{size}}",
             "sataController": "SATA 控制器 {{size}}",
             "newSataController": "新的 SATA 控制器",
-            "newNVMEController": "新的 NVMe 控制器",
+            "newNVMEController": "新建 NVMe 控制器",
+            "newNVDIMM": "新 NVDIMM {{index}}",
+            "nvdimm": "{{size}} NVDIMM",
             "createHardDisk": "硬盘 {{size}}",
             "capacity": "容量",
             "datastore": "数据存储",
@@ -1995,6 +2064,8 @@
             "backing": "备用",
             "client": "远程设备 Cdrom",
             "connected": "已连接",
+            "vbs": "VBS",
+            "vvtd": "IOMMU",
             "sound": {
                "label": "声音控制器",
                "VirtualHdAudioCard": "HD 音频",
@@ -2229,7 +2300,7 @@
          }
       },
       "error": {
-         "unknown": "抱歉，找不到虚拟机“{{moid}}”。"
+         "unknown": "抱歉，未找到虚拟机“{{moid}}”。"
       },
       "warning": {
          "multiThreshold": {
@@ -2281,7 +2352,7 @@
          }
       },
       "help": {
-         "content": "<p>以下是对虚拟机参数的描述:</p><dl><dt>状况</dt><dd>状况列显示虚拟机的当前状况: 打开电源、关闭电源、已挂起。</dd><dt>状态</dt><dd>状态列基于当前等待虚拟机处理的任何通知，显示虚拟机的高级状态。例如，如果未安装 VMware Tools，状态将为<strong>信息</strong>。<br /><br /> <strong>无效</strong>状态表示虚拟机在数据存储上似乎无法访问。文件可能已被移除。对无效虚拟机可用的唯一操作是取消注册。<br /><br /> <strong>不一致</strong>状态表示虚拟机状态未知。重新启动虚拟机电源通常将解决此问题。</dd><dt>已置备空间</dt><dd>已置备空间列显示为虚拟机提供的存储量 (将所有虚拟磁盘累计)。</dd><dt>已用空间</dt><dd>已用空间列显示虚拟机当前消耗的存储量。这包括虚拟机虚拟磁盘上的数据存储、挂起状态、快照和交换文件的消耗。</dd><dt>主机名</dt><dd>主机名列显示客户机操作系统的主机名。</dd><dt>主机 CPU</dt><dd>主机 CPU 列显示虚拟机的 VCPU 当前在主机的 CPU 上消耗了多少 CPU 资源。</dd><dt>主机内存</dt><dd>主机内存列显示虚拟机在主机系统上消耗了多少内存。</dd></dl>",
+         "content": "<p>以下是对虚拟机参数的描述:</p><dl><dt>状况</dt><dd>状况列显示虚拟机的当前状况: 打开电源、关闭电源、已挂起。</dd><dt>状态</dt><dd>状态列基于当前等待虚拟机处理的任何通知，显示虚拟机的高级状态。例如，如果未安装 VMware Tools，状态将为<strong>信息</strong>。<br /><br /><strong>无效</strong>状态表示虚拟机在数据存储上似乎无法访问。文件可能已被移除。对无效虚拟机可用的唯一操作是取消注册。<br /><br /><strong>不一致</strong>状态表示虚拟机状态未知。重新启动虚拟机电源通常将解决此问题。</dd><dt>已置备空间</dt><dd>已置备空间列显示为虚拟机提供的存储量 (将所有虚拟磁盘累计)。</dd><dt>已用空间</dt><dd>已用空间列显示虚拟机当前消耗的存储量。这包括虚拟机虚拟磁盘上的数据存储、挂起状态、快照和交换文件的消耗。</dd><dt>主机名</dt><dd>主机名列显示客户机操作系统的主机名。</dd><dt>主机 CPU</dt><dd>主机 CPU 列显示虚拟机的 VCPU 当前在主机的 CPU 上消耗了多少 CPU 资源。</dd><dt>主机内存</dt><dd>主机内存列显示虚拟机在主机系统上消耗了多少内存。</dd></dl>",
          "title": "帮助"
       }
    }

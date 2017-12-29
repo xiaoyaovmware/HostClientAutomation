@@ -105,7 +105,7 @@
       "cancel": "取消",
       "default": "默认",
       "enabled": "已启用",
-      "disabled": "已禁用",
+      "disabled": "禁用",
       "none": "无",
       "select": "选择",
       "na": {
@@ -214,7 +214,7 @@
                "tooltip": "启用视觉效果，如淡入和淡出上下文菜单"
             },
             "recentItems": {
-               "label": "仅显示最近选择的对象",
+               "label": "仅显示最近的对象",
                "tooltip": "仅在对象导航器中显示最近选择的对象"
             },
             "showWelcome": {
@@ -299,7 +299,7 @@
                "xHours": "{{x}} 小时",
                "off": "关闭",
                "warning": {
-                  "confirmLabel": "确定",
+                  "confirmLabel": "是",
                   "rejectLabel": "取消",
                   "title": "警告",
                   "content": "如果禁用会话超时可能会使您的 ESXi 主机易受恶意活动的攻击。是否确定要禁用会话超时?"
@@ -396,7 +396,7 @@
          "ok": "确定",
          "content": "该产品加入了·VMware·客户体验改善计划·(CEIP)。CEIP 将向 VMware 提供相关信息，帮助 VMware 改进其产品和服务以及修复问题，并向您建议如何以最佳方式部署和使用我们的产品。作为 CEIP 的一部分，VMware 会结合您组织的 VMware 许可证密钥，定期收集有关您的组织如何使用 VMware 产品和服务的技术信息。此信息不作为任何个人身份标识。有关 CEIP 的其他信息，请参见位于 <a href=\"http://www.vmware.com/trustvmware/ceip.html\" target=\"_blank\">VMware.com</a> 的信任与保证中心。您可以在下面以及 Host Client 的设置菜单中选择参与首选项。",
          "checkbox": {
-            "label": "加入 VMware 客户体验改善计划"
+            "label": "加入 VMware 客户体验改进计划"
          }
       }
    },
@@ -406,7 +406,7 @@
             "title": "重置设置",
             "ok": "确定",
             "cancel": "取消",
-            "content": "所有应用程序设置现将重置为出厂默认设置。该操作无法撤消。重置完成后，将重新加载应用程序。"
+            "content": "所有应用程序设置现在将重置为出厂默认设置。该操作无法撤消。重置完成后，应用程序将重新加载。"
          }
       }
    },

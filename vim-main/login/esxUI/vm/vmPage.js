@@ -572,6 +572,15 @@ var VirtualMachinesPage = {
 
     },
 
+    vmsummary: {
+
+      vbsEnabledText: function () {
+          return element(by.css('p.form-control-static span:nth-child(1) > span:nth-child(1)'));
+      },
+
+
+    },
+
     powerOnButton: function () {
         return element(by.id('powerOnButton'));
     },
@@ -629,6 +638,10 @@ var VirtualMachinesPage = {
 
         editNotesMenu: function () {
             return element(by.id('editNotes'));
+        },
+
+        delete: function () {
+            return element(by.id('deleteVM'));
         },
 
     },

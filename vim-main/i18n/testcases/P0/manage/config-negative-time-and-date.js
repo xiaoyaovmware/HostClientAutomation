@@ -108,7 +108,7 @@ describe('Config negative time and date', function () {
             return SystemPage.timedateButton.editsettingsButton.validationmessagetext().getText();
         }).then(function (validationmessageLabel) {
             return expect(validationmessageLabel).toBe(browser.params.hostMsg.host.manage.system.timeAndDate.dialog.validation.emptyDate);
-        }).then(function () {  
+        }).then(function () {
             return SystemPage.timedateButton.editsettingsButton.clearValidationBannerButton().click();
         }).then(function () {
             return SystemPage.popUpDialog.cancelButton().click();

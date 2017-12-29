@@ -13,6 +13,10 @@
          "devices": {
             "label": "设备",
             "tooltip": "设备"
+         },
+         "nvdimm": {
+            "label": "永久内存",
+            "tooltip": "永久内存"
          }
       },
       "wizard": {
@@ -73,6 +77,169 @@
           }
         }
       },
+      "nvdimm": {
+         "summary": {
+            "type": "类型",
+            "capacity": "容量",
+            "uuid": "UUID",
+            "health": "运行状况",
+            "healthInformation": "运行状况信息",
+            "representationString": "制造商字符串",
+            "lifespan": "使用期限",
+            "temperature": "温度",
+            "temperatureThreshold": "温度阈值",
+            "persistentNamespace": "持久",
+            "blockNamespace": "块",
+            "types": {
+               "namespace": "命名空间",
+               "dimm": "NVDIMM"
+            }
+         },
+         "healthStatus": {
+            "title": "运行状况",
+            "badBlockSize": "块大小错误",
+            "bttCorrupt": "BTT 已损坏",
+            "interleaveBroken": "交错功能已损坏",
+            "labelInconsistent": "标签不一致",
+            "labelMissing": "缺少标签",
+            "missing": "缺少",
+            "normal": "正常"
+         },
+         "devices": {
+            "tabTitle": "模块",
+            "tabTooltip": "Nvdimm 模块",
+            "actions": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新 nvdimm 列表"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "所选 nvdimm 的操作"
+               }
+            },
+            "datagrid": {
+               "id": "ID",
+               "persistentCapacity": "容量",
+               "availablePersistentCapacity": "可用",
+               "empty": "没有要显示的模块",
+               "health": "运行状况"
+            },
+            "healthStatus": {
+               "normal": "正常",
+               "maintenanceNeeded": "需要维护",
+               "performanceDegraded": "性能已降级",
+               "wpDataLoss": "写入持久性数据丢失",
+               "allDataLoss": "所有数据丢失",
+               "unknown": "未知"
+            },
+            "healthInformation": {
+               "normal": "不适用",
+               "maintenanceNeeded": "需要维护，但没有数据丢失。请查看 VOB 事件了解更多详细信息。",
+               "performanceDegraded": "由于出现故障，性能已降级，但没有数据丢失。请查看 VOB 事件了解更多详细信息。",
+               "wpDataLoss": "检测到或即将发生写入持久性数据丢失。请查看 VOB 事件了解更多详细信息。",
+               "allDataLoss": "检测到或即将发生读取和/或写入数据丢失。请查看 VOB 事件了解更多详细信息。",
+               "unknown": "运行状况无法获取或当前不可用。"
+            }
+         },
+         "interleave": {
+            "tabTitle": "交错集",
+            "tabTooltip": "跨多个 NVDIMM 的交错集",
+            "actions": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新交错集列表"
+               }
+            },
+            "gridEmpty": "没有要显示的交错集",
+            "properties": {
+               "size": "容量",
+               "deviceList": "NVDIMM",
+               "availableSize": "可用",
+               "setId": "ID",
+               "state": "状况",
+               "states": {
+                  "invalid": "无效",
+                  "active": "活动"
+               }
+            }
+         },
+         "namespaces": {
+            "tabTitle": "命名空间",
+            "tabTooltip": "Nvdimm 命名空间",
+            "create": {
+               "dialog": {
+                  "title": "创建命名空间",
+                  "friendlyName": "标签",
+                  "locationID": "位置",
+                  "type": "类型",
+                  "blockCount": "块计数",
+                  "blockSize": "块大小",
+                  "size": "大小·(GB)",
+                  "persistent": "持久",
+                  "block": "块",
+                  "error": {
+                     "noBlockCount": "请输入大于零的大小"
+                  }
+               },
+               "success": "已成功创建命名空间",
+               "error": "创建命名空间失败"
+            },
+            "delete": {
+               "dialog": {
+                  "title": "删除命名空间",
+                  "warning": "是否确定要删除命名空间: {{name}}?<br><br>需要重新引导，ESX 才能管理此命名空间。"
+               },
+               "success": "已成功删除命名空间",
+               "error": "删除命名空间失败"
+            },
+            "actions": {
+               "refresh": {
+                  "label": "刷新",
+                  "tooltip": "刷新命名空间列表"
+               },
+               "actions": {
+                  "label": "操作",
+                  "tooltip": "所选命名空间的操作"
+               },
+               "create": {
+                  "label": "新建命名空间",
+                  "tooltip": "创建命名空间"
+               },
+               "delete": {
+                  "label": "删除",
+                  "tooltip": "删除命名空间"
+               },
+               "reboot": {
+                  "label": "重新引导主机",
+                  "tooltip": "重新引导主机"
+               }
+            },
+            "health": {
+               "badBlockSize": "遇到错误块",
+               "bttCorrupt": "BTT 已损坏",
+               "interleaveBroken": "交错功能已损坏",
+               "labelInconsistent": "标签不一致",
+               "labelMissing": "缺少标签",
+               "missing": "未知",
+               "normal": "运行状况正常"
+            },
+            "datagrid": {
+               "name": "名称",
+               "capacity": "容量",
+               "healthStatus": "运行状况",
+               "inUse": "使用中",
+               "location": "位置 ID",
+               "empty": "没有要显示的命名空间",
+               "state": "状况",
+               "states": {
+                  "inUse": "使用中",
+                  "notInUse": "未在使用中",
+                  "invalid": "无效"
+               }
+            }
+         }
+      },
       "device": {
          "context": {
             "disk": {
@@ -94,7 +261,7 @@
             "title": "编辑分区 - {{disk}}",
             "rejectLabel": "取消",
             "confirmLabel": "保存分区",
-            "before": "编辑一个分区之前",
+            "before": "之前",
             "after": "编辑一个分区之后",
             "actions": {
                "delete": {
@@ -138,7 +305,7 @@
             "partitionFormat": "分区格式:",
             "partitions": "分区",
             "partitionDiagram": "分区图",
-            "blocks": "阻止",
+            "blocks": "块",
             "portlet": {
                "type": "类型",
                "startBlock": "起始块",
@@ -223,11 +390,12 @@
          "vffs": "VFFS",
          "vmfs": "VMFS",
          "vmkDiagnostic": "VMware 诊断",
-         "undefined": " 未知",
+         "undefined": "未知",
          "unknown": " 未知",
          "0xde": "Dell 诊断",
          "0x0b": "FAT 32",
-         "0x07": "NTFS"
+         "0x07": "NTFS",
+         "unknown": "未知"
       },
       "datastore": {
          "create": {
@@ -255,7 +423,7 @@
                   "title": "选择分区选项",
                   "description": "选择要对设备进行分区的方式",
                   "before": "编辑一个分区之前",
-                  "after": "编辑一个分区之后",
+                  "after": "之后",
                   "selectScheme": "选择分区方案",
                   "full": "使用全部磁盘",
                   "custom": "自定义"
@@ -351,7 +519,7 @@
          },
          "unmountVMFS": {
             "title": "确认卸载数据存储 - {{name}}",
-            "confirmLabel": "确定",
+            "confirmLabel": "是",
             "rejectLabel": "取消",
             "content": "是否确定要卸载 <strong>{{name}}</strong>?",
             "successNotification": "已成功卸载数据存储 {{name}}",
@@ -639,7 +807,7 @@
             },
             "common": {
                "enabled": "已启用",
-               "disabled": "已禁用",
+               "disabled": "禁用",
                "yes": "是",
                "no": "否",
                "ok": "确定",
@@ -781,7 +949,7 @@
             "nameAndAlias": "名称和别名",
             "alias": "别名",
             "enabled": "已启用",
-            "disabled": "已禁用",
+            "disabled": "禁用",
             "networkPortBindings": "网络端口绑定",
             "staticTargets": "静态目标",
             "dynamicTargets": "动态目标",
