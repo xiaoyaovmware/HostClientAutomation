@@ -45,7 +45,7 @@ exports.config = {
         // 'i18n/testcases/P0/port-group/rename-port-group.js',                      // update
         //
         // 'i18n/testcases/P0/vmknic/create-vmknic.js',                                //
-        'i18n/testcases/P0/vmknic/create-vmknic-special-characters-for-portgroup.js'
+        // 'i18n/testcases/P0/vmknic/create-vmknic-special-characters-for-portgroup.js'
 
         // 'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
         //
@@ -66,6 +66,8 @@ exports.config = {
         // 'i18n/testcases/P0/storage/create-vmfs-custom-partition.js',                //
         // 'i18n/testcases/P0/storage/create-nfs-datastore.js',
         // 'i18n/testcases/P0/storage/create-negative-directory.js',
+        // 'i18n/testcases/P0/storage/copy-file-with-new-name.js',
+
         
         // //P1 test cases -----------------------------------------------------------
         //

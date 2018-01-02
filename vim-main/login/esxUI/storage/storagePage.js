@@ -122,12 +122,22 @@ var StoragePage = {
 
 
         datastoreBrowser: {
+
+            self: function () {
+                var datastoreBrowserTitle = browser.params.storageMsg.storage.datastore.browser.dialog.defaultTitle;
+                return element(by.cssContainingText('span[class=\'titlebar-text ng-binding\']', datastoreBrowserTitle));
+            },
+
             deleteButton: function () {
                 return element(by.id('fileDelete'));
             },
 
             moveButton: function () {
                 return element(by.id('fileMove'));
+            },
+
+            copyButton: function () {
+                return element(by.id('fileCopy'));
             },
             
             refreshButton: function () {
@@ -163,6 +173,7 @@ var StoragePage = {
                 return element.all(by.css('#datastore-browser-folder-1 li'));
             },
 
+
             newDirectoryDialoag: {
                 nameTextBox: function () {
                     // button "Create directory"
@@ -176,8 +187,22 @@ var StoragePage = {
             
             fileNameField: function (){
                 return element(by.model('$parent.providedFileName'));
-            }                
-            
+            },
+
+            selectDestinationDialog: {
+                self: function () {
+                    var selectDestinationTitle = browser.params.storageMsg.storage.datastore.browser.dialog.select.title;
+                    return element(by.cssContainingText('span[class=\'titlebar-text ng-binding\']', selectDestinationTitle));
+                },
+
+                getFolderByName: function (folderName) {
+                    return element(by.xpath("//div[@class='datastore-folder ng-scope']//li[text()='" + folderName + "']"));
+                },
+
+                fileNameField: function () {
+                    return element(by.model('$parent.providedFileName'));
+                }
+            }
 
         },
 

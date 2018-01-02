@@ -470,7 +470,41 @@ var StorageUtil = function () {
         }).then(function () {
             return browser.sleep(Timeout.WAIT_FOR_STORAGE_ACTION);
         })
-    }
+
+    };
+
+    this.copyFile = function (StoragePage, folderName, fileName, fileType, newFileName) {
+        var datastoreBrowser = StoragePage.datastoresTab.datastoreBrowser,
+            newFileFullName = newFileName + '.' + fileType;
+
+        return globalUtil.waitForVisibility(datastoreBrowser.self()).then(function () {
+            return racetrack.log("- -Select the non-ASCII VM folder -> .vmx file and click Copy button.");
+        }).then(function () {
+            return datastoreBrowser.getFolderByName(folderName).click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(datastoreBrowser.getFileByName(fileName, fileType));
+        }).then(function () {
+            return datastoreBrowser.getFileByName(fileName, fileType).click();
+        }).then(function () {
+            return datastoreBrowser.copyButton().click();
+        }).then(function () {
+            return racetrack.log("- -Select the destination folder: " + folderName);
+        }).then(function () {
+            return globalUtil.waitForVisibility(datastoreBrowser.selectDestinationDialog.self())
+        }).then(function () {
+            return datastoreBrowser.selectDestinationDialog.getFolderByName(folderName).click();
+        }).then(function () {
+            return racetrack.log("- -Input new file name: " + newFileName);
+        }).then(function () {
+            return datastoreBrowser.selectDestinationDialog.fileNameField().sendKeys(newFileFullName);
+        }).then(function () {
+            return racetrack.log("- -Click copy button.");
+        }).then(function () {
+            return StoragePage.popUpDialog.okButton(1).click()
+        }).then(function () {
+            return browser.sleep(Timeout.WAIT_FOR_STORAGE_ACTION);
+        })
+    };
 };
 
 module.exports = StorageUtil;
