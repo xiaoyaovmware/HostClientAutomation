@@ -62,7 +62,7 @@ exports.config = {
         // 'i18n/testcases/P0/storage/create-folder-in-vmfs.js',                       //
         // 'i18n/testcases/P0/storage/delete-file-in-vmfs.js',                         //
         // 'i18n/testcases/P0/storage/move-file-in-vmfs.js',                           //
-        // // 'i18n/testcases/P0/storage/remove-partition.js',
+        'i18n/testcases/P0/storage/remove-partition.js',
         // 'i18n/testcases/P0/storage/create-vmfs-custom-partition.js',                //
         // 'i18n/testcases/P0/storage/create-nfs-datastore.js',
         // 'i18n/testcases/P0/storage/create-negative-directory.js',

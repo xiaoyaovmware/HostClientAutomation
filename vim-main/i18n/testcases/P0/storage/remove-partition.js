@@ -21,7 +21,7 @@ describe('Remove partition', function () {
         racetrack = new Racetrack(),
         storageUtil = new StorageUtil(),
         screenshotSavePath = browser.params.raceTrack.screenshotSavePath,
-        hostName, deviceGrid, actionsMenu, editPartitionsDialog, freeSpaceSize;
+        hostName, deviceGrid;
 
     beforeEach(function () {
 

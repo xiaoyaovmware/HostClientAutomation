@@ -25,10 +25,10 @@ var StorageUtil = function () {
             return newDatastoreWizard.createNewVMFSdatastore().click();
         }).then(function () {
             return newDatastoreWizard.nextButton().click();
-        // }).then(function () {
-        //     return globalUtil.waitForVisibility(newDatastoreWizard.getDiskRowByType(diskType));
-        // }).then(function () {
-        //     return newDatastoreWizard.getDiskRowByType(diskType).click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(newDatastoreWizard.getDiskRowByType(diskType));
+        }).then(function () {
+            return newDatastoreWizard.getDiskRowByType(diskType).click();
         }).then(function () {
             return globalUtil.waitForVisibility(newDatastoreWizard.datastoreNameTextbox());
         }).then(function () {
