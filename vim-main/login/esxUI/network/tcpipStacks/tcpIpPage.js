@@ -18,24 +18,71 @@ var TcpIpPage = {
 
    },
 
-    editTCOIPDialog:{
+    editTCPIPDialog:{
 
         useDHCPRadioOption: function () {
            return  element(by.id('optionsRadios1'));
         },
 
-        manuallyConfigureRadioOption:function () {
+        manuallyConfigureRadioOption: function () {
            return  element(by.id('optionsRadios2'));
         },
 
-        searchDomainsTextbox:function () {
-            return  element(by.id('searchDomains'));
+        hostNameTextbox: function () {
+            return  element(by.model('data.hostName'));
         },
 
+        domainNameTextbox: function () {
+            return  element(by.model('data.domainName'));
+        },
+
+        primaryDNSServerTextbox: function () {
+            return  element(by.model('data.primaryDNS'));
+        },
+
+        searchDomainsTextbox: function () {
+            return  element(by.model('data.searchDomains'));
+        },
+
+        ipv4GatewayTextbox: function () {
+            return  element(by.model('data.ipv4Gateway'));
+        },
+
+        ipv6GatewayTextbox: function () {
+            return  element(by.model('data.ipv6Gateway'));
+        },
+
+        getHostName: function () {
+            return  element(by.model('data.hostName')).getAttribute('value');
+        },
+
+        getDomainName: function () {
+            return  element(by.model('data.domainName')).getAttribute('value');
+        },
+
+        getPrimaryDNSServer: function () {
+            return  element(by.model('data.primaryDNS')).getAttribute('value');
+        },
+
+        getSearchDomains: function () {
+            return  element(by.model('data.searchDomains')).getAttribute('value');
+        },
+
+        getIpv4Gateway: function () {
+            return  element(by.model('data.ipv4Gateway')).getAttribute('value');
+        },
+
+        getIpv6Gateway: function () {
+            return  element(by.model('data.ipv6Gateway')).getAttribute('value');
+        },
 
         getSelectedRadio: function () {
            return  element(by.css('input[type=radio]:checked'));
         },
+
+        invalidMessage: function () {
+            return element(by.xpath("//span[@ng-bind-html='msg.text']"));
+        }
 
     },
 

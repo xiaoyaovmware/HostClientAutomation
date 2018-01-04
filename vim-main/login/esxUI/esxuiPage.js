@@ -117,6 +117,7 @@ var EsxuiPage = {
 
     refreshButton: function () {
         return element(by.id('refreshButton'));
+        return element(by.id('refreshButton'));
     },
 
     actionsButton: {

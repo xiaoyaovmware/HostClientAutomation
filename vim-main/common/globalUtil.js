@@ -5,6 +5,7 @@ var Racetrack = require('../common/racetrack.js');
 var fs = require('fs');
 var Q = require('q');
 
+
 var GlobalUtil = function () {
 
     var racetrack = new Racetrack(),

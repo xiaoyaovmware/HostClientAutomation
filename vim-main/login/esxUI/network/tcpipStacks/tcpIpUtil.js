@@ -11,7 +11,7 @@ var TcpIpUtil = function () {
     var esxuiUtil = new EsxuiUtil();
 
     this.selectManualConfigure = function (TcpIpPage, EsxuiPage) {
-        var editTCOIPDialog, saveButton;
+        var editTCPIPDialog, saveButton;
 
         // Click on the first row
         return globalUtil.waitForVisibility(TcpIpPage.tcpIpGrid.getRowDefaultTCPIP()).then(function () {
@@ -26,16 +26,20 @@ var TcpIpUtil = function () {
         }).then(function () {
             return racetrack.log("- - Select Manually Configure radio option and press Save");
         }).then(function () {
-            editTCOIPDialog = TcpIpPage.editTCOIPDialog;
-            return globalUtil.waitForVisibility(editTCOIPDialog.manuallyConfigureRadioOption());
+            editTCPIPDialog = TcpIpPage.editTCPIPDialog;
+            return globalUtil.waitForVisibility(editTCPIPDialog.manuallyConfigureRadioOption());
         }).then(function () {
-            return editTCOIPDialog.manuallyConfigureRadioOption().click();
+            return editTCPIPDialog.manuallyConfigureRadioOption().click();
         }).then(function () {
-            return globalUtil.waitForVisibility(editTCOIPDialog.searchDomainsTextbox());
+            return globalUtil.waitForVisibility(editTCPIPDialog.searchDomainsTextbox());
         }).then(function () {
-            return editTCOIPDialog.searchDomainsTextbox().clear();
+            return editTCPIPDialog.domainNameTextbox().clear();
         }).then(function () {
-            return editTCOIPDialog.searchDomainsTextbox().sendKeys("eng.vmware.com");
+            return editTCPIPDialog.domainNameTextbox().sendKeys("eng.vmware.com");
+        }).then(function () {
+            return editTCPIPDialog.searchDomainsTextbox().clear();
+        }).then(function () {
+            return editTCPIPDialog.searchDomainsTextbox().sendKeys("eng.vmware.com");
         }).then(function () {
             saveButton = TcpIpPage.popUpDialog.okButton();
             return globalUtil.waitForVisibility(saveButton);
@@ -52,7 +56,7 @@ var TcpIpUtil = function () {
 
     this.selectDHCP = function (TcpIpPage, EsxuiPage) {
 
-        var editTCOIPDialog, saveButton;
+        var editTCPIPDialog, saveButton;
 
         // Click on the first row
         return globalUtil.waitForVisibility(TcpIpPage.tcpIpGrid.getDefaultTCPIPLink()).then(function () {
@@ -66,23 +70,98 @@ var TcpIpUtil = function () {
         }).then(function () {
             return racetrack.log("- - Select Use DHCP radio option and press Save");
         }).then(function () {
-            editTCOIPDialog = TcpIpPage.editTCOIPDialog;
+            editTCPIPDialog = TcpIpPage.editTCPIPDialog;
             // Select DHCP Configure Radio Option and press ok
-            return globalUtil.waitForVisibility(editTCOIPDialog.useDHCPRadioOption());
+            return globalUtil.waitForVisibility(editTCPIPDialog.useDHCPRadioOption());
         }).then(function () {
-            return editTCOIPDialog.useDHCPRadioOption().click();
+            return editTCPIPDialog.useDHCPRadioOption().click();
         }).then(function () {
             saveButton = TcpIpPage.popUpDialog.okButton();
             return globalUtil.waitForVisibility(saveButton);
         }).then(function () {
             return saveButton.click();
         }).then(function () {
+            return esxuiUtil.dismissAlert(EsxuiPage);
+        }).then(function () {
             return browser.sleep(Timeout.WAIT_FOR_NETWORK_TASK);
         })
     };
 
+    this.manuallyConfigure = function (TcpIpPage, EsxuiPage, HostName, PrimaryDNSServer, DomainName, SearchDomains, ipv4Gateway, ipv6Gateway) {
+        var editTCPIPDialog, saveButton;
+
+        return racetrack.log("- - Select Default TCP/IP stack").then(function () {
+            // Click on the first row
+            return globalUtil.waitForVisibility(TcpIpPage.tcpIpGrid.getRowDefaultTCPIP());
+        }).then(function () {
+            return TcpIpPage.tcpIpGrid.getDefaultTCPIPLink().click();
+        }).then(function () {
+            return racetrack.log("- - Click Edit settings button");
+        }).then(function () {
+            return globalUtil.waitForVisibility(TcpIpPage.editSettingsButton());
+        }).then(function () {
+            return TcpIpPage.editSettingsButton().click();
+        }).then(function () {
+            return racetrack.log("- - Select Manually Configure radio option");
+        }).then(function () {
+            editTCPIPDialog = TcpIpPage.editTCPIPDialog;
+            return globalUtil.waitForVisibility(editTCPIPDialog.manuallyConfigureRadioOption());
+        }).then(function () {
+            return editTCPIPDialog.manuallyConfigureRadioOption().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(editTCPIPDialog.searchDomainsTextbox());
+        }).then(function () {
+            return racetrack.log("- - Input HostName");
+        }).then(function () {
+            return editTCPIPDialog.hostNameTextbox().clear();
+        }).then(function () {
+            return editTCPIPDialog.hostNameTextbox().sendKeys(HostName);
+        }).then(function () {
+            return racetrack.log("- - Input DomainName");
+        }).then(function () {
+            return editTCPIPDialog.domainNameTextbox().clear();
+        }).then(function () {
+            return editTCPIPDialog.domainNameTextbox().sendKeys(DomainName);
+        }).then(function () {
+            return racetrack.log("- - Input PrimaryDNSServer");
+        }).then(function () {
+            return editTCPIPDialog.primaryDNSServerTextbox().clear();
+        }).then(function () {
+            return editTCPIPDialog.primaryDNSServerTextbox().sendKeys(PrimaryDNSServer);
+        }).then(function () {
+            return racetrack.log("- - Input SearchDomains");
+        }).then(function () {
+            return editTCPIPDialog.searchDomainsTextbox().clear();
+        }).then(function () {
+            return editTCPIPDialog.searchDomainsTextbox().sendKeys(SearchDomains);
+        }).then(function () {
+            return racetrack.log("- - Input ipv4Gateway");
+        }).then(function () {
+            return editTCPIPDialog.ipv4GatewayTextbox().clear();
+        }).then(function () {
+            return editTCPIPDialog.ipv4GatewayTextbox().sendKeys(ipv4Gateway);
+        }).then(function () {
+            return racetrack.log("- - Input ipv6Gateway");
+        }).then(function () {
+            return editTCPIPDialog.ipv6GatewayTextbox().clear();
+        }).then(function () {
+            return editTCPIPDialog.ipv6GatewayTextbox().sendKeys(ipv6Gateway);
+        }).then(function () {
+            saveButton = TcpIpPage.popUpDialog.okButton();
+            return globalUtil.waitForVisibility(saveButton);
+        }).then(function () {
+            return racetrack.log("- - Click Save button");
+        }).then(function () {
+            return saveButton.click();
+        }).then(function () {
+            //Wait for tasks to complete
+            return browser.sleep(Timeout.WAIT_FOR_NETWORK_TASK);
+        })
+
+    };
+
     this.checkTcpIpSettings = function (TcpIpPage, idToBeChecked) {
-        var editTCOIPDialog, cancelButton;
+        var editTCPIPDialog, cancelButton;
 
         // Click on the first row
         return globalUtil.waitForVisibility(TcpIpPage.tcpIpGrid.getDefaultTCPIPLink()).then(function () {
@@ -96,10 +175,10 @@ var TcpIpUtil = function () {
         }).then(function () {
             return racetrack.log("- - Verifiy that " + idToBeChecked + " is checked.");
         }).then(function () {
-            editTCOIPDialog = TcpIpPage.editTCOIPDialog;
-            return globalUtil.waitForVisibility(editTCOIPDialog.manuallyConfigureRadioOption());
+            editTCPIPDialog = TcpIpPage.editTCPIPDialog;
+            return globalUtil.waitForVisibility(editTCPIPDialog.manuallyConfigureRadioOption());
         }).then(function () {
-            return expect(editTCOIPDialog.getSelectedRadio().getAttribute('id')).toEqual(idToBeChecked);
+            return expect(editTCPIPDialog.getSelectedRadio().getAttribute('id')).toEqual(idToBeChecked);
         }).then(function () {
             return racetrack.log("- - Click Cancel button to close the dialog.");
         }).then(function () {
@@ -109,7 +188,6 @@ var TcpIpUtil = function () {
             return cancelButton.click();
         })
     };
-
 
 };
 module.exports = TcpIpUtil;

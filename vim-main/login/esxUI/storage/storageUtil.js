@@ -500,7 +500,7 @@ var StorageUtil = function () {
         }).then(function () {
             return racetrack.log("- -Click copy button.");
         }).then(function () {
-            return StoragePage.popUpDialog.okButton(1).click()
+            return StoragePage.popUpDialog.okButton(1).click();
         }).then(function () {
             return browser.sleep(Timeout.WAIT_FOR_STORAGE_ACTION);
         })

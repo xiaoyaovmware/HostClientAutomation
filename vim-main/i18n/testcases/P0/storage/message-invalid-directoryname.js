@@ -15,7 +15,7 @@ var Racetrack = require('../../../../common/racetrack.js');
 
 var Timeout = require('../../../../common/timeout.js');
 
-describe('Create Negative Directory', function () {
+describe('Message Invalid DirectoryName', function () {
 
     var loginUtil = new LoginUtil(),
         esxuiUtil = new EsxuiUtil(),
@@ -27,13 +27,13 @@ describe('Create Negative Directory', function () {
     beforeEach(function () {
 
         console.log("-----------------------------------------------------------------------------------------");
-        console.log("                                 Create Negative Directory                               ");
+        console.log("                              Message Invalid DirectoryName                              ");
         console.log("-----------------------------------------------------------------------------------------");
 
         browser.driver.manage().window().maximize();
 
-        return racetrack.testCaseBegin('Create Negative Directory', 'Storage', 'Create Negative Directory', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
-            return globalUtil.takeScreenshot(screenshotSavePath, 'Create_Negative_Directory');
+        return racetrack.testCaseBegin('Message Invalid DirectoryName', 'Storage', 'Message Invalid DirectoryName', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
+            return globalUtil.takeScreenshot(screenshotSavePath, 'Message_Invalid_DirectoryName');
         }).then(function() {
             return browser.sleep(Timeout.WAIT_FOR_START_STOP_VIDEO_RECORDING);
         }).then(function() {
@@ -48,14 +48,12 @@ describe('Create Negative Directory', function () {
     });
 
     afterEach(function (done) {
-        return globalUtil.verifyResult('Create_Negative_Directory',screenshotSavePath).then(function(){
+        return globalUtil.verifyResult('Message_Invalid_DirectoryName',screenshotSavePath).then(function(){
             done();
         });
     });
 
-    it('Create_Negative_Directory', function () {
-
-        var invalidDirectoryLabel = 'asd"';
+    it('Message_Invalid_DirectoryName', function () {
 
         return racetrack.log('---------------------------------------Start Test Case--------------------------------------').then(function() {
             return racetrack.log("Click on Storage menu > Datastore tab");
@@ -74,9 +72,8 @@ describe('Create Negative Directory', function () {
         }).then(function () {
             return StoragePage.datastoresTab.datastoreBrowserButton().click();
         }).then(function () {
-            return racetrack.log("Create a new folder name with special characters: " + invalidDirectoryLabel);
-        }).then(function () {
-            return storageUtil.createFolderInDatastore(StoragePage, invalidDirectoryLabel);
+            var invalidString = browser.params.i18n.string + '"!@#$%^&*(){}[]:;\',./<>?';
+            return storageUtil.createFolderInDatastore(StoragePage, invalidString);
         }).then(function () {
             return racetrack.log("Verify Invalid Directory Message Info Is Localized");
         }).then(function () {
