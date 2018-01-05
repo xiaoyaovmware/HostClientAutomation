@@ -40,6 +40,10 @@ var TcpIpPage = {
             return  element(by.model('data.primaryDNS'));
         },
 
+        secondaryDNSServerTextbox: function () {
+            return  element(by.model('data.secondaryDNS'));
+        },
+
         searchDomainsTextbox: function () {
             return  element(by.model('data.searchDomains'));
         },
@@ -62,6 +66,10 @@ var TcpIpPage = {
 
         getPrimaryDNSServer: function () {
             return  element(by.model('data.primaryDNS')).getAttribute('value');
+        },
+
+        getSecondaryDNSServer: function () {
+            return  element(by.model('data.secondaryDNS')).getAttribute('value');
         },
 
         getSearchDomains: function () {

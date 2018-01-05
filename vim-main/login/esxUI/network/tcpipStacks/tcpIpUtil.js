@@ -9,7 +9,7 @@ var TcpIpUtil = function () {
 
     var racetrack = new Racetrack();
     var esxuiUtil = new EsxuiUtil();
-    var hostName, domainName, primaryDNSServer, searchDomains, ipv4Gateway, ipv6Gateway, tcpIpStackInfo;
+    var hostName, domainName, primaryDNSServer, secondaryDNSServer, searchDomains, ipv4Gateway, ipv6Gateway, tcpIpStackInfo;
 
     this.selectManualConfigure = function (TcpIpPage, EsxuiPage) {
         var editTCPIPDialog, saveButton;
@@ -121,6 +121,9 @@ var TcpIpUtil = function () {
             return TcpIpPage.editTCPIPDialog.getPrimaryDNSServer();
         }).then(function (primaryDNS) {
             primaryDNSServer = primaryDNS;
+            return TcpIpPage.editTCPIPDialog.getSecondaryDNSServer();
+        }).then(function (secondaryDNS) {
+            secondaryDNSServer = secondaryDNS;
             return TcpIpPage.editTCPIPDialog.getSearchDomains();
         }).then(function (search) {
             searchDomains = search;
@@ -134,11 +137,12 @@ var TcpIpUtil = function () {
         }).then(function () {
             return TcpIpPage.popUpDialog.cancelButton().click();
         }).then(function () {
-            return tcpIpStackInfo = [hostName, domainName, primaryDNSServer, searchDomains, ipv4Gateway, ipv6Gateway];
+            return tcpIpStackInfo = [hostName,domainName,primaryDNSServer,secondaryDNSServer,searchDomains,ipv4Gateway,ipv6Gateway];
         })
     };
 
-    this.manuallyConfigure = function (TcpIpPage, EsxuiPage, HostName, PrimaryDNSServer, DomainName, SearchDomains, ipv4Gateway, ipv6Gateway) {
+    this.manuallyConfigure = function (TcpIpPage, EsxuiPage, HostName, DomainName, PrimaryDNSServer,
+                                       SecondaryDNSServer, SearchDomains, ipv4Gateway, ipv6Gateway) {
         var editTCPIPDialog, saveButton;
 
         return racetrack.log("- - Select Default TCP/IP stack").then(function () {
@@ -179,6 +183,12 @@ var TcpIpUtil = function () {
             return editTCPIPDialog.primaryDNSServerTextbox().clear();
         }).then(function () {
             return editTCPIPDialog.primaryDNSServerTextbox().sendKeys(PrimaryDNSServer);
+        }).then(function () {
+            return racetrack.log("- - Input SecondaryDNSServer");
+        }).then(function () {
+            return editTCPIPDialog.secondaryDNSServerTextbox().clear();
+        }).then(function () {
+            return editTCPIPDialog.secondaryDNSServerTextbox().sendKeys(SecondaryDNSServer);
         }).then(function () {
             return racetrack.log("- - Input SearchDomains");
         }).then(function () {

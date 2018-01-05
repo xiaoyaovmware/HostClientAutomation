@@ -23,7 +23,7 @@ describe('Verify error message is localized when netstack search domains is inva
         globalUtil = new GlobalUtil(),
         racetrack = new Racetrack(),
         screenshotSavePath = browser.params.raceTrack.screenshotSavePath,
-        hostName, domainName, primaryDNSServer, searchDomains, ipv4Gateway, ipv6Gateway;
+        hostName, domainName, primaryDNSServer, secondaryDNSServer, searchDomains, ipv4Gateway, ipv6Gateway;
 
     beforeEach(function () {
 
@@ -74,7 +74,8 @@ describe('Verify error message is localized when netstack search domains is inva
             return tcpIpUtil.getTcpIpStackInfo(TcpIpPage);
         }).then(function (tcpIpStackInfo) {
             hostName = tcpIpStackInfo[0], domainName = tcpIpStackInfo[1], primaryDNSServer = tcpIpStackInfo[2],
-            searchDomains = tcpIpStackInfo[3], ipv4Gateway = tcpIpStackInfo[4], ipv6Gateway = tcpIpStackInfo[5];
+                secondaryDNSServer = tcpIpStackInfo[3], searchDomains = tcpIpStackInfo[4],
+                ipv4Gateway = tcpIpStackInfo[5], ipv6Gateway = tcpIpStackInfo[6];
             return racetrack.log("Back to TCP/IP stacks tab");
         }).then(function () {
             return EsxuiPage.navigator.networkMenu().click();
@@ -82,15 +83,14 @@ describe('Verify error message is localized when netstack search domains is inva
             return racetrack.log("Start to edit TcpIpStack Settings");
         }).then(function () {
             var invalidString = browser.params.i18n.string + '"!@#$%^&*(){}[]:;\',./<>?';
-            return tcpIpUtil.manuallyConfigure(TcpIpPage, EsxuiPage, hostName, primaryDNSServer, 'eng.vmware.com', invalidString, ipv4Gateway, ipv6Gateway);
+            return tcpIpUtil.manuallyConfigure(TcpIpPage, EsxuiPage, hostName, 'eng.vmware.com', primaryDNSServer,
+                secondaryDNSServer, invalidString, ipv4Gateway, ipv6Gateway);
         }).then(function () {
             return racetrack.log("Verify invalid message information is localized");
         }).then(function () {
             return TcpIpPage.editTCPIPDialog.invalidMessage().getText();
         }).then(function (invalidMessage) {
             return expect(invalidMessage).toBe(browser.params.networkMsg.network.netstack.edit.error.searchDomains);
-        }).then(function () {
-            return browser.sleep(Timeout.WAIT_FOR_TASK_CHECKING);
         });
     });
 

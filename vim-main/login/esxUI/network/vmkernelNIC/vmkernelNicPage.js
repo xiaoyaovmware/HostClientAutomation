@@ -8,7 +8,7 @@ var VMkernelNicPage = {
 
     addVMKernelNicDialog:{
         newPortGroupNameTextBox: function() {
-            return  element(by.model('data.portgroupName'));
+            return element(by.model('data.portgroupName'));
         },
 
 
@@ -19,9 +19,9 @@ var VMkernelNicPage = {
 
             vSwitchOption: function (vSwitchName) {
                 return element(by.cssContainingText('[data-role=popup][style*=block] li', vSwitchName));
-            },
+            }
 
-        },
+        }
 
     },
 
@@ -38,7 +38,7 @@ var VMkernelNicPage = {
     rightClickContextMenu:{
         removMenu:function () {
             return  element(by.css('#contextMenu > li:nth-child(3)'));
-        },
+        }
 
     },
 

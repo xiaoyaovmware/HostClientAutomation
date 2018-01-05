@@ -15,7 +15,7 @@ var Racetrack = require('../../../../common/racetrack.js');
 
 var Timeout = require('../../../../common/timeout.js');
 
-describe('Verify error message is localized when netstack domain name is invalid', function () {
+describe('Verify error message is localized when netstack secondary DNS is invalid', function () {
 
     var loginUtil = new LoginUtil(),
         esxuiUtil = new EsxuiUtil(),
@@ -28,13 +28,13 @@ describe('Verify error message is localized when netstack domain name is invalid
     beforeEach(function () {
 
         console.log("-----------------------------------------------------------------------------------------");
-        console.log("                              Message Invalid DomainName                                 ");
+        console.log("                            Message Invalid SecondaryDNS                                 ");
         console.log("-----------------------------------------------------------------------------------------");
 
         browser.driver.manage().window().maximize();
 
-        return racetrack.testCaseBegin('Message Invalid DomainName', 'Netstack', 'Message Invalid DomainName', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
-            return globalUtil.takeScreenshot(screenshotSavePath, 'Message_Invalid_DomainName_Start');
+        return racetrack.testCaseBegin('Message Invalid SecondaryDNS', 'Netstack', 'Message Invalid SecondaryDNS', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
+            return globalUtil.takeScreenshot(screenshotSavePath, 'Message_Invalid_SecondaryDNS_Start');
         }).then(function() {
             return browser.sleep(Timeout.WAIT_FOR_START_STOP_VIDEO_RECORDING);
         }).then(function() {
@@ -50,13 +50,13 @@ describe('Verify error message is localized when netstack domain name is invalid
     });
 
     afterEach(function (done) {
-        return globalUtil.verifyResult('Message_Invalid_DomainName_Stop',screenshotSavePath).then(function(){
+        return globalUtil.verifyResult('Message_Invalid_SecondaryDNS_Stop',screenshotSavePath).then(function(){
             done();
         });
     });
 
 
-    it('Input negative domain name and verify invalid message in Edit Netstack', function () {
+    it('Input negative secondary DNS and verify invalid message in Edit Netstack', function () {
 
         return racetrack.log('---------------------------------------Start Test Case--------------------------------------').then(function () {
             return racetrack.log("Click Networking in esx UI");
@@ -83,15 +83,15 @@ describe('Verify error message is localized when netstack domain name is invalid
             return racetrack.log("Start to edit TcpIpStack Settings");
         }).then(function () {
             var invalidString = browser.params.i18n.string + '"!@#$%^&*(){}[]:;\',./<>?';
-            return tcpIpUtil.manuallyConfigure(TcpIpPage, EsxuiPage, hostName, invalidString, primaryDNSServer,
-                secondaryDNSServer, 'eng.vmware.com', ipv4Gateway, ipv6Gateway);
+            return tcpIpUtil.manuallyConfigure(TcpIpPage, EsxuiPage, hostName, 'eng.vmware.com', primaryDNSServer,
+                invalidString, 'eng.vmware.com', ipv4Gateway, ipv6Gateway);
         }).then(function () {
             return racetrack.log("Verify invalid message information is localized");
         }).then(function () {
             return TcpIpPage.editTCPIPDialog.invalidMessage().getText();
         }).then(function (invalidMessage_properties) {
             // Since message contains argument {{max}}, so need to deal with this message content and use "toContain"
-            var invalidMessage_page = browser.params.networkMsg.network.netstack.edit.error.domainName;
+            var invalidMessage_page = browser.params.networkMsg.network.netstack.edit.error.secondaryDNS;
             var invalidMessage_characters = invalidMessage_page.substring(0, invalidMessage_page.length - 8);
             return expect(invalidMessage_properties).toContain(invalidMessage_characters);
         });
