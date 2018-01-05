@@ -9,6 +9,7 @@ var TcpIpUtil = function () {
 
     var racetrack = new Racetrack();
     var esxuiUtil = new EsxuiUtil();
+    var hostName, domainName, primaryDNSServer, searchDomains, ipv4Gateway, ipv6Gateway, tcpIpStackInfo;
 
     this.selectManualConfigure = function (TcpIpPage, EsxuiPage) {
         var editTCPIPDialog, saveButton;
@@ -84,6 +85,56 @@ var TcpIpUtil = function () {
             return esxuiUtil.dismissAlert(EsxuiPage);
         }).then(function () {
             return browser.sleep(Timeout.WAIT_FOR_NETWORK_TASK);
+        })
+    };
+
+    this.getTcpIpStackInfo = function (TcpIpPage) {
+
+        return racetrack.log("- - Select Default TCP/IP stack").then(function () {
+            // Click on the first row
+            return globalUtil.waitForVisibility(TcpIpPage.tcpIpGrid.getRowDefaultTCPIP());
+        }).then(function () {
+            return TcpIpPage.tcpIpGrid.getDefaultTCPIPLink().click();
+        }).then(function () {
+            return racetrack.log("- - Click Edit settings button");
+        }).then(function () {
+            return globalUtil.waitForVisibility(TcpIpPage.editSettingsButton());
+        }).then(function () {
+            return TcpIpPage.editSettingsButton().click();
+        }).then(function () {
+            return racetrack.log("- - Select Manually Configure radio option");
+        }).then(function () {
+            return globalUtil.waitForVisibility(TcpIpPage.editTCPIPDialog.manuallyConfigureRadioOption());
+        }).then(function () {
+            return TcpIpPage.editTCPIPDialog.manuallyConfigureRadioOption().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(TcpIpPage.editTCPIPDialog.searchDomainsTextbox());
+        }).then(function () {
+            return racetrack.log("- - Get default value of all textbox");
+        }).then(function () {
+            return TcpIpPage.editTCPIPDialog.getHostName();
+        }).then(function (host) {
+            hostName = host;
+            return TcpIpPage.editTCPIPDialog.getDomainName();
+        }).then(function (domain) {
+            domainName = domain;
+            return TcpIpPage.editTCPIPDialog.getPrimaryDNSServer();
+        }).then(function (primaryDNS) {
+            primaryDNSServer = primaryDNS;
+            return TcpIpPage.editTCPIPDialog.getSearchDomains();
+        }).then(function (search) {
+            searchDomains = search;
+            return TcpIpPage.editTCPIPDialog.getIpv4Gateway();
+        }).then(function (ipv4) {
+            ipv4Gateway = ipv4;
+            return TcpIpPage.editTCPIPDialog.getIpv6Gateway();
+        }).then(function (ipv6) {
+            ipv6Gateway = ipv6;
+            return racetrack.log("- - Close Edit TCP/IP configuration dialog");
+        }).then(function () {
+            return TcpIpPage.popUpDialog.cancelButton().click();
+        }).then(function () {
+            return tcpIpStackInfo = [hostName, domainName, primaryDNSServer, searchDomains, ipv4Gateway, ipv6Gateway];
         })
     };
 
