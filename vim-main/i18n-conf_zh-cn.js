@@ -48,13 +48,13 @@ exports.config = {
         // 'i18n/testcases/P0/vmknic/create-vmknic-special-characters-for-portgroup.js'
 
         // 'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
-        'i18n/testcases/P0/netstack/message-invalid-hostname.js',
-        'i18n/testcases/P0/netstack/message-invalid-domainname.js',
-        'i18n/testcases/P0/netstack/message-invalid-primarydns.js',
-        'i18n/testcases/P0/netstack/message-invalid-secondarydns.js',
-        'i18n/testcases/P0/netstack/message-invalid-searchdomains.js',
-        'i18n/testcases/P0/netstack/message-invalid-ipv4Gateway.js',
-        'i18n/testcases/P0/netstack/message-invalid-ipv6Gateway.js',
+        'i18n/testcases/P0/netstack/edit-netstack-invalid-hostname.js',
+        'i18n/testcases/P0/netstack/edit-netstack-invalid-domainname.js',
+        'i18n/testcases/P0/netstack/edit-netstack-invalid-primarydns.js',
+        'i18n/testcases/P0/netstack/edit-netstack-invalid-secondarydns.js',
+        'i18n/testcases/P0/netstack/edit-netstack-invalid-searchdomains.js',
+        'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv4Gateway.js',
+        'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv6Gateway.js',
         //
         // 'i18n/testcases/P0/manage/change-advanced-settings.js',                                //
         // 'i18n/testcases/P0/manage/assign-license.js',                               //
@@ -72,7 +72,7 @@ exports.config = {
         // 'i18n/testcases/P0/storage/remove-partition.js',
         // 'i18n/testcases/P0/storage/create-vmfs-custom-partition.js',                //
         // 'i18n/testcases/P0/storage/create-nfs-datastore.js',
-        // 'i18n/testcases/P0/storage/message-invalid-directoryname.js',
+        // 'i18n/testcases/P0/storage/create-directory-invalid-name.js',
         // 'i18n/testcases/P0/storage/copy-file-with-new-name.js',
 
         

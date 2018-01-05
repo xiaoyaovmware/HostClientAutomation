@@ -15,7 +15,7 @@ var Racetrack = require('../../../../common/racetrack.js');
 
 var Timeout = require('../../../../common/timeout.js');
 
-describe('Message Invalid DirectoryName', function () {
+describe('Create Directory Invalid Name', function () {
 
     var loginUtil = new LoginUtil(),
         esxuiUtil = new EsxuiUtil(),
@@ -27,13 +27,13 @@ describe('Message Invalid DirectoryName', function () {
     beforeEach(function () {
 
         console.log("-----------------------------------------------------------------------------------------");
-        console.log("                              Message Invalid DirectoryName                              ");
+        console.log("                              Create Directory Invalid Name                              ");
         console.log("-----------------------------------------------------------------------------------------");
 
         browser.driver.manage().window().maximize();
 
-        return racetrack.testCaseBegin('Message Invalid DirectoryName', 'Storage', 'Message Invalid DirectoryName', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
-            return globalUtil.takeScreenshot(screenshotSavePath, 'Message_Invalid_DirectoryName');
+        return racetrack.testCaseBegin('Create Directory Invalid Name', 'Storage', 'Create Directory Invalid Name', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
+            return globalUtil.takeScreenshot(screenshotSavePath, 'Create_Directory_Invalid_Name_Start');
         }).then(function() {
             return browser.sleep(Timeout.WAIT_FOR_START_STOP_VIDEO_RECORDING);
         }).then(function() {
@@ -48,12 +48,12 @@ describe('Message Invalid DirectoryName', function () {
     });
 
     afterEach(function (done) {
-        return globalUtil.verifyResult('Message_Invalid_DirectoryName',screenshotSavePath).then(function(){
+        return globalUtil.verifyResult('Create_Directory_Invalid_Name_Stop',screenshotSavePath).then(function(){
             done();
         });
     });
 
-    it('Message_Invalid_DirectoryName', function () {
+    it('Create_Directory_Invalid_Name', function () {
 
         return racetrack.log('---------------------------------------Start Test Case--------------------------------------').then(function() {
             return racetrack.log("Click on Storage menu > Datastore tab");

@@ -28,13 +28,13 @@ describe('Verify error message is localized when netstack domain name is invalid
     beforeEach(function () {
 
         console.log("-----------------------------------------------------------------------------------------");
-        console.log("                              Message Invalid DomainName                                 ");
+        console.log("                           Edit Netstack Invalid DomainName                              ");
         console.log("-----------------------------------------------------------------------------------------");
 
         browser.driver.manage().window().maximize();
 
-        return racetrack.testCaseBegin('Message Invalid DomainName', 'Netstack', 'Message Invalid DomainName', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
-            return globalUtil.takeScreenshot(screenshotSavePath, 'Message_Invalid_DomainName_Start');
+        return racetrack.testCaseBegin('Edit Netstack Invalid DomainName', 'Netstack', 'Edit Netstack Invalid DomainName', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
+            return globalUtil.takeScreenshot(screenshotSavePath, 'Edit_Netstack_Invalid_DomainName_Start');
         }).then(function() {
             return browser.sleep(Timeout.WAIT_FOR_START_STOP_VIDEO_RECORDING);
         }).then(function() {
@@ -50,7 +50,7 @@ describe('Verify error message is localized when netstack domain name is invalid
     });
 
     afterEach(function (done) {
-        return globalUtil.verifyResult('Message_Invalid_DomainName_Stop',screenshotSavePath).then(function(){
+        return globalUtil.verifyResult('Edit_Netstack_Invalid_DomainName_Stop',screenshotSavePath).then(function(){
             done();
         });
     });

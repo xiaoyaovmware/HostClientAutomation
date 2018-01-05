@@ -15,7 +15,7 @@ var Racetrack = require('../../../../common/racetrack.js');
 
 var Timeout = require('../../../../common/timeout.js');
 
-describe('Verify error message is localized when netstack ipv4 Gateway is invalid', function () {
+describe('Verify error message is localized when netstack search domains is invalid', function () {
 
     var loginUtil = new LoginUtil(),
         esxuiUtil = new EsxuiUtil(),
@@ -28,13 +28,13 @@ describe('Verify error message is localized when netstack ipv4 Gateway is invali
     beforeEach(function () {
 
         console.log("-----------------------------------------------------------------------------------------");
-        console.log("                             Message Invalid ipv6Gateway                                 ");
+        console.log("                         Edit Netstack Invalid SearchDomains                             ");
         console.log("-----------------------------------------------------------------------------------------");
 
         browser.driver.manage().window().maximize();
 
-        return racetrack.testCaseBegin('Message Invalid ipv6Gateway', 'Netstack', 'Message Invalid ipv6Gateway', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
-            return globalUtil.takeScreenshot(screenshotSavePath, 'Message_Invalid_ipv6Gateway_Start');
+        return racetrack.testCaseBegin('Edit Netstack Invalid SearchDomains', 'Netstack', 'Edit Netstack Invalid SearchDomains', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
+            return globalUtil.takeScreenshot(screenshotSavePath, 'Edit_Netstack_Invalid_SearchDomains_Start');
         }).then(function() {
             return browser.sleep(Timeout.WAIT_FOR_START_STOP_VIDEO_RECORDING);
         }).then(function() {
@@ -50,13 +50,13 @@ describe('Verify error message is localized when netstack ipv4 Gateway is invali
     });
 
     afterEach(function (done) {
-        return globalUtil.verifyResult('Message_Invalid_ipv6Gateway_Stop',screenshotSavePath).then(function(){
+        return globalUtil.verifyResult('Edit_Netstack_Invalid_SearchDomains_Stop',screenshotSavePath).then(function(){
             done();
         });
     });
 
 
-    it('Input negative ipv6 gateway and verify invalid message in Edit Netstack', function () {
+    it('Input negative search domains and verify invalid message in Edit Netstack', function () {
 
         return racetrack.log('---------------------------------------Start Test Case--------------------------------------').then(function () {
             return racetrack.log("Click Networking in esx UI");
@@ -84,13 +84,13 @@ describe('Verify error message is localized when netstack ipv4 Gateway is invali
         }).then(function () {
             var invalidString = browser.params.i18n.string + '"!@#$%^&*(){}[]:;\',./<>?';
             return tcpIpUtil.manuallyConfigure(TcpIpPage, EsxuiPage, hostName, 'eng.vmware.com', primaryDNSServer,
-                secondaryDNSServer, 'eng.vmware.com', ipv4Gateway, invalidString);
+                secondaryDNSServer, invalidString, ipv4Gateway, ipv6Gateway);
         }).then(function () {
             return racetrack.log("Verify invalid message information is localized");
         }).then(function () {
             return TcpIpPage.editTCPIPDialog.invalidMessage().getText();
         }).then(function (invalidMessage) {
-            return expect(invalidMessage).toBe(browser.params.networkMsg.network.netstack.edit.error.ipv6Gateway);
+            return expect(invalidMessage).toBe(browser.params.networkMsg.network.netstack.edit.error.searchDomains);
         });
     });
 

@@ -15,7 +15,7 @@ var Racetrack = require('../../../../common/racetrack.js');
 
 var Timeout = require('../../../../common/timeout.js');
 
-describe('Verify error message is localized when netstack primary DNS is invalid', function () {
+describe('Verify error message is localized when netstack host name is invalid', function () {
 
     var loginUtil = new LoginUtil(),
         esxuiUtil = new EsxuiUtil(),
@@ -28,13 +28,13 @@ describe('Verify error message is localized when netstack primary DNS is invalid
     beforeEach(function () {
 
         console.log("-----------------------------------------------------------------------------------------");
-        console.log("                              Message Invalid PrimaryDNS                                 ");
+        console.log("                           Edit Netstack Invalid HostName                                ");
         console.log("-----------------------------------------------------------------------------------------");
 
         browser.driver.manage().window().maximize();
 
-        return racetrack.testCaseBegin('Message Invalid PrimaryDNS', 'Netstack', 'Message Invalid PrimaryDNS', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
-            return globalUtil.takeScreenshot(screenshotSavePath, 'Message_Invalid_PrimaryDNS_Start');
+        return racetrack.testCaseBegin('Edit Netstack Invalid HostName', 'Netstack', 'Edit Netstack Invalid HostName', browser.params.i18n.lang, '', '', 'UI','P0','Automation').then(function(){
+            return globalUtil.takeScreenshot(screenshotSavePath, 'Edit_Netstack_Invalid_HostName_Start');
         }).then(function() {
             return browser.sleep(Timeout.WAIT_FOR_START_STOP_VIDEO_RECORDING);
         }).then(function() {
@@ -50,13 +50,13 @@ describe('Verify error message is localized when netstack primary DNS is invalid
     });
 
     afterEach(function (done) {
-        return globalUtil.verifyResult('Message_Invalid_PrimaryDNS_Stop',screenshotSavePath).then(function(){
+        return globalUtil.verifyResult('Edit_Netstack_Invalid_HostName_Stop',screenshotSavePath).then(function(){
             done();
         });
     });
 
 
-    it('Input negative primary DNS and verify invalid message in Edit Netstack', function () {
+    it('Input negative host name and verify invalid message in Edit Netstack', function () {
 
         return racetrack.log('---------------------------------------Start Test Case--------------------------------------').then(function () {
             return racetrack.log("Click Networking in esx UI");
@@ -83,7 +83,7 @@ describe('Verify error message is localized when netstack primary DNS is invalid
             return racetrack.log("Start to edit TcpIpStack Settings");
         }).then(function () {
             var invalidString = browser.params.i18n.string + '"!@#$%^&*(){}[]:;\',./<>?';
-            return tcpIpUtil.manuallyConfigure(TcpIpPage, EsxuiPage, hostName, 'eng.vmware.com', invalidString,
+            return tcpIpUtil.manuallyConfigure(TcpIpPage, EsxuiPage, invalidString, 'eng.vmware.com', primaryDNSServer,
                 secondaryDNSServer, 'eng.vmware.com', ipv4Gateway, ipv6Gateway);
         }).then(function () {
             return racetrack.log("Verify invalid message information is localized");
@@ -91,7 +91,7 @@ describe('Verify error message is localized when netstack primary DNS is invalid
             return TcpIpPage.editTCPIPDialog.invalidMessage().getText();
         }).then(function (invalidMessage_properties) {
             // Since message contains argument {{max}}, so need to deal with this message content and use "toContain"
-            var invalidMessage_page = browser.params.networkMsg.network.netstack.edit.error.primaryDNS;
+            var invalidMessage_page = browser.params.networkMsg.network.netstack.edit.error.hostName;
             var invalidMessage_characters = invalidMessage_page.substring(0, invalidMessage_page.length - 8);
             return expect(invalidMessage_properties).toContain(invalidMessage_characters);
         });
