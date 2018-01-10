@@ -70,26 +70,25 @@ describe('Create VMKNIC with invalid ipv6 does not succeed and verify the fail m
             return racetrack.log("Click Networking in esx UI");
         }).then(function () {
             return EsxuiPage.navigator.networkMenu().click();
-        // }).then(function () {
-        //     return racetrack.log("Click on the vSwitches tab");
-        // }).then(function () {
-        //     return globalUtil.waitForVisibility(NetworkingPage.vSwitchTab());
-        // }).then(function () {
-        //     return NetworkingPage.vSwitchTab().click();
-        // }).then(function () {
-        //     // Create and check vswitch
-        //     return racetrack.log("Create a new non-ASCII vSwitch");
-        // }).then(function () {
-        //     vSwitchName = globalUtil.getTimeStamp();
-        //     return vswitchUtils.createVswitch(VSwitchPage, EsxuiPage, vSwitchName);
-        // }).then(function () {
-        //     return racetrack.log("Create a non-ASCII VMKNIC");
-        // }).then(function () {
-        //     return globalUtil.waitForVisibility(NetworkingPage.vmKernelNicTab());
+        }).then(function () {
+            return racetrack.log("Click on the vSwitches tab");
+        }).then(function () {
+            return globalUtil.waitForVisibility(NetworkingPage.vSwitchTab());
+        }).then(function () {
+            return NetworkingPage.vSwitchTab().click();
+        }).then(function () {
+            // Create and check vswitch
+            return racetrack.log("Create a new non-ASCII vSwitch");
+        }).then(function () {
+            vSwitchName = globalUtil.getTimeStamp();
+            return vswitchUtils.createVswitch(VSwitchPage, EsxuiPage, vSwitchName);
+        }).then(function () {
+            return racetrack.log("Create a non-ASCII VMKNIC");
+        }).then(function () {
+            return globalUtil.waitForVisibility(NetworkingPage.vmKernelNicTab());
         }).then(function () {
             return NetworkingPage.vmKernelNicTab().click();
         }).then(function () {
-            vSwitchName = "123";
             portGroupName = globalUtil.getTimeStamp();
             ipv6address = '!@#$%^&*()_++~{}:?';
             ipv6prefix = '';
@@ -113,17 +112,15 @@ describe('Create VMKNIC with invalid ipv6 does not succeed and verify the fail m
             return VmkernelNicPage.vmKernelNicGrid.getAllvmKernelNicRows().count();
         }).then(function (count) {
             vmKernelNicName = "vmk" + count;
-            return racetrack.log("vmKernelNicName is: " + vmKernelNicName);
-        // }).then(function () {
-        //     return expect(VmkernelNicPage.vmKernelNicGrid.getVMKernelNicLinkByName(vmKernelNicName).isPresent()).toBe(false);
-        // }).then(function () {
-        //     return racetrack.log("Remove the non-ASCII vSwitch.");
-        // }).then(function () {
-        //     return globalUtil.waitForVisibility(NetworkingPage.vSwitchTab());
-        // }).then(function () {
-        //     return NetworkingPage.vSwitchTab().click();
-        // }).then(function () {
-        //     return vswitchUtils.deleteVswitch(VSwitchPage, EsxuiPage, vSwitchName);
+            return expect(VmkernelNicPage.vmKernelNicGrid.getVMKernelNicLinkByName(vmKernelNicName).isPresent()).toBe(false);
+        }).then(function () {
+            return racetrack.log("Remove the non-ASCII vSwitch.");
+        }).then(function () {
+            return globalUtil.waitForVisibility(NetworkingPage.vSwitchTab());
+        }).then(function () {
+            return NetworkingPage.vSwitchTab().click();
+        }).then(function () {
+            return vswitchUtils.deleteVswitch(VSwitchPage, EsxuiPage, vSwitchName);
         });
 
     });
