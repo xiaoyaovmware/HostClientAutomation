@@ -46,15 +46,16 @@ exports.config = {
         //
         // 'i18n/testcases/P0/vmknic/create-vmknic.js',                                //
         // 'i18n/testcases/P0/vmknic/create-vmknic-special-characters-for-portgroup.js'
+        'i18n/testcases/P0/vmknic/create-vmknic-invalid-ipv6.js'
 
         // 'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
-        'i18n/testcases/P0/netstack/edit-netstack-invalid-hostname.js',
-        'i18n/testcases/P0/netstack/edit-netstack-invalid-domainname.js',
-        'i18n/testcases/P0/netstack/edit-netstack-invalid-primarydns.js',
-        'i18n/testcases/P0/netstack/edit-netstack-invalid-secondarydns.js',
-        'i18n/testcases/P0/netstack/edit-netstack-invalid-searchdomains.js',
-        'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv4Gateway.js',
-        'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv6Gateway.js',
+        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-hostname.js',
+        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-domainname.js',
+        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-primarydns.js',
+        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-secondarydns.js',
+        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-searchdomains.js',
+        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv4Gateway.js',
+        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv6Gateway.js',
         //
         // 'i18n/testcases/P0/manage/change-advanced-settings.js',                                //
         // 'i18n/testcases/P0/manage/assign-license.js',                               //

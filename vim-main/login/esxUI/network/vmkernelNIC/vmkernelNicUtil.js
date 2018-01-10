@@ -52,6 +52,74 @@ var VMKernelNicUtil = function () {
         })
     };
 
+    this.createIPv6VMKernel = function (VmKernelNicPage, EsxuiPage, vSwitchName, portGroupName, ipv6address, ipv6prefix) {
+
+        var addVMKernelNicDialog, createButton;
+
+        return globalUtil.waitForVisibility(VmKernelNicPage.addVMKernelNicButton()).then(function () {
+            return VmKernelNicPage.addVMKernelNicButton().click();
+        }).then(function () {
+            return racetrack.log("- - Click Add VM Kernel NIC button");
+        }).then(function () {
+            return racetrack.log("- - Enter non-ASCII Port Group name: " + portGroupName);
+        }).then(function () {
+            //Wait for dialog to load and enter port group name
+            addVMKernelNicDialog = VmKernelNicPage.addVMKernelNicDialog;
+            return globalUtil.waitForVisibility(addVMKernelNicDialog.newPortGroupNameTextBox());
+        }).then(function () {
+            return addVMKernelNicDialog.newPortGroupNameTextBox().sendKeys(portGroupName);
+        }).then(function () {
+            return racetrack.log("- - Select the non-ASCII vSwitch from the vSwitch drop down");
+        }).then(function () {
+            return globalUtil.waitForVisibility(addVMKernelNicDialog.vSwitchDropDown.self());
+        }).then(function () {
+            return addVMKernelNicDialog.vSwitchDropDown.self().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(addVMKernelNicDialog.vSwitchDropDown.vSwitchOption(vSwitchName));
+        }).then(function () {
+            return addVMKernelNicDialog.vSwitchDropDown.vSwitchOption(vSwitchName).click();
+        }).then(function () {
+            return racetrack.log("- - Select the option IPv4 and IPv6 from IP version drop down");
+        }).then(function () {
+            return addVMKernelNicDialog.ipVersionDropDown.self().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(addVMKernelNicDialog.ipVersionDropDown.ipv4AndIPv6Option());
+        }).then(function () {
+            return addVMKernelNicDialog.ipVersionDropDown.ipv4AndIPv6Option().click();
+        }).then(function () {
+            return racetrack.log("- - Expand IPv6 settings label");
+        }).then(function () {
+            return globalUtil.waitForVisibility(addVMKernelNicDialog.ipv6SettingsLabel.self());
+        }).then(function () {
+            return addVMKernelNicDialog.ipv6SettingsLabel.self().click();
+        }).then(function () {
+            return racetrack.log("- - Click Add address button");
+        }).then(function () {
+            return globalUtil.waitForVisibility(addVMKernelNicDialog.ipv6SettingsLabel.addAddressButton());
+        }).then(function () {
+            return addVMKernelNicDialog.ipv6SettingsLabel.addAddressButton().click();
+        }).then(function () {
+            return racetrack.log("- - Input ipv6 address: " + ipv6address + " and input ipv6 prefix: " + ipv6prefix);
+        }).then(function () {
+            return globalUtil.waitForVisibility(addVMKernelNicDialog.ipv6SettingsLabel.addressTextbox());
+        }).then(function () {
+            return addVMKernelNicDialog.ipv6SettingsLabel.addressTextbox().clear();
+        }).then(function () {
+            return addVMKernelNicDialog.ipv6SettingsLabel.addressTextbox().sendKeys(ipv6address);
+        }).then(function () {
+            return addVMKernelNicDialog.ipv6SettingsLabel.prefixTextbox().clear();
+        }).then(function () {
+            return addVMKernelNicDialog.ipv6SettingsLabel.prefixTextbox().sendKeys(ipv6prefix);
+        }).then(function () {
+            return racetrack.log("- - Click Create button to create the VMkernel NIC.");
+        }).then(function () {
+            //Click Create port group name
+            createButton = VmKernelNicPage.popUpDialog.okButton();
+            return globalUtil.waitForVisibility(createButton);
+        }).then(function () {
+            return createButton.click();
+        })
+    };
 
     this.deleteVMKernelNic = function (VmKernelNicPage, EsxuiPage, vmKernelNicName) {
 

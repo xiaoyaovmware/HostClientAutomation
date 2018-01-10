@@ -319,7 +319,9 @@ var EsxuiUtil = function () {
                             //console.log('result[' + i + '] time ' + result[i]);
                             if (result[i] === taskName &&
                                 result[i + 1] === target
-                                && result[i + 2] === status) {
+                                // && result[i + 2] === status) {
+                                // Failed result contains the word "error" and the error cause, so use includes instead equal to here
+                                && result[i + 2].includes(status)) {
                                 foundTask = true;
                                 console.log("Found task? " + foundTask);
                                 break;
