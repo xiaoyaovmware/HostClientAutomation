@@ -20,6 +20,24 @@ var SystemPage = {
             return element.all(by.css('[vui-tabs="hostManageSystemTabs"] .vui-toc-tabs ul li')).get(3);
         },
 
+        timeDateGrid: {
+            currentDateAndTime: function () {
+                return element(by.css('.ng-scope.stack-view-row .ng-binding.ng-scope span'));
+            },
+
+            ntpClientStatus: function () {
+                return element.all(by.css('.ng-scope.stack-view-row .ng-binding.ng-scope')).get(1);
+            },
+
+            ntpServicesStatus: function () {
+                return element.all(by.css('.ng-scope.stack-view-row .ng-binding.ng-scope')).get(2);
+            },
+
+            ntpServers: function () {
+                return element.all(by.css('.ng-scope.stack-view-row .ng-binding.ng-scope')).get(3);
+            }
+        },
+
         editsettingsButton: {
             self: function () {
                return element(by.id('timeEdit'));
@@ -45,13 +63,8 @@ var SystemPage = {
 
             clearValidationBannerButton:function () {
                 return element(by.css('.icon-validation.vui-icon18-dialog-close'));
-            },
-
-
-        },
-
-
-
+            }
+        }
     },
 
 

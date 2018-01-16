@@ -6,7 +6,7 @@ var GlobalUtil = require('./common/globalUtil.js');
 var globalUtil = new GlobalUtil();
 
 exports.config = {
-
+    // seleniumAddress: 'http://172.16.169.11:4444/wd/hub',
     seleniumAddress: 'http://localhost:4444/wd/hub',
     framework: 'jasmine2',
 
@@ -23,6 +23,7 @@ exports.config = {
         // 'i18n/testcases/P0/host/change-password.js',
          // 'i18n/testcases/P0/host/load-feedback.js',
         // 'i18n/testcases/P0/host/load-host-summary.js',
+        'i18n/testcases/P0/host/verify-system-date-and-time.js',
         //
         //  'i18n/testcases/P0/create-vm/create-new-vm.js',
         // 'i18n/testcases/P0/create-vm/create-new-vm-enable-VBS.js',
@@ -46,7 +47,7 @@ exports.config = {
         //
         // 'i18n/testcases/P0/vmknic/create-vmknic.js',                                //
         // 'i18n/testcases/P0/vmknic/create-vmknic-special-characters-for-portgroup.js'
-        'i18n/testcases/P0/vmknic/create-vmknic-invalid-ipv6.js'
+        // 'i18n/testcases/P0/vmknic/create-vmknic-invalid-ipv6.js'
 
         // 'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
         // 'i18n/testcases/P0/netstack/edit-netstack-invalid-hostname.js',
@@ -76,6 +77,8 @@ exports.config = {
         // 'i18n/testcases/P0/storage/create-directory-invalid-name.js',
         // 'i18n/testcases/P0/storage/copy-file-with-new-name.js',
 
+        // 'i18n/testcases/P0/security/ipv6-login.js',
+        // 'i18n/testcases/P0/security/session-timeout.js',
         
         // //P1 test cases -----------------------------------------------------------
         //
@@ -336,6 +339,7 @@ exports.config = {
             share: '/store'
         },
 
+        messagesMsg: require('./i18n/msg/zh-cn/messages.json'),
         networkMsg: require('./i18n/msg/zh-cn/network.json'),
         vmMsg: require('./i18n/msg/zh-cn/vm.json'),
         hostMsg: require('./i18n/msg/zh-cn/host.json'),

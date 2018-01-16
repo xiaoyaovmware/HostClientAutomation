@@ -176,6 +176,21 @@ var EsxuiPage = {
             return element.all(by.css('#contextMenu>li>a')).get(3);
         },
 
+        settingsMenu: {
+            self: function () {
+                return element(by.css('#contextMenu>li:nth-child(4)'));
+            },
+
+            applicationTimeoutMenu: {
+                self: function () {
+                    return element(by.css('#contextMenu>li:nth-child(4)>ul>li[id=\'userTimeout\']'));
+                },
+
+                timeoutTimeMenu: function (num) {
+                    return element.all(by.css('#contextMenu>li:nth-child(4)>ul>li[id=\'userTimeout\'] li')).get(num);
+                }
+            }
+        }
     },
 
     changepasswordDialog: {
@@ -216,6 +231,10 @@ var EsxuiPage = {
     },
 
     popUpDialog: {
+        dialogContent: function () {
+            return element.all(by.css('.vui-dialog .panel-content .ng-binding'));
+        },
+
         okButton: function (num) {
             return element.all(by.css('.vui-dialog .dialog-footer > button:first-child')).get(num);
         },

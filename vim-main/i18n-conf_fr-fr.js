@@ -317,6 +317,7 @@ exports.config = {
             share: '/store'
         },
 
+        messagesMsg: require('./i18n/msg/fr-fr/messages.json'),
         networkMsg: require('./i18n/msg/fr-fr/network.json'),
         vmMsg: require('./i18n/msg/fr-fr/vm.json'),
         hostMsg: require('./i18n/msg/fr-fr/host.json'),

@@ -318,7 +318,7 @@ exports.config = {
         },
 
 
-
+        messagesMsg: require('./i18n/msg/es-es/messages.json'),
         networkMsg: require('./i18n/msg/es-es/network.json'),
         vmMsg: require('./i18n/msg/es-es/vm.json'),
         hostMsg: require('./i18n/msg/es-es/host.json'),

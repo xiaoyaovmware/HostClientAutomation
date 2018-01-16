@@ -521,6 +521,52 @@ var EsxuiUtil = function () {
         return duplicates;
     };
 
+    // timeoutOptionNum should be 0/1/2/3/4, means 15m/30m/1h/2h/off
+    this.setApplicationTimeout = function (EsxuiPage, timeoutOptionNum) {
+        var settingsMenu = EsxuiPage.userDropDown.settingsMenu;
+
+        return racetrack.log("- - Click User dropdown").then(function () {
+            return EsxuiPage.userDropDown.self().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(settingsMenu.self());
+        }).then(function () {
+            return racetrack.log("- - Mouse move to Settings menu")
+        }).then(function () {
+            return browser.actions().mouseMove(settingsMenu.self()).perform();
+        }).then(function () {
+            return globalUtil.waitForVisibility(settingsMenu.applicationTimeoutMenu.self())
+        }).then(function () {
+            return racetrack.log("- - Mouse move to Application Timeout menu");
+        }).then(function () {
+            return browser.actions().mouseMove(settingsMenu.applicationTimeoutMenu.self()).perform();
+        }).then(function () {
+            return globalUtil.waitForVisibility(settingsMenu.applicationTimeoutMenu.timeoutTimeMenu(0));
+        }).then(function () {
+            return racetrack.log("- - Mouse move to Timeout option " + timeoutOptionNum + " and Click");
+        }).then(function () {
+            return browser.actions().mouseMove(settingsMenu.applicationTimeoutMenu.timeoutTimeMenu(timeoutOptionNum)).perform();
+        }).then(function () {
+            return EsxuiPage.userDropDown.settingsMenu.applicationTimeoutMenu.timeoutTimeMenu(timeoutOptionNum).click();
+        }).then(function () {
+            return racetrack.log("- - Judge whether dialog is present, if yes, close this dialog");
+        }).then(function () {
+            // change implicitlyWait time to 5s, otherwise, it will force to wait 180s when check non-present element
+            browser.driver.manage().timeouts().implicitlyWait(5000);
+        }).then(function () {
+            return EsxuiPage.popUpDialog.dialogContent().isPresent();
+        }).then(function (present) {
+            if (present) {
+                return console.log("- - Dialog is present, click ok button to close dialog").then(function () {
+                    return EsxuiPage.popUpDialog.okButton(0).click();
+                });
+            }else{
+                return console.log("- - Dialog is not present");
+            }
+        }).then(function () {
+            // change back to 0
+            browser.driver.manage().timeouts().implicitlyWait(0);
+        })
+    };
 
 };
 
