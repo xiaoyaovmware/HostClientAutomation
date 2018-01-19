@@ -309,13 +309,21 @@ exports.config = {
             password: 'ca$hc0w'
         },
         domain: {
-            domainName: 'test.com',
-            user: 'administrator',
-            password: 'Vmware1!'
+            domainName: 'vcpdp.com',
+            user: '氘媵淸あ녕하àçéêëîÏÔŒÙñÑÄÖÜäöüß',
+            password: 'ca$hc0w',
+            dns: '10.192.186.29'
         },
         nfs: {
             server: 'test',
             share: '/store'
+        },
+        roleName: {
+            noCryptographyAdministrator: "無密碼編譯管理員",
+            noAccess: "無存取權",
+            readOnly: "唯讀",
+            administrator: "系統管理員",
+            noTools: "no Tools"
         },
 
         messagesMsg: require('./i18n/msg/zh-tw/messages.json'),

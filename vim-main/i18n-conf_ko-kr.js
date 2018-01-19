@@ -308,13 +308,21 @@ exports.config = {
             password: 'ca$hc0w'
         },
         domain: {
-            domainName: 'test.com',
-            user: 'administrator',
-            password: 'Vmware1!'
+            domainName: 'vcpdp.com',
+            user: '氘媵淸あ녕하àçéêëîÏÔŒÙñÑÄÖÜäöüß',
+            password: 'ca$hc0w',
+            dns: '10.192.186.29'
         },
         nfs: {
             server: 'test',
             share: '/store'
+        },
+        roleName: {
+            noCryptographyAdministrator: "암호화 관리자 없음",
+            noAccess: "권한 없음",
+            readOnly: "읽기 전용",
+            administrator: "관리자",
+            noTools: "no Tools"
         },
 
         messagesMsg: require('./i18n/msg/ko-kr/messages.json'),

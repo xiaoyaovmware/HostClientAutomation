@@ -22,13 +22,15 @@ var Timeout = {
    //WAIT_FOR_VM_TO_LOAD: 3000,
 
    WAIT_FOR_VISIBLE_TIMEOUT:     5000,
-   WAIT_FOR_Message_DISAPPEAR:     10000,
+   WAIT_FOR_Message_DISAPPEAR:   10000,
    WAIT_FOR_HOST_REBOOT:         180000,
+   WAIT_FOR_ELMENT_RENDERING:    3000,
 
    WAIT_FOR_REFRESH:             15000,
    WAIT_FOR_LOGOUT:              5000,
    WAIT_FOR_USER_ADD:            10000,  //add
    WAIT_FOR_USER_REMOVE:         10000,  //add
+   WAIT_FOR_JOIN_DOMAIN:         30000,
 
    WAIT_FOR_NETWORK_TASK:        15000,    // add/eelete vSwitch
 

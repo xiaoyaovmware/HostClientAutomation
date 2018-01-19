@@ -103,9 +103,53 @@ var securityAndUsersUtil = function () {
             //Click on Delete
             return confirmDeleteButton.click();
         });
-    }
+    };
 
+    this.joinInDomainByDomainUser = function (SecurityAndUsersPage, domainName, userName, password) {
 
+        var joinDomainDialog = SecurityAndUsersPage.authenticationButton.joinDomainDialog;
 
+        return globalUtil.waitForVisibility(SecurityAndUsersPage.authenticationButton.authJoinDomainButton()).then(function(){
+            return racetrack.log("- - Click Join domain button and open join domain dialog");
+        }).then(function () {
+            return SecurityAndUsersPage.authenticationButton.authJoinDomainButton().click();
+        }).then(function () {
+            return globalUtil.waitForVisibility(joinDomainDialog.self());
+        }).then(function () {
+            return racetrack.log("- - Input domain name");
+        }).then(function () {
+            return joinDomainDialog.domainNameTextbox().clear();
+        }).then(function () {
+            return joinDomainDialog.domainNameTextbox().sendKeys(domainName);
+        }).then(function () {
+            return racetrack.log("- - Input user name");
+        }).then(function () {
+            return joinDomainDialog.userNameTextbox().clear();
+        }).then(function () {
+            return joinDomainDialog.userNameTextbox().sendKeys(userName);
+        }).then(function () {
+            return racetrack.log("- - Input password");
+        }).then(function () {
+            return joinDomainDialog.passwordTextbox().clear();
+        }).then(function () {
+            return joinDomainDialog.passwordTextbox().sendKeys(password);
+        }).then(function () {
+            return racetrack.log("- - Click join domain button to confirm");
+        }).then(function () {
+            return SecurityAndUsersPage.popUpDialog.okButton().click();
+        });
+    };
+
+    this.leaveDomain = function (SecurityAndUsersPage) {
+        return globalUtil.waitForVisibility(SecurityAndUsersPage.authenticationButton.authLeaveDomainButton()).then(function(){
+            return racetrack.log("- - Click Leave domain button");
+        }).then(function () {
+            return SecurityAndUsersPage.authenticationButton.authLeaveDomainButton().click();
+        }).then(function () {
+            return racetrack.log("- - Click Yes button to confirm");
+        }).then(function () {
+            return SecurityAndUsersPage.popUpDialog.okButton().click();
+        });
+    };
 };
 module.exports = securityAndUsersUtil;

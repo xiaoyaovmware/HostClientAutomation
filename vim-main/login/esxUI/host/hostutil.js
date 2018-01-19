@@ -5,8 +5,6 @@ var globalUtil = new GlobalUtil();
 
 var HostUtil = function () {
 
-
-
     this.assignLicense = function (hostPage, licenseKey) {
 
         return globalUtil.waitForVisibility(hostPage.getAssignLicenseButton()).then(function () {
@@ -54,22 +52,6 @@ var HostUtil = function () {
             return hostPage.getCloseButton().click();
         })
     };
-
-
-    this.joinInDomain = function (hostPage, domainName, userName, password) {
-
-        hostPage.getAuthenticationButton().click();
-        expect(hostPage.getJoinDomainButton().isDisplayed()).toBe(true);
-        hostPage.getJoinDomainButton().click();
-        expect(hostPage.getDomainNameInputTextBox().isDisplayed()).toBe(true);
-        hostPage.getDomainNameInputTextBox().sendKeys(domainName);
-        hostPage.getUserNameInputTextBox().sendKeys(userName);
-        hostPage.getPasswordInputTextBox().sendKeys(password);
-        hostPage.getConfirmPasswordInputTextBox().sendKeys(password);
-
-        hostPage.getJoinDomainDialogButton().click();
-
-    }
 
 };
 module.exports = HostUtil;

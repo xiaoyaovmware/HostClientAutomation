@@ -52,6 +52,22 @@ var EsxuiUtil = function () {
 
     };
 
+    this.logoutHostClient = function (LoginPage, EsxuiPage) {
+        return racetrack.log("Click User dropdown and click logout menu to logout").then(function(){
+            return EsxuiPage.userDropDown.self().click();
+        }).then(function(){
+            return globalUtil.waitForVisibility(EsxuiPage.userDropDown.logoutMenu());
+        }).then(function() {
+            return EsxuiPage.userDropDown.logoutMenu().click();
+        }).then(function () {
+            return browser.sleep(Timeout.WAIT_FOR_LOGOUT);
+        }).then(function(){
+            return racetrack.log("Verify that logout successfully in non-ASCII environment");
+        }).then(function() {
+            return expect(LoginPage.usernameTextBox().isDisplayed()).toBe(true);
+        })
+    };
+
     this.shutDownHost = function (EsxuiPage) {
         var hostMenu = EsxuiPage.navigator.hostMenu,
             shutDownButton;
@@ -232,7 +248,97 @@ var EsxuiUtil = function () {
         }).then(function () {
             return browser.sleep(Timeout.WAIT_FOR_HOST_TASK);
         })
+    };
 
+    this.assignUserRoles = function (EsxuiPage, domainName, userName, roleName) {
+        var managePermissionDialog = EsxuiPage.actionsButton.permissionsMenu.managePermissionsDialog;
+        var fullUserName = domainName + "\\" + userName;
+
+        return globalUtil.waitForVisibility(EsxuiPage.actionsButton.self()).then(function () {
+            return racetrack.log("- - Click the Actions button");
+        }).then(function () {
+            return EsxuiPage.actionsButton.self().click();
+        }).then(function () {
+            return racetrack.log("- - Click Permissions menu");
+        }).then(function () {
+            return globalUtil.waitForVisibility(EsxuiPage.actionsButton.permissionsMenu.self());
+        }).then(function () {
+            return EsxuiPage.actionsButton.permissionsMenu.self().click();
+        }).then(function () {
+            return racetrack.log("- - Open Manage Permissions dialog and click Add user button");
+        }).then(function () {
+            return globalUtil.waitForVisibility(managePermissionDialog.addUserButton());
+        }).then(function () {
+            return managePermissionDialog.addUserButton().click();
+        }).then(function () {
+            return racetrack.log("- - Input user name");
+        }).then(function () {
+            return globalUtil.waitForVisibility(managePermissionDialog.addUserSubDialog.selectUserCombobox.textField());
+        }).then(function () {
+            return managePermissionDialog.addUserSubDialog.selectUserCombobox.textField().clear();
+        }).then(function () {
+            return managePermissionDialog.addUserSubDialog.selectUserCombobox.textField().sendKeys(fullUserName);
+        }).then(function () {
+            return racetrack.log("- - Input role name");
+        }).then(function () {
+            return managePermissionDialog.addUserSubDialog.selectRoleCombobox.textField().clear();
+        }).then(function () {
+            return managePermissionDialog.addUserSubDialog.selectRoleCombobox.textField().sendKeys(roleName);
+        }).then(function () {
+            return globalUtil.waitForVisibility(managePermissionDialog.addUserSubDialog.selectRoleCombobox.dropMenuOption(roleName));
+        }).then(function () {
+            return managePermissionDialog.addUserSubDialog.selectRoleCombobox.dropMenuOption(roleName).click();
+        }).then(function () {
+            return browser.sleep(Timeout.WAIT_FOR_ELMENT_RENDERING);
+        }).then(function () {
+            return racetrack.log("- - Click Add User button and verify new user with role is added");
+        }).then(function () {
+            return managePermissionDialog.addUserSubDialog.okButton().click();
+        }).then(function () {
+            return expect(managePermissionDialog.userRolesGrid.getUserByName(userName).isPresent()).toBe(true);
+        }).then(function () {
+            return racetrack.log("- - Click Close button to close Manage permissions dialog");
+        }).then(function () {
+            return EsxuiPage.popUpDialog.okButton(0).click();
+        })
+    };
+
+    this.removeUserRoles = function (EsxuiPage, userName) {
+        var managePermissionDialog = EsxuiPage.actionsButton.permissionsMenu.managePermissionsDialog;
+
+        return globalUtil.waitForVisibility(EsxuiPage.actionsButton.self()).then(function () {
+            return racetrack.log("- - Click the Actions button");
+        }).then(function () {
+            return EsxuiPage.actionsButton.self().click();
+        }).then(function () {
+            return racetrack.log("- - Click Permissions menu");
+        }).then(function () {
+            return globalUtil.waitForVisibility(EsxuiPage.actionsButton.permissionsMenu.self());
+        }).then(function () {
+            return EsxuiPage.actionsButton.permissionsMenu.self().click();
+        }).then(function () {
+            return racetrack.log("- - Select User")
+        }).then(function () {
+            return globalUtil.waitForVisibility(managePermissionDialog.userRolesGrid.getUserByName(userName));
+        }).then(function () {
+            return managePermissionDialog.userRolesGrid.getUserByName(userName).click();
+        }).then(function () {
+            return racetrack.log("- - Click Remove User button and verify")
+        }).then(function () {
+            return managePermissionDialog.removeUserButton().click();
+        }).then(function () {
+            return browser.sleep(Timeout.WAIT_FOR_ELMENT_RENDERING);
+        }).then(function () {
+            return browser.driver.manage().timeouts().implicitlyWait(3000);
+        }).then(function () {
+            return expect(managePermissionDialog.userRolesGrid.getUserByName(userName).isPresent()).toBe(false);
+        }).then(function () {
+            return browser.driver.manage().timeouts().implicitlyWait(0);
+        }).then(function () {
+            return racetrack.log("- - Click Close button to close Manage permissions dialog");
+        }).then(function () {
+            return EsxuiPage.popUpDialog.okButton(0).click();
+        })
     };
 
     this.getTaskColumnByRow = function (column, row) {
@@ -551,7 +657,7 @@ var EsxuiUtil = function () {
             return racetrack.log("- - Judge whether dialog is present, if yes, close this dialog");
         }).then(function () {
             // change implicitlyWait time to 5s, otherwise, it will force to wait 180s when check non-present element
-            browser.driver.manage().timeouts().implicitlyWait(5000);
+            return browser.driver.manage().timeouts().implicitlyWait(5000);
         }).then(function () {
             return EsxuiPage.popUpDialog.dialogContent().isPresent();
         }).then(function (present) {
@@ -564,7 +670,7 @@ var EsxuiUtil = function () {
             }
         }).then(function () {
             // change back to 0
-            browser.driver.manage().timeouts().implicitlyWait(0);
+            return browser.driver.manage().timeouts().implicitlyWait(0);
         })
     };
 

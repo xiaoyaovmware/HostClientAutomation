@@ -117,7 +117,6 @@ var EsxuiPage = {
 
     refreshButton: function () {
         return element(by.id('refreshButton'));
-        return element(by.id('refreshButton'));
     },
 
     actionsButton: {
@@ -129,14 +128,14 @@ var EsxuiPage = {
             self: function(){
                 return element(by.id('hostServices'));
             },
+
             disableEnableSSH: function () {
                 return element(by.id('hostServicesSSH'));
             },
 
             disableEnableConsoleShell: function () {
                 return element(by.id('hostServicesShell'));
-            },
-
+            }
         },
 
         enterMaintenanceModeMenu: function () {
@@ -150,6 +149,74 @@ var EsxuiPage = {
         editNotesMenu: function () {
             return element(by.id('editNotes'));
         },
+
+        permissionsMenu: {
+            self: function () {
+                return element(by.id('managePermissions'));
+            },
+
+            managePermissionsDialog: {
+                addUserButton: function () {
+                    return element(by.css('.esx-icon-add-user'));
+                },
+
+                removeUserButton: function () {
+                    return element(by.css('.esx-icon-delete-user'));
+                },
+
+                assignRoleButton: function () {
+                    return element(by.css('.esx-icon-add'));
+                },
+
+                userRolesGrid: {
+                    getUserByName: function (userName) {
+                        return element(by.cssContainingText("#permissionsGrid td:nth-child(1)", userName));
+                    }
+                },
+
+                addUserSubDialog: {
+                    selectUserCombobox: {
+                        textField: function () {
+                            return element.all(by.css('input.k-input')).get(0);
+                        },
+
+                        arrowIcon: function () {
+                            return element.all(by.css('span.k-icon.k-i-arrow-s')).get(1);
+                        },
+
+                        dropMenuOption: function (userName) {
+                            return element(by.xpath("//div[@data-role='popup']//li[text()='" + userName + "']"));
+                        }
+                    },
+
+                    selectRoleCombobox: {
+                        textField: function () {
+                            return element.all(by.css('input.k-input')).get(1);
+                        },
+
+                        arrowIcon: function () {
+                            return element.all(by.css('span.k-icon.k-i-arrow-s')).get(2);
+                        },
+
+                        dropMenuOption: function (roleName) {
+                            return element(by.xpath("//div[@data-role='popup']//li[text()='" + roleName + "']"));
+                        }
+                    },
+
+                    permissionsNavigate: function () {
+                        return element(by.css('.nav-segment.ng-scope'));
+                    },
+
+                    cancleButton: function () {
+                        return element(by.css('button[ng-show=\'showComboBoxes\']'));
+                    },
+
+                    okButton: function () {
+                        return element(by.css('button[ng-show=\'showAddUser\']'));
+                    }
+                }
+            }
+        }
 
     },
 
@@ -166,6 +233,10 @@ var EsxuiPage = {
     userDropDown:{
         self: function () {
             return element(by.css('.dropdown-toggle'));
+        },
+
+        loggedUserName: function () {
+            return element(by.id('userMenuLink'));
         },
 
         changepasswordMenu: function () {

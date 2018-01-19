@@ -2,111 +2,134 @@
 
 var securityAndUsersPage = {
 
-   certificatesButton: function () {
-       return element.all(by.css('[vui-tabs="hostManageSecurityTabs"] .vui-toc-tabs ul li')).get(2);
-   },
+    certificatesButton: function () {
+        return element.all(by.css('[vui-tabs="hostManageSecurityTabs"] .vui-toc-tabs ul li')).get(2);
+    },
 
-   importNewCertificateButton: function () {
-      return element(by.id('certInstall'));
-   },
+    importNewCertificateButton: function () {
+        return element(by.id('certInstall'));
+    },
 
-   importCertificateDialog: {
-      generateFQDNSigningRequestButton: function () {
-         return element(by.id('generateFQDNCSR'));
-      },
+    importCertificateDialog: {
+        generateFQDNSigningRequestButton: function () {
+            return element(by.id('generateFQDNCSR'));
+        },
 
+        getCSRTextArea: function () {
+            return element(by.model('data.certText'));
+        },
 
-      getCSRTextArea: function () {
-         return element(by.model('data.certText'));
-      },
-
-
-      certificateSigningDialog: {
-         certificateSigningRequestResultTitle: function () {
+        certificateSigningDialog: {
+            certificateSigningRequestResultTitle: function () {
             // Certificate signing request result
-            return element(by.css('span[title="' + browser.params.hostMsg.host.manage.system.security.certificates.actions.genCSR.title + '"]'));
-         },
+                return element(by.css('span[title="' + browser.params.hostMsg.host.manage.system.security.certificates.actions.genCSR.title + '"]'));
+            },
 
-         copyToClipBoardButton: function () {
-            return element(by.buttonText(browser.params.hostMsg.host.manage.system.security.certificates.actions.genCSR.copyToClipboard));
-         },
+            copyToClipBoardButton: function () {
+                return element(by.buttonText(browser.params.hostMsg.host.manage.system.security.certificates.actions.genCSR.copyToClipboard));
+            },
 
-         closeButton: function () {
-            return element(by.buttonText(browser.params.hostMsg.host.manage.system.security.certificates.actions.genCSR.close));
-         },
-      },
-   },
+            closeButton: function () {
+                return element(by.buttonText(browser.params.hostMsg.host.manage.system.security.certificates.actions.genCSR.close));
+            }
+        }
+    },
 
-   authenticationButton: {
-      self: function () {
-         return element.all(by.css('[vui-tabs="hostManageSecurityTabs"] .vui-toc-tabs ul li')).get(1);
-      },
+    authenticationButton: {
+        self: function () {
+            return element.all(by.css('[vui-tabs="hostManageSecurityTabs"] .vui-toc-tabs ul li')).get(1);
+        },
 
-      authJoinDomainButton: function () {
-         return element(by.id('authJoinDomain'));
-      }
-   },
+        authJoinDomainButton: function () {
+            return element(by.id('authJoinDomain'));
+        },
 
-   usersButton: function () {
-       return element.all(by.css('[vui-tabs="hostManageSecurityTabs"] .vui-toc-tabs ul li')).get(3);
-   },
+        joinDomainDialog: {
+            self: function () {
+                return element(by.css("div[style='width: 590px; height: 240px;']"));
+            },
 
-   adduserButton: {
-      self: function () {
-          return element(by.id('addUser'));
-      },
+            domainNameTextbox: function () {
+                return element(by.model('data.domain'));
+            },
 
-      adduserwizard: {
-          usernameTextBox: function () {
-              return element(by.model('data.user.id'));
-          },
+            userNameTextbox: function () {
+                return element(by.model('data.username'));
+            },
 
-          descriptionTextBox: function () {
-              return element(by.model('data.user.description'));
-          },
+            passwordTextbox: function () {
+                return element(by.model('data.password'));
+            },
 
-          passwordTextBox: function () {
-              return element(by.model('data.user.password'));
-          },
+            userAuthenticationProxyCheckbox: function () {
+                return element(by.model('data.useAuthProxy'));
+            },
 
-          confirmpasswordTextBox: function () {
-              return element(by.model('data.user.confirmPassword'));
-          },
+            authenticationProxyCheckbox: function () {
+                return element(by.model('data.authProxy'));
+            }
+        },
 
-      },
+        authLeaveDomainButton: function () {
+            return element(by.id('authLeaveDomain'));
+        }
+    },
 
-   },
+    usersButton: function () {
+        return element.all(by.css('[vui-tabs="hostManageSecurityTabs"] .vui-toc-tabs ul li')).get(3);
+    },
 
-   userGrid: {
-      self : function () {
-         return element(by.css('#userGrid'));
-      },
+    adduserButton: {
+        self: function () {
+            return element(by.id('addUser'));
+        },
 
-      getuserLinkByName: function (username) {
-         return element(by.xpath('//td[contains(text(), "' + username + '")]'));
-      },
-      removeuserButton: function() {
-         return element(by.id('removeUser'));
-      }
+        adduserwizard: {
+            usernameTextBox: function () {
+                return element(by.model('data.user.id'));
+            },
 
-   },
+            descriptionTextBox: function () {
+            return element(by.model('data.user.description'));
+            },
 
-   // edituserButton: {},
+            passwordTextBox: function () {
+                return element(by.model('data.user.password'));
+            },
 
+            confirmpasswordTextBox: function () {
+                return element(by.model('data.user.confirmPassword'));
+            }
+        }
+    },
 
-   refreshButton: function () {
-       return element(by.id('refreshUsers'));
-   },
+    userGrid: {
+        self : function () {
+            return element(by.css('#userGrid'));
+        },
 
-   popUpDialog: {
-      okButton: function () {
-         return element(by.css('.vui-dialog .dialog-footer > button:first-child'));
-      },
+        getuserLinkByName: function (username) {
+            return element(by.xpath('//td[contains(text(), "' + username + '")]'));
+        },
 
-      cancelButton: function () {
-         return element(by.css('.vui-dialog .dialog-footer > button:nth-child(2)'));
-      }
-   }
+        removeuserButton: function() {
+            return element(by.id('removeUser'));
+        }
+    },
+
+    refreshButton: function () {
+        return element(by.id('refreshUsers'));
+    },
+
+    popUpDialog: {
+        okButton: function () {
+            return element(by.css('.vui-dialog .dialog-footer > button:first-child'));
+        },
+
+        cancelButton: function () {
+            return element(by.css('.vui-dialog .dialog-footer > button:nth-child(2)'));
+        }
+    }
    
 };
 module.exports = securityAndUsersPage;

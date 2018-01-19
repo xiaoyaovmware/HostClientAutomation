@@ -13,20 +13,21 @@ exports.config = {
     specs: [
         // P0 test cases -----------------------------------------------------------
 
-        // 'i18n/testcases/join-in-domain.js',
-        // 'i18nvm/testcases/check-host-summary.js',                // need update
-        // 'i18n/testcases/P0/replace-host-ssl-certificates.js',    //
-        // 'i18n/testcases/P1/create-new-vm-adapter-sr-iov.js',
+        //  'i18n/testcases/join-in-domain.js',
+        //  'i18nvm/testcases/check-host-summary.js',                // need update
+        //  'i18n/testcases/P0/replace-host-ssl-certificates.js',    //
+        //  'i18n/testcases/P1/create-new-vm-adapter-sr-iov.js',
         //  'i18n/testcases/P0/edit-vm/edit-notes-script.js',
 
-         // 'i18n/testcases/P0/host/load-host-client-fall-back.js',
-        // 'i18n/testcases/P0/host/change-password.js',
-         // 'i18n/testcases/P0/host/load-feedback.js',
-        // 'i18n/testcases/P0/host/load-host-summary.js',
-        'i18n/testcases/P0/host/verify-system-date-and-time.js',
+        //  'i18n/testcases/P0/host/load-host-client-fall-back.js',
+        //  'i18n/testcases/P0/host/change-password.js',
+        //  'i18n/testcases/P0/host/load-feedback.js',
+        //  'i18n/testcases/P0/host/load-host-summary.js',
+        //  'i18n/testcases/P0/host/verify-system-date-and-time.js',
+
         //
         //  'i18n/testcases/P0/create-vm/create-new-vm.js',
-        // 'i18n/testcases/P0/create-vm/create-new-vm-enable-VBS.js',
+        //  'i18n/testcases/P0/create-vm/create-new-vm-enable-VBS.js',
         //
         //  'i18n/testcases/P0/snapshot/take-vm-snapshot.js',                           // Visible
         //  'i18n/testcases/P0/snapshot/revert-vm-snapshot.js',                         // Visible
@@ -35,50 +36,51 @@ exports.config = {
         //  'i18n/testcases/P0/edit-vm/edit-notes.js',                                  //
         //  'i18n/testcases/P0/edit-vm/edit-settings-for-vm-options-general-options.js',
         //
-        // 'i18n/testcases/P0/power-ops/power-on-off-vm.js',                             // Visible
-        // 'i18n/testcases/P0/power-ops/power-on-off-multiple-vm.js',
-        // 'i18n/testcases/P0/power-ops/suspend-resume-vm.js',                           // Visible
-        // 'i18n/testcases/P0/power-ops/restart-vm.js',                                  // Visible
+        //  'i18n/testcases/P0/power-ops/power-on-off-vm.js',                             // Visible
+        //  'i18n/testcases/P0/power-ops/power-on-off-multiple-vm.js',
+        //  'i18n/testcases/P0/power-ops/suspend-resume-vm.js',                           // Visible
+        //  'i18n/testcases/P0/power-ops/restart-vm.js',                                  // Visible
         //
-        // 'i18n/testcases/P0/vswitch/add-standard-switch.js',                         //
+        //  'i18n/testcases/P0/vswitch/add-standard-switch.js',                         //
         //
-        // 'i18n/testcases/P0/port-group/add-port-group.js',                           //
-        // 'i18n/testcases/P0/port-group/rename-port-group.js',                      // update
+        //  'i18n/testcases/P0/port-group/add-port-group.js',                           //
+        //  'i18n/testcases/P0/port-group/rename-port-group.js',                      // update
         //
-        // 'i18n/testcases/P0/vmknic/create-vmknic.js',                                //
-        // 'i18n/testcases/P0/vmknic/create-vmknic-special-characters-for-portgroup.js'
-        // 'i18n/testcases/P0/vmknic/create-vmknic-invalid-ipv6.js'
+        //  'i18n/testcases/P0/vmknic/create-vmknic.js',                                //
+        //  'i18n/testcases/P0/vmknic/create-vmknic-special-characters-for-portgroup.js'
+        //  'i18n/testcases/P0/vmknic/create-vmknic-invalid-ipv6.js'
 
-        // 'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
-        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-hostname.js',
-        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-domainname.js',
-        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-primarydns.js',
-        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-secondarydns.js',
-        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-searchdomains.js',
-        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv4Gateway.js',
-        // 'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv6Gateway.js',
+        //  'i18n/testcases/P0/netstack/edit-netstack.js',                              //***
+        //  'i18n/testcases/P0/netstack/edit-netstack-invalid-hostname.js',
+        //  'i18n/testcases/P0/netstack/edit-netstack-invalid-domainname.js',
+        //  'i18n/testcases/P0/netstack/edit-netstack-invalid-primarydns.js',
+        //  'i18n/testcases/P0/netstack/edit-netstack-invalid-secondarydns.js',
+        //  'i18n/testcases/P0/netstack/edit-netstack-invalid-searchdomains.js',
+        //  'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv4Gateway.js',
+        //  'i18n/testcases/P0/netstack/edit-netstack-invalid-ipv6Gateway.js',
         //
-        // 'i18n/testcases/P0/manage/change-advanced-settings.js',                                //
-        // 'i18n/testcases/P0/manage/assign-license.js',                               //
-        // 'i18n/testcases/P0/manage/assign-license-create-vm.js',
-        // 'i18n/testcases/P0/manage/config-negative-time-and-date.js',
-        // 'i18n/testcases/P0/manage/add-remove-user.js',
-        // 'i18n/testcases/P0/search/search-item.js',                                  //
+        //  'i18n/testcases/P0/manage/change-advanced-settings.js',                                //
+        //  'i18n/testcases/P0/manage/assign-license.js',                               //
+        //  'i18n/testcases/P0/manage/assign-license-create-vm.js',
+        //  'i18n/testcases/P0/manage/config-negative-time-and-date.js',
+        //  'i18n/testcases/P0/manage/add-remove-user.js',
+        //  'i18n/testcases/P0/search/search-item.js',                                  //
         //
-        // 'i18n/testcases/P0/register-vm/unregister-register-vm.js',                  //
-        // 'i18n/testcases/P0/register-vm/register-vm-state.js',           //
+        //  'i18n/testcases/P0/register-vm/unregister-register-vm.js',                  //
+        //  'i18n/testcases/P0/register-vm/register-vm-state.js',           //
         //
-        // 'i18n/testcases/P0/storage/create-folder-in-vmfs.js',                       //
-        // 'i18n/testcases/P0/storage/delete-file-in-vmfs.js',                         //
-        // 'i18n/testcases/P0/storage/move-file-in-vmfs.js',                           //
-        // 'i18n/testcases/P0/storage/remove-partition.js',
-        // 'i18n/testcases/P0/storage/create-vmfs-custom-partition.js',                //
-        // 'i18n/testcases/P0/storage/create-nfs-datastore.js',
-        // 'i18n/testcases/P0/storage/create-directory-invalid-name.js',
-        // 'i18n/testcases/P0/storage/copy-file-with-new-name.js',
+        //  'i18n/testcases/P0/storage/create-folder-in-vmfs.js',                       //
+        //  'i18n/testcases/P0/storage/delete-file-in-vmfs.js',                         //
+        //  'i18n/testcases/P0/storage/move-file-in-vmfs.js',                           //
+        //  'i18n/testcases/P0/storage/remove-partition.js',
+        //  'i18n/testcases/P0/storage/create-vmfs-custom-partition.js',                //
+        //  'i18n/testcases/P0/storage/create-nfs-datastore.js',
+        //  'i18n/testcases/P0/storage/create-directory-invalid-name.js',
+        //  'i18n/testcases/P0/storage/copy-file-with-new-name.js',
 
-        // 'i18n/testcases/P0/security/ipv6-login.js',
-        // 'i18n/testcases/P0/security/session-timeout.js',
+        //  'i18n/testcases/P0/security/ipv6-login.js',
+        //  'i18n/testcases/P0/security/session-timeout.js',
+        'i18n/testcases/P0/host/join-in-domain.js',
         
         // //P1 test cases -----------------------------------------------------------
         //
@@ -165,19 +167,19 @@ exports.config = {
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-logic-sas.js',
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-bus-logic-parallel.js',
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-vmware-paravirtual.js',
-        // //
+        //
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-sata-hot-add.js',                                       // Visible
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-sata08-hot-add.js',
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-disk-mode-independent-persistent-hot-add.js',           // Visible
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-disk-mode-independent-non-persistent-hot-add.js',       // Visible
-        // // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-logic-sas-hot-add.js',                         // Visible
-        // // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-vmware-paravirtual-hot-add.js',                // Visible
-        // // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-scsi-bus-sharing-physical-hot-add.js',                  // Visible
-        // // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-scsi-bus-sharing-virtual-hot-add.js',                   // Visible
-        // // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-logic-sas-bus-sharing-physical-hot-add.js',    // Visible
-        // // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-adapter-e1000e-hot-add.js',                             // Visible
-        // // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-adapter-vmxnet3-hot-add.js',                            // Visible
-        // //
+        // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-logic-sas-hot-add.js',                         // Visible
+        // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-vmware-paravirtual-hot-add.js',                // Visible
+        // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-scsi-bus-sharing-physical-hot-add.js',                  // Visible
+        // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-scsi-bus-sharing-virtual-hot-add.js',                   // Visible
+        // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-add-scsi-logic-sas-bus-sharing-physical-hot-add.js',    // Visible
+        // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-adapter-e1000e-hot-add.js',                             // Visible
+        // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-adapter-vmxnet3-hot-add.js',                            // Visible
+        //
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-delete-component.js',
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-options-remote-console.js',
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-options-vm-power-management.js',
@@ -186,7 +188,7 @@ exports.config = {
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-delete-harddisks-add-new.js',
         // 'i18n/testcases/P1/edit-vm/edit-settings-for-vm-nagative.js',
         //
-        // //
+        //
         // 'i18n/testcases/P1/host/reboot-host.js',
         // 'i18n/testcases/P0/host/shutdown-host.js'
     ],
@@ -330,13 +332,27 @@ exports.config = {
             password: 'ca$hc0w'
         },
         domain: {
-            domainName: 'test.com',
-            user: 'administrator',
-            password: 'Vmware1!'
+            domainName: 'vcpdp.com',
+            user: '氘媵淸あ녕하àçéêëîÏÔŒÙñÑÄÖÜäöüß',
+            password: 'ca$hc0w',
+            dns: '10.192.186.29'
         },
+        // domain: {
+        //     domainName: 'frm1.com',
+        //     user: 'lfyàéè',
+        //     password: '@WSX3edc',
+        //     dns: '172.16.168.215'
+        // },
         nfs: {
             server: '10.160.170.41',
             share: '/store'
+        },
+        roleName: {
+            noCryptographyAdministrator: "无加密管理员",
+            noAccess: "无权访问",
+            readOnly: "只读",
+            administrator: "管理员",
+            noTools: "no Tools"
         },
 
         messagesMsg: require('./i18n/msg/zh-cn/messages.json'),

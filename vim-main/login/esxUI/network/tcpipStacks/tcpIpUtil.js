@@ -82,8 +82,6 @@ var TcpIpUtil = function () {
         }).then(function () {
             return saveButton.click();
         }).then(function () {
-            return esxuiUtil.dismissAlert(EsxuiPage);
-        }).then(function () {
             return browser.sleep(Timeout.WAIT_FOR_NETWORK_TASK);
         })
     };
