@@ -1228,6 +1228,32 @@ var VirtualMachineUtil = function () {
         });
     };
 
+    this.openVMBrowserConsoleFromGridByName = function (VMPage, vmName) {
+
+        var consoleMenu;
+
+        return racetrack.log("- - Right click the non-ASCII VM name.").then(function() {
+            return globalUtil.waitForVisibility(VMPage.vmGrid.getVMLinkByName(vmName));
+        }).then(function(){
+            return browser.actions().mouseMove(VMPage.vmGrid.getVMLinkByName(vmName)).perform();
+        }).then(function(){
+            return browser.actions().click(protractor.Button.RIGHT).perform();
+        }).then(function() {
+            return browser.sleep(1000);
+        }).then(function(){
+            return racetrack.log("- - Select Console > Open Browser Console");
+        }).then(function(){
+            consoleMenu = VMPage.vmGrid.rightClickContextMenu.consoleMenu;
+            return browser.actions().mouseMove(consoleMenu.self()).perform();
+        }).then(function () {
+            return browser.sleep(1000);
+        }).then(function () {
+            return consoleMenu.openBrowserConsoleMenu().click();
+        }).then(function () {
+            return browser.sleep(5000);
+        });
+    };
+
     //add
     this.checkVBSenabled = function (VMPage,vmName) {
 

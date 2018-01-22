@@ -706,6 +706,34 @@ var VirtualMachinesPage = {
 
             },
 
+            consoleMenu:{
+
+                self:function () {
+                    return element(by.css('#contextMenu li:nth-child(5) > a > span.esx-icon-vm-console'));
+                },
+
+                openBrowserConsoleMenu: function () {
+                    return element(by.id('openWebMKSConsole'));
+                },
+
+                openConsoleInNewWindowMenu: function () {
+                    return element(by.id('openWebMKSConsoleNewWindow'));
+                },
+
+                openConsoleInNewTabMenu: function () {
+                    return element(by.id('openWebMKSConsoleNewTab'));
+                },
+
+                launchRemoteConsoleMenu: function () {
+                    return element(by.id('openVMRCConsole'));
+                },
+
+                downloadVMRCMenu: function () {
+                    return element(by.id('downloadVMRC'));
+                }
+
+            },
+
             editSettingsMenu: function () {
                 return element(by.id('editSettings'));
             },
@@ -720,6 +748,16 @@ var VirtualMachinesPage = {
         },
 
 
+    },
+
+    webMKSConsole: {
+        self: function () {
+            return element(by.css('.vmConsole.ui-draggable'));
+        },
+
+        closeButton: function () {
+            return element(by.css('.vmConsole .icon-close'));
+        },
     },
 
     popUpDialog:{

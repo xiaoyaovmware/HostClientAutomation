@@ -40,6 +40,7 @@ exports.config = {
         //  'i18n/testcases/P0/power-ops/power-on-off-multiple-vm.js',
         //  'i18n/testcases/P0/power-ops/suspend-resume-vm.js',                           // Visible
         //  'i18n/testcases/P0/power-ops/restart-vm.js',                                  // Visible
+        'i18n/testcases/P0/power-ops/open-browser-console.js',
         //
         //  'i18n/testcases/P0/vswitch/add-standard-switch.js',                         //
         //
@@ -80,7 +81,7 @@ exports.config = {
 
         //  'i18n/testcases/P0/security/ipv6-login.js',
         //  'i18n/testcases/P0/security/session-timeout.js',
-        'i18n/testcases/P0/host/join-in-domain.js',
+        // 'i18n/testcases/P0/host/join-in-domain.js',
         
         // //P1 test cases -----------------------------------------------------------
         //
