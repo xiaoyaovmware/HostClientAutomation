@@ -26,7 +26,7 @@ var GlobalUtil = function () {
                 return component.isEnabled();
             }, Timeout.COMPONENT_TIMEOUT);
         });
-    },
+    };
 
     this.getTimeStamp = function () {
         var currentDate = new Date();

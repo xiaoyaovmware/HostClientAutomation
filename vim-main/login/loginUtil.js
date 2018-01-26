@@ -20,7 +20,7 @@ var LoginUtil = function () {
             return racetrack.log("Login Host Client with username and password: " + browser.params.login.user + " " + browser.params.login.password);
         })
 
-    },
+    };
 
     this.init = function () {
 
@@ -33,7 +33,7 @@ var LoginUtil = function () {
             return LoginPage.usernameTextBox();
         }, 20000);
 
-    },
+    };
 
     this.login = function (_username, _password) {
 
@@ -55,7 +55,7 @@ var LoginUtil = function () {
         }).then(function(){
             return LoginPage.submitButton().click();
         })
-    }
+    };
 
 };
 module.exports = LoginUtil;

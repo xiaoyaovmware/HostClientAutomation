@@ -2,19 +2,18 @@
 
 var TcpIpPage = {
 
-   editSettingsButton: function () {
-      return  element.all(by.repeater('action in options.actions track by $index')).get(0);
-   },
+    editSettingsButton: function () {
+        return  element.all(by.repeater('action in options.actions track by $index')).get(0);
+    },
 
-   tcpIpGrid:{
-      getDefaultTCPIPLink: function () {
-         return  element(by.css('a[href="#/host/networking/netstacks/defaultTcpipStack"]'));
-      },
+    tcpIpGrid:{
+        getDefaultTCPIPLink: function () {
+            return  element(by.css('a[href="#/host/networking/netstacks/defaultTcpipStack"]'));
+        },
 
-      getRowDefaultTCPIP: function () {
-         return  element.all(by.css('#netstackGrid table tr')).get(1);
-      },
-
+        getRowDefaultTCPIP: function () {
+            return  element.all(by.css('#netstackGrid table tr')).get(1);
+        }
 
    },
 

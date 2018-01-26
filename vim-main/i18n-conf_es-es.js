@@ -321,8 +321,8 @@ exports.config = {
             noCryptographyAdministrator: "Sin administrador de criptografía",
             noAccess: "Sin acceso",
             readOnly: "Solo lectura",
-            administrator: "管理员",
-            noTools: "Administrador"
+            administrator: "Administrador",
+            noTools: "no Tools"
         },
 
 
